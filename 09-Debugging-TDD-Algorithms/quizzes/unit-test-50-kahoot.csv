@@ -1,0 +1,51 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Missing closing ) in JavaScript causes which error type before execution?,Runtime TypeError,Logic Error,SyntaxError,Semantic Overflow,20,3
+Reading user.email when user is null throws which failure during execution?,SyntaxError,Runtime TypeError,Merge Conflict,Lint Warning,20,2
+What is the mandatory first step in Red-Green-Refactor TDD?,Write a failing test (RED),Optimize Big-O speed first,Remove input validation,Deploy bundle immediately,20,1
+Which built-in Node.js module runs automated tests via node --test?,node:readline,node:http,node:crypto,node:test,20,4
+Which Node CLI flag pauses execution on line 1 for debugger attachment?,node --watch,node --inspect-brk,node --check,node --version,20,2
+What is the worst-case Big-O time complexity of Merge Sort?,O(1),O(log n),O(n log n),O(n^2),20,3
+What precondition is strictly required for Binary Search to work correctly?,Input array must be sorted,Array length must be prime,All values must be strings,Duplicates are forbidden,20,1
+Which pair finds non-negative shortest paths and optimal prefix compression?,Bubble Sort and Quick Sort,Insertion and Linear Search,k-Means and OLS Regression,Dijkstra and Huffman coding,20,4
+"k-Means groups unlabeled vectors without ground-truth targets, classifying as:",Supervised Classification,Unsupervised Learning,Reinforcement Learning,Compiler Syntax Parsing,20,2
+"Under the EEOC 4/5ths rule, which Disparate Impact ratio flags adverse bias?",Below 0.95,Below 0.90,Below 0.80,Below 0.50,20,3
+How does an Integration Test differ from a Unit Test?,Tests modules/boundaries together,Runs only manually in browsers,Ignores edge cases and status,Always slower than deployment,20,1
+Why prefer DEBUG_FLAGS / console.assert over scattered console.log calls?,console.log throws SyntaxError,console.assert encrypts PII,Flags turn O(n^2) into O(1),Silent until explicitly toggled,20,4
+"Why does typeof input === ""object"" alone fail to catch null in JS?",null throws SyntaxError,"typeof null is ""undefined""","typeof null evaluates to ""object""",null auto-casts to {},20,3
+Why can Insertion Sort beat Merge Sort on tiny or nearly-sorted arrays?,Builds extra heap trees,"In-place, zero slice, O(n) best",Merge Sort is O(n^3) small,Skips element comparisons,20,2
+What is the primary memory trade-off between Merge Sort and Quick Sort?,Merge O(n) RAM; Quick O(log n),Merge uses zero heap RAM,Quick never exceeds O(n),Both need O(n^2) memory,20,1
+Why write left + Math.floor((right - left) / 2) in Binary Search?,Sorts unsorted inputs,Math.floor makes division O(1),Only subtraction works in loops,Integer index + avoids overflow,20,4
+Why does Dijkstra fail on graphs containing negative edge weights?,Objects reject negative numbers,Only works on undirected graphs,Greedy pop assumes paths only grow,Converts tree to Huffman,20,3
+Why fit normalization mean/std ONLY on the train split before transforming test?,JS forbids math on test slices,Prevents test-set data leakage,Test splits delete model weights,Only transforms string fields,20,2
+What creates the Accuracy Paradox on a 99% legitimate / 1% fraud dataset?,"Always-safe hits 99%, 0% recall",Accuracy rises above 1.0,High FP forces 100% precision,Fast epochs destroy validation,20,1
+Why can removing a protected column still yield biased ML predictions?,OLS ignores all columns,Deleting column fails parse,Forces accuracy under 10%,Proxy features encode demographics,20,4
+Which test set gives proper boundary coverage for calculateMedian(nums)?,"Only [1,2,3] and [4,5,6]","[], [42], even unsorted, NaN/bad","Repeating [10,20,30] three times",Only string arrays,30,2
+"applyTax(100, 0.08) returns 180 via price + price*rate*10. Classify and fix:",Syntax Error: add semicolon,Runtime Error: stringify price,Logic Error: drop * 10 -> 108,Hardware Fault: upgrade CPU,30,3
+"Trace binarySearch([10,20,30,40,50], 40): which mid indices execute?","mid=2 (30), then mid=3 (40)","mid=0 (10), then mid=1 (20)","mid=4 (50), loops infinitely","mid=2 (30), returns -1",30,1
+"About how many worst-case steps does Binary Search need for 1,000,000 items?","1,000,000","500,000","1,000",~20,30,4
+"Insertion Sort on [5, 2, 4, 1]: what is the array after pass i=2 (inserting 4)?","[1, 2, 4, 5]","[2, 4, 5, 1]","[5, 4, 2, 1]","[2, 5, 4, 1]",30,2
+"Given TP=18, FP=2, FN=12, TN=68: compute Precision and Recall.","P=0.60, R=0.90","P=0.86, R=0.86","P=0.90 (18/20), R=0.60 (18/30)","P=0.18, R=0.68",30,3
+"OLS w=2.5, b=10 at x=4 with true y=22: compute prediction and squared error.","y_hat=20, sq error=4","y_hat=42.5, sq error=420","y_hat=14, sq error=64","y_hat=22, sq error=0",30,1
+"Selection rates: Group A = 0.60, Group B = 0.42. Compute Disparate Impact & verdict:",1.43 (Passes audit),0.82 (Passes audit),0.18 (Passes audit),0.70 < 0.80 (Fails 4/5ths),30,4
+"Dijkstra relaxation: dist[u]=4, edge(u->v)=3, dist[v]=9. New dist[v]?",Remains 9,Relaxes to 7 (4 + 3 < 9),Updates to 12,Resets to Infinity,30,2
+"Huffman frequencies {A:50, B:30, C:15, D:5}: which symbol gets shortest bit code?",D (rarest symbol),All fixed 8-bit ASCII,A (highest frequency 50),C (median frequency 15),30,3
+Why does for (let i = 0; i <= nums.length; i++) total += nums[i] return NaN?,Off-by-one reads undefined -> NaN,total must use const,+= breaks past 2 items,Function needs async keyword,60,1
+Why does const copy = arr; return copy.sort(...) mutate the caller array?,sort converts ints to UTF-16,return clears caller array,Arrow comparator mutates global,copy aliases same array ref,60,4
+"Why does left = mid (instead of mid + 1) hang Binary Search on [10, 30] target 20?",Math.floor rounds 0.5 to 1,left=mid keeps left=0 forever,right=mid-1 skips index 0,Loop skips 2-item arrays,60,2
+Nested loop duplicate check times out on 200k IDs. Best O(n) refactor?,Use nested .forEach(),JSON.stringify inside loops,Use hash-backed Set lookup,Run Bubble Sort first,60,3
+When does naive Quick Sort picking arr[0] as pivot degrade to O(n^2)?,Already or reverse sorted input,Arrays containing decimals,Lengths that are powers of 2,Running alongside Merge Sort,60,1
+Train RMSE = 1.1 while Validation RMSE = 19.4. What does this gap diagnose?,High Bias (Underfitting),Ideal production fit,EEOC Disparate Impact > 0.80,High Variance (Overfitting),60,4
+"Normalize full dataset BEFORE splitTrainValTest(scaled, ...). What bug occurs?",Seed 42 is invalid,Test-set data leakage,Ratios must sum to 1.5,const breaks destructuring,60,2
+Why does unscaled salary (25k-180k) dominate age (18-65) in k-Means distance?,k-Means drops column 2,Salary uses floats vs ints,Large scale dominates Euclidean,Distance uses only angles,60,3
+"Cancer screener has Precision=0.96, Recall=0.28. What hazard does Recall=0.28 reveal?",Misses 72% of sick cases (FN),Flags 96% healthy patients,Too many True Positives,Zero variance underfit,60,1
+Call Stack fills with thousands of recursive mergeSort frames -> RangeError. Why?,Array was unsorted,Inspect limits stack to 3,slice creates cyclic refs,Missing length <= 1 base case,60,4
+Embedded logger needs strict worst-case O(n log n) SLA with spare RAM. Pick sort:,Bubble Sort,Merge Sort (guaranteed bound),Naive first-pivot Quick Sort,Insertion Sort,60,2
+When is Linear Search O(n) better than Sorting O(n log n) + Binary Search on unsorted data?,"50,000 repeated lookups",Continuous range queries,Only 1 single lookup (k=1),Whenever RAM allows O(1),60,3
+Autonomous braking must never miss a pedestrian (FN fatal). Which metric leads?,High Recall (minimize FN),Raw global Accuracy,Raise threshold to 0.99,Minimize Precision to 0,60,1
+Auto account-ban bot causes severe churn on false locks (FP). Guard which metric?,Maximize False Positives,Deploy threshold at 0.05,Use k-Means inertia only,High Precision (minimize FP),60,4
+"Model overfits (Train 0.8, Val 14.5). Best interventions to curb High Variance?",Add high-degree polynomials,"More data, L2 reg, fewer features",Copy val rows into train,Disable validation testing,60,2
+"Underfitting (Train 24.0, Val 25.1): why does adding more training rows barely help?",Node crashes > 1000 rows,Rows convert OLS to k-Means,Need richer model/features,Val error can never drop,60,3
+Fairness audit hits DI = 0.72 after dropping gender column. Best release decision?,"Block, audit proxies & calibrate",Ship since label was deleted,Lower disadvantaged rates more,Suppress CI audit metrics,60,1
+Mocked unit tests pass while renamed DB column breaks prod. Best CI fix?,Delete all unit tests,Keep unit + CI integration tests,Click manually in production,Replace asserts with logs,60,2
+"Pick optimal shortest-path tools for: (1) unweighted, (2) >=0 weights, (3) negative edges.",Dijkstra for all three,"Huffman, Merge, Insertion","Binary Search, Quick, DFS","BFS, Dijkstra, Bellman-Ford",60,4
+Why require a deterministic seed in splitTrainValTest during CI regression tests?,Makes O(n^2) run in O(1),Removes need for test split,Separates real change from luck,Math.random takes seed arg,60,3

@@ -1,7 +1,8 @@
 # Unit 14 Guide: Program Analysis, SDLC & Software Design (`Std 10.0`)
 
 **Course:** JavaScript First — Software & App Design (AZ CTE CIP **11.0202.00**)  
-**Semester Schedule:** Week 8 (Days 35–39 | 5 Class Periods × 50 Minutes)
+**Semester Schedule:** Week 8 (Days 35–39 | 5 Class Periods × 50 Minutes)  
+**Setup & CLI Guide:** [`setup-guide.md`](./setup-guide.md) · **Automated Lab Grader:** `npm run grade -- --unit 14`
 
 ## 1. Unit Overview
 Students step back from writing syntax alone to master **Software Analysis, Architecture & Engineering Design (Standard `10.0`)**—bridging user requirements, compliance, language/database selection, problem decomposition, UML/flowcharts, troubleshooting, and production telemetry.
@@ -37,3 +38,14 @@ Students step back from writing syntax alone to master **Software Analysis, Arch
 - [ ] **TG-U14-3 (Kahoot Formative Remediation Threshold):** **[Specific]** Run [`quizzes/quiz-1-kahoot.csv`](./quizzes/quiz-1-kahoot.csv) (L1–L2) and [`quizzes/quiz-2-kahoot.csv`](./quizzes/quiz-2-kahoot.csv) (L3–L5) during Week 8 checkpoints. **[Measurable]** Lead a 10-minute compliance-law (HIPAA vs. PCI vs. FERPA) or RAD-vs-RUP micro-reteach whenever item or class accuracy drops below 75%. **[Achievable]** Driven by rationale notes in `quizzes/quiz-*.md`. **[Relevant]** Clears up regulatory and methodology misconceptions ahead of Post-Unit Eval. **[Time-bound]** Executed in-class on Day 36 and Day 38. *(Specific | Measurable | Achievable | Relevant | Time-bound | Bloom's L1–L5 | AZ CTE 10.0 / West-MEC)*
 - [ ] **TG-U14-4 (Timely 4-Tier Rubric Turnaround):** **[Specific]** Grade every Unit 14 Telehealth System Blueprint using [`projects/project-rubric.md`](./projects/project-rubric.md) (Given/When/Then stories + flowchart, stack/compliance defense, decomposition, and PII-free telemetry). **[Measurable]** Return 100% of rubric scores and architectural feedback within 3 instructional days. **[Achievable]** Standardized 4 × 25-point rubric scoring streamlines review. **[Relevant]** Reinforces modular system design skills immediately transferable to Unit 9 and Capstone specs. **[Time-bound]** Returned within 72 hours (3 school days) of Day 39. *(Specific | Measurable | Achievable | Relevant | Time-bound | Bloom's L3–L6 | AZ CTE 10.0 / West-MEC)*
 - [ ] **TG-U14-5 (AZ CTE / West-MEC & FBLA Portfolio Documentation):** **[Specific]** Audit and archive Unit 14 clinic system specifications, flowcharts, `systemDesignLab.js` runs, pre/post gain logs, and Telehealth Blueprints against AZ CTE CIP `11.0202.00` (`10.1–10.10`) & West-MEC Coding standards. **[Measurable]** Confirm 100% of active students store complete systems-analysis artifacts. **[Achievable]** Tracked alongside Day 39 rubric grading. **[Relevant]** Validates CTE systems-design indicators and builds FBLA Systems Analysis & Design portfolio entries. **[Time-bound]** Completed by Day 40 (start of Week 9). *(Specific | Measurable | Achievable | Relevant | Time-bound | Bloom's L1–L6 | AZ CTE / West-MEC)*
+
+---
+
+## 4. Setup Guide, 50-Question Mastery Exam & Automated Grading
+
+- **Environment & Tooling Guide:** [`setup-guide.md`](./setup-guide.md) (Draw.io/Mermaid diagrams, JSDoc/JSON Schema baseline, PII-free structured logging)
+- **50-Question Unit Mastery Exam:**
+  - Student Exam (solution-free): [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md)
+  - Teacher Answer Key & Rationales: [`quizzes/unit-test-50-answer-key.md`](./quizzes/unit-test-50-answer-key.md)
+  - Kahoot Import CSV (`50` items): [`quizzes/unit-test-50-kahoot.csv`](./quizzes/unit-test-50-kahoot.csv)
+- **Automated Lab & Project Grading:** Run `npm run grade -- --unit 14` across [`0-student_files/14-program-design/`](../0-student_files/14-program-design/systemDesignLab.js) and [`0-student_files/projects/unit-14-system-spec/`](../0-student_files/projects/unit-14-system-spec/index.js).

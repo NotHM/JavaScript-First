@@ -34,5 +34,16 @@ function findReachableCourses(graph, startCourse, visited = new Set()) {
   return [...visited];
 }
 
-console.log('Unit 5 Project Starter Ready');
-console.log(computeStudentAverages(students, gradeMatrix));
+if (require.main === module) {
+  console.log('Unit 5 Project Starter Ready');
+  console.log(computeStudentAverages(students, gradeMatrix));
+}
+
+module.exports = {
+  students,
+  gradeMatrix,
+  courseGraph,
+  computeStudentAverages,
+  buildStudentMap,
+  findReachableCourses,
+};

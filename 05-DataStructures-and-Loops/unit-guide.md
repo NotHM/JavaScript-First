@@ -32,6 +32,11 @@ Unit 5 delivers comprehensive coverage of **AZ CTE Standard 7.0 (Iterative Struc
 - **Day 24 (Core Project Checkpoint):** **Unit 5 Core Project** build (2D Gradebook Matrix & Course Prerequisite Graph).
 - **Days 25–27 (Lesson 5.3 — AI Stds 4.0, 5.0):** Pre-Lesson 5.3; CSV Cleaning, Imputation & PII Anonymization; IQR/Z-Score Outliers, Scaling, One-Hot Encoding, Vector/Matrix Algebra & Pearson EDA; `dataPipelineLab.mjs`; Post-Lesson 5.3, **AI Track Project Integration & Post-Unit Evaluation**.
 
+## 5. Setup, Mastery Exam & Automated Grading Links
+- **Chapter Reading & Setup:** [`readme.md`](./readme.md) | [`setup-guide.md`](./setup-guide.md)
+- **50-Question Unit Mastery Exam:** [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md) | **Teacher Key:** [`quizzes/unit-test-50-answer-key.md`](./quizzes/unit-test-50-answer-key.md) | **Kahoot CSV:** [`quizzes/unit-test-50-kahoot.csv`](./quizzes/unit-test-50-kahoot.csv)
+- **Automated TDD Verification:** Run `npm run grade -- --unit 05` to execute `node --test` suites across `06-data-structures`, `05-ai-data-pipeline`, and `unit-05-matrix-gradebook`.
+
 ---
 
 ## SMART Goals & Objectives Tracker

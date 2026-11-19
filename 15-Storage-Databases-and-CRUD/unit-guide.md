@@ -1,7 +1,8 @@
 # Unit 15 Guide: Storage Architecture, File I/O & Databases (SQL vs. MongoDB)
 
 **Course:** JavaScript First — Software & App Design (AZ CTE CIP **11.0202.00**)  
-**Semester Schedule:** Week 13 (Days 62–67 | 6 Class Periods × 50 Minutes)
+**Semester Schedule:** Week 13 (Days 62–67 | 6 Class Periods × 50 Minutes)  
+**Setup & CLI Guide:** [`setup-guide.md`](./setup-guide.md) · **Automated Lab Grader:** `npm run grade -- --unit 15`
 
 ## 1. Unit Overview
 Unit 15 provides dedicated mastery of **AZ CTE Standard 16.0 (Storage Management, Backup/Recovery & Database Operations)**. Students evaluate RAM vs SSD vs Cloud Object Storage (S3), engineer Node `fs/promises` sequential File I/O with SHA-256 verification and 3-2-1 backup resilience, and execute Relational (SQL) and Document (MongoDB MQL) CRUD workflows inside a zero-dependency JavaScript CRUD engine.
@@ -44,3 +45,14 @@ Unit 15 provides dedicated mastery of **AZ CTE Standard 16.0 (Storage Management
 - [ ] **TG-U15-3 (Kahoot Formative Remediation Threshold):** **[Specific]** Facilitate [`quizzes/quiz-1-kahoot.csv`](./quizzes/quiz-1-kahoot.csv) (Lesson 15.1) and [`quizzes/quiz-2-kahoot.csv`](./quizzes/quiz-2-kahoot.csv) (Lesson 15.2) during Week 13 checkpoints. **[Measurable]** Run a 10-minute RPO/RTO or `$set`-vs-replace MQL micro-reteach whenever item or class accuracy falls below 75%. **[Achievable]** Guided by rationale keys in `quizzes/quiz-*.md`. **[Relevant]** Resolves backup-metric and SQL/NoSQL schema confusion prior to Post-Unit Eval. **[Time-bound]** Remediated on Day 64 and Day 66 within class time. *(Specific | Measurable | Achievable | Relevant | Time-bound | Bloom's L1–L5 | AZ CTE 16.0 / West-MEC)*
 - [ ] **TG-U15-4 (Timely 4-Tier Rubric Turnaround):** **[Specific]** Grade every Unit 15 Atomic Inventory Store project using [`projects/project-rubric.md`](./projects/project-rubric.md) (CRUD semantics, atomic `.tmp` rename, SHA-256 tamper checks, and SQL/NoSQL justification). **[Measurable]** Return 100% of rubric scores and actionable persistence feedback within 3 instructional days. **[Achievable]** Uniform 4 × 25-point rubric scoring speeds turnaround. **[Relevant]** Prepares students to integrate verified persistent stores into Unit 16 Capstone builds. **[Time-bound]** Returned within 72 hours (3 school days) of Day 67. *(Specific | Measurable | Achievable | Relevant | Time-bound | Bloom's L3–L6 | AZ CTE 16.0 / West-MEC)*
 - [ ] **TG-U15-5 (AZ CTE / West-MEC & FBLA Portfolio Documentation):** **[Specific]** Audit and archive Unit 15 disaster-recovery briefs, SQL/MQL crosswalks, `15-storage-crud/` lab runs, pre/post gain logs, and Atomic CRUD Stores against AZ CTE CIP `11.0202.00` (`16.1–16.6`) & West-MEC Coding standards. **[Measurable]** Confirm 100% of active students store complete storage and database evidence. **[Achievable]** Tracked alongside Day 67 rubric evaluation. **[Relevant]** Documents state CTE database standards and curates FBLA Database/Coding artifacts. **[Time-bound]** Completed by Day 68 (start of Week 14). *(Specific | Measurable | Achievable | Relevant | Time-bound | Bloom's L1–L6 | AZ CTE / West-MEC)*
+
+---
+
+## 4. Setup Guide, 50-Question Mastery Exam & Automated Grading
+
+- **Environment & Tooling Guide:** [`setup-guide.md`](./setup-guide.md) (`os.tmpdir()` isolation, `sha256sum` atomic verification, `node:sqlite`/PostgreSQL/MongoDB checks, 3-2-1 backup standard)
+- **50-Question Unit Mastery Exam:**
+  - Student Exam (solution-free): [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md)
+  - Teacher Answer Key & Rationales: [`quizzes/unit-test-50-answer-key.md`](./quizzes/unit-test-50-answer-key.md)
+  - Kahoot Import CSV (`50` items): [`quizzes/unit-test-50-kahoot.csv`](./quizzes/unit-test-50-kahoot.csv)
+- **Automated Lab & Project Grading:** Run `npm run grade -- --unit 15` across [`0-student_files/15-storage-crud/`](../0-student_files/15-storage-crud/fileStorageLab.js) and [`0-student_files/projects/unit-15-inventory-crud-db/`](../0-student_files/projects/unit-15-inventory-crud-db/index.js).

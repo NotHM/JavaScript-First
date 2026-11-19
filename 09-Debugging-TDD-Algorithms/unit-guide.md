@@ -29,6 +29,15 @@ Unit 9 delivers dedicated mastery of **AZ CTE Standard 12.0 (Testing & Debugging
 - **Days 43–45 (Lesson 9.2 — Std 6.4–6.7):** Pre-Lesson 9.2; Linear vs. Binary Search, Bubble/Insertion/Merge Sort, Big-O Benchmarking, Core Unit 9 Project sprint, Post-Lesson 9.2, **Kahoot Quiz 2**.
 - **Days 46–48 (Lesson 9.3 — AI Stds 1.0, 2.0, 6.0, 7.0):** Pre-Lesson 9.3; ML Paradigms & Seeded Splits, OLS Regression, Logistic & k-Means, Confusion Matrix & Fit Diagnosis, EEOC `4/5ths` Disparate Impact Audit, `mlMetricsAndFairnessLab.mjs`, Post-Lesson 9.3, **ML Fairness Project Integration & Post-Unit Evaluation**.
 
+## 5. Setup Standard, 50-Question Mastery Exam & Automated Gradebook
+
+- **Standalone Setup & Debug Standard:** [`setup-guide.md`](./setup-guide.md) (Node `--inspect-brk`, VS Code `F9` debugging, `node --test`, common setup error triage)
+- **Unit 9 Mastery Exam (50 Questions | L1–L5):**
+  - Student Exam (Solution-Free): [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md)
+  - Teacher Answer Key (`Q1–Q50`): [`quizzes/unit-test-50-answer-key.md`](./quizzes/unit-test-50-answer-key.md)
+  - Kahoot Live Import CSV (50 Rows): [`quizzes/unit-test-50-kahoot.csv`](./quizzes/unit-test-50-kahoot.csv)
+- **Automated Unit Gradebook:** `npm run grade -- --unit 09`
+
 ---
 
 ## SMART Goals & Objectives Tracker

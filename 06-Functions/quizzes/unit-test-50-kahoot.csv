@@ -1,0 +1,51 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Which of these values evaluates as TRUTHY in JavaScript?,"""false""",0,"""""",NaN,20,1
+Which expression accurately computes logical XOR across any operands?,a && b,a || b,Boolean(a) !== Boolean(b),!(a || b),20,3
+Under what condition does logical NOR (!(a || b)) return true?,Both are truthy,Exactly one is truthy,a is truthy regardless,Both a and b are falsy,20,4
+Which keyword stops execution from falling into the next switch case?,continue,break,yield,skip,20,2
+Which function signature uses modern ES6 default parameters?,function greet(n = 'Guest') {},function greet(n := 'Guest') {},function greet(def n 'Guest') {},function greet(n) || 'Guest',20,1
+"What does an IIFE (() => { ... })() immediately accomplish?",Compiles to WebAssembly,Delays until setTimeout,Runs immediately in isolated scope,Exports locals to module.exports,20,3
+Which built-in Node module generates secure random session tokens?,Math.random(),node:os,node:url,node:crypto,20,4
+Within what numeric interval does Math.random() return floats?,"[1, 100] inclusive","[0, 1) (0 yes, 1 no)","[-1, 1] inclusive","(0, 1] (0 no, 1 yes)",20,2
+"What turns multiply(a, b) into nested closures multiply(a)(b)?",Hoisting,Recursion,Currying,Destructuring,20,3
+Which property defines a pure JavaScript function?,Same output w/o side effects,Mutates global config object,Calls HTTP before returning,Requires var over const,20,1
+How does score ?? 70 improve on score || 70 for numeric scores?,Rounds floats upward,Falls back ONLY on null/undefined (keeps 0),|| cannot compare numbers,Converts '0' to 70,30,2
+"According to De Morgan's Laws, why does !(A && B) equal !A || !B?",Both require equal strings,&& always returns null,A && B fails if !A OR !B,Negating A flips B truthy,30,3
+How does short-circuiting handle false && runExpensiveScan()?,Returns false skipping call,Runs scan then discards,Throws TypeError right away,Retries scan in microtask,30,1
+"Why do function declarations hoist ready, while const arrows fail above?",Arrows banned in CJS,Declarations run async,Node strips const on parse,Declarations hoist initialized; const is TDZ,30,4
+How does an arrow function's 'this' differ from classic function() {},Arrows bind this to null,Arrow captures lexical this from outer scope,Arrows create new prototypes,Classic fns read no locals,30,2
+How does a closure retain outer variables after its factory returns?,Copies vars to window,Serializes factory to JSON,Inner fn keeps reference to lexical scope,V8 bans GC on repo files,30,3
+Why refactor nested if/else pyramids into flat Guard Clauses (Std 11.10)?,Flattens nesting & exits invalid paths early,Doubles V8 CPU clock speed,Nested ifs throw SyntaxError,Removes return keywords,30,1
+Why can seeded LCG createSeededRng(42) replay tests identically?,Reads /dev/urandom sync,Math.random uses minutes,LCG runs on GPU shaders,Deterministic math updates private state,30,4
+"Why never generate passwords with Math.random() or 32-bit LCG?",Math.random fails on HTTPS,LCG emits negatives only,Attackers can predict state; use node:crypto,node:crypto only sorts arrays,30,3
+"Why is Higher-Order applyOperation(arr, fn) valuable?",Forces callbacks to use globals,Decouples traversal from transform logic,Converts objects to XML,Strips params from signatures,30,2
+"What pair does [nor(false, false), xor(true, true)] return?","[true, false]","[false, true]","[true, true]","[false, false]",20,1
+"Apply De Morgan's Law cleanly to !(isAdmin || isVerified):",!isAdmin || !isVerified,isAdmin && !isVerified,!isAdmin || isVerified,!isAdmin && !isVerified,30,4
+"What pair prints for: console.log(0 || 70, 0 ?? 70)?","0, 0","0, 70","70, 0","70, 70",30,3
+Trace: const add=(n)=>(x)=>n+x; add(10)(4) and add(2)(3)?,"10, 5","14, 5","14, 6","4, 3",30,2
+"Trace: c1=createCounter(5); c1(); log(c1(), createCounter(5)())?","6, 6","6, 7","7, 7","7, 6",30,4
+"Verified & !suspended, tempPassA=true, tempPassB=true w/ XOR rule?",'DENIED_PASS_CONFLICT','ACCESS_GRANTED','DENIED_SUSPENDED','DENIED_UNVERIFIED',30,1
+"What does const makeUser = (id) => ({ id, active: true }); makeUser(7) return?",undefined,7,"{ id: 7, active: true }",SyntaxError,30,3
+"With bounds >=90 A, >=80 B, >=70 C, >=60 D: getLetterGrade(80) returns?",'A','B','C','F',20,2
+"What does applyOperation([2, 3, 4], n => n * n) return?","[4, 9, 16]","[2, 3, 4]","[4, 6, 8]",29,30,1
+"Given a = createSeededRng(99) and b = createSeededRng(99), a() === b()?",false,NaN,undefined,true,20,4
+Why does if (1 < 99 < 5) evaluate to true in JavaScript?,< checks unordered sets,99 becomes '9' alphabetically,(1 < 99) -> true -> 1 < 5 -> true,< returns midpoint boolean,30,3
+"For role='editor', why does switch set perms='write read '?",+= joins all cases auto,Missing break falls into case 'viewer',switch runs next alpha case,Strings ignore break,30,2
+"Why does const makeObj = (x) => { x: x }; return undefined?",Arrows reject parameter x,Semicolons illegal inside obj,JS bans object returns,{} parsed as block w/ label x: no return,30,4
+"for (var i=0; i<3; i++) fns.push(() => i) yields [3,3,3]. Why?",var shares one fn binding across closures,.push runs arrows right away,i++ runs after .map(),Arrows cannot read loops,30,1
+Spot auth bug in: if (user.role = 'admin') allow();,'admin' needs double quotes,grantDashboard needs ;,= assigns 'admin' truthy unconditionally,= checks deep equality,30,3
+Two createCounter() calls overwrite each other's total. Why?,++ mutates const,let count = 0 sits outside factory shared,Returning arrows merges stacks,const creates singletons,30,2
+"handleCommand('RESTART') returns 'UNKNOWN' though case 'restart' exists. Fix?",Normalize trim().toLowerCase() before ===,Remove break after restart,Convert cmd with Number(cmd),Declare cmd with var,30,1
+"Why does bitwise xor = (a,b) => Boolean(a^b) fail on ('badgeA','badgeB')?",^ matches !== on strings,Boolean strips string quotes,^ throws SyntaxError on strings,^ coerces text to 0^0=false silently!,60,4
+"Why does function addTax(p){ total += p*1.08; return total; } fail test isolation?",1.08 triggers SyntaxError,return cannot follow +=,Mutates external total coupling tests to order,Params are read-only const,30,3
+"Why does verifyAge({ age: 12 }) return 'OK' if (user.age = 18) return 'OK'?",!user skips integer fields,user.age = 18 assigns 18 instead of checking <18,18 is falsy in strict mode,Single-line if needs braces,30,2
+Refactoring 5-deep if/else pyramid per Std 11.10: cleanest design?,Flat sequential early-return Guard Clauses,5-level nested ternary line,Throw strings via try/catch,Convert ifs to while loops,30,1
+Why does a Map dispatch table beat a 15-branch static switch?,Compiles to C addons,switch rejects strings,Map converts fns to JSON,No break bugs / O(1) / avoids __proto__ keys,30,4
+Why track rate-limit attempts inside createRateLimiter() closure vs global let?,Globals stop at 255,Closures run worker threads,Blocks tampering & keeps instances/tests isolated,Globals turn ints to floats,30,3
+Best RNG pair for (1) repeatable CI simulator vs (2) password-reset tokens?,Math.random() for both,Seeded LCG for CI / node:crypto CSPRNG for tokens,Seeded crypto / Math.random tokens,Hardcoded token '1234',60,2
+Why validate taxRate inside outer createPriceCalc(taxRate) factory?,Fail-fast catches bad setup once upfront,Number.isFinite fails in inner fn,Avoids closures completely,Inner fns hide RangeError,30,1
+"Why guard pure math args with Number.isFinite(v) instead of trusting coercion?",Rounds decimals to pennies,Coercion skips negatives,Turns undefined into 0,Rejects NaN/Infinity/non-numbers before NaN spreads,30,4
+"Why prefer HOF filterRecords(rows, fn) over duplicate filterActive/Admin loops?",Duplicates run 2x faster,Separates iteration from predicate (DRY/Open-Closed),Callbacks skip array bounds,filterActive returns no array,30,2
+"Config delayMs: 0 passed to options.delayMs ?? 250 vs || 250. Why pick ???",|| rejects short strings,?? runs options async,0 is falsy under || (250ms); ?? keeps 0ms intact,?? deletes negatives,30,3
+Why split a 90-line nested callback into small named pure helpers?,Clearer stack traces & direct unit tests w/o mocks,Anonymous fns miss closures,Node stops after 1 arrow fn,Named fns hide frames,30,1
+Rule Engine X uses eval()+Math.random(); Engine Y uses pure preds+seeded LCG:,eval required for currying,Math.random breaks closures,Pure preds ban JSON,X allows code injection & flaky tests; Y safe/repeatable,60,4

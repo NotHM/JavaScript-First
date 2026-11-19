@@ -1,0 +1,51 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+What does AJAX update without triggering a full reload?,Local BIOS flags,Targeted DOM regions via JSON,Raw kernel C++ in CSS,Router MAC tables,20,2
+DevTools panel inspecting status codes & CORS preflight?,Elements,Performance Insights,Network panel,Lighthouse Fonts,20,3
+Default TCP port for encrypted SSH staging access?,Port 22,Port 80,Port 443,Port 3306,20,1
+Native API built into Node 24 & browsers for HTTP?,XMLHttpRequest,fetch(),jQuery.get(),fs.readFileSync(),20,2
+npm HTTP client auto-parsing res.data & throwing on 404?,XMLHttpRequest,node:http,Axios,dotenv,20,3
+React meta-framework supporting SSR & SSG out of box?,Vite SPA,Next.js,Express.static,Nodemon,20,2
+Platform packaging Node runtime in reproducible images?,Docker,NVM,JSON Schema,Live Share,20,1
+Browser storage persisting across restarts (~5 MB JS)?,sessionStorage,HttpOnly Cookie,WeakMap,localStorage,20,4
+VS Code feature for real-time shared editing & ports?,Prettier,Live Share,ESLint,vscode-reveal,20,2
+HTTP method sent before cross-origin JSON POST (CORS)?,HEAD,PATCH,OPTIONS preflight,TRACE,20,3
+How do full reloads differ from asynchronous AJAX?,No TCP sockets,AJAX patches DOM cleanly,AJAX reloads every image,Full reload skips HTML,30,2
+Why doesn't fetch() enter catch() on HTTP 404/500?,Converts 4xx to 200,Uses callbacks only,Only network fails reject,Hides status codes,30,3
+How does XHR separate network drops vs HTTP 404?,onerror=net; onload=status,onload catches Wi-Fi,XHR returns Promises,XHR runs on Node 24,30,1
+Why never put private API keys in browser HTML/JS?,16-char string cap,DevTools shows all client bytes,fetch strips headers,JSON rejects letters,20,2
+How does sessionStorage differ from localStorage?,Server vs DNS,Clears on tab close vs persists,Auto-encrypted in RAM,Blocks HTTPS calls,20,2
+Why prefer HttpOnly cookies over localStorage for auth?,Store GBs of video,localStorage bans HTTPS,Blocked from JS / XSS reads,Sent in URL queries,30,3
+Why does Next.js SSR beat pure SPA on FCP and SEO?,Drops HTML tags,Sends pre-rendered HTML first,React fails in Chrome,Skips TCP handshakes,30,2
+What drift do Docker containers eliminate across OS?,OS & Node version drift,Mobile CSS styling,const vs let rules,Setting Content-Type,20,1
+How do Microservices differ from a Monolith?,Single 10-line .cjs file,Monoliths ban status codes,Independent deployable APIs,Run in <script> tags,30,3
+Why do AJAX fetch() calls fail under file:/// HTML?,Node disables local HTTP,file:// null origin fails CORS,HTML5 bans button clicks,Local files lack Promises,30,2
+Guard turning HTTP 404 from fetch() into an error?,if (res === null) return,if (!res.ok) throw Error,if (res.json()) continue,if (typeof res === 'string'),20,2
+Correct POST fetch() setup for { task: 'Audit CORS' }?,method POST raw object,method GET plain body,JSON Content-Type + stringify,type JSON + send key,30,3
+Fix fetch('/api/todos') URL parse error in Node 24?,Install XHR globally,Use full http://127.0.0.1 URL,Switch package to .cjs,Remove async keyword,20,2
+DOM API safely rendering API text without XSS risk?,createElement + textContent,ul.innerHTML += li,document.write(),eval() string call,20,1
+XHR method setting Content-Type before xhr.send()?,xhr.setHeader('Type'),xhr.setRequestHeader(...),xhr.overrideMimeType,xhr.headers.push,20,2
+Header allowing http://127.0.0.1:5500 CORS reads?,X-Content-Type-Options,Host: 127.0.0.1:5500,Access-Control-Allow-Origin,Cache-Control: no-store,20,3
+Dockerfile instruction selecting Alpine + Node 24?,INSTALL node@24,FROM node:24-alpine,IMPORT docker/node24,RUN apt-get node-latest,20,2
+Command creating modern Ed25519 SSH keypair?,ssh-keygen -t ed25519,ssh-login --rsa-512,curl -X SSH localhost,npm init ssh-key,20,1
+DevTools Network flags keeping 404 traces & bypassing cache?,Offline & Slow 3G,Preserve log & Disable cache,Block URL & Invert,Hide data URLs,20,2
+UX step stopping double POST clicks during active fetch?,window.location.reload(),Disable button + Loading...,Delete click listeners,Synchronous while loop,20,2
+res.json() logs Promise { <pending> }; missing keyword?,Content-Length header,await before res.json(),Case-insensitive keys,Username restriction,20,2
+"fetch('/api/404') throws Unexpected token '<'. Cause?",Numbers lacked quotes,XHR overwrote JSON,Got HTML 404 without !res.ok,DevTools broke stream,30,3
+Server receives literal '[object Object]' body. Bug?,Sent raw JS object (no stringify),Forgot 201 writeHead,Used await in async fn,Declared with let,30,1
+curl POST works yet Chrome :5500 rejects call. Cause?,Chrome banned HTTP POST,Missing CORS / OPTIONS 204,curl runs inside Docker,7000 is invalid IPv6,30,2
+"list.innerHTML = items.map(...).join('') API risk?",map() mutates items,Turns fetch into XHR,XSS if item holds <script>,Triggers 405 error,30,3
+Why fetch('/api/todos') works in browser not Node 24?,Node bans slashes in strings,Node lacks window.location base,HTML uses Next.js,Node 24 dropped fetch(),30,2
+Why did XSS script steal token from localStorage?,JS on origin reads localStorage,Broadcasts on UDP 53,HTTPS skips storage,stringify leaks secrets,30,1
+ssh -i ~/.ssh/id_ed25519 says UNPROTECTED PRIVATE KEY!,chmod 777 ~/.ssh/id_ed25519,node --test keyfile,chmod 600 ~/.ssh/id_ed25519,Rename to .mjs,20,3
+Button stays stuck disabled after HTTP 500 error. Fix?,Call res.json() twice,Add finally { btn.disabled=false },Switch to XHR,Restart container,30,2
+assert.rejects(/HTTP 404/) passes when fetchJsonSafe:,Throws Error if !res.ok,Returns null silently,Calls xhr.abort() in Node,Sends DELETE request,30,1
+Public cookbook site needing Google SEO & instant FCP?,Client-only empty SPA,Next.js (SSR / SSG),Local file:// HTML,10ms XHR polling,30,2
+Authenticated 3D schematic tool (zero SEO need)?,React Client-Side SPA,Static HTML (no JS),FTP archive,Full-page form reloads,30,1
+Checkout spikes 12x while Auth stays flat; pick design:,Manual monolith clones,Containerized Microservices,SQLite in localStorage,Disable POST on peak,30,2
+2-person MVP in 10 days; split into 10 microservices?,Mandatory immediately,No—build modular monolith first,Only with XMLHttpRequest,Disable res.ok guard,30,2
+Simple Node 24 JSON CLI fetch: native fetch() vs Axios?,Install 25 npm pkgs,Write raw TCP sockets,Native fetch() + !res.ok guard,Node 24 lacks fetch,30,3
+When does Axios justify installing over native fetch()?,No browser/Node runtime,Interceptors & auto 4xx reject,Replacing SSH tunnels,Escaping SSR HTML,30,2
+Fix macOS/Windows/Linux library & Node drift across CI:,Shared Docker node:24-alpine,Reinstall OS weekly,Use CSV over port 80,Commit node_modules,30,1
+How protect paid weather API key from client browsers?,Base64 encode in HTML,Store in localStorage,Pass key in query URL,Proxy via Node process.env,30,4
+PR review finds new XMLHttpRequest() in Node 24 API:,Wrap inside setTimeout,Browser-only API; use fetch(),Rename file to .cjs,Change GET to OPTIONS,30,2
+Weather panel hits 503 while Users & Alerts work. Fix?,Crash entire browser tab,Spin Loading... forever,Per-panel error + Retry button,Clear localStorage,30,3

@@ -4,15 +4,17 @@
  *
  * Usage:
  *   node tools/verify.mjs --tests   (Syntax checks + all instructor node:test suites)
- *   node tools/verify.mjs --full    (Full QA: syntax, node:test, HTML scripts, 40 Kahoot CSVs,
- *                                    >=5 Student/Teacher SMART Goals x 20 units, link integrity,
- *                                    00-Drafts removal check, and spoiler scan)
+ *   node tools/verify.mjs --full    (Full QA: syntax, node:test, HTML scripts, 60 Kahoot CSVs,
+ *                                    >=5 Student/Teacher SMART Goals x 20 units, Medium readmes,
+ *                                    setup guides, 50-Q Mastery Exams & keys, TDD test manifest,
+ *                                    link integrity, 00-Drafts removal check, and spoiler scan)
  */
 
 import { execFileSync, spawnSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { UNITS_MANIFEST } from './grade.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -148,44 +150,143 @@ function checkKahootCsvs() {
   const failures = [];
   let totalQuestions = 0;
 
-  if (csvFiles.length !== 40) {
-    failures.push(`Expected 40 Kahoot CSV files across 20 units, found ${csvFiles.length}`);
+  if (csvFiles.length !== 60) {
+    failures.push(`Expected 60 Kahoot CSV files across 20 units (quiz-1, quiz-2, unit-test-50), found ${csvFiles.length}`);
   }
 
   for (const file of csvFiles) {
+    const r = rel(file);
     const rows = parseCsv(fs.readFileSync(file, 'utf8'));
     if (rows.length < 2) {
-      failures.push(`${rel(file)}: missing rows`);
+      failures.push(`${r}: missing rows`);
       continue;
     }
     const header = rows[0].join(',');
     if (header !== expectedHeader) {
-      failures.push(`${rel(file)}: invalid header '${header}'`);
+      failures.push(`${r}: invalid header '${header}'`);
     }
-    if (rows.length - 1 < 10) {
-      failures.push(`${rel(file)}: expected >= 10 questions, got ${rows.length - 1}`);
+    const count = rows.length - 1;
+    if (r.endsWith('/unit-test-50-kahoot.csv')) {
+      if (count !== 50) {
+        failures.push(`${r}: expected exactly 50 questions, got ${count}`);
+      }
+    } else if (count < 10) {
+      failures.push(`${r}: expected >= 10 questions, got ${count}`);
     }
     for (let i = 1; i < rows.length; i++) {
       totalQuestions++;
       const cols = rows[i];
       if (cols.length !== 7) {
-        failures.push(`${rel(file)} row ${i + 1}: expected 7 columns, got ${cols.length}`);
+        failures.push(`${r} row ${i + 1}: expected 7 columns, got ${cols.length}`);
         continue;
       }
       const [q, a1, a2, a3, a4, time, ans] = cols;
-      if (!q || q.length > 120) failures.push(`${rel(file)} row ${i + 1}: question length ${q.length} > 120`);
+      if (!q || q.length > 120) failures.push(`${r} row ${i + 1}: question length ${q.length} > 120`);
       for (const [idx, choice] of [a1, a2, a3, a4].entries()) {
         if (!choice || choice.length > 75) {
-          failures.push(`${rel(file)} row ${i + 1}: answer ${idx + 1} length ${choice.length} invalid`);
+          failures.push(`${r} row ${i + 1}: answer ${idx + 1} length ${choice.length} invalid`);
         }
       }
-      if (!validTimes.has(time)) failures.push(`${rel(file)} row ${i + 1}: invalid time '${time}'`);
-      if (!validAnswers.has(ans)) failures.push(`${rel(file)} row ${i + 1}: invalid answer '${ans}'`);
+      if (!validTimes.has(time)) failures.push(`${r} row ${i + 1}: invalid time '${time}'`);
+      if (!validAnswers.has(ans)) failures.push(`${r} row ${i + 1}: invalid answer '${ans}'`);
     }
   }
   console.log(`[kahoot] Validated ${csvFiles.length} CSV files (${totalQuestions} questions) -> ${failures.length} failure(s)`);
   if (failures.length) {
     throw new Error(`Kahoot CSV errors:\n${failures.join('\n')}`);
+  }
+}
+
+function checkUnitMasterySetupAndTdd() {
+  const unitDirs = fs
+    .readdirSync(ROOT, { withFileTypes: true })
+    .filter((d) => d.isDirectory() && /^(0[1-9]|1[0-9]|20)-/.test(d.name))
+    .map((d) => d.name)
+    .sort();
+
+  const failures = [];
+  if (unitDirs.length !== 20) {
+    failures.push(`Expected 20 unit directories (01–20), found ${unitDirs.length}`);
+  }
+
+  for (const unit of unitDirs) {
+    const readmePath = path.join(ROOT, unit, 'readme.md');
+    if (!fs.existsSync(readmePath)) {
+      failures.push(`${unit}/readme.md missing`);
+    } else {
+      const txt = fs.readFileSync(readmePath, 'utf8');
+      const lines = txt.split(/\r?\n/).length;
+      if (!/^#\s+/m.test(txt)) failures.push(`${unit}/readme.md missing H1 heading`);
+      if (lines < 180) failures.push(`${unit}/readme.md too short (${lines} lines < 180)`);
+    }
+
+    const setupPath = path.join(ROOT, unit, 'setup-guide.md');
+    if (!fs.existsSync(setupPath)) {
+      failures.push(`${unit}/setup-guide.md missing`);
+    } else {
+      const txt = fs.readFileSync(setupPath, 'utf8');
+      const lines = txt.split(/\r?\n/).length;
+      if (!/^#\s+/m.test(txt)) failures.push(`${unit}/setup-guide.md missing H1 heading`);
+      if (lines < 80) failures.push(`${unit}/setup-guide.md too short (${lines} lines < 80)`);
+    }
+
+    const examPath = path.join(ROOT, unit, 'quizzes', 'unit-test-50.md');
+    if (!fs.existsSync(examPath)) {
+      failures.push(`${unit}/quizzes/unit-test-50.md missing`);
+    } else {
+      const txt = fs.readFileSync(examPath, 'utf8');
+      const qCount = (txt.match(/^\d+\.\s/gm) || []).length;
+      if (qCount !== 50) failures.push(`${unit}/quizzes/unit-test-50.md has ${qCount} questions (expected 50)`);
+    }
+
+    const keyPath = path.join(ROOT, unit, 'quizzes', 'unit-test-50-answer-key.md');
+    if (!fs.existsSync(keyPath)) {
+      failures.push(`${unit}/quizzes/unit-test-50-answer-key.md missing`);
+    } else {
+      const txt = fs.readFileSync(keyPath, 'utf8');
+      const kCount = (txt.match(/^\|\s*\*?\*?Q?\d+/gm) || []).length;
+      if (kCount !== 50) failures.push(`${unit}/quizzes/unit-test-50-answer-key.md has ${kCount} keyed items (expected 50)`);
+    }
+  }
+
+  if (!fs.existsSync(path.join(ROOT, '0-student_files', 'README.md'))) {
+    failures.push('0-student_files/README.md missing');
+  }
+
+  let registeredSuites = 0;
+  if (UNITS_MANIFEST.length !== 20) {
+    failures.push(`tools/grade.mjs UNITS_MANIFEST has ${UNITS_MANIFEST.length} units (expected 20)`);
+  }
+  for (const entry of UNITS_MANIFEST) {
+    if (!entry.labs || entry.labs.length === 0) {
+      failures.push(`Unit ${entry.unit} in UNITS_MANIFEST has no registered lab test suites`);
+    }
+    if (!entry.project) {
+      failures.push(`Unit ${entry.unit} in UNITS_MANIFEST missing project test suite`);
+    }
+    const suites = [...(entry.labs || []), ...(entry.project ? [entry.project] : [])];
+    for (const relSuite of suites) {
+      registeredSuites++;
+      const absSuite = path.join(ROOT, relSuite);
+      if (!fs.existsSync(absSuite)) {
+        failures.push(`Missing TDD test suite in UNITS_MANIFEST: ${relSuite}`);
+        continue;
+      }
+      if (!/\.test\.(js|mjs)$/.test(relSuite)) {
+        failures.push(`Registered TDD suite must end with .test.js or .test.mjs: ${relSuite}`);
+      }
+      const code = fs.readFileSync(absSuite, 'utf8');
+      if (!/\b(test|it|describe)\s*\(/.test(code)) {
+        failures.push(`TDD test suite contains no test() / describe() calls: ${relSuite}`);
+      }
+    }
+  }
+
+  console.log(
+    `[mastery] Verified ${unitDirs.length} Medium chapters, setup guides, 50-Q exams/keys, and ${registeredSuites} TDD suites -> ${failures.length} failure(s)`
+  );
+  if (failures.length) {
+    throw new Error(`Mastery / Setup / TDD validation errors:\n${failures.join('\n')}`);
   }
 }
 
@@ -315,7 +416,9 @@ function checkSpoilers() {
       r.endsWith('/post-lesson-eval.md') ||
       r.endsWith('/pre-unit-eval.md') ||
       r.endsWith('/post-unit-eval.md') ||
-      r.endsWith('/unit-project.md')
+      r.endsWith('/unit-project.md') ||
+      r.endsWith('/quizzes/unit-test-50.md') ||
+      r === '0-student_files/README.md'
     );
   });
 
@@ -342,6 +445,7 @@ runInstructorTests();
 if (runFull && !runTestsOnly) {
   checkHtmlScripts();
   checkKahootCsvs();
+  checkUnitMasterySetupAndTdd();
   checkSmartGoals();
   checkLinksAndDrafts();
   checkSpoilers();

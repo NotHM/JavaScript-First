@@ -20,16 +20,22 @@ async function loadGracefully(tasks) {
   return { okValues: [], errors: [] };
 }
 
-console.log('Complete asyncLab.js TODOs, then uncomment checks to verify!');
-/*
-(async () => {
-  const err = new ValidationError('Invalid email', 'email');
-  assert.equal(err instanceof Error, true);
-  assert.equal(err.name, 'ValidationError');
+if (require.main === module) {
+  console.log('Complete asyncLab.js TODOs, then uncomment checks to verify!');
+  /*
+  (async () => {
+    const err = new ValidationError('Invalid email', 'email');
+    assert.equal(err instanceof Error, true);
+    assert.equal(err.name, 'ValidationError');
 
-  const out = await loadGracefully([delay(5, 'A'), Promise.reject(new Error('Down'))]);
-  assert.deepEqual(out.okValues, ['A']);
-  assert.equal(out.errors.length, 1);
-  console.log('Lesson 7.1 Lab passed!');
-})();
-*/
+    const out = await loadGracefully([delay(5, 'A'), Promise.reject(new Error('Down'))]);
+    assert.deepEqual(out.okValues, ['A']);
+    assert.equal(out.errors.length, 1);
+    console.log('Lesson 7.1 Lab passed!');
+  })();
+  */
+}
+
+void assert;
+void EventEmitter;
+module.exports = { ValidationError, delay, loadGracefully };

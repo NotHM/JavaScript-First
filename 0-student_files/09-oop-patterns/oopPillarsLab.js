@@ -30,14 +30,19 @@ function addScoreSafe(player, pts) {
   return player;
 }
 
-console.log('Complete oopPillarsLab.js TODOs, then uncomment verification tests!');
-/*
-assert.throws(() => new Shape(), Error);
-const rect = new Rectangle(4, 5);
-assert.equal(rect.area(), 20);
-const p1 = { name: 'Kai', score: 10 };
-const p2 = addScoreSafe(p1, 5);
-assert.equal(p1.score, 10);
-assert.equal(p2.score, 15);
-console.log('Lesson 8.1 Lab passed!');
-*/
+if (require.main === module) {
+  console.log('Complete oopPillarsLab.js TODOs, then uncomment verification tests!');
+  /*
+  assert.throws(() => new Shape(), Error);
+  const rect = new Rectangle(4, 5);
+  assert.equal(rect.area(), 20);
+  const p1 = { name: 'Kai', score: 10 };
+  const p2 = addScoreSafe(p1, 5);
+  assert.equal(p1.score, 10);
+  assert.equal(p2.score, 15);
+  console.log('Lesson 8.1 Lab passed!');
+  */
+}
+
+void assert;
+module.exports = { Shape, Rectangle, addScoreSafe };

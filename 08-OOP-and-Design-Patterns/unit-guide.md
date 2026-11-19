@@ -23,6 +23,11 @@ Unit 8 delivers comprehensive mastery of **AZ CTE Standard 17.0 (`17.1–17.13`)
 | **L5 Evaluate** | Select Composition vs Inheritance and Factory vs Observer vs State given feature evolution & SOLID constraints | Post-Unit Eval Q7–Q8 |
 | **L6 Create** | Build a **Pluggable OOP Notification & State Workflow** unifying `#private` classes, Decorator logging, Observer pub/sub, & JSON/XML export | **Unit 8 Project** (`0-student_files/projects/unit-08-oop-plugin-system/`) |
 
+## 4. Setup, Mastery Exam & Automated Grading Links
+- **Chapter Reading & Setup:** [`readme.md`](./readme.md) | [`setup-guide.md`](./setup-guide.md)
+- **50-Question Unit Mastery Exam:** [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md) | **Teacher Key:** [`quizzes/unit-test-50-answer-key.md`](./quizzes/unit-test-50-answer-key.md) | **Kahoot CSV:** [`quizzes/unit-test-50-kahoot.csv`](./quizzes/unit-test-50-kahoot.csv)
+- **Automated TDD Verification:** Run `npm run grade -- --unit 08` to verify `node --test` suites across `09-oop-patterns` and `unit-08-oop-plugin-system`.
+
 ---
 
 ## SMART Goals & Objectives Tracker

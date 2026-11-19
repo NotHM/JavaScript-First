@@ -25,7 +25,9 @@ function resolveSafeFile(baseDir, untrustedName) {
   return '';
 }
 
-console.log('Complete cryptoSanitizeLab.js TODOs, then uncomment verification tests!');
+if (require.main === module) {
+  console.log('Complete cryptoSanitizeLab.js TODOs, then uncomment verification tests!');
+}
 /*
 const h = hashPassword('SecreT!23');
 assert.equal(verifyPassword('SecreT!23', h), true);
@@ -33,3 +35,6 @@ assert.equal(verifyPassword('wrong', h), false);
 assert.throws(() => resolveSafeFile('/app/uploads', '../.env'), Error);
 console.log('Lesson 11.1 Crypto/Sanitization Lab passed!');
 */
+void assert;
+
+module.exports = { hashPassword, verifyPassword, resolveSafeFile };

@@ -18,7 +18,7 @@ Traditional high school coding tracks start learners inside fragile browser scri
 
 1. **Runtime Mastery Before DOM Sugar:** Students learn CLI navigation, NVM, ESM vs. CommonJS module boundaries (`.mjs`/`.cjs`), data types, binary/fixed-point math, immutability, TDD (`node:test`), and `node:http` request/response engineering before adding Express, browser DOM, Deno/WASM, Bun, MongoDB, Phaser, or local AI pipelines.
 2. **One Language Across the Entire Modern Stack:** JavaScript/ECMAScript powers CLI tooling, HTTP/SSR servers, async queues, SQLite + MongoDB REST APIs, Deno capability sandboxes + WebAssembly binaries, Phaser/handheld games, and full-stack Local Multimodal AI + Parametric 3D CAD applications.
-3. **Verifiable Growth & Dual-Audience Rigor:** Every unit pairs baseline diagnostics (`pre-unit-eval.md`), blank student labs (`0-student_files/`), trackable Student & Teacher SMART Goals (`- [ ]`), and L5–L6 projects with Bloom's-aligned teacher keys (`eval-answer-key.md`) targeting Hake's normalized gain $g \ge 0.55$.
+3. **Verifiable Growth, Automated TDD & Dual-Audience Rigor:** Every unit pairs an in-depth `@HansOnCoding` Medium-style chapter (`readme.md`) and standalone toolchain guide (`setup-guide.md`) with baseline diagnostics (`pre-unit-eval.md`), Red → Green automated `node:test` labs (`0-student_files/` graded via `npm run grade`), trackable Student & Teacher SMART Goals (`- [ ]`), **50-Question Comprehension Mastery Exams** (`quizzes/unit-test-50.*`, `1,000` items across `20` units), and L5–L6 projects paired with Bloom's-aligned teacher keys (`eval-answer-key.md`, `unit-test-50-answer-key.md`) targeting Hake's normalized gain $g \ge 0.55$.
 
 ---
 
@@ -130,8 +130,8 @@ Every unit project naturally feeds directly into **FBLA / CyberPatriot / SkillsU
 ## 7. AZ CTE Professional Skills (`1.0–9.0`) & CTE Four-Pillar Integration
 
 Aligned with [`CTE.svg`](./CTE.svg):
-1. **Academic Structure:** Explicit Bloom's `L1–L6` progression, Pre/Post Hake's $g$ proof, `>= 5` trackable Student & Teacher SMART Goals per unit, and 1:1 ADE `11.0202.00` + Cross-Program (`11.0102.00`, `49.0199.00`, `11.1999.00`) indicator mapping.
-2. **Curriculum & Instruction:** Node-first open-source textbook + `49` Reveal.js slide decks + zero-spoiling `0-student_files/`.
+1. **Academic Structure:** Explicit Bloom's `L1–L6` progression, Pre/Post Hake's $g$ proof, `>= 5` trackable Student & Teacher SMART Goals per unit, `20 × 50-Question` comprehension mastery exams (`1,000` items), and 1:1 ADE `11.0202.00` + Cross-Program (`11.0102.00`, `49.0199.00`, `11.1999.00`) indicator mapping.
+2. **Curriculum & Instruction:** Node-first open-source `@HansOnCoding` textbook (`readme.md` + `setup-guide.md`) + `49` Reveal.js slide decks + `60` Kahoot CSVs (`1,466` total items) + zero-spoiling `0-student_files/` (`58` active Red → Green `node:test` suites / `220` checks via `npm run grade`).
 3. **Advisory Board:** Industry review of `Unit 14` system specs, `Unit 11`/`17` security audits, Part 107 compliance simulations (`19.3`), and `Unit 20` AI + Model Card + 3D Print Capstone Demo Day rubrics.
 4. **Work-Based Learning (WBL):** Git PR workflows (`Unit 13`), live client projects, FBLA/CyberPatriot competitions, and internship/capstone sprints (`Unit 20`).
 

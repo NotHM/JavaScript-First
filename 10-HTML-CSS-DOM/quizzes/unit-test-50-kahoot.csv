@@ -1,0 +1,51 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+What defines the primary goal of User-Centered Design (UCD)?,Pick animations by dev taste,Design around real user needs,Write SQL before user flows,Maximize JS bundle weight,20,2
+How do a sitemap and a wireframe differ in UI planning?,Sitemap=hierarchy; Wireframe=layout,Wireframe=SQL; Sitemap=CSS,Both mean CSS minification,Wireframe replaces <title>,20,1
+Which semantic HTML5 tag identifies the dominant main content of a page?,"<div class=""top"">",<span>,<font>,<main>,20,4
+What minimum WCAG 2.1 AA contrast ratio applies to normal body text?,2.0 : 1,3.0 : 1,4.5 : 1,10.0 : 1,20,3
+Which HTML signals are essential for clean on-page SEO?,Hidden duplicate <h1> tags,"<title>, meta desc, 1 <h1>, alt",console.log diagnostics,Empty alt attributes,20,2
+"From inside out, what is the exact order of CSS Box Model layers?","content, padding, border, margin","margin, border, padding, content","grid, flex, float, block","border, margin, content, pad",20,1
+Which CSS tools handle 2D row/column grids and print-only styling?,Flexbox & @font-face,Float left & display: inline,Table hacks & @keyframes,CSS Grid & @media print,20,4
+What angular unit does HTML5 2D Canvas ctx.rotate(angle) require?,Degrees (0-360),Radians (deg * Math.PI / 180),Gradians (0-400),Percentages (0-100),20,2
+What channel weights define standard Rec. 601 grayscale luminance?,0.333 R + 0.333 G + 0.333 B,0.500 R + 0.100 G + 0.400 B,0.299 R + 0.587 G + 0.114 B,0.114 R + 0.299 G + 0.587 B,20,3
+Which chip accelerates ultra-low-power on-device edge neural vision?,NPU (Neural Processing Unit),BIOS CMOS chip,HDD spindle controller,Dial-up modem chip,20,1
+Why is semantic <button> accessible where <div onclick> fails?,<div> rejects CSS classes,<button> ignores click events,"Native Tab focus, Enter & ARIA",<div onclick> breaks HTTPS,20,3
+"What purpose does aria-live=""polite"" serve on dynamic Canvas/form status text?",Reloads page every second,Announces updates w/o focus steal,Speeds Safari CSS parsing,Blocks Shift+Tab navigation,20,2
+"Why cannot placeholder=""Email"" replace an explicit <label for=""email"">?",Blocks @ characters,Breaks localStorage.setItem(),<label> auto-deletes strings,Vanishes on type; poor a11y bind,20,4
+How does box-sizing: border-box prevent mobile horizontal overflow bugs?,width includes padding & border,Deletes all page margins,Hides footer content,Turns Flexbox into SQL,20,1
+Why wrap Canvas translate/rotate/scale calls inside ctx.save() and ctx.restore()?,Downloads PNG file to disk,Converts radians to CSS deg,Prevents cumulative matrix drift,Shrinks RGBA pixels to 1 byte,20,3
+Why use element.textContent instead of element.innerHTML for user-supplied text?,Auto-uploads to database,Neutralizes DOM XSS <script>,innerHTML fails < 10 chars,Applies CSS Grid rules,20,2
+Why does Edge NPU beat Cloud GPU for real-time 1080p 30 FPS webcam inference?,Cloud GPU lacks matrix math,Edge NPU has 1TB HBM RAM,Webcams only send gray locally,"Avoids network lag, BW & leaks",20,4
+Why weight Green at 0.587 (vs 0.114 Blue) in Rec. 601 grayscale conversion?,Matches human eye sensitivity,Canvas drops Blue channel,Green uses 16 bits per pixel,Equal weights crash Math.round,20,1
+How do Sobel Gx and Gy 3x3 kernels combine to extract visual edges?,Gx blurs; Gy crops boxes,Both return unchanged pixels,"Gx=horiz grad, Gy=vert, sqrt sum",Gx scales DPI; Gy tests contrast,20,3
+"Why prefer borderMode=""clamp"" over ""zero"" padding in 3x3 Box Blur?",Shrinks output size by 75%,Prevents dark 0-pad edge halos,Converts grayscale to RGBA,Clamps magnitudes above 255,20,2
+"content-box with width:240px, padding:15px, border:2px. Total rendered width?",240px,257px,264px,274px,30,4
+16px normal text has contrast ratio 4.2:1 against background. WCAG AA verdict?,FAIL AA (needs >= 4.5:1),PASS AAA for all sizes,PASS AA since 4.2 > 4.0,Invalid decimal contrast,30,1
+"Which Canvas call sequence rotates an 80x40 rect cleanly around center (200,150)?","rotate(rad) then fillRect(200,150)","fillRect then translate(200,150)","save->translate(cx,cy)->rotate->-w/2","scale(200,150) then rotate(90)",30,3
+What value should you pass to ctx.rotate(...) for an exact 90-degree rotation?,90,Math.PI / 2,Math.PI * 2,0.9,30,2
+"Width=10 RGBA ImageData.data: which byte index holds Red for pixel (x=3, y=2)?",Index 23,Index 32,Index 64,Index 92 ((2*10+3)*4),30,4
+"Compute rounded Rec. 601 grayscale luminance for rgba(0, 200, 0, 255):",117 (0.587 * 200),200,67,255,30,1
+Applying a 3x3 Box Blur (weights 1/9) to a uniform patch of 90s outputs:,10,810,90,0,30,3
+"Binary threshold (>= 128 ? 255 : 0) on [40, 127, 128, 220] produces:","[0, 255, 255, 255]","[0, 0, 255, 255]","[40, 127, 255, 255]","[255, 255, 0, 0]",30,2
+"Compute IoU for [0,0,10,10] vs [5,0,15,10] (Intersection=50, Areas=100+100):",0.50,0.25,1.00,0.333 (50 / 150),30,4
+How do you stop form reload and guard localStorage against corrupt JSON?,preventDefault() + try/catch,window.reload() + bare parse,document.write() raw HTML,RAM-only global variable,30,1
+"Audit: <h1>Lab</h1><h3>Tools</h3><img src=""g.png""><div onclick=""save()"">:",Valid SEO & a11y,Only missing charset meta,"Heading skip, no alt, div trap",<img> invalid below <h3>,60,3
+Submitting form flashes new card then reloads URL with ?title=... Missing what?,canvas.width = 0,event.preventDefault(),box-sizing: content-box,@media print rule,60,2
+Why do Canvas shapes look crisp on 1x displays yet blurry on 2x Retina screens?,Retina rejects strokeRect,border-box blurs vectors,ctx.restore() halves fonts,Need backing width/height * dpr,60,4
+Slider jumps 10->30->60 deg because drawScene omits save/restore. Why does it drift?,Transforms compound each draw,clearRect rotates 180 deg,fillRect must precede translate,Math.PI/180 causes recursion,60,1
+Why is gallery.innerHTML += `<li>${titleInput.value}</li>` a critical XSS defect?,+= breaks template literals,<li> invalid inside <ul>,Executes <img onerror=...> JS,Clears localStorage cache,60,3
+grid-template-columns: 300px 300px overflows 360px mobile screens. Best CSS fix?,Hide overflow on <html>,"repeat(auto-fit, minmax(...,1fr))",Set main width: 900px,Force position: fixed globally,60,2
+"3x3 Box Blur turns all-white image edges dark (113 corners, 170 edges). Why?",Weights exceeded 1.0,Alpha scaled pixels by 0.5,clamp duplicated white edges,zero-padding pulled 0s on edges,60,4
+Predicted box gets IoU=0.28 against ground truth under AP@50 (>=0.50). Verdict?,Fails localization (FP + FN),Counts as True Positive,Counts as True Negative,NPU scales IoU up to 1.0,60,1
+Grayscale loop uses i++ over RGBA ImageData.data instead of i += 4. What fails?,Weights must sum to 255,Must use var instead of let,Byte stride off: mixes G/B/A/NaN,data.length is in kilobytes,60,3
+Vision gate shows 99% overall accuracy yet rejects 22% of darker-skinned users. Why?,strokeWidth hardcoded to 2px,Dataset skew & no subgroup eval,NPUs throttle on dark colors,CSS Grid shifted bounding box,60,2
+Lightweight zero-build Canvas tool with custom tokens. Best CSS architecture?,Vanilla CSS + Custom Props,Full Bootstrap + jQuery UI,Heavy Tailwind build pipeline,Hardcoded inline hex styles,60,1
+Dashboard has a 2D shell + 1D navbar pills. How should CSS Grid & Flexbox pair?,HTML <table> layout only,Absolute pixel coordinates,Flexbox outer 2D; Grid inner 1D,Grid outer 2D; Flexbox inner 1D,60,4
+Offline drone needs <=15ms obstacle inference on battery. Pick compute design:,Stream 4K to Cloud TPU,Single-core sequential CPU,On-device Edge NPU,Post-flight batch SD card,60,3
+Training a 150M-param Vision Transformer on 50M images requires which hardware?,Phone Edge NPU,Cloud GPU / TPU cluster,Browser 2D Canvas,Single laptop CPU thread,60,2
+Pick optimal graphics API: (A) accessible DOM bar chart vs (B) 60 FPS Sobel pixel filter.,SVG for (A); Canvas for (B),Canvas for (A); SVG for (B),<table> for 60 FPS video,Avoid both graphics APIs,60,1
+"Which QA sequence best validates accessibility, layout & cross-browser quality?",1920px mouse-only dev check,Minify JS and strip alt tags,Chrome 1280px ignoring Tab,"Keyboard, 360px, print, Lighthouse",60,4
+Sobel mask: T=15 keeps grass noise; T=320 drops fences; T=120 gives crisp edges. Pick:,T=15 noisy grass,T=320 drops real fences,T=120 balanced edge cutoff,Switch clamp to zero-pad,60,3
+Campus requests kiosk vision tracking. Which ethical safeguards minimize privacy harm?,Secretly sell cloud face DBs,"Opt-in, local edge, no raw save",Save unencrypted pics in JS,Skip bias and IoU validation,60,2
+What makes a @media print stylesheet well-engineered for printing Canvas pages?,"Hide UI sliders, clear contrast",Hide entire <body> with none,Keep fixed neon sliders on top,Shrink fonts down to 4px,60,1
+Why do Accessibility (15.8) and SEO (15.9) reinforce rather than conflict?,SEO deletes all headings,A11y deletes <title> tags,Crawlers reward <div onclick>,Both share clean semantic HTML,60,4

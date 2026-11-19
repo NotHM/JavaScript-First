@@ -1,0 +1,51 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Keyword obeying function scope only & ignoring {} blocks?,var,let,const,static,20,1
+Which two keywords enforce block scope { ... }?,var and let,let and const,var and const,global and var,20,2
+Three phases of a JavaScript variable lifecycle?,Compile / Render / Cache,Alloc / Compress / GC,Declaration / Init / Usage,Parse / Minify / Send,20,3
+Error thrown when reassigning a const binding?,SyntaxError,TypeError: Assignment to const,RangeError,DataCloneError,20,2
+Error thrown reading let or const before declaration?,TypeError,ReferenceError,EvalError,URIError,20,2
+Region before a let/const declaration line executes?,GC Window,Strict Shadow Zone,Temporal Dead Zone (TDZ),Lexical Closure Heap,20,3
+Strict equality operator skipping type coercion?,==,===,=,!=,20,2
+Built-in Node function deep cloning circular objects?,Object.assign(),Array.from(),Object.freeze(),structuredClone(),20,4
+What does Object.seal(obj) still allow on an object?,Deleting nested arrays,Modifying existing values,Converting to primitive,Bypassing const errors,20,2
+What does Object.freeze(obj) block on top-level keys?,Add/delete/reassign top keys,Reading via console.log,Nested sub-object edits,Spreading { ...obj },20,1
+"Why does const u={r:'a'}; u.r='b'; run cleanly?",const ignores objects,const locks ref not Heap,Freezes after 10 sec,Ignores writes silently,20,2
+How does 'use strict' change undeclared x = 100?,Auto-adds var silently,Rounds down to 0,Throws ReferenceError,Makes x a constant,20,3
+How does hoisting differ for var vs let/const?,Neither recognized early,var=undefined; let/const=TDZ,let=null; var=Error,const hoists its value,30,2
+Why for(var i=0;i<3;i++) pushes 3s vs let 0..2?,var shares 1 slot; let new/turn,let counts backwards,var runs loops sync,Closures fail in var,30,1
+"Why is '5' == 5 true while '5' === 5 is false?",=== sorts strings first,== coerces types; === skips,=== uses Symbol tags,== compares pointers,20,2
+"How does Object.is(NaN, NaN) compare to NaN === NaN?",Both return false,Both return true,Object.is=true; === is false,Object.is throws TypeError,30,3
+"Why does Object.freeze({n:{x:1}}) let obj.n.x = 9 work?",Numbers ignore freeze,Freeze is shallow top-level,Nested skips strict mode,Used const not let,30,2
+How does structuredClone beat JSON.parse(stringify)?,Auto-freezes arrays,Serializes functions,Keeps cycles/Date/Map/BigInt,Skips nested objects,30,3
+Mutating Object.freeze(o) in sloppy vs strict mode?,Sloppy=noop; strict=TypeError,Sloppy=Error; strict=writes,Both mutate property,Both delete property,30,1
+What does variable shadowing mean in lexical scope?,Deleting outer global var,Inner name hides outer safely,Recursive arrow call,Spreading { ...arr },20,2
+Output of: console.log(x); var x = 7;?,7,undefined,ReferenceError,null,20,2
+Output of: console.log(y); let y = 7;?,7,undefined,ReferenceError (TDZ),null,20,3
+"Output of: if(true){ var f='on'; } console.log(f);?",'on',undefined,ReferenceError,TypeError,20,1
+"Output of: if(true){ let f='on'; } console.log(f);?",'on',undefined,ReferenceError,false,20,3
+"Evaluate (0 == '') and (0 === '') in order:","false, false","true, false","true, true","false, true",20,2
+"Evaluate (null == undefined) and (null === undefined):","true, false","false, false","true, true","false, true",20,1
+"orig={s:[10]}; c={...orig}; c.s.push(20). orig.s?",[10],"[10, 20]",[],Throws TypeError,30,2
+"orig={s:[10]}; c=structuredClone(orig); c.s.push(20)?",[10],"[10, 20]",undefined,Throws DataCloneError,30,1
+Calling greet('AZ') before function greet(n){return n}?,undefined,'AZ' (body hoists),ReferenceError,TypeError,20,2
+Under 'use strict': Object.freeze({m:'p'}).m='d'?,Changes silently to 'd',Resets to undefined,TypeError read-only prop,ReferenceError,30,3
+"sayHi() before var sayHi=()=>'hi' throws TypeError. Why?",Arrows ignore errors,var hoisted as undefined(),var uses TDZ,Strict mode bans arrows,30,2
+sayHi() before const sayHi=()=>'hi' throws what?,ReferenceError (TDZ),TypeError not a function,SyntaxError =>,RangeError stack overflow,20,1
+"structuredClone({ onClick: () => {} }) throws why?",Arrows banned in objects,TypeError const assign,DataCloneError on functions,ReferenceError missing let,30,3
+"const next={...state}; next.p.inv.push('x') breaks undo:",push runs async on Heap,Shallow spread shares nested ref,const bans .push(),Spread runs Object.seal,30,2
+"if (port == false) fails valid port 0! Why?",Port 0 is undefined,== checks strict type,== coerces 0 == false true,false is truthy,30,3
+"Trace: let n=10; { let n=99; } console.log(n);?",10 (inner let shadowed),99 (blocks share let),SyntaxError redeclared,undefined (TDZ),30,1
+"Trace: let n=10; { n=99; } console.log(n);?",10 (blocks freeze outer),99 (reassigned outer let n),ReferenceError,undefined,30,2
+Why JSON.stringify fails cycles where structuredClone works?,Bans empty objects,structuredClone drops cycles,JSON rejects cycles; clone maps,JSON.parse browser-only,30,3
+"Strict mode: b=Object.seal({c:1}); b.c=2; b.e=3; fails?",Fails on b.c=2,b.c=2 OK; b.e=3 throws TypeError,Fails on Object.seal,Both succeed silently,60,2
+Two ESLint rules stopping var leaks & '5' == 5 bugs?,no-console & indent,no-var & eqeqeq,quotes & semi,no-empty & prefer-template,20,2
+60 FPS game reads: clone every read vs freeze on write?,Clone read is O(1),Write freeze=O(1) read vs O(n),deepFreeze uses var,Both equal O(n^2),30,2
+When IS structuredClone(state) ideal in a state store?,In dispatch() before freezing,Cloning DOM click buttons,Comparing numbers with ===,Replacing 'use strict',30,1
+"Teammate suggests keeping var in Node 24 ""for safety"":",Sound advice in Node 24,Only in strict modules,Flawed—prefer const/let + ESLint,Fixes typeof null,30,3
+Why freeze exported singleton config objects?,ESM bans object exports,Prevents spooky cross-file edits,Unfrozen throws ReferenceError,export const clones per file,30,2
+Clone entity having plain data + onDamage function:,Pass fn through JSON.stringify,Separate data from fns first,Wrap fn with Object.seal,Use shallow { ...entity },30,2
+Detecting NaN: reading === NaN vs Number.isNaN(reading)?,reading === NaN is always false,reading == NaN fixes it,=== NaN works in strict mode,typeof === 'undefined',30,1
+Review finds function reset() { total = 0; } (no let):,Keep for implicit sharing,Add 'use strict' + const/let,Rename to var total,Replace = with ===,30,2
+"Immutable add: prev.inv.push(x) vs [...prev.inv, x]?",Both mutate prev.inv,.push clones deeply,Spread returns fresh array cleanly,Spread throws TypeError,20,3
+"Object.freeze({logs:[]}).logs.push('hack') works! Why?",Arrays ignore strict mode,Freeze only guards var,Needs Object.seal first,Object.freeze is shallow only,30,4
+Best architecture for Unit 4 createGameStore?,Closure + clone + deepFreeze + undo,globalThis.state + var + spread,Expose raw history array,JSON.stringify on every read,30,1

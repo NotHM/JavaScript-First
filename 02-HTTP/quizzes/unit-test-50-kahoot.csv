@@ -1,0 +1,51 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Default TCP ports for HTTP and HTTPS?,21 and 22,80 and 443,143 and 993,8080 and 3389,20,2
+Which TCP port handles encrypted SSH and SFTP?,Port 21,Port 25,Port 22,Port 53,20,3
+Cloud model running stateless functions billed per ms?,IaaS,FaaS (Serverless),SaaS,Bare Metal,20,2
+Passive <4 cm wireless standard for badge/card taps?,NFC,Wi-Fi 802.11ax,5G CBRS,Single-Mode Fiber,20,1
+HTTP status family for client errors like 404 or 405?,2xx,3xx,4xx,5xx,20,3
+"package.json field enabling ESM import in .js files?","""module"": true","""type"": ""module""","""esm"": ""strict""","""engines"": ""esm""",20,2
+OSI layers for MAC frames (STP) vs IP packet routing?,L1 Physical & L7 App,L2 Data Link & L3 Network,L4 Transport & L5 Session,L3 Network & L6 Pres.,20,2
+Max standardized cable length for Cat6a UTP copper?,25 meters,50 meters,100 meters,550 meters,20,3
+"Three RFC 1918 private IPv4 blocks?","10/8, 172.16/12, 192.168/16","127/8, 169.254/16, 224/4","172.16/16, 192.0.2/24, 8.8.8/24","11/8, 172.32/12, 192.169/16",30,1
+IANA Dynamic / Ephemeral client source port range?,0-1023,1024-4095,1024-49151,49152-65535,20,4
+Why was 128-bit IPv6 introduced alongside 32-bit IPv4?,IPv4 cannot carry JSON,Prevent IPv4 exhaustion & NAT,IPv6 skips switches,IPv6 drops TCP ports,20,2
+How do SFTP and FTPS differ?,SFTP uses SSH; FTPS uses TLS,SFTP is plain; FTPS uses UDP,SFTP syncs email; FTPS HTML,Both are HTTP aliases,30,1
+How does a CDN speed up global page loads?,Disables TLS encryption,Caches static assets at edge,Blocks async JS execution,Forces DB hits on images,20,2
+Why separate createAppServer() from server.listen()?,Node forbids same file,HTTP requires Express,Tests bind port 0 without hang,Buffer needs no listen(),30,3
+Why is express.static() safer than fs.readFile(req.url)?,Encrypts CSS with AES,Sets MIME & blocks ../ escapes,Converts JS into HTML,Removes TCP sockets,30,2
+Why pick SMF fiber over Cat6a for 2 km near high voltage?,Cat6a caps at 10 m,SMF carries DC power,SMF spans 10+ km EMI-free,Cat6a runs DNS per frame,20,3
+How does WPA3 improve Wi-Fi security over WPA2?,Drops management auth,Uses SAE vs offline cracks,Moves traffic to UDP 22,Binds 169.254.0.0/16,20,2
+Contrast TCP vs UDP at Layer 4 Transport?,TCP ordered; UDP low-overhead,UDP ordered; TCP unacked,TCP Layer 2; UDP optical,Neither uses IANA ports,30,1
+How does STP / RSTP enable redundant switch uplinks?,Loops broadcasts forever,Blocks backup port until fail,Assigns RFC 1918 IPs,Acts as FaaS worker,30,2
+What does an APIPA IPv4 (169.254.x.x) address mean?,Valid public unicast IP,IPv6 DNS resolved cleanly,DHCP failed; link-local IP,CORS header rejected,20,3
+1000 KB gzipped 75% over 2000 kbps (0 ms RTT) transfer?,0.25 seconds,1.0 second,4.0 seconds,3.0 seconds,60,2
+What are 'Hi 👋'.length vs Buffer.byteLength('Hi 👋')?,5 units and 5 bytes,4 units and 4 bytes,5 UTF-16 vs 7 UTF-8 bytes,7 UTF-16 vs 5 UTF-8 bytes,30,3
+Best HTTP status after POST /api/students creates a row?,204 No Content,201 Created,304 Not Modified,405 Method Not Allowed,20,2
+Header telling clients to parse JSON rather than text?,Content-Type: application/json,Content-Encoding: utf-16,Accept-Ranges: html,X-Frame-Options: json,20,1
+SSR helper blocking <script> injection in HTML?,JSON.stringify(input),escapeHtml() entity encoding,Buffer.byteLength(input),decodeURIComponent(input),20,2
+Convert IPv4 192.168.10.25 to colon hex?,C0:A8:10:25,C0:A8:0A:19,B0:A8:0A:19,C0:98:0A:15,60,2
+How many usable host IPs fit inside a /26 subnet?,30,64,62,126,30,3
+Network & Broadcast for 10.20.4.77/27 (block size 32)?,10.20.4.0 & 10.20.4.127,10.20.4.64 & 10.20.4.95,10.20.4.64 & 10.20.4.127,10.20.4.32 & 10.20.4.63,60,2
+"VLSM in 10.60.0.0/24 for App(50), DMZ(25), DB(12): 1st?",App gets 10.60.0.0/26 first,DB gets 10.60.0.0/28 first,DMZ gets 10.60.0.0/27 first,All three share /24,60,1
+Best way to resolve ./public in Node 24 ESM?,path.join(__dirname),import.meta.dirname + path,require.resolve('./public'),process.cwd() + '/../etc',20,2
+Client sends DELETE /api/health (GET only). Best status?,200 OK,404 Not Found,405 Method Not Allowed,502 Bad Gateway,20,3
+"Why did JSON ending in '🚀' truncate using body.length?",JSON forbids emoji,.length clips UTF-8 bytes,Browsers strip braces,req.method flipped,30,2
+Why does node --test server.test.js hang forever?,listen() ran outside main guard,Buffer hangs event loop,escapeHtml blocks ticks,ESM forbids node:test,30,1
+"Why did url.includes('..') miss /public/%2e%2e/.env?",%2e%2e runs over UDP,Node redirects 403 to .env,Must decode + path.resolve,Express disables resolve,30,3
+"10.12.8.99 with /0(eth0 m5), /16(eth1 m10), /24(eth2 m50)?",eth0 (lowest metric),eth2 (longest /24 prefix),eth1 (/16 precedes /24),Packet dropped,60,2
+Two routes tie on /24 prefix; how breaks the tie?,Lowest Metric / Admin Dist.,Switches to UDP 53,Falls back to 0.0.0.0/0,Broadcasts APIPA,30,1
+ping 10.99.20.15 OK; nslookup portal.local times out. Fault?,Layer 1 Physical fiber,Layer 3 IPv4 gateway,Layer 7 DNS (port 53),Layer 2 MAC table,30,3
+Linux command diagnosing listen EADDRINUSE :::7000?,ping 127.0.0.1:7000,ss -tulnp | grep 7000,chmod 700 7000,traceroute 7000,20,2
+Why does sorting VLSM smallest-first break allocations?,Breaks power-of-2 alignment,RFC 1918 bans /28,Small subnets lack bcast,IEEE 802.11 forbids it,30,1
+Risk when SSR template interpolates ${item.name} raw?,XSS <script> injection,EADDRINUSE exhaustion,Routing loop,Const TypeError,30,1
+Startup needs custom Linux kernel sysctls & VPC control:,IaaS (AWS EC2 / GCE),SaaS (Figma),FaaS (AWS Lambda),Static CDN,30,1
+Invoice PDF worker runs 3 min/day and idles 23+ hours:,Bare-metal rack,Always-on IaaS VMs,FaaS / Serverless,Local laptop port 7000,30,3
+Soil sensors span 5 km rural orchard without Wi-Fi:,NFC (< 4 cm),BLE (10-100 m),Cat6a UTP (100 m),LTE / 5G Cellular,20,4
+Security proxy needs zero npm CVEs & minimal cold start:,40 Express plugins,Zero-dependency node:http,Plaintext Telnet,Serve /tmp unchecked,30,2
+When is Express.js clearly justified over bare node:http?,Single /health JSON probe,Multi-route static/JSON/params,App with zero HTTP,UDP packet inspection,30,2
+"450 m link near HV conduits with dual uplinks; pick tech:",Cat6a UTP + no STP,BLE mesh + APIPA,SMF fiber + RSTP failover,NFC bridge + hub,30,3
+Data center needing uniform east-west hops per leaf rack:,Daisy-chain bus,Spine-Leaf Clos fabric,Token Ring,Single Star hub,30,2
+Warehouse needs 300 m outdoor yard mobility (3.5 GHz):,NFC,802.15 BLE,Private 5G / CBRS,Infrared IrDA,30,3
+Router point-to-point link needing strictly 2 usable IPs?,RFC 3021 /31,/32,/24,/16,30,1
+After fixing DNS in Step 5 of 7-Step method; Steps 6-7?,Reboot all switches,Skip test & clear logs,Swap fiber for Cat6,Verify/prevent & Document,30,4

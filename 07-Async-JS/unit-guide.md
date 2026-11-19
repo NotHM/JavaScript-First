@@ -35,6 +35,11 @@ Unit 7 delivers complete mastery of **AZ CTE Standard 18.0 (Runtime Concurrency 
 | **Day 62** | Lesson 7.2 Part 3 (`PIC`/`VO` CRM Fail-Safe Forensics & Deterministic `node:test` Verification) | `droneTelemetryDemo.test.mjs`, **Post-Lesson 7.2** |
 | **Day 63–64** | Unit Project Sprint (Resilient Pipeline + Drone Watchdog Track) & Summative Proof | **Unit 7 Project**, **Post-Unit Eval** |
 
+## 5. Setup, Mastery Exam & Automated Grading Links
+- **Chapter Reading & Setup:** [`readme.md`](./readme.md) | [`setup-guide.md`](./setup-guide.md)
+- **50-Question Unit Mastery Exam:** [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md) | **Teacher Key:** [`quizzes/unit-test-50-answer-key.md`](./quizzes/unit-test-50-answer-key.md) | **Kahoot CSV:** [`quizzes/unit-test-50-kahoot.csv`](./quizzes/unit-test-50-kahoot.csv)
+- **Automated TDD Verification:** Run `npm run grade -- --unit 07` to run `node --test` suites across `08-async-js`, `07-drone-telemetry`, and `unit-07-resilient-pipeline`.
+
 ---
 
 ## SMART Goals & Objectives Tracker

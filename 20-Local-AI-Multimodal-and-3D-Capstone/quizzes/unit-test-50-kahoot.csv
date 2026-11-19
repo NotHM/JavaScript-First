@@ -1,0 +1,51 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+On which default local TCP port does Ollama serve POST /api/chat?,3030,8080,11434,27017,20,3
+Which quantized weight format compresses 7B LLMs to run on school laptops?,GGUF,RIFF,SQLite,JSON:API,20,1
+Which HTTP Content-Type header identifies a Server-Sent Events stream?,application/x-ndjson,text/event-stream,audio/wav,application/octet-stream,20,2
+Which privacy law protects student records from external cloud LLM exposure?,FAA Part 107,FERPA,FCC Part 15,OSHA 1910,20,2
+Which browser stack runs Transformers.js locally with zero backend server?,WebGPU / WASM,CommonJS cluster,gRPC HTTP2,ODBC driver,20,1
+What numeric output range can cosineSimilarity produce for non-zero vectors?,0 to 100,-1 to 1,1 to Infinity,-Infinity to 0,20,2
+How many header bytes appear before raw 16-bit PCM samples in a .wav file?,16 bytes,44 bytes,84 bytes,128 bytes,20,2
+Which open-source engine pair handles offline STT and TTS in Lesson 20.2?,Ollama and OpenSCAD,Whisper.cpp and Piper,Vite and Phaser,Curator and ComfyUI,20,2
+What is the exact byte length of a Binary .stl buffer with T triangles?,44 + 2 * T,84 + 50 * T,80 + 36 * T,128 + 16 * T,20,2
+Which four functions structure the NIST AI Risk Management Framework?,Plan Build Deploy Retire,Tokenize Stem Embed Map,Govern Map Measure Manage,Input Hidden Output Loss,20,3
+Why can calling JSON.parse(chunk) directly on NDJSON streams throw SyntaxError?,Ollama uses AES-256,TCP chunks split lines mid-JSON,SSE forbids UTF-8 text,Nested objects are blocked,30,2
+What advantage do local GGUF models hold over cloud APIs for school tutoring?,Unlimited RAM at zero cost,Zero cloud PII egress & API fees,100% factual accuracy,Direct USB printing,20,2
+How does a Discriminative model P(y|x) differ from a Generative P(x y) model?,Classifies boundaries vs generates media,GPUs vs SQLite,Prevents prompt injection,Emits STL facets instead,30,1
+In TF-IDF what weight does a word appearing in all N documents receive?,1.0,N,0 because ln(1) is 0,-Infinity,20,3
+Why should strict JSON tool-calling prompts pair low temperature with RAG?,Raises randomness,Lowers entropy for schema & facts,Disables maxSteps guard,Synthesizes WAV audio,30,2
+Why does Ollama llava reject FileReader.readAsDataURL strings directly?,Expects raw base64 without data: prefix,Prefers WAV encoding,Only accepts SVG XML,Blocks PNG images,20,1
+Why must 3D CAD triangles use counter-clockwise right-hand vertex winding?,Normals point outward for solid volume,Inverts normals inward,Cuts STL file size 50%,Converts mm to inches,30,1
+Why run validateMeshForPrint() in JavaScript before opening PrusaSlicer?,Catches naked edges & thin walls in CI,Heats nozzle via HTTP,Lets parts float at z=5,Turns STL into MP3,30,1
+Why pair browser Web Speech API with 16 kHz RIFF/WAVE PCM builders?,Zero-install UI plus offline Whisper/Piper,Forbids HTML buttons,Needs 80-byte STL header,Requires cloud buckets,30,1
+Which priority sits at the core of OECD AI and IEEE Ethically Aligned Design?,Hidden mass surveillance,Human agency & accountability,Remove all human review,Unacceptable risk tiers,20,2
+What does cosineSimilarity([3 4] [0 5]) evaluate to?,0.0,0.5,0.8,1.0,30,3
+What is the total byte length of a 16000 Hz 16-bit mono 0.5s WAV buffer?,8044 bytes,16044 bytes,32044 bytes,16000 bytes,30,2
+What is the total byte length of a 16000 Hz 16-bit mono 1.0s WAV buffer?,16044 bytes,32000 bytes,32044 bytes,64044 bytes,30,3
+Which string goes into Ollama images[] for data:image/png;base64;iVBORw0?,Full Data URL string,Raw base64 without prefix,Only image/png,Only charset utf8,20,2
+Which timestamps does extractVideoFramePlan emit for 9s at 3s intervals?,[3 6 9],[0 3 6],[0 1 2 3 4 5 6 7],[0 4.5 9],30,2
+How many bytes must exportBinaryStl() emit for a 12-triangle watertight box?,600 bytes,644 bytes,684 bytes,1284 bytes,30,3
+What does tokenizeAndStem('The models are safely running') return?,['the' 'models' 'are' 'safely' 'running'],['model' 'safe' 'run'],['models' 'safe' 'running'],['the' 'model' 'safely'],30,2
+High-risk subgroup rates {A: 0.90 B: 0.63} yield what Disparate Impact Ratio?,0.63,0.70,0.80,1.43,30,2
+With N=5 docs tf=0.2 df=1 rare vs df=5 common yield what TF-IDF weights?,0.2*ln(5) and 0,0 and 0.2*ln(5),1.0 and 1.0,0.2 and 0.2,30,1
+What spec must parseCadSpecFromPrompt build for '16 tooth spur gear'?,box widthMm 16,spur-gear with teeth 16,l-bracket thickness 16,cylinder radius 16,20,2
+Calling parser.push('{msg:Hi') throws SyntaxError. What is missing?,String buffer waiting for newline,STL binary packing,Raising maxFrames > 8,Dropping UTF-8 decode,30,1
+How does guardPromptSafety('Ignore previous instructions <script>') respond?,Drops all letters,Flags injection and escapes <> tags,Logs SSNs plainly,Runs input in eval(),30,2
+LLM outputs {name: 'rm_rf_host'} when only rag_lookup exists. What stops it?,Using Q4_K_M weights,Allowlist check in validateToolCall(),Larger localStorage,Sending to Cura,20,2
+Why can if (tools[name]) let an agent call { name: 'toString' }?,Prototype fallback unless Object.hasOwn,Only Deno allows strings,Data URL stripping fails,Zero coercion bug,30,1
+Stripping 'not' BEFORE checking sentiment on 'not safe' causes what bug?,SyntaxError thrown,Misclassifies unsafe text as positive,Cosine drops below -1,Lowercases emails,30,2
+A mesh reports signedVolumeMm3 = -1400 mm3. What defect caused it?,Inverted inward triangle winding,Width > 220mm bed,Missing 80-byte header,Wall thickness 0.6mm,30,1
+Directed edge u->v has count 1 while twin v->u has count 0. What defect?,Watertight solid,Non-watertight naked edge hole,Grounded at zMin 0,Big-endian floats,30,2
+A part has bounds.zMin = 5.0 and nakedEdges = 0. Why does validation fail?,nakedEdges must be 1,Part floats 5mm above print bed,Decimal bounds invalid,Requires negative volume,30,2
+ReAct loop uses maxSteps 3 without returning finalAnswer. What happens?,Infinite while loop,Returns status max_steps_exceeded,Returns status awaiting_approval,Returns status completed,30,2
+After runReActAgent pauses awaiting_approval on delete what is deleteCount?,0 until resumed approved: true,1 before pause check,5 loop runs,undefined,30,1
+Which architecture best satisfies FERPA offline CI grading and school budget?,Public cloud API without fallback,Local Ollama Q4_K_M SSE + offline fallback,405B floats in DOM,Disable prompt guards,30,2
+240x180x30mm mesh with 0.8mm wall on 220x220x250mm 0.4mm bed fails which checks?,Zero warnings printable,Fails BOTH fitsBuildPlate and wallOk,Fails only zMin,Fails only volume,30,2
+Why enforce 1.2mm minimum wall thickness for a standard 0.4mm print nozzle?,3 perimeters x 0.4mm equals 1.2mm,Matches Ollama port 11434,Cura rejects decimals,PLA melts at 1.2C,30,1
+Model Card sets euAiActRiskTier: 'unacceptable' (social scoring). Verdict?,Valid & deployable,Invalid & blocked under Article 5,Valid with warnings,Auto-sets minimal tier,30,2
+High-risk Model Card rates {A: 0.90 B: 0.63} yield ratio 0.70. Verdict?,Deployable since 0.90 >= 0.80,Blocked deployable false (< 0.80),Raises temperature 1.8,Metrics ignored,30,2
+High-risk card omits nistRmfMapping.manage and hitlControls. Verdict?,Valid if F1 > 0.90,Invalid listing missing manage & hitlControls,Valid zero errors,Only valid for OBJ,30,2
+Which capstone build order protects students best under the Unit 20 rubric?,Build textures before SSE,Lock 100-pt Core + Model Card before Bonus,Delete unit tests,Hardcode live Ollama,30,2
+Why must capstone.test.mjs pass when ollamaHost points to a closed port?,Runs deterministically < 2s offline,Node 24 lacks fetch,Stops server.close,WAV blocks localhost,30,1
+Human denies paused destructive action via approved: false. What proves HITL?,Runs once with warning,deleteCount stays 0 with HITL_DENIED note,Throws ReferenceError,Deletes tools object,30,2
+Which industry exam aligns with Unit 20 fairness and HITL accountability?,Azure AI-900 Responsible AI,FAA Night Lighting,MongoDB E11000 Tuning,Knulli ROM Layout,20,1

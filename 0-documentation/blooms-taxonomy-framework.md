@@ -67,22 +67,24 @@ $$g = \frac{\text{Post\%} - \text{Pre\%}}{100 - \text{Pre\%}}$$
 
 ## 5. Assessment System per Unit (`Units 01–20`)
 
-Every one of the **20 Units** provides four synchronized assessment layers plus SMART tracking:
+Every one of the **20 Units** separates **automated code execution proof (TDD)** from **conceptual & analytical comprehension** across **six synchronized layers**:
 
-1. **Diagnostic Pre-Unit & Summative Post-Unit Evaluations (`evaluations/`):** Paired items spanning L1–L6 + Teacher `eval-answer-key.md`.
-2. **Lesson-Level Pre & Post Checks (`pre-lesson-eval.md` / `post-lesson-eval.md`):** Rapid baseline vs. mastery proof for every single lesson (`1.1–20.3`).
-3. **Two Formative Kahoot-Style Quizzes (`quizzes/`):**
+1. **Automated Test-Driven Code Grading (`0-student_files/` + `tools/grade.mjs`):** All `38` lab suites and `20` unit capstone suites (`58` active Red → Green `node:test` suites / `220` automated checks total) automatically verify `L3 Apply`–`L4 Analyze` code correctness via `npm run grade` / `npm run grade:strict` (`0–100` pts/unit).
+2. **Diagnostic Pre-Unit & Summative Post-Unit Evaluations (`evaluations/`):** Paired items spanning L1–L6 + Teacher `eval-answer-key.md` to quantify Hake's normalized gain $g$.
+3. **Lesson-Level Pre & Post Checks (`pre-lesson-eval.md` / `post-lesson-eval.md`):** Rapid baseline vs. mastery proof for every single lesson (`1.1–20.3`).
+4. **Two Formative Kahoot-Style Quizzes (`quizzes/`):**
    - **Quiz 1 (`quiz-1-concepts.md` + `quiz-1-kahoot.csv`):** Concept Checkpoints focused on `[L1 Remember]` & `[L2 Understand]`.
    - **Quiz 2 (`quiz-2-application.md` + `quiz-2-kahoot.csv`):** Code Tracing, Debugging & Architecture focused on `[L3 Apply]`, `[L4 Analyze]`, and `[L5 Evaluate]`.
-4. **Authentic Unit Project (`projects/unit-project.md` + `project-rubric.md`):** Multi-day software engineering build graded on **Bloom's L5 (Evaluate) & L6 (Create)** alongside **AZ CTE Professional Skills (`1.0–9.0`)**.
+5. **50-Question Unit Comprehension Mastery Exam (`quizzes/unit-test-50.md` + `unit-test-50-answer-key.md` + `unit-test-50-kahoot.csv`):** Summative `50`-question written and Kahoot exam per unit (`1,000` exam items program-wide) evenly balanced across **`L1 Remember` (Q1–Q10)**, **`L2 Understand` (Q11–Q20)**, **`L3 Apply` (Q21–Q30)**, **`L4 Analyze` (Q31–Q40)**, and **`L5 Evaluate` (Q41–Q50)** so students cannot pass on brute-force AI/copy-paste code alone.
+6. **Authentic Unit Project (`projects/unit-project.md` + `project-rubric.md`):** Multi-day software engineering build graded on **Bloom's L5 (Evaluate) & L6 (Create)** alongside **AZ CTE Professional Skills (`1.0–9.0`)**.
 
 ---
 
 ## 6. Importing Kahoot CSVs in 60 Seconds
 
-Every `quizzes/quiz-*-kahoot.csv` follows the official **Kahoot! Quiz Spreadsheet Import Schema**:
+Every one of the **60** `quizzes/*-kahoot.csv` files (`40` Quiz 1/2 formative spreadsheets + `20` summative 50-question unit exams = **`1,466` validated items**) follows the official **Kahoot! Quiz Spreadsheet Import Schema**:
 - Header: `Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer`
-- `Question`: concise prompt ($\le 120$ characters) — longer code snippets are also preserved verbatim inside the companion `quiz-*.md`.
+- `Question`: concise prompt ($\le 120$ characters) — longer code snippets are also preserved verbatim inside the companion `quiz-*.md` and `unit-test-50.md`.
 - `Answer 1`–`Answer 4`: four unambiguous choices ($\le 75$ characters each).
 - `Time limit`: Kahoot-supported timer in seconds (`5`, `10`, `20`, `30`, `60`, `90`, `120`, or `240`).
 - `Correct answer`: 1-based answer index (`1`, `2`, `3`, or `4`).

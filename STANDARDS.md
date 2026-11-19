@@ -13,20 +13,24 @@ This document defines how **JavaScript First** is organized as an **open-source 
 ├── roadmap.md                                 # West-MEC 2-Year + 18-Week Core Pacing & AZ CTE Crosswalk
 ├── JavaScriptRoadmap.drawio.svg               # Visual language progression roadmap
 ├── LICENSE                                    # MIT open-source license
-├── package.json                               # Build scripts (build:student, build:teacher, build:slides, year1/year2, build:all)
-├── tools/publish.mjs                          # Pandoc + Chromium PDF & Reveal.js publisher
+├── package.json                               # Build & QA scripts (build:*, grade, grade:strict, test, verify)
+├── tools/
+│   ├── publish.mjs                          # Pandoc + Chromium PDF & Reveal.js publisher
+│   ├── grade.mjs                            # Automated Red -> Green node:test gradebook across 58 suites
+│   └── verify.mjs                           # Full repo QA (syntax, tests, 60 Kahoot CSVs, 50-Q exams, links, spoilers)
 ├── 0-documentation/
 │   ├── west-mec-scope-and-sequence.md         # 2-Year (900-Hr / 4-Sem CO101-CO202) Node-First Scope & Sequence
 │   ├── blooms-taxonomy-framework.md           # Revised Bloom's L1–L6 progression, SMART Goals & Hake's g
 │   ├── CTE.svg                                # CTE Four-Pillar Diagram
 │   ├── section-footer.md                      # Standard attribution footer
 │   └── ...
-├── 0-student_files/                           # Blank student starters (never contains instructor solutions)
-│   ├── 01-legal-ethics/ ... 20-local-ai-3d/   # Per-lesson blank TODO coding exercises (Units 01–20)
+├── 0-student_files/                           # Blank student starters & active Red->Green tests (zero solutions)
+│   ├── README.md                              # Student Test-Driven Development (TDD) workflow & npm run grade guide
+│   ├── 01-legal-ethics/ ... 20-local-ai-3d/   # Per-lesson blank TODO labs + *.test.js/*.test.mjs suites (Units 01–20)
 │   │   ├── 01-linux-admin-safety/ ...       # IT Security extensions (Units 01, 02, 11)
 │   │   ├── 05-ai-data-pipeline/ ...         # AI & Computer Vision extensions (Units 05, 09, 10, 20)
 │   │   └── 12-drone-flight-math/ ...        # Drone/sUAS extensions (Units 12, 07, 19)
-│   └── projects/                              # Per-unit starter scaffolds (unit-01 through unit-20)
+│   └── projects/                              # Per-unit starter scaffolds + capstone *.test.* suites (unit-01..20)
 ├── 01-Reteaching-JavaScript/                  # Unit 1 (Stds 2.0, 11.0, 3.0; incl. 1.4 ESM/CJS & 1.5 Linux/Hardware/OS Safety)
 ├── 02-HTTP/                                   # Unit 2 (Stds 8.0, 11.0; incl. 2.3 Express/SSR & 2.4 Subnetting/OSI/Routing)
 ├── 03-AJAX/                                   # Unit 3 (Std 9.0)
@@ -58,7 +62,8 @@ Every Unit (`01` through `20`) and every Standard Lesson (`1.1` through `20.3`, 
 ### Unit-Level Files (`XX-Unit-Name/`)
 ```text
 XX-Unit-Name/
-├── readme.md                      # Unit book reading / hub overview
+├── readme.md                      # Long-form Medium-style Chapter (@HansOnCoding tone): concepts, code & CLI examples
+├── setup-guide.md                 # Standalone workstation setup standard, CLI checks, version targets & error triage
 ├── unit-guide.md                  # Pacing, AZ CTE Standards, >= 5 Student + >= 5 Teacher SMART Goals, Bloom's Matrix
 ├── evaluations/
 │   ├── pre-unit-eval.md           # Day 1 baseline diagnostic (student-facing, no answers)
@@ -68,7 +73,10 @@ XX-Unit-Name/
 │   ├── quiz-1-concepts.md         # Quiz A: Bloom's L1–L2 Remember & Understand (with rationale key)
 │   ├── quiz-1-kahoot.csv          # Import-ready Kahoot CSV (<=120 char Q, <=75 char A1–A4)
 │   ├── quiz-2-application.md      # Quiz B: Bloom's L3–L5 Apply, Analyze & Evaluate (with rationale key)
-│   └── quiz-2-kahoot.csv          # Import-ready Kahoot CSV
+│   ├── quiz-2-kahoot.csv          # Import-ready Kahoot CSV
+│   ├── unit-test-50.md            # Summative 50-Question Student Comprehension Exam (solution-free, L1–L5)
+│   ├── unit-test-50-answer-key.md # Teacher Key for Q1–Q50 w/ Bloom's tier, standard tag & rationales
+│   └── unit-test-50-kahoot.csv    # 50-row Kahoot import spreadsheet
 └── projects/
     ├── unit-project.md            # Authentic L5–L6 Unit Project prompt, constraints & milestones
     └── project-rubric.md          # Teacher 4-tier rubric & AZ CTE Professional Skills evaluation
@@ -91,10 +99,11 @@ XX-Unit-Name/
 
 ## 3. Authoring & Verification Rules
 
-1. **Zero Student Spoiling:** `student-lesson.md`, `0-student_files/`, `pre-lesson-eval.md`, `post-lesson-eval.md`, `pre-unit-eval.md`, `post-unit-eval.md`, and `projects/unit-project.md` MUST NEVER contain completed answer keys. All keys live inside `code/`, `lesson-plan.md`, `evaluations/eval-answer-key.md`, `quizzes/*.md`, and `projects/project-rubric.md`.
+1. **Zero Student Spoiling:** `student-lesson.md`, `0-student_files/`, `pre-lesson-eval.md`, `post-lesson-eval.md`, `pre-unit-eval.md`, `post-unit-eval.md`, `quizzes/unit-test-50.md`, and `projects/unit-project.md` MUST NEVER contain completed answer keys. All keys live inside `code/`, `lesson-plan.md`, `evaluations/eval-answer-key.md`, `quizzes/quiz-*.md`, `quizzes/unit-test-50-answer-key.md`, and `projects/project-rubric.md`.
 2. **Trackable SMART Goals ($\ge 5$ Student + $\ge 5$ Teacher per Unit):** Every `unit-guide.md` (`01–20`) MUST contain at least **5 Student** and **5 Teacher** checkboxed (`- [ ]`) SMART objectives detailing **S**pecific, **M**easurable, **A**chievable, **R**elevant, and **T**ime-bound criteria alongside Bloom's tier and AZ CTE alignment; every `lesson-plan.md` and `student-lesson.md` maps lesson-level checkboxes directly to unit SMART IDs.
 3. **Explicit Bloom's Tagging:** Every objective, slide activity, worksheet section, quiz item, evaluation item, and rubric criterion MUST specify its cognitive tier (`[L1 Remember]`, `[L2 Understand]`, `[L3 Apply]`, `[L4 Analyze]`, `[L5 Evaluate]`, `[L6 Create]`).
-4. **Relative Paths Only:** All Markdown image and file links must use relative paths so VS Code, GitHub, Reveal.js, and Pandoc PDF exports render identically offline and online. Legacy scratch or draft directories must not remain in source files.
-5. **Runnable & Tested Examples (Zero-Daemon Offline Parity):** Every `.js`/`.mjs`/`.cjs` file in `code/` must pass `node --check`. Runtimes or external services (`Deno`, `Bun`, `MongoDB`, `Ollama`, `Whisper`/`Piper`, `PrusaSlicer`/STL, `Phaser`/`jsgamelauncher`) provide BOTH authentic production code (`deno.json`, `bunRestApp.js`, `docker-compose.yml`, `.jsg`) AND zero-dependency Node 24 (`node:sqlite`, `node:http`, `node:test`, `node:vm`, `WebAssembly`) offline adapters so all automated tests run deterministically in CI.
-6. **Kahoot Schema Compliance:** Every `*-kahoot.csv` must match Kahoot limits (`Question <= 120 chars`, `Answer 1..4 <= 75 chars`, valid time limit `5/10/20/30/60/90/120/240`, correct answer `1`–`4`).
-7. **Build & Check Before Committing:** Always run `npm run build:all` and the repository verification checks cleanly before committing (`dist/` stays untracked via `.gitignore`).
+4. **Test-Driven Student Grading (`tools/grade.mjs`):** Every lab and capstone project in `0-student_files/` ships with an active Red → Green `node:test` suite (`UNITS_MANIFEST`, `58` registered suites / `220` checks total) executed via `npm run grade` / `npm run grade:strict` without third-party dependencies.
+5. **Relative Paths Only:** All Markdown image and file links must use relative paths so VS Code, GitHub, Reveal.js, and Pandoc PDF exports render identically offline and online. Legacy scratch or draft directories must not remain in source files.
+6. **Runnable & Tested Examples (Zero-Daemon Offline Parity):** Every `.js`/`.mjs`/`.cjs` file in `code/` must pass `node --check`. Runtimes or external services (`Deno`, `Bun`, `MongoDB`, `Ollama`, `Whisper`/`Piper`, `PrusaSlicer`/STL, `Phaser`/`jsgamelauncher`) provide BOTH authentic production code (`deno.json`, `bunRestApp.js`, `docker-compose.yml`, `.jsg`) AND zero-dependency Node 24 (`node:sqlite`, `node:http`, `node:test`, `node:vm`, `WebAssembly`) offline adapters so all automated tests run deterministically in CI.
+7. **Kahoot Schema Compliance:** Every one of the `60` `*-kahoot.csv` files (`40` formative Quiz 1/2 + `20` summative 50-Q Mastery Exams) must match Kahoot limits (`Question <= 120 chars`, `Answer 1..4 <= 75 chars`, valid time limit `5/10/20/30/60/90/120/240`, correct answer `1`–`4`).
+8. **Build & Check Before Committing:** Always run `npm run verify` and `npm run build:all` cleanly before committing (`dist/` stays untracked via `.gitignore`).

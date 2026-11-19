@@ -21,14 +21,17 @@ function binarySearch(sortedArr, target) {
 }
 
 test('TODO: insertionSort and mergeSort return sorted arrays without mutating input', () => {
-  const input = [8, 3, 5, 1];
-  assert.deepEqual(insertionSort(input), [1, 3, 5, 8]);
-  assert.deepEqual(mergeSort(input), [1, 3, 5, 8]);
-  assert.deepEqual(input, [8, 3, 5, 1]);
+  const input = [8, 3, 5, 1, 5, -2];
+  assert.deepEqual(insertionSort(input), [-2, 1, 3, 5, 5, 8]);
+  assert.deepEqual(mergeSort(input), [-2, 1, 3, 5, 5, 8]);
+  assert.deepEqual(input, [8, 3, 5, 1, 5, -2]);
+  assert.deepEqual(insertionSort([]), []);
+  assert.deepEqual(mergeSort([42]), [42]);
 });
 
-test('TODO: binarySearch handles single-element arrays and misses cleanly', () => {
+test('TODO: binarySearch handles single-element arrays, empty arrays, and misses cleanly', () => {
   assert.equal(binarySearch([10], 10), 0);
+  assert.equal(binarySearch([], 10), -1);
   assert.equal(binarySearch([2, 4, 6, 8, 10], 6), 2);
   assert.equal(binarySearch([2, 4, 6, 8, 10], 7), -1);
 });

@@ -18,10 +18,15 @@ function auditHtmlSnippet(html) {
   return [];
 }
 
-console.log('Complete a11yAuditLab.js TODOs, then uncomment checks!');
+if (require.main === module) {
+  console.log('Complete a11yAuditLab.js TODOs, then uncomment checks!');
+}
 /*
 assert.equal(meetsWcagNormalText(4.6), true);
 assert.equal(meetsWcagNormalText(3.1), false);
 assert.ok(auditHtmlSnippet('<div><img src="a.png"></div>').length >= 3);
 console.log('Lesson 10.1 Lab passed!');
 */
+void assert;
+
+module.exports = { meetsWcagNormalText, auditHtmlSnippet };

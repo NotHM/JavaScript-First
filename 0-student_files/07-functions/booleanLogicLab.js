@@ -19,7 +19,11 @@ function handleCommand(cmd) {
   // TODO [L3 Apply | 5.4]: Implement switch for 'start', 'pause', 'stop', and default 'unknown'
 }
 
-console.log('NOR(false, false):', nor(false, false));
-console.log('XOR(true, true):', xor(true, true));
-console.log('Grade(88):', getLetterGrade(88));
-console.log('Cmd(start):', handleCommand('start'));
+if (require.main === module) {
+  console.log('NOR(false, false):', nor(false, false));
+  console.log('XOR(true, true):', xor(true, true));
+  console.log('Grade(88):', getLetterGrade(88));
+  console.log('Cmd(start):', handleCommand('start'));
+}
+
+module.exports = { nor, xor, getLetterGrade, handleCommand };

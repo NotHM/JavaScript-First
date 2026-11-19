@@ -13,12 +13,20 @@ const ARCHITECTURE_SPEC = {
 };
 
 function validateAppointmentRequest(req) {
-  // TODO [L3 Apply | 10.7]: Validate patientId and non-empty slotDate
+  // TODO [L3 Apply | 10.7]: Throw Error if !req, missing/empty patientId, or missing/empty slotDate; return true when valid
+  void req;
 }
 
 function bookAppointment(req) {
-  // TODO [L6 Create | 10.7, 10.10]: Compose decomposed steps and emit anonymized telemetry { durationMs, status }
+  // TODO [L6 Create | 10.7, 10.10]: Call validateAppointmentRequest(req) inside try/catch,
+  // returning { confirmed: true, slotDate: req.slotDate, telemetry: { durationMs, status: 'ok' } }
+  // or on error { confirmed: false, error: err.message, telemetry: { durationMs, status: 'error' } } (never log PII!)
+  void req;
   return {};
 }
 
-console.log('Unit 14 Spec Starter:', ARCHITECTURE_SPEC);
+if (require.main === module) {
+  console.log('Unit 14 Spec Starter:', ARCHITECTURE_SPEC);
+}
+
+module.exports = { ARCHITECTURE_SPEC, validateAppointmentRequest, bookAppointment };

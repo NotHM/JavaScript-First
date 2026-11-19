@@ -1,0 +1,51 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Which four concepts form the classic four pillars of OOP?,"Compilation, Hoisting, Currying, Recursion","Loops, Arrays, Matrices, Graphs","Encapsulation, Abstraction, Inheritance, Polymorphism","JSON, XML, CSV, BitSet",20,3
+Which prefix declares hard V8-enforced private fields inside modern JS classes?,_ (e.g. _balance),# (e.g. #balance),@ (e.g. @balance),$ (e.g. $balance),20,2
+Which meta-property inside a base constructor blocks direct abstract instantiation?,new.target,this.prototype,Object.keys,import.meta,20,1
+Which keyword invokes the parent class constructor or overridden method in extends?,parent,base,extends,super,20,4
+In SOLID design principles (17.13) what do S and O stand for?,Static Typing & Serialization,Single Responsibility & Open/Closed,Strict Mode & Observables,Sync Execution & Overloading,20,2
+Which structured format parses natively in JS via JSON.parse and JSON.stringify?,XML,YAML,JSON,INI,20,3
+Which format uses paired tags attributes namespaces and strict XSD schemas?,XML (<course id='1'>),JSON ({'id': 1}),CSV (id/title),Binary Uint8Array,20,1
+Which structural GoF pattern translates a legacy XML class to a modern interface?,Singleton,Prototype,Flyweight,Adapter,20,4
+Which pattern wraps an existing fn/object to add logging without editing its body?,Abstract Factory,Decorator,State,Iterator,20,2
+Which symbol generator makes a custom OOP collection iterable with for...of?,toString(),constructor(),*[Symbol.iterator](),Object.freeze(),20,3
+Why does running typeof class Wallet {} print 'function' instead of 'class'?,ES6 class is syntactic sugar over constructor fns + prototype,Classes compile to JSON text,JS has no objects at all,typeof prints 'function' for keywords,30,1
+How do primitive args differ from object/array args passed into JS functions?,Both copy deeply on stack,Primitives share heap; objects copy,Neither passes into class methods,Primitives copy by value; objects share heap ref,30,4
+Why does #balance provide stronger encapsulation than this._balance (17.4)?,_balance blocks JSON.stringify,#balance auto-hashes w/ SHA-256,_balance is convention only; #balance throws SyntaxError outside,Classes share #balance globally,30,3
+Why favor Composition ('has-a') over deep multi-level Inheritance ('is-a')?,JS forbids extends past 2 levels,Injected collaborators combine traits cleanly without brittle trees,Composition eliminates constructors,Inheritance forbids super(),30,2
+How does Polymorphism simplify looping [new JsonExporter() new XmlExporter()]?,Callers invoke .export(data) uniformly with zero if(type) branches,Subclasses merge into Uint32Array,Callers wrap subclasses in eval(),Subclasses cannot override methods,30,1
+Why do REST APIs prefer JSON over XML while legacy SOAP feeds retain XML?,XML cannot encode UTF-8 text,JSON uses XSD tags natively,REST rejects JSON strings,JSON is 20-50% smaller & native; XML brings strict XSD/attrs,30,4
+What does the Liskov Substitution Principle (L in SOLID) guarantee?,Classes fit on one line,Private fields start w/ underscores,Subclasses can replace base types without breaking caller contracts,Factories always return null,30,3
+What coupling problem does the Observer / Pub-Sub (Observable) pattern solve?,Forces UI to inherit DB models,Publishers call notify(payload) decoupled from subscriber listeners,Converts switch to while loops,Deletes EventEmitter from Node,30,2
+Why should get entries() return cloned entries (map(e => ({ ...e })))?,Blocks callers from mutating private #entries via returned refs,Getters fail unless returning copies,map turns numbers to XML,Clones bypass constructors,30,1
+What problem does the State Pattern solve inside OrderStateMachine?,Jumps backwards SHIPPED -> DRAFT,Converts const to var,Turns arrays into linked nodes,Enforces valid transitions & rejects illegal jumps immediately,30,4
+"Given const orig = [80, 90]; next = addScoreSafe(orig, 95); what are they?","Both hold [80, 90, 95]","orig [] / next [95]","orig stays [80, 90]; next [80, 90, 95]",orig becomes 95,30,3
+"Exporter guards if (new.target === Exporter) throw Error. new Exporter() vs Json?",Both throw 'Abstract',new Exporter() throws; new JsonExporter() passes,Neither throws on super(),JsonExporter throws SyntaxError,30,2
+"Rectangle extends Shape overriding area(). new Rectangle(4, 5).area() returns:",20,9,'Rectangle',undefined,20,1
+"Given escapeXml escaping &, <, >: what outputs from escapeXml('JS & <Patterns>')?",'JS & <Patterns>','JS &amp; <Patterns>','JS  Patterns','JS &amp; &lt;Patterns&gt;',30,4
+"Factory createExporter(fmt): createExporter('json').export({ok:true}) vs ('csv')?",Returns JSON and null for csv,Both return <ok>true</ok>,Returns JSON string; throws Error on 'csv',Throws SyntaxError on 'json',30,3
+"Decorator withTimestamp(fn) adds ISO timestamp. withTimestamp(x=>({x}))('hi'):",'hi',"{ x: 'hi', timestamp: '<ISO>' } w/o editing fn",undefined,"['hi', timestamp]",30,2
+"bus = new Observable(); bus.subscribe(a); bus.subscribe(b); bus.notify({id:1}):",Both a and b run receiving {id:1},Only last b runs,Only a runs (overrides),Neither runs without .bind,30,1
+ExportHistory adds *[Symbol.iterator]() { yield* this.entries; }. Enables:,delete history & eval(history),new history() & shift(),history.then() & await history,for (const e of history) & [...history],20,4
+"const lin={points:50}; next=grantBonus(lin, 25) returns clone. What is lin.points?",75,25,50,undefined,20,3
+"Wallet sets range check v>=0. w = new Wallet('Ada', 500); w.balanceCents = -100:",w.balanceCents becomes -100,Throws RangeError & keeps balanceCents at 500,Clamps silently to 0,Deletes Wallet instance,30,2
+Why does set width(v) { this.width = v; } crash w/ Maximum call stack exceeded?,this.width recursively invokes set width forever instead of #width,RangeError triggers infinite loops,Setters forbid integers,v <= 0 overflows stack,30,1
+"const fn = wallet.deposit; fn(500); crashes 'Cannot read private member'. Why?",#balanceCents deletes after new(),deposit requires static keyword,Integers fail in detached arrows,Detached method drops receiver 'this' leaving undefined in class,30,4
+"class Square extends Shape { constructor(s){ this.size=s; super(); } } throws:",Square must match Shape name,Constructors ban single args,Derived constructors MUST call super() before touching this,super() must be last line,30,3
+"get entries() returned [...this.#entries], yet hist.entries[0].format='X' leaked!",Private fields stay mutable,Shallow spread copies array only while sharing inner object refs,get returns globalThis refs,Strings pass by heap pointer,60,2
+assert.throws(() => wallet.#balanceCents) crashes BEFORE running tests! Why?,External #private syntax is a parse-time SyntaxError before runtime,assert.throws bans SyntaxError,#balanceCents is public string,Arrows execute at compile time,30,1
+"Spot XML defect in `<title>${title}</title>` when title = 'Node & <HTTP>':",Template literals ban XML,Ampersands throw TypeError,XML tags must be uppercase,Unescaped & and < break XML / permit tag injection (&amp; &lt;),30,4
+400-line InvoiceProcessor does tax + SMTP + SQL + XML in 1 class. Which fails?,Adapter Pattern,Prototype Chain,Single Responsibility Principle (S) — 4 unrelated responsibilities,Setter Infinite Recursion,30,3
+"exportReport checks if (x instanceof JsonExporter) else if (XmlExporter). Breaks:",Encapsulation & new.target,Polymorphism & Open/Closed — new CsvExporter forces editing fn,Iterator protocol,Pass-by-value primitives,30,2
+"XmlToJsonCatalogAdapter returns credits: '1.5' string instead of 1.5 number:",Breaks JSON DTO contract (sums concatenate '01.5' vs adding),JSON bans floats,Adapters cannot convert types,CO101 requires parseInt,30,1
+"clone = { ...order }; clone.items.push('extra'); also mutates order.items! Why?",.push mutates arrays globally,const shares values,{...order} freezes primitives,Spread is shallow so clone.items shares heap ref (use structuredClone),30,4
+"Simulator has FlyingRobot, SwimmingCar, FlyingBoat. Why pick Composition?",Composition removes validation,JS limits super() to 2 classes,Single inheritance limits mixins; Composition swaps modules cleanly,Composition auto-emits XML,60,3
+Integrate uneditable LegacyXmlCourseFeed.fetchCourseXml() into .getCourses() app:,Edit vendor inside node_modules,Wrap legacy feed inside XmlToJsonCatalogAdapter (Open/Closed),Rewrite frontend to parse SOAP,Expose feed via globals,60,2
+"Add audit logs to tested savePayment() WITHOUT editing its lines. Best pattern?",Decorator wrapper (withAuditLog),Copy-paste savePaymentWithLogs,Mutate Function.prototype,Replace with XML tags,30,1
+Pick formats: (1) high-traffic public REST API vs (2) strict XSD B2B banking:,XML for REST / CSV for XSD,console.log text for both,Binary BitSet for both,JSON (compact/native) for REST; XML for strict XSD/namespaces,60,4
+Why should createExporter(format) throw on 'yaml' vs silent JSON fallback?,JsonExporter rejects objects,Throwing kills EventBus,Fail-fast catches typos instead of silently sending wrong format,Factories cannot return subclasses,30,3
+"Why pair #entries + defensive clone + *[Symbol.iterator]() vs public array?",Public arrays forbid objects,Enables ergonomic for...of & [...spread] while protecting #entries,Generators run 2x faster,Symbol.iterator emits XML,60,2
+Under Dependency Inversion (D) why inject notifier into CheckoutService(notifier)?,Depends only on .notify() making test spies & SMS swaps trivial,Hardcoded new fails in CJS,Removes constructors completely,EmailNotifier has no methods,60,1
+Why implement .toJson() DTO mapper vs naive JSON.stringify(instance) on classes?,stringify skips #private/methods/undefined; DTO keeps schema clean,stringify rejects ES6 classes,DTO converts keys to XML,stringify mutates #private fields,30,4
+Why add explicit .dispose() / Symbol.dispose cleanup on timer/socket classes?,Methods must be named dispose,.dispose() locks constants,JS GC timing is unpredictable; explicit disposal frees OS handles now,.dispose() serializes JSON,30,3
+Value of combining Exporter(new.target) + Factory + Decorator + EventBus + History?,Packs code in one God function,Enforced polymorphism + extensible wrappers + events + tamper-proof logs,Removes need for tests,Forces shared global state,60,2

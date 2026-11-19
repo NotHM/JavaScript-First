@@ -8,6 +8,7 @@
 
 import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
+import { pathToFileURL } from 'node:url';
 
 export function parseCsvToRecords(csvText) {
   // TODO [L3 Apply | AI 4.0]: Parse header + rows into typed objects; normalize '', 'NA', 'null' -> null
@@ -76,25 +77,27 @@ export function pearsonCorrelation(xs, ys) {
   return 0;
 }
 
-console.log('Complete dataPipelineLab.mjs TODOs, then uncomment verification checks below!');
-/*
-const cleaned = imputeMissingNumeric(
-  [{ id: '1', score: 80 }, { id: '2', score: null }, { id: '3', score: 100 }],
-  'score',
-  'mean'
-);
-assert.equal(cleaned[1].score, 90);
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  console.log('Complete dataPipelineLab.mjs TODOs, then uncomment verification checks below!');
+  /*
+  const cleaned = imputeMissingNumeric(
+    [{ id: '1', score: 80 }, { id: '2', score: null }, { id: '3', score: 100 }],
+    'score',
+    'mean'
+  );
+  assert.equal(cleaned[1].score, 90);
 
-const anon = anonymizePiiRecord({ studentId: 'S1', name: 'Ada', email: 'ada@school.edu', ssn: '123-45-6789' });
-assert.equal(anon.email, undefined);
-assert.equal(anon.name, '[REDACTED]');
-assert.equal(typeof anon.studentIdHash, 'string');
+  const anon = anonymizePiiRecord({ studentId: 'S1', name: 'Ada', email: 'ada@school.edu', ssn: '123-45-6789' });
+  assert.equal(anon.email, undefined);
+  assert.equal(anon.name, '[REDACTED]');
+  assert.equal(typeof anon.studentIdHash, 'string');
 
-assert.deepEqual(detectOutliersIqr([10, 12, 12, 13, 14, 15, 16, 100]).outliers, [100]);
-assert.deepEqual(minMaxScale([10, 20, 30]), [0, 0.5, 1]);
-assert.deepEqual(oneHotEncode(['AI', 'Web', 'AI']).encoded, [[1, 0], [0, 1], [1, 0]]);
-assert.equal(cosineSimilarity([1, 0], [0, 1]), 0);
-assert.ok(Math.abs(pearsonCorrelation([1, 2, 3], [2, 4, 6]) - 1) < 1e-12);
-console.log('Lesson 5.3 Student Lab passed!');
-*/
+  assert.deepEqual(detectOutliersIqr([10, 12, 12, 13, 14, 15, 16, 100]).outliers, [100]);
+  assert.deepEqual(minMaxScale([10, 20, 30]), [0, 0.5, 1]);
+  assert.deepEqual(oneHotEncode(['AI', 'Web', 'AI']).encoded, [[1, 0], [0, 1], [1, 0]]);
+  assert.equal(cosineSimilarity([1, 0], [0, 1]), 0);
+  assert.ok(Math.abs(pearsonCorrelation([1, 2, 3], [2, 4, 6]) - 1) < 1e-12);
+  console.log('Lesson 5.3 Student Lab passed!');
+  */
+}
 void assert;

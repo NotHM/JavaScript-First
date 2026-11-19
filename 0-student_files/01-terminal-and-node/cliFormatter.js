@@ -20,5 +20,9 @@ function formatBanner(title, statusOk = true) {
   // TODO [L3 Apply]: Return ANSI colored string terminated safely with \x1b[0m
 }
 
-const inputName = sanitizeCliInput(process.argv[2] ?? 'Student');
-console.log(formatBanner(`Welcome to JavaScript First, ${inputName || 'Anonymous'}!`, Boolean(inputName)));
+if (require.main === module) {
+  const inputName = sanitizeCliInput(process.argv[2] ?? 'Student');
+  console.log(formatBanner(`Welcome to JavaScript First, ${inputName || 'Anonymous'}!`, Boolean(inputName)));
+}
+
+module.exports = { sanitizeCliInput, formatBanner };

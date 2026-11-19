@@ -6,6 +6,7 @@
  * Run: node 0-student_files/07-drone-telemetry/telemetryWatchdogLab.mjs
  */
 import { EventEmitter } from 'node:events';
+import { pathToFileURL } from 'node:url';
 
 export const FRAME_SYNC_BYTE = 0xfe;
 
@@ -60,19 +61,23 @@ export function fuseImuComplementary({ prevAngleDeg, gyroDegPerSec, accelX, acce
 export async function runFailSafeWatchdog({ nowFn, lostLinkLimitMs = 1500, gpsHomeValid = true, cellMv = 3800, signal }) {
   const bus = new EventEmitter();
   let lockActive = true;
+  let mode = 'TODO';
   try {
     // TODO [L5 Evaluate | 18.1, 18.4, 18.7]:
     // Watch heartbeats until AbortController `signal` aborts or link times out past lostLinkLimitMs;
-    // select 'FAILSAFE_RTH' (when gpsHomeValid && cellMv > 3500) or 'FAILSAFE_LAND' and emit CRM log!
+    // select 'FAILSAFE_RTH' (when gpsHomeValid && cellMv > 3500) or 'FAILSAFE_LAND' and emit CRM log on `bus`!
+    // Return { bus, mode, lockActive } after `finally` updates lockActive = false (or update result object in `finally`).
     void nowFn;
     void lostLinkLimitMs;
     void gpsHomeValid;
     void cellMv;
     void signal;
-    return { bus, mode: 'TODO', lockActive };
+    return { bus, mode, lockActive };
   } finally {
     lockActive = false;
   }
 }
 
-console.log('Complete the TODOs in telemetryWatchdogLab.mjs to verify framing, PID, IMU fusion, and RTH Fail-Safe!');
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  console.log('Complete the TODOs in telemetryWatchdogLab.mjs to verify framing, PID, IMU fusion, and RTH Fail-Safe!');
+}

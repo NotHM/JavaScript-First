@@ -30,6 +30,11 @@ Unit 6 merges **AZ CTE Standard 5.0 (Conditional Structures & Boolean Algebra)**
 - **Days 27–28 (Lesson 6.2 — Std 5.5, 11.10–11.12):** Pre-Lesson 6.2; Declarations/Arrows/IIFEs, Closures, Pure/HOFs/Currying, Seeded PRNGs, Post-Lesson 6.2, **Kahoot Quiz 2**.
 - **Day 29:** **Unit 6 Project** + **Post-Unit Evaluation**.
 
+## 5. Setup, Mastery Exam & Automated Grading Links
+- **Chapter Reading & Setup:** [`readme.md`](./readme.md) | [`setup-guide.md`](./setup-guide.md)
+- **50-Question Unit Mastery Exam:** [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md) | **Teacher Key:** [`quizzes/unit-test-50-answer-key.md`](./quizzes/unit-test-50-answer-key.md) | **Kahoot CSV:** [`quizzes/unit-test-50-kahoot.csv`](./quizzes/unit-test-50-kahoot.csv)
+- **Automated TDD Verification:** Run `npm run grade -- --unit 06` to execute `node --test` suites across `07-functions` and `unit-06-rules-engine`.
+
 ---
 
 ## SMART Goals & Objectives Tracker

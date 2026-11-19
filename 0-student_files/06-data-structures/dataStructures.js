@@ -14,9 +14,31 @@
  */
 
 // TODO: Step 1 — Recursive factorial(n)
-
+function factorial(n) {
+  // TODO [L3 Apply | 7.1]: Base case n <= 1 returns 1; otherwise return n * factorial(n - 1)
+  void n;
+}
 
 // TODO: Step 2 — filter, map, reduce on prices
+const prices = [5, 12, 25, 8, 30];
 
+function sumDiscountedPrices(inputPrices = prices) {
+  // TODO [L3 Apply | 6.1]: Keep prices >= 10, apply 10% discount (price * 0.9), and sum with reduce
+  void inputPrices;
+  return 0;
+}
 
 // TODO: Step 3 — JSON.stringify and JSON.parse
+function roundTripCourseJson(course = { name: 'JS First', year: 2026 }) {
+  // TODO [L3 Apply | 6.3]: Convert course with JSON.stringify() and parse back with JSON.parse()
+  void course;
+  return null;
+}
+
+if (require.main === module) {
+  console.log('5! =', factorial(5));
+  console.log('Discounted total:', sumDiscountedPrices(prices));
+  console.log('Round-trip JSON:', roundTripCourseJson());
+}
+
+module.exports = { factorial, prices, sumDiscountedPrices, roundTripCourseJson };

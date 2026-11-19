@@ -1,7 +1,8 @@
 # Unit 16 Guide: Software Business Economics, Agile Delivery & Semester Capstone
 
 **Course:** JavaScript First — Software & App Design (AZ CTE CIP **11.0202.00**)  
-**Semester Schedule:** Week 18 (Days 86–90 | 5 Class Periods × 50 Minutes)
+**Semester Schedule:** Week 18 (Days 86–90 | 5 Class Periods × 50 Minutes)  
+**Setup & CLI Guide:** [`setup-guide.md`](./setup-guide.md) · **Automated Lab Grader:** `npm run grade -- --unit 16`
 
 ## 1. Unit Overview
 Unit 16 completes **AZ CTE Standard 19.0 (`19.1–19.8`)** and serves as the **Full-Semester Capstone Showcase** synthesizing Standards `1.0–19.0`. Students contrast **Waterfall**, **Top-Down**, and **Agile/Scrum**, manage app-store & cloud CI releases, model **Development Costs + Break-Even + LTV:CAC SaaS Economics**, compare monetization tiers, run Kanban/MVP scoping, interpret post-launch feedback telemetry, evaluate emerging AI/Edge trends, and ship a tested end-to-end Capstone Web Application.
@@ -44,3 +45,14 @@ Unit 16 completes **AZ CTE Standard 19.0 (`19.1–19.8`)** and serves as the **F
 - [ ] **TG-U16-3 (Kahoot Formative Remediation Threshold):** **[Specific]** Run [`quizzes/quiz-1-kahoot.csv`](./quizzes/quiz-1-kahoot.csv) (L1–L2) and [`quizzes/quiz-2-kahoot.csv`](./quizzes/quiz-2-kahoot.csv) (L3–L5) during Week 18 sprint pauses. **[Measurable]** Lead an immediate 10-minute `LTV:CAC`/churn or Agile-ceremony micro-reteach whenever item or class accuracy drops below 75%. **[Achievable]** Informed by rationale keys in `quizzes/quiz-*.md`. **[Relevant]** Ensures all learners master SaaS unit economics and release metrics before Post-Unit Eval. **[Time-bound]** Executed in-class on Day 87 and Day 89. *(Specific | Measurable | Achievable | Relevant | Time-bound | Bloom's L1–L5 | AZ CTE 19.0 / West-MEC)*
 - [ ] **TG-U16-4 (Timely 4-Tier Capstone Rubric & Pitch Turnaround):** **[Specific]** Evaluate every Semester Capstone project and pitch using [`projects/project-rubric.md`](./projects/project-rubric.md) (security/OOP/async architecture, persistence/a11y UI, `node --test`/Git professionalism, and SaaS business case). **[Measurable]** Return 100% of final rubric scores and career-portfolio feedback within 3 instructional days (aligned with semester close). **[Achievable]** Standardized 4 × 25-point rubric scoring paired with live Demo Day grading sheets. **[Relevant]** Provides learners verified capstone credentials for job applications and CTE transcripts. **[Time-bound]** Completed within 72 hours of Day 90 Demo Day. *(Specific | Measurable | Achievable | Relevant | Time-bound | Bloom's L4–L6 | AZ CTE 1.0–19.0 / West-MEC)*
 - [ ] **TG-U16-5 (AZ CTE / West-MEC & FBLA Portfolio Documentation):** **[Specific]** Audit and archive full-semester Capstone codebases, `node --test` CI logs, SaaS launch pitches, and longitudinal Pre/Post Hake's $g$ growth records across Units `01–16` for AZ CTE CIP `11.0202.00` & West-MEC Coding completion. **[Measurable]** Verify 100% of completing students graduate the semester with a documented, standards-mapped engineering & FBLA competitive portfolio. **[Achievable]** Consolidated during Day 90 Demo Day & Peer Code Review. **[Relevant]** Satisfies district/state CTE program auditing and certifies West-MEC/FBLA readiness. **[Time-bound]** Finalized at semester close following Day 90. *(Specific | Measurable | Achievable | Relevant | Time-bound | Bloom's L1–L6 | AZ CTE / West-MEC)*
+
+---
+
+## 4. Setup Guide, 50-Question Mastery Exam & Automated Grading
+
+- **Environment & Tooling Guide:** [`setup-guide.md`](./setup-guide.md) (Agile Kanban WIP rules, `.env` isolation, semantic release tagging, Capstone Demo Day pre-flight checks)
+- **50-Question Unit Mastery Exam:**
+  - Student Exam (solution-free): [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md)
+  - Teacher Answer Key & Rationales: [`quizzes/unit-test-50-answer-key.md`](./quizzes/unit-test-50-answer-key.md)
+  - Kahoot Import CSV (`50` items): [`quizzes/unit-test-50-kahoot.csv`](./quizzes/unit-test-50-kahoot.csv)
+- **Automated Lab & Project Grading:** Run `npm run grade -- --unit 16` across [`0-student_files/16-business-capstone/`](../0-student_files/16-business-capstone/appLaunchPlanner.js) and [`0-student_files/projects/unit-16-semester-capstone/`](../0-student_files/projects/unit-16-semester-capstone/index.js).

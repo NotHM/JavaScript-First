@@ -12,26 +12,33 @@ class MongoCollection {
 
   insertOne(doc) {
     // TODO [L3 Apply | 16.5]: Clone doc assigning _id: this.nextId++, push into this.docs, return saved clone
+    void doc;
     return null;
   }
 
   find(filter = {}) {
     // TODO [L3 Apply | 16.5]: Return array of matching clones; support { field: value } AND { field: { $gte: num } }
+    void filter;
     return [];
   }
 
   updateOne(filter, patchObj) {
     // TODO [L3 Apply | 16.6]: Find first matching doc and update fields cleanly via Object.assign; return boolean modified
+    void filter;
+    void patchObj;
     return false;
   }
 
   deleteOne(filter) {
     // TODO [L3 Apply | 16.6]: Remove first matching doc safely (without wiping whole collection!) and return boolean deleted
+    void filter;
     return false;
   }
 }
 
-console.log('Complete crudLab.js TODOs, then uncomment verification assertions!');
+if (require.main === module) {
+  console.log('Complete crudLab.js TODOs, then run: node --test 0-student_files/15-storage-crud/storageAndCrudLab.test.js');
+}
 /*
 const catalog = new MongoCollection();
 const item = catalog.insertOne({ name: 'Mechanical Keyboard', price: 89 });
@@ -41,3 +48,6 @@ assert.equal(catalog.deleteOne({ _id: item._id }), true);
 assert.equal(catalog.find().length, 0);
 console.log('Lesson 15.2 Lab passed!');
 */
+void assert;
+
+module.exports = { MongoCollection };

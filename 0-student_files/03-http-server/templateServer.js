@@ -22,4 +22,18 @@ const HtmlTemplateString = (header, body, footer) => {
 
 // TODO: Create homePage and aboutPage using HtmlTemplateString
 
-// TODO: Create and start the HTTP server on PORT
+function createTemplateServer() {
+  // TODO: Return http.createServer((req, res) => { ... }) handling '/', '/about', and 404
+  void http;
+  return null;
+}
+
+if (require.main === module) {
+  // TODO: Start the HTTP server on PORT using createTemplateServer()
+  const server = createTemplateServer();
+  if (server) {
+    server.listen(PORT, () => console.log(`Template server running at http://127.0.0.1:${PORT}`));
+  }
+}
+
+module.exports = { HtmlTemplateString, createTemplateServer, PORT };

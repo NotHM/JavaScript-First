@@ -51,5 +51,9 @@ function auditStudentRecord(record) {
 }
 
 // TODO [L6 Create]: Print formatted compliance report using ANSI colors and ANSI.reset
-console.log(`${ANSI.bold}Unit 1 CLI Compliance Auditor — Starter Ready${ANSI.reset}`);
-console.log('Implement TODOs in auditDependencies() and auditStudentRecord().');
+if (require.main === module) {
+  console.log(`${ANSI.bold}Unit 1 CLI Compliance Auditor — Starter Ready${ANSI.reset}`);
+  console.log('Implement TODOs in auditDependencies() and auditStudentRecord().');
+}
+
+module.exports = { ANSI, classifyType, auditDependencies, auditStudentRecord };

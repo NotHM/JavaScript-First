@@ -2,7 +2,8 @@
 
 **Course:** JavaScript First — Software & App Design (AZ CTE CIP **11.0202.00**)  
 **Semester Schedule:** Extension Week 20 (6 Class Periods × 50 Minutes)  
-**Target Grade Level:** 11–12 / Post-Secondary Full-Stack Engineering
+**Target Grade Level:** 11–12 / Post-Secondary Full-Stack Engineering  
+**Setup & CLI Guide:** [`setup-guide.md`](./setup-guide.md) · **Automated Lab Grader:** `npm run grade -- --unit 18`
 
 ---
 
@@ -26,7 +27,7 @@ Unit 18 synthesizes relational SQL persistence, document NoSQL persistence, OOP 
 - [ ] **Teacher Goal 2 (`[L3 Apply]` | `Std 11.8, 16.6`):** Demonstrate live ephemeral `fetch()` integration testing (`sqliteRestApp.test.mjs`) on Day 2 showing 100% offline execution via Node 24 `node:sqlite` alongside native `bunRestApp.js`.
 - [ ] **Teacher Goal 3 (`[L3–L4]` | `Std 16.5, 17.x`):** Guide students through `Learn-MongoDB-4.x` (`sweetscomplete`/`booksomeplace`) schemas, GeoJSON `[lng, lat]` coordinate order, and `$lookup` pipelines on Days 3–4.
 - [ ] **Teacher Goal 4 (`[L4–L5]` | `Std 17.10–17.13`):** Model the Strategy Pattern (`responderStrategies.mjs`) on Day 4 so >= 85% of students implement `JSend`/`JSON:API`/`HAL+JSON` format switching accurately.
-- [ ] **Teacher Goal 5 (`[L5–L6]` | `All Unit Stds`):** Collect paired Pre/Post evaluations and Dual-DB project rubrics on Day 6, achieving class average normalized learning gain $g \ge 0.55$.
+- [ ] **Teacher Goal 5 (`[L5–L6]` | `All Unit Stds`):** Collect paired Pre/Post evaluations, 50-question Unit Mastery Exams (`quizzes/unit-test-50.md`), and Dual-DB project rubrics on Day 6, achieving class average normalized learning gain $g \ge 0.55$.
 
 ---
 
@@ -46,11 +47,11 @@ Unit 18 synthesizes relational SQL persistence, document NoSQL persistence, OOP 
 
 | Tier | Focus in Unit 18 | Evidence & Assessment |
 |---|---|---|
-| **L1 Remember** | State REST status codes (`201`, `400`, `404`, `409`), Bun APIs (`Bun.serve`, `bun:sqlite`), GeoJSON `[lng, lat]` order, and MIME types (`application/vnd.api+json`, `application/hal+json`) | `pre-unit-eval.md`, Quiz 1 |
-| **L2 Understand** | Contrast Relational SQLite (`PRAGMA foreign_keys`, JOINs) vs. MongoDB documents (embedded arrays vs. `$lookup`), and `JSend` vs. `JSON:API` vs. `HAL+JSON` | Slides 18.1–18.2, Worksheets Part A |
-| **L3 Apply** | Execute prepared SQLite CRUD + pagination queries, write MQL `$gte`/`$nin`/`$set` filters, and construct `$lookup`/`$group` pipelines | `0-student_files/18-dual-db-rest/` |
-| **L4 Analyze** | Debug SQLi string-interpolation flaws, `E11000` duplicate key conflicts, `ON DELETE RESTRICT` FK errors, and swapped GeoJSON `[lat, lng]` bugs | Quiz 2, Post-Unit Eval |
-| **L5 Evaluate** | Choose SQLite/PostgreSQL vs. MongoDB and select optimal response envelopes (`JSend` vs. `JSON:API` vs. `HAL+JSON`) given system constraints | Post-Unit Eval Part B, Project Part A |
+| **L1 Remember** | State REST status codes (`201`, `400`, `404`, `409`), Bun APIs (`Bun.serve`, `bun:sqlite`), GeoJSON `[lng, lat]` order, and MIME types (`application/vnd.api+json`, `application/hal+json`) | `pre-unit-eval.md`, Quiz 1, `unit-test-50.md` Part A |
+| **L2 Understand** | Contrast Relational SQLite (`PRAGMA foreign_keys`, JOINs) vs. MongoDB documents (embedded arrays vs. `$lookup`), and `JSend` vs. `JSON:API` vs. `HAL+JSON` | Slides 18.1–18.2, `unit-test-50.md` Part B |
+| **L3 Apply** | Execute prepared SQLite CRUD + pagination queries, write MQL `$gte`/`$nin`/`$set` filters, and construct `$lookup`/`$group` pipelines | `0-student_files/18-dual-db-rest/`, `unit-test-50.md` Part C |
+| **L4 Analyze** | Debug SQLi string-interpolation flaws, `E11000` duplicate key conflicts, `ON DELETE RESTRICT` FK errors, and swapped GeoJSON `[lat, lng]` bugs | Quiz 2, Post-Unit Eval, `unit-test-50.md` Part D |
+| **L5 Evaluate** | Choose SQLite/PostgreSQL vs. MongoDB and select optimal response envelopes (`JSend` vs. `JSON:API` vs. `HAL+JSON`) given system constraints | Post-Unit Eval Part B, Project Part A, `unit-test-50.md` Part E |
 | **L6 Create** | Architect a **Dual-DB Full-Stack REST API** pairing SQLite transactional inventory/orders with MongoDB catalog analytics & content negotiation | **Unit 18 Project** (`0-student_files/projects/unit-18-dual-db-rest/`) |
 
 ---
@@ -59,15 +60,20 @@ Unit 18 synthesizes relational SQL persistence, document NoSQL persistence, OOP 
 
 | Day | Instructional Focus | Assessments & Deliverables |
 |---|---|---|
-| **Day 1** | Unit Diagnostic & Lesson 18.1 (Bun Runtime, `Bun.serve` + `bun:sqlite` vs. `node:sqlite`, Prepared Statements, FKs) | **Pre-Unit Eval**, **Pre-Lesson 18.1**, Slides 18.1 |
-| **Day 2** | Lesson 18.1 Lab (`sqliteCrudLab.mjs`, search/pagination, `fetch()` REST test suite) + Quiz 1 | `sqliteCrudLab.mjs`, **Post-Lesson 18.1**, **Kahoot Quiz 1** |
+| **Day 1** | Setup Check (`setup-guide.md`), Unit Diagnostic & Lesson 18.1 (Bun Runtime, `Bun.serve` + `bun:sqlite` vs. `node:sqlite`, Prepared Statements, FKs) | **Pre-Unit Eval**, **Pre-Lesson 18.1**, Slides 18.1 |
+| **Day 2** | Lesson 18.1 Lab (`sqliteCrudLab.mjs`, search/pagination, `fetch()` REST test suite) + Quiz 1 | `sqliteCrudLab.test.mjs`, **Post-Lesson 18.1**, **Kahoot Quiz 1** |
 | **Day 3** | Lesson 18.2 Part 1 (Docker Compose MongoDB, `sweetscomplete` & `booksomeplace`, Entity/Domain layers, MQL CRUD & Unique Indexes) | **Pre-Lesson 18.2**, Slides 18.2 |
-| **Day 4** | Lesson 18.2 Part 2 (`$lookup`/`$group` pipelines, GeoJSON `[lng, lat]` `$near`, Strategy Pattern Responders `JSend`/`JSON:API`/`HAL+JSON`) | `mongoRestApp.test.mjs`, `mongoResponderLab.mjs` |
+| **Day 4** | Lesson 18.2 Part 2 (`$lookup`/`$group` pipelines, GeoJSON `[lng, lat]` `$near`, Strategy Pattern Responders `JSend`/`JSON:API`/`HAL+JSON`) | `mongoRestApp.test.mjs`, `mongoResponderLab.test.mjs` |
 | **Day 5** | Lesson 18.2 Lab Completion + Quiz 2 & Project Kickoff | **Post-Lesson 18.2**, **Kahoot Quiz 2** |
-| **Day 6** | Unit 18 Project Build (**Dual-DB REST Service**) & Summative Proof | **Unit 18 Project Submission**, **Post-Unit Eval** |
+| **Day 6** | Unit 18 Project Build (**Dual-DB REST Service**, `npm run grade -- --unit 18`) & Summative Proof | **Unit 18 Project Submission**, **Post-Unit Eval**, **50-Q Mastery Exam** |
 
 ---
 
-## 6. Measuring Learning Growth (Unit Evaluation Protocol)
+## 6. Measuring Learning Growth & Mastery Exam Assets
 
-Administer [`evaluations/pre-unit-eval.md`](./evaluations/pre-unit-eval.md) on Day 1 and [`evaluations/post-unit-eval.md`](./evaluations/post-unit-eval.md) on Day 6. Grade with [`evaluations/eval-answer-key.md`](./evaluations/eval-answer-key.md) and compute Hake's normalized gain $g = \frac{\text{Post\%} - \text{Pre\%}}{100 - \text{Pre\%}}$ (target $g \ge 0.55$).
+- **Pre/Post Growth Protocol:** Administer [`evaluations/pre-unit-eval.md`](./evaluations/pre-unit-eval.md) on Day 1 and [`evaluations/post-unit-eval.md`](./evaluations/post-unit-eval.md) on Day 6. Grade with [`evaluations/eval-answer-key.md`](./evaluations/eval-answer-key.md) and compute Hake's normalized gain $g = \frac{\text{Post\%} - \text{Pre\%}}{100 - \text{Pre\%}}$ (target $g \ge 0.55$).
+- **50-Question Unit Mastery Exam:**
+  - Student Exam (solution-free): [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md)
+  - Teacher Answer Key & Rationales: [`quizzes/unit-test-50-answer-key.md`](./quizzes/unit-test-50-answer-key.md)
+  - Kahoot Import CSV (`50` items): [`quizzes/unit-test-50-kahoot.csv`](./quizzes/unit-test-50-kahoot.csv)
+- **Automated Code Verification:** Run `npm run grade -- --unit 18` after completing [`0-student_files/18-dual-db-rest/`](../0-student_files/18-dual-db-rest/) and [`0-student_files/projects/unit-18-dual-db-rest/`](../0-student_files/projects/unit-18-dual-db-rest/).

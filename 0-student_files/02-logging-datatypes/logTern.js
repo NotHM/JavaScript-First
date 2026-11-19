@@ -16,3 +16,5 @@ function checkTypeTernary(value) {
 }
 
 // TODO: Call console.log(checkTypeTernary(...)) on at least 6 different data types
+
+module.exports = { checkTypeTernary };

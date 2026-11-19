@@ -87,23 +87,28 @@ class BitSet {
   }
 }
 
-console.log('Complete classicStructuresLab.js TODOs, then uncomment checks below to test!');
-/*
-const s = new Stack();
-s.push(10); s.push(20);
-assert.equal(s.pop(), 20);
-const q = new Queue();
-q.enqueue('a'); q.enqueue('b');
-assert.equal(q.dequeue(), 'a');
-const ll = new LinkedList();
-ll.append(1); ll.append(2);
-assert.deepEqual(ll.toArray(), [1, 2]);
-const ht = new HashTable(4);
-ht.set('course', 'JS First'); ht.set('course', 'Node First');
-assert.equal(ht.get('course'), 'Node First');
-const bs = new BitSet(64);
-bs.add(42);
-assert.equal(bs.has(42), true);
-assert.equal(bs.has(41), false);
-console.log('Classic Data Structures Lab passed!');
-*/
+if (require.main === module) {
+  console.log('Complete classicStructuresLab.js TODOs, then uncomment checks below to test!');
+  /*
+  const s = new Stack();
+  s.push(10); s.push(20);
+  assert.equal(s.pop(), 20);
+  const q = new Queue();
+  q.enqueue('a'); q.enqueue('b');
+  assert.equal(q.dequeue(), 'a');
+  const ll = new LinkedList();
+  ll.append(1); ll.append(2);
+  assert.deepEqual(ll.toArray(), [1, 2]);
+  const ht = new HashTable(4);
+  ht.set('course', 'JS First'); ht.set('course', 'Node First');
+  assert.equal(ht.get('course'), 'Node First');
+  const bs = new BitSet(64);
+  bs.add(42);
+  assert.equal(bs.has(42), true);
+  assert.equal(bs.has(41), false);
+  console.log('Classic Data Structures Lab passed!');
+  */
+}
+
+void assert;
+module.exports = { Stack, Queue, LinkedList, HashTable, BitSet };

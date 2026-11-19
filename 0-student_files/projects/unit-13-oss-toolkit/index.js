@@ -5,18 +5,26 @@
 const path = require('node:path');
 
 function buildReleaseNotes(version, commits) {
-  // TODO [L3 Apply | 14.8]: Categorize commits by feat:, fix:, docs: into clean Markdown
+  // TODO [L3 Apply | 14.8]: Categorize commits by feat:, fix:, docs: into clean Markdown sections under ## [version]
+  void commits;
   return `## [${version}]\n`;
 }
 
 function evaluatePullRequest({ stagedFiles, testsPassed, cveCount }) {
-  // TODO [L5 Evaluate | 14.7, 13.2]: Block merge if .env/.pem staged, !testsPassed, or cveCount > 0
+  // TODO [L5 Evaluate | 14.7, 13.2]: Block merge (approved: false, populate issues) if .env/.pem staged, !testsPassed, or cveCount > 0
+  void stagedFiles;
+  void testsPassed;
+  void cveCount;
   return { approved: false, issues: [] };
 }
 
 function generateReadme(projectName) {
-  // TODO [L6 Create | 13.5]: Return complete Markdown README (Install, Usage, License)
+  // TODO [L6 Create | 13.5]: Return complete Markdown README (Title, Install, Usage, License)
   return `# ${projectName}\n`;
 }
 
-console.log('Unit 13 Project Starter Ready:', path.join('docs', 'README.md'));
+if (require.main === module) {
+  console.log('Unit 13 Project Starter Ready:', path.join('docs', 'README.md'));
+}
+
+module.exports = { buildReleaseNotes, evaluatePullRequest, generateReadme };

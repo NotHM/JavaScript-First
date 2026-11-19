@@ -14,3 +14,5 @@
 function fetchTodoWithXHR() {
   // TODO: Implement the XMLHttpRequest GET request
 }
+
+module.exports = { fetchTodoWithXHR };

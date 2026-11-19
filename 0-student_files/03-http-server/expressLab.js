@@ -37,15 +37,26 @@ function isPathInsidePublic(publicDir, requestedSubpath) {
   return false;
 }
 
-console.log('Complete expressLab.js TODOs, then uncomment checks below to verify!');
-/*
-assert.equal(escapeHtml('<script>"x"</script>'), '&lt;script&gt;&quot;x&quot;&lt;/script&gt;');
-const nav = renderNavLinks([{ name: 'Home', url: '/' }, { name: 'About', url: '/about' }], '/about');
-assert.match(nav, /href="\/about" aria-current="page"/);
-const doc = renderLayout({ title: 'Lab', navHtml: nav, bodyHtml: '<h1>Hi</h1>' });
-assert.match(doc, /<!DOCTYPE html>/i);
-assert.equal(resolveMimeType('styles/site.css'), 'text/css; charset=utf-8');
-assert.equal(isPathInsidePublic('/srv/public', 'css/site.css'), true);
-assert.equal(isPathInsidePublic('/srv/public', '../../etc/passwd'), false);
-console.log('Lesson 2.3 Lab passed!');
-*/
+if (require.main === module) {
+  console.log('Complete expressLab.js TODOs, then uncomment checks below to verify!');
+  /*
+  assert.equal(escapeHtml('<script>"x"</script>'), '&lt;script&gt;&quot;x&quot;&lt;/script&gt;');
+  const nav = renderNavLinks([{ name: 'Home', url: '/' }, { name: 'About', url: '/about' }], '/about');
+  assert.match(nav, /href="\/about" aria-current="page"/);
+  const doc = renderLayout({ title: 'Lab', navHtml: nav, bodyHtml: '<h1>Hi</h1>' });
+  assert.match(doc, /<!DOCTYPE html>/i);
+  assert.equal(resolveMimeType('styles/site.css'), 'text/css; charset=utf-8');
+  assert.equal(isPathInsidePublic('/srv/public', 'css/site.css'), true);
+  assert.equal(isPathInsidePublic('/srv/public', '../../etc/passwd'), false);
+  console.log('Lesson 2.3 Lab passed!');
+  */
+}
+
+void assert;
+module.exports = {
+  escapeHtml,
+  renderNavLinks,
+  renderLayout,
+  resolveMimeType,
+  isPathInsidePublic,
+};

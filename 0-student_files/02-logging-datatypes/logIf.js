@@ -16,3 +16,5 @@ function checkTypeIf(value) {
 }
 
 // TODO: Call console.log(checkTypeIf(...)) on at least 6 different data types
+
+module.exports = { checkTypeIf };

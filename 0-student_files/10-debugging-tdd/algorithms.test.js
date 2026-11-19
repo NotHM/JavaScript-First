@@ -19,12 +19,16 @@ function binarySearch(sortedArr, target) {
   // TODO: Return the index of target in sortedArr, or -1 if not found
 }
 
-test('isPalindrome detects palindromes', () => {
+test('isPalindrome detects palindromes across case and single-char boundaries', () => {
   assert.equal(isPalindrome('Racecar'), true);
+  assert.equal(isPalindrome('level'), true);
+  assert.equal(isPalindrome('a'), true);
   assert.equal(isPalindrome('JavaScript'), false);
 });
 
-test('binarySearch returns target index or -1', () => {
+test('binarySearch returns target index or -1 across empty and single-element arrays', () => {
   assert.equal(binarySearch([2, 4, 6, 8, 10], 8), 3);
   assert.equal(binarySearch([2, 4, 6, 8, 10], 5), -1);
+  assert.equal(binarySearch([42], 42), 0);
+  assert.equal(binarySearch([], 42), -1);
 });

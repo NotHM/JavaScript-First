@@ -1,0 +1,51 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Which queue drains completely right after the Call Stack empties before setTimeout?,Disk I/O Pool,Worker Thread Queue,"Microtask Queue (Promise.then, await)",Macrotask Queue,20,3
+What are the three lifecycle states of a JavaScript Promise?,"pending, fulfilled, rejected","created, running, closed","open, paused, aborted","sync, micro, macro",20,1
+Which Node/Web API signals cooperative cancellation to timers or watchdogs?,BitSet,Math.random(),Object.freeze(),AbortController / AbortSignal,20,4
+Which error category (Std 18.2) stops Node during parse time before execution?,Logic error,Compile / SyntaxError,Network timeout,Runtime RangeError,20,2
+Which severity level (18.4) logs a recoverable fallback like one bad RF frame?,FATAL,DEBUG,WARN,INFO,20,3
+Which block runs regardless of whether try returns normally or throws?,finally,catch,switch,throw,20,1
+Which drone RF band yields best obstacle diffraction for long-range MAVLink?,5.8 GHz,60 GHz,2.4 GHz,900 MHz,20,4
+Which drone RF band carries high-bandwidth LOS FPV camera video streams?,900 MHz,5.8 GHz,433 MHz,50 Hz,20,2
+Which sync byte and byte length define Lesson 7.2 binary telemetry packets?,0xFE and 16 bytes,0x00 and 8 bytes,0xFF and 64 bytes,0xAA and 32 bytes,20,1
+Which two CRM roles coordinate flight execution and VLOS callouts in sUAS?,CEO and DBA,DOM and BOM,TCP and UDP,PIC and VO,20,4
+Why does Promise.allSettled beat Promise.all for optional dashboard widgets?,Retries failures 10 times,Returns {status} for all so 1 error stays isolated,Runs synchronously on stack,Ignores fulfilled results,30,2
+"How does Promise.race([fetchApi(), timeout(2000)]) act if timeout rejects first?",Waits for fetchApi() too,Resolves null safely,Adopts first settled outcome (rejects right away),Retries inside finally,30,3
+Why prefer EventEmitter severity logs over hardcoded console.log calls (18.4)?,Decouples publishers from alert/audit subscribers,Auto-encrypts w/ AES-256,console.log fails in async,Allocates zero memory,30,1
+How do Node Streams process a 4 GB log in O(1) RAM vs readFileSync (16.3)?,Deletes file while reading,Stores chunks on globalThis,Converts logs to XML,Processes 1 sequential chunk buffer at a time,30,4
+Why define custom Error subclasses instead of throw 'bad input' (18.6)?,Strings fail across await,Preserves .stack + metadata + instanceof routing,Skips Microtask Queue,Calls process.exit(0),30,2
+"Telemetry shows RSSI = -59 dBm, SNR = -8 dB, LQ = 45%. Why warn of RF hazard?",-59 dBm means 0V battery,Negative SNR boosts speed,RSSI includes noise; low SNR & <50% LQ prove interference,LQ 45% means alt 45m,30,3
+What danger does clamping PID Integral (Anti-Windup) prevent (Std 18.5)?,Prevents pad error saturation causing takeoff flips,Stops UTF-8 overflows,Stops ESM syntax errors,Converts DataView Big-Endian,30,1
+Why does Complementary IMU Fusion (0.98) blend gyro rate with accel tilt?,Accels freeze when motors spin,Gyros read altitude only,0.98 converts deg to rad,Fixes gyro drift w/ drift-free long-term gravity tilt,30,4
+"When empty, why does AsyncQueue.dequeue() queue a Promise vs polling while?",while cannot read arrays,Polling wastes BitSets,Avoids blocking Event Loop; wakes on enqueue(),Runs in child shell process,30,3
+Why place lock resets (monitorActive = false) inside finally vs bottom of try?,let only flips in finally,Throws/early returns skip try end; finally always runs,finally hides all errors,try disables GC until finally,30,2
+"Console order: log(1); setTimeout(()=>log(2),0); Promise.resolve().then(()=>log(3)); log(4);","1, 4, 3, 2","1, 2, 3, 4","1, 3, 4, 2","1, 4, 2, 3",30,1
+"What resolves from: Promise.reject(new ValidationError('bad','id')).catch(e => e.name)?",Rejected 'Error',undefined,'TypeError',Fulfilled 'ValidationError',30,4
+What checksum does ASCII '123456789' produce under CRC-16/CCITT-FALSE?,0x0000,0xFFFF,0x29b1,0x1021,30,3
+Which DataView call reads Little-Endian unsigned 16-bit packMv at offset 4?,"view.getInt16(4, false)","view.getUint16(4, true)",view.getUint8(4),"view.getUint32(4, true)",20,2
+"bytes (len 16) starts with bytes[0] === 0xAA instead of 0xFE. Which error throws?",TelemetryFrameError,SyntaxError,ValidationError,LinkTimeoutError,20,1
+"Complementary IMU angle: alpha=0.98, prev=10, gyro=50 deg/s, dt=0.02, accel=0:",11.00 deg,9.80 deg,50.00 deg,10.78 deg,60,4
+"Drone hits 1600ms link loss w/ gpsHomeValid:true and packCellMv:3800 (>3500):",ARMED_CRUISE (INFO),FAILSAFE_LAND (FATAL),FAILSAFE_RTH (ERROR),LINK_DEGRADED (INFO),30,3
+"Drone hits 1600ms link loss, EXCEPT packCellMv drops to 3420 (<=3500mV). Mode?",FAILSAFE_RTH,FAILSAFE_LAND,ARMED_CRUISE,FAILSAFE_HOVER,30,2
+"Implementing abortable delay(ms, val, signal), act if signal.aborted is true:",Reject at once w/ AbortError (no timer),Wait ms first then return,Sleep infinitely,Return NaN synchronously,30,1
+"Inside CrcMismatchError, which 3 properties identify packet corruption?",port / host / pid,alpha / dtSec / gyro,row / col / matrix,"expectedCrc, actualCrc, seq",20,4
+"Why does try { setTimeout(()=>{ throw Error('boom'); }, 10); } catch {} crash Node?",Messages ban spaces,catch handles TypeError only,try exited sync 10ms before macrotask threw,setTimeout skips <100ms,30,3
+Why does async load() { try { return badAsync(); } catch { return 'OK'; } } reject?,async ignores try blocks,Missing await returns Promise out of try before reject,Strings re-throw in catch,return illegal inside try,30,2
+"Why does try { return { mode, lockActive }; } finally { lockActive = false; } keep true?",Object snapshot evaluated before finally mutated boolean,finally skips after return,let freezes inside try,Arrows reset booleans true,60,1
+What happens in (error - prevError) / dtSec if dtSec = 0 or NaN without guard?,Clamps to 0 safely,try turns 0 to 0.02,Triggers SyntaxError,Outputs Infinity/NaN motor commands instead of RangeError,30,4
+"Sender writes setUint16(14, crc, true); receiver reads getUint16(14, false). Result?",Passes w/ flipped alt,Swaps system endianness,Every packet fails CrcMismatchError (bytes swapped),DataView auto-detects order,30,3
+Why does catching err { console.log(err); } returning undefined break payment callers?,console.log freezes loop,Callers treat undefined as success -> silent bug,catch turns err to array,await bans console.log,30,2
+"Forgot await: if (bst.search(999)) prints 'Found' though 999 missing. Why?",Un-awaited Promise object is always truthy,search() inserts 999,if auto-awaits in Node 24,Missing === true flips it,30,1
+Packet 412 flips a bit (CrcMismatchError) and crashes flight loop. What broke?,Graceful degradation (18.1): log WARN & drop bad frame only,Only evens need CRC,Uint8Array needs finally,Freezes PID state,30,1
+"Async retry runs busy while(Date.now()-start < 500) {}. Why do heartbeats freeze?",Date.now returns strings,AbortController needs workers,Spin loop blocks Call Stack starving timers & I/O,while kills Promise.resolve,30,3
+settled.filter(r => r.status === 'fulfilled').map(r => r.data) returns undefineds:,allSettled omits payloads,Fulfilled results live on r.value (not r.data),.filter strips properties,Status is 'resolved',30,2
+AuthSession + Cart (critical) and PromoBanner (optional). Clean 18.1 design?,Strict check on Auth/Cart; isolate PromoBanner w/ allSettled+WARN,All 3 inside Promise.all,Run sequential for...in,Swallow Auth errors silently,60,1
+"In runPipeline: Job A throws ValidationError; Job B throws TransientError. Policy?",Retry both infinitely,Retry Validation; skip Transient,Log both INFO -> null,Fail fast on Validation; retry Transient w/ backoff+AbortSignal,60,4
+"Why prefer Promise AsyncQueue over setInterval(..., 5) polling for telemetry?",setInterval errors in ESM,Spawns OS thread per item,Wakes consumers on exact enqueue() microtask w/ 0 polling CPU,Converts everything to JSON,30,3
+Outdoor canyon drone: best RF roles for 900 MHz telemetry vs 5.8 GHz video?,Video on 900MHz / C2 on 5.8GHz,900 MHz for obstacle-diffracting C2; 5.8 GHz for LOS FPV,Both on 433 Hz,Disable CRC for speed,30,2
+Why run CI watchdog tests with --unhandled-rejections=strict and synthetic nowFn?,Catches hidden rejections + makes 1500ms timing instant/deterministic,Clocks skip AbortSignal,Real timers leak kernels,Strict turns Errors to strings,60,1
+"Flight telemetry shows rssiDbm: -62, snrDb: -7, lqPct: 40. Accurate assessment?",INFO: Strong RSSI signal,Ignore LQ above -70 dBm,Immediately FAILSAFE_LAND,WARN LINK_DEGRADED: raw RSSI hides noise; bad SNR & LQ prove loss,60,4
+Ground control triggers abort() mid-backoff retry inside watchdog. Clean cleanup?,Ignore abort until retries end,Swallow AbortError only,Clear timer on 'abort' + reject + unlock in finally,Restart via while(true),60,3
+"Why route logs through EventEmitter {level, message} vs raw console.log strings?",console.log fails in ESM,Structured bus decouples log emission from UI/files/tests (18.4),Prevents math RangeError,console.log drops numbers,30,2
+"1700ms link loss at 35m alt w/ GPS valid & 3820mV/cell. Why FAILSAFE_RTH over LAND?",GPS + healthy voltage bring craft home safely vs blind landing,LAND shuts ESCs mid-air,RTH widens 5.8GHz band,RTH requires zero GPS,60,1
+"1700ms link loss w/ 3450mV/cell (<=3500mV) & GPS invalid. Why FAILSAFE_LAND (FATAL)?",Low volt sharpens gyro,RTH flies faster no-GPS,Descent uses 0% power,Blind RTH + low-volt brownout risk demands controlled landing,60,4

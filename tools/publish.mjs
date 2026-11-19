@@ -27,6 +27,7 @@ const STUDENT_FRONT_MATTER = [
   'README.md',
   '0-documentation/west-mec-scope-and-sequence.md',
   '0-documentation/blooms-taxonomy-framework.md',
+  '0-student_files/README.md',
 ];
 
 const TEACHER_FRONT_MATTER = [
@@ -41,6 +42,8 @@ const UNITS = {
   U01: {
     year: 1,
     student: [
+      '01-Reteaching-JavaScript/readme.md',
+      '01-Reteaching-JavaScript/setup-guide.md',
       '01-Reteaching-JavaScript/evaluations/pre-unit-eval.md',
       '01-Reteaching-JavaScript/01-History-of-JS/readme.md',
       '01-Reteaching-JavaScript/01-History-of-JS/pre-lesson-eval.md',
@@ -64,6 +67,7 @@ const UNITS = {
       '01-Reteaching-JavaScript/05-Linux-Admin-Hardware-and-OS-Safety/student-lesson.md',
       '01-Reteaching-JavaScript/05-Linux-Admin-Hardware-and-OS-Safety/post-lesson-eval.md',
       '01-Reteaching-JavaScript/evaluations/post-unit-eval.md',
+      '01-Reteaching-JavaScript/quizzes/unit-test-50.md',
       '01-Reteaching-JavaScript/projects/unit-project.md',
     ],
     teacher: [
@@ -76,12 +80,14 @@ const UNITS = {
       '01-Reteaching-JavaScript/evaluations/eval-answer-key.md',
       '01-Reteaching-JavaScript/quizzes/quiz-1-concepts.md',
       '01-Reteaching-JavaScript/quizzes/quiz-2-application.md',
+      '01-Reteaching-JavaScript/quizzes/unit-test-50-answer-key.md',
       '01-Reteaching-JavaScript/projects/project-rubric.md',
     ],
   },
   U12: {
     year: 1,
     student: [
+      '12-Computer-Math-and-Binary/setup-guide.md',
       '12-Computer-Math-and-Binary/evaluations/pre-unit-eval.md',
       '12-Computer-Math-and-Binary/readme.md',
       '12-Computer-Math-and-Binary/pre-lesson-eval.md',
@@ -92,6 +98,7 @@ const UNITS = {
       '12-Computer-Math-and-Binary/02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/student-lesson.md',
       '12-Computer-Math-and-Binary/02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/post-lesson-eval.md',
       '12-Computer-Math-and-Binary/evaluations/post-unit-eval.md',
+      '12-Computer-Math-and-Binary/quizzes/unit-test-50.md',
       '12-Computer-Math-and-Binary/projects/unit-project.md',
     ],
     teacher: [
@@ -101,18 +108,21 @@ const UNITS = {
       '12-Computer-Math-and-Binary/evaluations/eval-answer-key.md',
       '12-Computer-Math-and-Binary/quizzes/quiz-1-concepts.md',
       '12-Computer-Math-and-Binary/quizzes/quiz-2-application.md',
+      '12-Computer-Math-and-Binary/quizzes/unit-test-50-answer-key.md',
       '12-Computer-Math-and-Binary/projects/project-rubric.md',
     ],
   },
   U04: {
     year: 1,
     student: [
+      '04-Variables-Scope-Immutability/setup-guide.md',
       '04-Variables-Scope-Immutability/evaluations/pre-unit-eval.md',
       '04-Variables-Scope-Immutability/readme.md',
       '04-Variables-Scope-Immutability/pre-lesson-eval.md',
       '04-Variables-Scope-Immutability/student-lesson.md',
       '04-Variables-Scope-Immutability/post-lesson-eval.md',
       '04-Variables-Scope-Immutability/evaluations/post-unit-eval.md',
+      '04-Variables-Scope-Immutability/quizzes/unit-test-50.md',
       '04-Variables-Scope-Immutability/projects/unit-project.md',
     ],
     teacher: [
@@ -121,6 +131,7 @@ const UNITS = {
       '04-Variables-Scope-Immutability/evaluations/eval-answer-key.md',
       '04-Variables-Scope-Immutability/quizzes/quiz-1-concepts.md',
       '04-Variables-Scope-Immutability/quizzes/quiz-2-application.md',
+      '04-Variables-Scope-Immutability/quizzes/unit-test-50-answer-key.md',
       '04-Variables-Scope-Immutability/projects/project-rubric.md',
     ],
   },
@@ -128,6 +139,7 @@ const UNITS = {
     year: 1,
     student: [
       '05-DataStructures-and-Loops/readme.md',
+      '05-DataStructures-and-Loops/setup-guide.md',
       '05-DataStructures-and-Loops/evaluations/pre-unit-eval.md',
       '05-DataStructures-and-Loops/01-Iteration-and-Loops/readme.md',
       '05-DataStructures-and-Loops/01-Iteration-and-Loops/pre-lesson-eval.md',
@@ -142,6 +154,7 @@ const UNITS = {
       '05-DataStructures-and-Loops/03-Data-Cleaning-Vectors-and-Feature-Engineering/student-lesson.md',
       '05-DataStructures-and-Loops/03-Data-Cleaning-Vectors-and-Feature-Engineering/post-lesson-eval.md',
       '05-DataStructures-and-Loops/evaluations/post-unit-eval.md',
+      '05-DataStructures-and-Loops/quizzes/unit-test-50.md',
       '05-DataStructures-and-Loops/projects/unit-project.md',
     ],
     teacher: [
@@ -152,6 +165,7 @@ const UNITS = {
       '05-DataStructures-and-Loops/evaluations/eval-answer-key.md',
       '05-DataStructures-and-Loops/quizzes/quiz-1-concepts.md',
       '05-DataStructures-and-Loops/quizzes/quiz-2-application.md',
+      '05-DataStructures-and-Loops/quizzes/unit-test-50-answer-key.md',
       '05-DataStructures-and-Loops/projects/project-rubric.md',
     ],
   },
@@ -159,6 +173,7 @@ const UNITS = {
     year: 1,
     student: [
       '06-Functions/readme.md',
+      '06-Functions/setup-guide.md',
       '06-Functions/evaluations/pre-unit-eval.md',
       '06-Functions/01-Conditionals-and-Boolean-Logic/readme.md',
       '06-Functions/01-Conditionals-and-Boolean-Logic/pre-lesson-eval.md',
@@ -169,6 +184,7 @@ const UNITS = {
       '06-Functions/02-Functions-and-Closures/student-lesson.md',
       '06-Functions/02-Functions-and-Closures/post-lesson-eval.md',
       '06-Functions/evaluations/post-unit-eval.md',
+      '06-Functions/quizzes/unit-test-50.md',
       '06-Functions/projects/unit-project.md',
     ],
     teacher: [
@@ -178,6 +194,7 @@ const UNITS = {
       '06-Functions/evaluations/eval-answer-key.md',
       '06-Functions/quizzes/quiz-1-concepts.md',
       '06-Functions/quizzes/quiz-2-application.md',
+      '06-Functions/quizzes/unit-test-50-answer-key.md',
       '06-Functions/projects/project-rubric.md',
     ],
   },
@@ -185,6 +202,7 @@ const UNITS = {
     year: 1,
     student: [
       '13-Version-Control-and-Community/readme.md',
+      '13-Version-Control-and-Community/setup-guide.md',
       '13-Version-Control-and-Community/evaluations/pre-unit-eval.md',
       '13-Version-Control-and-Community/01-Version-Control-Git-CICD/readme.md',
       '13-Version-Control-and-Community/01-Version-Control-Git-CICD/pre-lesson-eval.md',
@@ -195,6 +213,7 @@ const UNITS = {
       '13-Version-Control-and-Community/02-Community-Resources-NPM-Docs/student-lesson.md',
       '13-Version-Control-and-Community/02-Community-Resources-NPM-Docs/post-lesson-eval.md',
       '13-Version-Control-and-Community/evaluations/post-unit-eval.md',
+      '13-Version-Control-and-Community/quizzes/unit-test-50.md',
       '13-Version-Control-and-Community/projects/unit-project.md',
     ],
     teacher: [
@@ -204,18 +223,21 @@ const UNITS = {
       '13-Version-Control-and-Community/evaluations/eval-answer-key.md',
       '13-Version-Control-and-Community/quizzes/quiz-1-concepts.md',
       '13-Version-Control-and-Community/quizzes/quiz-2-application.md',
+      '13-Version-Control-and-Community/quizzes/unit-test-50-answer-key.md',
       '13-Version-Control-and-Community/projects/project-rubric.md',
     ],
   },
   U14: {
     year: 1,
     student: [
+      '14-Program-Analysis-and-Design/setup-guide.md',
       '14-Program-Analysis-and-Design/evaluations/pre-unit-eval.md',
       '14-Program-Analysis-and-Design/readme.md',
       '14-Program-Analysis-and-Design/pre-lesson-eval.md',
       '14-Program-Analysis-and-Design/student-lesson.md',
       '14-Program-Analysis-and-Design/post-lesson-eval.md',
       '14-Program-Analysis-and-Design/evaluations/post-unit-eval.md',
+      '14-Program-Analysis-and-Design/quizzes/unit-test-50.md',
       '14-Program-Analysis-and-Design/projects/unit-project.md',
     ],
     teacher: [
@@ -224,6 +246,7 @@ const UNITS = {
       '14-Program-Analysis-and-Design/evaluations/eval-answer-key.md',
       '14-Program-Analysis-and-Design/quizzes/quiz-1-concepts.md',
       '14-Program-Analysis-and-Design/quizzes/quiz-2-application.md',
+      '14-Program-Analysis-and-Design/quizzes/unit-test-50-answer-key.md',
       '14-Program-Analysis-and-Design/projects/project-rubric.md',
     ],
   },
@@ -231,6 +254,7 @@ const UNITS = {
     year: 1,
     student: [
       '09-Debugging-TDD-Algorithms/readme.md',
+      '09-Debugging-TDD-Algorithms/setup-guide.md',
       '09-Debugging-TDD-Algorithms/evaluations/pre-unit-eval.md',
       '09-Debugging-TDD-Algorithms/01-Testing-and-Debugging/readme.md',
       '09-Debugging-TDD-Algorithms/01-Testing-and-Debugging/pre-lesson-eval.md',
@@ -246,6 +270,7 @@ const UNITS = {
       '09-Debugging-TDD-Algorithms/03-Machine-Learning-Algorithms-Eval-and-Fairness/student-lesson.md',
       '09-Debugging-TDD-Algorithms/03-Machine-Learning-Algorithms-Eval-and-Fairness/post-lesson-eval.md',
       '09-Debugging-TDD-Algorithms/evaluations/post-unit-eval.md',
+      '09-Debugging-TDD-Algorithms/quizzes/unit-test-50.md',
       '09-Debugging-TDD-Algorithms/projects/unit-project.md',
     ],
     teacher: [
@@ -256,6 +281,7 @@ const UNITS = {
       '09-Debugging-TDD-Algorithms/evaluations/eval-answer-key.md',
       '09-Debugging-TDD-Algorithms/quizzes/quiz-1-concepts.md',
       '09-Debugging-TDD-Algorithms/quizzes/quiz-2-application.md',
+      '09-Debugging-TDD-Algorithms/quizzes/unit-test-50-answer-key.md',
       '09-Debugging-TDD-Algorithms/projects/project-rubric.md',
     ],
   },
@@ -263,6 +289,7 @@ const UNITS = {
     year: 1,
     student: [
       '02-HTTP/readme.md',
+      '02-HTTP/setup-guide.md',
       '02-HTTP/evaluations/pre-unit-eval.md',
       '02-HTTP/01-Internet-Protocols-and-Cloud/readme.md',
       '02-HTTP/01-Internet-Protocols-and-Cloud/pre-lesson-eval.md',
@@ -281,6 +308,7 @@ const UNITS = {
       '02-HTTP/04-Subnetting-OSI-Topologies-and-Routing/student-lesson.md',
       '02-HTTP/04-Subnetting-OSI-Topologies-and-Routing/post-lesson-eval.md',
       '02-HTTP/evaluations/post-unit-eval.md',
+      '02-HTTP/quizzes/unit-test-50.md',
       '02-HTTP/projects/unit-project.md',
     ],
     teacher: [
@@ -292,12 +320,14 @@ const UNITS = {
       '02-HTTP/evaluations/eval-answer-key.md',
       '02-HTTP/quizzes/quiz-1-concepts.md',
       '02-HTTP/quizzes/quiz-2-application.md',
+      '02-HTTP/quizzes/unit-test-50-answer-key.md',
       '02-HTTP/projects/project-rubric.md',
     ],
   },
   U03: {
     year: 1,
     student: [
+      '03-AJAX/setup-guide.md',
       '03-AJAX/evaluations/pre-unit-eval.md',
       '03-AJAX/readme.md',
       '03-AJAX/00-fetch/readme.md',
@@ -305,6 +335,7 @@ const UNITS = {
       '03-AJAX/student-lesson.md',
       '03-AJAX/post-lesson-eval.md',
       '03-AJAX/evaluations/post-unit-eval.md',
+      '03-AJAX/quizzes/unit-test-50.md',
       '03-AJAX/projects/unit-project.md',
     ],
     teacher: [
@@ -313,12 +344,14 @@ const UNITS = {
       '03-AJAX/evaluations/eval-answer-key.md',
       '03-AJAX/quizzes/quiz-1-concepts.md',
       '03-AJAX/quizzes/quiz-2-application.md',
+      '03-AJAX/quizzes/unit-test-50-answer-key.md',
       '03-AJAX/projects/project-rubric.md',
     ],
   },
   U07: {
     year: 2,
     student: [
+      '07-Async-JS/setup-guide.md',
       '07-Async-JS/evaluations/pre-unit-eval.md',
       '07-Async-JS/readme.md',
       '07-Async-JS/pre-lesson-eval.md',
@@ -329,6 +362,7 @@ const UNITS = {
       '07-Async-JS/02-Telemetry-FailSafe-and-Sensor-Streams/student-lesson.md',
       '07-Async-JS/02-Telemetry-FailSafe-and-Sensor-Streams/post-lesson-eval.md',
       '07-Async-JS/evaluations/post-unit-eval.md',
+      '07-Async-JS/quizzes/unit-test-50.md',
       '07-Async-JS/projects/unit-project.md',
     ],
     teacher: [
@@ -338,6 +372,7 @@ const UNITS = {
       '07-Async-JS/evaluations/eval-answer-key.md',
       '07-Async-JS/quizzes/quiz-1-concepts.md',
       '07-Async-JS/quizzes/quiz-2-application.md',
+      '07-Async-JS/quizzes/unit-test-50-answer-key.md',
       '07-Async-JS/projects/project-rubric.md',
     ],
   },
@@ -345,6 +380,7 @@ const UNITS = {
     year: 2,
     student: [
       '15-Storage-Databases-and-CRUD/readme.md',
+      '15-Storage-Databases-and-CRUD/setup-guide.md',
       '15-Storage-Databases-and-CRUD/evaluations/pre-unit-eval.md',
       '15-Storage-Databases-and-CRUD/01-Storage-Architecture-File-IO/readme.md',
       '15-Storage-Databases-and-CRUD/01-Storage-Architecture-File-IO/pre-lesson-eval.md',
@@ -355,6 +391,7 @@ const UNITS = {
       '15-Storage-Databases-and-CRUD/02-Databases-SQL-Mongo-CRUD/student-lesson.md',
       '15-Storage-Databases-and-CRUD/02-Databases-SQL-Mongo-CRUD/post-lesson-eval.md',
       '15-Storage-Databases-and-CRUD/evaluations/post-unit-eval.md',
+      '15-Storage-Databases-and-CRUD/quizzes/unit-test-50.md',
       '15-Storage-Databases-and-CRUD/projects/unit-project.md',
     ],
     teacher: [
@@ -364,6 +401,7 @@ const UNITS = {
       '15-Storage-Databases-and-CRUD/evaluations/eval-answer-key.md',
       '15-Storage-Databases-and-CRUD/quizzes/quiz-1-concepts.md',
       '15-Storage-Databases-and-CRUD/quizzes/quiz-2-application.md',
+      '15-Storage-Databases-and-CRUD/quizzes/unit-test-50-answer-key.md',
       '15-Storage-Databases-and-CRUD/projects/project-rubric.md',
     ],
   },
@@ -371,6 +409,7 @@ const UNITS = {
     year: 1,
     student: [
       '10-HTML-CSS-DOM/readme.md',
+      '10-HTML-CSS-DOM/setup-guide.md',
       '10-HTML-CSS-DOM/evaluations/pre-unit-eval.md',
       '10-HTML-CSS-DOM/01-UCD-W3C-Accessibility-SEO/readme.md',
       '10-HTML-CSS-DOM/01-UCD-W3C-Accessibility-SEO/pre-lesson-eval.md',
@@ -385,6 +424,7 @@ const UNITS = {
       '10-HTML-CSS-DOM/03-Computer-Vision-Pixels-Convolutions-and-IoU/student-lesson.md',
       '10-HTML-CSS-DOM/03-Computer-Vision-Pixels-Convolutions-and-IoU/post-lesson-eval.md',
       '10-HTML-CSS-DOM/evaluations/post-unit-eval.md',
+      '10-HTML-CSS-DOM/quizzes/unit-test-50.md',
       '10-HTML-CSS-DOM/projects/unit-project.md',
     ],
     teacher: [
@@ -395,6 +435,7 @@ const UNITS = {
       '10-HTML-CSS-DOM/evaluations/eval-answer-key.md',
       '10-HTML-CSS-DOM/quizzes/quiz-1-concepts.md',
       '10-HTML-CSS-DOM/quizzes/quiz-2-application.md',
+      '10-HTML-CSS-DOM/quizzes/unit-test-50-answer-key.md',
       '10-HTML-CSS-DOM/projects/project-rubric.md',
     ],
   },
@@ -402,6 +443,7 @@ const UNITS = {
     year: 2,
     student: [
       '08-OOP-and-Design-Patterns/readme.md',
+      '08-OOP-and-Design-Patterns/setup-guide.md',
       '08-OOP-and-Design-Patterns/evaluations/pre-unit-eval.md',
       '08-OOP-and-Design-Patterns/01-OOP-Classes-and-Polymorphism/readme.md',
       '08-OOP-and-Design-Patterns/01-OOP-Classes-and-Polymorphism/pre-lesson-eval.md',
@@ -412,6 +454,7 @@ const UNITS = {
       '08-OOP-and-Design-Patterns/02-DataFormats-SOLID-Patterns/student-lesson.md',
       '08-OOP-and-Design-Patterns/02-DataFormats-SOLID-Patterns/post-lesson-eval.md',
       '08-OOP-and-Design-Patterns/evaluations/post-unit-eval.md',
+      '08-OOP-and-Design-Patterns/quizzes/unit-test-50.md',
       '08-OOP-and-Design-Patterns/projects/unit-project.md',
     ],
     teacher: [
@@ -421,12 +464,14 @@ const UNITS = {
       '08-OOP-and-Design-Patterns/evaluations/eval-answer-key.md',
       '08-OOP-and-Design-Patterns/quizzes/quiz-1-concepts.md',
       '08-OOP-and-Design-Patterns/quizzes/quiz-2-application.md',
+      '08-OOP-and-Design-Patterns/quizzes/unit-test-50-answer-key.md',
       '08-OOP-and-Design-Patterns/projects/project-rubric.md',
     ],
   },
   U11: {
     year: 2,
     student: [
+      '11-Internet-Server-Security/setup-guide.md',
       '11-Internet-Server-Security/evaluations/pre-unit-eval.md',
       '11-Internet-Server-Security/readme.md',
       '11-Internet-Server-Security/pre-lesson-eval.md',
@@ -437,6 +482,7 @@ const UNITS = {
       '11-Internet-Server-Security/02-Zero-Trust-Firewalls-SIEM-and-STRIDE/student-lesson.md',
       '11-Internet-Server-Security/02-Zero-Trust-Firewalls-SIEM-and-STRIDE/post-lesson-eval.md',
       '11-Internet-Server-Security/evaluations/post-unit-eval.md',
+      '11-Internet-Server-Security/quizzes/unit-test-50.md',
       '11-Internet-Server-Security/projects/unit-project.md',
     ],
     teacher: [
@@ -446,18 +492,21 @@ const UNITS = {
       '11-Internet-Server-Security/evaluations/eval-answer-key.md',
       '11-Internet-Server-Security/quizzes/quiz-1-concepts.md',
       '11-Internet-Server-Security/quizzes/quiz-2-application.md',
+      '11-Internet-Server-Security/quizzes/unit-test-50-answer-key.md',
       '11-Internet-Server-Security/projects/project-rubric.md',
     ],
   },
   U16: {
     year: 2,
     student: [
+      '16-Software-Business-and-Capstone/setup-guide.md',
       '16-Software-Business-and-Capstone/evaluations/pre-unit-eval.md',
       '16-Software-Business-and-Capstone/readme.md',
       '16-Software-Business-and-Capstone/pre-lesson-eval.md',
       '16-Software-Business-and-Capstone/student-lesson.md',
       '16-Software-Business-and-Capstone/post-lesson-eval.md',
       '16-Software-Business-and-Capstone/evaluations/post-unit-eval.md',
+      '16-Software-Business-and-Capstone/quizzes/unit-test-50.md',
       '16-Software-Business-and-Capstone/projects/unit-project.md',
     ],
     teacher: [
@@ -466,6 +515,7 @@ const UNITS = {
       '16-Software-Business-and-Capstone/evaluations/eval-answer-key.md',
       '16-Software-Business-and-Capstone/quizzes/quiz-1-concepts.md',
       '16-Software-Business-and-Capstone/quizzes/quiz-2-application.md',
+      '16-Software-Business-and-Capstone/quizzes/unit-test-50-answer-key.md',
       '16-Software-Business-and-Capstone/projects/project-rubric.md',
     ],
   },
@@ -473,6 +523,7 @@ const UNITS = {
     year: 2,
     student: [
       '17-Deno-Security-and-WebAssembly/readme.md',
+      '17-Deno-Security-and-WebAssembly/setup-guide.md',
       '17-Deno-Security-and-WebAssembly/evaluations/pre-unit-eval.md',
       '17-Deno-Security-and-WebAssembly/01-Deno-Secure-Runtime/readme.md',
       '17-Deno-Security-and-WebAssembly/01-Deno-Secure-Runtime/pre-lesson-eval.md',
@@ -483,6 +534,7 @@ const UNITS = {
       '17-Deno-Security-and-WebAssembly/02-WebAssembly-WASM/student-lesson.md',
       '17-Deno-Security-and-WebAssembly/02-WebAssembly-WASM/post-lesson-eval.md',
       '17-Deno-Security-and-WebAssembly/evaluations/post-unit-eval.md',
+      '17-Deno-Security-and-WebAssembly/quizzes/unit-test-50.md',
       '17-Deno-Security-and-WebAssembly/projects/unit-project.md',
     ],
     teacher: [
@@ -492,6 +544,7 @@ const UNITS = {
       '17-Deno-Security-and-WebAssembly/evaluations/eval-answer-key.md',
       '17-Deno-Security-and-WebAssembly/quizzes/quiz-1-concepts.md',
       '17-Deno-Security-and-WebAssembly/quizzes/quiz-2-application.md',
+      '17-Deno-Security-and-WebAssembly/quizzes/unit-test-50-answer-key.md',
       '17-Deno-Security-and-WebAssembly/projects/project-rubric.md',
     ],
   },
@@ -499,6 +552,7 @@ const UNITS = {
     year: 2,
     student: [
       '18-Full-Stack-REST-Bun-and-MongoDB/readme.md',
+      '18-Full-Stack-REST-Bun-and-MongoDB/setup-guide.md',
       '18-Full-Stack-REST-Bun-and-MongoDB/evaluations/pre-unit-eval.md',
       '18-Full-Stack-REST-Bun-and-MongoDB/01-Bun-SQLite-REST-App/readme.md',
       '18-Full-Stack-REST-Bun-and-MongoDB/01-Bun-SQLite-REST-App/pre-lesson-eval.md',
@@ -509,6 +563,7 @@ const UNITS = {
       '18-Full-Stack-REST-Bun-and-MongoDB/02-MongoDB-Full-REST-App/student-lesson.md',
       '18-Full-Stack-REST-Bun-and-MongoDB/02-MongoDB-Full-REST-App/post-lesson-eval.md',
       '18-Full-Stack-REST-Bun-and-MongoDB/evaluations/post-unit-eval.md',
+      '18-Full-Stack-REST-Bun-and-MongoDB/quizzes/unit-test-50.md',
       '18-Full-Stack-REST-Bun-and-MongoDB/projects/unit-project.md',
     ],
     teacher: [
@@ -518,6 +573,7 @@ const UNITS = {
       '18-Full-Stack-REST-Bun-and-MongoDB/evaluations/eval-answer-key.md',
       '18-Full-Stack-REST-Bun-and-MongoDB/quizzes/quiz-1-concepts.md',
       '18-Full-Stack-REST-Bun-and-MongoDB/quizzes/quiz-2-application.md',
+      '18-Full-Stack-REST-Bun-and-MongoDB/quizzes/unit-test-50-answer-key.md',
       '18-Full-Stack-REST-Bun-and-MongoDB/projects/project-rubric.md',
     ],
   },
@@ -525,6 +581,7 @@ const UNITS = {
     year: 2,
     student: [
       '19-Game-Dev-Phaser-and-JSGameLauncher/readme.md',
+      '19-Game-Dev-Phaser-and-JSGameLauncher/setup-guide.md',
       '19-Game-Dev-Phaser-and-JSGameLauncher/evaluations/pre-unit-eval.md',
       '19-Game-Dev-Phaser-and-JSGameLauncher/01-Game-Loops-Canvas-and-Gamepad/readme.md',
       '19-Game-Dev-Phaser-and-JSGameLauncher/01-Game-Loops-Canvas-and-Gamepad/pre-lesson-eval.md',
@@ -539,6 +596,7 @@ const UNITS = {
       '19-Game-Dev-Phaser-and-JSGameLauncher/03-Drone-Mission-Sim-Part107-and-METAR/student-lesson.md',
       '19-Game-Dev-Phaser-and-JSGameLauncher/03-Drone-Mission-Sim-Part107-and-METAR/post-lesson-eval.md',
       '19-Game-Dev-Phaser-and-JSGameLauncher/evaluations/post-unit-eval.md',
+      '19-Game-Dev-Phaser-and-JSGameLauncher/quizzes/unit-test-50.md',
       '19-Game-Dev-Phaser-and-JSGameLauncher/projects/unit-project.md',
     ],
     teacher: [
@@ -549,6 +607,7 @@ const UNITS = {
       '19-Game-Dev-Phaser-and-JSGameLauncher/evaluations/eval-answer-key.md',
       '19-Game-Dev-Phaser-and-JSGameLauncher/quizzes/quiz-1-concepts.md',
       '19-Game-Dev-Phaser-and-JSGameLauncher/quizzes/quiz-2-application.md',
+      '19-Game-Dev-Phaser-and-JSGameLauncher/quizzes/unit-test-50-answer-key.md',
       '19-Game-Dev-Phaser-and-JSGameLauncher/projects/project-rubric.md',
     ],
   },
@@ -556,6 +615,7 @@ const UNITS = {
     year: 2,
     student: [
       '20-Local-AI-Multimodal-and-3D-Capstone/readme.md',
+      '20-Local-AI-Multimodal-and-3D-Capstone/setup-guide.md',
       '20-Local-AI-Multimodal-and-3D-Capstone/evaluations/pre-unit-eval.md',
       '20-Local-AI-Multimodal-and-3D-Capstone/01-Local-LLM-Architecture-and-Streaming/readme.md',
       '20-Local-AI-Multimodal-and-3D-Capstone/01-Local-LLM-Architecture-and-Streaming/pre-lesson-eval.md',
@@ -570,6 +630,7 @@ const UNITS = {
       '20-Local-AI-Multimodal-and-3D-Capstone/03-NLP-Pipelines-Agentic-AI-and-Responsible-Governance/student-lesson.md',
       '20-Local-AI-Multimodal-and-3D-Capstone/03-NLP-Pipelines-Agentic-AI-and-Responsible-Governance/post-lesson-eval.md',
       '20-Local-AI-Multimodal-and-3D-Capstone/evaluations/post-unit-eval.md',
+      '20-Local-AI-Multimodal-and-3D-Capstone/quizzes/unit-test-50.md',
       '20-Local-AI-Multimodal-and-3D-Capstone/projects/unit-project.md',
     ],
     teacher: [
@@ -580,6 +641,7 @@ const UNITS = {
       '20-Local-AI-Multimodal-and-3D-Capstone/evaluations/eval-answer-key.md',
       '20-Local-AI-Multimodal-and-3D-Capstone/quizzes/quiz-1-concepts.md',
       '20-Local-AI-Multimodal-and-3D-Capstone/quizzes/quiz-2-application.md',
+      '20-Local-AI-Multimodal-and-3D-Capstone/quizzes/unit-test-50-answer-key.md',
       '20-Local-AI-Multimodal-and-3D-Capstone/projects/project-rubric.md',
     ],
   },
@@ -612,7 +674,7 @@ const YEAR2_TEACHER_SOURCES = collectSources(YEAR2_ORDER, 'teacher', TEACHER_FRO
 const SLIDE_DECKS = [
   { src: '01-Reteaching-JavaScript/01-History-of-JS/slides/slides.md', out: '01-1-history-legal-ethics-slides.html', title: 'Lesson 1.1: History, Licensing & Tech Ethics' },
   { src: '01-Reteaching-JavaScript/02-Terminal-NVM/slides/slides.md', out: '01-2-terminal-nvm-node-slides.html', title: 'Lesson 1.2: CLI, NVM & Node.js Development' },
-  { src: '01-Reteaching-JavaScript/readme.md', out: '01-2b-node-npm-overview-slides.html', title: 'Lesson 1.2b: Node.js, NPM & NVM Overview' },
+  { src: '01-Reteaching-JavaScript/02-Terminal-NVM/slides/node-npm-overview.md', out: '01-2b-node-npm-overview-slides.html', title: 'Lesson 1.2b: Node.js, NPM & NVM Overview' },
   { src: '01-Reteaching-JavaScript/03-logging-datatypes/slides/01-primitiveTypes.md', out: '01-3a-primitive-types-slides.html', title: 'Lesson 1.3a: Primitive Data Types' },
   { src: '01-Reteaching-JavaScript/03-logging-datatypes/slides/02-objectTypes.md', out: '01-3b-object-types-slides.html', title: 'Lesson 1.3b: Object Types' },
   { src: '01-Reteaching-JavaScript/03-logging-datatypes/slides/03-logging.md', out: '01-3c-logging-slides.html', title: 'Lesson 1.3c: Logging Data Types' },

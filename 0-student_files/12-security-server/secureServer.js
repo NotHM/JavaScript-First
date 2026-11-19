@@ -19,4 +19,12 @@ function escapeHtml(str) {
   // TODO: Escape &, <, >, ", and '
 }
 
-// TODO: Create and start the HTTP server with security headers
+// TODO: Create the HTTP server with security headers (`X-Content-Type-Options`,
+// `Access-Control-Allow-Origin`, `/api/health`, and `/` escaped `?name=` HTML output).
+// Keep `.listen(PORT)` inside `if (require.main === module)` so `node --test` imports never hang!
+void http;
+if (require.main === module) {
+  // TODO: server.listen(PORT, () => console.log(`Secure server on http://localhost:${PORT}`));
+}
+
+module.exports = { escapeHtml, PORT };

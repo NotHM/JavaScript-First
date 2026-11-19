@@ -2,7 +2,8 @@
 
 **Course:** JavaScript First — Software & App Design (AZ CTE CIP **11.0202.00**)  
 **Extension Module:** Post-Core Game Engineering, Handheld Runtime & sUAS Flight Simulation (9 Class Periods × 50 Minutes)  
-**Primary Technical References:** [`monteslu/jsgamelauncher`](https://github.com/monteslu/jsgamelauncher/blob/main/docs/developing-games.md), [`monteslu/simple-jsgame-starter`](https://github.com/monteslu/simple-jsgame-starter), [`monteslu/jsgames/simple-phaser`](https://github.com/monteslu/jsgames/tree/main/simple-phaser), `FAA 14 CFR Part 107 / TRUST`
+**Primary Technical References:** [`monteslu/jsgamelauncher`](https://github.com/monteslu/jsgamelauncher/blob/main/docs/developing-games.md), [`monteslu/simple-jsgame-starter`](https://github.com/monteslu/simple-jsgame-starter), [`monteslu/jsgames/simple-phaser`](https://github.com/monteslu/jsgames/tree/main/simple-phaser), `FAA 14 CFR Part 107 / TRUST`  
+**Setup Checklist & CLI Grader:** [`setup-guide.md`](./setup-guide.md) · **50-Q Mastery Exam:** [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md) ([Answer Key](./quizzes/unit-test-50-answer-key.md) · [Kahoot CSV](./quizzes/unit-test-50-kahoot.csv)) · **Grader:** `npm run grade -- --unit 19`
 
 ---
 
@@ -74,4 +75,16 @@ Check off each objective (`[x]`) once verified by automated test output, workshe
 | **Day 6** | Lesson 19.3 Part 2 (`METAR`/`TAF` Decoding, `3 SM / 500 ft` Minimums, `75%/65%` Lawnmower Grid, Mode-2 Gamepad Mixer) | `part107AndMetarLab.mjs` Core + `part107MissionSimDemo.test.mjs` |
 | **Day 7** | Kahoot Quiz 2 + Lesson 19.3 Forensics & Part D Commercial Dispatch Critique | **Kahoot Quiz 2**, **Post-Lesson 19.3** |
 | **Day 8** | Unit 19 Project Sprint (`Arcade Quest` Scene / Part 107 Drone Sim Track + Handheld Packaging) | Project Milestone & `node --test` Check |
-| **Day 9** | Unit 19 Playtest Showcase (`npx rungame` / Browser) & Summative Proof | **Unit 19 Project**, **Post-Unit Eval** |
+| **Day 9** | Unit 19 Playtest Showcase (`npx rungame` / Browser) & Summative Proof | **Unit 19 Project**, **Post-Unit Eval**, **50-Q Mastery Exam** |
+
+---
+
+## 7. Mastery Exam, Setup Checklist & Automated Grading Assets
+
+- **Setup Standard & CLI Guide:** [`setup-guide.md`](./setup-guide.md) (Vite/ESM Phaser starter, `.jsg` / `.jsgame` bundle layout, Linux Gamepad setup, FAA `METAR` CLI verification).
+- **50-Question Unit Mastery Exam:**
+  - Student Exam (solution-free): [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md)
+  - Teacher Answer Key & Rationales: [`quizzes/unit-test-50-answer-key.md`](./quizzes/unit-test-50-answer-key.md)
+  - Kahoot Import CSV (`50` items): [`quizzes/unit-test-50-kahoot.csv`](./quizzes/unit-test-50-kahoot.csv)
+- **Automated Lab & Project Grader:** `npm run grade -- --unit 19` (covers [`0-student_files/19-game-dev/gameLoopLab.test.mjs`](../0-student_files/19-game-dev/gameLoopLab.test.mjs), [`0-student_files/19-drone-part107-sim/part107AndMetarLab.test.mjs`](../0-student_files/19-drone-part107-sim/part107AndMetarLab.test.mjs), and [`0-student_files/projects/unit-19-phaser-jsgame/packaging.test.mjs`](../0-student_files/projects/unit-19-phaser-jsgame/packaging.test.mjs)).
+

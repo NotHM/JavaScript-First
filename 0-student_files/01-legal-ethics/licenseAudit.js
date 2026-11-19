@@ -22,10 +22,14 @@ function sanitizeRecord(record) {
 }
 
 // Self-Test Check
-console.log('MIT ->', evaluateLicense('MIT'));
-console.log('GPL-3.0 ->', evaluateLicense('GPL-3.0'));
-console.log('NONE ->', evaluateLicense('NONE'));
-console.log(
-  'Minor record ->',
-  sanitizeRecord({ id: 1, age: 11, email: 'kid@example.com', parentalConsent: false, optIn: true })
-);
+if (require.main === module) {
+  console.log('MIT ->', evaluateLicense('MIT'));
+  console.log('GPL-3.0 ->', evaluateLicense('GPL-3.0'));
+  console.log('NONE ->', evaluateLicense('NONE'));
+  console.log(
+    'Minor record ->',
+    sanitizeRecord({ id: 1, age: 11, email: 'kid@example.com', parentalConsent: false, optIn: true })
+  );
+}
+
+module.exports = { evaluateLicense, sanitizeRecord };

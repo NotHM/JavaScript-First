@@ -1,0 +1,58 @@
+# Unit 6 Mastery Exam — Teacher Answer Key (`Q1–Q50`)
+
+**Exam File:** [`unit-test-50.md`](./unit-test-50.md)  
+**Kahoot Import CSV:** [`unit-test-50-kahoot.csv`](./unit-test-50-kahoot.csv)  
+**Coverage:** `AZ CTE Stds 5.0, 11.10–11.12` · `Bloom's L1–L5`
+
+| Q# | Key | Correct Answer | Standard & Bloom's | Rationale & Distractor Notes |
+|---|---|---|---|---|
+| 1 | **A** | `"false"` | `Std 5.1` \| `[L1]` | Only 8 values are falsy (`false`, `0`, `-0`, `0n`, `""`, `null`, `undefined`, `NaN`); every non-empty string including `"false"` is truthy. |
+| 2 | **C** | `Boolean(a) !== Boolean(b)` | `Std 5.2` \| `[L1]` | Converting operands with `Boolean(...)` before checking inequality produces clean logical XOR without bitwise integer bugs. |
+| 3 | **D** | Both `a` and `b` are falsy | `Std 5.2` \| `[L1]` | NOR negates inclusive OR (`!(a \|\| b)`), so it is `true` solely when neither `a` nor `b` is truthy. |
+| 4 | **B** | `break` | `Std 5.4` \| `[L1]` | `break` (or `return`) terminates the active `switch` branch; omitting it drops execution straight into the next `case`. |
+| 5 | **A** | `function greet(name = 'Guest') {}` | `Std 5.5` \| `[L1]` | ES6 default parameters assign fallbacks using `=` directly in the parameter list when `undefined` or omitted. |
+| 6 | **C** | Executes a function right away inside a private isolated scope without polluting globals | `Std 5.5` \| `[L1]` | IIFEs invoke immediately on parse and contain local variables inside their own lexical function scope. |
+| 7 | **D** | `node:crypto` | `Std 11.12` \| `[L1]` | Only `node:crypto` (`randomBytes`, `randomInt`, `randomUUID`) taps OS cryptographic entropy; `Math.random()` is predictable. |
+| 8 | **B** | `[0, 1)` (includes `0`, strictly less than `1`) | `Std 11.12` \| `[L1]` | `Math.random()` never reaches `1.0`, allowing `Math.floor(Math.random() * n)` to index `[0 .. n-1]`. |
+| 9 | **C** | Currying | `Std 5.5` \| `[L1]` | Currying transforms `f(a, b)` into `a => b => ...` so earlier configuration arguments lock into closures cleanly. |
+| 10 | **A** | It returns deterministic outputs solely from inputs with zero external side effects | `Std 5.5` \| `[L1]` | Pure functions avoid global reads/mutations and I/O, making reasoning and unit testing trivial. |
+| 11 | **B** | `??` triggers fallback ONLY for `null` or `undefined`, preserving valid falsy scores like `0` | `Std 5.1` \| `[L2]` | `score \|\| 70` overwrites a real `0` score or `""` string because both are falsy under `\|\|`; `??` preserves them. |
+| 12 | **C** | `A && B` fails whenever at least one condition (`!A` OR `!B`) is false | `Std 5.2` \| `[L2]` | De Morgan's Law flips conjunction (`&&`) to disjunction (`\|\|`) when distributing negation (`!`) inward. |
+| 13 | **A** | Immediately returns `false` without invoking `runExpensiveScan()` | `Std 5.1–5.2` \| `[L2]` | Because `false && anything` cannot possibly become truthy, JS skips evaluating the right operand entirely. |
+| 14 | **D** | Function declarations are hoisted fully initialized to top of scope; `const` expressions stay in the Temporal Dead Zone until executed | `Std 5.5` \| `[L2]` | Only `function name() {}` declarations hoist with their body intact; `const` bindings throw `ReferenceError` in the TDZ. |
+| 15 | **B** | Arrow functions capture lexical `this` from the surrounding scope rather than taking a dynamic call-site `this` | `Std 5.5, 11.10` \| `[L2]` | Lexical `this` prevents method callback detachment inside timers and `.map()` transforms. |
+| 16 | **C** | The inner function bundles a live reference to its enclosing lexical environment variables | `Std 5.5` \| `[L2]` | As long as the returned closure stays reachable, V8 keeps its captured outer variables alive privately. |
+| 17 | **A** | Guard clauses eliminate deep nesting, fail/exit invalid cases early, and keep the main success path linear and readable | `Std 11.10` \| `[L2]` | Returning invalid preconditions immediately removes pyramid indentation (`Arrow Code`) and halves cognitive branches. |
+| 18 | **D** | Seeded LCG updates private `state` via deterministic arithmetic seeded explicitly by the caller | `Std 11.12` \| `[L2]` | Identical integer seeds execute identical `(a * state + c) >>> 0` transitions on every run and OS. |
+| 19 | **C** | Predictable 32-bit PRNG state allows attackers to deduce future tokens after observing outputs—requiring `node:crypto` CSPRNG instead | `Std 11.12` \| `[L2]` | LCG outputs leak internal state quickly; security secrets demand OS CSPRNG unpredictability. |
+| 20 | **B** | Accepting functions as parameters or returning functions decouples traversal/control flow from specific transformation logic | `Std 5.5, 11.11` \| `[L2]` | Higher-order helpers stay generic while callers plug in custom predicates, comparators, or tax formulas. |
+| 21 | **A** | `[true, false]` | `Std 5.2` \| `[L3]` | `!(false \|\| false)` is `true`, and `Boolean(true) !== Boolean(true)` is `false`. |
+| 22 | **D** | `!isAdmin && !isVerified` | `Std 5.2` \| `[L3]` | Pushing `!` inside `\|\|` converts `!(A \|\| B)` into `!A && !B`. |
+| 23 | **C** | `70, 0` | `Std 5.1` \| `[L3]` | `0` is falsy for `\|\|` (returning `70`) yet defined/non-nullish for `??` (returning `0`). |
+| 24 | **B** | `14, 5` | `Std 5.5` \| `[L3]` | `addTen(4) = 10 + 4 = 14`, and `add(2)(3) = 2 + 3 = 5`. |
+| 25 | **D** | `7, 6` | `Std 5.5` \| `[L3]` | `c1()` increments `5 -> 6` then `6 -> 7`, while a fresh `createCounter(5)()` starts its own private state `5 -> 6`. |
+| 26 | **A** | `'DENIED_PASS_CONFLICT'` | `Std 5.2–5.4` \| `[L3]` | `verified` and `!suspended` pass, then `XOR(true, true)` returns `false`, triggering `'DENIED_PASS_CONFLICT'`. |
+| 27 | **C** | `{ id: 7, active: true }` | `Std 5.5` \| `[L3]` | Wrapping the object literal in `({...})` forces JavaScript to return the object expression cleanly. |
+| 28 | **B** | `'B'` | `Std 5.1, 5.4` \| `[L3]` | `80 >= 90` is `false`, next branch `80 >= 80` is `true`, returning `'B'`. |
+| 29 | **A** | `[4, 9, 16]` | `Std 5.5, 11.11` \| `[L3]` | Applying squaring callback `(n) => n * n` maps `[2, 3, 4]` to `[4, 9, 16]` without mutating the source array. |
+| 30 | **D** | `true` | `Std 11.12` \| `[L3]` | Same deterministic seed (`99`) guarantees `a() === b()` on every matching step. |
+| 31 | **C** | Left-to-right parsing computes `(1 < 99)` as `true` (numeric `1`), and `1 < 5` is `true` | `Std 5.1` \| `[L4]` | JavaScript lacks mathematical range chaining `a < b < c`; write `x > 1 && x < 5` explicitly. |
+| 32 | **B** | Missing `break;` inside `case 'editor'` causes execution to fall directly into `case 'viewer'` | `Std 5.4` \| `[L4]` | Without `break` or `return`, execution drops straight through into the following case body. |
+| 33 | **D** | Braces without parentheses parse `{ x: x }` as a function block containing label `x:` and no `return` statement | `Std 5.5` \| `[L4]` | Concise arrow bodies starting with `{` open a statement block; add parentheses `({ x })` to return an object literal. |
+| 34 | **A** | `var i` creates one shared function-scoped binding across all iterations rather than per-iteration block `let` bindings | `Std 5.5` \| `[L4]` | By the time callbacks invoke, the shared `var i` holds `3`; switching to `let i` creates a fresh binding per iteration. |
+| 35 | **C** | Single `=` mutates `user.role` to `'admin'` and evaluates to truthy `'admin'`, granting admin access unconditionally | `Std 5.1` \| `[L4]` | Always check `===` inside conditions; enable ESLint `no-cond-assign` to catch accidental `=` at lint time. |
+| 36 | **B** | The `let count = 0` variable was placed outside `createCounter()` in shared module scope instead of privately inside the factory | `Std 5.5` \| `[L4]` | Outer module variables act as singletons shared by every caller; moving `let count = 0` inside `createCounter()` isolates each instance. |
+| 37 | **A** | Case normalization (`cmd.trim().toLowerCase()`) before strict `===` `switch` matching | `Std 5.4` \| `[L4]` | `'RESTART' === 'restart'` is `false`; normalize input casing/whitespace before dispatching. |
+| 38 | **D** | Bitwise `^` converts non-numeric strings to `NaN -> 0`, turning `xor('badgeA', 'badgeB')` into `Boolean(0 ^ 0) = false` and `xor('badgeA', false)` into `Boolean(0 ^ 0) = false`! | `Std 5.2` \| `[L4]` | Bitwise operators coerce operands to 32-bit integers (`Number('badgeA') -> NaN -> 0`); use `Boolean(a) !== Boolean(b)` instead. |
+| 39 | **C** | Mutating external `runningTotal` makes the function impure so outputs depend on how many prior tests ran | `Std 5.5` \| `[L4]` | Side effects couple tests to execution order; pass totals explicitly or isolate state inside closures. |
+| 40 | **B** | `user.age = 18` assigns `18` instead of testing `user.age < 18` | `Std 5.1, 11.10` \| `[L4]` | Single `=` overwrites the child's real age with `18` and evaluates truthy, bypassing the guard clause completely. |
+| 41 | **A** | Flat sequential early-return Guard Clauses checking null/unverified/suspended failures up front before returning `'GRANTED'` | `Std 11.10` \| `[L5]` | Guard clauses maximize clarity and testability without cryptic nested ternaries or exception-driven flow control. |
+| 42 | **D** | `Map` eliminates `break` fall-through bugs, executes `O(1)` lookup, prevents prototype-key collisions (`__proto__`), and registers plugins cleanly | `Std 5.4` \| `[L5]` | Static key routing scales cleanly in a `Map` dispatch table while avoiding long boilerplate switches. |
+| 43 | **C** | Closure encapsulation blocks external mutation, isolates independent limiters per user/route, and keeps unit tests order-independent | `Std 5.5` \| `[L5]` | Private closure state prevents unauthorized external resets and removes shared global contention. |
+| 44 | **B** | Use a closure **seeded LCG PRNG** for repeatable CI tests and **`node:crypto` CSPRNG** (`randomBytes`/`randomUUID`) for security tokens | `Std 11.12` \| `[L5]` | Matching generator traits to security vs. reproducibility requirements avoids both flaky tests and token compromise. |
+| 45 | **A** | Fail-fast outer validation catches misconfigured tax rates once at construction time instead of repeating invalid setup silently until checkout fails | `Std 5.5, 11.11` \| `[L5]` | Curried outer factories establish invariants once before minting specialized pricing functions. |
+| 46 | **D** | It rejects `NaN`, `Infinity`, and non-numeric inputs immediately before silent `NaN` corruption spreads through downstream calculations | `Std 11.11` \| `[L5]` | Validating numeric finiteness at boundaries protects financial pipelines from invisible `NaN` drift. |
+| 47 | **B** | Separating traversal from predicate strategy honors DRY and Open/Closed design—new rules plug in without duplicating loop/guard logic | `Std 5.5, 11.11` \| `[L5]` | Injecting predicate functions lets one thoroughly tested traversal power arbitrary future filters. |
+| 48 | **C** | `0` is falsy under `\|\|` (forcing an unwanted `250ms` delay), whereas `??` treats `0` as a valid defined value | `Std 5.1` \| `[L5]` | Nullish coalescing respects explicit `0`, `false`, and `""` settings cleanly. |
+| 49 | **A** | Named pure helpers yield clear stack traces, unit-test independently without mocks, and eliminate deeply indented callback chains | `Std 11.10–11.11` \| `[L5]` | Decomposing monolithic anonymous callbacks into named functions aids debugging and direct TDD coverage. |
+| 50 | **D** | Design X introduces arbitrary code injection (`eval`) and flaky non-deterministic tests, whereas Design Y guarantees security and 100% reproducible verification | `Std 5.5, 11.10–11.12` \| `[L5]` | Pure functional predicates plus seeded LCG achieve both runtime safety and deterministic CI repeatability. |

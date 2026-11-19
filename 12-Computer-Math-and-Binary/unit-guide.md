@@ -40,6 +40,15 @@ Unit 12 builds rigorous quantitative reasoning for software and autonomous syste
 | **Day 13** | Lesson 12.2: WGS-84 Haversine & Photogrammetry GSD + `node:test` QA | **Post-Lesson 12.2**, `droneFlightMathDemo.test.mjs` |
 | **Day 14** | Unit Project (Core Bitmask + Drone Mission Track) & Summative Proof | **Unit 12 Project**, **Post-Unit Eval** |
 
+## 5. Setup Standard, 50-Question Mastery Exam & Automated Gradebook
+
+- **Standalone Setup & Props-Off Telemetry Standard:** [`setup-guide.md`](./setup-guide.md) (Interactive Node REPL binary/hex/`BigInt` checks, GEMA & IEEE-754 verification, mandatory Props-Off sUAS bench checklist)
+- **Unit 12 Mastery Exam (50 Questions | L1–L5):**
+  - Student Exam (Solution-Free): [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md)
+  - Teacher Answer Key (`Q1–Q50`): [`quizzes/unit-test-50-answer-key.md`](./quizzes/unit-test-50-answer-key.md)
+  - Kahoot Live Import CSV (50 Rows): [`quizzes/unit-test-50-kahoot.csv`](./quizzes/unit-test-50-kahoot.csv)
+- **Automated Unit Gradebook:** `npm run grade -- --unit 12`
+
 ---
 
 ## SMART Goals & Objectives Tracker

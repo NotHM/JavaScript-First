@@ -35,6 +35,15 @@ Unit 11 delivers comprehensive mastery of **AZ CTE Standard 1.0 (`1.1–1.7`)** 
 | **Day 86 (Day 6)** | Lesson 11.2 Part 2 (VLAN/DMZ, Packet/Stateful/NGFW ACLs, IDS/IPS, SIEM + AI Anomalies & DRP) + Lab + Quiz 2 | `firewallSiemLab.mjs`, `02-.../post-lesson-eval.md`, **Quiz 2** |
 | **Day 87 (Day 7)** | Unit 11 Project Build (`unit-11-security-hardening-audit` + Zero Trust/SIEM/STRIDE Audit) & Summative Proof | **Unit 11 Project Submission**, `post-unit-eval.md` |
 
+## 5. Setup Standard, 50-Question Mastery Exam & Automated Gradebook
+
+- **Standalone Setup & Security Hardening Standard:** [`setup-guide.md`](./setup-guide.md) (OpenSSL `req -x509` self-signed certs, `ss`/`iptables` & ACL boundary checks, `require.main === module` port guard)
+- **Unit 11 Mastery Exam (50 Questions | L1–L5):**
+  - Student Exam (Solution-Free): [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md)
+  - Teacher Answer Key (`Q1–Q50`): [`quizzes/unit-test-50-answer-key.md`](./quizzes/unit-test-50-answer-key.md)
+  - Kahoot Live Import CSV (50 Rows): [`quizzes/unit-test-50-kahoot.csv`](./quizzes/unit-test-50-kahoot.csv)
+- **Automated Unit Gradebook:** `npm run grade -- --unit 11`
+
 ---
 
 ## SMART Goals & Objectives Tracker

@@ -21,11 +21,14 @@ function applyPercentDiscount(cents, percent) {
 
 test('TODO: safeAverage computes valid averages and catches boundary failures', () => {
   assert.equal(safeAverage([90, 80, 100]), 90);
+  assert.equal(safeAverage([42]), 42);
   assert.throws(() => safeAverage([]), RangeError);
   assert.throws(() => safeAverage([10, Number.NaN]), TypeError);
 });
 
 test('TODO: applyPercentDiscount subtracts discount cleanly and rejects invalid percent', () => {
   assert.equal(applyPercentDiscount(2000, 25), 1500);
+  assert.equal(applyPercentDiscount(1000, 0), 1000);
+  assert.throws(() => applyPercentDiscount(2000, -5), RangeError);
   assert.throws(() => applyPercentDiscount(2000, 150), RangeError);
 });

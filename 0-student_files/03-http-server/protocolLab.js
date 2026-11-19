@@ -25,10 +25,15 @@ function pickIotProtocol({ rangeMeters, coinCellBattery }) {
   return '';
 }
 
-console.log('Complete protocolLab.js TODOs, then uncomment checks to verify!');
-/*
-assert.equal(inspectEndpoint('https://api.example.com').encrypted, true);
-assert.equal(calculateWireKb(1000, 0.75), 250);
-assert.equal(pickIotProtocol({ rangeMeters: 5000, coinCellBattery: false }), 'LTE Cellular');
-console.log('Lesson 2.1 Lab passed!');
-*/
+if (require.main === module) {
+  console.log('Complete protocolLab.js TODOs, then uncomment checks to verify!');
+  /*
+  assert.equal(inspectEndpoint('https://api.example.com').encrypted, true);
+  assert.equal(calculateWireKb(1000, 0.75), 250);
+  assert.equal(pickIotProtocol({ rangeMeters: 5000, coinCellBattery: false }), 'LTE Cellular');
+  console.log('Lesson 2.1 Lab passed!');
+  */
+}
+
+void assert;
+module.exports = { inspectEndpoint, calculateWireKb, pickIotProtocol };

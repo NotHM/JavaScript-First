@@ -20,7 +20,26 @@ function binarySearch(sortedArr, target) {
   return -1;
 }
 
-test('TODO boundary tests pass after implementing sorts & binarySearch', () => {
-  assert.equal(Array.isArray(insertionSort([3, 1, 2])), true);
-  assert.equal(typeof binarySearch, 'function');
+test('TODO insertionSort sorts ascending without mutating input across boundaries', () => {
+  const sample = [9, -3, 5, 5, 0, 12, 1];
+  assert.deepEqual(insertionSort(sample), [-3, 0, 1, 5, 5, 9, 12]);
+  assert.deepEqual(sample, [9, -3, 5, 5, 0, 12, 1]);
+  assert.deepEqual(insertionSort([]), []);
+  assert.deepEqual(insertionSort([42]), [42]);
+});
+
+test('TODO mergeSort sorts ascending without mutating input across boundaries', () => {
+  const sample = [10, -2, 4, 4, 8, 1];
+  assert.deepEqual(mergeSort(sample), [-2, 1, 4, 4, 8, 10]);
+  assert.deepEqual(sample, [10, -2, 4, 4, 8, 1]);
+  assert.deepEqual(mergeSort([]), []);
+  assert.deepEqual(mergeSort([7]), [7]);
+});
+
+test('TODO binarySearch returns exact indices and handles single/empty/missing boundaries', () => {
+  assert.equal(binarySearch([2, 4, 6, 8, 10], 2), 0);
+  assert.equal(binarySearch([2, 4, 6, 8, 10], 10), 4);
+  assert.equal(binarySearch([2, 4, 6, 8, 10], 7), -1);
+  assert.equal(binarySearch([42], 42), 0);
+  assert.equal(binarySearch([], 42), -1);
 });

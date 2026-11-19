@@ -1,0 +1,51 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Why was Netscape's 1995 LiveScript language renamed to JavaScript?,Compiled to JVM bytecode,Marketing alignment with Java,Replaced HTML tags,ECMA required Java prefix,20,2
+Which standards body publishes the ECMA-262 JavaScript specification?,W3C CSS Group,ECMA International,IANA Port Registry,Linux Kernel Group,20,2
+"What copyright status applies to GitHub code with NO LICENSE file?",Public Domain,Automatic MIT License,All Rights Reserved by author,Automatic GPL-3.0,30,3
+Which U.S. privacy law protects children under age 13 from unconsented tracking?,FERPA,COPPA,HIPAA,DMCA,20,2
+Which CLI tool installs and switches between multiple Node.js versions?,npm,NVM,V8,Express,20,2
+How many primitive data types exist in modern JavaScript?,5,6,7,8,20,3
+Which file extension forces Node.js to run a file strictly as an ES Module?,.cjs,.js,.mjs,.es,20,3
+Which three layers form the Linux operating system architecture?,"UEFI, Docker, Browser DOM","Kernel, Shell, Utilities","BIOS, Registry, PowerShell","Hypervisor, RAID, TypeScript",20,2
+Which RAID level stripes data across >=2 disks with ZERO fault tolerance?,RAID 0,RAID 1,RAID 5,RAID 10,20,1
+Which ANSI escape code resets terminal text formatting back to default?,\x1b[31m,\x1b[32m,\x1b[1m,\x1b[0m,20,4
+Why was the ambitious ECMAScript 4 (ES4) proposal abandoned before ES5?,Banned functions,Risked breaking existing web sites,Node banned classes in 2005,Java trademark expired,30,2
+How does MIT differ from GPL-3.0 copyleft licensing?,MIT bans commercial apps,MIT allows closed builds w/ notice; GPL requires sharing source,Apache forbids patents,Both ban modifications,30,2
+Why is Node.js classified as Interpreted / JIT rather than AOT compiled?,Builds .jar files,V8 parses immediately and JIT-compiles hot code,Never makes machine code,Runs gcc before each script,30,2
+Conceptually where are primitives stored vs. dynamic Objects/Arrays?,Primitives on Stack / Objects on Heap,All inside package.json,Objects on Stack / Strings on Disk,Numbers live on Heap only,30,1
+Why does typeof null === "object" evaluate to true in JavaScript?,null inherits Array,Frozen 1995 C 3-bit tag bug (0x00 matched object),ES2015 changed null to {},Strict mode converts null,30,2
+How do ESM import bindings differ from CommonJS destructured exports?,CJS is live / ESM copies,ESM uses live read-only bindings; CJS copies snapshots,ESM bans default export,CJS supports top-level await,30,2
+How does browser <script type="module"> differ from classic <script>?,Leaks globals onto window,Strict mode + scoped + deferred + CORS imports,Unlocks require('node:fs'),Disables relative ./ paths,30,2
+Why wear a 1 M-ohm ESD wrist strap clipped to a grounded mat?,Shocks <3500V fry 3.3V CMOS chips unseen,Boosts CPU clock speed,Powers UEFI BIOS clock,Prevents NTP log skew,30,1
+What rule does the POSIX sticky bit (1777 on /tmp) enforce?,Files inherit root password,Only file owner / dir owner / root can delete files,Executes with owner EUID,Auto-gzips files in /tmp,30,2
+Why does SELinux Enforcing block compromised nginx from reading /etc/shadow?,Replaces TCP with WoL,Enforces MAC domain/type labels regardless of POSIX bits,Deletes /etc/shadow at boot,Converts nginx to cron,30,2
+What prints: node -e "console.log(typeof [10,20], Array.isArray([10,20]), typeof 42n)"?,array true number,object true bigint,object false bigint,array false number,30,2
+Which check detects any primitive (incl. null/undefined) safely?,typeof v !== 'object',v === null || (typeof v !== 'object' && typeof v !== 'function'),Boolean(v) === true,!Array.isArray(v),60,2
+What does sanitizeCliInput("  \tAda\n ") return after stripping control chars + trim()?,"""Ada""","""  Ada ""","""\tAda\n""","""""",30,1
+How do you safely load ./legacy-helper.cjs inside an ES module audit.mjs?,Direct require('./legacy-helper.cjs'),createRequire(import.meta.url) from 'node:module',__dirname + '/legacy-helper.cjs',import without extension,30,2
+Which portable ESM code replaces CommonJS __dirname across Node 18-24?,process.argv[0],path.dirname(fileURLToPath(import.meta.url)),import { __dirname } from 'node:fs',require.resolve('.'),30,2
+Which package.json fields enable ESM .js files and npm run grade?,type: commonjs + scripts.grade,type: module + scripts.grade,esm: true + commands.grade,module: auto,30,2
+"400W peak load + 25% PSU headroom equals what min watts & standard tier?",450W -> 450W tier,500W -> 550W tier,525W -> 650W tier,600W -> 750W tier,30,2
+What POSIX symbolic mode matches octal 4755 on a regular executable file?,-rwxr-xr-x,-rwsr-xr-x,drwxrwsr-t,-rwSr-xr-x,30,2
+Which 5-field crontab expression runs at 02:15 AM Monday through Friday?,2 15 * * 1-5,15 2 * * 1-5,15 2 1-5 * *,*/15 2 * * 0-6,30,2
+Which bash pipeline merges stderr+stdout from journalctl and appends matches?,journalctl -u sshd 2>&1 | grep "Failed" >> log,journalctl 2>/dev/null > grep >> log,journalctl < grep 1>2 log,grep >> journalctl 2>&1,30,1
+"What causes SyntaxError: Cannot use import statement outside a module in app.js?",Node 24 dropped ESM,app.js uses import under CommonJS type,Missing 'use strict',Missing npm install import,30,2
+33: "Why does import { fn } from './helper' fail twice on helper.cjs?",Node bans .cjs imports in .mjs,Missing .cjs extension AND module.exports is default not named,helper.cjs used export default,package.json banned ./,60,1
+34: "CJS calling require('./async.mjs') with top-level await throws what error + fix?",ERR_MODULE_NOT_FOUND -> delete await,ERR_REQUIRE_ASYNC_MODULE -> use await import('./async.mjs'),ERR_UNKNOWN_FILE_EXTENSION -> wasm flag,ReferenceError __dirname -> esm-bridge,30,2
+35: "What are the 2 bugs in: typeof VAR !== 'object' && VAR !== 'function' && VAR !== null && VAR !== undefined?",Rejects strings & numbers,Excludes null/undefined AND compares VAR !== 'function' not typeof,Fails on BigInt,Loose equality on booleans,60,2
+36: Why does concatenating report += row 100k times in a loop scale at O(n^2)?,Stack resizes numbers,Strings are immutable so each += copies the whole growing prefix,console.log writes /etc/shadow,Array.join swaps to disk,30,2
+37: Why does if (!grade) { grade = 70; } introduce a bug when grade is 0?,0 is a Heap object,0 is falsy so !0 is true and overwrites 0 with 70,typeof 0 is undefined,const turns 0 into NaN,30,2
+38: "Owner alice (in group devs) reads file mode 0040 owned by alice:devs. Result?",Allowed via devs group r--,Denied because owner tier 000 matches first and stops,Allowed via sticky bit,Kernel escalates to setuid,30,2
+39: "journalctl shows 08:00:05Z before 08:00:04Z + 40 Failed password for root. Cause?",Ed25519 key login + RAID 1,NTP clock skew + active SSH brute-force attack on root,Normal cron + expired MIT,chmod 1777 corruption,30,2
+40: Swollen Li-ion pack + plugged-in PSU on ungrounded bench violates which two rules?,WoL ports + MaxAuthTries,OSHA/ESD live-AC ungrounded work + EPA Li-ion thermal runaway hazard,FERPA + Apache-2.0 patents,import.meta.url resolution,30,2
+41: "npm run grade -- --unit 01 fails with Missing script: grade. Likely cause?",Node 24 removed npm run,Current working directory is a subfolder without root package.json,brokenModuleLab.mjs syntax bug,Git user.name unset,30,2
+42: "Commercial app manifest: MIT, Apache-2.0, GPL-3.0, and No LICENSE gist. Action?",Approve all four,Approve MIT/Apache; review/replace GPL-3.0; BLOCK unlicensed gist,Block MIT; ship gist,Add your own MIT license to gist,60,2
+43: "K-12 app tracks under-13 emails & ad cookies w/o consent and logs PII. Verdict?",Compliant with const,Violates COPPA + FERPA + GDPR minimization — block & redact PII,Violates DMCA only,Allowed under BSD-3-Clause,60,2
+44: Best module format for a shared library in Node 24 AND browser <script type=module>?,Legacy .cjs with __dirname,Pure ESM (.mjs / type: module) with explicit extensions & no Node globals,Global window <script>,Mixing require & export default,30,2
+45: Best POSIX mode for shared /srv/team-builds (group builders auto-inherit; no others)?,chmod 0777,chmod 2770 (setgid + rwxrwx---) with chgrp builders,chmod 4755 (setuid),chmod 0000 and login as root,30,2
+46: Which sshd_config posture provides the strongest SSH brute-force defense?,PermitRootLogin yes & PasswordAuth yes,PermitRootLogin no + PasswordAuth no + Pubkey yes + MaxAuthTries 3,PermitEmptyPasswords yes + chmod 644 key,Disable firewalld & SELinux,60,2
+47: 4 identical NVMe drives for high database IOPS + survival without RAID 5 rebuild risk?,RAID 0,RAID 10 (mirrored stripes 50% capacity high IOPS + resilience),Single disk + weekly cron,JBOD concatenation,30,2
+48: OSHA/EPA-compliant handling for failing sealed PSU + swollen Li-ion pack?,Open PSU w/ screwdriver & trash battery,Unplug AC & replace PSU; sand-isolate battery for EPA/R2 recycling,Puncture battery outdoors,Disable UEFI Secure Boot,60,2
+Best pattern to format 500k log lines cleanly without O(n^2) memory or color bleed?,+= loop omitting \x1b[0m,Array push + .join('\n') O(n) + trailing \x1b[0m reset + input validation,Symbol properties on globalThis,typeof x !== 'object',60,2
+Why NOT convert helper.cjs to .mjs or delete type: module to pass Lesson 1.4?,Node 24 bans .cjs files,Lab evaluates bridging CJS from ESM w/ explicit extensions & createRequire,Deletes console.log,helper.cjs uses browser <script>,60,2
+Turning off chronyd (NTP) and running setenforce 0 permanently breaks what two defenses?,npm audit & BigInt,SELinux MAC confinement AND NTP UTC log forensics / TLS time validity,CJS-to-ESM conversion,Sticky bit on package.json,60,2

@@ -13,9 +13,40 @@
  */
 
 // TODO: Step 1 — const object mutation
-
+function updatePoints(profile, newPoints) {
+  // TODO [L3 Apply | 3.6]: Update `profile.points = newPoints` on the existing object without reassigning `profile`, and return `profile`
+  void profile;
+  void newPoints;
+  return null;
+}
 
 // TODO: Step 2 — Object.freeze()
-
+function createFrozenSettings(theme = 'dark') {
+  // TODO [L3 Apply | 3.6]: Return `Object.freeze({ theme })`
+  void theme;
+  return {};
+}
 
 // TODO: Step 3 — structuredClone() deep copy
+function deepCloneGame(game) {
+  // TODO [L3 Apply | 3.6]: Return an independent deep clone using `structuredClone(game)`
+  void game;
+  return game;
+}
+
+if (require.main === module) {
+  const profile = { name: 'Alex', points: 10 };
+  console.log('Step 1 updatePoints ->', updatePoints(profile, 25));
+
+  const settings = createFrozenSettings('dark');
+  console.log('Step 2 createFrozenSettings ->', settings, 'frozen?', Object.isFrozen(settings));
+
+  const game = { player: 'Alex', scores: [10, 20] };
+  const clone = deepCloneGame(game);
+  if (clone && clone !== game && Array.isArray(clone.scores)) {
+    clone.scores.push(30);
+  }
+  console.log('Step 3 original scores ->', game.scores, 'clone scores ->', clone?.scores);
+}
+
+module.exports = { updatePoints, createFrozenSettings, deepCloneGame };

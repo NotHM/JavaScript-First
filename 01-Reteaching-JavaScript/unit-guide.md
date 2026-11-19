@@ -76,6 +76,8 @@ Unit 1 establishes the professional software engineering and IT systems foundati
 
 ---
 
-## 6. Measuring Learning Growth (Unit Evaluation Protocol)
+## 6. Setup Standards, Automated TDD & Mastery Evaluation Protocol
 
-Administer [`evaluations/pre-unit-eval.md`](./evaluations/pre-unit-eval.md) on Day 1 before teaching and [`evaluations/post-unit-eval.md`](./evaluations/post-unit-eval.md) on Day 11. Grade using [`evaluations/eval-answer-key.md`](./evaluations/eval-answer-key.md) and compute Normalized Gain $g = \frac{\text{Post\%} - \text{Pre\%}}{100 - \text{Pre\%}}$ (target $g \ge 0.55$).
+- **Workstation Setup Standard:** Complete [`setup-guide.md`](./setup-guide.md) (NVM, Node 24 LTS, `"type": "module"` vs. `.mjs`/`.cjs`, VS Code extensions, OpenSSH `Ed25519` hygiene) and confirm all automated labs pass via `npm run grade -- --unit 01`.
+- **Pre/Post Growth Evaluation:** Administer [`evaluations/pre-unit-eval.md`](./evaluations/pre-unit-eval.md) on Day 1 before teaching and [`evaluations/post-unit-eval.md`](./evaluations/post-unit-eval.md) on Day 11. Grade using [`evaluations/eval-answer-key.md`](./evaluations/eval-answer-key.md) and compute Normalized Gain $g = \frac{\text{Post\%} - \text{Pre\%}}{100 - \text{Pre\%}}$ (target $g \ge 0.55$).
+- **50-Question Unit Mastery Exam:** [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md) (solution-free student exam) · [`quizzes/unit-test-50-answer-key.md`](./quizzes/unit-test-50-answer-key.md) (teacher key) · [`quizzes/unit-test-50-kahoot.csv`](./quizzes/unit-test-50-kahoot.csv) (50-item Kahoot deck).

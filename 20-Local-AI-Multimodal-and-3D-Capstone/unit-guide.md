@@ -1,7 +1,8 @@
 # Unit 20 Guide: Local Multimodal AI, Agentic Governance & 3D CAD Capstone
 
 **Course:** JavaScript First — Software & App Design (AZ CTE CIP **11.0202.00**) & **West-MEC AI (`AI101–AI202`)**  
-**Capstone Schedule:** Final Extension / Culminating Engineering Sprint (10 Class Periods × 50 Minutes)
+**Capstone Schedule:** Final Extension / Culminating Engineering Sprint (10 Class Periods × 50 Minutes)  
+**Setup Standard & Exam Assets:** [`setup-guide.md`](./setup-guide.md) · [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md) ([Answer Key](./quizzes/unit-test-50-answer-key.md) · [Kahoot CSV](./quizzes/unit-test-50-kahoot.csv)) · **Grader:** `npm run grade -- --unit 20`
 
 ---
 
@@ -75,3 +76,15 @@ Unit 20 challenges students to build a **100% private, zero-cloud-egress, respon
 | **Day 8** | Capstone Integration Sprint (Core + HITL Gate + Model Card Lock-In) + Kahoot Quiz 2 | **Kahoot Quiz 2**, Core + Governance Milestone Sign-Off |
 | **Day 9** | Bonus Vision/Video, Double-Bonus 3D CAD Polish, Disparate Impact & Slicer QA | `capstone.test.mjs`, `buildAndValidateModelCard()` QA Pass |
 | **Day 10** | Final Capstone Live Showcase (Voice + HITL/Model Card Audit + Vision + 3D `.stl` Slicer Check) & Summative Proof | **Unit 20 Capstone Submission**, **Post-Unit Eval** |
+
+---
+
+## 7. Mastery Exam, Setup Checklist & Automated Grading Assets
+
+- **Setup Standard & CLI Guide:** [`setup-guide.md`](./setup-guide.md) (Local Ollama `127.0.0.1:11434` setup, Whisper/Piper 16kHz PCM `.wav`, OpenSCAD/PrusaSlicer `.stl` verification, Model Card schema validation).
+- **50-Question Unit Mastery Exam:**
+  - Student Exam (solution-free): [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md)
+  - Teacher Answer Key & Rationales: [`quizzes/unit-test-50-answer-key.md`](./quizzes/unit-test-50-answer-key.md)
+  - Kahoot Import CSV (`50` items): [`quizzes/unit-test-50-kahoot.csv`](./quizzes/unit-test-50-kahoot.csv)
+- **Automated Lab & Project Grader:** `npm run grade -- --unit 20` (covers [`ragAndStreamLab.test.mjs`](../0-student_files/20-local-ai-3d/ragAndStreamLab.test.mjs), [`multimodalAndCadLab.test.mjs`](../0-student_files/20-local-ai-3d/multimodalAndCadLab.test.mjs), [`nlpAgenticLab.test.mjs`](../0-student_files/20-agentic-nlp-governance/nlpAgenticLab.test.mjs), and [`capstone.test.mjs`](../0-student_files/projects/unit-20-local-ai-3d-capstone/capstone.test.mjs)).
+

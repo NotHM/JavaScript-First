@@ -1,7 +1,8 @@
 # Unit 13 Guide: Version Control Systems & Community Resources
 
 **Course:** JavaScript First — Software & App Design (AZ CTE CIP **11.0202.00**)  
-**Semester Schedule:** Week 7 (Days 30–34 | 5 Class Periods × 50 Minutes)
+**Semester Schedule:** Week 7 (Days 30–34 | 5 Class Periods × 50 Minutes)  
+**Setup & CLI Guide:** [`setup-guide.md`](./setup-guide.md) · **Automated Lab Grader:** `npm run grade -- --unit 13`
 
 ---
 
@@ -46,3 +47,14 @@ Unit 13 equips students with industry engineering collaboration skills covering 
 - [ ] **TG-U13-3 (Kahoot Formative Remediation Threshold):** **[Specific]** Run [`quizzes/quiz-1-kahoot.csv`](./quizzes/quiz-1-kahoot.csv) (Lesson 13.1) and [`quizzes/quiz-2-kahoot.csv`](./quizzes/quiz-2-kahoot.csv) (Lesson 13.2) during Week 7 checkpoints. **[Measurable]** Deliver a 10-minute `revert`-vs-`reset` or SemVer `^`/`~` micro-reteach whenever item or class accuracy falls below 75%. **[Achievable]** Uses rationale keys in `quizzes/quiz-*.md` to pinpoint errors quickly. **[Relevant]** Eliminates destructive history-rewrite and dependency-audit misconceptions before Post-Unit Eval. **[Time-bound]** Remediated on Day 32 and Day 33 within class time. *(Specific | Measurable | Achievable | Relevant | Time-bound | Bloom's L1–L5 | AZ CTE 13.0, 14.0 / West-MEC)*
 - [ ] **TG-U13-4 (Timely 4-Tier Rubric Turnaround):** **[Specific]** Score all Unit 13 OSS Release Toolkit projects using [`projects/project-rubric.md`](./projects/project-rubric.md) (stdlib architecture, Conventional Commits + SemVer bump, DevSecOps secret/CVE gate, and `README.md` quality). **[Measurable]** Return 100% of rubric scores and documentation critiques within 3 instructional days. **[Achievable]** Standardized 4 × 25-point rubric scoring accelerates review. **[Relevant]** Ensures students maintain clean PRs and READMEs across Units 14, 9, and Capstone. **[Time-bound]** Returned within 72 hours (3 school days) of Day 34. *(Specific | Measurable | Achievable | Relevant | Time-bound | Bloom's L3–L6 | AZ CTE 13.0, 14.0 / West-MEC)*
 - [ ] **TG-U13-5 (AZ CTE / West-MEC & FBLA Portfolio Documentation):** **[Specific]** Audit and archive Unit 13 conflict-resolution plans, `README.md` samples, verified `13-vcs-community/` code, pre/post gain data, and OSS Toolkits against AZ CTE CIP `11.0202.00` (`13.1–13.5`, `14.1–14.8`) & West-MEC Coding standards. **[Measurable]** Confirm 100% of active students hold complete VCS and documentation artifacts. **[Achievable]** Tracked alongside Day 34 rubric checks. **[Relevant]** Validates collaborative DevOps standards and builds FBLA open-source/coding portfolios. **[Time-bound]** Finalized by Day 35 (start of Week 8). *(Specific | Measurable | Achievable | Relevant | Time-bound | Bloom's L1–L6 | AZ CTE / West-MEC)*
+
+---
+
+## 4. Setup Guide, 50-Question Mastery Exam & Automated Grading
+
+- **Environment & Tooling Guide:** [`setup-guide.md`](./setup-guide.md) (Git config, `.gitignore` rules, ESLint/Babel presets, `npm audit`, `npm ci`)
+- **50-Question Unit Mastery Exam:**
+  - Student Exam (solution-free): [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md)
+  - Teacher Answer Key & Rationales: [`quizzes/unit-test-50-answer-key.md`](./quizzes/unit-test-50-answer-key.md)
+  - Kahoot Import CSV (`50` items): [`quizzes/unit-test-50-kahoot.csv`](./quizzes/unit-test-50-kahoot.csv)
+- **Automated Lab & Project Grading:** Run `npm run grade -- --unit 13` across [`0-student_files/13-vcs-community/`](../0-student_files/13-vcs-community/changelogLab.js) and [`0-student_files/projects/unit-13-oss-toolkit/`](../0-student_files/projects/unit-13-oss-toolkit/index.js).

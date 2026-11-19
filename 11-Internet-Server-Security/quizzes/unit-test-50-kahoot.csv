@@ -1,0 +1,51 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+What three security pillars make up the CIA Triad?,"Confidentiality, Integrity, Avail","Caching, Indexing, Automation","Containers, Inheritance, APIs","Certs, Internet, Antivirus",20,1
+"Which terms match verifying identity, minimal rights & multi-step proof?","SQLi, XSS, CORS","BitLocker, VLAN, Faraday","AuthN, Least Privilege AuthZ, MFA","DRP, RTO, ALE",20,3
+"Match reversible data protection, one-way passwords & authenticity proof:","Base64, MD5, HTTP","AES-GCM, salted scrypt, signatures",Signatures lock disks; scrypt decrypts,AES destroys plaintext,20,2
+How do Sandboxes and Virtual Machines reduce blast radius for untrusted code?,Delete TLS certificates,Broadcast passwords to logs,Grant root privileges to tabs,Isolate syscalls/kernels from host,20,4
+Which OpenSSL command generates a local self-signed X.509 TLS certificate?,openssl req -x509 -newkey rsa:2048,openssl hash --aes-md5,npm install --x509,git commit --x509,20,1
+Which OWASP flaw lets attacker input rewrite backend database query structure?,CSRF,Clickjacking,SQL Injection (SQLi),ARP Poisoning,20,3
+Name the 3 Data States and matching physical disk/RF shielding controls:,"SQL, CSS, JSON + HTML comments","Rest, Motion, In Use + BitLocker/Faraday","Red, Green, Refactor + logs","Hot, Warm, Cold + DNS",20,2
+What six threat classes are represented by the STRIDE mnemonic?,"Storage, Test, Route, Index, Debug","SSL, TLS, RSA, IP, DNS, Eth","Single, Two, Role, ID, Data, Edge","Spoof, Tamper, Repud, Info, DoS, Elev",20,4
+"In Disaster Recovery Planning (DRP), how do RPO and RTO differ?",RPO=max data age; RTO=max downtime,RTO=leaked keys; RPO=AES bits,Both measure CSS FPS,RPO=password len; RTO=CORS,20,1
+"Match healthcare, payment cards, EU privacy & student records regulations:","FCC, DRM, AUP, EFF","SOX, GPL, MIT, USB","HIPAA, PCI-DSS, GDPR, FERPA","HTTP, SMTP, FTP, SSH",20,3
+Why use salted scrypt instead of fast unsalted SHA-256 for password storage?,Allows admin plaintext recovery,Salts stop rainbow; memory slows GPU,SHA-256 rejects uppercase text,scrypt stores zero disk hashes,20,2
+Why compare cryptographic hashes/HMACs with crypto.timingSafeEqual over ===?,=== always fails on hex,Converts output to uppercase,=== crashes on identical starts,Prevents timing side-channel leaks,20,4
+What extra guarantee does AES-256-GCM provide beyond confidentiality?,AuthTag verifies integrity too,Compresses pixels < Huffman,Allows infinite IV reuse safely,Needs no encryption key,20,1
+How do parameterized queries ($1 placeholders) stop SQL Injection?,Deletes rows with quotes,JS removes keywords silently,Engine separates code from data,Forces insecure port 80,20,3
+"Why escape all 5 characters (& < > "" ') in escapeHtml() defenses against XSS?",Bolds dynamic user strings,Blocks tags & attribute breakout,Prevents JSON SyntaxError,Hides output in @media print,20,2
+"How do VLANs, a DMZ & a Reverse Proxy defend public web architectures?",Expose raw DB port to web,Disable internal TLS checks,Publish keys in <meta> tags,Isolate public tier from DB LAN,20,4
+"How do Packet-Filtering, Stateful, and Application/NGFW firewalls differ?",Stateless L3/4; Stateful TCP; L7,Packet inspects SQL; NGFW MAC,Stateful ignores TCP ports,All alias localStorage,20,1
+"Contrast IDS vs IPS, and state the role of SSO (SAML / OIDC):",IDS drops traffic; SSO shares pwd,IDS locks disk; IPS runs scrypt,IDS=alert; IPS=drop; SSO=central auth,Both turn off SIEM logging,20,3
+"Under BIPA/GDPR, why do leaked biometrics create unique lifetime liability?",Exceed 500 GB per user,Cannot revoke or reset a face/print,Passwords never need notices,Work without power supply,20,2
+"Contrast Hot, Warm & Cold DRP sites on failover speed (RTO) and cost:",Cold=fastest; Hot=cheapest,Warm=empty bare warehouse,Hot deletes backups weekly,Hot=fast/$$$; Warm=mid; Cold=slow/$,20,4
+Which path.resolve check defeats both ../ traversal and /public-secret prefix bypass?,startsWith(ROOT + path.sep),"replace(""../"", """") single pass","String concat SAFE_ROOT + ""/""",Allow any string ending .txt,30,1
+"AV=$100k, EF=0.40, ARO=0.5/yr. Calculate SLE and Annualized Loss Expectancy (ALE):","SLE=$20k, ALE=$40k/yr","SLE=$50k, ALE=$100k/yr","SLE=$40k, ALE=$20k/yr","SLE=$400, ALE=$200/yr",30,3
+Compute Qualitative Risk score (Asset * Likelihood * Impact) for 5 * 4 * 4:,13,80,40,100,30,2
+"ACL: [1: DENY 10.0.0.5 *], [2: ALLOW * 443], [Implicit DENY]. Packet 10.0.0.5->443?",ALLOW (matches port 443),ALLOW (picks last matching rule),"ALERT only, forwards packet",DENY (matches Rule 1 first),30,4
+"SIEM baseline mean=100, std=20; live rate=220 req/min. Z-score & >=3.0 alert?",Z=+6.0 -> triggers alert,Z=+2.2 -> no alert,Z=-6.0 -> server shutdown,Z=+1.2 -> normal spike,30,1
+"Which HTTP response header set defends against MIME-sniff, XSS & origin leaks?",CORS * and X-Powered-By,Bare Content-Type: text/html,"nosniff, CSP self, strict CORS",Cache-Control + Allow-All,30,3
+Which HTTP status code should an auth rate limiter return past threshold?,200 OK,429 Too Many Requests,301 Moved Permanently,505 HTTP Version Unsupported,30,2
+Why guard server.listen(7001) inside if (require.main === module)?,Exports fail while server runs,Certs expire inside require(),Port 7001 accepts BigInt only,Stops require() binding/hanging test,30,4
+Intercepting HTTP POST and altering amount=10 to 10000 maps to which STRIDE?,Tampering,Repudiation,Availability,Compliance Audit,30,1
+AI voice clone calls Help Desk seeking MFA reset. Which defense blocks this?,Trust Caller ID & email code,Shorten passwords to 6 digits,Out-of-band verify + FIDO2 keys,Disable SIEM logs during work,30,3
+ACL places ALLOW ANY->443 ABOVE DENY 203.0.113.99->443. Why does attacker get in?,Port 443 ignores firewalls,Rule 1 shadows Rule 2 (order bug),.99 triggers implicit allow,DENY must sit at bottom,60,2
+"Why do single replace(""../"","""") AND startsWith(""/srv/uploads"") without path.sep fail?",Only works in Python,Crashes on spaces in names,Blocks all valid PNGs,....// & /srv/uploads-evil pass,60,4
+API reflects arbitrary Origin header + Allow-Credentials: true. What breaks?,Evil sites steal authed API JSON,Breaks Chrome CSS caching,Double-encrypts bodies w/ AES,Switches SQLite to Postgres,60,1
+SIEM shows 5 failed + 1 success in 45s AND Phoenix->Tokyo in 12m. Diagnose:,Benign DNS & phone roaming,Scheduled cron backup runs,Brute-force win + Stolen token,CSS Grid rendering glitches,60,3
+"decipher.final() throws ""unable to authenticate data"" in AES-256-GCM. Why?",Low screen brightness,Ciphertext/Tag/IV/AAD tampered,Plaintext > 10 chars,Needs Node 12 runtime,60,2
+Code uses .trim() inside SQL template literal `${email.trim()}`. Still vulnerable?,Safe: trim strips quotes,Safe: backticks parameterize,Safe if password <= 20 chars,Vulnerable: trim keeps SQL quotes,60,4
+HTTP server does unbounded body += chunk on POST without size cap. Which threat?,Memory exhaustion DoS crash,Auto AES-256 key upgrade,Root shell via CSS,WCAG contrast boost,60,1
+Shared admin creds + overwritten logs let insider deny transfers. Which STRIDE failed?,Faraday cage shielding,HVAC cooling policy,Repudiation (audit/non-repud),CSS input sizing,60,3
+Audit finds passwords encrypted with reversible AES-256 instead of scrypt. Flaw?,AES rejects punctuation,Key leak exposes all plaintexts,scrypt is faster on GPUs,AES cannot lock credit cards,60,2
+Ransomware locks AND steals hospital EHR records. Impacted CIA & compliance?,Confidentiality only; FCC,Availability only; DRM,Zero impact after reboot,All 3 CIA pillars; HIPAA,60,4
+Payment SLA demands RPO <= 5m and RTO <= 15m. Pick optimal DRP architecture:,Hot Site w/ live replication,Cold empty warehouse,Monthly mailed USB drives,Warm Site w/ 18h tape restore,60,1
+Static archive accepts 72-hour RTO on a minimal budget. Pick cost-optimal DRP tier:,Dual active Hot Sites ($40k),No backups at all,Cold Site / Glacier restore,Hourly bug bounty retainer,60,3
+Triage: (A) Public DMZ CVSS 9.8 RCE vs (B) Local CVSS 3.1 cosmetic issue. Action?,"Fix (B) first, patch (A) later",Emergency patch/WAF (A) now,Ignore both behind VLAN,Disable DMZ HTTPS,60,2
+Baseline ALE=$40k/yr. Control costs $8k/yr and leaves $4k residual risk. ROI verdict?,Reject ($8k > $40k false),Reject (ALE ignores residual),Only if bonus perks included,Adopt (+$28k/yr net savings),60,4
+Defeating BOTH SIM swaps and AI phishing login clones requires upgrading MFA to:,Origin-bound FIDO2 passkeys,SMS 4-digit phone codes,Static security questions,Passwordless raw HTTP,60,1
+"Match violations: (1) stored Visa CVVs, (2) public K-12 grades, (3) work piracy:","FERPA, FCC, HIPAA","SOX, GDPR, EFF","PCI-DSS, FERPA, AUP / DRM","IEEE-754, Sobel, WCAG",60,3
+"Why did Zero Trust replace legacy ""castle-and-moat"" perimeter security?",Zero Trust disables HTTPS,Stops lateral internal pivoting,Perimeters hurt CSS Grid,Grants admin to every employee,60,2
+Company plans biometric kiosk scans under BIPA/GDPR Art 9. Best engineering design?,Upload raw faces w/o consent,Retain templates indefinitely,Ban non-biometric badge backup,"Consent, enclave token, delete cap",60,4
+"How do SOX, FCC, and EFF differ in enterprise tech governance?",SOX=finance; FCC=RF; EFF=rights,All manage Canvas pixel DPI,SOX=alt tags; FCC=SQL params,EFF issues OpenSSL certs,60,1
+Active shell spotted on Web-02. What step precedes wiping & rebuilding the OS?,Instant SSD format erasing logs,Post exploit payload publicly,Quarantine VLAN + log snapshot,Disable MFA company-wide,60,3

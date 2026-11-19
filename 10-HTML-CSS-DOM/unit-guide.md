@@ -29,6 +29,15 @@ Unit 10 delivers comprehensive mastery of **AZ CTE Standard 15.0 (`15.1–15.11`
 - **Days 71–74 (Lesson 10.2 — Std `15.4–15.7, 15.11`):** Pre-Lesson 10.2; Box Model, Flexbox/Grid, `@media`/`@print`, 2D Canvas `save()`/`restore()`, XSS-Safe DOM & `localStorage`, CSS Library Trade-offs, Core Unit 10 Project build, Post-Lesson 10.2, **Kahoot Quiz 2**.
 - **Days 75–77 (Lesson 10.3 — AI Stds `3.0, 8.0, 9.0`):** Pre-Lesson 10.3; AI Compute Hardware (`CPU`/`GPU`/`TPU`/`NPU`), Edge vs. Cloud Latency/Privacy, RGBA `ImageData` Luminance, $3 \times 3$ Convolutions (Box Blur & Sobel $G_x/G_y$), Binary Thresholding, Bounding-Box `IoU`, CV Ethics, `cvKernelAndIouLab.mjs`, Post-Lesson 10.3, **CV Overlay Project Integration & Post-Unit Evaluation**.
 
+## 5. Setup Standard, 50-Question Mastery Exam & Automated Gradebook
+
+- **Standalone Setup & Browser QA Standard:** [`setup-guide.md`](./setup-guide.md) (Local HTTP serve `4173`, Lighthouse A11y/SEO `>= 90`, `devicePixelRatio` Canvas scaling, DevTools Box Model & print checks)
+- **Unit 10 Mastery Exam (50 Questions | L1–L5):**
+  - Student Exam (Solution-Free): [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md)
+  - Teacher Answer Key (`Q1–Q50`): [`quizzes/unit-test-50-answer-key.md`](./quizzes/unit-test-50-answer-key.md)
+  - Kahoot Live Import CSV (50 Rows): [`quizzes/unit-test-50-kahoot.csv`](./quizzes/unit-test-50-kahoot.csv)
+- **Automated Unit Gradebook:** `npm run grade -- --unit 10`
+
 ---
 
 ## SMART Goals & Objectives Tracker

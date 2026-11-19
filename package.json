@@ -10,6 +10,8 @@
     "build:year1": "node tools/publish.mjs --year1",
     "build:year2": "node tools/publish.mjs --year2",
     "build:all": "node tools/publish.mjs --all",
+    "grade": "node tools/grade.mjs",
+    "grade:strict": "node tools/grade.mjs --strict",
     "test": "node tools/verify.mjs --tests",
     "verify": "node tools/verify.mjs --full"
   },

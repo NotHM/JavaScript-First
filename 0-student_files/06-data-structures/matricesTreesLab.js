@@ -18,9 +18,13 @@ function collectTreeLabels(node, acc = []) {
   return acc;
 }
 
-console.log('Map:', indexById([{ id: 'u1', name: 'Sam' }]).get('u1'));
-console.log('Matrix sum:', sumMatrix([[1, 2], [3, 4]]));
-console.log(
-  'Tree labels:',
-  collectTreeLabels({ label: 'root', children: [{ label: 'a', children: [] }, { label: 'b', children: [] }] })
-);
+if (require.main === module) {
+  console.log('Map:', indexById([{ id: 'u1', name: 'Sam' }]).get('u1'));
+  console.log('Matrix sum:', sumMatrix([[1, 2], [3, 4]]));
+  console.log(
+    'Tree labels:',
+    collectTreeLabels({ label: 'root', children: [{ label: 'a', children: [] }, { label: 'b', children: [] }] })
+  );
+}
+
+module.exports = { indexById, sumMatrix, collectTreeLabels };

@@ -25,3 +25,5 @@ class Observable {
   }
   // TODO: Implement subscribe(fn) and notify(data)
 }
+
+module.exports = { createNotification, withTimestamp, Observable };

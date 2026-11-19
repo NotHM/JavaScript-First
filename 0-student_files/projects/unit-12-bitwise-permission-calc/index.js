@@ -29,9 +29,19 @@ function togglePermission(mask, flag) {
 }
 
 function formatMaskSummary(mask) {
-  // TODO [L6 Create | 4.2, 4.7]: Return binary, hex, and active permission labels
+  // TODO [L6 Create | 4.2, 4.7]: Return { binary, hex, labels } (e.g. '0b101', '0x5', ['READ', 'DEPLOY'])
   return {};
 }
 
 // TODO [L5 Evaluate]: Log when BigInt is required (> Number.MAX_SAFE_INTEGER)
-console.log('Unit 12 Project Starter Ready:', PERMISSIONS);
+if (require.main === module) {
+  console.log('Unit 12 Project Starter Ready:', PERMISSIONS);
+}
+
+module.exports = {
+  PERMISSIONS,
+  estimateTransferSeconds,
+  calculateExactInvoice,
+  togglePermission,
+  formatMaskSummary,
+};

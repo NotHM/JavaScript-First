@@ -17,4 +17,8 @@ async function getTodo(id) {
   // TODO: Implement fetch with try/catch and response.ok check
 }
 
-// TODO: Call getTodo(1)
+if (require.main === module) {
+  // TODO: Call getTodo(1)
+}
+
+module.exports = { getTodo };

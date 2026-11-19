@@ -16,6 +16,10 @@ function sumDigits(n) {
   // TODO [L4 Analyze | 7.1]: Write a recursive function summing digits (base case n < 10 returns n)
 }
 
-console.log('First even > 10:', firstEvenAboveTen([3, 8, 13, 14, 22]));
-console.log('2x3 Grid:', buildStarGrid(2, 3));
-console.log('sumDigits(456):', sumDigits(456));
+if (require.main === module) {
+  console.log('First even > 10:', firstEvenAboveTen([3, 8, 13, 14, 22]));
+  console.log('2x3 Grid:', buildStarGrid(2, 3));
+  console.log('sumDigits(456):', sumDigits(456));
+}
+
+module.exports = { firstEvenAboveTen, buildStarGrid, sumDigits };

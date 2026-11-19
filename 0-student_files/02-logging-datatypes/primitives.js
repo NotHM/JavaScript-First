@@ -15,6 +15,13 @@
 
 
 // TODO: Step 2 — Write LOGprimitive(value)
+function LOGprimitive(value) {
+  // TODO [L3 Apply]: Log whether value is primitive (handle null and undefined accurately)
+  void value;
+}
 
+if (require.main === module) {
+  // TODO: Step 3 — Test LOGprimitive() on your variables + {} + []
+}
 
-// TODO: Step 3 — Test LOGprimitive() on your variables + {} + []
+module.exports = { LOGprimitive };

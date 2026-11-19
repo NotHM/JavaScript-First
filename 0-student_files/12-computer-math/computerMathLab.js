@@ -36,9 +36,20 @@ function checkPermission(mask, flag) {
   // TODO [L4 Analyze]: Use bitwise AND and compare === flag
 }
 
-console.log('42 ->', toBinaryAndHex(42));
-console.log('3-4-5 triangle ->', hypotenuse(3, 4));
-console.log('0.10 + 0.20 exact ->', exactTotalDollars([10, 20]));
-const role = grantPermission(PERM.READ, PERM.WRITE);
-console.log('Can WRITE?', checkPermission(role, PERM.WRITE));
-console.log('Can DELETE?', checkPermission(role, PERM.DELETE));
+if (require.main === module) {
+  console.log('42 ->', toBinaryAndHex(42));
+  console.log('3-4-5 triangle ->', hypotenuse(3, 4));
+  console.log('0.10 + 0.20 exact ->', exactTotalDollars([10, 20]));
+  const role = grantPermission(PERM.READ, PERM.WRITE);
+  console.log('Can WRITE?', checkPermission(role, PERM.WRITE));
+  console.log('Can DELETE?', checkPermission(role, PERM.DELETE));
+}
+
+module.exports = {
+  PERM,
+  toBinaryAndHex,
+  hypotenuse,
+  exactTotalDollars,
+  grantPermission,
+  checkPermission,
+};

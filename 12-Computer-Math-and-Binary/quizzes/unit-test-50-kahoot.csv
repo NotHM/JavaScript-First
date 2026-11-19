@@ -1,0 +1,51 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+"How many bits make 1 Byte, and how do 1 KB (SI) and 1 KiB (IEC) differ?","4b=1B; KB=1024, KiB=1000","8b=1B; KB=1000, KiB=1024",16b=1B; both 512 bytes,"10b=1B; both 1,000,000",20,2
+Which unit measures CPU clock frequency in billions of cycles per second?,Gigahertz (GHz),Megabytes (MB),Kilobits (Kb),Milliamp-hours (mAh),20,1
+How many binary bits are compactly encoded by a single Hexadecimal digit (0-F)?,1 bit,2 bits,8 bits,4 bits (1 nibble),20,4
+What exact evaluation sequence defines GEMA mathematical precedence?,Add first -> Grouping last,Always strict right-to-left,"Grouping, Exponents, Mult/Div, Add",Parentheses never alter div,20,3
+Which built-in JS Math method computes sqrt(a^2 + b^2) cleanly?,"Math.floor(a, b)","Math.hypot(a, b)","Math.abs(a, b)","Math.clz32(a, b)",20,2
+"Match JS bitwise ops: grant flag, check flag, toggle flag & unsigned right shift:","| grant, & check, ^ toggle, >>>","& grant, | toggle, ^ clear, <<","+ grant, - check, * toggle, >>","~ grant, || clear, && toggle",20,1
+Above which integer threshold (Number.MAX_SAFE_INTEGER) must you use BigInt?,"2^16 - 1 (65,535)",2^31 - 1 (2.14 billion),"1,000,000","2^53 - 1 (9,007,199,254,740,991)",20,4
+What mandatory bench safety rule applies BEFORE powering any drone indoors?,Test full throttle w/ props on,Drape loose cables over props,PROPS OFF + check polarity,Drain LiPo cells below 2.5V,20,3
+Name the Four Forces of Flight and three aerodynamic rotational axes:,Volts/Ohms & Amps/Watts,"Lift/Weight, Thrust/Drag; Pitch/Roll/Yaw",RGB/Alpha & Width/Height,Hot/Cold & Lat/Lon/GSD,20,2
+"Match single LiPo cell mV levels: full charge, storage, land now & cell damage:","4200 full, 3800 store, 3500 land","12000 full, 5000 store, 1000 land","3000 full, 4200 land, 5000 store","3.8 mV full, 4.2 mV land",20,1
+Why does 0.1 + 0.2 === 0.3 return false in JavaScript IEEE-754 floats?,Addition runs right-to-left,Floats < 1 drop odd digits,=== checks string length,Base-10 tenths repeat infinitely in binary,20,4
+"Why does a ""1 TB"" drive report ~931 GiB inside operating system utilities?",70 GB hardware defect,SI 10^12 bytes vs IEC 2^30 GiB,Hex compresses size by 7%,OS reserves 69 GB for CSS,20,2
+How do fixed-point cents / millivolts (mV) prevent IEEE-754 comparison bugs?,Integers store cleanly w/o drift,Lets BigInt use Math.sqrt(),Auto-converts base 10 to 16,Allows exact division w/o float,20,1
+Why does JS throw TypeError on 100n + 5 instead of silently converting BigInt?,BigInt only holds negatives,100n is secretly a string,Stops silent bit-loss coercion,Math.sqrt fails inside Node,20,3
+Why do quadcopter motors spin two diagonal props CW and two CCW?,Cuts battery weight 50%,Converts GPS to meters,Creates drag instead of lift,Cancels net Yaw spin torque,20,4
+Why enforce an 80% Depth of Discharge (20% reserve) limit on LiPo packs?,Draining < 2.5V charges faster,Guards voltage sag & cell damage,Bottom 20% stores zero energy,Measures packs in kilometers,20,2
+Why do agile multirotors require Thrust-to-Weight Ratio (TWR) >= 2:1?,Hovers ~50% w/ climb/wind reserve,Doubles flight hover duration,Reduces motor RPM to zero,Earth gravity equals 2.0 G,20,1
+Why does 1 / Math.cos(60) return -1.05 instead of 2.0 G in JavaScript?,Requires BigInt input,Gravity flips at 60 deg,Math.cos() expects radians,/ executes before Math.cos,20,3
+How does high Density Altitude (hot day + high elevation) affect sUAS flight?,Boosts air density & Lift 30%,Increases LiPo mAh capacity,Cools motors at zero load,Thin air cuts Lift & TWR margin,20,4
+Why does (1 << 31) print -2147483648 while (1 << 31) >>> 0 prints 2147483648?,<< produces decimal floats,32-bit signed bit31 vs unsigned,>>> 0 multiplies by 100,Exceeds MAX_SAFE_INTEGER,20,2
+Convert decimal 42 into exact Binary and Hexadecimal strings:,Bin 101010 | Hex 2A,Bin 101001 | Hex 29,Bin 110010 | Hex 32,Bin 101110 | Hex 2E,30,1
+Convert 8-bit binary 1101_0111 into Hexadecimal and Decimal:,0xC7 / 199,0xD5 / 213,0xD7 / 215,0xE7 / 231,30,3
+How many seconds to transfer 5 GB (SI bytes) over a 200 Mbps (bits/s) link?,25 s,40 s,100 s,200 s,30,4
+"READ=1, WRITE=2, EXEC=4: mask = READ | EXEC; mask ^= READ. Resulting value?","5 (READ, EXEC)",4 (EXEC only),7 (all three),1 (READ only),30,2
+"Compute 2D Euclidean distance between (1, 2) and (4, 6) in meters:",5 m,7 m,25 m,3.5 m,30,1
+"4S (16.8V), 4x20A motors + 2A FC. Min 1.25x ESC rating & total peak watts?",20A ESC; 336W,15A ESC; 82W,>=25A ESC; 1377.6W,80A ESC; 420W,30,3
+Compute 80% DoD safe hover minutes for a 4000 mAh pack drawing 24 A hover:,10.0 min,16.0 min,6.4 min,8.0 min,30,4
+"1500g quad, 4x 2400KV motors @ 14.8V (900g thrust each). Unloaded RPM & TWR?",162 RPM; TWR 0.6,"35,520 RPM; TWR 2.4","2,400 RPM; TWR 1.5","40,320 RPM; TWR 1.2",30,2
+What apparent Load Factor (G-load) acts on a drone in a level 60-degree turn?,2.0 G,1.0 G,1.5 G,0.5 G,30,1
+"GSD for sensor=13.2mm, alt=120m, focal=8.8mm, width=5472px:",0.33 cm/px,16.4 cm/px,~3.289 cm/px,"98,509 cm/px",30,3
+"Why does (w * alt * 100) / focal * px compute 98,509 cm/px instead of 3.289?",Must divide width by 100,Missing Math.cos term,Mult always runs before div,Unwrapped denominator * px,60,4
+Checkout fails (0.10 + 0.20) === 0.30. Best precision refactor?,Wrap in BigInt(0.10),"Sum integer cents, format at end",Use parseInt() on prices,Combine using bitwise OR |,60,2
+Why does (9007199254740992 + 1) === 9007199254740992 evaluate to true in JS?,Exceeds MAX_SAFE_INTEGER,JS ignores +1 on evens,=== truncates to 32 bits,Number wraps back to -1,60,1
+Estimator reports 12.5 s instead of 100 s for 10 GB on 800 Mbps. What unit bug?,Reversed sec and minutes,Used 1024 instead of 1e9,Forgot x8 converting Bytes->Bits,Used Math.hypot by mistake,60,3
+"4S cells read [4190, 4180, 4050, 4185] mV. Why flag an imbalance hazard?",Cell 3 exceeds 4220 mV cap,Total pack below 10.5 V,Odd cell count forbidden,140 mV spread > 100 mV limit,60,4
+computeBankedLoadFactor(60)=-1.05 and (90)=Infinity. What two fixes solve both?,Return 0 and switch to sin(),RangeError <0|>=90 + toRadians,Divide degrees by 100,Wrap Math.cos inside BigInt,60,2
+Rounding GPS coordinates with Math.round() before Haversine introduces what failure?,~111 km drift (need Float64),Switches units to GHz,Converts values to BigInt,Improves resolution to 1 mm,60,1
+User mask=1 passes if (mask & (READ | ADMIN)). Why must you write === required?,| clears all bits inside if,1 & 5 equals 0 in JS,& matches ANY bit; === checks ALL,Parentheses invert & order,60,3
+"Right after a prop swap, quad spins wildly on Yaw at liftoff. Likely root cause?",IEEE-754 JSON rounding drift,Camera GSD focal too high,Smoke stopper active outdoors,CW/CCW prop direction swapped,60,4
+Why does const avg = 10 + 20 / 2 yield 20 instead of 15 in JavaScript?,+ executes before /,Division runs before add (GEMA),const blocks div math,20 / 2 equals 5 in binary,60,2
+"Pick optimal numeric types: (1) USD ledger, (2) 64-bit >2^53 IDs, (3) GPS Haversine.","Int cents, BigInt, Float64","Float64, Float64, BigInt","BigInt cos, String, parseInt",Raw Float64 for all three,60,1
+"Telemetry: Alpha [3800,3805,3798] mV; Beta [4260,4250,4255] mV. Evaluate both:",Both GO for immediate flight,Alpha=OVERCHARGE; Beta=STORAGE,Alpha=STORAGE; Beta=OVERCHARGE,Retire Alpha; fly Beta now,60,3
+TWR=2.1 faces hot Density Alt (-10% lift) + 60-deg turns (2.0G load). GO/NO-GO?,GO: 2.1 always exceeds 2.0,NO-GO: net TWR drops < 2.0G,GO: 60-deg turns cut gravity,NO-GO unless using BigInt,60,2
+"Motors hit 28 A peak. Applying 1.25x headroom (35 A min), select safest ESC:",20 A micro ESC,25 A continuous ESC,30 A ESC (< 35 A rule),35 A - 40 A ESC,60,4
+5000 mAh (5.0 Ah) pack feeds 82A hover / 100A burst. Choose safe C-rating:,25C-35C (125A-175A rating),10C (50A max rating),15C (75A max rating),1C AA NiMH cells,60,1
+Same camera needs GSD cut in half (3.2 -> 1.6 cm/px). Trade-off to approve?,Fly twice as high (240 m),Encode photos in Base64,Halve altitude; more legs/packs,Set 10-second slow shutter,60,3
+Why finalize (192<<24)|(168<<16)|(1<<8)|1 with >>> 0 in IPv4 packing?,Reverses octet byte order,Converts IP to float meters,Forces negative signed int,Stops bit 31 turning IP negative,60,4
+"Need revokePermission(mask, flag) to clear even if bit is already 0. Pick expression:",mask ^ flag,mask & ~flag (deterministic 0),mask | flag,mask << flag,60,2
+"Why choose spherical Haversine over naive flat (dLat, dLon) * 111km routing?",Handles cos(lat) & sphere curve,Avoids trig math completely,Planar math requires BigInt,Meridians stay parallel at poles,60,1
+Post-solder ESC bench test before live 6S 25.2V LiPo hookup. Pick safest sequence:,Props on + raw 6S plug-in,Spark test w/ screwdriver,Props off + multimeter + smoke stop,Overcharge pack to 4.35V/cell,60,3

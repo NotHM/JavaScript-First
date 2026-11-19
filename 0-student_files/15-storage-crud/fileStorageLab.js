@@ -10,6 +10,8 @@ const assert = require('node:assert/strict');
 
 function computeSha256(text) {
   // TODO [L3 Apply | 16.4]: Return hex digest via crypto.createHash('sha256')
+  void crypto;
+  void text;
   return '';
 }
 
@@ -20,16 +22,22 @@ async function writeAtomicJson(filePath, data) {
   // 3. Call await fs.rename(`${filePath}.tmp`, filePath)
   // 4. Return computeSha256(payload)
   void fs;
+  void filePath;
+  void data;
   return '';
 }
 
 async function loadVerifiedJson(filePath, expectedDigest) {
   // TODO [L4 Analyze | 16.4]:
   // Read filePath, verify digest === expectedDigest (throw Error on mismatch!), parse & return
+  void filePath;
+  void expectedDigest;
   return null;
 }
 
-console.log('Temp root available for safe testing:', os.tmpdir());
+if (require.main === module) {
+  console.log('Temp root available for safe testing:', os.tmpdir());
+}
 /*
 (async () => {
   const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'student-io-'));
@@ -41,3 +49,7 @@ console.log('Temp root available for safe testing:', os.tmpdir());
   console.log('Lesson 15.1 Lab passed!');
 })();
 */
+void path;
+void assert;
+
+module.exports = { computeSha256, writeAtomicJson, loadVerifiedJson };

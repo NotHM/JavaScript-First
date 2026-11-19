@@ -27,5 +27,10 @@ function createGameStore(initialState) {
   };
 }
 
-const store = createGameStore({ hp: 100, inventory: ['map'] });
-console.log('Unit 4 Initial Snapshot:', store.getState());
+if (require.main === module) {
+  const store = createGameStore({ hp: 100, inventory: ['map'] });
+  console.log('Unit 4 Initial Snapshot:', store.getState());
+}
+
+void assert;
+module.exports = { deepFreeze, createGameStore };
