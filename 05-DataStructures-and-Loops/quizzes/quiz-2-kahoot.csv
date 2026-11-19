@@ -9,3 +9,6 @@ Which data structure is strictly hierarchical with a single Root and no cycles?,
 Why pick a Map over Array.find() for looking up 50k user IDs?,Map saves disk files,O(1) hash lookup vs O(n) scan,Arrays hold strings only,Map stops hoisting,30,2
 Which structure naturally models two-way road maps with cycles?,Strict Tree,Graph,Primitive BigInt,Set,20,2
 Which array method mutates the original array in place?,map(),filter(),slice(),push() / sort(),30,4
+With Q1=70 and Q3=110 what is the Tukey 1.5*IQR upper outlier fence?,130,170,150,110,30,2
+What is cosineSimilarity([3 4] [-4 3]) between orthogonal vectors?,1,-1,0,25,30,3
+One sensor glitch of 9900 skews data 50..95. Safer scaler after outlier check?,Unfiltered Min-Max scaling,Z-Score standardization,String concatenation,Bubble Sort,30,2

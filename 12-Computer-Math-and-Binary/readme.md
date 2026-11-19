@@ -1,12 +1,16 @@
-# Chapter 12: Computer Mathematics, Binary & Bitwise Logic (`AZ CTE Std 4.0`)
+# Chapter 12: Computer Mathematics, Binary & Bitwise Logic (`AZ CTE Std 4.0` + `West-MEC DT101`)
+
+> **Unit 12 Lesson Index:**
+> - **Lesson 12.1 — Computer Mathematics, Binary & Bitwise Logic (`Std 4.0`):** *Below at unit root* ([`lesson-plan.md`](./lesson-plan.md) | [`student-lesson.md`](./student-lesson.md) | [`slides/slides.md`](./slides/slides.md) | [`../0-student_files/12-computer-math/computerMathLab.js`](../0-student_files/12-computer-math/computerMathLab.js))
+> - **[Lesson 12.2 — Drone Flight Physics, LiPo Chemistry & Geodesic Photogrammetry Math (`West-MEC DT101 1.0–12.0, 23.0` + `AZ CTE 4.0`)](./02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/readme.md)** ([`lesson-plan.md`](./02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/lesson-plan.md) | [`student-lesson.md`](./02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/student-lesson.md) | [`slides/slides.md`](./02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/slides/slides.md) | [`../0-student_files/12-drone-flight-math/dronePhysicsLab.mjs`](../0-student_files/12-drone-flight-math/dronePhysicsLab.mjs))
 
 ## Student Learning Objectives (Bloom's Taxonomy)
 By the end of this chapter, you should be able to:
 - **`[L1 Remember]`** Recall binary prefixes (bit, byte, KB–PB), clock frequency units (kHz–GHz), and base-2 / base-16 digit weights (`4.1`, `4.2`).
 - **`[L2 Understand]`** Explain IEEE-754 floating-point precision loss (`0.1 + 0.2 !== 0.3`) and contrast integer, floating-point, and fixed-point arithmetic (`4.5`, `4.6`).
-- **`[L3 Apply]`** Convert between Binary, Decimal, and Hexadecimal in Node.js; translate algebraic formulas (Pythagorean Theorem, Ohm's Law) and **GEMA** expressions into JavaScript (`4.2`–`4.4`).
-- **`[L4 Analyze]`** Debug floating-point rounding bugs in financial totals and trace bitwise mask/shift permissions (`&`, `|`, `^`, `<<`, `>>`) (`4.6`, `4.7`).
-- **`[L5 Evaluate]`** Select appropriate numeric types (`number` vs. integer cents vs. `BigInt`) based on overflow and precision risk (`4.5`, `4.6`).
+- **`[L3 Apply]`** Convert between Binary, Decimal, and Hexadecimal in Node.js; translate algebraic formulas (Pythagorean Theorem, Ohm's Law, LiPo `80%` DoD, Haversine, Photogrammetry GSD) and **GEMA** expressions into JavaScript (`4.2`–`4.4`).
+- **`[L4 Analyze]`** Debug floating-point rounding bugs in financial/millivolt totals and trace bitwise mask/shift permissions (`&`, `|`, `^`, `<<`, `>>`) (`4.6`, `4.7`).
+- **`[L5 Evaluate]`** Select appropriate numeric types (`number` vs. integer cents/mV vs. `BigInt`) based on overflow and precision risk (`4.5`, `4.6`).
 
 ---
 
@@ -79,6 +83,7 @@ perms ^= WRITE;                    // toggle WRITE off -> 0b001
 ```
 
 ## Chapter Resources
-- **Slides:** [`slides/slides.md`](./slides/slides.md)
-- **Teacher Demos:** [`code/computerMathDemo.js`](./code/computerMathDemo.js) & [`code/pythagoreanDemo.js`](./code/pythagoreanDemo.js)
-- **Student Starter:** [`../0-student_files/12-computer-math/computerMathLab.js`](../0-student_files/12-computer-math/computerMathLab.js)
+- **Lesson 12.1 Slides:** [`slides/slides.md`](./slides/slides.md)
+- **Lesson 12.1 Demos & Lab:** [`code/computerMathDemo.js`](./code/computerMathDemo.js) | [`code/pythagoreanDemo.js`](./code/pythagoreanDemo.js) | [`../0-student_files/12-computer-math/computerMathLab.js`](../0-student_files/12-computer-math/computerMathLab.js)
+- **Lesson 12.2 Reading & Slides:** [`02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/readme.md`](./02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/readme.md) | [`02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/slides/slides.md`](./02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/slides/slides.md)
+- **Lesson 12.2 Demo, Tests & Lab:** [`02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/code/droneFlightMathDemo.mjs`](./02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/code/droneFlightMathDemo.mjs) | [`02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/code/droneFlightMathDemo.test.mjs`](./02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/code/droneFlightMathDemo.test.mjs) | [`../0-student_files/12-drone-flight-math/dronePhysicsLab.mjs`](../0-student_files/12-drone-flight-math/dronePhysicsLab.mjs)

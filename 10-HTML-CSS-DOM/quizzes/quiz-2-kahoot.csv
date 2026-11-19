@@ -9,3 +9,6 @@ Box width 300px plus 20px padding plus 5px border under content-box totals:,300p
 Low-fidelity structural skeleton boxes validating page layout BEFORE styling are:,Production APKs,Wireframes,Memory leaks,Unit tests,20,2
 Placeholder-only inputs lose label context once typed. Semantic accessibility fix?,Larger placeholder,Bound <label for="id">,Remove borders,Use <span> only,20,2
 Two-page portfolio needing 0ms JS/CSS framework overhead is best styled with:,Heavy 300KB enterprise suite,Lightweight native CSS variables,Flash plugins,Inline font tags,30,2
+Corner pixels turn dark when applying 3x3 Box Blur on a bright white grid. Likely fix?,Switch borderMode from zero padding to clamp edge replication,Multiply RGB alpha values by zero,Set threshold to 999,Delete top and left columns,30,1
+Sobel gradients compute Gx = 60 and Gy = 80 at an edge pixel. Combined magnitude?,20 (80 - 60),140 (60 + 80),100 (sqrt(60^2 + 80^2)),4800 (60 * 80),30,3
+30fps safety cam requires <25ms latency + zero raw video uploads despite 85ms WAN RTT:,Send uncompressed RGB frames to Cloud TPU,Run quantized model locally on Edge NPU,Render frames on paper with @media print,Wait for nightly batch cron job,30,2

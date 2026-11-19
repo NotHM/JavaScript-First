@@ -1,6 +1,6 @@
-# Unit 19 Quiz 1: Game Loops, Gamepad API, Phaser & `jsgamelauncher` (Concepts)
+# Unit 19 Quiz 1: Game Loops, Gamepad API, Phaser & Part 107 Drone Sim (Concepts)
 
-**Bloom's:** `[L1]`–`[L2]` | **CSV:** [`quiz-1-kahoot.csv`](./quiz-1-kahoot.csv) | **Stds:** `9.2, 11.7, 15.5, 17.3, 19.8`
+**Bloom's:** `[L1]`–`[L2]` | **CSV:** [`quiz-1-kahoot.csv`](./quiz-1-kahoot.csv) | **Stds:** `9.2, 11.7, 15.5, 17.3, 19.8, DT102`
 
 | # | Question | Correct Answer | Time | Bloom's |
 |---|---|---|---|---|
@@ -14,3 +14,6 @@
 | 8 | Why place an empty `<game>.jsg` file inside a game folder on Knulli or Batocera? | **Marks the game for EmulationStation** | 20s | `[L2 \| 19.8]` |
 | 9 | Which command launches a `jsgamelauncher` game directly without opening a browser? | **`npx rungame ./mygame.jsg`** | 20s | `[L1 \| 11.7]` |
 | 10 | Default ROMs folder path on Knulli and Batocera handhelds for JS games: | **`/userdata/roms/jsgames`** | 20s | `[L1 \| 19.8]` |
+| 11 | FAA Part 107 max takeoff weight, max AGL altitude, and required commercial certificate: | **`< 55 lbs / 400 ft AGL / Part 107 UAG`** | 20s | `[L1 \| DT102]` |
+| 12 | Part 107 `§107.9` accident report deadline & property damage threshold: | **`10 days` when damage `> $500`** | 20s | `[L1 \| DT102]` |
+| 13 | On a **Mode-2** transmitter, which flight controls map to the **Left Stick**? | **Throttle (vertical) & Yaw (horizontal)** | 20s | `[L1 \| DT102, 9.2]` |

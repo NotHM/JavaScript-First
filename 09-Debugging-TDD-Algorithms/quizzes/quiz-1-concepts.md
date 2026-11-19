@@ -1,6 +1,6 @@
-# Unit 9 Quiz 1: Error Categories, Debugging & TDD (Concepts)
+# Unit 9 Quiz 1: Error Categories, Debugging, TDD & ML Foundations (Concepts)
 
-**Bloom's:** `[L1]`–`[L2]` | **CSV:** [`quiz-1-kahoot.csv`](./quiz-1-kahoot.csv) | **Stds:** `12.1`–`12.5`
+**Bloom's:** `[L1]`–`[L2]` | **CSV:** [`quiz-1-kahoot.csv`](./quiz-1-kahoot.csv) | **Stds:** `12.1`–`12.5, AI 1.0–7.0`
 
 | # | Question | Correct Answer | Time | Bloom's |
 |---|---|---|---|---|
@@ -14,3 +14,6 @@
 | 8 | What Debugger panel reveals the chain of active function calls? | **Call Stack** | 20s | `[L2 \| 12.5]` |
 | 9 | Running `node --test` on every Pull Request exemplifies: | **Continuous Integration testing** | 20s | `[L2 \| 12.3]` |
 | 10 | Which assertion checks strict equality in Node's `node:assert/strict`? | **`assert.equal()` / `deepEqual()`** | 20s | `[L1 \| 12.3]` |
+| 11 | Which ML paradigm clusters unlabeled feature points (such as k-Means)? | **Unsupervised Learning** | 20s | `[L1 \| AI 6.0]` |
+| 12 | Why fit data scalers ONLY on the `train` split before touching `test` data? | **Prevents data leakage into validation** | 20s | `[L2 \| AI 6.0]` |
+| 13 | Under the EEOC 4/5ths rule, what Disparate Impact ratio flags adverse bias? | **`Ratio < 0.80` (below 80%)** | 20s | `[L1 \| AI 7.0]` |

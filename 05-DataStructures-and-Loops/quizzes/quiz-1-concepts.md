@@ -1,6 +1,6 @@
-# Unit 5 Quiz 1: Iteration, Recursion & Loop Control (Concepts)
+# Unit 5 Quiz 1: Iteration, Recursion, Loop Control & AI Data Prep (Concepts)
 
-**Bloom's:** `[L1]`–`[L2]` | **CSV:** [`quiz-1-kahoot.csv`](./quiz-1-kahoot.csv) | **Std:** `7.1`–`7.5`
+**Bloom's:** `[L1]`–`[L2]` | **CSV:** [`quiz-1-kahoot.csv`](./quiz-1-kahoot.csv) | **Stds:** `7.1`–`7.5, AI 4.0–5.0`
 
 | # | Question | Correct Answer | Time | Bloom's |
 |---|---|---|---|---|
@@ -14,3 +14,6 @@
 | 8 | Why use a trace table on nested loops (`7.4`)? | **Track variable state per step** | 30s | `[L2 \| 7.4]` |
 | 9 | Which diagram shape traditionally represents a loop condition diamond (`7.5`)? | **Diamond (decision branch)** | 20s | `[L1 \| 7.5]` |
 | 10 | Does `.forEach()` support breaking out early using the `break` keyword? | **No (SyntaxError)** | 20s | `[L2 \| 7.2]` |
+| 11 | What preprocessing step fills missing numeric cells using column mean or median? | **Imputation** | 20s | `[L1 \| AI 4.0]` |
+| 12 | Why replace raw emails and SSNs with salted hashes before ML training? | **Protects PII privacy under FERPA/GDPR** | 20s | `[L2 \| AI 4.0]` |
+| 13 | What does One-Hot Encoding prevent when representing categorical labels? | **False ordinal rank between categories** | 20s | `[L2 \| AI 4.0]` |

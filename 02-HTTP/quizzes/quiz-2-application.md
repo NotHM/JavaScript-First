@@ -1,6 +1,6 @@
 # Unit 2 Quiz 2: HTTP Servers, Headers, Express SSR & Cloud Tradeoffs (Application)
 
-**Bloom's:** `[L3]`–`[L5]` | **CSV:** [`quiz-2-kahoot.csv`](./quiz-2-kahoot.csv) | **Stds:** `8.3–8.6, 11.3–11.7, 1.5, 15.6`
+**Bloom's:** `[L3]`–`[L5]` | **CSV:** [`quiz-2-kahoot.csv`](./quiz-2-kahoot.csv) | **Stds:** `8.3–8.6, 11.3–11.7, 1.5, 15.6, ITS 102`
 
 | # | Question | Correct Answer | Time | Bloom's |
 |---|---|---|---|---|
@@ -16,3 +16,6 @@
 | 10 | Why inspect `req.method` alongside `req.url` in `node:http`? | **Same URL serves GET vs POST** | 20s | `[L4 \| 11.6]` |
 | 11 | Why wrap user names with `escapeHtml()` inside SSR template strings? | **Block script XSS injection** | 20s | `[L3 \| 15.6]` |
 | 12 | A static file handler must reject `../../.env` requests with what check? | **`path.resolve` prefix boundary check** | 30s | `[L4 \| 1.5]` |
+| 13 | How many usable host IPs does a `/26` IPv4 subnet (`255.255.255.192`) offer? | **`62 hosts`** (`64 - 2`) | 30s | `[L3 \| ITS 102]` |
+| 14 | Router holds `0.0.0.0/0` (`eth0`) and `10.50.12.0/24` (`eth2`, metric 50). How routes `10.50.12.77`? | **`eth2` longest-prefix `/24` wins** | 30s | `[L4 \| CCNA]` |
+| 15 | Host has `169.254.18.9` and fails gateway ping. What failed and Step 1? | **DHCP failed (APIPA) / Identify problem** | 30s | `[L4 \| ADE 10.1]` |

@@ -1,11 +1,15 @@
-# Chapter 7: Asynchronous Concurrency & Exception Handling (`Std 18.0`)
+# Chapter 7: Asynchronous Concurrency, Exception Handling & Drone Telemetry (`AZ CTE Std 18.0` + `West-MEC DT101–DT102`)
+
+> **Unit 7 Lesson Index:**
+> - **Lesson 7.1 — Asynchronous Concurrency & Exception Handling (`Std 18.0`):** *Below at unit root* ([`lesson-plan.md`](./lesson-plan.md) | [`student-lesson.md`](./student-lesson.md) | [`slides/slides.md`](./slides/slides.md) | [`../0-student_files/08-async-js/asyncLab.js`](../0-student_files/08-async-js/asyncLab.js))
+> - **[Lesson 7.2 — RF Telemetry, MAVLink/CRSF Framing & Async Fail-Safe State Machines (`West-MEC DT101–DT102` + `AZ CTE 18.0`)](./02-Telemetry-FailSafe-and-Sensor-Streams/readme.md)** ([`lesson-plan.md`](./02-Telemetry-FailSafe-and-Sensor-Streams/lesson-plan.md) | [`student-lesson.md`](./02-Telemetry-FailSafe-and-Sensor-Streams/student-lesson.md) | [`slides/slides.md`](./02-Telemetry-FailSafe-and-Sensor-Streams/slides/slides.md) | [`../0-student_files/07-drone-telemetry/telemetryWatchdogLab.mjs`](../0-student_files/07-drone-telemetry/telemetryWatchdogLab.mjs))
 
 ## Student Learning Objectives (Bloom's Taxonomy)
-- **`[L1 Remember]`** Recall Event Loop ordering (**Sync Stack → Microtasks → Macrotasks**), Promise lifecycle states, error types (`18.2–18.3`), and log severity levels (`18.4`).
-- **`[L2 Understand]`** Contrast fail-fast `Promise.all()` vs. graceful `Promise.allSettled()` (`18.1`) and explain why `finally` runs regardless of throw paths (`18.7`).
-- **`[L3 Apply]`** Engineer `async`/`await` functions throwing typed **Custom `Error` Subclasses** (`18.6`) and guarding unexpected `null`/`NaN` return values (`18.5`).
-- **`[L4 Analyze]`** Predict exact Event Loop execution traces across mixed synchronous statements, Promises, `queueMicrotask`, and timers (`setTimeout`).
-- **`[L5 Evaluate]`** Architect fallback degradation and structured severity logging (`INFO`/`WARN`/`ERROR`/`FATAL`) under partial microservice failures (`18.1, 18.4`).
+- **`[L1 Remember]`** Recall Event Loop ordering (**Sync Stack → Microtasks → Macrotasks**), Promise lifecycle states, error types (`18.2–18.3`), log severity levels (`18.4`), and sUAS RF bands (`900 MHz` / `2.4 GHz` / `5.8 GHz`).
+- **`[L2 Understand]`** Contrast fail-fast `Promise.all()` vs. graceful `Promise.allSettled()` (`18.1`), explain why `finally` runs regardless of throw paths (`18.7`), and distinguish raw `RSSI` from `LQ`/`SNR`.
+- **`[L3 Apply]`** Engineer `async`/`await` functions throwing typed **Custom `Error` Subclasses** (`18.6`), guarding unexpected `null`/`NaN` return values (`18.5`), CRC-16 `DataView` telemetry parsing, PID anti-windup, IMU fusion, and `AbortController` heartbeats.
+- **`[L4 Analyze]`** Predict exact Event Loop execution traces across mixed synchronous statements, Promises, `queueMicrotask`, and timers (`setTimeout`), and diagnose PID windup or missing `finally` lock releases.
+- **`[L5 Evaluate]`** Architect fallback degradation, deterministic `FAILSAFE_RTH` vs. `FAILSAFE_LAND` rules, and `PIC`/`VO` CRM severity callouts (`INFO`/`WARN`/`ERROR`/`FATAL`) under partial failures (`18.1, 18.4`).
 
 ---
 
@@ -47,6 +51,6 @@ async function runWithLock(fn) {
 3. **`EventEmitter`, Async Queues & Streams:** Subscribe to async lifecycle events (`bus.on('warn', ...)`), coordinate producer/consumer backpressure with Promise-based **`AsyncQueue`** and **`AsyncBinarySearchTree`** structures ([`code/asyncQueueAndTreeDemo.test.js`](./code/asyncQueueAndTreeDemo.test.js)), and stream gigabyte logs chunk-by-chunk (`O(1)` memory!).
 
 ## Chapter Resources
-- **Slides:** [`slides/slides.md`](./slides/slides.md)
-- **Teacher Demos:** [`code/asyncDemo.js`](./code/asyncDemo.js) & [`code/asyncQueueAndTreeDemo.test.js`](./code/asyncQueueAndTreeDemo.test.js)
-- **Student Starter:** [`../0-student_files/08-async-js/asyncLab.js`](../0-student_files/08-async-js/asyncLab.js)
+- **Lesson 7.1 Slides & Code:** [`slides/slides.md`](./slides/slides.md) | [`code/asyncDemo.js`](./code/asyncDemo.js) | [`code/asyncQueueAndTreeDemo.test.js`](./code/asyncQueueAndTreeDemo.test.js) | [`../0-student_files/08-async-js/asyncLab.js`](../0-student_files/08-async-js/asyncLab.js)
+- **Lesson 7.2 Reading & Slides:** [`02-Telemetry-FailSafe-and-Sensor-Streams/readme.md`](./02-Telemetry-FailSafe-and-Sensor-Streams/readme.md) | [`02-Telemetry-FailSafe-and-Sensor-Streams/slides/slides.md`](./02-Telemetry-FailSafe-and-Sensor-Streams/slides/slides.md)
+- **Lesson 7.2 Demo, Tests & Lab:** [`02-Telemetry-FailSafe-and-Sensor-Streams/code/droneTelemetryDemo.mjs`](./02-Telemetry-FailSafe-and-Sensor-Streams/code/droneTelemetryDemo.mjs) | [`02-Telemetry-FailSafe-and-Sensor-Streams/code/droneTelemetryDemo.test.mjs`](./02-Telemetry-FailSafe-and-Sensor-Streams/code/droneTelemetryDemo.test.mjs) | [`../0-student_files/07-drone-telemetry/telemetryWatchdogLab.mjs`](../0-student_files/07-drone-telemetry/telemetryWatchdogLab.mjs)

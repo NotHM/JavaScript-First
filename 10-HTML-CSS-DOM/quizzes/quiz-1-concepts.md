@@ -1,6 +1,6 @@
-# Unit 10 Quiz 1: UCD, Accessibility, SEO & CSS Layouts (Concepts)
+# Unit 10 Quiz 1: UCD, Accessibility, SEO, CSS Layouts & CV Foundations (Concepts)
 
-**Bloom's:** `[L1]`–`[L2]` | **CSV:** [`quiz-1-kahoot.csv`](./quiz-1-kahoot.csv) | **Stds:** `15.1`–`15.11`
+**Bloom's:** `[L1]`–`[L2]` | **CSV:** [`quiz-1-kahoot.csv`](./quiz-1-kahoot.csv) | **Stds:** `15.1`–`15.11, AI 3.0, 8.0, 9.0`
 
 | # | Question | Correct Answer | Time | Bloom's |
 |---|---|---|---|---|
@@ -14,3 +14,6 @@
 | 8 | Why use `<button>` rather than clickable `<div onclick>`? | **Built-in Tab + Enter keyboard focus** | 20s | `[L2 \| 15.8]` |
 | 9 | Which tag summarizes page topic cleanly inside search engine snippets? | **`<meta name="description">`** | 20s | `[L1 \| 15.9]` |
 | 10 | Browser persistence API keeping key-value strings cleanly across reloads: | **`localStorage`** | 20s | `[L1 \| 15.7]` |
+| 11 | Specialized AI processor running ultra-low-power CV inference directly on edge cameras: | **Neural Processing Unit (`NPU`)** | 20s | `[L1 \| AI 3.0]` |
+| 12 | In Rec. 601 Luminance (`0.299R + 0.587G + 0.114B`), which color channel carries max weight? | **Green channel (`0.587`)** | 20s | `[L1 \| AI 8.0]` |
+| 13 | What does **Intersection over Union (`IoU`)** measure in Object Detection? | **Overlap divided by combined union area** | 20s | `[L2 \| AI 8.0]` |

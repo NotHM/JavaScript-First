@@ -1,6 +1,6 @@
-# Unit 10 Quiz 2: Debugging Accessibility, Canvas & DOM Events (Application)
+# Unit 10 Quiz 2: Debugging Accessibility, Canvas, DOM & Computer Vision (Application)
 
-**Bloom's:** `[L3]`–`[L5]` | **CSV:** [`quiz-2-kahoot.csv`](./quiz-2-kahoot.csv) | **Stds:** `15.3`–`15.11`
+**Bloom's:** `[L3]`–`[L5]` | **CSV:** [`quiz-2-kahoot.csv`](./quiz-2-kahoot.csv) | **Stds:** `15.3`–`15.11, AI 3.0, 8.0, 9.0`
 
 | # | Question | Correct Answer | Time | Bloom's |
 |---|---|---|---|---|
@@ -14,3 +14,6 @@
 | 8 | Low-fidelity gray box sketches built BEFORE visual UI polish (`15.2`) are: | **Wireframes** | 20s | `[L3 \| 15.2]` |
 | 9 | Gray placeholder `"Email"` disappears on focus—leaving screen readers blind! Fix? | **Explicit `<label for="id">`** | 20s | `[L4 \| 15.8]` |
 | 10 | Best fit for simple 2-page brochure landing page prioritizing 0KB CSS build speed: | **Lightweight custom CSS variables** | 30s | `[L5 \| 15.11]` |
+| 11 | Corner pixels turn dark when applying $3 \times 3$ Box Blur to a bright grid (`borderMode`). Fix? | **Switch `'zero'` padding to `'clamp'` replication** | 30s | `[L4 \| AI 8.0]` |
+| 12 | Sobel gradients compute `Gx = 60` and `Gy = 80` at an edge pixel. Magnitude? | **`100`** ($\sqrt{60^2 + 80^2}$) | 30s | `[L3 \| AI 8.0]` |
+| 13 | 30fps safety cam needs `< 25 ms` latency & private local frames despite `85 ms` WAN RTT: | **Run quantized model locally on Edge `NPU`** | 30s | `[L5 \| AI 3.0, 9.0]` |

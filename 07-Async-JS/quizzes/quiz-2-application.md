@@ -1,6 +1,6 @@
-# Unit 7 Quiz 2: Async Tracing & Resilience Tradeoffs (Application)
+# Unit 7 Quiz 2: Async Tracing, Telemetry Framing & Fail-Safe Tradeoffs (Application)
 
-**Bloom's:** `[L3]`–`[L5]` | **CSV:** [`quiz-2-kahoot.csv`](./quiz-2-kahoot.csv) | **Stds:** `18.1`–`18.7`
+**Bloom's:** `[L3]`–`[L5]` | **CSV:** [`quiz-2-kahoot.csv`](./quiz-2-kahoot.csv) | **Stds:** `18.1`–`18.7`, `DT101–DT102`
 
 | # | Question | Correct Answer | Time | Bloom's |
 |---|---|---|---|---|
@@ -14,3 +14,6 @@
 | 8 | Function takes `age = -5` (`0–130` allowed). Best built-in class? | **`RangeError`** | 20s | `[L3 \| 18.6]` |
 | 9 | Re-throwing unknown errors after logging validation errors guarantees: | **Caller stays aware of fatal failure** | 30s | `[L5 \| 18.7]` |
 | 10 | Reading JSON file from disk with `JSON.parse('{bad')` triggers: | **Runtime `SyntaxError` catchable by `try`** | 20s | `[L4 \| 18.2]` |
+| 11 | Binary telemetry packet flips 1 bit in flight triggering `CrcMismatchError`. Cleanest action? | **Drop packet, log `WARN` & keep monitor running** | 30s | `[L4 \| DT101, 18.1, 18.6]` |
+| 12 | Unclamped PID `integral` grows unbounded while drone sits on pad (`windup`). Fix? | **Clamp `integral` within `[-limit, +limit]`** | 30s | `[L4 \| DT102, 18.5]` |
+| 13 | Heartbeat lost `> 1500 ms` with **`gpsHomeValid === false`**. Safe watchdog mode? | **`FAILSAFE_LAND` (`cannot navigate RTH safely`)** | 30s | `[L5 \| DT102, 18.1]` |

@@ -11,9 +11,13 @@ Unit 19 bridges web game programming and dedicated retro handheld deployment usi
    - Slides: [`02-Phaser-JS-and-JSGameLauncher/slides/slides.md`](./02-Phaser-JS-and-JSGameLauncher/slides/slides.md)
    - Student Lab: [`02-Phaser-JS-and-JSGameLauncher/student-lesson.md`](./02-Phaser-JS-and-JSGameLauncher/student-lesson.md)
    - Reference Demo & Tests: [`02-Phaser-JS-and-JSGameLauncher/code/phaser-starter/`](./02-Phaser-JS-and-JSGameLauncher/code/phaser-starter/src/main.js) • [`jsgamePackaging.test.mjs`](./02-Phaser-JS-and-JSGameLauncher/code/jsgamePackaging.test.mjs)
+3. **[Lesson 19.3 — FAA Part 107 Airspace, METAR Weather, Survey Grids & Mode-2 Flight Sim (`West-MEC DT102 14.0–28.0` + `AZ CTE 9.0, 15.0, 19.0`)](./03-Drone-Mission-Sim-Part107-and-METAR/readme.md)**
+   - Slides: [`03-Drone-Mission-Sim-Part107-and-METAR/slides/slides.md`](./03-Drone-Mission-Sim-Part107-and-METAR/slides/slides.md)
+   - Student Lab: [`03-Drone-Mission-Sim-Part107-and-METAR/student-lesson.md`](./03-Drone-Mission-Sim-Part107-and-METAR/student-lesson.md) | [`../0-student_files/19-drone-part107-sim/part107AndMetarLab.mjs`](../0-student_files/19-drone-part107-sim/part107AndMetarLab.mjs)
+   - Reference Demo & Tests: [`03-Drone-Mission-Sim-Part107-and-METAR/code/part107MissionSimDemo.mjs`](./03-Drone-Mission-Sim-Part107-and-METAR/code/part107MissionSimDemo.mjs) • [`part107MissionSimDemo.test.mjs`](./03-Drone-Mission-Sim-Part107-and-METAR/code/part107MissionSimDemo.test.mjs)
 
 ## Unit Assessments & Project
 - **Unit Guide & SMART Goals:** [`unit-guide.md`](./unit-guide.md)
 - **Pre/Post Unit Evals:** [`evaluations/pre-unit-eval.md`](./evaluations/pre-unit-eval.md) | [`evaluations/post-unit-eval.md`](./evaluations/post-unit-eval.md)
 - **Quizzes:** [`quizzes/quiz-1-concepts.md`](./quizzes/quiz-1-concepts.md) | [`quizzes/quiz-2-application.md`](./quizzes/quiz-2-application.md)
-- **Unit Project:** [`projects/unit-project.md`](./projects/unit-project.md) (`0-student_files/projects/unit-19-phaser-jsgame/`)
+- **Unit Project:** [`projects/unit-project.md`](./projects/unit-project.md) (`0-student_files/projects/unit-19-phaser-jsgame/` + `0-student_files/19-drone-part107-sim/`)

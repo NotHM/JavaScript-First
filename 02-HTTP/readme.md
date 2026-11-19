@@ -11,6 +11,9 @@ Chapter 2 connects network protocols and cloud infrastructure (**Std `8.0`**) di
 3. **[Lesson 2.3 — Express.js, Static Middleware & Modular SSR (`Std 8.3, 11.4–11.7`)](./03-Express-and-SSR/readme.md)**  
    - Slides: [`03-Express-and-SSR/slides/slides.md`](./03-Express-and-SSR/slides/slides.md)  
    - Student Lab: [`03-Express-and-SSR/student-lesson.md`](./03-Express-and-SSR/student-lesson.md)
+4. **[Lesson 2.4 — Subnetting, OSI Topologies, Protocols & Network Troubleshooting (`West-MEC ITS 102 | ADE 3.0, 6.0, 7.0, 8.1–8.5, 10.1–10.6`)](./04-Subnetting-OSI-Topologies-and-Routing/readme.md)**  
+   - Slides: [`04-Subnetting-OSI-Topologies-and-Routing/slides/slides.md`](./04-Subnetting-OSI-Topologies-and-Routing/slides/slides.md)  
+   - Student Lab: [`04-Subnetting-OSI-Topologies-and-Routing/student-lesson.md`](./04-Subnetting-OSI-Topologies-and-Routing/student-lesson.md) (`../0-student_files/02-subnetting-routing/subnetCalculatorLab.mjs`)
 
 ## Unit Assessments & Project
 - **Pre/Post Unit Evals:** [`evaluations/pre-unit-eval.md`](./evaluations/pre-unit-eval.md) | [`evaluations/post-unit-eval.md`](./evaluations/post-unit-eval.md)

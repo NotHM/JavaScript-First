@@ -1,6 +1,6 @@
-# Unit 7 Post-Unit Evaluation: Concurrency & Exception Handling (`Std 18.0`)
+# Unit 7 Post-Unit Evaluation: Concurrency, Exception Handling & Drone Telemetry (`Std 18.0` + `DT101–DT102`)
 
-**Name:** `______________________` **Date:** `__________` **Post-Score:** `____ / 12`
+**Name:** `______________________` **Date:** `__________` **Post-Score:** `____ / 16`
 
 ### Part A (1 pt each)
 1. **`[L1 | 18.4]`** Identify the appropriate log severity (`DEBUG`, `INFO`, `WARN`, `ERROR`, `FATAL`):  
@@ -16,13 +16,19 @@
    → `____, ____, ____, ____`
 6. **`[L4 | 18.7]`** A file handle closes inside `catch`, NOT `finally`. Explain when that leaks open file descriptors:  
    > *(Your diagnosis)*
+7. **`[L2 | DT101–DT102, 18.4]`** A ground control station reports **`RSSI = -59 dBm`**, **`SNR = -8 dB`**, and **`LQ = 45%`**. Why must the `VO` warn the `PIC` of RF interference even though `-59 dBm` looks strong?  
+   > *(Your diagnosis)*
+8. **`[L3 | DT101–DT102, 18.5]`** Given `prevAngleDeg = 10`, `gyroDegPerSec = 50`, `dtSec = 0.02`, `accelAngleDeg = 0`, and `alpha = 0.98`, compute the complementary IMU fused angle (`________ deg`) AND name one guard `stepPid()` needs when `dtSec <= 0` or `integral` grows unbounded:  
+   > *(Your calculation & guard)*
 
 ### Part B — Higher-Order Evaluation & Code (2 pts each)
-7. **`[L5 | 18.1, 18.4]`** A dashboard loads `UserProfile` (critical), `WeatherWidget` (optional), and `PromoBanner` (optional). Architect concurrent loading with `Promise.allSettled`, severity logs, and graceful degradation (`18.1`).  
+9. **`[L5 | 18.1, 18.4]`** A dashboard loads `UserProfile` (critical), `WeatherWidget` (optional), and `PromoBanner` (optional). Architect concurrent loading with `Promise.allSettled`, severity logs, and graceful degradation (`18.1`).  
    > *(Your architecture)*
-8. **`[L5 | 18.6–18.7]`** Critique `catch (err) { console.log(err); }` inside a payment function that returns `undefined` instead of re-throwing or returning typed failures. What downstream bugs follow?  
-   > *(Your evaluation)*
-9. **`[L6 | 18.6–18.7]`** Write `async function withCleanup(task, releaseFn)` executing `await task()`, cleanly closing via `await releaseFn()` inside `finally`, and returning `{ ok: true, data }` or `{ ok: false, error: err.message }`:  
-   ```javascript
-   // Write withCleanup(task, releaseFn):
-   ```
+10. **`[L5 | 18.6–18.7]`** Critique `catch (err) { console.log(err); }` inside a payment function that returns `undefined` instead of re-throwing or returning typed failures. What downstream bugs follow?  
+    > *(Your evaluation)*
+11. **`[L6 | 18.6–18.7]`** Write `async function withCleanup(task, releaseFn)` executing `await task()`, cleanly closing via `await releaseFn()` inside `finally`, and returning `{ ok: true, data }` or `{ ok: false, error: err.message }`:  
+    ```javascript
+    // Write withCleanup(task, releaseFn):
+    ```
+12. **`[L5 Evaluate | DT102, 18.1, 18.6–18.7]`** Architect how a `DataView` CRC-16 Telemetry Watchdog responds to (a) a single corrupt packet (`CrcMismatchError`), (b) `1,600 ms` heartbeat silence when **`gpsHomeValid === false`** vs. **`true`** with healthy voltage (`FAILSAFE_RTH` vs `FAILSAFE_LAND` + `PIC`/`VO` CRM severity), and (c) an `AbortController` disarm stopping `runAsyncMonitor()` with a `finally` lock release:  
+    > *(Your architecture)*

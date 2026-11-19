@@ -11,3 +11,6 @@ Zero server ops needed for a rare webhook running twice daily. Pick:,Custom IaaS
 Why inspect BOTH req.method and req.url in node:http routers?,Methods ignore URLs,Same URL handles GET and POST differently,Headers require POST,Browsers only send PUT,20,2
 Why wrap user names with escapeHtml() inside SSR template strings?,Shrink file byte size,Block script XSS injection,Enable JSON parsing,Speed up DNS lookup,20,2
 A static file handler must reject ../../.env requests with what check?,path.resolve prefix boundary check,String.toLowerCase check,JSON.stringify wrapper,Array.sort comparison,30,1
+How many usable host IPs does a /26 IPv4 subnet (255.255.255.192) offer?,30 hosts,62 hosts,64 hosts,126 hosts,30,2
+Router holds 0.0.0.0/0 (eth0) and 10.50.12.0/24 (eth2 metric 50). How routes 10.50.12.77?,eth0 lower metric wins,eth2 longest-prefix /24 wins,Dropped due to Loopback,Broadcast to both links,30,2
+Host has IP 169.254.18.9 and cannot ping gateway. What failed and step 1?,DNS timeout / reboot router,DHCP failed APIPA / Identify problem,Port 443 down / rewrite TLS,Cat6 > 10m / swap to HTTP,30,2

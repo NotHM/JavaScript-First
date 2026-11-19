@@ -1,6 +1,6 @@
-# Unit 11 Pre-Unit Evaluation: Cybersecurity & Server Hardening (`Std 1.0`)
+# Unit 11 Pre-Unit Evaluation: Cybersecurity, Cryptography, Zero Trust & SIEM (`Std 1.0 | ITS 201–202`)
 
-**Name:** `______________________` **Date:** `__________` **Pre-Score:** `____ / 8`
+**Name:** `______________________` **Date:** `__________` **Pre-Score:** `____ / 11`
 
 1. **`[L1 | 1.6]`** Expand the **CIA Triad** letters: `C: ____________`, `I: ____________`, `A: ____________`.
 2. **`[L1 | 1.3]`** Which access control rule ensures accounts receive ONLY the minimum permissions needed to function?  
@@ -13,3 +13,9 @@
    > *(Your analysis)*
 8. **`[L4 | 1.4]`** Why use `crypto.timingSafeEqual()` instead of naive `hashA === hashB` when verifying secrets/signatures?  
    > *(Your analysis)*
+9. **`[L1 | ADE 4.5–4.6]`** Name the **three states of data** (`At ______`, `In ______`, `In ______`) and state what a **Faraday bag** blocks physically:  
+   > *(Your answer)*
+10. **`[L2 | ADE 5.1–5.10, 9.1–9.10]`** Contrast a **Stateless Packet-Filtering Firewall** vs. a **Stateful Firewall**, and explain why leaking **biometric templates** carries stricter legal/privacy liability than leaked passwords:  
+    > *(Your contrast)*
+11. **`[L2 | ADE 9.6–9.10, 11.1–11.6]`** Distinguish **`RPO`** vs. **`RTO`** in Disaster Recovery, and match the US regulations protecting **student records** (`________`), **healthcare PHI** (`________`), and **payment cards** (`________`):  
+    > *(Your matching)*

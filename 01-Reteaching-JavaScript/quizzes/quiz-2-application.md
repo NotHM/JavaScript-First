@@ -2,7 +2,7 @@
 
 **Bloom's Focus:** `[L3 Apply]`, `[L4 Analyze]`, `[L5 Evaluate]`  
 **Kahoot Import File:** [`quiz-2-kahoot.csv`](./quiz-2-kahoot.csv)  
-**AZ CTE Standards:** `2.0`, `3.0`, `11.0`, `18.0`
+**AZ CTE & ITS Standards:** `2.0`, `3.0`, `11.0`, `18.0`, `ITS 101–102 / ADE 2.1–2.6, 8.6–8.8, 10.2`
 
 | # | Prompt / Code Trace | Choices (* = Correct) | Time | Bloom's & Rationale |
 |---|---|---|---|---|
@@ -18,4 +18,6 @@
 | 10 | Running `npm run audit-deps` fails with `Missing script: "audit-deps"`. Where must the script be added? | A) `0-student_files/test.js`<br>**B) `"scripts"` inside `package.json`***<br>C) `.gitignore`<br>D) `README.md` | 30s | `[L4 Analyze \| 11.7]` `npm run <name>` executes commands registered in `package.json`. |
 | 11 | In `main.mjs`, `import { tax } from './tax';` throws `ERR_MODULE_NOT_FOUND` even though `tax.mjs` is adjacent. Why? | A) `tax` must use `var`<br>**B) ESM relative imports require explicit `.mjs`/`.js` extensions***<br>C) `package.json` banned numbers<br>D) `import` only works in browsers | 30s | `[L4 Analyze \| 18.2]` Node ESM resolution does not guess missing extensions; change to `'./tax.mjs'`. |
 | 12 | Calling `require('./legacy.cjs')` inside `.mjs` throws `ReferenceError: require is not defined`. Which fix works? | A) Rename `package.json` to `.txt`<br>B) Wrap `require` in `try/catch`<br>**C) `createRequire(import.meta.url)` from `'node:module'`***<br>D) Use `<script type="module">` in Node | 30s | `[L3 Apply \| 13.1]` `createRequire(import.meta.url)` safely bridges CommonJS inside ES modules. |
-
+| 13 | Alice owns file `0070` and belongs to group `ops`. What happens when Alice tries to read it? | A) Allowed via group `rwx`<br>**B) Denied because owner tier `000` matches first***<br>C) Allowed via sticky bit<br>D) Kernel converts mode to `777` | 30s | `[L4 Analyze \| RH124, ADE 8.7]` POSIX evaluates `owner -> group -> others` strictly in order without fallthrough. |
+| 14 | System draws `400 W` peak load. With `+25%` safety headroom, which standard PSU rating fits? | A) `350 W`<br>B) `400 W`<br>**C) `550 W`***<br>D) `250 W` | 30s | `[L3 Apply \| ITS 101]` `400 * 1.25 = 500 W`; `550 W` is the smallest standard PSU meeting >= 500 W. |
+| 15 | Which `sshd_config` pair enforces key-based login and blocks direct `root` SSH brute force? | A) `PermitRootLogin yes` & `EmptyPass yes`<br>**B) `PermitRootLogin no` & `PasswordAuthentication no`***<br>C) `chmod 4777 /etc/shadow`<br>D) `setenforce 0` permanently | 30s | `[L5 Evaluate \| ADE 8.8, 10.2]` Disabling root SSH and password auth leaves only Ed25519/RSA key auth + `sudo`. |

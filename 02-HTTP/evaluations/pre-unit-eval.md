@@ -1,6 +1,6 @@
-# Unit 2 Pre-Unit Evaluation: Internet Protocols, Cloud, HTTP & SSR (`Std 8.0, 11.0`)
+# Unit 2 Pre-Unit Evaluation: Internet Protocols, Subnetting, Routing, Cloud, HTTP & SSR (`Std 8.0, 11.0 | ITS 102`)
 
-**Name:** `______________________` **Date:** `__________` **Pre-Score:** `____ / 10`
+**Name:** `______________________` **Date:** `__________` **Pre-Score:** `____ / 13`
 
 1. **`[L1 | 8.2]`** Which protocol encrypts web traffic over TLS (`port 443`) rather than plaintext (`port 80`)?  
    - A) HTTP | B) HTTPS | C) SFTP | D) IMAP
@@ -17,4 +17,10 @@
    > *(Your analysis)*
 9. **`[L1 | 11.7]`** Which Express middleware serves static CSS, JS, and images from a `public/` folder automatically? `____________________`
 10. **`[L4 | 15.6]`** Why is interpolating unescaped user input directly inside an HTML template literal (`` `<p>${name}</p>` ``) a security risk?  
+    > *(Your analysis)*
+11. **`[L1 | ADE 6.0, 8.1]`** State which OSI layer uses **MAC addresses** (`Frames`) vs. **IP addresses** (`Packets`), and list the **Well-Known IANA port range**:  
+    - MAC Layer: `____` | IP Routing Layer: `____` | Well-Known IANA Ports: `________`
+12. **`[L2 | ITS 102 / ADE 3.0, 7.0]`** Why must a `450 m` outdoor link between campus buildings use **Fiber Optic (`SMF`)** instead of **Cat6a copper UTP**, and which RFC 1918 block is valid on an internal LAN (`10.0.0.0/8` vs. `169.254.0.0/16`)?  
+    > *(Your comparison)*
+13. **`[L4 | CCNA 200-301 / ADE 10.1–10.6]`** A host receives IP `169.254.21.9`, cannot `ping` the router, and `10.40.0.0/26` holds `62` usable hosts. Name what `169.254.x.x` indicates and state **Step 1** of the 7-Step Troubleshooting Methodology:  
     > *(Your analysis)*

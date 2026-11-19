@@ -9,3 +9,6 @@ Which keyword skips remaining code in the current cycle to next iteration?,break
 What is the main purpose of a variable trace table?,Format CSS grid,Track variable values step-by-step,Encrypt passwords,Install packages,30,2
 Which standard flowchart symbol depicts a loop condition check?,Circle,Rectangle,Diamond,Cloud,20,3
 Can the break keyword terminate Array.prototype.forEach early?,Yes anytime,No triggers SyntaxError,Only in strict mode,Only inside async,20,2
+What preprocessing step fills missing numeric cells using column mean or median?,Imputation,Minification,Hoisting,Tokenization,20,1
+Why replace raw emails and SSNs with salted hashes before ML training?,Increases CSV file size,Protects PII privacy under FERPA/GDPR,Turns strings into floats,Sorts rows faster,20,2
+What does One-Hot Encoding prevent when representing categorical labels?,False ordinal rank between categories,Stack overflow recursion,Floating-point rounding,Infinite while loops,20,1

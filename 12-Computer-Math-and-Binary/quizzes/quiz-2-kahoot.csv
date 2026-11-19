@@ -9,3 +9,7 @@ What does left-shift (6 << 2) return?,12,18,24,3,30,3
 With READ=1 WRITE=2 EXEC=4 what numeric mask equals READ | EXEC?,3,5,6,7,30,2
 Which expression avoids GEMA precedence bugs for averaging a & b?,a + b / 2,(a + b) / 2,a / 2 + b,a * b / 2,20,2
 Which representation prevents rounding errors in corporate payroll?,Raw Float64,Integer cents,HTML Strings,Bitwise XOR,30,2
+A 4000mAh 4S LiPo draws 24A hover. Using 80% DoD what is flight time?,4.0 minutes,8.0 minutes,10.0 minutes,24.0 minutes,60,2
+At a 60-degree bank angle what is Load Factor n = 1 / cos(60 deg)?,0.5 G,1.0 G,1.41 G,2.0 G,30,4
+Why wrap (focalMm * widthPx) in parens for Photogrammetry GSD in JS?,GEMA forces dividing by full denominator,JS bans * without parens,Converts meters to feet,Fixes BigInt errors,30,1
+

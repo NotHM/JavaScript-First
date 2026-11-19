@@ -1,6 +1,6 @@
-# Unit 7 Pre-Unit Evaluation: Async Concurrency & Errors (`Std 18.0`)
+# Unit 7 Pre-Unit Evaluation: Async Concurrency, Errors & Drone Telemetry (`Std 18.0` + `DT101–DT102`)
 
-**Name:** `______________________` **Date:** `__________` **Pre-Score:** `____ / 8`
+**Name:** `______________________` **Date:** `__________` **Pre-Score:** `____ / 10`
 
 1. **`[L1 | 18.7]`** Which three keywords form JavaScript's standard structured exception handling block?  
    - A) `if / else / switch` | B) `try / catch / finally` | C) `for / while / do` | D) `let / const / var`
@@ -14,3 +14,7 @@
    > *(Your analysis)*
 8. **`[L4 | 18.6]`** Why might a team define `class RateLimitError extends Error` rather than throwing plain strings `throw "too fast"`?  
    > *(Your analysis)*
+9. **`[L1 | DT101–DT102]`** Which drone RF band primarily carries **high-bandwidth FPV video** (short LOS range) vs. **long-range sub-GHz MAVLink telemetry**?  
+   - A) `900 MHz` FPV / `5.8 GHz` long-range telemetry | B) `5.8 GHz` FPV video / `900 MHz` long-range telemetry | C) `2.4 GHz` AC power / `5.8 GHz` GPS only | D) `125 kHz` RFID / `50 Hz` PWM
+10. **`[L2 | DT102 CRM, 18.4]`** During VLOS drone operations, what does **`PIC`** stand for vs. **`VO`**, and which metric (`RSSI` vs. `LQ %`) confirms intact radio frames actually decoded?  
+    - `PIC`: `____________________` | `VO`: `____________________` | Frame-integrity metric: `________`

@@ -23,34 +23,37 @@ This document defines how **JavaScript First** is organized as an **open-source 
 │   └── ...
 ├── 0-student_files/                           # Blank student starters (never contains instructor solutions)
 │   ├── 01-legal-ethics/ ... 20-local-ai-3d/   # Per-lesson blank TODO coding exercises (Units 01–20)
+│   │   ├── 01-linux-admin-safety/ ...       # IT Security extensions (Units 01, 02, 11)
+│   │   ├── 05-ai-data-pipeline/ ...         # AI & Computer Vision extensions (Units 05, 09, 10, 20)
+│   │   └── 12-drone-flight-math/ ...        # Drone/sUAS extensions (Units 12, 07, 19)
 │   └── projects/                              # Per-unit starter scaffolds (unit-01 through unit-20)
-├── 01-Reteaching-JavaScript/                  # Unit 1 (Stds 2.0, 11.0, 3.0; incl. 1.4 ESM/CJS Modules)
-├── 02-HTTP/                                   # Unit 2 (Stds 8.0, 11.0; incl. 2.3 Express & Modular SSR)
+├── 01-Reteaching-JavaScript/                  # Unit 1 (Stds 2.0, 11.0, 3.0; incl. 1.4 ESM/CJS & 1.5 Linux/Hardware/OS Safety)
+├── 02-HTTP/                                   # Unit 2 (Stds 8.0, 11.0; incl. 2.3 Express/SSR & 2.4 Subnetting/OSI/Routing)
 ├── 03-AJAX/                                   # Unit 3 (Std 9.0)
 ├── 04-Variables-Scope-Immutability/           # Unit 4 (Stds 3.3, 3.6, 18.2)
-├── 05-DataStructures-and-Loops/               # Unit 5 (Stds 7.0, 6.0 + LinkedList, HashTable, BitSet)
+├── 05-DataStructures-and-Loops/               # Unit 5 (Stds 7.0, 6.0 + 5.3 AI Data Cleaning, Vectors & PII Anonymization)
 ├── 06-Functions/                              # Unit 6 (Stds 5.0, 11.10–11.12)
-├── 07-Async-JS/                               # Unit 7 (Std 18.0 + AsyncQueue, AsyncTree)
+├── 07-Async-JS/                               # Unit 7 (Std 18.0 + 7.2 RF Telemetry, CRC-16, PID & RTH Fail-Safe)
 ├── 08-OOP-and-Design-Patterns/                # Unit 8 (Std 17.0 + XML/JSON Adapter)
-├── 09-Debugging-TDD-Algorithms/               # Unit 9 (Stds 12.0, 6.4–6.7 + BigO, Dijkstra, Floyd-Warshall, Huffman)
-├── 10-HTML-CSS-DOM/                           # Unit 10 (Std 15.0)
-├── 11-Internet-Server-Security/               # Unit 11 (Std 1.0 + OpenSSL TLS & AES-256-GCM)
-├── 12-Computer-Math-and-Binary/               # Unit 12 (Std 4.0)
+├── 09-Debugging-TDD-Algorithms/               # Unit 9 (Stds 12.0, 6.4–6.7 + 9.3 ML Algorithms, Metrics & Fairness Audits)
+├── 10-HTML-CSS-DOM/                           # Unit 10 (Std 15.0 + 10.3 Computer Vision Convolutions, IoU & AI Compute)
+├── 11-Internet-Server-Security/               # Unit 11 (Std 1.0 + 11.2 Zero Trust, VLAN/DMZ, Firewalls, SIEM & STRIDE)
+├── 12-Computer-Math-and-Binary/               # Unit 12 (Std 4.0 + 12.2 Drone Physics, LiPo 80% DoD, Haversine & GSD)
 ├── 13-Version-Control-and-Community/          # Unit 13 (Stds 14.0, 13.0 + ESLint & Babel)
 ├── 14-Program-Analysis-and-Design/            # Unit 14 (Std 10.0)
 ├── 15-Storage-Databases-and-CRUD/             # Unit 15 (Std 16.0)
 ├── 16-Software-Business-and-Capstone/         # Unit 16 (Std 19.0 + Core Semester Capstone)
 ├── 17-Deno-Security-and-WebAssembly/          # Unit 17 (Year 2: Deno Capability Sandbox & WebAssembly)
 ├── 18-Full-Stack-REST-Bun-and-MongoDB/        # Unit 18 (Year 2: Dual-DB REST — Bun SQLite & MongoDB)
-├── 19-Game-Dev-Phaser-and-JSGameLauncher/     # Unit 19 (Year 2: Phaser 3, Gamepad & jsgamelauncher)
-└── 20-Local-AI-Multimodal-and-3D-Capstone/    # Unit 20 (Final AI Capstone: Voice/Text Core + Vision Bonus + 3D Print Double Bonus)
+├── 19-Game-Dev-Phaser-and-JSGameLauncher/     # Unit 19 (Year 2: Phaser 3, jsgamelauncher & 19.3 FAA Part 107 / METAR / Survey Grids)
+└── 20-Local-AI-Multimodal-and-3D-Capstone/    # Unit 20 (Final Capstone: Local AI, 3D Print + 20.3 NLP, ReAct HITL Agents & Model Cards)
 ```
 
 ---
 
 ## 2. Standard Unit & Lesson Blueprint
 
-Every Unit (`01` through `20`) and every Standard Lesson (`1.1` through `20.2`, 36 lessons total) follows a strict dual-audience architecture so **student books stay solution-free** while **teacher manuals contain full answer keys and pedagogical scaffolds**:
+Every Unit (`01` through `20`) and every Standard Lesson (`1.1` through `20.3`, **`46` lessons total** unifying AZ CTE Software & App Design `11.0202.00` with West-MEC **Artificial Intelligence `11.0102.00`**, **Drone Technology `49.0199.00`**, and **IT Security `11.1999.00`**) follows a strict dual-audience architecture so **student books stay solution-free** while **teacher manuals contain full answer keys and pedagogical scaffolds**:
 
 ### Unit-Level Files (`XX-Unit-Name/`)
 ```text

@@ -1,6 +1,7 @@
 /**
  * Unit 1 Capstone Project Starter:
- * CLI Open-Source License & Privacy Compliance Auditor (AZ CTE Stds 2.0, 3.0, 11.0)
+ * CLI Open-Source License, Privacy & Host-Safety Compliance Auditor
+ * (AZ CTE Stds 2.0, 3.0, 11.0 | West-MEC ITS 101-102 / ADE 2.1-2.6, 8.6-8.8)
  *
  * Instructions:
  * 1. Implement `classifyType(value)` handling null, arrays, and all 7 primitives.
@@ -8,7 +9,10 @@
  *    or BLOCKED_UNLICENSED decisions with short rationales.
  * 3. Implement `auditStudentRecord(record)` checking COPPA (age < 13 without
  *    parentalConsent) and tracking opt-in, returning a redacted safe log copy.
- * 4. Print a clean ANSI-formatted CLI report and run with:
+ * 4. [Lesson 1.5 Extension] Add `auditHostSafety(hostManifest)` checking POSIX
+ *    script modes (blocking 777/unsafe 4xxx), PermitRootLogin no, PSU +25% headroom,
+ *    and EPA Li-ion/e-waste disposal compliance.
+ * 5. Print a clean ANSI-formatted CLI report and run with:
  *      node 0-student_files/projects/unit-01-license-cli-auditor/index.js
  */
 

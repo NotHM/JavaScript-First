@@ -1,0 +1,10 @@
+{
+  "name": "student-20-agentic-nlp-governance",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Student blank starter lab for Lesson 20.3 (NLP Pipelines, ReAct Agents, HITL & Responsible AI Model Cards)",
+  "scripts": {
+    "test": "node --test nlpAgenticLab.test.mjs"
+  }
+}

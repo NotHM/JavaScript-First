@@ -2,7 +2,7 @@
 
 **Directions:** Complete this baseline evaluation **before** beginning Unit 1 instruction. Your score is used strictly to measure your learning growth across the unit—answer honestly without looking up notes.
 
-**Name:** `______________________` **Date:** `__________` **Pre-Score:** `____ / 12`
+**Name:** `______________________` **Date:** `__________` **Pre-Score:** `____ / 15`
 
 ---
 
@@ -60,13 +60,13 @@
    - C) `"110202"`  
    - D) `"AZ-CTE-"`  
 
-### Short Constructed Response (1 pt each)
+### Short Constructed Response & IT Systems Baseline (1 pt each)
 
 9. **`[L4 Analyze | Std 2.4]`** A school web app tracks students' exact GPS coordinates via third-party ad cookies without parental opt-in for 11-year-old users. Identify **one law violated** and **one ethical design failure**.  
    > *(Your response)*  
 
 10. **`[L4 Analyze | Std 3.1 / 11.4]`** Why does checking `if (input)` fail when `input` is `0` or `""`? Suggest a safer JavaScript check for distinguishing `null`/`undefined` from valid values.  
-   > *(Your response)*  
+    > *(Your response)*  
 
 11. **`[L2 Understand | Std 11.7 / 13.1]`** Which `package.json` field forces `.js` files in a package to execute as ES Modules (`import`/`export`), and which extension forces CommonJS (`require`) regardless of `package.json`?  
     - A) `"module": true` and `.jsm`  
@@ -75,4 +75,19 @@
     - D) `"scripts": "esm"` and `.node`  
 
 12. **`[L4 Analyze | Std 18.2]`** A student writes `import { tax } from './math';` inside `app.mjs` and Node throws `Error [ERR_MODULE_NOT_FOUND]` even though `math.mjs` exists in the same folder. Why did Node reject it, and what fixes it?  
+    > *(Your response)*  
+
+13. **`[L1 Remember | ITS 101 / ADE 2.1–2.6]`** Which disposal practice is REQUIRED for a swollen Lithium-ion laptop battery?  
+    - A) Crush flat and place in standard municipal trash  
+    - B) Isolate in a fire-safe container and deliver to an EPA-compliant hazardous battery recycler  
+    - C) Store inside an ungrounded cardboard box next to a radiator  
+    - D) Submerge in saltwater inside a sealed PSU chassis  
+
+14. **`[L2 Understand | RHCSA RH124 / ADE 8.7]`** Which POSIX octal mode adds the **sticky bit** on `/tmp` so users cannot delete files owned by other users?  
+    - A) `0644`  
+    - B) `4755`  
+    - C) `1777`  
+    - D) `2770`  
+
+15. **`[L4 Analyze | ADE 8.6–8.8, 10.2]`** Name the **3 architectural layers** of Linux, and state **one reason** OpenSSH configurations set `PermitRootLogin no`.  
     > *(Your response)*  

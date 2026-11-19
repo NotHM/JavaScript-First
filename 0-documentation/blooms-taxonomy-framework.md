@@ -24,12 +24,12 @@ Every unit guide, lesson plan, Reveal.js slideshow, student worksheet, code lab,
 
 To ensure both learners and instructors monitor mastery continuously across every unit, **each of Units `01–20`** includes trackable Markdown checkboxes (`- [ ]`) in `unit-guide.md`, `lesson-plan.md`, and solution-free `student-lesson.md`:
 
-- **Minimum Density:** At least **5 Student SMART Goals** and **5 Teacher SMART Goals** per unit (`10+` SMART items per unit = **`200+` program-wide trackable objectives**), plus lesson-level trackers in every standard lesson (`36` lessons).
+- **Minimum Density:** At least **5 Student SMART Goals** and **5 Teacher SMART Goals** per unit (`10–12+` SMART items per unit = **`220+` program-wide trackable objectives**), plus lesson-level trackers across all **`46` standard lessons**.
 - **Mandatory S.M.A.R.T. Elements on Every Goal:**
   - **S**pecific: Names exact APIs, Bloom's tier (`L1–L6`), and AZ CTE / West-MEC indicator code.
   - **M**easurable: Quantifiable pass criteria (`>= 80%` on quiz/eval, `100%` `node --test` pass, Hake's $g \ge 0.55$, rubric threshold).
   - **A**chievable: Tied directly to scaffolded starters in `0-student_files/`, slides, and reference demos.
-  - **R**elevant: Connected to real engineering readiness, security hygiene, or IT Specialist (`OD 301/302/306`) / CIW / FBLA outcomes.
+  - **R**elevant: Connected to real engineering readiness, security hygiene, or IT Specialist (`OD 301/302/306` / `ITS AI` / `ITS Python`) / `Azure AI-900` / `FAA Part 107` / `CompTIA A+ / CCNA / Security+` / FBLA outcomes.
   - **T**ime-bound: Bounded by explicit instructional day, sprint checkpoint, or feedback window (e.g., *within 48 hours of Unit Final Day*).
 
 ---
@@ -51,7 +51,7 @@ Every standard-aligned lesson (`readme.md`, `lesson-plan.md`, `student-lesson.md
 To verify measurable student learning at both the **Lesson** level and the **Unit** level, every unit includes:
 - `evaluations/pre-unit-eval.md` — Baseline diagnostic given on **Unit Day 1** (prior to instruction).
 - `evaluations/post-unit-eval.md` — Summative assessment given on **Unit Final Day** with **paired equivalent items** plus **L5–L6 transfer prompts**.
-- Every individual lesson (`1.1` through `20.2`) includes a paired `pre-lesson-eval.md` and `post-lesson-eval.md`.
+- Every individual lesson (`1.1` through `20.3`, **`46` total lessons**) includes a paired `pre-lesson-eval.md` and `post-lesson-eval.md`.
 
 ### Normalized Learning Gain (Hake's $g$)
 
@@ -70,7 +70,7 @@ $$g = \frac{\text{Post\%} - \text{Pre\%}}{100 - \text{Pre\%}}$$
 Every one of the **20 Units** provides four synchronized assessment layers plus SMART tracking:
 
 1. **Diagnostic Pre-Unit & Summative Post-Unit Evaluations (`evaluations/`):** Paired items spanning L1–L6 + Teacher `eval-answer-key.md`.
-2. **Lesson-Level Pre & Post Checks (`pre-lesson-eval.md` / `post-lesson-eval.md`):** Rapid baseline vs. mastery proof for every single lesson (`1.1–20.2`).
+2. **Lesson-Level Pre & Post Checks (`pre-lesson-eval.md` / `post-lesson-eval.md`):** Rapid baseline vs. mastery proof for every single lesson (`1.1–20.3`).
 3. **Two Formative Kahoot-Style Quizzes (`quizzes/`):**
    - **Quiz 1 (`quiz-1-concepts.md` + `quiz-1-kahoot.csv`):** Concept Checkpoints focused on `[L1 Remember]` & `[L2 Understand]`.
    - **Quiz 2 (`quiz-2-application.md` + `quiz-2-kahoot.csv`):** Code Tracing, Debugging & Architecture focused on `[L3 Apply]`, `[L4 Analyze]`, and `[L5 Evaluate]`.

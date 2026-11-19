@@ -1,6 +1,6 @@
 # Unit 12 Pre-Unit Evaluation: Computer Math & Binary (`Std 4.0`)
 
-**Name:** `______________________` **Date:** `__________` **Pre-Score:** `____ / 8`
+**Name:** `______________________` **Date:** `__________` **Pre-Score:** `____ / 10`
 
 1. **`[L1 Remember | Std 4.1]`** How many **bits** are inside **1 Byte**?  
    - A) 2 bits | B) 4 bits | C) 8 bits | D) 16 bits
@@ -24,3 +24,9 @@
 
 8. **`[L4 Analyze | Std 4.6]`** Why do e-commerce backends store `$19.99` as integer `1999` cents instead of floating-point `19.99`?  
    > *(Your explanation)*
+
+9. **`[L1 Remember | DT101 1.0, Std 4.5]`** Before connecting battery or USB power to a quadcopter on a workbench, what physical safety step is mandatory AND what is safe **per-cell LiPo storage voltage**?  
+   - A) Props on; `4.2 V` | B) Props off; `3.8 V` | C) Props off; `2.5 V` | D) Full throttle; `3.0 V`
+
+10. **`[L2 Understand | DT101, Std 4.4]`** What minimum **Thrust-to-Weight Ratio (`TWR`)** is targeted for safe multirotor hover reserve & wind recovery?  
+    - A) `1:1` | B) `1.2:1` | C) `>= 2:1` | D) `0.5:1`

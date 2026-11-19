@@ -9,3 +9,6 @@ Keeping checkout live when a non-critical recommendations widget fails is:,Synta
 Why stream a 4 GB file rather than loading with readFileSync?,Streams load tiny chunks cleanly in low RAM,Streams double file size,Sync is async,JSON requires streams,20,1
 Which keyword marks a function to return a Promise and allow await?,defer,async,yield,import,20,2
 Why throw new ValidationError() instead of plain throw "oops" string?,Keeps stack trace and instanceof checks,Prevents Node from logging,Makes CPU slower,Avoids strings,20,1
+Which drone RF band primarily carries high-bandwidth FPV video feeds?,900 MHz Sub-GHz,2.4 GHz C2 link,5.8 GHz SHF band,125 kHz RFID,20,3
+Why can a strong -60 dBm RSSI signal still indicate link interference?,Noise inflates RSSI while LQ % and SNR plunge,RSSI only measures battery volts,Higher dBm stops CRC checks,5.8 GHz disables GPS,20,1
+During VLOS drone CRM what role scans airspace and calls out hazards?,Visual Observer (VO),Virtual Oscillator,Voltage Output,Vertical Offset,20,1

@@ -9,3 +9,6 @@ Central security log aggregator alerting teams on intrusion spikes is a:,CDN,SIE
 Running untrusted plugins inside isolated VMs or containers utilizes:,Sandboxing,Recursion,Global scoping,Hoisting,20,1
 Which HTTP header prevents browsers MIME-sniffing text uploads as scripts?,X-Content-Type-Options: nosniff,Color: blue,Cache-Control: 0,Allow: *,20,1
 Why store hashed salted passwords rather than two-way encrypted passwords?,Hashes take zero bytes,Leaked decryption key exposes every password,Encryption is illegal,AES crashes on strings,20,2
+Why does leaking biometric data carry higher legal risk than passwords?,Templates cannot be revoked once stolen,Passwords use more RAM,Fingerprints are plaintext HTTP,Biometrics ignore MFA,20,1
+Which network zone isolates public web servers from internal databases?,APIPA loop,DMZ screened subnet,Warm DRP site,Public broadcast hub,20,2
+Which DRP metric defines the maximum tolerable duration of system downtime?,RPO Recovery Point Objective,RTO Recovery Time Objective,STRIDE Spoofing,Wildcard Mask,20,2

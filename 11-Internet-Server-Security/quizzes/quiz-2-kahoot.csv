@@ -9,3 +9,6 @@ Staff clicked realistic AI voice-phish giving up password. Best defense?,Longer 
 Why reject oversized payloads BEFORE buffering gigabytes into memory (1.5)?,Prevent DoS/overflow exhaustion,Improve color contrast,Skip MIME checks,Enable sorting,20,1
 Replacing wildcard Access-Control-Allow-Origin: * with exact domain enforces:,XSS injection,Tight cross-origin trust boundary,Open file read,SQL migration,20,2
 Flooding /login with 10000 requests/sec crashing servers violates which CIA pillar?,Availability (mitigate via Rate Limit),CSS Grid,Immutability,Syntax check,20,1
+A stateless Rule 1 ALLOW port 443 sits above Rule 2 DENY IP X. Result for IP X?,Blocked by Rule 2,Permitted because first-match wins,Dropped by Implicit Deny,Upgraded to SAML SSO,30,2
+SIEM sees 5 failed logins then success from one IP plus 950KB egress spike. Threats?,CSS drift only,Credential compromise + AI exfil anomaly,Valid cron backup,Port 53 cache miss,30,2
+Hospital portal needs RPO <= 5 min and RTO <= 15 min for PHI and cards. DRP + laws?,Cold Site + FCC and DRM,Hot Site + HIPAA and PCI-DSS,Warm Site + AUP only,Single server + EFF,30,2

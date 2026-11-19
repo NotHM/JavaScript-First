@@ -2,7 +2,7 @@
 
 **Directions:** Complete this evaluation at the end of Unit 1 **independently without notes**. Compare your score against your Unit 1 Pre-Unit Evaluation to document measurable growth across AZ CTE Standards `2.0`, `3.0`, and `11.0`.
 
-**Name:** `______________________` **Date:** `__________` **Post-Score:** `____ / 16`
+**Name:** `______________________` **Date:** `__________` **Post-Score:** `____ / 20`
 
 ---
 
@@ -85,25 +85,40 @@
     - C) `ReferenceError: window is not defined`  
     - D) `ERR_UNKNOWN_FILE_EXTENSION`  
 
+11. **`[L2 Understand | RHCSA RH124 / ADE 8.7]`** Which symbolic string matches POSIX octal mode **`4755`** on an executable binary, and what does the `4` bit trigger?  
+    - A) `-rwsr-xr-x` (`setuid`: runs with file owner's effective UID)  
+    - B) `drwxrwxrwt` (`sticky bit`: allows anyone to delete files)  
+    - C) `-rwxrws---` (`setgid`: strips execute permissions)  
+    - D) `-rwx------` (blocks root access completely)  
+
+12. **`[L3 Apply | ITS 101 / ADE 2.1–2.6]`** A workstation draws `440 W` under peak CPU/GPU load. Applying the **`+25%` PSU headroom rule** (`440 * 1.25`), which standard PSU rating should you purchase, and how must spent motherboards be disposed?  
+    - A) `450 W` PSU; toss old motherboards in standard dumpster  
+    - B) `550 W` (or `650 W`) PSU; recycle motherboards via certified R2/e-Stewards e-waste recycler  
+    - C) `400 W` PSU; open sealed PSU housing to adjust capacitors manually  
+    - D) `350 W` PSU; incinerate boards locally  
+
 ---
 
-### Part B — Higher-Order Thinking: Analyze, Evaluate & Create (2 pts each = 6 pts)
+### Part B — Higher-Order Thinking: Analyze, Evaluate & Create (2 pts each = 8 pts)
 
-11. **`[L4 Analyze | Std 2.3 / 1.5]`** Look at this logging call from a telemetry microservice:  
+13. **`[L4 Analyze | Std 2.3 / 1.5]`** Look at this logging call from a telemetry microservice:  
     ```javascript
     console.log({ event: "signup", email: user.email, dob: user.dob, age: 12 });
     ```  
     Identify **two legal/privacy violations** introduced by writing raw `email` and `dob` for a 12-year-old user into plaintext logs, and specify how to sanitize them before logging.  
     > *(Your response)*  
 
-12. **`[L5 Evaluate | Std 2.1 / 2.2]`** Your team must pick ONE library for a commercial school-management SaaS product:  
+14. **`[L5 Evaluate | Std 2.1 / 2.2]`** Your team must pick ONE library for a commercial school-management SaaS product:  
     - **Library A:** Unlicensed code copied from a public blog post (no `LICENSE` file).  
     - **Library B:** Apache 2.0 licensed npm package with `0` audit vulnerabilities and active maintainers.  
     - **Library C:** Proprietary paid binary that collects student behavioral telemetry with no privacy policy.  
     Evaluate why Library A and Library C fail professional software engineering criteria and defend selecting Library B.  
     > *(Your response)*  
 
-13. **`[L6 Create | Std 3.1 / 11.4 / 11.9]`** On the lines below, write a clean camelCase Node.js function `formatCliBanner(courseTitle, credits)` that validates `typeof courseTitle === "string"` and `typeof credits === "number"`, trims `courseTitle`, and returns an uppercase formatted banner string (or throws a clear `TypeError` on invalid input).  
+15. **`[L6 Create | Std 3.1 / 11.4 / 11.9]`** On the lines below, write a clean camelCase Node.js function `formatCliBanner(courseTitle, credits)` that validates `typeof courseTitle === "string"` and `typeof credits === "number"`, trims `courseTitle`, and returns an uppercase formatted banner string (or throws a clear `TypeError` on invalid input).  
     ```javascript
     // Write your solution here:
     ```
+
+16. **`[L4 Analyze / L5 Evaluate | ITS 102 / ADE 8.6–8.8, 10.2]`** An operations audit flags a Linux build server with: (1) `/etc/ssh/sshd_config` containing `PermitRootLogin yes` and `PasswordAuthentication yes`, (2) `journalctl` showing 120 failed `root` logins plus backwards timestamps, and (3) `SELinux` set to `Disabled` with `firewalld` stopped. Prescribe **exact remediations** across SSH, NTP/logging, `firewalld`, and SELinux (`Enforcing`).  
+    > *(Your remediation plan)*  

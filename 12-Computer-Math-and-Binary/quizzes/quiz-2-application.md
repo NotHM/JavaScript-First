@@ -1,6 +1,6 @@
 # Unit 12 Quiz 2: Bitwise Tracing & Precision Engineering (Application)
 
-**Bloom's Focus:** `[L3 Apply]`–`[L5 Evaluate]` | **CSV:** [`quiz-2-kahoot.csv`](./quiz-2-kahoot.csv) | **Std:** `4.2`–`4.7`
+**Bloom's Focus:** `[L3 Apply]`–`[L5 Evaluate]` | **CSV:** [`quiz-2-kahoot.csv`](./quiz-2-kahoot.csv) | **Std:** `4.2`–`4.7`, `DT101`
 
 | # | Code / Scenario | Correct Answer | Time | Bloom's & Rationale |
 |---|---|---|---|---|
@@ -14,3 +14,6 @@
 | 8 | Given `READ=1, WRITE=2, EXEC=4`, what permission mask grants `READ \| EXEC`? | **`5`** | 30s | `[L4 \| 4.7]` `1 + 4 = 5` (`0b101`). |
 | 9 | Which calculation correctly yields `(x1 + x2) / 2` midpoint without precedence bugs? | **`(10 + 20) / 2` (`15`)** | 20s | `[L4 \| 4.3]` Parentheses force Grouping before Division. |
 | 10 | Which numeric representation is safest for a $1M corporate payroll engine? | **Integer cents (`Math.round(usd*100)`)** | 30s | `[L5 \| 4.6]` Eliminates sub-cent binary drift. |
+| 11 | A `4000 mAh` `4S` LiPo draws `24 A` hover. Using `80%` DoD, what is flight time? | **`8.0 minutes`** | 60s | `[L3 \| DT101, 4.4]` `(4.0 Ah * 0.80 / 24 A) * 60 = 8.0 min`. |
+| 12 | At a `60°` banked turn, what is Load Factor $n = 1 / \cos(60^\circ)$? | **`2.0 G`** | 30s | `[L4 \| DT101, 4.3–4.4]` $\cos(\pi/3) = 0.5 \implies 1/0.5 = 2.0\text{ G}$. |
+| 13 | Why wrap `(focalMm * widthPx)` in parentheses for Photogrammetry GSD in JS? | **GEMA forces dividing by full denominator** | 30s | `[L4 \| 4.3, DT101 23.0]` Without parens, JS divides by `focalMm` then multiplies by `widthPx`. |

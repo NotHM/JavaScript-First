@@ -1,15 +1,16 @@
 # Unit 20 Final Capstone Rubric (Teacher Only — 100 pt Core + Bonus + 2x Double Bonus)
 
-> **Scoring Structure:** Students earn up to **100 pts** on Core, up to **+50 Bonus pts** on Image/Video Multimodal Integration, and a **2x Multiplier (up to 200 / 100!)** upon completing verified Parametric 3D CAD & Printability Engineering—capped or weighted per syllabus policy. **Core MUST pass >= 70/100 before Bonus/Double-Bonus multipliers unlock.**
+> **Scoring Structure:** Students earn up to **100 pts** on Core (5 × 20 pts, including mandatory Model Card & ReAct/HITL governance audit), up to **+50 Bonus pts** on Image/Video Multimodal Integration, and a **2x Multiplier (up to 200 / 100!)** upon completing verified Parametric 3D CAD & Printability Engineering—capped or weighted per syllabus policy. **Core MUST pass >= 70/100 before Bonus/Double-Bonus multipliers unlock.**
 
-## Part 1: CORE CAPSTONE (100 Points Required)
+## Part 1: CORE CAPSTONE (100 Points Required — 5 × 20 pts)
 
-| Criterion | Bloom's | Exemplary (25 pts) | Proficient (20 pts) | Needs Support (10 pts) |
+| Criterion | Bloom's | Exemplary (20 pts) | Proficient (16 pts) | Needs Support (8 pts) |
 |---|---|---|---|---|
-| **Local LLM SSE & Safety (`1.5, 8.0, 18.0`)** | L4 Analyze | Seamless `OLLAMA_HOST` NDJSON->SSE stream + offline fallback, prompt-injection guard, PII redaction, & strict tool schema check. | Streaming works with minor error-handling gaps or missing tool validation. | Crashes when Ollama is offline or exposes unsafe eval/XSS. |
-| **Local Voice WAV STT/TTS (`4.1, 16.2`)** | L3 Apply | Synthesizes & validates 44-byte RIFF/WAVE 16-bit PCM buffers (`44 + 2*N` bytes) + clean Web Speech mic/TTS playback. | Web Speech works in browser, missing binary WAV validation/synthesis. | Broken audio pipeline or malformed RIFF headers. |
-| **Accessible UI & Persistence (`15.0, 16.0`)** | L5 Evaluate | W3C landmarks, `aria-live="polite"`, zero `innerHTML` XSS, dual `localStorage` + `/api/chats` persistence. | Basic chat works, missing accessibility labels or persistence across reload. | Unescaped HTML injection or lost chat state. |
-| **Automated `node --test` QA (`12.0`)** | L4 Analyze | `capstone.test.mjs` passes offline in `< 3s` covering SSE stream, WAV header math, & error paths. | Smoke tests only. | Syntax errors or failing tests. |
+| **1. Local LLM SSE & Safety (`1.5, 8.0, 18.0`)** | L4 Analyze | Seamless `OLLAMA_HOST` NDJSON->SSE stream + offline fallback, prompt-injection guard, PII redaction, & strict tool schema check. | Streaming works with minor error-handling gaps or missing tool validation. | Crashes when Ollama is offline or exposes unsafe eval/XSS. |
+| **2. Local Voice WAV STT/TTS (`4.1, 16.2`)** | L3 Apply | Synthesizes & validates 44-byte RIFF/WAVE 16-bit PCM buffers (`44 + 2*N` bytes) + clean Web Speech mic/TTS playback. | Web Speech works in browser, missing binary WAV validation/synthesis. | Broken audio pipeline or malformed RIFF headers. |
+| **3. Accessible UI & Persistence (`15.0, 16.0`)** | L5 Evaluate | W3C landmarks, `aria-live="polite"`, zero `innerHTML` XSS, dual `localStorage` + `/api/chats` persistence. | Basic chat works, missing accessibility labels or persistence across reload. | Unescaped HTML injection or lost chat state. |
+| **4. AI Model Card & Safe ReAct/HITL Guardrail (`AI202, Std 14.0`)** | L5 Evaluate | Validated Model Card (`euAiActRiskTier !== 'unacceptable'`, all 4 NIST AI RMF pillars, `disparateImpactAudit >= 0.80`, all 7 sections) + sandboxed `runReActAgent` (`Object.hasOwn` allowlist, `maxSteps`, HITL pause/resume on destructive tools). | Model Card present with minor missing NIST/OECD notes or partial HITL gate without deny/resume handling. | Missing Model Card, disparate impact violation (`< 0.80`), or unguarded agent tool loop. |
+| **5. Automated `node --test` QA (`12.0`)** | L4 Analyze | `capstone.test.mjs` passes offline in `< 3s` covering SSE stream, WAV header math, Model Card validation, & HITL pause/resume paths. | Smoke tests only. | Syntax errors or failing tests. |
 
 ---
 
@@ -34,4 +35,4 @@
 | **3. Automated 3D Printability Validator** | L5 Evaluate | Proves `nakedEdges === 0`, `signedVolumeMm3 > 0`, bed fit `<= 220x220x250 mm`, `zMin === 0`, `minWall >= 1.2 mm` + PrusaSlicer/Cura checklist. | Rejects oversized/thin-wall fixtures deterministically. |
 | **4. Interactive `<canvas>` 3D Viewer** | L6 Create | Real-time 3D projection onto `<canvas>` with yaw/pitch orbit sliders rendering facets cleanly without external WebGL bloat. | Live browser verification during Capstone Showcase. |
 
-**AZ CTE Professional Skills (`1.0–9.0`):** Assessed via architectural trade-off defense (`Local vs. Cloud`, `Watertightness proof`), clean JSDoc/README documentation, and 3-minute Capstone Showcase demo.
+**AZ CTE Professional Skills (`1.0–9.0`):** Assessed via architectural & Responsible AI defense (`Local vs. Cloud`, `NIST AI RMF / EU AI Act Model Card audit`, `HITL safety gate`, `Watertightness proof`), clean JSDoc/README documentation, and 3-minute Capstone Showcase demo.

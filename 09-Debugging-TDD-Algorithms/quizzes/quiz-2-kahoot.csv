@@ -9,3 +9,6 @@ What is Bubble Sort's worst-case scaling on 10000 reversed items?,O(log n),O(n),
 How do you sort numbers numerically ascending in JS?,arr.sort(),arr.sort((a b) => a - b),arr.reverse(),JSON.stringify(arr),20,2
 When left=0 & right=0 in binarySearch what breaks with while(left < right)?,Infinite loop,Skips checking final element 0,Sorts backwards,Division by zero,30,2
 Which guarantees O(n log n) worst-case sorting on 500k records?,Bubble Sort,Insertion Sort,Merge Sort,Unsorted scan,20,3
+A model gets TP=8 FP=2 TN=85 FN=5. What is its Precision TP/(TP+FP)?,0.62,0.80,0.93,0.10,30,2
+Model has trainError=0.02 and valError=0.31. What issue occurred?,Underfitting (high bias),Overfitting (high variance),SyntaxError,Zero variance,30,2
+Group A selection rate is 0.80 and Group B is 0.50. Disparate Impact ratio?,0.625 (FAILS 4/5ths rule),1.60 (PASSES rule),0.80 (PASSES rule),0.30 (PASSES rule),30,1

@@ -1,14 +1,14 @@
-# Unit 1 Project: CLI Open-Source License & Privacy Compliance Auditor
+# Unit 1 Project: CLI Open-Source License, Privacy & Host-Safety Compliance Auditor
 
 **Bloom's Target:** `[L5 Evaluate]` & `[L6 Create]`  
-**AZ CTE Standards:** `2.0` (`2.1`–`2.4`), `3.0` (`3.1`–`3.4`), `11.0` (`11.3`–`11.9`)  
+**AZ CTE & West-MEC Standards:** `2.0` (`2.1`–`2.4`), `3.0` (`3.1`–`3.4`), `11.0` (`11.3`–`11.9`) | `ITS 101–102 / ADE 2.1–2.6, 8.6–8.8, 10.2`  
 **Starter Workspace:** [`../../0-student_files/projects/unit-01-license-cli-auditor/index.js`](../../0-student_files/projects/unit-01-license-cli-auditor/index.js)
 
 ---
 
 ## Scenario
 
-You are a junior platform engineer onboarding to a school-district edtech startup building a **commercial (proprietary)** web platform for **12-year-old K–12 students**. Before shipping your first release, your lead engineer asks you to build a zero-dependency **CLI Compliance & Data-Type Auditor** in Node.js that checks third-party dependencies for license compatibility AND scans sample user records for unsafe primitive types or leaked PII (**FERPA / COPPA**).
+You are a junior platform engineer onboarding to a school-district edtech startup building a **commercial (proprietary)** web platform for **12-year-old K–12 students**. Before shipping your first release on Linux build hosts, your lead engineer asks you to build a zero-dependency **CLI Compliance, Data-Type & Host-Safety Auditor** in Node.js that checks third-party dependencies for license compatibility, scans sample user records for unsafe primitive types or leaked PII (**FERPA / COPPA**), and audits Linux host deployment safety (**POSIX permissions, `sshd_config`, & hardware/EPA safety**).
 
 ---
 
@@ -27,6 +27,8 @@ You are a junior platform engineer onboarding to a school-district edtech startu
 4. **Create ANSI-Formatted CLI Report (`Std 11.3–11.5, 11.9` — Bloom's L6):**
    - Output clean camelCase-structured audit results using ANSI color codes (green for `APPROVED`, yellow for `REVIEW_COPYLEFT`, red for `BLOCKED` / violations, ending cleanly with `\x1b[0m` reset).
    - Provide an npm script in `package.json` (`"audit": "node index.js"`) to execute the tool cleanly.
+5. **Integrated IT Security & Linux Host-Safety Audit (`Lesson 1.5` — `ITS 101–102 / ADE 2.1–2.6, 8.6–8.8`):**
+   - Extend your CLI auditor (preserving `classifyType`, `auditDependencies`, and `auditStudentRecord`) to inspect a Linux deployment manifest: flag world-writable (`777`) or unsafe `setuid` (`4xxx`) deployment scripts, verify `PermitRootLogin no` and `PasswordAuthentication no` in SSH configuration, and validate hardware PSU headroom (`+25%`) + EPA battery/e-waste disposal routing.
 
 ---
 
@@ -35,4 +37,5 @@ You are a junior platform engineer onboarding to a school-district edtech startu
 - [ ] **Milestone 1 (`[L3 Apply]`):** Type classifier handles `null`, `undefined`, primitives, and arrays without falsy bugs.
 - [ ] **Milestone 2 (`[L4 Analyze]`):** PII redaction helper scrubs student fields without mutating the source input (`structuredClone` or new object).
 - [ ] **Milestone 3 (`[L5 Evaluate]`):** License policy engine & COPPA/FERPA risk detector produce accurate written risk rationales.
-- [ ] **Milestone 4 (`[L6 Create]`):** Full ANSI-formatted terminal CLI report runs cleanly via `node 0-student_files/projects/unit-01-license-cli-auditor/index.js` and `npm run`.
+- [ ] **Milestone 4 (`[L4–L5]`):** Integrated Linux host-safety preflight catches unsafe POSIX `4xxx`/`777` modes, weak `sshd_config` flags, and EPA/PSU hazards.
+- [ ] **Milestone 5 (`[L6 Create]`):** Full ANSI-formatted terminal CLI report runs cleanly via `node 0-student_files/projects/unit-01-license-cli-auditor/index.js` and `npm run audit`.

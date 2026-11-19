@@ -34,7 +34,15 @@
   - **SQL Injection (SQLi):** NEVER concatenate user input into SQL strings—always use `?` / `$1` **Parameterized Queries**!
   - **Path Traversal & Buffer Bounds:** Reject filenames containing `..` outside base directory using `path.resolve()` prefix checks; enforce explicit length/size limits (`1.5`).
 
-## Chapter Resources
+## Chapter Resources (Lesson 11.1)
 - **Slides:** [`slides/slides.md`](./slides/slides.md)
 - **Teacher Demos:** [`code/cryptoSanitizationDemo.js`](./code/cryptoSanitizationDemo.js), [`code/aesTlsDemo.test.js`](./code/aesTlsDemo.test.js) & [`code/secureServer.js`](./code/secureServer.js)
 - **Student Starters:** [`../0-student_files/12-security-server/cryptoSanitizeLab.js`](../0-student_files/12-security-server/cryptoSanitizeLab.js) & [`../0-student_files/12-security-server/secureServer.js`](../0-student_files/12-security-server/secureServer.js)
+
+---
+
+## Lesson 11.2 — Zero Trust, Firewalls, SIEM Correlation & STRIDE (`West-MEC ITS 201–202` | `ADE 1.0, 4.5–5.10, 9.1–11.6`)
+- **Reading:** [`02-Zero-Trust-Firewalls-SIEM-and-STRIDE/readme.md`](./02-Zero-Trust-Firewalls-SIEM-and-STRIDE/readme.md)
+- **Slides:** [`02-Zero-Trust-Firewalls-SIEM-and-STRIDE/slides/slides.md`](./02-Zero-Trust-Firewalls-SIEM-and-STRIDE/slides/slides.md)
+- **Student Lesson & Lab:** [`02-Zero-Trust-Firewalls-SIEM-and-STRIDE/student-lesson.md`](./02-Zero-Trust-Firewalls-SIEM-and-STRIDE/student-lesson.md) | [`../0-student_files/11-zero-trust-siem/firewallSiemLab.mjs`](../0-student_files/11-zero-trust-siem/firewallSiemLab.mjs)
+- **Teacher Demo & Tests:** [`02-Zero-Trust-Firewalls-SIEM-and-STRIDE/code/zeroTrustSiemDemo.mjs`](./02-Zero-Trust-Firewalls-SIEM-and-STRIDE/code/zeroTrustSiemDemo.mjs) | [`zeroTrustSiemDemo.test.mjs`](./02-Zero-Trust-Firewalls-SIEM-and-STRIDE/code/zeroTrustSiemDemo.test.mjs)

@@ -1,6 +1,6 @@
 # Unit 11 Quiz 1: CIA Triad, Threats & Cryptography (Concepts)
 
-**Bloom's:** `[L1]`–`[L2]` | **CSV:** [`quiz-1-kahoot.csv`](./quiz-1-kahoot.csv) | **Stds:** `1.1`–`1.7`
+**Bloom's:** `[L1]`–`[L2]` | **CSV:** [`quiz-1-kahoot.csv`](./quiz-1-kahoot.csv) | **Stds:** `1.1`–`1.7`, `ITS 201–202`, `ADE 4.5–5.10, 9.1–9.10`
 
 | # | Question | Correct Answer | Time | Bloom's |
 |---|---|---|---|---|
@@ -14,3 +14,6 @@
 | 8 | Separating user code inside an isolated OS VM/Container applies: | **Sandboxing** | 20s | `[L2 \| 1.4]` |
 | 9 | Which security header prevents browsers from guessing MIME types? | **`X-Content-Type-Options: nosniff`** | 20s | `[L1 \| 1.5]` |
 | 10 | Why is two-way AES encryption wrong for user password databases? | **Leaked key decrypts all passwords** | 20s | `[L2 \| 1.4]` |
+| 11 | Why does leaking biometric templates carry stricter privacy liability than passwords? | **Templates cannot be revoked once stolen** | 20s | `[L2 \| ADE 5.10]` |
+| 12 | Which segmented network zone isolates public web servers from internal DBs? | **DMZ (Screened Subnet)** | 20s | `[L1 \| ITS 202]` |
+| 13 | Which DRP metric defines the maximum tolerable duration of downtime? | **`RTO` (Recovery Time Objective)** | 20s | `[L1 \| ADE 9.6]` |

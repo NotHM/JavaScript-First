@@ -9,3 +9,6 @@ Inside jsgamelauncher vm.SourceTextModule realm calling import('fs') will:,Delet
 Why bundle games into a .jsgame zip archive via Vite library build?,Hides syntax errors,Ships self-contained JS avoiding runtime npm install,Requires Chrome extensions,Disables Gamepad API,30,2
 Which flag attaches Node Inspector breakpoints inside jsgamelauncher?,--no-audio,--inspect,--disable-gpu,--mute,20,2
 Idle handheld analog stick drifts at axis=0.06. How do you stabilize input?,Multiply by 100,Apply a 0.15 deadzone threshold,Reverse D-Pad wiring,Disable update(),30,2
+METAR reports 2 1/2SM BKN008 for a 350 ft AGL drone flight. What fails Part 107?,Only LAANC fails,Both visibility (<3 SM) & cloud clearance (<500 ft),Flight is completely legal,Only 100 mph fails,30,2
+Camera footprint 100m x 80m uses 75% front and 65% side overlap. Step sizes?,65m lane & 75m trigger,35m lane & 20m trigger,100m lane & 80m trigger,25m lane & 35m trigger,30,2
+Pushing Gamepad Left Stick UP gives axis = -1.0. How does Mode-2 compute climb?,Use raw axis directly,Negate Y after deadzone (-applyDeadzone(axis)),Divide by 100,Switch to Mode-1 Yaw,30,2

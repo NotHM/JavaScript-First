@@ -11,4 +11,6 @@ Which third-party code must a closed commercial team REJECT?,MIT licensed utilit
 "Error: Missing script 'audit-deps'. Where do you define npm scripts?",test.js,"scripts" in package.json,.gitignore,README.md,30,2
 In main.mjs why does import from './tax' throw ERR_MODULE_NOT_FOUND?,var is banned,ESM requires explicit .mjs/.js extensions,JSON failed,Browsers block .mjs,30,2
 Inside .mjs calling require('./legacy.cjs') fails. Which API bridges CJS?,window.require,try/catch wrapper,createRequire(import.meta.url),<script type='module'>,30,3
-
+Alice owns file 0070 and belongs to group ops. What happens when Alice reads it?,Allowed via group rwx,Denied because owner tier 000 wins first,Allowed via sticky bit,Kernel converts to 777,30,2
+System draws 400W peak load. With +25% headroom which standard PSU rating fits?,350W,400W,550W,250W,30,3
+Which sshd_config pair enforces key-based login and blocks direct root SSH brute force?,PermitRootLogin yes & EmptyPass yes,PermitRootLogin no & PasswordAuthentication no,chmod 4777 /etc/shadow,setenforce 0 permanently,30,2

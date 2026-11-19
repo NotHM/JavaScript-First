@@ -1,6 +1,6 @@
-# Unit 5 Quiz 2: Data Structures, Matrices, Trees & Array Methods (Application)
+# Unit 5 Quiz 2: Data Structures, Matrices, Trees & AI Feature Engineering (Application)
 
-**Bloom's:** `[L3]`–`[L5]` | **CSV:** [`quiz-2-kahoot.csv`](./quiz-2-kahoot.csv) | **Stds:** `6.1`–`6.8, 7.4`
+**Bloom's:** `[L3]`–`[L5]` | **CSV:** [`quiz-2-kahoot.csv`](./quiz-2-kahoot.csv) | **Stds:** `6.1`–`6.8, 7.4, AI 4.0–5.0`
 
 | # | Prompt / Code Trace | Correct Answer | Time | Bloom's |
 |---|---|---|---|---|
@@ -14,3 +14,6 @@
 | 8 | Why use `new Map()` instead of `.find()` across 50,000 user IDs? | **$O(1)$ lookup vs. $O(n)$ scan** | 30s | `[L5 \| 6.2]` |
 | 9 | Which structure models social media mutual-friend cycles naturally? | **Graph** | 20s | `[L5 \| 6.8]` |
 | 10 | Which array method mutates in place rather than returning a clean new copy? | **`.push()` / `.sort()`** | 30s | `[L4 \| 6.1]` |
+| 11 | With `Q1 = 70` and `Q3 = 110`, what is the Tukey `1.5 * IQR` upper outlier fence? | **`170`** (`110 + 1.5 * 40`) | 30s | `[L3 \| AI 5.0]` |
+| 12 | What is `cosineSimilarity([3, 4], [-4, 3])` between orthogonal vectors? | **`0`** (`dot = -12 + 12 = 0`) | 30s | `[L3 \| AI 5.0]` |
+| 13 | One sensor glitch (`9900`) skews data `50..95`. Safer scaler before outlier drop? | **Z-Score standardization** | 30s | `[L5 \| AI 5.0]` |

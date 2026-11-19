@@ -1,6 +1,6 @@
-# Unit 7 Quiz 1: Event Loop, Promises & Errors (Concepts)
+# Unit 7 Quiz 1: Event Loop, Promises, Errors & RF Telemetry (Concepts)
 
-**Bloom's:** `[L1]`–`[L2]` | **CSV:** [`quiz-1-kahoot.csv`](./quiz-1-kahoot.csv) | **Stds:** `18.1`–`18.7`
+**Bloom's:** `[L1]`–`[L2]` | **CSV:** [`quiz-1-kahoot.csv`](./quiz-1-kahoot.csv) | **Stds:** `18.1`–`18.7`, `16.3`, `DT101–DT102`
 
 | # | Question | Correct Answer | Time | Bloom's |
 |---|---|---|---|---|
@@ -14,3 +14,6 @@
 | 8 | Why process huge log files using Node **Streams** vs `readFileSync`? | **Reads chunks with constant RAM** | 20s | `[L2 \| 16.3]` |
 | 9 | Which keyword converts a regular function into a Promise-returning coroutine? | **`async`** | 20s | `[L1 \| 18.7]` |
 | 10 | Why extend `class CustomError extends Error` instead of `throw "oops"`? | **Preserves stack trace & `instanceof`** | 20s | `[L2 \| 18.6]` |
+| 11 | Which drone RF band primarily carries high-bandwidth FPV video (LOS-sensitive)? | **`5.8 GHz` SHF band** | 20s | `[L1 \| DT101–DT102]` |
+| 12 | Why can strong `-60 dBm` `RSSI` still trigger a link interference warning? | **Noise inflates RSSI while `LQ %` & `SNR` drop** | 20s | `[L2 \| DT101, 18.4]` |
+| 13 | During VLOS drone operations, what does `VO` stand for in CRM? | **Visual Observer (scans hazards & calls fail-safes)** | 20s | `[L1 \| DT102 CRM]` |

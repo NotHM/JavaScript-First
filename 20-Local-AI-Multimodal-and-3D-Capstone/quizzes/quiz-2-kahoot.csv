@@ -9,3 +9,6 @@ Computed signed mesh volume returns -1400 mm^3 instead of +1400. Cause?,Too many
 A 0.4 mm nozzle needs >= 1.2 mm min wall thickness. What happens at 0.6 mm?,Prints twice as fast,Validator rejects fragile thin wall,Doubles infill,Auto-scales bed,20,2
 Why build an offline local-inference simulator when OLLAMA_HOST is down?,Hides bugs,Provides graceful degradation and deterministic CI tests,Sends PII to cloud,Disables SSE,20,2
 Sampling 1 frame every 2 seconds of a 10-second video yields timestamps:,[1 3 5],[0 2 4 6 8],[0 5 10],[2 4 6],30,2
+A ReAct agent requests "toString" as a tool name. What blocks prototype bypasses?,eval(action.name),Object.hasOwn allowlist check,Disable JSON.parse,Increase temperature to 1.8,30,2
+High-risk rates 0.90 and 0.63 give disparate impact 0.70. Model Card verdict?,Auto-approves deploy,Blocks deploy (< 0.80 four-fifths rule),Boosts temperature,Switches to Minimal tier,30,2
+Sentiment analyzer strips stopword "not" BEFORE scoring "not safe". Bug result?,Throws SyntaxError,Falsely classifies unsafe text positive,Doubles IDF weight,Triggers maxSteps,20,2

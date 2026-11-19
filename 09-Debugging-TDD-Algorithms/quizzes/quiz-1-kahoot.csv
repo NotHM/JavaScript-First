@@ -9,3 +9,6 @@ Pressing F9 next to a line number in VS Code adds a:,Git commit,Breakpoint,npm s
 Which Debugger panel lists every nested active function call up to the pause?,Call Stack,File Explorer,Markdown Preview,Terminal Colors,20,1
 Auto-running all tests inside GitHub Actions on every PR is:,Manual debugging,Continuous Integration testing,Waterfall design,Minifying JS,20,2
 Which method checks strict deep object equality in node:assert/strict?,assert.loosely(),assert.deepEqual(),console.log(),JSON.parse(),20,2
+Which ML paradigm clusters unlabeled feature points such as k-Means?,Supervised Learning,Unsupervised Learning,Syntax Parsing,Static Typing,20,2
+Why fit data scalers ONLY on the train split before touching test data?,To prevent data leakage into validation,To make arrays mutate in place,To skip test assertions,To speed up CSS rendering,20,1
+Under the EEOC 4/5ths rule what Disparate Impact ratio flags adverse bias?,Ratio >= 1.25,Ratio < 0.80 (below 80%),Ratio === 1.00,Ratio > 0.95,20,2

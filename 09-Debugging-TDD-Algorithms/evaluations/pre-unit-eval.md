@@ -1,6 +1,6 @@
-# Unit 9 Pre-Unit Evaluation: Testing, Debugging & Algorithms (`Std 12.0, 6.6–6.7`)
+# Unit 9 Pre-Unit Evaluation: Testing, Debugging, Algorithms & ML Fairness (`Std 12.0, 6.6–6.7, AI 1.0–7.0`)
 
-**Name:** `______________________` **Date:** `__________` **Pre-Score:** `____ / 8`
+**Name:** `______________________` **Date:** `__________` **Pre-Score:** `____ / 10`
 
 1. **`[L1 | 12.4]`** Which error type crashes program parsing BEFORE execution starts (e.g. missing closing `}`)?  
    - A) Logic error | B) Runtime error | C) Syntax error | D) Integration error
@@ -15,3 +15,6 @@
 7. **`[L4 | 12.4]`** A discount function runs with zero error messages yet charges `$110` instead of `$90`. Classify error (`Syntax`/`Runtime`/`Logic`): `________`.
 8. **`[L4 | 12.5]`** Why is setting a VS Code **breakpoint** better than inserting 30 temporary `console.log` lines?  
    > *(Your answer)*
+9. **`[L2 | AI 6.0]`** Why must you compute scaling parameters (`mean`, `stdDev`) strictly on the `train` split rather than across `train + test` combined?  
+   > *(Your answer)*
+10. **`[L3 | AI 7.0]`** Under the **EEOC 4/5ths (`80%`) Rule**, if Group A has an approval rate of `60%` and Group B has `42%` (`0.42 / 0.60 = 0.70`), does the model pass or fail fairness screening? `________`

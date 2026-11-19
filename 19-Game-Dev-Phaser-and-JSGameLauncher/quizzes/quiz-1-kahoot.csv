@@ -9,3 +9,6 @@ Which Phaser.Scene method loads images and audio BEFORE create() executes?,rende
 Why drop an empty <game-name>.jsg file into a handheld game directory?,Compresses audio,Lets EmulationStation list the game,Enables Wi-Fi,Compiles C++ code,20,2
 Which CLI command runs a jsgamelauncher game directly in a native SDL window?,npm run lint,npx rungame ./mygame.jsg,git checkout main,curl localhost,20,2
 Where are JS games copied on Knulli or Batocera retro handheld devices?,/etc/passwd,/userdata/roms/jsgames,/var/log/http,/tmp/browser,20,2
+Commercial FAA Part 107 flights require what cert weight and AGL altitude?,TRUST / <100 lb / 1000 ft,Part 107 UAG / <55 lb / 400 ft,Part 91 / 55 lb / 1200 ft,No cert / <250 lb / 500 ft,20,2
+Within how many days must Part 107 crashes >$500 non-UAS damage be reported?,24 hours,10 calendar days,30 business days,Never required,20,2
+On a Mode-2 RC transmitter which drone axes are controlled by the Left Stick?,Pitch and Roll,Throttle and Yaw,Camera Tilt and Zoom,Only Flaps,20,2

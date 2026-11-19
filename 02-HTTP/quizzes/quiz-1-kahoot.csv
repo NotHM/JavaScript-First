@@ -11,3 +11,6 @@ Shrinking text bundles before transmission across the network uses:,Gzip or Brot
 Caching static assets near global end users is handled by a:,IDE Debugger,CDN Edge Network,USB Hub,RAM Stick,20,2
 Which package.json property enables ES module import syntax in .js files?,type set to module,main set to es6,license set to MIT,engines set to npm,20,1
 Which Express middleware serves CSS and image files from a folder?,express.json(),express.static(),fs.writeFile(),http.listen(),20,2
+Which OSI layers handle MAC frames/STP switching vs IPv4/IPv6 packet routing?,L2 Data Link vs L3 Network,L4 Transport vs L7 App,L1 Physical vs L5 Session,L6 Pres vs L4 Transport,20,1
+Which IPv4 CIDR block is valid private non-routable RFC 1918 space?,8.8.8.0/24,172.16.0.0/12,169.254.0.0/16,198.51.100.0/24,20,2
+Which IANA port range holds Well-Known services like SSH 22 and HTTPS 443?,0-1023,1024-49151,49152-65535,65536-99999,20,1

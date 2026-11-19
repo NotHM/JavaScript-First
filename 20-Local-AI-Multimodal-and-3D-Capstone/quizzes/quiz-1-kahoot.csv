@@ -9,3 +9,6 @@ How many bytes long is the standard RIFF/WAVE header before PCM audio samples?,8
 Which local open-source pair provides offline Speech-to-Text and Text-to-Speech?,Whisper.cpp and Piper,MySQL and Vite,Phaser and CSS,FTP and SSH,20,1
 What exact byte size does a Binary STL mesh with T triangles occupy?,50 * T,84 + 50 * T,100 + 12 * T,44 + 2 * T,30,2
 Why validate a generated .stl mesh before opening PrusaSlicer or Cura?,To add ads,To verify watertightness and bed fit,To compress audio,To enable cookies,20,2
+In TF-IDF (tf * log(N / df)) what IDF score does a word in every doc (df = N) get?,0,1,N,100,20,1
+Which AI family learns P(y|x) to classify labels instead of generating outputs?,Diffusion GANs,Discriminative classifiers,3D slicers,Prompt templates,20,2
+Which four core functions structure the NIST AI Risk Management Framework?,Plan Code Build Ship,Govern Map Measure Manage,Read Eval Print Loop,Create Read Update Delete,20,2

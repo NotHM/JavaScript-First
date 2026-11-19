@@ -1,6 +1,6 @@
-# Unit 20 Quiz 1: Local LLMs, Streaming, RAG & Multimodal Basics (Concepts)
+# Unit 20 Quiz 1: Local LLMs, Streaming, RAG, NLP & Governance Basics (Concepts)
 
-**Bloom's:** `[L1]`–`[L2]` | **CSV:** [`quiz-1-kahoot.csv`](./quiz-1-kahoot.csv) | **Stds:** `1.5, 2.3, 4.1, 8.1, 16.4, 19.8`
+**Bloom's:** `[L1]`–`[L2]` | **CSV:** [`quiz-1-kahoot.csv`](./quiz-1-kahoot.csv) | **Stds:** `1.5, 2.3, 4.1, 8.1, 16.4, 19.8, AI101–AI202, Std 14.0`
 
 | # | Question | Correct Answer | Time | Bloom's |
 |---|---|---|---|---|
@@ -14,3 +14,6 @@
 | 8 | Local open-source Speech-to-Text vs. Text-to-Speech pair taught in Lesson 20.2: | **`Whisper.cpp` (STT) & `Piper` (TTS)** | 20s | `[L1 \| 19.8]` |
 | 9 | Binary `.stl` file structure size for `T` triangles (`80`-byte header + `4`-byte count): | **`84 + 50 * T` bytes** | 30s | `[L1 \| 4.1]` |
 | 10 | Why run a printability check before exporting `.stl` to PrusaSlicer or Cura? | **Verifies watertightness & build-plate fit** | 20s | `[L2 \| 19.8]` |
+| 11 | In TF-IDF (`tf * log(N / df)`), what IDF score does a word in every doc (`df = N`) get? | **`0`** | 20s | `[L1 \| AI101]` |
+| 12 | Which AI family learns `P(y\|x)` to classify labels instead of generating `P(x, y)` outputs? | **`Discriminative classifiers`** | 20s | `[L2 \| AI102]` |
+| 13 | Which four core functions structure the NIST AI Risk Management Framework (AI RMF)? | **`Govern, Map, Measure, Manage`** | 20s | `[L1 \| AI 14.0]` |

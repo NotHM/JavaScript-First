@@ -1,6 +1,6 @@
-# Unit 5 Pre-Unit Evaluation: Iteration & Data Structures (`Std 7.0, 6.0`)
+# Unit 5 Pre-Unit Evaluation: Iteration, Data Structures & AI Data Pipelines (`Std 7.0, 6.0, AI 4.0–5.0`)
 
-**Name:** `______________________` **Date:** `__________` **Pre-Score:** `____ / 8`
+**Name:** `______________________` **Date:** `__________` **Pre-Score:** `____ / 10`
 
 1. **`[L1 Remember | Std 7.1]`** Which statement defines the required condition that stops a recursive function from overflowing the call stack?  
    - A) Infinite loop | B) Base case | C) Breakpoint | D) Ternary
@@ -23,3 +23,6 @@
    > *(Your explanation)*
 8. **`[L4 Analyze | Std 7.1 / 18.2]`** Why does `JSON.stringify(obj)` fail when `obj` has a **circular reference** (`a.self = a`)?  
    > *(Your analysis)*
+9. **`[L1 Remember | AI 4.0]`** Why must PII fields such as student emails and SSNs be **redacted or salted-hashed** before training an ML model?  
+   > *(Your explanation)*
+10. **`[L3 Apply | AI 5.0]`** Compute **Min-Max Scaling** $\frac{x - \min}{\max - \min}$ for `[20, 40, 60]`: `________________`
