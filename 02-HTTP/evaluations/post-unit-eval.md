@@ -1,4 +1,4 @@
-# Unit 2 Post-Unit Evaluation: Protocols, Subnetting, Routing, Cloud, HTTP & SSR (`Std 8.0, 11.3–11.7 | ITS 102`)
+# Unit 2 Post-Unit Evaluation: Protocols, Subnetting, Routing, Cloud, HTTP & SSR (`Std 8.0, 11.3–11.7 | CCNA 200-301 / ADE NetSec`)
 
 **Name:** `______________________` **Date:** `__________` **Post-Score:** `____ / 18`
 
@@ -17,7 +17,7 @@
    > `____________________________________________________` | `________________`
 8. **`[L4 | 1.5, 15.6]`** Why must modular SSR escape template variables AND validate `path.resolve(rootDir, file).startsWith(rootDir + path.sep)` on static routes?  
    > *(Your diagnosis)*
-9. **`[L3 | ITS 102 / ADE 6.0]`** For CIDR block **`192.168.50.70/26`**, compute the **Network ID**, **Broadcast Address**, **Usable Host Range**, and **Wildcard Mask**:  
+9. **`[L3 | CCNA 200-301 / ADE 6.0]`** For CIDR block **`192.168.50.70/26`**, compute the **Network ID**, **Broadcast Address**, **Usable Host Range**, and **Wildcard Mask**:  
    > Network: `______________` | Range: `________________________` | Broadcast: `______________` | Wildcard: `____________`
 10. **`[L2–L4 | ADE 8.1–8.5]`** Classify IANA port tiers for **`53`**, **`3306`**, and **`54010`**, and state which route wins for destination `10.10.4.25` between `0.0.0.0/0` (metric 1), `10.10.0.0/16` (metric 5), and `10.10.4.0/24` (metric 50):  
     > *(Your classification & route winner)*
@@ -31,5 +31,5 @@
     ```javascript
     // Write handler(req, res):
     ```
-14. **`[L5 | ITS 102 / ADE 3.0, 7.0, 10.1–10.6]`** Given **`10.90.0.0/24`**, compute non-overlapping **VLSM CIDRs** (largest-first) for `Students (100 hosts)` + `Faculty (25 hosts)` + `WAN-P2P (2 hosts)`, prescribe **SMF fiber + `STP/RSTP` + `WPA3`/`5G CBRS`** for a `500 m` campus deployment, and summarize how `ping`, `traceroute`, `nslookup`, and `ss` fit inside the **7-Step Troubleshooting Methodology**:  
+14. **`[L5 | CCNA 200-301 / ADE 3.0, 7.0, 10.1–10.6]`** Given **`10.90.0.0/24`**, compute non-overlapping **VLSM CIDRs** (largest-first) for `Students (100 hosts)` + `Faculty (25 hosts)` + `WAN-P2P (2 hosts)`, prescribe **SMF fiber + `STP/RSTP` + `WPA3`/`5G CBRS`** for a `500 m` campus deployment, and summarize how `ping`, `traceroute`, `nslookup`, and `ss` fit inside the **7-Step Troubleshooting Methodology**:  
     > *(Your VLSM plan & architecture triage defense)*

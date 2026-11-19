@@ -1,9 +1,9 @@
 # Lesson 2.4: Subnetting, OSI Topologies, Protocols & Network Troubleshooting
 
-**Standards Alignment:** West-MEC `ITS 102` (`Cisco CCNA 200-301`) & **ADE Network Security `3.0`, `6.0`, `7.0`, `8.1–8.5`, `10.1–10.6`**
+**Standards Alignment:** CTE IT Security (`11.1999.00`) / `Cisco CCNA 200-301` & **ADE Network Security `3.0`, `6.0`, `7.0`, `8.1–8.5`, `10.1–10.6`**
 
 ## Student Learning Objectives (Bloom's Taxonomy & SMART)
-- **`[L1 Remember]`** Recall binary/decimal/hex IPv4 and MAC representations, all 7 OSI vs. 4 TCP/IP layers, physical/wireless media limits (`UTP`, `SMF/MMF`, `802.11 WPA3`, `802.15 BLE`, `5G/CBRS`), and IANA port ranges (`ITS 102`, `ADE 3.0, 6.0, 8.1`).
+- **`[L1 Remember]`** Recall binary/decimal/hex IPv4 and MAC representations, all 7 OSI vs. 4 TCP/IP layers, physical/wireless media limits (`UTP`, `SMF/MMF`, `802.11 WPA3`, `802.15 BLE`, `5G/CBRS`), and IANA port ranges (`CCNA 200-301`, `ADE 3.0, 6.0, 8.1`).
 - **`[L2 Understand]`** Contrast Star, Mesh, and Spine-Leaf topologies; RFC 1918 private vs. public IPv4 vs. IPv6 addressing; TCP vs. UDP transport; and STP loop-prevention failover (`ADE 6.0, 7.0`).
 - **`[L3 Apply]`** Compute IPv4 CIDR network, broadcast, wildcard, and usable host ranges; allocate **VLSM** blocks largest-first; and implement longest-prefix routing lookups in JavaScript (`CCNA 200-301`).
 - **`[L4 Analyze]`** Trace OSI encapsulation faults, diagnose APIPA/DHCP/DNS/port defects using `ping`, `traceroute`, `nslookup`, `netstat`, and packet captures, and validate the 7-Step Network Troubleshooting sequence (`ADE 10.1–10.6`).
@@ -11,12 +11,12 @@
 
 ### Lesson 2.4 SMART Objectives Checklist
 - [ ] **S/M/A/R/T Goal 1 (`[L1–L2]` | `ADE 3.0, 6.0, 7.0`):** Map binary/hex addresses, OSI 7-layer vs. TCP/IP 4-layer PDUs, physical/wireless standards, and IANA port tiers with >= 85% accuracy on Day 1 (`student-lesson.md` Part A).
-- [ ] **S/M/A/R/T Goal 2 (`[L3–L4]` | `ITS 102 / CCNA 200-301`):** Implement all 7 `TODO` functions (`ipToInt`, `intToIp`, `computeSubnet`, `allocateVlsm`, `lookupLongestPrefixRoute`, `classifyIanaPort`, `evaluateTroubleshootingSequence`) in [`0-student_files/02-subnetting-routing/subnetCalculatorLab.mjs`](../../0-student_files/02-subnetting-routing/subnetCalculatorLab.mjs) so all checks exit `0` within one 50-minute lab period.
+- [ ] **S/M/A/R/T Goal 2 (`[L3–L4]` | `CTE IT Security (11.1999.00) / CCNA 200-301`):** Implement all 7 `TODO` functions (`ipToInt`, `intToIp`, `computeSubnet`, `allocateVlsm`, `lookupLongestPrefixRoute`, `classifyIanaPort`, `evaluateTroubleshootingSequence`) in [`0-student_files/02-subnetting-routing/subnetCalculatorLab.mjs`](../../0-student_files/02-subnetting-routing/subnetCalculatorLab.mjs) so all checks exit `0` within one 50-minute lab period.
 - [ ] **S/M/A/R/T Goal 3 (`[L4–L5]` | `ADE 8.1–8.5, 10.1–10.6`):** Solve multi-department VLSM allocations, longest-prefix routing ties, and 7-step OSI packet-to-port fault isolation on `post-lesson-eval.md` (`>= 4/5`).
 
 ---
 
-## 1. Number Systems, OSI vs. TCP/IP & Network Topologies (`ITS 102`, `ADE 3.0, 6.0, 7.0`)
+## 1. Number Systems, OSI vs. TCP/IP & Network Topologies (`CCNA 200-301`, `ADE 3.0, 6.0, 7.0`)
 
 ### Binary, Decimal & Hexadecimal Addressing
 Computers forward packets strictly as **bits**, whereas engineers configure IPv4 in dotted-decimal and MAC/IPv6 in hexadecimal:

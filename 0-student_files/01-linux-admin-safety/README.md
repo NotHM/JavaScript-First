@@ -1,6 +1,6 @@
 # Lesson 1.5 Student Lab: Linux System Administration, Hardware & OS Safety
 
-**Standards:** West-MEC `ITS 101–102` (`ITF+`, `A+`, `RHCSA`) | ADE Network Security `2.0`, `8.6–8.8`, `10.2`
+**Standards:** CTE IT Security (`11.1999.00`) / `CompTIA ITF+`, `CompTIA A+`, `RHCSA` | ADE Network Security `2.0`, `8.6–8.8`, `10.2`
 
 Complete all `TODO` functions inside [`posixAuditLab.mjs`](./posixAuditLab.mjs) **without** looking at instructor solutions:
 

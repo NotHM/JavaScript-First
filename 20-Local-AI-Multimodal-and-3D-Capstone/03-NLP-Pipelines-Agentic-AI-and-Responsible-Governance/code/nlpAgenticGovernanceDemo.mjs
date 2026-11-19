@@ -5,8 +5,8 @@
  * and NIST AI RMF / EU AI Act Model Card Governance Validation.
  *
  * Pure zero-dependency Node.js 24 ESM (offline-deterministic).
- * Aligns with West-MEC AI101 (Units 1, 7), AI102 (Units 11–14),
- * AI202 (Units 5–8), AI Stds 1.0–2.0, 10.0–15.0, Azure AI-900, ITS AI, ITS Python.
+ * Aligns with CTE AI (11.0102.00), AZ CTE Stds 1.0–2.0, 10.0–15.0,
+ * Azure AI-900, ITS AI, and ITS Python.
  */
 import { pathToFileURL } from 'node:url';
 
@@ -377,7 +377,7 @@ export function classifySentimentAndIntent(text) {
   for (const m of source.matchAll(/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/g)) {
     entities.push({ type: 'EMAIL', value: m[0] });
   }
-  for (const m of source.matchAll(/\b(?:NIST AI RMF|EU AI Act|OECD|IEEE|FERPA|COPPA|AI101|AI102|AI202|AI-900)\b/gi)) {
+  for (const m of source.matchAll(/\b(?:NIST AI RMF|EU AI Act|OECD|IEEE|FERPA|COPPA|CTE AI|ITS AI|ITS Python|AI-900)\b/gi)) {
     entities.push({ type: 'STANDARD_OR_REG', value: m[0] });
   }
   for (const m of source.matchAll(/(?:\b\d+(?:\.\d+)?%|\b\d+(?:\.\d+)?\s*(?:ms|mm|gb|hz|bytes)\b)/gi)) {

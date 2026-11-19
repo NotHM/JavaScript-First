@@ -1,51 +1,51 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
-Which language and JS engine power the Bun runtime?,Rust & SpiderMonkey,Zig & JavaScriptCore,Go & ChakraCore,C# & Rhino,20,2
-Which native Bun APIs start an HTTP server and open SQLite?,Bun.serve() + bun:sqlite,Bun.http() + npm:sqlite3,Deno.serve() + node:fs,express() + mongo:sqlite,20,1
-Which built-in Node 24 module and class provide synchronous SQLite?,node:http (HttpSync),node:fs (SqlFile),node:sqlite (DatabaseSync),node:cluster (Pool),20,3
-Which SQLite statement MUST run per connection to enforce FKs?,PRAGMA foreign_keys = ON;,ALTER TABLE ENABLE KEYS;,SET STRICT_FOREIGN = TRUE;,GRANT REFERENCES ALL;,20,1
-Match REST codes: created | bad input | missing ID | conflict:,200 | 404 | 409 | 500,201 | 400 | 404 | 409,204 | 401 | 403 | 400,201 | 302 | 404 | 503,20,2
-What order does MongoDB GeoJSON 2dsphere require in coordinates?,[altitude latitude],[latitude longitude],[x_pixels y_pixels],[longitude latitude],20,4
-Which MongoDB aggregation stage joins documents from a 2nd collection?,$innerJoin,$lookup,$relate,$foreign,20,2
-Which MongoDB error code triggers on duplicate unique index inserts?,404,10054,11000 (E11000),20001,20,3
-Which HTTP request header drives JSend vs JSON:API vs HAL+JSON?,Accept,Host,User-Agent,Cookie,20,1
-Which official Accept MIME type identifies a JSON:API client?,text/html,application/hal+json,application/jsend+xml,application/vnd.api+json,20,4
-Why do in-process bun:sqlite queries execute in microseconds?,Disables disk persistence,Direct memory reads sans TCP,Compiles SQL to CSS animations,Caches POST calls in DNS,20,2
-How does Node 24 node:sqlite maintain full parity with bunRestApp.js?,Compiles JS into Zig binaries,Uses remote Bun WebSockets,Same sync ? prepared SQL API,Writes unindexed text logs,20,3
-How do ? placeholders in db.prepare() stop SQL Injection?,Binds values as data not SQL,Strips spaces from req.url,AES-256 encrypts each call,Blocks strings over 5 chars,20,1
-In Learn-MongoDB-4.x why separate Entity from Domain Service?,Mongo needs 3 base classes,Headers need entity wrappers,Node locks entities in SQLite,Entity checks rules pre-DB I/O,20,4
-Why embed rooms inside property docs instead of joining per card?,Mongo allows max 2 collections,Atomic 1-read detail payloads,Mongo arrays forbid queries,$lookup blocks string keys,20,2
-Why use $set: { price: 8.5 } in updateOne() instead of { price: 8.5 }?,Adds SQL foreign keys automatically,Deletes docs missing price,Mutates only price keeping fields,Raw objects force SQL errors,20,3
-Why place $match paymentStatus confirmed BEFORE $group in revenue?,Excludes unpaid rows pre-sum,$group errors without trailing $sort,Creates unique index on _id,Multiplies totals by 100,20,1
-What fails when storing [latitude longitude] in MongoDB GeoJSON?,Converts Point to SQLite int,Makes negative coords positive,$near drops collection on boot,Flips axes / >90 lat error,20,4
-Which top-level keys distinguish HAL+JSON from plain JSend?,status and sqlRows,_links and _embedded,attributes and errors,$group and $lookup,20,2
-Why use the Strategy Pattern instead of if/else across 12 handlers?,Skips JSON.stringify() calls,Node blocks if() inside routes,Encapsulates formats behind render(),Replaces GET with triggers,20,3
-Which SQLite LIKE query safely neutralizes untrusted input q?,db.prepare('...LIKE ?').all('%'+q+'%'),db.prepare(`...LIKE '%${q}%'`).all(),db.exec('...= ' + q),db.query('...').filter(q),30,1
-Given page=3 and limit=10 what exact LIMIT and OFFSET return page 3?,LIMIT 3 OFFSET 10,LIMIT 10 OFFSET 20,LIMIT 30 OFFSET 3,LIMIT 10 OFFSET 30,30,2
-Which clamping enforces page>=1 and 1<=limit<=50 cleanly?,min(0 page) & max(50 limit),rawPage || 0 & rawLimit % 50,max(1 p) & min(50 max(1 lim)),page=50 & limit=1,30,3
-Which constructor code opens DatabaseSync with FK checks active?,DatabaseSync.open(p); enableFk(),new DatabaseSync(p); pragma('off'),new MongoClient(p); exec('ALL'),new DatabaseSync(p); exec('PRAGMA foreign_keys = ON;'),20,4
-Which MQL filter matches price>=5 excluding category chocolate?,{price:5 category:'chocolate'},{$and:[{price:{$gte:5}} {category:{$nin:['chocolate']}}]},{$or:[{price:{$lt:5}} {category:'choc'}]},{price:{$sum:5} $drop:['choc']},30,2
-Which MQL query matches US properties with propInfo.rating >= 4?,{'address.country':'US' 'propInfo.rating':{$gte:4}},{addressCountry:'US' rating:4},{'address[country]':'US' rating:'>4'},{$lookup:'US' rating:4},30,1
-Which MQL filter matches property rooms array containing view lake?,{'rooms[0].view':{$nin:['lake']}},{view:{$sum:'lake'}},{'rooms.view':'lake'},{$group:'$rooms.view'},30,3
-Which call creates a unique constraint on productKey in products?,products.setPrimary('productKey'),products.insertUnique('productKey'),products.alterTable('UNIQUE'),products.createIndex({productKey:1} {unique:true}),20,4
-Which $lookup stage joins customers.customerKey to purchases?,{$join:{table:'purchases'}},{$lookup:{from:'purchases' localField:'customerKey' as:'orders'}},{$group:{_id:'$purchases'}},{$match:{from:'purchases'}},30,2
-Client sends Accept: application/vnd.api+json. Expected response?,application/vnd.api+json + {type id attributes},application/json + JSend status,application/hal+json + _embedded,text/csv raw rows,30,1
-DELETE FROM items deletes row despite ON DELETE RESTRICT. Why?,orders used INTEGER item_id,node:sqlite disables FKs in RAM,Forgot PRAGMA foreign_keys = ON;,DELETE requires prior SELECT *,30,3
-GET /api/items?q=' OR 1=1 -- dumps entire table! Buggy line?,prepare(`...LIKE '%${q}%'`).all(),prepare('...LIKE ?').all('%'+q+'%'),prepare('...LIMIT ? OFFSET ?'),exec('PRAGMA foreign_keys = ON;'),30,1
-Duplicate SKU crashes POST route with 500 instead of 409. Fix?,Check req.method === 'GET' first,Cast price_cents to float,Delete existing item silently,Catch UNIQUE/FK errors -> 409,30,4
-StorefrontDomainService throws E11000 duplicate key. HTTP status?,201 Created with null body,Catch err.code===11000 -> 409 Conflict,Retry insert in while(true),Drop productKey -> 200 OK,30,2
-summarizeRevenueByCountry includes pending bookings in US sum. Bug?,Missing $match confirmed pre-$group,$sort used _id:1 instead of -1,$group used $sum instead of $avg,bookingKey lacked unique index,30,1
-Seed fails: latitude out of bounds on [33.5092 -112.0676]. Fix?,Phoenix lacks a valid zip code,Multiply coords by 100,Swapped [lat lng] -> [-112.0676 33.5092],2dsphere allows Europe only,30,3
-JSON:API envelope fails strict SDK check despite data structure. Why?,Missing status:'success' field,Content-Type was application/json not vnd.api+json,JSON.stringify sorted keys,Status was 200 instead of 201,30,2
-POST /api/orders trusts req.body.total_cents & updates stock late.,Multiply stock by 2 first,Client numbers fail over localhost,total_cents must be HTML text,Price spoofing + negative stock race,60,4
-Tests pass yet node --test hangs 15s until killed. Missing cleanup?,server.close() / db.close() in finally,console.clear() at top of test,Passing --allow-net to Node 24,Adding nodemon to devDependencies,30,1
-updateOne({productKey:'apple_pie'} {price:7.5}) fails. Why?,productKey forbids underscores,Filter forbids string values,Must wrap in atomic {$set:{price:7.5}},Must delete doc before update,30,3
-Best hybrid DB design for order ledgers + nested room catalogs?,Flat .csv files for both,SQLite/SQL for ledgers + MongoDB for nested catalogs,Browser localStorage + cookies,15 string columns in SQLite,60,2
-When should a single-host Bun+SQLite service move to PostgreSQL?,SQLite fits multi-DC clusters only,Bun cannot serve HTTP in prod,SQLite shines single-host; cluster DBs scale multi-node writes,PostgreSQL runs inside browsers,60,3
-Why embed checkout price inside purchases while joining customers via $lookup?,Freezes checkout price history; keeps customer contact DRY,$lookup drops numbers in Mongo,Embedded arrays work in SQLite,Live prices trigger E11000 reads,60,1
-Why prefer Accept header negotiation over /api/jsend + /api/hal URLs?,URLs allow max two slashes,Accept headers encrypt JSON,Separate paths break JSON.parse,One canonical URI + clean Strategy class extensions,60,4
-Why wrap SELECT stock + UPDATE stock + INSERT order in BEGIN/COMMIT?,SQLite blocks UPDATE without COMMIT,Prevents oversell races & partial ledger writes,Converts SQLite to Mongo docs,Disables PRAGMA foreign_keys,60,2
-Why run ProductEntity.validate() in pure JS before touching MongoDB?,Should run SQL DROP TABLE first,Mongo rejects ES6 classes,Fails fast with 400 in zero-I/O unit tests,Validation belongs in CSS,60,3
-Why clamp listItems limit <= 50 even for internal admin routes?,Uncapped ?limit=1000000 causes memory/JSON DoS spikes,SQLite crashes past OFFSET 10,HTTP 200 caps payloads at 4 KiB,Math.min beats SQLite without LIMIT,60,1
-HTTP statuses for POST /api/orders: qty=-2 | missing item | qty>stock:,500 | 400 | 200,404 | 409 | 400,401 | 403 | 422,400 | 404 | 409,60,4
-How does DomainService swapping MqlDatabase + MongoClient help CI?,Hides DB bugs so tests always pass,Fast offline tests mirror live mongo:7 containers,Converts MongoDB to SQLite,Removes assertions from node:test,60,2
-Best refactor for a 600-line server.js mixing SQL + MQL + formatting?,Move everything into SQLite triggers,Save records in synchronous .txt files,Split SqliteCatalog Entity/Domain Responders & thin router,Skip node --test & paste screenshots,60,3
+Which relational constraint prevents deleting a catalog item referenced by existing orders?,VARCHAR(50),FOREIGN KEY ... ON DELETE RESTRICT,DEFAULT NULL,PRIMARY AUTOINCREMENT,20,2
+Which SQL clause combines matching rows across two relational tables by key equality?,JOIN ... ON,GROUP FILTER,CAST AS TEXT,SORT MERGE,20,1
+"Which HTTP status codes represent Created, Bad Request, Not Found, and Conflict in REST?","204, 302, 401, 500","200, 301, 403, 502","100, 200, 405, 503","201, 400, 404, 409",20,4
+Which HTTP request header specifies the media formats a client prefers in response bodies?,Host,Referer,Accept,Cookie,20,3
+Which official MIME type identifies the JSON:API media specification?,application/json,application/vnd.api+json,application/hal+json,text/plain,20,2
+"In RFC 7946 GeoJSON REST payloads, what coordinate order is required?","[longitude, latitude]","[latitude, longitude]","[x, y, z]","[altitude, latitude]",20,1
+Which SQL query binding mechanism isolates user strings from executable SQL syntax?,HTML entity decode,Template literal interpolation,Base64 string wrap,Parameterized ? placeholders,20,4
+Which JS response method parses an async fetch() JSON body into a JavaScript object?,res.parseXml(),Buffer.decode(res),await res.json(),JSON.encode(res),20,3
+Which built-in Node 24 module supplies synchronous SQLite access matching bun:sqlite?,node:pg,node:sqlite (DatabaseSync),node:sqlserver,node:mongo,20,2
+Which SQLite connection pragma must run before foreign-key constraints are enforced?,PRAGMA foreign_keys = ON;,SET STRICT = 1;,ENABLE KEYS;,USE FOREIGN;,20,1
+Why is single-node SQLite often lower-latency for reads than networked client-server DBs?,Compresses JS code,Skips disk storage,Uses UDP broadcasts,Eliminates TCP packet marshaling across localhost/LAN,20,4
+When should a schema embed child subdocuments inside one JSON doc instead of a separate table?,Cross-bank wire transfers,Static HTML CSS files,"Bounded child items loaded together (e.g., room specs)",Unbounded million-row audit logs,20,3
+"Why run stock checks, decrementing quantity, and inserting orders inside ONE ACID transaction?",Enables GET caching,Prevents race conditions or half-finished failures,Clears browser history,Halves JSON payload size,20,2
+Why does ? binding prevent malicious payload OR 1=1 -- from dumping all rows?,DB treats entire input strictly as literal string,Parser removes all spaces,Query runs in HTML,TCP drops hyphens,20,1
+What separation of responsibilities distinguishes Entity classes from Domain Repository services?,Both wrap SQL directly,Entities open TCP sockets,Domains render CSS buttons,Entities validate data; Domains manage indexes & I/O,20,4
+How does the Strategy Pattern keep REST route controllers clean across multiple JSON formats?,Stores HTML in SQL,Uses nested switch trees,Swaps formatter classes behind one .render() method,Copies 3 duplicate routes,20,3
+"In an aggregation/reporting pipeline, why filter status = confirmed BEFORE grouping totals?",Breaks primary keys,Excludes canceled/unpaid rows prior to summing,Sorts rows backward,Increases memory usage,20,2
+Why distinguish HTTP 400 Bad Request from 409 Conflict in REST API design?,400 = malformed syntax; 409 = valid request vs state,Both mean missing route,409 redirects browser,400 means server crash,20,1
+"In MongoDB updateOne, why pass { $set: { price: 9 } } instead of a plain { price: 9 } object?",Plain objects throw 404,MongoDB only accepts SQL,$set deletes the ID,$set updates specific fields without wiping untouched fields,20,4
+Which top-level keys characterize HAL+JSON hypermedia envelopes vs JSend status/data?,rows and pragma,head and body,_links and _embedded,attributes and errors,20,3
+Which prepared SQL pattern safely searches partial titles without risking SQL injection?,EXEC(SELECT + q),stmt.all(% + q.trim() + % ) with WHERE title LIKE ?,eval(sql),WHERE title LIKE ${q},20,2
+Compute LIMIT and OFFSET for REST pagination query ?page=3&limit=10:,LIMIT 10 OFFSET 20,LIMIT 3 OFFSET 10,LIMIT 20 OFFSET 10,LIMIT 10 OFFSET 30,20,1
+"How do you clamp raw query params so page >= 1 and limit stays safely inside [1, 50]?",l % 50,parseInt(p) || 0,Math.random() * 50,"Math.max(1, p) & Math.min(50, Math.max(1, l))",20,4
+Client sends Accept: application/vnd.api+json. Which response status and header confirm creation?,404 + application/xml,302 + Location: /,201 + Content-Type: application/vnd.api+json,200 + text/plain,20,3
+Which fetch() options object sends JSON via POST with explicit Content-Type and body?,"fetch.post(url, d)","{ method: 'POST', headers: {'Content-Type':'application/json'}, body }","{ method: 'GET', body: d }",{ body: d },30,2
+Which database index definition guarantees two products can never share the same productKey?,UNIQUE constraint / { unique: true } index,NONCLUSTERED sort,TEXT FULLSCAN,AUTO_INCREMENT only,20,1
+"In an OOP SQLite service class constructor, what should run right after opening DatabaseSync?",Clear process.env,Delete database file,Bind port 80,Initialize PRAGMA foreign_keys = ON & schema DDL,20,4
+A DELETE /api/items/5 call fails with FOREIGN KEY constraint error. Clean exception mapping?,Return HTTP 200 OK,Force DELETE CASCADE blindly,Catch constraint code -> return HTTP 409 JSON,Leak raw SQL stack 500,20,3
+Which MongoDB dot-notation query matches properties with nested address.country equal to US?,{ US: address },{ 'address.country': 'US' },{ address[country]: US },{ addressCountry: US },20,2
+Which MongoDB query matches any listing where an embedded rooms element has view = lake?,{ 'rooms.view': 'lake' },{ rooms: lake },JOIN rooms ON view,{ $elemExists: lake },20,1
+Orders still insert referencing non-existent item_id 999 in SQLite despite FOREIGN KEY DDL. Cause?,JSON converted int to float,SQLite ignores integers,PRIMARY KEY overrides FK,Forgot PRAGMA foreign_keys = ON on connection,30,4
+Searching q = 'x' + '' OR 1=1 --' returns the entire catalog table. Exact vulnerability?,CSS selector leak,Buffer overrun,SQL Injection from string interpolation,Cross-Site Request Forgery,20,3
+Checkout inserts order using req.body.total_cents BEFORE checking stock. Two security bugs?,Broken CSS grid & CORS,Client price tampering & negative overselling race,Extra UTF-8 BOM bytes,Slow DNS & missing JPEG,30,2
+Strict JSON:API client fails parsing even though body JSON looks valid. Most likely omission?,Missing Content-Type: application/vnd.api+json,Missing SQLite WAL file,HTTP status was 200,Port was above 1024,30,1
+"Integration test assertions pass, yet node --test hangs 10s before timing out. Cause?",Missing var declarations,Async await freezes V8,SQLite uses threads,Forgot server.close() and db.close() in finally,30,4
+"GeoJSON $near rejects Phoenix coordinates [33.5092, -112.0676] with out-of-bounds error. Fix?",Wrap in HTML tags,Convert to base64,"Reorder to [longitude -112.0676, latitude 33.5092]",Round coordinates to ints,30,3
+Duplicate email signup crashes with unhandled SQLite UNIQUE constraint 500 error. Better fix?,Drop UNIQUE index,Catch unique error & return 409 without stack trace,Log password to stdout,Return 200 OK anyway,20,2
+Aggregation revenue summed $500 too high because pending/unpaid rows were included. Missing step?,Filter status === confirmed BEFORE grouping sums,Divide totals by page count,Sort keys alphabetically,Use Math.floor on prices,30,1
+"MongoDB updateOne({ sku }, { price: 12 }) throws atomic update error. What operator is missing?",Call PRAGMA foreign_keys,Add $lookup stage,Use $near instead,Wrap fields in { $set: { price: 12 } },20,4
+Route crashes with 500 whenever MongoDB throws error code 11000 on duplicate key. Fix?,Delete unique index,Return 201 Created,Detect err.code === 11000 -> return 409 Conflict,Retry loop infinitely,20,3
+Evaluate dual-DB fit: ACID inventory/order ledger vs flexible catalog with nested reviews:,Flat CSV files for orders,SQLite/SQL for ledger; Document DB for catalog,Document DB without transactions for banking,Store both in localStorage,30,2
+When must a growing service migrate from single-file embedded SQLite to a client-server RDBMS?,Multiple horizontally scaled nodes need concurrent writes,App adds CSS Grid,Routes switch from GET to POST,Tests run offline,30,1
+"Why run stock validation, decrement, and order insert atomically inside one DB transaction?",Removes primary keys,Bypasses HTTP headers,Disables input checks,Guarantees concurrent buyers cannot oversell last unit,30,4
+Why enforce ?limit <= 50 and validate ?page >= 1 at the API gateway before querying DB?,Forces JSON:API output,Encrypts database files,Prevents memory exhaustion DoS from huge queries,Speeds TCP DNS lookups,20,3
+"Order POST sends qty=-2 (A), missing itemId 999 (B), and qty=50 when stock=4 (C). HTTP status trio?","500, 502, 503","400, 404, 409","301, 302, 401","200, 201, 204",30,2
+Why use HTTP Accept content negotiation on /api/products rather than /api/v1/hal/products URLs?,Preserves clean canonical URIs decoupled from format,Forces browser cookies,Breaks GET idempotency,Bypasses TCP ports,20,1
+Why validate Entity constraints in pure JS before ever calling repository DB methods?,Replaces unit testing,Avoids writing try/catch,Eliminates REST status codes,Rejects invalid inputs early in zero-I/O tests,20,4
+How does programming DomainService against an abstract DB adapter boost CI reliability?,Skips JSON parsing,Hardcodes root tokens,Fast offline mocks mirror live DB contracts,Disables async Promises,30,3
+Why store embedded line-item unit prices inside orders while $lookup pulls live customer emails?,Saves 100% disk,Keeps historical invoice prices immutable as catalog edits,Prevents 404 errors,MongoDB forbids numbers,30,2
+Which runtime API allows Bun servers to accept Web Request and return Web Response with 1 call?,"Bun.serve({ port, fetch(req) { ... } })",Deno.openFile(),express.bootSql(),Mongo.listenHtml(),20,1

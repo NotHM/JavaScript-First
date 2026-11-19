@@ -13,11 +13,11 @@ class LegacyXmlCourseFeed {
   fetchCourseXml() {
     return [
       '<catalog>',
-      '  <course course_id="CO101" credit_hours="1.5">',
+      '  <course course_id="CTE/CIS 101" credit_hours="1.5">',
       '    <course_title>Node.js &amp; HTTP Foundations</course_title>',
       '    <tag_list>nodejs,http,tdd</tag_list>',
       '  </course>',
-      '  <course course_id="CO201" credit_hours="1.5">',
+      '  <course course_id="CTE/CIS 201" credit_hours="1.5">',
       '    <course_title>OOP &amp; Security Hardening</course_title>',
       '    <tag_list>oop,owasp,crypto</tag_list>',
       '  </course>',
@@ -76,15 +76,15 @@ test('XmlToJsonCatalogAdapter converts legacy XML feed into normalized JSON cont
   const courses = adapter.getCourses();
   assert.equal(courses.length, 2);
   assert.deepEqual(courses[0], {
-    id: 'CO101',
+    id: 'CTE/CIS 101',
     title: 'Node.js & HTTP Foundations',
     credits: 1.5,
     tags: ['nodejs', 'http', 'tdd'],
   });
 
   assert.deepEqual(summarizeCatalog(adapter), [
-    'CO101: Node.js & HTTP Foundations (1.5 cr)',
-    'CO201: OOP & Security Hardening (1.5 cr)',
+    'CTE/CIS 101: Node.js & HTTP Foundations (1.5 cr)',
+    'CTE/CIS 201: OOP & Security Hardening (1.5 cr)',
   ]);
 });
 

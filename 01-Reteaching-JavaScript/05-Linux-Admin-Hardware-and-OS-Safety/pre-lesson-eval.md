@@ -1,8 +1,8 @@
-# Pre-Lesson 1.5 Evaluation: Linux Admin, Hardware & OS Safety (`West-MEC ITS 101–102` | `ADE 2.1–2.6, 8.6–8.8, 10.2`)
+# Pre-Lesson 1.5 Evaluation: Linux Admin, Hardware & OS Safety (`CTE IT Security (11.1999.00) / CompTIA A+ / RHCSA` | `ADE 2.1–2.6, 8.6–8.8, 10.2`)
 
 **Timing:** 4 minutes (Complete BEFORE reading or slides) | **Score:** `____ / 4`
 
-1. **`[L1 Remember | ITS 101 / ADE 2.1–2.6]`** Before touching an open desktop motherboard or PSU, list **two mandatory ESD/OSHA safety precautions** and state where a **swollen Lithium-ion battery** must be disposed:  
+1. **`[L1 Remember | CompTIA A+ / ADE 2.1–2.6]`** Before touching an open desktop motherboard or PSU, list **two mandatory ESD/OSHA safety precautions** and state where a **swollen Lithium-ion battery** must be disposed:  
    > *(Your answer)*
 
 2. **`[L2 Understand | RHCSA RH124 / ADE 8.6]`** Name the **3 architectural layers** of a Linux operating system from lowest hardware interface to user commands:  

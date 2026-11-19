@@ -1,4 +1,4 @@
-# Chapter 11: Cybersecurity, Cryptography, Zero Trust, SIEM & STRIDE (`Std 1.0 | ITS 201–202 / Sec+`)
+# Chapter 11: Cybersecurity, Cryptography, Zero Trust, SIEM & STRIDE (`Std 1.0 | CTE IT Security / CompTIA Security+`)
 
 > **Before you wire another Express or `node:http` endpoint onto the open internet:** Grep any old student repo for `"SELECT * FROM users WHERE name = '" +`, `Access-Control-Allow-Origin: *`, or a quick `crypto.createHash('md5')` helper copied from a 2012 blog post. If any single one of those lines shows up, an automated scanner finds and exploits your server faster than you can close your laptop.
 
@@ -8,7 +8,7 @@ Every semester I watch smart developers spend three weekends crafting sleek fron
 
 **Security isn't a plugin you install on Friday afternoon. It is how every byte is encrypted, verified, segmented, logged, and governed from day one.**
 
-Chapter 11 integrates **AZ CTE Standard 1.0 (`1.1–1.7`)** with enterprise defense, Zero Trust architecture, SIEM correlation, quantitative risk math, DRP, and regulatory compliance from **West-MEC `ITS 201–202` (`CompTIA Security+` / `ADE Network Security 1.0, 4.5–5.10, 9.1–11.6`)**.
+Chapter 11 integrates **AZ CTE Standard 1.0 (`1.1–1.7`)** with enterprise defense, Zero Trust architecture, SIEM correlation, quantitative risk math, DRP, and regulatory compliance aligned to **CTE IT Security (`11.1999.00`) / CompTIA Security+ (`ADE Network Security 1.0, 4.5–5.10, 9.1–11.6`)**.
 
 ---
 
@@ -20,7 +20,7 @@ Bookmark these unit hubs before diving into the deep read:
    - Lesson Plan & Slides: [`lesson-plan.md`](./lesson-plan.md) | [`slides/slides.md`](./slides/slides.md)
    - Demos: [`cryptoSanitizationDemo.js`](./code/cryptoSanitizationDemo.js), [`aesTlsDemo.test.js`](./code/aesTlsDemo.test.js) & [`secureServer.js`](./code/secureServer.js)
    - Student Starters: [`cryptoSanitizeLab.js`](../0-student_files/12-security-server/cryptoSanitizeLab.js) & [`secureServer.js`](../0-student_files/12-security-server/secureServer.js)
-2. **[Lesson 11.2 — Zero Trust, Firewalls, SIEM Correlation & STRIDE (`ITS 201–202`)](./02-Zero-Trust-Firewalls-SIEM-and-STRIDE/readme.md)**
+2. **[Lesson 11.2 — Zero Trust, Firewalls, SIEM Correlation & STRIDE (`CTE IT Security / CompTIA Security+`)](./02-Zero-Trust-Firewalls-SIEM-and-STRIDE/readme.md)**
    - Slides & Student Lab: [`02-Zero-Trust-Firewalls-SIEM-and-STRIDE/slides/slides.md`](./02-Zero-Trust-Firewalls-SIEM-and-STRIDE/slides/slides.md) | [`02-Zero-Trust-Firewalls-SIEM-and-STRIDE/student-lesson.md`](./02-Zero-Trust-Firewalls-SIEM-and-STRIDE/student-lesson.md)
    - Demo & Starter: [`zeroTrustSiemDemo.mjs`](./02-Zero-Trust-Firewalls-SIEM-and-STRIDE/code/zeroTrustSiemDemo.mjs), [`zeroTrustSiemDemo.test.mjs`](./02-Zero-Trust-Firewalls-SIEM-and-STRIDE/code/zeroTrustSiemDemo.test.mjs) & [`firewallSiemLab.mjs`](../0-student_files/11-zero-trust-siem/firewallSiemLab.mjs)
 
@@ -136,7 +136,7 @@ try {
 
 ---
 
-## 4. Zero Trust, Firewalls, SIEM, STRIDE & Risk/DRP (`ITS 201–202`)
+## 4. Zero Trust, Firewalls, SIEM, STRIDE & Risk/DRP (`CTE IT Security / CompTIA Security+`)
 
 Perimeter security fails the second an attacker clicks one phishing link inside the building. **Zero Trust ("Never Trust, Always Verify")** assumes the corporate LAN itself is hostile—requiring identity, device posture, MFA, and **micro-segmentation** at every step.
 

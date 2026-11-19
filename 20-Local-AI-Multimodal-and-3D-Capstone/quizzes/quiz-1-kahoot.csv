@@ -1,14 +1,14 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
-On which default localhost port does Ollama serve /api/chat locally?,80,443,11434,3306,20,3
-Which quantized model format (e.g. Q4_K_M) powers fast local LLM inference?,GGUF,JPEG,CSV,HTML5,20,1
-Which MIME Content-Type header streams incremental Server-Sent Events (SSE)?,application/zip,text/event-stream,image/png,audio/wav,20,2
-Which US student privacy law favors local inference over third-party cloud logging?,FERPA,DMCA,DNSSEC,GPLv3,20,1
-Which browser API lets Transformers.js execute quantized models client-side?,WebGPU and WASM,FTP,SMTP,Flash Player,20,1
-Which vector math metric scores RAG chunk relevance between -1 and 1?,Bubble sort,Cosine similarity,Bitwise XOR,Modulo,20,2
-How many bytes long is the standard RIFF/WAVE header before PCM audio samples?,8 bytes,44 bytes,512 bytes,1024 bytes,20,2
-Which local open-source pair provides offline Speech-to-Text and Text-to-Speech?,Whisper.cpp and Piper,MySQL and Vite,Phaser and CSS,FTP and SSH,20,1
-What exact byte size does a Binary STL mesh with T triangles occupy?,50 * T,84 + 50 * T,100 + 12 * T,44 + 2 * T,30,2
-Why validate a generated .stl mesh before opening PrusaSlicer or Cura?,To add ads,To verify watertightness and bed fit,To compress audio,To enable cookies,20,2
-In TF-IDF (tf * log(N / df)) what IDF score does a word in every doc (df = N) get?,0,1,N,100,20,1
-Which AI family learns P(y|x) to classify labels instead of generating outputs?,Diffusion GANs,Discriminative classifiers,3D slicers,Prompt templates,20,2
-Which four core functions structure the NIST AI Risk Management Framework?,Plan Code Build Ship,Govern Map Measure Manage,Read Eval Print Loop,Create Read Update Delete,20,2
+Which federal privacy law restricts sending student educational PII to unauthorized cloud LLMs?,FCC Part 15,FAA Part 107,OSHA 1910,FERPA,20,4
+Which HTTP Content-Type header identifies Server-Sent Events (SSE) token streaming?,application/octet-stream,audio/wav,text/event-stream,application/x-ndjson,20,3
+"What numeric bounds span cosineSimilarity(vecA, vecB) across non-zero numeric embeddings?","[-Infinity, 0]","[-1, 1]","[1, Infinity)","[0, 100]",20,2
+How many header bytes open an uncompressed RIFF/WAVE file vs a Binary .stl mesh header?,44 bytes (WAV) vs 84 bytes (STL),16 vs 32 bytes,8 vs 12 bytes,128 vs 256 bytes,20,1
+Which ARIA live attribute announces streaming AI response text cleanly to screen readers?,autofocus,aria-hidden='true',tabindex='-1',aria-live='polite',20,4
+Why render AI replies via element.textContent rather than innerHTML inside the chat panel?,Compresses SSE chunks,Persists state into localStorage,Prevents XSS script execution from model output,Enables WebGPU shaders,20,3
+Which four governance pillars organize the NIST AI Risk Management Framework (AI RMF)?,"Input, Hidden, Output, Loss","Govern, Map, Measure, Manage","Tokenize, Embed, Rank, Sort","Plan, Build, Deploy, Retire",20,2
+Why scrub email addresses and student IDs BEFORE appending user prompts into audit logs?,Prevents sensitive PII leakage inside log sinks,Speeds CSS flexbox layout,Shrinks 44-byte WAV headers,Increases token temperature,20,1
+Why does Q4_K_M 4-bit quantization enable a 7B parameter model to run on classroom laptops?,Eliminates heat dissipation,Upgrades CPU clock speed to 8 GHz,Turns binary RAM into NVMe SSD,Cuts VRAM/RAM footprint from ~14 GB to ~4.5 GB,20,4
+Why must strict JSON tool allowlists validate LLM tool names before backend function calls?,Disables UTF-8 string decoding,Bypasses HTTP 200 status,Blocks prompt-injected calls to unintended OS tools,Forces all variables to var,20,3
+Which default loopback TCP port and format serve Ollama /api/chat and local quantized models?,3030 + SQLite,11434 + GGUF,443 + SOAP,27017 + BSON,20,2
+"In TF-IDF (tf * log(N/df)) when df = N, what value appears, and how do P(y|x) vs P(x,y) differ?",IDF = 0; discriminative classifies P(y|x) vs generative,IDF = N; both generate PNGs,IDF = 1; generative classifies labels only,IDF = -Infinity; neither uses math,30,1
+Which Unit 20 CAD physical showcase exports directly to Unit 21 drone assembly via STL/OBJ?,Unsigned kernel drivers,Plain CSS stylesheets for printers,Uncompressed 24-hour MP4 videos,"Watertight canopies, camera brackets, or GPS masts",20,4

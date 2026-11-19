@@ -1,14 +1,14 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
-In the CSS Box Model which layer provides inner spacing inside the border?,margin,padding,z-index,float,20,2
-Which CSS rule ensures padding and borders are included within width?,display: none,box-sizing: border-box,overflow: hidden,position: fixed,20,2
-What WCAG AA minimum color contrast ratio applies to normal body text?,1.5 to 1,4.5 to 1,2.0 to 1,1.1 to 1,20,2
+In the CSS Box Model which layer provides inner spacing inside the border?,margin,z-index,padding,float,20,3
+Which CSS rule ensures padding and borders are included within width?,box-sizing: border-box,display: none,overflow: hidden,position: fixed,20,1
+What WCAG AA minimum color contrast ratio applies to normal body text?,1.5 to 1,1.1 to 1,2.0 to 1,4.5 to 1,20,4
 Which CSS layout mode aligns BOTH 2D rows and columns together cleanly?,Inline float,CSS Grid,Table borders,Static block,20,2
-Federal legal frameworks governing educational tech accessibility are:,GDPR and PCI,ADA Section 504 and 508,HTML4 and FTP,DNS and IPv6,20,2
-Which HTML5 Canvas 2D API moves the coordinate origin before drawing?,ctx.translate(x y),ctx.erase(),ctx.stretch(),ctx.padding(),20,1
-Which semantic HTML5 tag wraps the unique primary page body content?,<div class="box">,<main>,<marquee>,<blink>,20,2
-Why does semantic <button> beat <div onclick> for accessibility?,<button> automatically supports Tab and Enter,<div> forbids JS events,CSS ignores <button>,<button> disables mobile tap,20,1
-Which HTML head tag populates search engine result preview descriptions?,<meta name="description">,<script>,<style>,<canvas>,20,1
-Which browser API stores small strings persistently across page refreshes?,RAM cache,localStorage,Promise.race,DNS TTL,20,2
-Which specialized AI chip runs low-power CV inference directly on edge cameras?,Central Processing Unit (CPU),Neural Processing Unit (NPU),Optical DVD Drive,Mechanical Hard Disk,20,2
-In Rec. 601 Luminance (0.299R + 0.587G + 0.114B) which channel carries max weight?,Alpha channel,Blue channel (0.114),Green channel (0.587),Red channel (0.299),20,3
-What does Intersection over Union (IoU) measure in Object Detection?,Overlap divided by combined union area of predicted and true boxes,Total file size in RGBA megabytes,Number of CSS Grid columns,CPU clock frequency in gigahertz,20,1
+Federal legal frameworks governing educational tech accessibility are:,ADA Section 504 and 508,GDPR and PCI,HTML4 and FTP,DNS and IPv6,20,1
+Which HTML5 Canvas 2D API moves the coordinate origin before drawing?,ctx.stretch(),ctx.erase(),ctx.translate(x y),ctx.padding(),20,3
+Which semantic HTML5 tag wraps the unique primary page body content?,"<div class=""box"">",<blink>,<marquee>,<main>,20,4
+Why does semantic <button> beat <div onclick> for accessibility?,<div> forbids JS events,<button> automatically supports Tab and Enter,CSS ignores <button>,<button> disables mobile tap,20,2
+Which HTML head tag populates search engine result preview descriptions?,<style>,<script>,"<meta name=""description"">",<canvas>,20,3
+Which browser API stores small strings persistently across page refreshes?,RAM cache,DNS TTL,Promise.race,localStorage,20,4
+Which specialized AI chip runs low-power CV inference directly on edge cameras?,Neural Processing Unit (NPU),Central Processing Unit (CPU),Optical DVD Drive,Mechanical Hard Disk,20,1
+In Rec. 601 Luminance (0.299R + 0.587G + 0.114B) which channel carries max weight?,Alpha channel,Green channel (0.587),Blue channel (0.114),Red channel (0.299),20,2
+What does Intersection over Union (IoU) measure in Object Detection?,CPU clock frequency in gigahertz,Total file size in RGBA megabytes,Number of CSS Grid columns,Overlap divided by combined union area of predicted and true boxes,20,4

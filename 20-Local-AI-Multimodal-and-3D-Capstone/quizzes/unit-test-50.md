@@ -1,325 +1,326 @@
-# Unit 20 Mastery Exam (50 Questions): Local Multimodal AI, Agentic Governance & 3D CAD Capstone
+# Unit 20 Mastery Exam (50 Questions): Local AI Security, Streaming JS, Hardware & 3D CAD
 
-**Course:** JavaScript First — Software & App Design (`AZ CTE CIP 11.0202.00` & West-MEC `AI101–AI202`)  
-**Standards:** `1.0–19.0`, `AI101–AI202`, `Std 14.0`, `Azure AI-900`, `ITS AI`, `ITS Python`  
-**Directions:** Circle or select the best option (`A`–`D`) for each question. No outside reference sheets unless approved by your instructor.
+**Course:** JavaScript First (`CTE/CIS 202` — Grades 11–12 High School CTE & Community College)  
+**Directions:** Choose the best option (`A`, `B`, `C`, or `D`) for each question. Record your answers on your answer sheet. Do not write in shared reference booklets.
 
----
-
-## Part A: Core Concepts & Standards Recall (`[L1 Remember]` — Q1–Q10)
-
-1. **`[L1 | 8.1]`** On which default local TCP port does Ollama expose `POST /api/chat` and `/api/embed`?
-   - A) `3030`
-   - B) `8080`
-   - C) `11434`
-   - D) `27017`
-
-2. **`[L1 | 19.8]`** Which quantized weight file format (`Q4_K_M`, `Q8_0`) compresses 7B parameter models to run on classroom laptops?
-   - A) `GGUF`
-   - B) `RIFF`
-   - C) `SQLite`
-   - D) `JSON:API`
-
-3. **`[L1 | 8.1]`** Which HTTP `Content-Type` header identifies a Server-Sent Events (SSE) token stream?
-   - A) `application/x-ndjson`
-   - B) `text/event-stream`
-   - C) `audio/wav`
-   - D) `application/octet-stream`
-
-4. **`[L1 | 2.3]`** Which federal privacy law protects student educational records from unauthorized third-party cloud LLM exposure?
-   - A) `FAA Part 107`
-   - B) `FERPA`
-   - C) `FCC Part 15`
-   - D) `OSHA 1910`
-
-5. **`[L1 | 19.8]`** Which browser API stack executes quantized `Transformers.js` weights locally inside a tab without a backend daemon?
-   - A) `WebGPU / WASM`
-   - B) `CommonJS / cluster`
-   - C) `gRPC / HTTP2`
-   - D) `ODBC / ADO`
-
-6. **`[L1 | 16.4]`** What numeric output range can `cosineSimilarity(vecA, vecB)` produce for non-zero numeric vectors?
-   - A) `[0, 100]`
-   - B) `[-1, 1]`
-   - C) `[1, Infinity)`
-   - D) `[-Infinity, 0]`
-
-7. **`[L1 | 4.1]`** How many bytes occupy a standard uncompressed RIFF/WAVE header before raw 16-bit PCM audio samples start?
-   - A) `16 bytes`
-   - B) `44 bytes`
-   - C) `84 bytes`
-   - D) `128 bytes`
-
-8. **`[L1 | 19.8]`** Which pair of open-source local voice engines handles offline Speech-to-Text (STT) and Text-to-Speech (TTS) in Lesson 20.2?
-   - A) `Ollama (STT) and OpenSCAD (TTS)`
-   - B) `Whisper.cpp (STT) and Piper (TTS)`
-   - C) `Vite (STT) and Phaser (TTS)`
-   - D) `Curator (STT) and ComfyUI (TTS)`
-
-9. **`[L1 | 4.1]`** What is the exact byte length of a valid Binary `.stl` buffer containing `T` triangular facets?
-   - A) `44 + 2 * T`
-   - B) `84 + 50 * T`
-   - C) `80 + 36 * T`
-   - D) `128 + 16 * T`
-
-10. **`[L1 | AI Std 14.0]`** Which four core functions organize the NIST AI Risk Management Framework (`AI RMF 1.0`)?
-    - A) `Plan, Build, Deploy, Retire`
-    - B) `Tokenize, Stem, Embed, Stream`
-    - C) `Govern, Map, Measure, Manage`
-    - D) `Input, Hidden, Output, Softmax`
+**Name:** `__________________________` **Date:** `______________` **Score:** `____ / 50`
 
 ---
 
-## Part B: Comprehension & Architecture Comparison (`[L2 Understand]` — Q11–Q20)
+## Part A — Core Recall (`[L1 Remember]`, Questions 1–10)
 
-11. **`[L2 | 18.0]`** Why can calling `JSON.parse(chunk)` directly on Ollama HTTP `POST /api/chat` stream reads throw `SyntaxError`?
-    - A) Ollama encrypts every second line in AES-256
-    - B) TCP stream chunks can split a single NDJSON line mid-token across two reads
-    - C) Server-Sent Events do not allow UTF-8 strings
-    - D) `JSON.parse` forbids nested `message` objects
+1. **`[L1 Remember]`** Which federal statute restricts uploading identifiable student educational records to third-party cloud APIs?
+   - A) OSHA 1910
+   - B) FERPA
+   - C) FCC Part 15
+   - D) FAA Part 107
 
-12. **`[L2 | 2.3]`** What advantage do local quantized `GGUF` (`Q4_K_M`) models hold over commercial cloud endpoints for school tutoring tools?
-    - A) Unlimited context memory at zero RAM cost
-    - B) Zero cloud PII egress under FERPA and zero per-token API fees
-    - C) Guaranteed 100% factual accuracy without grounding
-    - D) Automatic physical 3D printing without slicers
+2. **`[L1 Remember]`** Which four core functions structure the NIST AI Risk Management Framework (AI RMF 1.0)?
+   - A) Govern, Map, Measure, Manage
+   - B) Input, Hidden, Output, Loss
+   - C) Plan, Build, Ship, Retire
+   - D) Tokenize, Stem, Embed, Sort
 
-13. **`[L2 | AI102]`** How does a Discriminative classifier (`P(y|x)`) fundamentally differ from a Generative transformer (`P(x, y)`)?
-    - A) Discriminative models learn decision boundaries to label classes, while Generative models synthesize new tokens or media
-    - B) Discriminative models only run on GPUs, while Generative models only run in SQLite
-    - C) Generative models eliminate all prompt injection risks automatically
-    - D) Discriminative models emit Binary `.stl` triangles instead of probabilities
+3. **`[L1 Remember]`** Which HTTP MIME Content-Type header identifies Server-Sent Events (SSE) token streams?
+   - A) audio/wav
+   - B) application/x-ndjson
+   - C) application/octet-stream
+   - D) text/event-stream
 
-14. **`[L2 | AI101]`** In TF-IDF (`tf * Math.log(N / df)`), what weight does a common word appearing in ALL `N` documents (`df === N`) receive?
-    - A) `1.0`
-    - B) `N`
-    - C) `0` (since `ln(1) = 0`, down-weighting shared boilerplate)
-    - D) `-Infinity`
+4. **`[L1 Remember]`** What numeric output range does cosineSimilarity(vecA, vecB) span for non-zero numeric arrays?
+   - A) [-Infinity, 0]
+   - B) [1, Infinity)
+   - C) [-1, 1]
+   - D) [0, 100]
 
-15. **`[L2 | AI202]`** Why should an agent emitting strict JSON tool calls use a low `temperature` (`0.0–0.2`) plus RAG citations?
-    - A) It forces higher creative randomness and disables schema validation
-    - B) It narrows logit entropy toward deterministic schema-valid output grounded in retrieved chunks
-    - C) It bypasses the `maxSteps` budget guard
-    - D) It converts `P(y|x)` into uncompressed PCM audio
+5. **`[L1 Remember]`** In Node Buffer / DataView serialization, how many bytes begin a PCM RIFF/WAVE header vs Binary STL?
+   - A) 24 vs 48 bytes
+   - B) 44 vs 84 bytes
+   - C) 128 vs 256 bytes
+   - D) 16 vs 32 bytes
 
-16. **`[L2 | 9.2]`** What happens when a frontend passes a `FileReader.readAsDataURL()` string straight into Ollama's `llava` `messages[0].images` array?
-    - A) Ollama strips MIME headers automatically without error
-    - B) Ollama rejects the payload because it expects raw base64 without the `data:image/...;base64,` prefix
-    - C) The image renders inside an `<audio>` tag
-    - D) `buildOllamaVisionPayload` scales the image to Binary STL
+6. **`[L1 Remember]`** What exact byte size equals a Binary .stl buffer holding T triangles (50 bytes per facet)?
+   - A) 84 + 50 * T
+   - B) 44 + 2 * T
+   - C) 128 + 16 * T
+   - D) 80 + 36 * T
 
-17. **`[L2 | 19.8]`** Why do 3D CAD generators apply the counter-clockwise right-hand rule when ordering triangle vertices `(a, b, c)`?
-    - A) So `(b - a) × (c - a)` normals face outward and slicers treat the mesh as a solid volume
-    - B) To invert every face normal toward the interior of the part
-    - C) To cut the Binary `.stl` file size by 50%
-    - D) To convert meters into inches automatically
+7. **`[L1 Remember]`** Which ARIA attribute politely announces dynamically appended streaming tokens to screen readers?
+   - A) role='presentation'
+   - B) aria-hidden='true'
+   - C) tabindex='-1'
+   - D) aria-live='polite'
 
-18. **`[L2 | 19.8]`** Why run automated `validateMeshForPrint()` checks in JavaScript before opening `PrusaSlicer` or `Cura`?
-    - A) It catches non-manifold naked edges, negative volume, oversized bounds, and thin walls deterministically in CI tests
-    - B) It physically heats the printer nozzle over HTTP
-    - C) It disables `zMin === 0` grounding so parts print mid-air
-    - D) It converts ASCII `.stl` directly into `.mp3` audio
+8. **`[L1 Remember]`** Which browser compute APIs let local AI run quantized weights using client GPU/CPU hardware directly?
+   - A) gRPC / FTP
+   - B) ODBC / ADO
+   - C) WebGPU / WASM
+   - D) CommonJS / cluster
 
-19. **`[L2 | 16.2]`** When should an offline voice chat app pair browser `SpeechRecognition`/`speechSynthesis` with `16 kHz` PCM `.wav` builders?
-    - A) Only when uploading files to an external cloud bucket
-    - B) So browsers use zero-install Web Speech APIs while offline desktop/CI pipelines exchange standard RIFF/WAVE `Whisper`/`Piper` buffers
-    - C) Because browsers forbid HTML `<button>` elements inside `<main>`
-    - D) Because `16 kHz` WAV uses 80-byte STL headers
+9. **`[L1 Remember]`** On which default localhost TCP port does Ollama serve /api/chat using GGUF quantized models?
+   - A) 3030
+   - B) 11434
+   - C) 8080
+   - D) 27017
 
-20. **`[L2 | AI Std 14.0]`** Which design priority sits at the core of OECD AI Principles and IEEE Ethically Aligned Design?
-    - A) Maximizing hidden automated surveillance
-    - B) Preserving human agency, transparency, fairness, robustness, and clear accountability
-    - C) Eliminating all human review from high-risk grading systems
-    - D) Using `unacceptable` EU AI Act risk tiers in classrooms
-
----
-
-## Part C: Code Implementation & Calculations (`[L3 Apply]` — Q21–Q30)
-
-21. **`[L3 | 16.4]`** What does `cosineSimilarity([3, 4], [0, 5])` evaluate to?
-    - A) `0.0`
-    - B) `0.5`
-    - C) `0.8`
-    - D) `1.0`
-
-22. **`[L3 | 4.1]`** What is the exact total byte length of a `16,000 Hz`, `16-bit` mono PCM `.wav` buffer lasting `0.5 seconds`?
-    - A) `8,044 bytes`
-    - B) `16,044 bytes`
-    - C) `32,044 bytes`
-    - D) `16,000 bytes`
-
-23. **`[L3 | 4.1]`** A `16,000 Hz`, `16-bit` mono PCM `.wav` recording lasts `1.0 second`. What is its total buffer length including the RIFF header?
-    - A) `16,044 bytes`
-    - B) `32,000 bytes`
-    - C) `32,044 bytes`
-    - D) `64,044 bytes`
-
-24. **`[L3 | 9.2]`** Given `'data:image/png;base64,iVBORw0KGgo='`, what exact string must `buildOllamaVisionPayload()` place inside `messages[0].images`?
-    - A) `'data:image/png;base64,iVBORw0KGgo='`
-    - B) `'iVBORw0KGgo='`
-    - C) `'image/png'`
-    - D) `'base64,iVBORw0KGgo='`
-
-25. **`[L3 | 9.2]`** What keyframe `timestampSec` array does `extractVideoFramePlan({ durationSec: 9, sampleIntervalSec: 3, maxFrames: 8 })` produce?
-    - A) `[3, 6, 9]`
-    - B) `[0, 3, 6]`
-    - C) `[0, 1, 2, 3, 4, 5, 6, 7]`
-    - D) `[0, 4.5, 9]`
-
-26. **`[L3 | 4.1]`** A watertight parametric box mesh uses `12` triangles (`2` per cube face). What byte length must `exportBinaryStl()` return?
-    - A) `600 bytes`
-    - B) `644 bytes`
-    - C) `684 bytes`
-    - D) `1,284 bytes`
-
-27. **`[L3 | AI101]`** What output array must `tokenizeAndStem('The models are safely running')` return after stopword removal and suffix stemming?
-    - A) `['the', 'models', 'are', 'safely', 'running']`
-    - B) `['model', 'safe', 'run']`
-    - C) `['models', 'safe', 'running']`
-    - D) `['the', 'model', 'safely']`
-
-28. **`[L3 | AI102]`** Suppose a high-risk evaluation scores `{ cohortA: 0.90, cohortB: 0.63 }`. What is the computed **Disparate Impact Ratio** (`min / max`)?
-    - A) `0.63`
-    - B) `0.70`
-    - C) `0.80`
-    - D) `1.43`
-
-29. **`[L3 | 4.3]`** In a corpus of `N = 5` documents, `"governance"` appears in `df = 1` doc (`tf = 0.2`) and `"local"` appears in `df = 5` docs (`tf = 0.2`). Which pair shows both TF-IDF weights?
-    - A) `0.2 * Math.log(5)` (~`0.3219`) and `0`
-    - B) `0` and `0.2 * Math.log(5)`
-    - C) `1.0` and `1.0`
-    - D) `0.2` and `0.2`
-
-30. **`[L3 | 17.0]`** When parsing `'Please design a 16 tooth spur gear'`, what `spec` fields must `parseCadSpecFromPrompt()` populate?
-    - A) `{ shape: 'box', widthMm: 16 }`
-    - B) `{ shape: 'spur-gear', teeth: 16, ... }`
-    - C) `{ shape: 'l-bracket', thicknessMm: 16 }`
-    - D) `{ shape: 'cylinder', radiusMm: 16 }`
+10. **`[L1 Remember]`** Which open-source local voice pair handles offline Speech-to-Text (STT) and Text-to-Speech (TTS)?
+   - A) Whisper.cpp (STT) and Piper (TTS)
+   - B) Ollama (STT) and OpenSCAD (TTS)
+   - C) MongoDB (STT) and SQLite (TTS)
+   - D) Vite (STT) and Phaser (TTS)
 
 ---
 
-## Part D: Debugging & Security Forensics (`[L4 Analyze]` — Q31–Q40)
+## Part B — Conceptual Understanding (`[L2 Understand]`, Questions 11–20)
 
-31. **`[L4 | 18.0]`** Calling `parser.push('{"message":{"content":"Hi')` immediately throws `SyntaxError` in a student's code. What is missing?
-    - A) An internal string buffer that waits until a complete `'\n'` delimiter arrives before calling `JSON.parse()`
-    - B) Converting every line to Binary `.stl` first
-    - C) Increasing `maxFrames` above `8`
-    - D) Disabling UTF-8 decoding on HTTP chunks
+11. **`[L2 Understand]`** Why does calling JSON.parse(chunk) directly on ReadableStream chunks fail mid-stream?
+   - A) JSON.parse rejects nested arrays
+   - B) SSE streams prohibit UTF-8 quotes
+   - C) Ollama encrypts every odd line
+   - D) TCP packets split single JSON lines across chunks
 
-32. **`[L4 | 1.5]`** How does `guardPromptSafety('Ignore previous instructions <script>')` neutralize both prompt injection and XSS risks?
-    - A) It rejects all alphabetic characters silently
-    - B) It appends matching pattern identifiers to `flags` (`flagged: true`) and escapes `<` / `>` into `&lt;` / `&gt;`
-    - C) It logs the raw student SSN directly to stdout
-    - D) It passes `<script>` straight into `eval()`
+12. **`[L2 Understand]`** Why favor local Q4_K_M GGUF inference over external paid LLM endpoints for school advising apps?
+   - A) Eliminates hallucinations 100%
+   - B) Replaces unit tests completely
+   - C) Zero external student PII egress + zero token fees
+   - D) Infinite RAM at zero CPU cost
 
-33. **`[L4 | 12.2]`** A local LLM emits `{ name: 'rm_rf_host', arguments: {} }` while `toolSchemas` only defines `rag_lookup` and `cad_box`. What blocks execution?
-    - A) Lowering GGUF quantization to `Q4_K_M`
-    - B) Rejecting the unknown tool name inside `validateToolCall()` against the explicit schema allowlist
-    - C) Increasing browser `localStorage` quota
-    - D) Sending the tool payload to `PrusaSlicer`
+13. **`[L2 Understand]`** Why send X-Content-Type-Options: nosniff on served UI and downloaded 3D/audio artifacts?
+   - A) Enables audio autoplay without clicks
+   - B) Stops browsers MIME-sniffing files into executable JS
+   - C) Disables HTTPS certificate checks
+   - D) Doubles 3D mesh polygon counts
 
-34. **`[L4 | AI202]`** Why can checking `if (tools[action.name])` allow a prototype-chain bypass attack when an agent asks to invoke `{ name: 'toString' }`?
-    - A) `tools['toString']` resolves `Object.prototype.toString` unless guarded with `Object.hasOwn(tools, action.name)`
-    - B) `toString` is only available in Deno TypeScript
-    - C) `Object.hasOwn` strips `data:image/png;base64,` prefixes
-    - D) JavaScript `if` statements treat `'toString'` as `0`
+14. **`[L2 Understand]`** Why strip data:image/png;base64, headers before sending canvas or file uploads to REST JSON?
+   - A) Vision APIs expect raw base64 payloads only
+   - B) PNG pixels corrupt inside `<canvas>`
+   - C) JSON.stringify forbids colons everywhere
+   - D) Browsers auto-delete base64 strings
 
-35. **`[L4 | AI102]`** A student's sentiment analyzer strips stopword `'not'` BEFORE checking negation on `'The agent is not safe'`. What bug occurs?
-    - A) The analyzer returns `SyntaxError`
-    - B) `'safe'` remains unnegated, falsely scoring an unsafe failure report as **positive**
-    - C) Cosine similarity drops below `-1`
-    - D) All email entities become lowercase
+15. **`[L2 Understand]`** Why update chat message bubbles using .textContent and HTML escaping instead of raw .innerHTML?
+   - A) Converts JSON objects into CSS grids
+   - B) Forces monospace fonts everywhere
+   - C) Enables offline WAV synthesis
+   - D) Blocks stored or reflected XSS script injection
 
-36. **`[L4 | 4.3]`** `computeMeshMetrics()` calculates `signedVolumeMm3 = -1400` on an extruded box. What geometric defect caused the negative volume?
-    - A) Clockwise (inverted) triangle vertex winding pointing face normals inward instead of outward
-    - B) Dimensions exceeded the `220 mm` bed width
-    - C) Binary STL missed its `80`-byte header
-    - D) Print wall thickness was `0.6 mm`
+16. **`[L2 Understand]`** How does an HTML5 `<canvas>` preview render a 3D CAD mesh interactively without heavy WebGL drivers?
+   - A) Converts STL bytes into HTML tables
+   - B) Installs hardware CAD drivers in CSS
+   - C) Projects rotated (x, y, z) vertices to 2D canvas lines
+   - D) Streams video frames from remote servers
 
-37. **`[L4 | 19.8]`** Inside `computeMeshMetrics()`, directed edge `u->v` occurs once while its opposite twin `v->u` has count `0`. What defect does this prove?
-    - A) The mesh is watertight and printable
-    - B) The mesh contains a non-watertight **naked edge** (open hole or missing facet)
-    - C) Triangles are grounded at `zMin === 0`
-    - D) Binary `.stl` uses big-endian floats
+17. **`[L2 Understand]`** Why compress a 7B model with 4-bit Q4_K_M quantization before classroom deployment?
+   - A) Converts HDD storage to SRAM cache
+   - B) Shrinks ~14 GB FP16 weights to fit ~4.5 GB RAM/VRAM
+   - C) Eliminates printer bed leveling
+   - D) Increases PCIe bus clock speed
 
-38. **`[L4 | 19.8]`** A parametric bracket yields `bounds.zMin = 5.0` and `nakedEdges = 0`. Why does `validateMeshForPrint()` reject it?
-    - A) `nakedEdges` must equal `1`
-    - B) The mesh floats `5 mm` above the print bed instead of grounding at `zMin === 0`
-    - C) `bounds` objects cannot contain decimal numbers
-    - D) Brackets require negative volume
+18. **`[L2 Understand]`** What core governance rule defines IEEE Ethically Aligned Design and OECD AI Human Agency?
+   - A) Human oversight, transparency, and clear accountability
+   - B) Full autonomous firing without review
+   - C) Replacing unit tests with random prompts
+   - D) Hiding system limits inside binary blobs
 
-39. **`[L4 | AI202]`** During a ReAct unit test, `modelStep` requests valid tools on Steps `1..3` without returning `finalAnswer`, given `maxSteps: 3`. What must `runReActAgent()` return?
-    - A) It enters an infinite `while` loop until memory runs out
-    - B) `{ status: 'max_steps_exceeded', stepsUsed: 3 }`
-    - C) `{ status: 'awaiting_approval', stepsUsed: 0 }`
-    - D) `{ status: 'completed', finalAnswer: 'OK' }`
+19. **`[L2 Understand]`** How does a Discriminative classifier P(y|x) differ fundamentally from a Generative LLM P(x, y)?
+   - A) They return identical STL triangle arrays
+   - B) Discriminative needs GPU; Generative uses SQLite only
+   - C) Generative stops prompt injection automatically
+   - D) Discriminative labels boundaries; Generative creates sequences
 
-40. **`[L4 | AI202]`** A student calls `runReActAgent()` with a destructive tool `purge_stale_logs` (`requiresApproval: true`). What must `deleteCount` equal right after the initial pause (`status === 'awaiting_approval'`)?
-    - A) `0` (side effects must stay blocked until resumed with `approvalDecision: { approved: true }`)
-    - B) `1` (the tool runs once, then asks permission)
-    - C) `5` (`maxSteps` copies execute)
-    - D) `undefined`
+20. **`[L2 Understand]`** In TF-IDF (tf * log(N / df)), what score does a word present in ALL N documents (df = N) get?
+   - A) 1.0
+   - B) N
+   - C) 0 (ln(1) = 0 down-weights noise)
+   - D) -Infinity
 
 ---
 
-## Part E: Architecture Evaluation & Governance (`[L5 Evaluate]` — Q41–Q50)
+## Part C — Practical Application (`[L3 Apply]`, Questions 21–30)
 
-41. **`[L5 | 2.3]`** Which architecture BEST balances FERPA student IEP compliance, offline classroom grading, and low hardware cost?
-    - A) Shipping raw IEP transcripts directly to an external public SaaS API with `localStorage` disabled
-    - B) Local `Ollama` (`Q4_K_M` GGUF) behind a Node SSE proxy with deterministic offline simulator fallback + optional browser `WebGPU`
-    - C) Running uncompressed `405B` float32 models inside Chromium `localStorage`
-    - D) Disabling all prompt-safety guards and PII redaction
+21. **`[L3 Apply]`** Calculate cosineSimilarity([3, 4], [0, 5]) using dot(A, B) / (||A|| * ||B||):
+   - A) 0.25
+   - B) 0.80
+   - C) 0.50
+   - D) 1.00
 
-42. **`[L5 | 19.8]`** A generated `.stl` enclosure measures `240 x 180 x 30 mm`, sits at `zMin = 0`, and has `0.8 mm` wall thickness on a `220 x 220 x 250 mm` bed with `0.4 mm` nozzle. What is the correct validator verdict?
-    - A) Printable with `0` warnings
-    - B) Fails **two** checks: `fitsBuildPlate` (`240 > 220 mm`) AND `wallOk` (`0.8 < 1.2 mm` minimum 3 perimeters)
-    - C) Fails only `grounded` (`zMin`)
-    - D) Fails only `signedVolumeMm3`
+22. **`[L3 Apply]`** Compute exact total byte size of a 0.5-second, 16000 Hz, 16-bit (2 bytes/sample) mono .wav file:
+   - A) 16,044 bytes
+   - B) 8,044 bytes
+   - C) 64,044 bytes
+   - D) 32,044 bytes
 
-43. **`[L5 | 19.8]`** Why does `validateMeshForPrint()` enforce a `1.2 mm` minimum wall floor when targeting a standard `0.4 mm` 3D-printer nozzle?
-    - A) `0.4 mm × 3 perimeters = 1.2 mm`, guaranteeing at least three continuous extruded walls for structural strength
-    - B) `1.2 mm` matches Ollama port `11434`
-    - C) `PrusaSlicer` cannot parse integers smaller than `2`
-    - D) PLA melts at `1.2°C`
+23. **`[L3 Apply]`** Compute exact total byte size of a 1.0-second, 16000 Hz, 16-bit mono PCM .wav file:
+   - A) 32,000 bytes
+   - B) 64,088 bytes
+   - C) 16,044 bytes
+   - D) 32,044 bytes
 
-44. **`[L5 | AI Std 14.0]`** A vendor submits a complete Model Card for a school social-scoring system marked `euAiActRiskTier: 'unacceptable'`. What does `buildAndValidateModelCard()` return?
-    - A) `{ valid: true, deployable: true }`
-    - B) `{ valid: false, deployable: false }` citing **EU AI Act Article 5 prohibition**
-    - C) `{ valid: true, warnings: ['Consider monitoring'] }`
-    - D) It silently downgrades the tier to `'minimal'`
+24. **`[L3 Apply]`** After stripping prefix from 'data:image/png;base64,iVBORw0KGgo=', what string goes to JSON?
+   - A) ``'<img src>'``
+   - B) 'png'
+   - C) 'iVBORw0KGgo='
+   - D) 'data:image/png;base64'
 
-45. **`[L5 | AI Std 14.0]`** A `"high"`-risk grading assistant reports subgroup pass rates `{ cohortA: 0.90, cohortB: 0.63 }`. Under the four-fifths (`80%`) rule, what is the deployment verdict?
-    - A) Deployable because `0.90 >= 0.80`
-    - B) Blocked (`deployable: false`) because disparate impact `0.63 / 0.90 = 0.70 < 0.80`
-    - C) Deployable if `temperature` is raised to `1.8`
-    - D) Ignored because Model Cards exclude metrics
+25. **`[L3 Apply]`** A keyframe loop steps t += 3 while t < 9 starting at t = 0. Which timestamp array results?
+   - A) [0, 3, 6, 9]
+   - B) [0, 3, 6]
+   - C) [3, 6, 9]
+   - D) [1, 4, 7]
 
-46. **`[L5 | AI Std 14.0]`** A `"high"`-risk Model Card fills `govern`, `map`, and `measure` in `nistRmfMapping`, plus `intendedUse`, but omits `manage` and `hitlControls`. How should `buildAndValidateModelCard()` judge it?
-    - A) Valid as long as `metrics.f1 > 0.90`
-    - B) Invalid (`valid: false`, `deployable: false`) reporting missing `nistRmfMapping.manage` and `hitlControls` errors
-    - C) Valid with `0` errors and `0` warnings
-    - D) Valid only for `Wavefront .obj` meshes
+26. **`[L3 Apply]`** Compute exact Binary .stl file size in bytes for a watertight 12-triangle cube mesh:
+   - A) 684 bytes
+   - B) 1,024 bytes
+   - C) 600 bytes
+   - D) 644 bytes
 
-47. **`[L5 | 12.2]`** What is the most sound milestone order on the Unit 20 Capstone Rubric (`unit-project.md`)?
-    - A) Spend Days 1–9 rendering custom textures before building SSE streaming or the Model Card
-    - B) Lock in **100-pt Core** (SSE + offline fallback + Voice WAV + HITL & Model Card) before attempting **Bonus Vision** and **2x Double-Bonus CAD**
-    - C) Delete all `node:test` suites so offline grading skips errors
-    - D) Hardcode `127.0.0.1:11434` with zero fallback so CI fails whenever Ollama isn't installed
+27. **`[L3 Apply]`** After lowercasing, filtering stopwords (the, are), and suffix stemming "The models are safely running":
+   - A) ['models', 'running']
+   - B) ['the', 'model', 'are']
+   - C) ['safe', 'only']
+   - D) ['model', 'safe', 'run']
 
-48. **`[L5 | 18.0]`** Why must `capstone.test.mjs` run cleanly when `ollamaHost` points to an unreachable closed port (or simulator mode)?
-    - A) So grading tests execute deterministically in `< 2 seconds` on any CPU-only CI machine without hanging on external daemons
-    - B) Because Node 24 lacks HTTP client APIs
-    - C) To prevent `server.close()` from freeing TCP sockets
-    - D) Because `audio/wav` cannot transmit over `127.0.0.1`
+28. **`[L3 Apply]`** Evaluate disparate impact ratio if Group A approval = 0.90 and Group B approval = 0.63:
+   - A) 1.43
+   - B) 0.77
+   - C) 0.70
+   - D) 0.27
 
-49. **`[L5 | AI202]`** When a human reviewer rejects a paused destructive action via `approvalDecision: { approved: false, reason: 'Keep logs' }`, what verifies proper HITL governance?
-    - A) The tool runs once quietly and logs a warning
-    - B) The destructive `execute()` count remains `0`, `HITL_DENIED` enters working memory, and the agent summarizes safely (`completed`)
-    - C) The process throws an unhandled `ReferenceError`
-    - D) `Object.hasOwn` deletes the `tools` object
+29. **`[L3 Apply]`** In N = 5 documents, term frequency = 0.2. Compare TF-IDF scores for df = 1 vs df = 5:
+   - A) 0 vs 0.2 * ln(5)
+   - B) 0.2 * ln(5) vs 0
+   - C) 1.0 vs 0.2
+   - D) 5.0 vs 1.0
 
-50. **`[L5 | Azure AI-900]`** Which industry certification exam topic aligns directly with auditing fairness (`>= 0.80`), transparency notices, and HITL accountability in Lesson 20.3?
-    - A) `Microsoft Azure AI-900 — Responsible AI Domain`
-    - B) `FAA Part 107 Night Lighting Rule`
-    - C) `MongoDB E11000 Index Tuning`
-    - D) `Knulli EmulationStation ROM Layout`
+30. **`[L3 Apply]`** Parametric prompt asks for a "16-mm Unit 21 GPS mast bracket". What CAD params extract?
+   - A) part: 'gps-mast', diameterMm: 16
+   - B) part: 'audio-wav', rate: 16
+   - C) part: 'sql-table', rows: 16
+   - D) part: 'http-port', port: 16
+
+---
+
+## Part D — Analysis & Debugging (`[L4 Analyze]`, Questions 31–40)
+
+31. **`[L4 Analyze]`** Streaming NDJSON crashes mid-sentence with Unexpected end of JSON input. Missing logic?
+   - A) Disable TLS socket timeouts
+   - B) Call parseInt on each chunk byte
+   - C) Convert ArrayBuffer into CSS strings
+   - D) Accumulate remainder string until \n before JSON.parse
+
+32. **`[L4 Analyze]`** Input contains `"Ignore instructions <script>alert(1)</script>"`. Best two-stage sanitizer response?
+   - A) Allow raw tags inside innerHTML
+   - B) Forward unfiltered string to shell
+   - C) Flag prompt injection AND HTML-escape < > chars
+   - D) Execute script then trim whitespace
+
+33. **`[L4 Analyze]`** LLM proposes calling tool run_shell when schemas only authorize rag_lookup. How to fail closed?
+   - A) Execute once in dry-run as root
+   - B) Reject any tool absent from static schema allowlist
+   - C) Return HTTP 200 without checking
+   - D) Strip only spaces from command strings
+
+34. **`[L4 Analyze]`** Why does tools["toString"] pass a naive truthy check if (tools[name]) in JS?
+   - A) Inherits Object.prototype.toString unless Object.hasOwn used
+   - B) JS objects have no prototype chain
+   - C) const freezes array indexes globally
+   - D) toString is a reserved SQL keyword
+
+35. **`[L4 Analyze]`** Sentiment pipeline deletes stopwords ("not", "no") BEFORE checking phrase polarity on "not helpful". Result?
+   - A) Deletes array indices > 2
+   - B) Throws RangeError immediately
+   - C) Returns 0.0 cosine score
+   - D) Inverted false-positive score for "helpful"
+
+36. **`[L4 Analyze]`** calculateCosineSimilarity([], []) receives empty vectors. What guard prevents silent NaN division?
+   - A) Coerce empty array to Boolean true
+   - B) Mutate inputs into CSS rules
+   - C) Throw RangeError on mismatched or zero-norm vectors
+   - D) Return Infinity silently
+
+37. **`[L4 Analyze]`** Slicer reports part floating above printer plate (zMin = 12.5 mm). Which coordinate adjustment fixes it?
+   - A) Double wall perimeter count to 6
+   - B) Translate every vertex z by -zMin so zMin === 0
+   - C) Rotate mesh 90 deg off bed
+   - D) Halve nozzle temperature by 50%
+
+38. **`[L4 Analyze]`** Chat prompt `<input>` and Send `<button>` lack labels and spill outside mobile width. Best CSS+HTML fix?
+   - A) Add `<label>`, min-width: 0 flex-1, and flex-wrap
+   - B) Set fixed width: 960px on body
+   - C) Hide button with display: none
+   - D) Disable keyboard Tab order
+
+39. **`[L4 Analyze]`** ReAct agent loops repeatedly past iteration 5 without Final Answer. Clean safety boundary?
+   - A) Restart server process silently
+   - B) Set maxSteps to Infinity
+   - C) Bypass tool parameter checks
+   - D) Enforce maxSteps guard -> status: 'max_steps_exceeded'
+
+40. **`[L4 Analyze]`** Unit 21 camera bracket .stl fails slicer with naked edge u->v & volume -1400 mm3. Cause?
+   - A) Bed plate is 220x220 mm
+   - B) Nozzle width is 0.4 mm
+   - C) Missing opposite v->u twin edge & CW inward normals
+   - D) Part uses binary instead of ASCII header
+
+---
+
+## Part E — Evaluation & Architecture (`[L5 Evaluate]`, Questions 41–50)
+
+41. **`[L5 Evaluate]`** Select the compliant architecture for a FERPA tutoring app running on 8 GB classroom laptops:
+   - A) Browser client embedding raw admin API keys
+   - B) Local quantized Q4_K_M + SSE proxy + offline mock
+   - C) 16-bit 14 GB cloud VM with open CORS *
+   - D) Public unredacted SaaS API storing chat logs
+
+42. **`[L5 Evaluate]`** Drone canopy STL has width = 240 mm and wall = 0.8 mm on a 220x220 mm, 0.4 mm nozzle printer. Fail flags?
+   - A) Both fitsBuildPlate (240 > 220) & wallOk (0.8 < 1.2)
+   - B) Only wall thickness passes; bed passes
+   - C) Only bed passes; wall passes
+   - D) Prints safely with 1 wall
+
+43. **`[L5 Evaluate]`** Why does a 0.4 mm nozzle 3D print design specify >= 1.2 mm minimum wall thickness for canopies?
+   - A) Converts ABS plastic into aluminum
+   - B) Matches HTTP keep-alive packet size
+   - C) Forces 44-byte WAV header alignment
+   - D) Guarantees >= 3 solid perimeters (3 * 0.4 = 1.2 mm)
+
+44. **`[L5 Evaluate]`** System performs public citizen social scoring. Under EU AI Act tiers, how must Model Card classify it?
+   - A) Limited risk -> add watermark only
+   - B) Exempt -> open source MIT license
+   - C) Unacceptable risk -> strictly prohibited (deployable: false)
+   - D) Minimal risk -> deploy silently
+
+45. **`[L5 Evaluate]`** Audit detects missing Manage pillar & omitted hitlControls alongside 0.70 disparate impact. Verdict?
+   - A) Delete Model Card file to clear errors
+   - B) Fail release until HITL, Manage & >=0.80 fairness met
+   - C) Switch JSON responses to XML
+   - D) Approve release with warning comment
+
+46. **`[L5 Evaluate]`** Why implement graceful non-blocking offline mode in async UI & CI tests when local model daemon sleeps?
+   - A) Prevents ECONNREFUSED crashes & tests run < 2s
+   - B) Deletes user chat history on reload
+   - C) Bypasses input sanitization rules
+   - D) Requires Docker Swarm per test
+
+47. **`[L5 Evaluate]`** Evaluating localStorage chat persistence in browser UI: what PII rule governs saved transcripts?
+   - A) Inject stored strings via document.write
+   - B) Persist plaintext API secrets for convenience
+   - C) Broadcast localStorage globally on port 80
+   - D) Never store sensitive credentials or unapproved student PII
+
+48. **`[L5 Evaluate]`** Why isolate tokenizer, cosine similarity, and STL buffer math into pure exported JS modules?
+   - A) Turns Float32Array into global strings
+   - B) Prevents JSON schema checks
+   - C) Enables deterministic node:test assertions without DOM/GPU
+   - D) Disables ES Module static imports
+
+49. **`[L5 Evaluate]`** When human reviewer clicks DENY on a pending ReAct delete action, what exact clean state remains?
+   - A) Agent retries same delete forever
+   - B) deleteCount === 0 + HITL_DENIED observation logged
+   - C) Server shuts down process with exit(1)
+   - D) File deleted first, error logged after
+
+50. **`[L5 Evaluate]`** How does Unit 20.2 CAD STL/OBJ export bridge directly into Unit 21 physical drone assembly?
+   - A) Prints tested TPU/PETG canopies, brackets & GPS masts
+   - B) Replaces FC soldering and battery smoke stoppers
+   - C) Flashes ESC DShot firmware via .stl
+   - D) Grants FAA Part 107 license automatically

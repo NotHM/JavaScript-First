@@ -36,7 +36,7 @@ function demonstrateTdz() {
 demonstrateTdz();
 
 // 4. Function declaration hoisting vs function expression
-assert.equal(hoistedGreet('West-MEC'), 'Hello, West-MEC!');
+assert.equal(hoistedGreet('CTE-CIS'), 'Hello, CTE-CIS!');
 
 function hoistedGreet(name) {
   return `Hello, ${name}!`;

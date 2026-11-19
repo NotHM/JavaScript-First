@@ -7,7 +7,7 @@
 
 ## Part A: RF Bands, Binary Framing & CRM Foundations (`[L1 Remember]` & `[L2 Understand]`)
 
-1. Match each sUAS radio frequency band to its operational role (`DT101–DT102`):
+1. Match each sUAS radio frequency band to its operational role (`CTE Drone Tech / FAA Part 107`):
    - `900 MHz`: `__________________________________________________`
    - `2.4 GHz`: `__________________________________________________`
    - `5.8 GHz`: `__________________________________________________`
@@ -68,6 +68,6 @@ Design the exact state transition policy & `PIC`/`VO` CRM severity callouts (`IN
 
 ## Lesson SMART Objectives Tracker
 
-- [ ] **SL-L7.2-1 (`[L1–L2]` | `DT101–DT102`, `18.4, 18.6` | `SG-U07-6`):** Complete Part A mapping RF band roles, `RSSI`/`SNR`/`LQ` interference diagnosis, 16-byte CRC-16 frame offsets, and `PIC`/`VO` CRM duties with >= 80% accuracy.
+- [ ] **SL-L7.2-1 (`[L1–L2]` | `CTE-Drone / Part 107`, `18.4, 18.6` | `SG-U07-6`):** Complete Part A mapping RF band roles, `RSSI`/`SNR`/`LQ` interference diagnosis, 16-byte CRC-16 frame offsets, and `PIC`/`VO` CRM duties with >= 80% accuracy.
 - [ ] **SL-L7.2-2 (`[L3]` | `18.1–18.7`, `16.3` | `SG-U07-6`):** Implement all `telemetryWatchdogLab.mjs` functions cleanly and pass `node --check` + runtime verification.
 - [ ] **SL-L7.2-3 (`[L4–L5]` | `18.1, 18.4–18.7` | `SG-U07-6`):** Diagnose both Part C PID windup & `finally` lock bugs, defend Part D `FAILSAFE_RTH` vs. `FAILSAFE_LAND` rules, and complete [`post-lesson-eval.md`](./post-lesson-eval.md).

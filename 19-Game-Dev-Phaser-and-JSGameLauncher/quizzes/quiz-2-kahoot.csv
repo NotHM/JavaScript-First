@@ -1,14 +1,14 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
-Tab switch causes dt=4000ms and player tunnels past walls. Best fix?,Remove requestAnimationFrame,Clamp dt with Math.min(dt 50),Double player speed,Clear localStorage,30,2
-Web Audio fails at startup until the player clicks or hits a key. Why?,AudioContext needs gesture resume(),Browser lacks speakers,Canvas blocks MP3 files,Vite disables sound,20,1
-One USB gamepad is plugged in. What does utils.js getInput() return?,Keyboard only,[Gamepad as p1 and Keyboard as p2],Null array,Two keyboards,30,2
-Holding BUTTON_SOUTH triggers SFX 60 times every second. How do you stop spam?,Delete AudioContext,Check button-release edge flag,Lower screen FPS to 1,Mute browser tab,30,2
-Make a Phaser Arcade sprite bounce off 640x480 walls forever using:,setStatic(true),setBounce(1 1) and setCollideWorldBounds(true),disableBody(),setVisible(false),20,2
-Untrusted game package.json contains a malicious postinstall script. Safe flag?,npm install --force,npm install --ignore-scripts,npm install --global,npm start --eval,20,2
-Inside jsgamelauncher vm.SourceTextModule realm calling import('fs') will:,Delete user files,Reject with an error (Node APIs absent),Open SSH shell,Return C:/ root,30,2
-Why bundle games into a .jsgame zip archive via Vite library build?,Hides syntax errors,Ships self-contained JS avoiding runtime npm install,Requires Chrome extensions,Disables Gamepad API,30,2
-Which flag attaches Node Inspector breakpoints inside jsgamelauncher?,--no-audio,--inspect,--disable-gpu,--mute,20,2
-Idle handheld analog stick drifts at axis=0.06. How do you stabilize input?,Multiply by 100,Apply a 0.15 deadzone threshold,Reverse D-Pad wiring,Disable update(),30,2
-METAR reports 2 1/2SM BKN008 for a 350 ft AGL drone flight. What fails Part 107?,Only LAANC fails,Both visibility (<3 SM) & cloud clearance (<500 ft),Flight is completely legal,Only 100 mph fails,30,2
-Camera footprint 100m x 80m uses 75% front and 65% side overlap. Step sizes?,65m lane & 75m trigger,35m lane & 20m trigger,100m lane & 80m trigger,25m lane & 35m trigger,30,2
-Pushing Gamepad Left Stick UP gives axis = -1.0. How does Mode-2 compute climb?,Use raw axis directly,Negate Y after deadzone (-applyDeadzone(axis)),Divide by 100,Switch to Mode-1 Yaw,30,2
+Switching tabs yields rawDelta = 4000ms so player tunnels through walls. Clean delta fix?,Clear localStorage each frame,Multiply velocity by 60,Replace requestAnimationFrame with sleep,"Clamp dt: Math.min(rawDeltaMs, 50)",30,4
+Browser game audio stays silent on load until a click or keypress occurs because:,Canvas disables speaker hardware,HTML5 blocks mono WAV audio,AudioContext awaits user gesture resume(),GainNode defaults to Infinity,20,3
+Holding the fire button blasts laser SFX 60 times/sec! How do you fire once per press?,Disable requestAnimationFrame,Track edge flag reset only on button release,Set volume to 10.0,Delete GainNode after one frame,30,2
+AABB box overlap uses a.x + a.w >= b.x and registers false hits on adjacent tiles. Fix?,Use strict < and > inequalities for overlap,Add +100 padding to height,Convert pixels to strings,Swap x and y coordinates,30,1
+Which CSS property stops upscaled low-res 640x480 pixel art sprites from looking blurry?,overflow: scroll,filter: blur(2px),text-align: justify,image-rendering: pixelated,20,4
+An untrusted game package.json contains a malicious postinstall script. Safe install flag?,chmod 777 package.json,npm start --no-sandbox,npm install --ignore-scripts,npm install --force-root,20,3
+A .jsgame zip archive contains entry ../../.ssh/authorized_keys. Which check blocks this?,Renaming file to .json,Zip-Slip check verifying path stays inside root,Running unzip as root,Allowing relative .. segments,30,2
+"Inside an isolated vm.SourceTextModule realm without fs bindings, import fs will:",Fail cleanly blocking host file access,Mount C:\ silently,Enable kernel shell access,Write errors into CSS,30,1
+A worn HID analog thumbstick reports axis = 0.06 at rest causing phantom drift. Fix?,Unplug display HDMI cable,Round axis to Math.ceil(v),Invert digital D-Pad pins,Deadzone filter: Math.abs(v) < 0.15 ? 0 : v,20,4
+Why extract pure physics and grid math into helper modules tested with node --test?,Replaces CSS media queries,Removes need for version control,Instant headless CI runs without DOM/canvas,Avoids writing return statements,20,3
+Why ship prebuilt .jsgame archives rather than copying node_modules to offline handhelds?,Disables all gamepad buttons,Zero-install self-contained bundle boots safely offline,Requires permanent root SSH tunnel,Converts JavaScript into Excel sheets,20,2
+METAR KIWA 2 1/2SM BKN008 is checked for a 350 ft AGL drone mission. What fails Part 107?,Both visibility (< 3 SM) & cloud clearance (< 500 ft),Visibility passes; only clouds fail,Clouds pass; only wind fails,Both pass without waivers,30,1
+100x80m camera footprint uses 75% front & 65% side overlap. Compute lane & trigger steps:,10 m lane spacing & 80 m trigger spacing,75 m lane spacing & 65 m trigger spacing,50 m lane spacing & 40 m trigger spacing,35 m lane spacing & 20 m trigger spacing,30,4

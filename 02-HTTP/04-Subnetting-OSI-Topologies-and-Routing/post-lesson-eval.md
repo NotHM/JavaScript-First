@@ -1,4 +1,4 @@
-# Post-Lesson 2.4 Evaluation: Exit Ticket (`West-MEC ITS 102` | `ADE 3.0, 6.0, 7.0, 8.1–8.5, 10.1–10.6`)
+# Post-Lesson 2.4 Evaluation: Exit Ticket (`CTE IT Security (11.1999.00) / CCNA 200-301` | `ADE 3.0, 6.0, 7.0, 8.1–8.5, 10.1–10.6`)
 
 **Timing:** 6 minutes (Complete AFTER Lesson 2.4 instruction & `subnetCalculatorLab.mjs`) | **Score:** `____ / 5`
 

@@ -1,11 +1,11 @@
 # Lesson Plan 20.3: NLP Pipelines, Agentic AI Loops, Model Cards & Responsible Governance
 
 **Unit:** Unit 20 | **Duration:** 2 Class Periods × 50 min (Days 6–7)  
-**West-MEC AI Alignment:** `AI101` (Units 1 & 7), `AI102` (Units 11–14), `AI202` (Units 5–8) | **AI Stds:** `1.0–2.0, 10.0–15.0` | **AZ CTE:** `1.5, 2.3, 4.3, 12.2, 18.0, 19.8`  
+**CTE AI Alignment:** `CTE AI (11.0102.00)` (NLP Pipelines, Agentic Loops & Responsible AI Governance) | **AI Stds:** `1.0–2.0, 10.0–15.0` | **AZ CTE:** `1.5, 2.3, 4.3, 12.2, 18.0, 19.8`  
 **Certifications:** `Microsoft Azure AI-900`, `IT Specialist: Python`, `IT Specialist: Artificial Intelligence`
 
 ## Lesson SMART Objectives (Trackable)
-- [ ] **Student Objective (`SG-U20-6` | `[L3 Apply -> L6 Create | AI101–AI202, 14.0]`):** **S** — Complete `nlpAgenticLab.mjs` (tokenization/stemming, TF-IDF `tf * log(N / df)`, sentiment/intent, ReAct HITL pause/resume agent, and EU AI Act / NIST AI RMF Model Card validator); **M** — Pass 100% of assertions in `nlpAgenticGovernanceDemo.test.mjs` and student capstone Model Card audit; **A** — Using `0-student_files/20-agentic-nlp-governance/` starter stubs; **R** — Satisfies Responsible AI governance (`Std 14.0`) and `Azure AI-900` / `ITS AI` competencies; **T** — Completed by end of Day 7.
+- [ ] **Student Objective (`SG-U20-6` | `[L3 Apply -> L6 Create | 11.0102.00, 14.0]`):** **S** — Complete `nlpAgenticLab.mjs` (tokenization/stemming, TF-IDF `tf * log(N / df)`, sentiment/intent, ReAct HITL pause/resume agent, and EU AI Act / NIST AI RMF Model Card validator); **M** — Pass 100% of assertions in `nlpAgenticGovernanceDemo.test.mjs` and student capstone Model Card audit; **A** — Using `0-student_files/20-agentic-nlp-governance/` starter stubs; **R** — Satisfies Responsible AI governance (`Std 14.0`) and `Azure AI-900` / `ITS AI` competencies; **T** — Completed by end of Day 7.
 - [ ] **Teacher Objective (`TG-U20-6` | `[L4 Analyze -> L5 Evaluate]`):** **S** — Live-trace a paused ReAct agent HITL gate (approve vs. deny) and a failing 80% disparate-impact Model Card in class; **M** — `>= 85%` of students score `>= 3/4` on Post-Lesson 20.3 and ship valid Model Cards in Capstone Showcase; **A** — Running `nlpAgenticGovernanceDemo.mjs` offline via `node --test`; **R** — Ensures zero unguarded agent loops or governance gaps; **T** — Audited by Day 8 Showcase.
 
 ## Bloom's Objective Ladder

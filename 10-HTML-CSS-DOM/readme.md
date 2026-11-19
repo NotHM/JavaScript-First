@@ -8,7 +8,7 @@ Every cohort, students build slick neon-dark dashboards with `#445566` body text
 
 **Accessibility isn't charity, CSS Grid isn't magic, and Computer Vision isn't separate from the browser—it's linear algebra operating over the exact same `<canvas>` pixels.**
 
-Chapter 10 covers all 11 indicators of **AZ CTE Standard 15.0 (`15.1–15.11`)** alongside **West-MEC `AI101` Unit 2, `AI102` Unit 10 & `AI201` Units 3–4 (`AI Stds 3.0, 8.0, 9.0`)**.
+Chapter 10 covers all 11 indicators of **AZ CTE Standard 15.0 (`15.1–15.11`)** alongside **CTE AI (11.0102.00) / Azure AI-900 (`AI Stds 3.0, 8.0, 9.0`)**.
 
 ---
 
@@ -124,7 +124,7 @@ function drawCenteredShape(ctx, width, height, deg, scaleFactor) {
 
 ### Safe DOM Updates, `localStorage` & UI Library Trade-offs (`15.6, 15.7, 15.11`)
 
-Never build dynamic list items with `list.innerHTML += \`<li>${userInput}</li>\``—an attacker entering `<img src=x onerror=alert(1)>` immediately executes arbitrary JavaScript (**DOM XSS**). Pair HTML5 validation (`required`, `minlength`) + `event.preventDefault()` with **`document.createElement('li')`** + **`el.textContent = userInput`** and wrap `JSON.parse(localStorage.getItem(KEY))` inside `try...catch` so corrupt browser storage never crashes startup:
+Never build dynamic list items with ``list.innerHTML += `<li>${userInput}</li>` ``—an attacker entering `<img src=x onerror=alert(1)>` immediately executes arbitrary JavaScript (**DOM XSS**). Pair HTML5 validation (`required`, `minlength`) + `event.preventDefault()` with **`document.createElement('li')`** + **`el.textContent = userInput`** and wrap `JSON.parse(localStorage.getItem(KEY))` inside `try...catch` so corrupt browser storage never crashes startup:
 
 ```javascript
 function appendSafePresetItem(listEl, name, angle) {

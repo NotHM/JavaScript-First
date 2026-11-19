@@ -1,14 +1,14 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
-"Which Event Loop queue drains BEFORE setTimeout(..., 0) callbacks?",Macrotask queue,Microtask Promise queue,Disk swap queue,CSS animation queue,20,2
-Which exception clause ALWAYS executes whether try succeeds or throws?,catch block,else block,finally block,default case,20,3
-Calling undefined.trim() throws which built-in JavaScript exception?,SyntaxError,TypeError,RangeError,EvalError,20,2
-Which Promise method waits for ALL results even if some reject?,Promise.all(),Promise.race(),Promise.allSettled(),Promise.any(),20,3
-Which built-in Node class powers pub-sub .on() and .emit() events?,EventEmitter,PathResolver,URLParser,BufferPool,20,1
-Which severity tier flags an unrecoverable crash shutting down service?,DEBUG,INFO,WARN,FATAL,20,4
-Keeping checkout live when a non-critical recommendations widget fails is:,Syntax degradation,Graceful degradation,Infinite recursion,Stack overflow,20,2
-Why stream a 4 GB file rather than loading with readFileSync?,Streams load tiny chunks cleanly in low RAM,Streams double file size,Sync is async,JSON requires streams,20,1
-Which keyword marks a function to return a Promise and allow await?,defer,async,yield,import,20,2
-Why throw new ValidationError() instead of plain throw "oops" string?,Keeps stack trace and instanceof checks,Prevents Node from logging,Makes CPU slower,Avoids strings,20,1
-Which drone RF band primarily carries high-bandwidth FPV video feeds?,900 MHz Sub-GHz,2.4 GHz C2 link,5.8 GHz SHF band,125 kHz RFID,20,3
-Why can a strong -60 dBm RSSI signal still indicate link interference?,Noise inflates RSSI while LQ % and SNR plunge,RSSI only measures battery volts,Higher dBm stops CRC checks,5.8 GHz disables GPS,20,1
-During VLOS drone CRM what role scans airspace and calls out hazards?,Visual Observer (VO),Virtual Oscillator,Voltage Output,Vertical Offset,20,1
+"Which Event Loop queue drains BEFORE setTimeout(..., 0) callbacks?",Macrotask queue,Disk swap queue,Microtask Promise queue,CSS animation queue,20,3
+Which exception clause ALWAYS executes whether try succeeds or throws?,finally block,else block,catch block,default case,20,1
+Calling undefined.trim() throws which built-in JavaScript exception?,SyntaxError,EvalError,RangeError,TypeError,20,4
+Which Promise method waits for ALL results even if some reject?,Promise.all(),Promise.allSettled(),Promise.race(),Promise.any(),20,2
+Which built-in JS API makes an async HTTP call returning a Promise?,fetch(),JSON.parse(),localStorage,querySelector(),20,1
+What are the three lifecycle states of a JavaScript Promise?,"sync, micro, macro","open, paused, closed","pending, fulfilled, rejected","ready, running, done",20,3
+Which keyword pauses inside an async function until a Promise settles?,defer,yield,break,await,20,4
+Why do network and serial frames append a trailing CRC / FCS checksum?,Encrypt passwords,Detect bit errors and reject corrupt frames,Compress JSON text,Increase CPU clock,20,2
+Which keyword marks a function to return a Promise and allow await?,defer,yield,async,import,20,3
+"Why throw new ValidationError() instead of plain throw ""oops"" string?",Avoids strings,Prevents Node from logging,Makes CPU slower,Keeps stack trace and instanceof checks,20,4
+Which drone RF band primarily carries high-bandwidth FPV video feeds?,5.8 GHz SHF band,2.4 GHz C2 link,900 MHz Sub-GHz,125 kHz RFID,20,1
+Why can a strong -60 dBm RSSI signal still indicate link interference?,RSSI only measures battery volts,Noise inflates RSSI while LQ % and SNR plunge,Higher dBm stops CRC checks,5.8 GHz disables GPS,20,2
+During VLOS drone CRM what role scans airspace and calls out hazards?,Vertical Offset,Virtual Oscillator,Voltage Output,Visual Observer (VO),20,4

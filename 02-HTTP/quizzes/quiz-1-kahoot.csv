@@ -1,16 +1,16 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
 Which protocol provides encrypted remote terminal shell login?,FTP,SSH,HTTP,IMAP,20,2
-Why was 128-bit IPv6 introduced alongside 32-bit IPv4?,Faster CPU clock,IPv4 address exhaustion,HTML5 support,Larger CSS files,20,2
-Which cloud model runs event functions billed per millisecond?,IaaS,SaaS,FaaS Serverless,Bare Metal,20,3
-Which cloud model gives rent of virtual machines and full OS control?,SaaS,IaaS,FaaS,DNS,20,2
-Transferring files securely over an encrypted SSH channel uses:,HTTP,SFTP,IMAP,SMTP,20,2
-Short 4cm contactless tap payments use which wireless protocol?,LTE,Wi-Fi,NFC,Fiber,20,3
-Which email protocol syncs folders across phones and laptops?,IMAP,FTPS,SSH,ICMP,20,1
+Why was 128-bit IPv6 introduced alongside 32-bit IPv4?,Faster CPU clock,HTML5 support,IPv4 address exhaustion,Larger CSS files,20,3
+Which cloud model provides a managed runtime and deployment platform without patching OSs?,IaaS,Bare Metal,SaaS,PaaS,20,4
+Which cloud model gives rent of virtual machines and full OS control?,IaaS,SaaS,FaaS,DNS,20,1
+Transferring files securely over an encrypted SSH channel uses:,HTTP,IMAP,SFTP,SMTP,20,3
+Short 4cm contactless tap payments use which wireless protocol?,NFC,Wi-Fi,LTE,Fiber,20,1
+Which email protocol syncs folders across phones and laptops?,ICMP,FTPS,SSH,IMAP,20,4
 What primary benefit does Cloud elasticity offer web apps?,Manual cable swaps,Scale capacity on demand,Zero electricity use,Local-only access,20,2
-Shrinking text bundles before transmission across the network uses:,Gzip or Brotli compression,RAW BMP encoding,Infinite loops,Plaintext storage,20,1
-Caching static assets near global end users is handled by a:,IDE Debugger,CDN Edge Network,USB Hub,RAM Stick,20,2
-Which package.json property enables ES module import syntax in .js files?,type set to module,main set to es6,license set to MIT,engines set to npm,20,1
+Which protocol pairs HTTP with TLS/SSL on TCP port 443 to encrypt web traffic in transit?,HTTP,TFTP,Telnet,HTTPS,20,4
+Caching static assets near global end users is handled by a:,CDN Edge Network,IDE Debugger,USB Hub,RAM Stick,20,1
+Which package.json property enables ES module import syntax in .js files?,license set to MIT,main set to es6,type set to module,engines set to npm,20,3
 Which Express middleware serves CSS and image files from a folder?,express.json(),express.static(),fs.writeFile(),http.listen(),20,2
-Which OSI layers handle MAC frames/STP switching vs IPv4/IPv6 packet routing?,L2 Data Link vs L3 Network,L4 Transport vs L7 App,L1 Physical vs L5 Session,L6 Pres vs L4 Transport,20,1
-Which IPv4 CIDR block is valid private non-routable RFC 1918 space?,8.8.8.0/24,172.16.0.0/12,169.254.0.0/16,198.51.100.0/24,20,2
-Which IANA port range holds Well-Known services like SSH 22 and HTTPS 443?,0-1023,1024-49151,49152-65535,65536-99999,20,1
+Which OSI layers handle MAC frames/STP switching vs IPv4/IPv6 packet routing?,L6 Pres vs L4 Transport,L4 Transport vs L7 App,L1 Physical vs L5 Session,L2 Data Link vs L3 Network,20,4
+Which IPv4 CIDR block is valid private non-routable RFC 1918 space?,172.16.0.0/12,8.8.8.0/24,169.254.0.0/16,198.51.100.0/24,20,1
+Which IANA port range holds Well-Known services like SSH 22 and HTTPS 443?,49152-65535,1024-49151,0-1023,65536-99999,20,3

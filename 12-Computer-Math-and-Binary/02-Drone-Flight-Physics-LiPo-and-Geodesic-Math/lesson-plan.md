@@ -1,7 +1,7 @@
 # Lesson Plan 12.2: Drone Flight Physics, LiPo Chemistry & Geodesic Math
 
 **Unit:** Unit 12 | **Duration:** 3 Class Periods × 50 min  
-**Standards:** West-MEC Drone Technology **`DT101` (`Stds 1.0–12.0, 23.0`)** + **AZ CTE `4.0` (`4.1`–`4.7`)**
+**Standards:** CTE Drone Tech **`49.0199.00` (`1.0–12.0, 23.0`)** + **AZ CTE `4.0` (`4.1`–`4.7`)**
 
 ---
 
@@ -12,7 +12,7 @@
 | **L2 Understand** | Explain CW/CCW prop torque balance, `80%` DoD battery reserve rationale, and Density Altitude thrust loss. |
 | **L3 Apply** | Implement Ohm's Law, LiPo pack analyzer, `KV*V` RPM, `TWR >= 2:1`, `1/cos(theta)` Load Factor, Haversine, and Photogrammetry GSD in Node.js. |
 | **L4 Analyze** | Debug degree-vs-radian `Math.cos` defects, GEMA missing-parenthesis GSD bugs, and `Float64` vs. integer `mV` precision choices. |
-| **L5 Evaluate** | Justify pre-flight GO/NO-GO propulsion & battery budgets for hot-weather mapping missions (`DT101 23.0`). |
+| **L5 Evaluate** | Justify pre-flight GO/NO-GO propulsion & battery budgets for hot-weather mapping missions (`CTE Drone Tech 23.0`). |
 | **L6 Create** | Integrate drone flight physics, LiPo budget, and GSD telemetry modules into the Unit 12 Quantitative Mission Calculator. |
 
 ---
@@ -54,8 +54,8 @@
 ## Teacher & Student SMART Objectives Alignment
 | Checkpoint | Aligned Unit Goal(s) | Bloom's & Standard | Measurable Target & Timing |
 |---|---|---|---|
-| **Pre-Lesson 12.2 & Safety/LiPo (Part A)** | `SG-U12-6`, `TG-U12-6` | `L1–L2` (`DT101 1.0–12.0`, `4.5`) | Enforce Props-Off bench verification and >= 80% accuracy on LiPo `mV` and `80%` DoD math before coding. |
-| **Physics & Geodesic Coding Lab (Part B)** | `SG-U12-6`, `TG-U12-6` | `L3` (`4.3–4.6`, `DT101 23.0`) | Pass 100% of `dronePhysicsLab.mjs` functions & match `droneFlightMathDemo.test.mjs` reference outputs. |
+| **Pre-Lesson 12.2 & Safety/LiPo (Part A)** | `SG-U12-6`, `TG-U12-6` | `L1–L2` (`CTE Drone Tech 1.0–12.0`, `4.5`) | Enforce Props-Off bench verification and >= 80% accuracy on LiPo `mV` and `80%` DoD math before coding. |
+| **Physics & Geodesic Coding Lab (Part B)** | `SG-U12-6`, `TG-U12-6` | `L3` (`4.3–4.6`, `CTE Drone Tech 23.0`) | Pass 100% of `dronePhysicsLab.mjs` functions & match `droneFlightMathDemo.test.mjs` reference outputs. |
 | **Trig/GEMA Forensics & Mission Eval (Parts C–D)** | `SG-U12-6`, `TG-U12-6` | `L4–L5` (`4.3–4.6`) | Diagnose degree/radian and GEMA GSD parenthesis bugs cleanly and achieve Hake's $g \ge 0.55$ on Post-Lesson 12.2. |
 
 - [ ] **Teacher Checkpoint (`TG-U12-6`):** Props-off lab safety verified 100%, Pre/Post Lesson 12.2 growth ($g \ge 0.55$) logged, and all `dronePhysicsLab.mjs` checkoffs completed.

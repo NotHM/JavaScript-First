@@ -1,6 +1,6 @@
 # Unit 2 Mastery Exam: Protocols, Cloud, Node HTTP, Express SSR & Subnetting (50 Questions)
 
-**Course:** JavaScript First — Software & App Design (`AZ CTE Stds 8.0, 11.3–11.7, 1.5, 15.6` | `West-MEC ITS 102 / CCNA 200-301`)  
+**Course:** JavaScript First — High School CTE (Grades 11–12) & Community College CIS (`AZ CTE Stds 8.0, 11.3–11.7, 1.5, 15.6` | `CCNA`, `CompTIA-A+`, `CompTIA-Sec+`, `CIW-JS`, `ITS-HTML-CSS`, `CompTIA-ITF+`, `RHCSA`)  
 **Reading & Setup:** [Chapter 2 Reading](../readme.md) · [Setup Guide](../setup-guide.md)  
 **Directions:** Select the single best choice (`A`, `B`, `C`, or `D`) for items `1.` through `50.`.
 
@@ -20,10 +20,10 @@
    - C) Port `22`
    - D) Port `53`
 
-3. Which cloud computing model runs stateless event-driven functions billed strictly per invocation and execution milliseconds?
+3. Which cloud computing model delivers complete, vendor-hosted end-user software (such as Google Workspace or Microsoft 365) over a browser?
    - A) IaaS
-   - B) FaaS (Serverless)
-   - C) SaaS
+   - B) SaaS (Software as a Service)
+   - C) PaaS
    - D) On-Premises Bare Metal
 
 4. Which IoT wireless standard operates under `4 cm` at passive/ultra-low power for contactless transit cards and badge taps?
@@ -63,10 +63,10 @@
    - D) `11.0.0.0/8`, `172.32.0.0/12`, `192.169.0.0/16`
 
 10. Which IANA port range is reserved for **Dynamic / Ephemeral** outbound client source ports?
-   - A) `0–1023`
-   - B) `1024–4095`
-   - C) `1024–49151`
-   - D) `49152–65535`
+    - A) `0–1023`
+    - B) `1024–4095`
+    - C) `1024–49151`
+    - D) `49152–65535`
 
 ---
 
@@ -84,11 +84,11 @@
    - C) `SFTP` works only for email sync, whereas `FTPS` serves static HTML
    - D) Both are identical plaintext aliases for `HTTP/1.1`
 
-13. How does a **Content Delivery Network (CDN)** speed up web page loads for geographically distant users?
-   - A) By disabling TLS encryption to skip certificate handshakes
-   - B) By caching static assets at edge servers close to users, cutting round-trip latency
-   - C) By converting JavaScript files into synchronous blocking scripts
-   - D) By forcing every static image through the database server
+13. How do the `2.4 GHz` and `5 GHz` Wi-Fi (`802.11`) frequency bands compare inside a multi-room building?
+   - A) `5 GHz` penetrates concrete walls better than `2.4 GHz`
+   - B) `2.4 GHz` provides longer range and better wall penetration, whereas `5 GHz` provides faster short-range throughput with less interference
+   - C) `2.4 GHz` eliminates the need for IPv4 or IPv6 addressing
+   - D) Both frequency bands exhibit identical range and attenuation
 
 14. Why must Node HTTP modules export `createAppServer()` separately from calling `server.listen(7000)`?
    - A) Node crashes whenever `createServer` and `listen` appear in the same repo
@@ -136,11 +136,11 @@
 
 ## Part C: Applied Calculation & Coding (`[L3 Apply]` — Questions 21–30)
 
-21. A `1,000 KB` asset compresses `75%` via Gzip (`compressionRatio = 0.75`). Ignoring RTT, how long does transferring the compressed payload take over a `2,000 kbps` link (`1 KB = 8 kb`)?
-   - A) `0.25 seconds`
-   - B) `1.0 second`
-   - C) `4.0 seconds`
-   - D) `3.0 seconds`
+21. Which HTML `<form>` attribute ensures browser-submitted form fields travel inside the HTTP request body rather than the URL query string?
+   - A) `action="body"`
+   - B) `method="POST"`
+   - C) `method="GET"`
+   - D) `target="_blank"`
 
 22. Evaluate `'Hi 👋'.length` versus `Buffer.byteLength('Hi 👋', 'utf8')` in Node.js:
    - A) `5` code units and `5` bytes
@@ -166,7 +166,7 @@
    - C) `Buffer.byteLength(input)`
    - D) `decodeURIComponent(input)`
 
-26. Convert IPv4 address `192.168.10.25` into colon-separated hexadecimal octets (`ITS 102`):
+26. Convert IPv4 address `192.168.10.25` into colon-separated hexadecimal octets:
    - A) `C0:A8:10:25`
    - B) `C0:A8:0A:19`
    - C) `B0:A8:0A:19`
@@ -270,11 +270,11 @@
    - C) **FaaS** (`AWS Lambda`)
    - D) Pure static CDN
 
-42. An automated invoice-PDF thumbnailer runs for only `3 minutes` per day when triggered by webhook events and stays idle `23+ hours`. Which cloud model minimizes cost and maintenance?
-   - A) Dedicated bare-metal rack
-   - B) Always-on multi-node `IaaS` VMs
-   - C) **FaaS / Serverless** functions billed strictly per invocation
-   - D) Local `localhost:7000` workstation
+42. A hospital keeps sensitive patient databases on local private servers while bursting anonymized analytics compute onto AWS/GCP over an encrypted VPN. Which cloud model is this?
+   - A) Pure Public Cloud
+   - B) Single Local Workstation
+   - C) **Hybrid Cloud** (combining private on-premises infrastructure with public cloud services)
+   - D) Zero-Trust Static CDN
 
 43. A robotics team deploys solar soil-moisture nodes across a `5 km` rural orchard with zero Wi-Fi coverage. Which IoT wireless technology fits best?
    - A) `NFC` (`< 4 cm`)
@@ -282,11 +282,11 @@
    - C) `Cat6a UTP` (`100 m`)
    - D) `LTE / 5G Cellular`
 
-44. You are designing a tiny security-critical authentication proxy (`/api/health` + token check) requiring minimal third-party CVE risk and instant serverless cold starts. Evaluate `node:http` vs. Express.js:
-   - A) Install 40 Express/body-parser plugins regardless of endpoints
-   - B) Choose **zero-dependency `node:http`** to eliminate external npm CVEs and minimize startup footprint
-   - C) Replace HTTP entirely with plaintext Telnet
-   - D) Embed HTML pages inside `/tmp` without permissions checks
+44. Why must an authentication portal enforce **HTTPS** (TLS on TCP port `443`) paired with `Strict-Transport-Security` (`HSTS`) instead of plain HTTP port `80`?
+   - A) HTTPS automatically compresses PNG and font assets by 90%
+   - B) Encrypts credentials against passive eavesdropping/MitM attacks and blocks plaintext SSL-stripping downgrades
+   - C) HTTPS removes the need for DNS port `53` lookups completely
+   - D) Plain HTTP already hides all JSON payloads using TCP handshakes
 
 45. When is choosing **Express.js** clearly justified over writing raw `node:http` callbacks?
    - A) When serving a single static health-check JSON endpoint with zero static files

@@ -6,9 +6,9 @@
  * 0-student_files/ and reports per-unit completion, points, and next TODOs.
  *
  * Usage:
- *   node tools/grade.mjs                 # Grade all 20 units (report summary)
+ *   node tools/grade.mjs                 # Grade all 21 units (report summary)
  *   node tools/grade.mjs --unit 01       # Grade Unit 01 only
- *   node tools/grade.mjs --unit 01 12    # Grade multiple specific units
+ *   node tools/grade.mjs --unit 01 21    # Grade multiple specific units
  *   node tools/grade.mjs --strict        # Exit 1 unless 100% of selected tests pass
  *   node tools/grade.mjs --json          # Emit machine-readable JSON grade report
  *   node tools/grade.mjs --list          # List registered units and test suites
@@ -27,8 +27,8 @@ export const UNITS_MANIFEST = [
     unit: '01',
     title: 'Dev Env, Legal/Ethics, Types, Modules & Linux Safety',
     year: 1,
-    semester: 'CO101',
-    standards: ['2.0', '3.0', '11.0', '13.1', '18.2', 'ITS 101–102'],
+    semester: 'CIS 101',
+    standards: ['2.0', '3.0', '11.0', '13.1', '18.2', 'A+/RHCSA/ITS-JS'],
     points: 100,
     labs: [
       '0-student_files/01-legal-ethics/licenseAudit.test.js',
@@ -43,8 +43,8 @@ export const UNITS_MANIFEST = [
     unit: '02',
     title: 'Protocols, HTTP, Express SSR & Subnetting/OSI',
     year: 1,
-    semester: 'CO102',
-    standards: ['8.0', '11.3–11.7', 'ITS 102 / CCNA'],
+    semester: 'CIS 102',
+    standards: ['8.0', '11.3–11.7', 'CCNA / Sec+ / CIW-JS'],
     points: 100,
     labs: [
       '0-student_files/03-http-server/httpAndProtocolLab.test.js',
@@ -56,7 +56,7 @@ export const UNITS_MANIFEST = [
     unit: '03',
     title: 'Client-Side AJAX, Fetch & Containers',
     year: 1,
-    semester: 'CO102',
+    semester: 'CIS 102',
     standards: ['9.0'],
     points: 100,
     labs: [
@@ -68,7 +68,7 @@ export const UNITS_MANIFEST = [
     unit: '04',
     title: 'Variables, Scope, Hoisting & Immutability',
     year: 1,
-    semester: 'CO101',
+    semester: 'CIS 101',
     standards: ['3.3', '3.6', '18.2'],
     points: 100,
     labs: [
@@ -80,7 +80,7 @@ export const UNITS_MANIFEST = [
     unit: '05',
     title: 'Loops, Arrays, Matrices, Structures & AI Feature Vectors',
     year: 1,
-    semester: 'CO101',
+    semester: 'CIS 101',
     standards: ['6.0', '7.0', 'AI101–AI201'],
     points: 100,
     labs: [
@@ -93,7 +93,7 @@ export const UNITS_MANIFEST = [
     unit: '06',
     title: 'Conditionals, Boolean Logic & Closures',
     year: 1,
-    semester: 'CO101',
+    semester: 'CIS 101',
     standards: ['5.0', '11.10–11.12'],
     points: 100,
     labs: [
@@ -105,8 +105,8 @@ export const UNITS_MANIFEST = [
     unit: '07',
     title: 'Async JS, Queues & Drone RF Telemetry Fail-Safes',
     year: 2,
-    semester: 'CO201',
-    standards: ['18.0', 'DT101–DT102'],
+    semester: 'CIS 201',
+    standards: ['18.0', 'sUAS Telemetry'],
     points: 100,
     labs: [
       '0-student_files/08-async-js/asyncLab.test.js',
@@ -118,7 +118,7 @@ export const UNITS_MANIFEST = [
     unit: '08',
     title: 'OOP, Classes, XML/JSON Adapter & SOLID Patterns',
     year: 2,
-    semester: 'CO201',
+    semester: 'CIS 201',
     standards: ['17.0'],
     points: 100,
     labs: [
@@ -130,7 +130,7 @@ export const UNITS_MANIFEST = [
     unit: '09',
     title: 'Testing, Debugging, Algorithms & ML Fairness Audits',
     year: 1,
-    semester: 'CO102',
+    semester: 'CIS 102',
     standards: ['12.0', '6.4–6.7', 'AI101–AI201'],
     points: 100,
     labs: [
@@ -145,8 +145,8 @@ export const UNITS_MANIFEST = [
     unit: '10',
     title: 'UCD, Accessibility, Canvas, DOM & Computer Vision',
     year: 1,
-    semester: 'CO102',
-    standards: ['15.0', 'AI101–AI201'],
+    semester: 'CIS 102',
+    standards: ['15.0', 'ITS-HTML-CSS / AI'],
     points: 100,
     labs: [
       '0-student_files/11-html-css-dom/uiA11yCanvasLab.test.js',
@@ -158,8 +158,8 @@ export const UNITS_MANIFEST = [
     unit: '11',
     title: 'Web Security, Cryptography, Zero Trust & SIEM',
     year: 2,
-    semester: 'CO201',
-    standards: ['1.0', 'ITS 201–202 / Sec+'],
+    semester: 'CIS 201',
+    standards: ['1.0', 'CompTIA Sec+ / RHCSA / CCNA'],
     points: 100,
     labs: [
       '0-student_files/12-security-server/securityCryptoLab.test.js',
@@ -171,8 +171,8 @@ export const UNITS_MANIFEST = [
     unit: '12',
     title: 'Computer Math, Binary, Bitwise & Drone Flight Physics',
     year: 1,
-    semester: 'CO101',
-    standards: ['4.0', 'DT101'],
+    semester: 'CIS 101',
+    standards: ['4.0', 'sUAS Physics'],
     points: 100,
     labs: [
       '0-student_files/12-computer-math/computerMathLab.test.js',
@@ -184,7 +184,7 @@ export const UNITS_MANIFEST = [
     unit: '13',
     title: 'Git Version Control, CI/CD & npm Ecosystem',
     year: 1,
-    semester: 'CO102',
+    semester: 'CIS 102',
     standards: ['13.0', '14.0'],
     points: 100,
     labs: [
@@ -196,7 +196,7 @@ export const UNITS_MANIFEST = [
     unit: '14',
     title: 'Program Analysis, SDLC & System Architecture',
     year: 1,
-    semester: 'CO102',
+    semester: 'CIS 102',
     standards: ['10.0'],
     points: 100,
     labs: [
@@ -208,7 +208,7 @@ export const UNITS_MANIFEST = [
     unit: '15',
     title: 'Storage Architecture, Atomic File I/O & Databases',
     year: 2,
-    semester: 'CO201',
+    semester: 'CIS 201',
     standards: ['16.0'],
     points: 100,
     labs: [
@@ -220,7 +220,7 @@ export const UNITS_MANIFEST = [
     unit: '16',
     title: 'Software Business, Agile Delivery & SaaS Economics',
     year: 2,
-    semester: 'CO202',
+    semester: 'CIS 202',
     standards: ['19.0'],
     points: 100,
     labs: [
@@ -232,7 +232,7 @@ export const UNITS_MANIFEST = [
     unit: '17',
     title: 'Deno Security Sandbox & WebAssembly (WASM)',
     year: 2,
-    semester: 'CO201',
+    semester: 'CIS 201',
     standards: ['1.3–1.4', '4.0', '11.6–11.8', '13.1'],
     points: 100,
     labs: [
@@ -245,7 +245,7 @@ export const UNITS_MANIFEST = [
     unit: '18',
     title: 'Full-Stack Dual-Database REST: Bun SQLite & MongoDB',
     year: 2,
-    semester: 'CO201',
+    semester: 'CIS 201',
     standards: ['8.3', '11.6–11.8', '16.3–16.6', '17.1–17.13'],
     points: 100,
     labs: [
@@ -258,8 +258,8 @@ export const UNITS_MANIFEST = [
     unit: '19',
     title: 'Game Dev with Phaser 3, jsgamelauncher & Part 107 Drone Sim',
     year: 2,
-    semester: 'CO202',
-    standards: ['1.5', '4.3', '9.2', '15.5', '17.3', '19.8', 'DT102'],
+    semester: 'CIS 202',
+    standards: ['1.5', '4.3', '9.2', '15.5', '17.3', '19.8', 'FAA Part 107'],
     points: 100,
     labs: [
       '0-student_files/19-game-dev/gameLoopLab.test.mjs',
@@ -269,9 +269,9 @@ export const UNITS_MANIFEST = [
   },
   {
     unit: '20',
-    title: 'Final Capstone: Local Multimodal AI, NLP/Agentic & 3D Print',
+    title: 'Local Multimodal AI, NLP/Agentic & 3D Print Capstone',
     year: 2,
-    semester: 'CO202',
+    semester: 'CIS 202',
     standards: ['1.0–19.0', 'AI101–AI202'],
     points: 100,
     labs: [
@@ -280,6 +280,20 @@ export const UNITS_MANIFEST = [
       '0-student_files/20-agentic-nlp-governance/nlpAgenticLab.test.mjs',
     ],
     project: '0-student_files/projects/unit-20-local-ai-3d-capstone/capstone.test.mjs',
+  },
+  {
+    unit: '21',
+    title: 'Hands-On Drone Build: Soldering, Wiring, MSP & FAA Resources',
+    year: 2,
+    semester: 'CIS 202',
+    standards: ['1.0', '4.0', '8.0', '12.0', '18.0', '19.0', 'A+/RHCSA/CCNA/CIW-JS'],
+    points: 100,
+    labs: [
+      '0-student_files/21-drone-build/solderAndPowerLab.test.mjs',
+      '0-student_files/21-drone-build/wiringAndMspLab.test.mjs',
+      '0-student_files/21-drone-build/faaComplianceLab.test.mjs',
+    ],
+    project: '0-student_files/projects/unit-21-hands-on-drone-gcs/capstone.test.mjs',
   },
 ];
 
@@ -416,8 +430,8 @@ function formatTable(results, summary) {
 
   console.log(`\n${c.bold}${c.cyan}JavaScript First — Automated TDD Gradebook (node:test)${c.reset}`);
   console.log(`${c.dim}Mode: Red -> Green Verification across 0-student_files/ (Labs + Capstone Projects)${c.reset}\n`);
-  console.log('Unit | Sem   | Labs  | Proj  | Passed       | Score   | Status | Next Action / Hint');
-  console.log('-----+-------+-------+-------+--------------+---------+--------+-------------------------------------------');
+  console.log('Unit | Sem     | Labs  | Proj  | Passed       | Score   | Status | Next Action / Hint');
+  console.log('-----+---------+-------+-------+--------------+---------+--------+-------------------------------------------');
 
   for (const r of results) {
     const labPassed = r.labs.reduce((s, l) => s + l.passed, 0);
@@ -429,10 +443,10 @@ function formatTable(results, summary) {
     const stateColor = r.status === 'GREEN' ? c.green : r.status === 'YELLOW' ? c.yellow : c.red;
     const statusCol = `${stateColor}${r.status.padEnd(6)}${c.reset}`;
     const hint = r.nextTodo.length > 44 ? `${r.nextTodo.slice(0, 41)}...` : r.nextTodo;
-    console.log(` ${r.unit}  | ${r.semester} | ${labCol} | ${projCol} | ${passCol} | ${scoreCol} | ${statusCol} | ${hint}`);
+    console.log(` ${r.unit}  | ${r.semester.padEnd(7)} | ${labCol} | ${projCol} | ${passCol} | ${scoreCol} | ${statusCol} | ${hint}`);
   }
 
-  console.log('-----+-------+-------+-------+--------------+---------+--------+-------------------------------------------');
+  console.log('-----+---------+-------+-------+--------------+---------+--------+-------------------------------------------');
   console.log(
     `${c.bold}TOTAL${c.reset}: ${summary.passedTests}/${summary.totalTests} tests passing (${summary.percent}%) ` +
       `| ${summary.earnedPoints}/${summary.totalPoints} pts ` +

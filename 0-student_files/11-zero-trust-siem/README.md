@@ -1,6 +1,6 @@
 # Lesson 11.2 Student Lab: Zero Trust, Firewalls, SIEM Correlation & STRIDE
 
-**Standards:** West-MEC `ITS 201–202` (`CompTIA Security+`, `TestOut Security Pro`) | ADE Network Security `1.0`, `4.5–4.6`, `5.1–5.10`, `9.1–9.10`, `10.7–10.8`, `11.1–11.6`
+**Standards:** CTE IT Security (`11.1999.00`) / CompTIA Security+ | ADE Network Security `1.0`, `4.5–4.6`, `5.1–5.10`, `9.1–9.10`, `10.7–10.8`, `11.1–11.6`
 
 Complete all `TODO` functions inside [`firewallSiemLab.mjs`](./firewallSiemLab.mjs) **without** looking at instructor solutions:
 

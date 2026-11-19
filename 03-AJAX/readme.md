@@ -1,6 +1,6 @@
 # Chapter 3: Client-Side Web Software, AJAX, `fetch()`, Modern Frameworks & Containers
 
-*By Hans McMurdy (`@HansOnCoding`) · West-MEC / Arizona CTE Software & App Design (`Stds 9.0, 9.1–9.5, 18.1–18.7, 1.0, 1.5`)*
+*By Hans McMurdy (`@HansOnCoding`) · High School CTE (Grades 11–12) & Community College CIS (`Stds 9.0, 9.1–9.5, 18.1–18.7, 1.0, 1.5`)*
 
 > **Chapter Navigation:** [Unit 3 Guide](./unit-guide.md) · [Setup & Standards Guide](./setup-guide.md) · [50-Question Mastery Exam](./quizzes/unit-test-50.md) · [Unit 3 Project](./projects/unit-project.md) · Run `npm run grade -- --unit 03`
 

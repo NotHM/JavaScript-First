@@ -51,4 +51,5 @@ LLM JSON / OpenJSCAD Spec
 1. Watertight (`nakedEdges === 0`) & positive signed volume (`> 0`)
 2. Build plate fit `<= 220 x 220 x 250 mm` & grounded (`zMin === 0`)
 3. Minimum wall `>= 1.2 mm` (`>= 3` perimeters @ `0.4 mm` nozzle)
-4. Complete `voiceVisionLab.mjs` + `cadPrintLab.mjs` -> build `unit-20-local-ai-3d-capstone`!
+4. **Unit 21 Physical Showcase Option:** Export printable STL/OBJ TPU/PETG drone airframe canopies, camera brackets, or GPS masts alongside Core Voice/RAG/Agentic AI!
+5. Complete `voiceVisionLab.mjs` + `cadPrintLab.mjs` -> build `unit-20-local-ai-3d-capstone`!

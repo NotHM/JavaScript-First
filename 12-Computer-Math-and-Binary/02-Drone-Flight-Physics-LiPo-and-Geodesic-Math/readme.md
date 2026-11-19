@@ -1,17 +1,17 @@
 # Lesson 12.2: Drone Flight Physics, LiPo Chemistry & Geodesic Photogrammetry Math
 
-**Standards:** West-MEC Drone Technology **`DT101` (`Stds 1.0–12.0, 23.0`)** + **AZ CTE Software & App Design `4.0` (`4.1`–`4.7`)**
+**Standards:** CTE Drone Tech **`49.0199.00` (`1.0–12.0, 23.0`)** + **AZ CTE Software & App Design `4.0` (`4.1`–`4.7`)**
 
 ## Student Learning Objectives (Bloom's Taxonomy)
-- **`[L1 Remember]`** Recall **Props-Off Bench Safety**, LiPo cell voltage thresholds (`3.0V` min, `3.8V` storage, `4.2V` full), the **Four Forces of Flight** (`Lift, Weight, Thrust, Drag`), and Pitch/Roll/Yaw axes (`DT101 1.0–12.0`).
-- **`[L2 Understand]`** Explain CW/CCW propeller torque cancellation, why `80%` Depth-of-Discharge (DoD) protects LiPo cycle life, and why High/Hot/Humid **Density Altitude** reduces air density and thrust (`4.4, DT101`).
+- **`[L1 Remember]`** Recall **Props-Off Bench Safety**, LiPo cell voltage thresholds (`3.0V` min, `3.8V` storage, `4.2V` full), the **Four Forces of Flight** (`Lift, Weight, Thrust, Drag`), and Pitch/Roll/Yaw axes (`CTE Drone Tech 1.0–12.0`).
+- **`[L2 Understand]`** Explain CW/CCW propeller torque cancellation, why `80%` Depth-of-Discharge (DoD) protects LiPo cycle life, and why High/Hot/Humid **Density Altitude** reduces air density and thrust (`4.4, CTE Drone Tech`).
 - **`[L3 Apply]`** Implement Ohm's Law ($V = I \cdot R$, $P = V \cdot I$), LiPo C-rate current limits & hover runtime, `KV * V` RPM, **Thrust-to-Weight Ratio (`>= 2:1`)**, **Banked-Turn Load Factor ($1/\cos\theta$)**, **WGS-84 Haversine distance**, and **Photogrammetry GSD** in Node.js (`4.3–4.6`).
 - **`[L4 Analyze]`** Diagnose GEMA parentheses bugs, degree-vs-radian trig defects (`Math.cos`), and IEEE-754 float drift vs. integer millivolts (`mV`) and `Float64` GPS precision (`4.3, 4.5, 4.6`).
-- **`[L5 Evaluate]`** Defend `TWR >= 2:1`, ESC headroom margins (`>= 1.25x`), and Load Factor thrust safety thresholds before clearing an sUAS mission for flight (`DT101 23.0`).
+- **`[L5 Evaluate]`** Defend `TWR >= 2:1`, ESC headroom margins (`>= 1.25x`), and Load Factor thrust safety thresholds before clearing an sUAS mission for flight (`CTE Drone Tech 23.0`).
 
 ---
 
-## 1. Props-Off Bench Safety & Power System Ohm's Law (`DT101 Std 1.0`, `AZ CTE 4.3–4.4`)
+## 1. Props-Off Bench Safety & Power System Ohm's Law (`CTE Drone Tech Std 1.0`, `AZ CTE 4.3–4.4`)
 
 > [!CAUTION]
 > **MANDATORY LAB SAFETY RULE (PROPS OFF):** ALWAYS remove all propellers physically from every motor shaft BEFORE connecting USB configurators, bench power supplies, or LiPo batteries on a workbench! Even an uncommanded ESC calibration tone or motor test slider can spin blades above `20,000 RPM` and cause severe lacerations.
@@ -42,7 +42,7 @@ Lithium-Polymer (`LiPo`) packs wire cells in **Series (`3S–6S`)** to multiply 
 
 ---
 
-## 3. Four Forces of Flight, Control Axes, `KV * V` & Thrust-to-Weight (`DT101`)
+## 3. Four Forces of Flight, Control Axes, `KV * V` & Thrust-to-Weight (`CTE Drone Tech`)
 
 1. **Four Forces of Flight:** **Lift** (upward aerodynamic/rotor reaction) opposes **Weight** ($m \cdot g$); **Thrust** (forward propulsive vector) opposes **Drag** (parasitic & induced air resistance).
 2. **Three Control Axes & CW/CCW Torque:**
@@ -68,7 +68,7 @@ Lithium-Polymer (`LiPo`) packs wire cells in **Series (`3S–6S`)** to multiply 
 
 ---
 
-## 5. WGS-84 Haversine GPS & Photogrammetry GSD (`AZ CTE 4.3–4.6`, `DT101 23.0`)
+## 5. WGS-84 Haversine GPS & Photogrammetry GSD (`AZ CTE 4.3–4.6`, `CTE Drone Tech 23.0`)
 
 - **WGS-84 Haversine Distance (`Float64` Required):** GPS coordinates require 6–7 decimal places (`~0.11 m` precision); standard JavaScript `Float64` (`number`) preserves 15–17 significant digits safely whereas `Float32` truncates coordinates by meters!
   $$a = \sin^2\left(\frac{\Delta\phi}{2}\right) + \cos(\phi_1)\cos(\phi_2)\sin^2\left(\frac{\Delta\lambda}{2}\right), \qquad d = 2R\operatorname{atan2}(\sqrt{a}, \sqrt{1-a})$$

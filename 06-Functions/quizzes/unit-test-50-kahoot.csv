@@ -19,7 +19,7 @@ Why refactor nested if/else pyramids into flat Guard Clauses (Std 11.10)?,Flatte
 Why can seeded LCG createSeededRng(42) replay tests identically?,Reads /dev/urandom sync,Math.random uses minutes,LCG runs on GPU shaders,Deterministic math updates private state,30,4
 "Why never generate passwords with Math.random() or 32-bit LCG?",Math.random fails on HTTPS,LCG emits negatives only,Attackers can predict state; use node:crypto,node:crypto only sorts arrays,30,3
 "Why is Higher-Order applyOperation(arr, fn) valuable?",Forces callbacks to use globals,Decouples traversal from transform logic,Converts objects to XML,Strips params from signatures,30,2
-"What pair does [nor(false, false), xor(true, true)] return?","[true, false]","[false, true]","[true, true]","[false, false]",20,1
+"Trace: const msg = score >= 70 ? (honor ? 'HONOR' : 'PASS') : 'RETRY'; (85, false)",'PASS','HONOR','RETRY',undefined,30,1
 "Apply De Morgan's Law cleanly to !(isAdmin || isVerified):",!isAdmin || !isVerified,isAdmin && !isVerified,!isAdmin || isVerified,!isAdmin && !isVerified,30,4
 "What pair prints for: console.log(0 || 70, 0 ?? 70)?","0, 0","0, 70","70, 0","70, 70",30,3
 Trace: const add=(n)=>(x)=>n+x; add(10)(4) and add(2)(3)?,"10, 5","14, 5","14, 6","4, 3",30,2
@@ -28,13 +28,13 @@ Trace: const add=(n)=>(x)=>n+x; add(10)(4) and add(2)(3)?,"10, 5","14, 5","14, 6
 "What does const makeUser = (id) => ({ id, active: true }); makeUser(7) return?",undefined,7,"{ id: 7, active: true }",SyntaxError,30,3
 "With bounds >=90 A, >=80 B, >=70 C, >=60 D: getLetterGrade(80) returns?",'A','B','C','F',20,2
 "What does applyOperation([2, 3, 4], n => n * n) return?","[4, 9, 16]","[2, 3, 4]","[4, 6, 8]",29,30,1
-"Given a = createSeededRng(99) and b = createSeededRng(99), a() === b()?",false,NaN,undefined,true,20,4
+"function tag(prefix = 'ID', ...ids) { return prefix + ':' + ids.length; } tag(undefined, 4, 8)",'undefined:2','ID:1','ID:2',SyntaxError,30,3
 Why does if (1 < 99 < 5) evaluate to true in JavaScript?,< checks unordered sets,99 becomes '9' alphabetically,(1 < 99) -> true -> 1 < 5 -> true,< returns midpoint boolean,30,3
 "For role='editor', why does switch set perms='write read '?",+= joins all cases auto,Missing break falls into case 'viewer',switch runs next alpha case,Strings ignore break,30,2
 "Why does const makeObj = (x) => { x: x }; return undefined?",Arrows reject parameter x,Semicolons illegal inside obj,JS bans object returns,{} parsed as block w/ label x: no return,30,4
 "for (var i=0; i<3; i++) fns.push(() => i) yields [3,3,3]. Why?",var shares one fn binding across closures,.push runs arrows right away,i++ runs after .map(),Arrows cannot read loops,30,1
 Spot auth bug in: if (user.role = 'admin') allow();,'admin' needs double quotes,grantDashboard needs ;,= assigns 'admin' truthy unconditionally,= checks deep equality,30,3
-Two createCounter() calls overwrite each other's total. Why?,++ mutates const,let count = 0 sits outside factory shared,Returning arrows merges stacks,const creates singletons,30,2
+"function countDown(n) { return countDown(n - 1); } Calling countDown(3) throws:",Returns 0,RangeError: Maximum call stack size exceeded,SyntaxError: illegal recursion,TypeError: n is null,30,2
 "handleCommand('RESTART') returns 'UNKNOWN' though case 'restart' exists. Fix?",Normalize trim().toLowerCase() before ===,Remove break after restart,Convert cmd with Number(cmd),Declare cmd with var,30,1
 "Why does bitwise xor = (a,b) => Boolean(a^b) fail on ('badgeA','badgeB')?",^ matches !== on strings,Boolean strips string quotes,^ throws SyntaxError on strings,^ coerces text to 0^0=false silently!,60,4
 "Why does function addTax(p){ total += p*1.08; return total; } fail test isolation?",1.08 triggers SyntaxError,return cannot follow +=,Mutates external total coupling tests to order,Params are read-only const,30,3

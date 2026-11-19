@@ -1,6 +1,6 @@
 /**
  * Student Lesson 9.3 Automated Test Suite (node --test)
- * Standards: West-MEC AI101 Unit 5, AI102 Units 8-9, AI201 Unit 2 (AI Stds 1.0, 2.0, 6.0, 7.0)
+ * Standards: CTE AI (11.0102.00) / Azure AI-900 (AI Stds 1.0, 2.0, 6.0, 7.0)
  *
  * Run:
  *   node --test 0-student_files/09-ml-fairness/mlMetricsAndFairnessLab.test.mjs

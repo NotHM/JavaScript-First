@@ -1,17 +1,18 @@
 # Lesson 19.3: FAA Part 107 Airspace, METAR Weather, Survey Grids & Mode-2 Flight Sim
 
-**Standards:** West-MEC Drone Technology **`DT102` (`Stds 14.0–28.0`: `FAA 14 CFR Part 107 / TRUST`)** + **AZ CTE `9.0`, `15.0` (`15.5`), `19.0` (`19.8`)**
+**Standards:** **CTE Drone Tech (`49.0199.00`) / FAA Part 107 (`Stds 14.0–28.0`: `14 CFR Part 107 / TRUST`)** + **AZ CTE `9.0`, `15.0` (`15.5`), `19.0` (`19.8`)**  
+**Semester 4 Hardware Bridge:** Simulates flight rules and Mode-2 telemetry feeding directly into physical bench bring-up, soldering, UART/MSP coding, and external FAA `TRUST`/`Part 107` certification readiness in [Unit 21](../../21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/unit-guide.md).
 
 ## Student Learning Objectives (Bloom's Taxonomy)
-- **`[L1 Remember]`** Recall **`FAA 14 CFR Part 107`** limits (`< 55 lbs`, `<= 400 ft AGL`, `<= 100 mph / 87 kt`), **Remote ID**, **VLOS**, **`TRUST` vs. `Part 107 UAG`**, waiver codes (`§107.29/31/39`), **`10`-day accident reporting (`> $500`)**, and **Mode-2** stick assignments (`DT102`).
+- **`[L1 Remember]`** Recall **`FAA 14 CFR Part 107`** limits (`< 55 lbs`, `<= 400 ft AGL`, `<= 100 mph / 87 kt`), **Remote ID**, **VLOS**, **`TRUST` vs. `Part 107 UAG`**, waiver codes (`§107.29/31/39`), **`10`-day accident reporting (`> $500`)**, and **Mode-2** stick assignments (`CTE Drone Tech 49.0199.00`).
 - **`[L2 Understand]`** Contrast Class `B/C/D/E/G` airspace & **LAANC** ceiling checks, compare hourly **`METAR`** observations vs. **`TAF`** forecasts, and explain `3 SM` visibility / `500 ft` below / `2,000 ft` horizontal cloud minimums (`§107.51`).
 - **`[L3 Apply]`** Implement a pre-flight Part 107 + LAANC gatekeeper, `§107.9` reporting checker, aviation `METAR` parser, **`75%` front / `65%` side** lawnmower survey grid generator, and **Mode-2 RC stick mixer** integrated into a `640x480` 4:3 Canvas/Gamepad sim (`15.5, 9.2`).
 - **`[L4 Analyze]`** Diagnose Mode-2 inverted-Y gamepad axis bugs, missing stick deadzones, unclamped `deltaMs` teleportation, and METAR ceiling vs. AGL math defects (`4.3, 18.0`).
-- **`[L5 Evaluate]`** Render defensible **GO / NO-GO** mission dispatches balancing Part 107 waivers, LAANC facility grids, METAR trends, and `75%/65%` photogrammetry battery distance (`DT102 24.0–28.0`).
+- **`[L5 Evaluate]`** Render defensible **GO / NO-GO** mission dispatches balancing Part 107 waivers, LAANC facility grids, METAR trends, and `75%/65%` photogrammetry battery distance (`49.0199.00` `24.0–28.0`), ready for Unit 21 live hardware bring-up and external [FAA Part 107](https://www.faa.gov/regulations_policies/handbooks_manuals/aviation) / [FAADroneZone](https://faadronezone.faa.gov/) credentials.
 
 ---
 
-## 1. FAA 14 CFR Part 107, `TRUST` vs. `UAG` & Accident Reporting (`DT102 14.0–28.0`)
+## 1. FAA 14 CFR Part 107, `TRUST` vs. `UAG` & Accident Reporting (`CTE Drone Tech 49.0199.00 / FAA Part 107`)
 
 | Rule / Requirement | Threshold / Standard | Regulatory Notes |
 |---|---|---|

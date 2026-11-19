@@ -1,22 +1,22 @@
 # Lesson 1.5: Linux System Administration, Hardware & OS Safety
 
-**Standards Alignment:** West-MEC `ITS 101–102` (`CompTIA ITF+ FC0-U61`, `CompTIA A+ 220-1101/1102`, `Red Hat RHCSA EX200 RH124/RH134`) & **ADE Network Security `2.0` (`2.1–2.6`), `8.6–8.8`, `10.2`**
+**Standards Alignment:** CTE IT Security (`11.1999.00`) / `CompTIA ITF+ FC0-U61`, `CompTIA A+ 220-1101/1102`, `Red Hat RHCSA EX200 RH124/RH134` & **ADE Network Security `2.0` (`2.1–2.6`), `8.6–8.8`, `10.2`**
 
 ## Student Learning Objectives (Bloom's Taxonomy & SMART)
-- **`[L1 Remember]`** Recall core hardware subsystems (CPU, RAM, motherboard, RAID levels), ESD/OSHA/EPA disposal rules, Wake-on-LAN, and Linux's 3-layer architecture (Kernel, Shell, Utilities) (`ITS 101`, `ADE 2.1–2.6, 8.6`).
+- **`[L1 Remember]`** Recall core hardware subsystems (CPU, RAM, motherboard, RAID levels), ESD/OSHA/EPA disposal rules, Wake-on-LAN, and Linux's 3-layer architecture (Kernel, Shell, Utilities) (`CompTIA ITF+/A+`, `ADE 2.1–2.6, 8.6`).
 - **`[L2 Understand]`** Contrast POSIX `rwx` octal modes with special mode bits (`setuid 4xxx`, `setgid 2xxx`, `sticky 1xxx`), `systemd` units/timers vs. `cron`, and SELinux Mandatory Access Control (`RH124/RH134`, `ADE 8.7`).
-- **`[L3 Apply]`** Execute bash pipelines (`|`, `>`, `>>`, `2>&1`), calculate PSU wattage budgets with safety headroom, validate 5-field `crontab` expressions, and evaluate POSIX octal access in Node.js (`ITS 102`, `ADE 8.6–8.8`).
+- **`[L3 Apply]`** Execute bash pipelines (`|`, `>`, `>>`, `2>&1`), calculate PSU wattage budgets with safety headroom, validate 5-field `crontab` expressions, and evaluate POSIX octal access in Node.js (`RHCSA`, `ADE 8.6–8.8`).
 - **`[L4 Analyze]`** Audit `/etc/ssh/sshd_config` directives, diagnose NTP clock skew and SSH brute-force attempts in `journalctl`/`syslog`, and detect ESD/OSHA/EPA safety violations (`ADE 8.8, 10.2`).
 - **`[L5 Evaluate]`** Select and justify least-privilege Linux administration, host firewall (`firewalld`), SELinux `Enforcing` posture, and RAID fault-tolerance designs for server environments (`RH134`, `ADE 8.7–8.8`).
 
 ### Lesson 1.5 SMART Objectives Checklist
-- [ ] **S/M/A/R/T Goal 1 (`[L1–L2]` | `ITS 101, ADE 2.1–2.6`):** Classify hardware components, RAID 0/1/5/10 fault tolerance, ESD/OSHA steps, and EPA Li-ion/e-waste routing with >= 85% accuracy by the end of Day 1 (`student-lesson.md` Part A).
+- [ ] **S/M/A/R/T Goal 1 (`[L1–L2]` | `CompTIA A+, ADE 2.1–2.6`):** Classify hardware components, RAID 0/1/5/10 fault tolerance, ESD/OSHA steps, and EPA Li-ion/e-waste routing with >= 85% accuracy by the end of Day 1 (`student-lesson.md` Part A).
 - [ ] **S/M/A/R/T Goal 2 (`[L3–L4]` | `RHCSA, ADE 8.6–8.8`):** Complete all 6 `TODO` auditors in [`0-student_files/01-linux-admin-safety/posixAuditLab.mjs`](../../0-student_files/01-linux-admin-safety/posixAuditLab.mjs) so all assertions pass with exit code `0` within one 50-minute lab period.
 - [ ] **S/M/A/R/T Goal 3 (`[L4–L5]` | `ADE 8.8, 10.2`):** Diagnose insecure SSH/firewall/SELinux configurations and correlate `journalctl` brute-force indicators cleanly on `post-lesson-eval.md` (`>= 4/5`).
 
 ---
 
-## 1. Hardware Subsystems, Power Budgeting & Lab Safety (`ITS 101–102`, `CompTIA ITF+/A+`, `ADE 2.1–2.6`)
+## 1. Hardware Subsystems, Power Budgeting & Lab Safety (`CTE IT Security (11.1999.00)`, `CompTIA ITF+/A+`, `ADE 2.1–2.6`)
 
 Before deploying a Node.js backend or hardening Linux, engineers must protect physical hardware, data resilience, and human safety.
 

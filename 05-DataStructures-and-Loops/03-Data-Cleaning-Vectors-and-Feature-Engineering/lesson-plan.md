@@ -1,6 +1,6 @@
 # Lesson Plan 5.3: Data Cleaning, Feature Vectors, Statistics & PII Anonymization (`AI Stds 4.0, 5.0`)
 
-**Unit:** Unit 5 | **Duration:** 3 Class Periods × 50 min (Days 25–27) | **Standards:** West-MEC `AI101` Units 3–4, `AI201` Unit 1 (`AI Stds 4.0, 5.0`); AZ CTE `6.1–6.5, 7.1–7.4`
+**Unit:** Unit 5 | **Duration:** 3 Class Periods × 50 min (Days 25–27) | **Standards:** CTE AI (`11.0102.00`) / Azure AI-900 (`AI Stds 4.0, 5.0`); AZ CTE `6.1–6.5, 7.1–7.4`
 
 ## Bloom's Objective Ladder
 - **L1–L2:** Define CSV imputation (`mean`/`median`/`mode`), deduplication, salted PII hashing vs. redaction, IQR/Z-Score fences, Min-Max vs. Z-Score scaling, and One-Hot encoding.

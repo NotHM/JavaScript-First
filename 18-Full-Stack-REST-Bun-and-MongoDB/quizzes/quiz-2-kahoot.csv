@@ -1,11 +1,11 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
-Building SQL via string interpolation instead of ? placeholders risks:,Slow CPU cache,SQL Injection (SQLi),Port collision,Missing CORS,20,2
-Deleting a SQLite item referenced by an order (RESTRICT) returns:,200 OK,201 Created,409 Conflict,302 Found,30,3
-What LIMIT and OFFSET return page 3 with 10 items per page?,LIMIT 3 OFFSET 10,LIMIT 10 OFFSET 20,LIMIT 30 OFFSET 3,LIMIT 10 OFFSET 30,30,2
-Which MQL filter matches price >= 5 excluding category 'chocolate'?,{ price: 5 },{ price:{$gte:5} category:{$nin:['chocolate']} },{ $or: [] },WHERE price >= 5,30,2
-What happens when inserting a duplicate key on a { unique: true } index?,Overwrites old doc,Throws E11000 duplicate key error,Drops collection,Converts to SQL,20,2
-How do you query nested address.country === 'US' in MongoDB?,{ addressCountry: 'US' },{ 'address.country': 'US' },{ address[country]: 'US' },{ US: 'address' },20,2
-Which $group stage sums totalPrice per customer country?,{_id:'$customer.customerAddr.country' total:{$sum:'$totalPrice'}},{_id:'country' total:'sum'},{$match:'totalPrice'},{$set:{total:1}},30,1
-Which top-level keys identify a HAL+JSON collection response?,{ status data },{ _links _embedded },{ attributes errors },{ rows columns },30,2
-Why does storing [lat lng] break a MongoDB 2dsphere $near query?,Mongo deletes coords,Swapped axes break bounds & distances,GeoJSON requires strings,2dsphere needs SQL,30,2
-Best fit for an ACID order ledger vs. nested hotel room catalog?,SQLite/SQL for ledger; MongoDB for catalog,Plain .txt files for both,Browser cookies for both,CSS for catalog,30,1
+A SQL route interpolates SELECT * FROM items WHERE sku = userSku. What threat does ? fix?,Missing CSS grid,DNS collision,SQL Injection (SQLi),Slow CPU cache,20,3
+Deleting catalog item 5 fails due to ON DELETE RESTRICT foreign key conflict. HTTP status?,200 OK,409 Conflict,201 Created,302 Found,20,2
+Which SQL clause returns page 3 with 10 rows per page (offset = (page - 1) * limit)?,LIMIT 10 OFFSET 20,LIMIT 3 OFFSET 10,LIMIT 10 OFFSET 30,LIMIT 30 OFFSET 3,30,1
+An API caller passes ?limit=9999999 in a GET query. How do servers block memory DoS?,Return 201 Created,Trust input directly,Disable SQLite indexes,"Clamp Math.min(50, Math.max(1, limit))",20,4
+Why must checkout endpoints calculate order totals server-side rather than trusting req.body?,Enables CORS *,Skips SQL indexes,Prevents client price spoofing & negative qty bugs,Shrinks JSON length,30,3
+Client sends Accept: application/hal+json. Which Content-Type header should server emit?,text/csv,application/hal+json; charset=utf-8,application/octet-stream,text/html,20,2
+"Why does a GeoJSON distance query break if Phoenix [33.50, -112.06] swaps lat before lng?","-112 violates valid [-90, 90] latitude bounds",REST rejects floats,SQLite deletes rows,Ports must be UDP,30,1
+Match DB engines cleanly: strict financial order ledger vs flexible polymorphic property catalog:,NoSQL for FKs; CSS for items,Plain .txt for both,Cookies for both,Relational SQL for ledger; Document NoSQL for catalog,30,4
+Which MQL query matches sweetscomplete items priced >= 5 excluding category chocolate?,{ $or: [{ price: 5 }] },WHERE price >= 5,"{ price: { $gte: 5 }, category: { $nin: [chocolate] } }",{ price: 5 },30,3
+Inserting duplicate productKey with a { unique: true } MongoDB index triggers what error?,Converts to SQLite,E11000 duplicate key error (map to 409),Drops collection,Silent overwrite,20,2

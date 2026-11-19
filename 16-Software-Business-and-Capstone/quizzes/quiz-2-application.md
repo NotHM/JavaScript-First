@@ -1,16 +1,18 @@
-# Unit 16 Quiz 2: SaaS Economics, Scope Decisions & Trends (Application)
+# Unit 16 Quiz 2: Production Debugging, Security Audits & SaaS Economics (Application)
 
-**Bloom's:** `[L3]`–`[L5]` | **CSV:** [`quiz-2-kahoot.csv`](./quiz-2-kahoot.csv) | **Stds:** `19.1`–`19.8`
+**Bloom's Focus:** `[L3 Apply]`, `[L4 Analyze]` & `[L5 Evaluate]`  
+**Kahoot Import File:** [`quiz-2-kahoot.csv`](./quiz-2-kahoot.csv)  
+**Certification Alignment:** **`8 / 10` (`80.0% >= 75%`)** mapped to `CompTIA-A+` (2), `CompTIA-Sec+` (2), `CIW-JS` (1), `CompTIA-ITF+` (1), `ITS-JS` (1), `RHCSA` (1) (2 `Domain: CTE-Lab`)
 
-| # | Question | Correct Answer | Time | Bloom's |
+| # | Prompt / Code Trace | Choices (* = Correct) | Time | Bloom's, Alignment & Rationale |
 |---|---|---|---|---|
-| 1 | Net profit `$10/user`, fixed cost `$5,000/mo`. Break-even subscriber count? | **`500` subscribers** | 20s | `[L3 \| 19.4]` |
-| 2 | Net `$8/user/mo` with `5%` monthly churn (`20 mo` avg life). Customer **LTV**? | **`$160`** | 30s | `[L3 \| 19.7]` |
-| 3 | App LTV is `$90` while ad **CAC is `$110`**. Scaling ad spend right now: | **Losess `$20`/user fast — fix churn first!** | 30s | `[L4 \| 19.7]` |
-| 4 | Mid-sprint stakeholder demands 6 cosmetic extras before deadline (`19.6`): | **Protect MVP & defer extras to Backlog** | 20s | `[L5 \| 19.6]` |
-| 5 | App crashes silently on flaky LTE Wi-Fi switching, hurting `19.3` score: | **Low reliability & error resilience** | 20s | `[L4 \| 19.3]` |
-| 6 | Halving monthly subscriber churn from `10%` to `5%` affects LTV by: | **Doubling LTV (`2x`)** | 30s | `[L4 \| 19.7]` |
-| 7 | AI generated `async` payment helper quickly (`19.8`). Engineer must next: | **Audit security (`1.0`) & run tests (`12.0`)** | 20s | `[L5 \| 19.8]` |
-| 8 | Developer API selling billed compute tokens (`$0.002/call`) best fits: | **Usage-Based pricing model** | 20s | `[L5 \| 19.5]` |
-| 9 | NASA flight avionics software requiring strict immutable gate sign-off: | **Waterfall / Formal Stage-Gate** | 20s | `[L5 \| 19.1]` |
-| 10 | App rejected on Play Store lacking Privacy Policy Disclosure (`19.2, 2.0`): | **Remediate compliance metadata before push** | 20s | `[L4 \| 19.2]` |
+| 1 | A billing helper detects netMarginCents <= 0. Which JS error protects downstream math? | **A) Throw new RangeError(message)***<br>B) Return NaN silently<br>C) Exit with status 0<br>D) Use console.log only | 20s | `[L3 Apply \| Std 19.4 \| Cert: CIW-JS]` Throwing RangeError stops invalid negative margin calculations loudly at input boundaries. |
+| 2 | Binding server.listen(0) in automated API tests solves which recurring operational issue? | A) Clears browser cookies<br>B) Hardcodes port 80 forever<br>C) Disables TLS encryption<br>**D) Assigns dynamic free ephemeral TCP port*** | 20s | `[L3 Apply \| Std 12.0 \| Cert: CompTIA-A+]` Port 0 lets the OS assign an available ephemeral port, preventing EADDRINUSE conflicts in CI. |
+| 3 | Node tests pass yet hang open 60s before exiting due to HTTP sockets. Clean teardown fix? | A) Use eval() cleanup<br>B) Increase request timeout<br>**C) Call server.closeAllConnections() + close()***<br>D) Delete all assertions | 30s | `[L4 Analyze \| Std 12.0 \| Cert: CompTIA-A+]` Idle HTTP keep-alive connections hold the event loop open until explicitly closed. |
+| 4 | Which security combo stops user scripts from running AND blocks browser MIME sniffing? | A) CORS * + plain text<br>**B) HTML escaping + X-Content-Type-Options: nosniff***<br>C) chmod 777 + HTTP 200<br>D) eval() + Cache-Control | 30s | `[L4 Analyze \| Std 1.5 \| Cert: CompTIA-Sec+]` Escaping output prevents injected markup while nosniff stops MIME-type confusion attacks. |
+| 5 | A developer accidentally pushes .env with live DB passwords to GitHub. First two steps? | **A) Revoke/rotate exposed secrets & purge from Git***<br>B) Ignore and push a fix<br>C) Switch branch only<br>D) Rename .env to env.txt | 30s | `[L4 Analyze \| Std 19.2 \| Cert: CompTIA-Sec+]` Incident hygiene demands immediate credential revocation/rotation followed by cleaning repository history. |
+| 6 | Which Linux command restricts a production .env secret file to owner read/write only? | A) chmod +x .env<br>B) chmod 777 .env<br>C) chown nobody .env<br>**D) chmod 600 .env*** | 20s | `[L3 Apply \| Std 19.2 \| Cert: RHCSA]` POSIX mode 0600 grants read/write only to the file owner, blocking group and world access. |
+| 7 | Under formal change management, a stakeholder adds 6 extras 2 days before launch. Action? | A) Push broken code live<br>B) Delete unit tests<br>**C) Protect tested MVP & defer extras to Sprint 2***<br>D) Refactor auth untested | 30s | `[L5 Evaluate \| Std 19.6 \| Cert: CompTIA-ITF+]` Controlled scope management protects release stability and logs enhancements cleanly for the next backlog. |
+| 8 | An AI assistant writes an async checkout helper. What guarantees correctness before deploy? | A) Minify immediately<br>**B) Audit security & run automated node --test suite***<br>C) Skip edge inputs<br>D) Trust syntax highlighting | 20s | `[L5 Evaluate \| Std 19.8 \| Cert: ITS-JS]` Automated tests and defensive security review catch subtle domain logic and error-handling flaws. |
+| 9 | Fixed cost is $5,000/mo and net profit is $10/subscriber. Monthly break-even subscribers? | **A) 500 subscribers***<br>B) 50 subscribers<br>C) 100 subscribers<br>D) 5,000 subscribers | 30s | `[L3 Apply \| Std 19.4 \| Domain: CTE-Lab]` Break-even equals Math.ceil(fixedCost / netMargin) = 5000 / 10 = 500 paying subscribers. |
+| 10 | SaaS LTV is $90 while CAC is $110. What happens if marketing doubles ad spend today? | A) Halves fixed hosting<br>B) Doubles profit fast<br>C) Achieves 3:1 LTV:CAC<br>**D) Loses $20 per new customer — fix churn first*** | 30s | `[L4 Analyze \| Std 19.7 \| Domain: CTE-Lab]` Scaling acquisition when CAC exceeds LTV accelerates net cash burn by -$20 per user. |

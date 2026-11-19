@@ -1,9 +1,9 @@
 # Lesson 7.2: RF Telemetry, MAVLink/CRSF Framing & Async Fail-Safe State Machines
 
-**Standards:** West-MEC Drone Technology **`DT101–DT102` (`Stds 11.0–16.0, 24.0–26.0`)** + **AZ CTE Software & App Design `18.0` (`18.1–18.7`, `16.3`)**
+**Standards:** **CTE Drone Tech (49.0199.00) / FAA Part 107 (`Stds 11.0–16.0, 24.0–26.0`)** + **AZ CTE Software & App Design `18.0` (`18.1–18.7`, `16.3`)**
 
 ## Student Learning Objectives (Bloom's Taxonomy)
-- **`[L1 Remember]`** Recall drone RF frequency bands (`2.4 GHz` C2 vs. `5.8 GHz` FPV vs. `900 MHz` long-range telemetry), link metrics (`RSSI`, `SNR`, `LQ`), Crew Resource Management (`PIC` / `VO`) roles, and Fail-Safe modes (`HOVER`, `RTH`, `LAND`) (`DT101–DT102`).
+- **`[L1 Remember]`** Recall drone RF frequency bands (`2.4 GHz` C2 vs. `5.8 GHz` FPV vs. `900 MHz` long-range telemetry), link metrics (`RSSI`, `SNR`, `LQ`), Crew Resource Management (`PIC` / `VO`) roles, and Fail-Safe modes (`HOVER`, `RTH`, `LAND`) (`CTE-Drone / Part 107`).
 - **`[L2 Understand]`** Explain why high `RSSI` with low `LQ`/`SNR` flags interference, why CRC-16 detects single-bit RF flips, and how complementary sensor fusion balances gyroscope speed against accelerometer gravity tilt (`18.1, 18.4`).
 - **`[L3 Apply]`** Implement binary packet parsing with `Uint8Array` + `DataView`, CRC-16/CCITT-FALSE verification, typed custom error subclasses (`TelemetryFrameError`, `CrcMismatchError`), PID control with anti-windup clamping, complementary IMU fusion, and an `AbortController` + `finally` async heartbeat watchdog (`18.5–18.7`).
 - **`[L4 Analyze]`** Diagnose PID integral windup defects, missing `dtSec`/`NaN` guards (`18.5`), swallowed CRC exceptions, and leaked async monitor locks lacking `finally` cleanup (`18.2–18.3, 18.7`).
@@ -11,7 +11,7 @@
 
 ---
 
-## 1. RF Telemetry Bands & Link Health (`DT101–DT102`, `AZ CTE 18.4`)
+## 1. RF Telemetry Bands & Link Health (`CTE Drone Tech / FAA Part 107`, `AZ CTE 18.4`)
 
 Uncrewed aircraft rely on separated radio bands so video interference never severs flight control:
 

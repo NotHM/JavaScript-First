@@ -1,89 +1,89 @@
-# Unit 17 Mastery Exam — Teacher Answer Key & Rationales (`Q1–Q50`)
+# Unit 17 Mastery Exam — Teacher Answer Key & Certification Rationales (`Q1–Q50`)
 
 **Assessment:** [`unit-test-50.md`](./unit-test-50.md) · **Kahoot Import:** [`unit-test-50-kahoot.csv`](./unit-test-50-kahoot.csv)  
-**Coverage:** AZ CTE Stds `1.3, 1.4, 4.0, 11.6–11.8, 13.1` across Bloom's `L1–L5` (10 items per tier).
+**Certification Alignment Summary:** **`40 / 50` (`80.0% >= 75%`)** aligned across `CompTIA-Sec+` (11), `CIW-JS` (7), `RHCSA` (7), `ITS-JS` (6), `CompTIA-A+` (5), `CompTIA-ITF+` (4), plus 10 `Domain: CTE-Lab` specialist items across Bloom's `L1–L5` (`10` per tier).
 
 ---
 
 ## Part A — Core Recall (`[L1 Remember]`, Q1–Q10)
 
-| Q# | Key | Standard & Bloom's | Rationale / Distractor Explanation |
+| Q# | Key | Alignment, Standard & Bloom's | Rationale / Distractor Explanation |
 |---|---|---|---|
-| **Q1** | **B** | `[L1 Remember \| 1.3]` | Deno defaults to Zero Trust with zero file, net, env, or run permissions until granted; A/C/D assume implicit authority. |
-| **Q2** | **B** | `[L1 Remember \| 1.3]` | Default Node grants imported packages **ambient authority** inheriting full user OS permissions; the others refer to sandboxes or memory/scope concepts. |
-| **Q3** | **A** | `[L1 Remember \| 1.3]` | Deno scopes filesystem reads with `--allow-read=<path>`; `--allow-fs-read` (C) is Node's syntax, while `--allow-all` (B) grants everything. |
-| **Q4** | **B** | `[L1 Remember \| 1.3]` | `--deny-read` explicitly blocks subdirectories/files inside broader `--allow-read` scopes; A, C, and D are invented flags. |
-| **Q5** | **B** | `[L1 Remember \| 13.1]` | `jsr:` resolves modern ESM-first typed packages from JSR without nested `node_modules`; `cjs:`, `ftp:`, and `bin:` are distractors. |
-| **Q6** | **C** | `[L1 Remember \| 11.7]` | `deno.json` (or `.jsonc`) centralizes Deno tasks, import maps, formatting, and linting; `Cargo.toml` is Rust and `.babelrc` is Babel transpilation. |
-| **Q7** | **B** | `[L1 Remember \| 1.4]` | Node's `--permission` flag enables built-in capability isolation (`ERR_ACCESS_DENIED`); `--inspect` attaches debuggers and `--strict-sandbox` does not exist. |
-| **Q8** | **A** | `[L1 Remember \| 4.1]` | Every compiled `.wasm` binary starts with `\0asm` (`0x00 0x61 0x73 0x6d`); `\x7fELF` is Linux ELF and `%PDF` is PDF. |
-| **Q9** | **C** | `[L1 Remember \| 4.7]` | Per the WebAssembly specification, 1 linear memory page is strictly `64 KiB` (`65,536` bytes); smaller/larger options misstate the spec page unit. |
-| **Q10** | **B** | `[L1 Remember \| 11.6]` | Core WASM sections are ordered as `Type(1)`, `Function(3)`, `Memory(5)`, `Export(7)`, and `Code(10)`; other tuples list invalid/unrelated section IDs. |
+| **Q1** | **C** | `[L1 Remember \| Std 1.3 \| Cert: CompTIA-Sec+]` | Least-privilege runtimes fail closed so scripts only touch explicitly authorized resources. |
+| **Q2** | **B** | `[L1 Remember \| Std 1.3 \| Cert: CompTIA-Sec+]` | Ambient authority lets any imported dependency inherit full OS credentials unless sandboxed. |
+| **Q3** | **A** | `[L1 Remember \| Std 1.4 \| Cert: RHCSA]` | Node --permission restricts FS reads/writes and subprocess execution unless explicitly flagged. |
+| **Q4** | **D** | `[L1 Remember \| Std 1.3 \| Cert: RHCSA]` | POSIX ownership and least-privilege permissions confine processes even before runtime flags run. |
+| **Q5** | **C** | `[L1 Remember \| Std 4.1 \| Cert: CompTIA-ITF+]` | Magic numbers identify file formats; WASM opens with \0asm in bytes 0..3. |
+| **Q6** | **B** | `[L1 Remember \| Std 4.7 \| Cert: CompTIA-A+]` | The WebAssembly specification standardizes linear memory allocation in 64 KiB page chunks. |
+| **Q7** | **A** | `[L1 Remember \| Std 11.6 \| Cert: CIW-JS]` | Uint8Array provides byte-indexed access over contiguous ArrayBuffer backing stores. |
+| **Q8** | **D** | `[L1 Remember \| Std 11.6 \| Cert: ITS-JS]` | WebAssembly.instantiate(bytes, imports) returns a Promise with { module, instance }. |
+| **Q9** | **C** | `[L1 Remember \| Std 13.1 \| Domain: CTE-Lab]` | Deno resolves modern JSR registry packages using jsr: URLs without node_modules. |
+| **Q10** | **B** | `[L1 Remember \| Std 11.7 \| Domain: CTE-Lab]` | deno.json replaces scattered config files with unified task and import map definitions. |
 
 ---
 
 ## Part B — Conceptual Understanding (`[L2 Understand]`, Q11–Q20)
 
-| Q# | Key | Standard & Bloom's | Rationale / Distractor Explanation |
+| Q# | Key | Alignment, Standard & Bloom's | Rationale / Distractor Explanation |
 |---|---|---|---|
-| **Q11** | **B** | `[L2 Understand \| 1.3]` | Without capability sandboxing, any transitive dependency inside `node_modules` inherits the full filesystem, network, and env rights of the parent user process. |
-| **Q12** | **C** | `[L2 Understand \| 11.7]` | Deno strips/executes TypeScript natively out of the box without manual `tsc` or Babel builds; Node CJS errors and ignores do not occur. |
-| **Q13** | **D** | `[L2 Understand \| 11.7]` | `Deno.serve()` standardizes on WHATWG `Request` and `Response` objects shared across browsers, Deno, Bun, and Edge workers. |
-| **Q14** | **C** | `[L2 Understand \| 13.1]` | Import maps in `deno.json` keep source imports clean (`@std/path`) while pinning exact JSR versions with zero `node_modules` directory bloat. |
-| **Q15** | **A** | `[L2 Understand \| 4.1]` | Bytes `4..7` (`0x01 0x00 0x00 0x00`) represent WebAssembly spec version `1` encoded as a 32-bit little-endian unsigned integer. |
-| **Q16** | **B** | `[L2 Understand \| 4.7]` | LEB128 encodes small integer lengths/indices in 1 byte while supporting larger numbers compactly, keeping `.wasm` wire payloads small. |
-| **Q17** | **B** | `[L2 Understand \| 11.6]` | WAT is the human-readable S-expression representation compiled directly to binary `.wasm` via `wat2wasm`; it is neither a token nor a lockfile. |
-| **Q18** | **C** | `[L2 Understand \| 4.7]` | JS and WASM share a contiguous `ArrayBuffer` (`instance.exports.memory.buffer`) typed via `Uint8Array` views rather than slow disk or cookie IPC. |
-| **Q19** | **A** | `[L2 Understand \| 1.4]` | WASM is capability-sandboxed: unless the JS host injects I/O functions into `importsObj`, compiled modules have zero OS file/network syscalls. |
-| **Q20** | **D** | `[L2 Understand \| 1.4]` | Node 24's `--permission` enforces scoped FS (`--allow-fs-read/write`) and child-process limits inside existing Node services without runtime rewrites. |
+| **Q11** | **A** | `[L2 Understand \| Std 1.3 \| Cert: CompTIA-Sec+]` | Without capability flags, any dependency inside node_modules can read process.env and disk files. |
+| **Q12** | **D** | `[L2 Understand \| Std 1.4 \| Cert: CompTIA-Sec+]` | WASM cannot dereference arbitrary JS host pointers; loads/stores remain confined to linear memory. |
+| **Q13** | **C** | `[L2 Understand \| Std 1.4 \| Cert: RHCSA]` | Blocking subprocess syscalls stops escaping into native OS utilities like sh, curl, or python. |
+| **Q14** | **B** | `[L2 Understand \| Std 4.1 \| Cert: CompTIA-ITF+]` | LEB128 encodes small indices/lengths in single bytes while scaling smoothly for huge integers. |
+| **Q15** | **A** | `[L2 Understand \| Std 4.1 \| Cert: CompTIA-A+]` | Little-Endian places the least-significant byte (0x01) at the lowest memory address. |
+| **Q16** | **D** | `[L2 Understand \| Std 11.7 \| Cert: CIW-JS]` | Web-standard Request/Response fetch interfaces keep HTTP handlers portable across runtimes. |
+| **Q17** | **C** | `[L2 Understand \| Std 11.6 \| Cert: ITS-JS]` | Uint8Array/Int32Array views read/write shared linear ArrayBuffer memory directly with zero copy. |
+| **Q18** | **B** | `[L2 Understand \| Std 11.6 \| Cert: CompTIA-ITF+]` | WAT is the readable assembly notation assembled into compact binary .wasm instructions. |
+| **Q19** | **A** | `[L2 Understand \| Std 13.1 \| Domain: CTE-Lab]` | Import maps keep code imports clean while pinning global cached JSR/HTTP dependencies. |
+| **Q20** | **D** | `[L2 Understand \| Std 11.7 \| Domain: CTE-Lab]` | Deno handles TypeScript natively out of the box alongside built-in deno check. |
 
 ---
 
 ## Part C — Practical Application (`[L3 Apply]`, Q21–Q30)
 
-| Q# | Key | Standard & Bloom's | Rationale / Distractor Explanation |
+| Q# | Key | Alignment, Standard & Bloom's | Rationale / Distractor Explanation |
 |---|---|---|---|
-| **Q21** | **B** | `[L3 Apply \| 1.3]` | Scoping `--allow-net=127.0.0.1:8080 --allow-env=PORT` adheres to Least Privilege, whereas `-A` disables sandboxing and `--allow-read` does not permit sockets. |
-| **Q22** | **B** | `[L3 Apply \| 11.7]` | `deno check` statically type-checks TypeScript files without starting runtime execution; the other flags are nonexistent or wrong tools. |
-| **Q23** | **A** | `[L3 Apply \| 1.3]` | `--deny-read=./data/.env` carves out the secret file while permitting reads elsewhere under `./data`; `--allow-all` and `--deny-all` break least privilege or access. |
-| **Q24** | **C** | `[L3 Apply \| 1.4]` | Node 24 activates sandboxing with `--permission` paired with `--allow-fs-read=./public`; `--allow-read` is Deno syntax, not Node. |
-| **Q25** | **A** | `[L3 Apply \| 11.6]` | `WebAssembly.validate(bytes)` synchronously inspects binary structure and returns a boolean; the other method names do not exist in standard JS. |
-| **Q26** | **B** | `[L3 Apply \| 11.6]` | `await WebAssembly.instantiate(bytes, imports)` asynchronously compiles and instantiates returning `{ module, instance }`. |
-| **Q27** | **C** | `[L3 Apply \| 4.7]` | Wrapping `instance.exports.memory.buffer` in `new Uint8Array(...)` lets JS copy encoded UTF-8 bytes straight into linear memory via `.set(encoded, 128)`. |
-| **Q28** | **C** | `[L3 Apply \| 4.7]` | Bitwise XOR is self-inverse (`(b ^ k) ^ k === b`), so invoking `xorTransform` twice with the same key cleanly recovers the original UTF-8 text. |
-| **Q29** | **B** | `[L3 Apply \| 11.8]` | `wat2wasm` compiles `.wat` text into `.wasm` binary, while `wasm2wat` disassembles `.wasm` back to `.wat`. |
-| **Q30** | **A** | `[L3 Apply \| 11.8]` | `wasm-pack build --target nodejs --release` compiles Rust (`wasm32`) and generates ready-to-import Node ESM/CJS glue wrappers. |
+| **Q21** | **C** | `[L3 Apply \| Std 1.3 \| Cert: CompTIA-Sec+]` | Scoping exact host:port, read root, and one env key grants strictly what the service needs. |
+| **Q22** | **B** | `[L3 Apply \| Std 1.3 \| Cert: RHCSA]` | Passing --permission with --allow-fs-read grants scoped reads while denying fs writes by default. |
+| **Q23** | **A** | `[L3 Apply \| Std 11.6 \| Cert: CIW-JS]` | WebAssembly.validate() checks magic header and section layout without instantiating. |
+| **Q24** | **D** | `[L3 Apply \| Std 11.6 \| Cert: ITS-JS]` | Passing {} to WebAssembly.instantiate strips all external host APIs from the instance. |
+| **Q25** | **C** | `[L3 Apply \| Std 4.7 \| Cert: CIW-JS]` | TextEncoder produces a Uint8Array that .set(encoded, offset) copies cleanly into linear memory. |
+| **Q26** | **B** | `[L3 Apply \| Std 4.7 \| Cert: ITS-JS]` | Bitwise XOR is symmetric ((b ^ k) ^ k === b), recovering exact original bytes on second pass. |
+| **Q27** | **A** | `[L3 Apply \| Std 1.3 \| Cert: CIW-JS]` | URL.host preserves explicit port distinctions so evil hosts or wrong ports cannot bypass checks. |
+| **Q28** | **D** | `[L3 Apply \| Std 11.6 \| Cert: CompTIA-ITF+]` | Standard WebAssembly module sections occupy deterministic IDs: 1=Type, 3=Func, 5=Mem, 7=Export, 10=Code. |
+| **Q29** | **C** | `[L3 Apply \| Std 11.7 \| Domain: CTE-Lab]` | deno check validates TypeScript annotations statically prior to runtime execution. |
+| **Q30** | **B** | `[L3 Apply \| Std 11.8 \| Domain: CTE-Lab]` | wasm-pack compiles Rust wasm32 targets and generates typed JS bindings automatically. |
 
 ---
 
 ## Part D — Analysis & Debugging (`[L4 Analyze]`, Q31–Q40)
 
-| Q# | Key | Standard & Bloom's | Rationale / Distractor Explanation |
+| Q# | Key | Alignment, Standard & Bloom's | Rationale / Distractor Explanation |
 |---|---|---|---|
-| **Q31** | **C** | `[L4 Analyze \| 1.4]` | Node's permission model specifically raises `ERR_ACCESS_DENIED` on unscoped paths (whereas missing files normally raise `ENOENT`). |
-| **Q32** | **B** | `[L4 Analyze \| 1.4]` | `--permission` disables `child_process` spawning by default and throws `ERR_ACCESS_DENIED` unless `--allow-child-process` is explicitly passed. |
-| **Q33** | **C** | `[L4 Analyze \| 1.3]` | Scoping `--allow-net=api.school.edu:443` restricts network egress strictly to that host:port, rejecting any fetch to `evil.example`. |
-| **Q34** | **B** | `[L4 Analyze \| 1.3]` | Because a secret file like `./public/.env` sits inside `./public`, checking `readRoots` first would falsely approve access unless `denyPaths` takes precedence. |
-| **Q35** | **A** | `[L4 Analyze \| 1.4]` | `path.resolve()` canonicalizes `..` traversal segments into `/etc/passwd` before comparing against `/srv/app/public`, stopping directory escapes. |
-| **Q36** | **B** | `[L4 Analyze \| 1.4]` | Passing `--allow-fs-read` without `--permission` leaves Node completely unsandboxed, earning a HIGH severity deduction and `REJECTED` verdict. |
-| **Q37** | **C** | `[L4 Analyze \| 4.1]` | Leading HTML bytes (`<!DO` or `<htm`) fail the `\0asm` header check, triggering `WebAssembly.CompileError: expected magic word 00 61 73 6d`. |
-| **Q38** | **D** | `[L4 Analyze \| 4.7]` | Reading bytes `65530..65545` crosses the 1-page `65536` limit, causing an immediate `WebAssembly.RuntimeError` out-of-bounds trap. |
-| **Q39** | **A** | `[L4 Analyze \| 1.4]` | Hardware/VM bounds checks restrict every WASM load/store strictly to `memory.buffer`, trapping before leaking adjacent V8 JavaScript secrets. |
-| **Q40** | **B** | `[L4 Analyze \| 4.7]` | XOR encryption requires calling `xorTransform` twice with the same key (`encrypt -> decrypt`); stopping after one call returns ciphertext bytes. |
+| **Q31** | **A** | `[L4 Analyze \| Std 1.4 \| Cert: CompTIA-Sec+]` | Node Permission Model intercepts out-of-scope filesystem calls with ERR_ACCESS_DENIED. |
+| **Q32** | **D** | `[L4 Analyze \| Std 1.4 \| Cert: RHCSA]` | FS flags alone never grant subprocess creation; child_process remains blocked without explicit allow. |
+| **Q33** | **C** | `[L4 Analyze \| Std 1.3 \| Cert: CompTIA-Sec+]` | Deny rules only protect nested secrets when evaluated before parent directory allow rules. |
+| **Q34** | **B** | `[L4 Analyze \| Std 1.4 \| Cert: RHCSA]` | path.resolve() collapses .. traversal segments before checking prefix containment against root. |
+| **Q35** | **A** | `[L4 Analyze \| Std 1.4 \| Cert: CompTIA-Sec+]` | Omitting --permission leaves Node completely unsandboxed even if scoped allow flags appear. |
+| **Q36** | **D** | `[L4 Analyze \| Std 4.1 \| Cert: CompTIA-A+]` | Leading HTML/text bytes trigger WebAssembly.CompileError immediately at header magic validation. |
+| **Q37** | **C** | `[L4 Analyze \| Std 4.7 \| Cert: CIW-JS]` | Spanning 65530..65545 crosses 65,536, tripping WASM runtime memory bounds protection cleanly. |
+| **Q38** | **B** | `[L4 Analyze \| Std 1.3 \| Cert: ITS-JS]` | Comparing url.host (hostname:port) or explicit port prevents accessing unapproved ports on same host. |
+| **Q39** | **A** | `[L4 Analyze \| Std 1.3 \| Domain: CTE-Lab]` | Deno throws NotCapable / PermissionDenied when targeting an unauthorized domain or port. |
+| **Q40** | **D** | `[L4 Analyze \| Std 4.7 \| Domain: CTE-Lab]` | XOR transforms encrypt on pass 1 and invert back to original UTF-8 text on pass 2. |
 
 ---
 
 ## Part E — Evaluation & Architecture (`[L5 Evaluate]`, Q41–Q50)
 
-| Q# | Key | Standard & Bloom's | Rationale / Distractor Explanation |
+| Q# | Key | Alignment, Standard & Bloom's | Rationale / Distractor Explanation |
 |---|---|---|---|
-| **Q41** | **A** | `[L5 Evaluate \| 1.3]` | `-A` aliases `--allow-all`, turning off every Deno filesystem, network, env, and subprocess boundary in production. |
-| **Q42** | **C** | `[L5 Evaluate \| 1.3]` | Scoping exact bind host:port (`127.0.0.1:8080`), read root (`./dist`), and env key (`PORT`) satisfies Least Privilege without excess write/run scopes. |
-| **Q43** | **C** | `[L5 Evaluate \| 1.4]` | Even with `--permission`, wildcard `--allow-fs-write=*` permits writing anywhere on the host filesystem, violating Least Privilege for a read-only API. |
-| **Q44** | **B** | `[L5 Evaluate \| 1.4 / 11.6]` | Running untrusted plugins compiled to `.wasm` with empty host imports `{}` inside a `--permission` Node host isolates both syscalls and heap memory. |
-| **Q45** | **B** | `[L5 Evaluate \| 1.4]` | Passing `{}` as `importsObj` ensures the untrusted module holds zero references to host network, FS, or secret-reading functions. |
-| **Q46** | **B** | `[L5 Evaluate \| 11.6]` | Simple JSON routing, DOM work, and I/O-bound database calls gain little from WASM and pay unnecessary JS-to-WASM marshaling friction. |
-| **Q47** | **B** | `[L5 Evaluate \| 11.6 / 11.8]` | Sustained tight numerical loops over large flat buffers benefit most from WASM's typed instructions and zero garbage-collection pauses. |
-| **Q48** | **A** | `[L5 Evaluate \| 1.4]` | Capability flags guard the host JS ecosystem against npm supply-chain abuse while WASM linear-memory isolation sandboxes third-party plugin code. |
-| **Q49** | **B** | `[L5 Evaluate \| 1.3]` | Matching only `parsed.hostname` would allow requests to unauthorized ports (e.g., port `80` or `9000`) on `api.school.edu` when only `:8443` was approved. |
-| **Q50** | **A** | `[L5 Evaluate \| 4.7]` | Checking `offset >= 0 && offset + payload.byteLength <= 131072` guarantees the write never overruns the 2-page (`2 * 65536`) linear memory buffer. |
+| **Q41** | **C** | `[L5 Evaluate \| Std 1.3 \| Cert: CompTIA-Sec+]` | -A aliases --allow-all, violating least privilege and exposing the full host if exploited. |
+| **Q42** | **B** | `[L5 Evaluate \| Std 1.4 \| Cert: CompTIA-Sec+]` | Static read-only services must never hold unrestricted host filesystem write access. |
+| **Q43** | **A** | `[L5 Evaluate \| Std 1.4 \| Cert: CompTIA-Sec+]` | WASM confines plugin execution to linear memory while --permission restricts host npm modules. |
+| **Q44** | **D** | `[L5 Evaluate \| Std 1.4 \| Cert: RHCSA]` | Layered OS user permissions and runtime capability scopes stop privilege escalation. |
+| **Q45** | **C** | `[L5 Evaluate \| Std 11.6 \| Cert: CompTIA-A+]` | CPU-bound numeric loops over flat TypedArrays avoid GC stalls and FFI overhead amortization. |
+| **Q46** | **B** | `[L5 Evaluate \| Std 11.6 \| Cert: CompTIA-A+]` | Crossing JS/WASM boundaries per short string request adds encoding cost exceeding JS V8 speed. |
+| **Q47** | **A** | `[L5 Evaluate \| Std 4.7 \| Cert: CIW-JS]` | Explicit non-negative bounds checking against total byteLength catches overruns cleanly. |
+| **Q48** | **D** | `[L5 Evaluate \| Std 11.6 \| Cert: ITS-JS]` | Empty imports ensure zero ambient access to host networking, disk, or credentials. |
+| **Q49** | **C** | `[L5 Evaluate \| Std 1.3 \| Domain: CTE-Lab]` | Explicitly scoping net, read, and env keys matches Deno least-privilege best practices. |
+| **Q50** | **B** | `[L5 Evaluate \| Std 11.8 \| Domain: CTE-Lab]` | WABT utilities wat2wasm and wasm2wat translate cleanly between WAT text and binary WASM. |

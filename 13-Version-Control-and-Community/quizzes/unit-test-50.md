@@ -149,11 +149,11 @@
     - C) feat(export): support CSV report downloads
     - D) fix!: removed all JSON exports
 
-23. **`[L3 Apply | Std 14.8]`** Current version is 1.4.2. Only fix: commits landed since v1.4.2. Next SemVer tag?
-    - A) 1.5.0
-    - B) 1.4.3
-    - C) 2.0.0
-    - D) 1.4.2-alpha
+23. **`[L3 Apply | Std 13.3]`** A commercial SaaS company wants to embed an open-source logger into closed-source proprietary software without publishing proprietary source code. Which OSS license complies legally?
+    - A) GPLv3 (strong copyleft requiring source disclosure)
+    - B) Unlicensed snippet copied from a forum post
+    - C) Permissive MIT or Apache-2.0 license (permits commercial reuse with attribution)
+    - D) Unsigned temporary draft file
 
 24. **`[L3 Apply | Std 14.7]`** Which npm CLI command audits installed dependencies and exits non-zero on high CVEs?
     - A) npm list --depth=0
@@ -249,11 +249,11 @@
     - C) Disables TLS cert checks opening MITM attacks
     - D) Deletes SSL certificates from ~/.ssh
 
-39. **`[L4 Analyze | Std 14.8]`** Commits include: ["feat!: drop v1 auth", "feat: add MFA", "fix: trim whitespace"]. Highest bump?
-    - A) MINOR bump only because two features exist
-    - B) MAJOR bump triggered by feat! breaking API
-    - C) PATCH bump because fix came last
-    - D) No bump unless docs: commits exist
+39. **`[L4 Analyze | Std 13.1]`** A CLI deploy script committed to Git starts with `#!/home/alex/node24` and passes locally, yet fails with `Permission denied` or `No such file` on Linux CI runners. Which fixes make it portable?
+    - A) Switch first line to `#!/usr/bin/env node` and track executable permission (`chmod +x`)
+    - B) Rename the script to `deploy.txt` and delete `.gitignore`
+    - C) Run `npm uninstall node` inside CI YAML
+    - D) Replace all relative paths with `C:\Users\alex`
 
 40. **`[L4 Analyze | Std 13.1]`** A script passes Linux CI yet fails on Windows using fs.readFile("data\\items.json"). Root cause?
     - A) Windows Node lacks node:fs/promises

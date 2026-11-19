@@ -47,6 +47,7 @@ Turn conversational LLM geometry into physical 3D-printed hardware in pure JavaS
    - **Build-Plate Fit & Grounding:** Fits `<= 220 x 220 x 250 mm` (Ender-3 / Prusa MK3/MK4) and rests flat at `zMin === 0`.
    - **Minimum Wall Thickness:** `>= 1.2 mm` (`>= 3` perimeters on a `0.4 mm` nozzle).
    - **Slicer Checklist:** Generates `PrusaSlicer` / `Cura` settings (`0.2 mm` layer height, `20%` infill, PLA `205°C / 60°C`, estimated grams & print time) + live HTML `<canvas>` 3D wireframe preview!
+5. **Physical Showcase Bridge to [Unit 21 Drone Build](../../21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/unit-guide.md):** Alongside Core Voice/RAG/Agentic AI and the standard `box` / `l-bracket` / `spur-gear` geometries, students may generate printable STL/OBJ **TPU/PETG drone airframe canopies, camera brackets, or GPS masts** (`>= 1.2 mm` walls, watertight manifold) to physically mount on their Semester 4 drones.
 
 ---
 

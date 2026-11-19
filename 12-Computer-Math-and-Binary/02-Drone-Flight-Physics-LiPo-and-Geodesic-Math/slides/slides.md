@@ -7,11 +7,11 @@ slideNumber: true
 ---
 
 # Lesson 12.2: Drone Flight Physics & Geodesic Math
-**West-MEC `DT101` (`1.0–12.0, 23.0`) + AZ CTE `4.0` (`4.1–4.7`)**
+**CTE Drone Tech (`49.0199.00`: `1.0–12.0, 23.0`) + AZ CTE `4.0` (`4.1–4.7`)**
 
 ---
 
-### `[L1 Remember]` PROPS OFF Bench Safety & Ohm's Law (`DT101 1.0`, `4.4`)
+### `[L1 Remember]` PROPS OFF Bench Safety & Ohm's Law (`CTE Drone Tech 1.0`, `4.4`)
 
 > **CRITICAL RULE:** **PROPS OFF** before USB or LiPo power on any workbench!
 

@@ -7,7 +7,7 @@ slideNumber: true
 ---
 
 # Lesson 10.3: Computer Vision & AI Compute Hardware
-**West-MEC `AI101` U2, `AI102` U10 & `AI201` U3–4 (`AI Stds 3.0, 8.0, 9.0`)**
+**CTE AI (11.0102.00) / Azure AI-900 (`AI Stds 3.0, 8.0, 9.0`)**
 
 ---
 

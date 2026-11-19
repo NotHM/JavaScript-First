@@ -1,6 +1,6 @@
 # Unit 5 Setup & Diagnostics Guide: Loops, Structures & AI Data Pipelines
 
-**Applies to:** `05-DataStructures-and-Loops/` (`Stds 6.0, 7.0 + AI101/AI201`)  
+**Applies to:** `05-DataStructures-and-Loops/` (`Stds 6.0, 7.0 + CTE AI (11.0102.00) / Azure AI-900`)  
 **Chapter Guide:** [`readme.md`](./readme.md) | **Unit Plan:** [`unit-guide.md`](./unit-guide.md) | **50-Q Exam:** [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md)
 
 ---

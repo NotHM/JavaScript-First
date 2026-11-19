@@ -4,7 +4,7 @@
  * PID Control with Anti-Windup, Complementary IMU Fusion, CRM Callouts,
  * and Async Heartbeat Watchdog Fail-Safe State Machine (EventEmitter + AbortController).
  *
- * Standards: West-MEC DT101-DT102 (11.0-16.0, 24.0-26.0) + AZ CTE 18.0 (18.1-18.7, 16.3)
+ * Standards: CTE Drone Tech (49.0199.00) / FAA Part 107 (11.0-16.0, 24.0-26.0) + AZ CTE 18.0 (18.1-18.7, 16.3)
  *
  * Run: node 07-Async-JS/02-Telemetry-FailSafe-and-Sensor-Streams/code/droneTelemetryDemo.mjs
  */

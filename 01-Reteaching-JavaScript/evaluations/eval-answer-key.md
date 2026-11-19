@@ -20,7 +20,7 @@
 | 10 | *(Rubric 1 pt)* | L4 Analyze | `3.1 / 11.4` | `0`, `""`, and `false` are **falsy** in JS; `!input` mistakenly treats `0` as missing. Safer check: `input === null \|\| input === undefined` (or `input == null`). |
 | 11 | **B** (`"type": "module"` and `.cjs`) | L2 Understand | `11.7 / 13.1` | `"type": "module"` enables ESM for `.js` files; `.cjs` explicitly forces CommonJS. |
 | 12 | *(Rubric 1 pt)* | L4 Analyze | `18.2` | ESM relative imports require explicit file extensions; fix by writing `import { tax } from './math.mjs';`. |
-| 13 | **B** (`EPA hazardous battery recycler`) | L1 Remember | `ITS 101 / ADE 2.1–2.6` | Swollen Li-ion batteries pose thermal runaway fire hazards and must go to certified EPA/Call2Recycle hazardous recycling. |
+| 13 | **B** (`EPA hazardous battery recycler`) | L1 Remember | `CompTIA A+ / ADE 2.1–2.6` | Swollen Li-ion batteries pose thermal runaway fire hazards and must go to certified EPA/Call2Recycle hazardous recycling. |
 | 14 | **C** (`1777`) | L2 Understand | `RH124 / ADE 8.7` | Leading `1` sets the **sticky bit** so only file owner, directory owner, or `root` can delete entries in `/tmp`. |
 | 15 | *(Rubric 1 pt)* | L4 Analyze | `ADE 8.6–8.8, 10.2` | Layers: **Kernel**, **Shell**, **Utilities**. `PermitRootLogin no` stops direct brute-force attacks against UID `0` and enforces accountable `sudo` elevation. |
 
@@ -41,17 +41,17 @@
 | 9 | **B** (`fileURLToPath` + `createRequire`) | L3 | `11.7 / 13.1` | Q11 |
 | 10 | **A** (`does not provide an export named 'badge'`) | L4 | `18.2` | Q12 |
 | 11 | **A** (`-rwsr-xr-x`, `setuid`) | L2 | `RH124 / ADE 8.7` | Q14 |
-| 12 | **B** (`550 W` / `650 W` + R2/e-Stewards e-waste) | L3 | `ITS 101 / ADE 2.1–2.6` | Q13 |
+| 12 | **B** (`550 W` / `650 W` + R2/e-Stewards e-waste) | L3 | `CompTIA A+ / ADE 2.1–2.6` | Q13 |
 | 13 | **2 pts:** (1 pt) Identifies **COPPA** (child under 13) + PII exposure (**FERPA/GDPR**) in unredacted logs; (1 pt) Proposes masking/redacting email/DOB (`email: "[REDACTED]"`, omitting minor's DOB) prior to logging. | L4 | `2.3 / 1.5` | Q9 |
 | 14 | **2 pts:** (1 pt) Identifies that unlicensed blog code defaults to **all-rights-reserved copyright** (`2.1`) and Library C poses unvetted privacy/telemetry/COPPA compliance risks (`2.3`/`2.4`); (1 pt) Defends **Apache 2.0** Library B for clear permissive + patent grant, auditable open source, and zero known CVEs. | L5 | `2.1 / 2.2` | — |
 | 15 | **2 pts:** (1 pt) Explicit `typeof` validation throwing `TypeError` on invalid input + camelCase naming (`11.4`, `11.9`); (1 pt) Clean `.trim()`, `.toUpperCase()`, and template literal banner formatting (`3.4`, `11.5`). Sample:<br>`function formatCliBanner(courseTitle, credits) { if (typeof courseTitle !== "string" \|\| typeof credits !== "number") throw new TypeError("Invalid args"); return \`=== \${courseTitle.trim().toUpperCase()} (\${credits} CR) ===\`; }` | L6 | `3.1 / 11.4 / 11.9` | — |
-| 16 | **2 pts:** (1 pt) Hardens `/etc/ssh/sshd_config` (`PermitRootLogin no`, `PasswordAuthentication no`, `PubkeyAuthentication yes`, `MaxAuthTries 3`) + enables `chronyd` **NTP** synchronization so `journalctl` timestamps are monotonic; (1 pt) Re-enables **`firewalld`** allowlisting only needed services and restores **SELinux `Enforcing`** mode (`restorecon`). | L4–L5 | `ITS 102 / ADE 8.7–8.8, 10.2` | Q15 |
+| 16 | **2 pts:** (1 pt) Hardens `/etc/ssh/sshd_config` (`PermitRootLogin no`, `PasswordAuthentication no`, `PubkeyAuthentication yes`, `MaxAuthTries 3`) + enables `chronyd` **NTP** synchronization so `journalctl` timestamps are monotonic; (1 pt) Re-enables **`firewalld`** allowlisting only needed services and restores **SELinux `Enforcing`** mode (`restorecon`). | L4–L5 | `RHCSA / CompTIA Sec+ / ADE 8.7–8.8, 10.2` | Q15 |
 
 ---
 
 ## 3. Unit 1 Normalized Learning Gain Class Tracker
 
-Record class averages to verify AZ CTE & West-MEC instructional effectiveness:
+Record class averages to verify AZ CTE & Community College CIS instructional effectiveness:
 
 | Metric | Pre-Unit Avg (%) | Post-Unit Avg (%) | Normalized Gain $g = \frac{\text{Post}-\text{Pre}}{100-\text{Pre}}$ | Target Threshold |
 |---|---|---|---|---|
@@ -59,5 +59,5 @@ Record class averages to verify AZ CTE & West-MEC instructional effectiveness:
 | **Std 11.0 (CLI & Program Dev)** | `____%` | `____%` | `____` | $g \ge 0.55$ |
 | **Std 3.0 (Primitives & Types)** | `____%` | `____%` | `____` | $g \ge 0.55$ |
 | **Std 13.1 / 18.2 (Module Standards)** | `____%` | `____%` | `____` | $g \ge 0.55$ |
-| **ITS 101–102 / ADE 2.0, 8.6–8.8, 10.2 (Linux & Safety)** | `____%` | `____%` | `____` | $g \ge 0.55$ |
+| **CTE IT Security (`11.1999.00`) / CompTIA A+ / RHCSA / ADE 2.0, 8.6–8.8, 10.2 (Linux & Safety)** | `____%` | `____%` | `____` | $g \ge 0.55$ |
 | **Overall Unit 1** | `____%` | `____%` | `____` | **$g \ge 0.55$** |

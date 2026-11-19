@@ -1,51 +1,51 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
-What default security model does Deno enforce when running a script with no flags?,Full root OS privileges,Zero capabilities until allowed,Read-only user home dir,Unsandboxed HTTP on port 80,20,2
-Which term describes default Node giving npm deps the user's full OS rights?,Zero Trust isolation,Ambient authority,Linear memory paging,Lexical scoping,20,2
-Which Deno CLI flag grants filesystem read access ONLY inside ./public?,--allow-read=./public,--allow-all=./public,--allow-fs-read=./public,--enable-path=./public,20,1
-Which Deno flag blocks reading a secret file inside a permitted --allow-read dir?,--block-fs,--deny-read,--no-read,--restrict-env,20,2
-Which specifier prefix resolves ESM-first packages from the modern JS Registry?,cjs:,jsr:,ftp:,bin:,20,2
-Which config file replaces package.json in Deno for tasks and import maps?,tsconfig.ini,Cargo.toml,deno.json,.babelrc,20,3
-Which Node.js 24 CLI flag enables Node's built-in capability sandbox?,--strict-sandbox,--permission,--inspect,--experimental-vm,20,2
-What 4-byte magic header begins every valid WebAssembly .wasm binary?,\0asm (00 61 73 6d),\x7fELF (7f 45 4c 46),%PDF (25 50 44 46),WASM (57 41 53 4d),20,1
-What is the fixed byte size of one WebAssembly linear memory page?,4 KiB (4096 bytes),16 KiB (16384 bytes),64 KiB (65536 bytes),1 MiB (1048576 bytes),20,3
-What are the WASM section IDs for Type Function Memory Export and Code?,0 2 4 6 8,1 3 5 7 10,2 4 6 8 12,1 2 3 4 5,20,2
-Why does unsandboxed node app.js create supply-chain risk with npm packages?,JS needs root to start,Deps inherit full user OS rights,npm compiles all JS to C++,Node disables HTTPS on install,20,2
-What happens when running deno run server.ts directly on a TypeScript file?,Throws unknown extension,Silently skips functions,Executes TypeScript natively,Converts file to CommonJS,20,3
-Why do Deno.serve() handlers align cleanly with Edge workers and browsers?,Requires Express req.params,Accepts raw TCP buffers only,Uses PHP superglobals,Uses Web Request and Response,20,4
-Why map @std/path to jsr:@std/path@^1.0.8 inside deno.json imports?,Installs binaries in /usr/bin,Forces CommonJS require(),Maps bare imports sans node_modules,Disables permission flags,20,3
-In the 8-byte .wasm header what do bytes 4..7 (01 00 00 00) encode?,Version 1 little-endian uint32,Total memory byte length,Big-endian page count,Unix epoch timestamp,20,1
-Why does the WASM binary format encode section lengths with LEB128?,Encrypts names with AES,Packs ints in minimal bytes,Pads ops to 64-byte blocks,Encodes floats as UTF-8,20,2
-How does WAT relate to a compiled .wasm module?,Encrypted network token,Readable S-expr compiled to .wasm,Browser DOM fetch event,Node lockfile format,20,2
-How do JS and a WASM module exchange strings or large byte arrays?,Temp .txt files in /tmp,localStorage key polling,Shared memory.buffer ArrayBuffer,JSON inside HTTP Cookies,20,3
-Why can a standalone .wasm module with {} imports not open host files directly?,Zero ambient OS syscalls,WASM blocks browser math,V8 deletes fs before compile,WASM runs in CSS threads,20,1
-What capability advantage does Node 24 --permission bring to Node services?,Auto Rust compile on start,Swaps V8 for JavaScriptCore,Zero-config browser bundling,Scoped FS & child-process limits,20,4
-Which Deno command scopes net to 127.0.0.1:8080 and reads only PORT env?,deno run -A server.ts,deno run --allow-net=127.0.0.1:8080 --allow-env=PORT s.ts,deno run --allow-read=127.0.0.1 --allow-sys=PORT s.ts,deno check --allow-net s.ts,30,2
-Which Deno command type-checks server.ts statically without running the server?,deno run --lint server.ts,deno check server.ts,deno compile --dry server.ts,deno fmt --types server.ts,30,2
-Which Deno flags permit reading ./data/ while blocking ./data/.env?,--allow-read=./data --deny-read=./data/.env,--allow-all --ignore-env=.env,--deny-all --allow-env=./data,--allow-write=./data,30,1
-Which Node 24 CLI command turns on sandboxing and restricts reads to ./public?,node --sandbox --read=./public a.mjs,node --allow-read=./public a.mjs,node --permission --allow-fs-read=./public a.mjs,node --strict-env a.mjs,30,3
-Which JS method synchronously returns whether bytes form a valid WASM binary?,WebAssembly.validate(bytes),WebAssembly.checkHeader(bytes),JSON.validateWasm(bytes),Buffer.isWasm(bytes),30,1
-Which async JS API compiles bytes and returns { module instance }?,WebAssembly.compileSync(bytes),WebAssembly.instantiate(bytes imports),Deno.loadWasm(bytes),import.meta.wasm(bytes),30,2
-How do you write encoded bytes at index 128 inside exported WASM memory?,memory.write('AZ-CTE' 128),process.env.WASM_PTR = encoded,new Uint8Array(memory.buffer).set(encoded 128),Buffer.copy(encoded 128),30,3
-What happens when xorTransform(ptr len 0x42) runs a second time in place?,Doubles buffer byte length,Clears all bytes to 0x00,Restores original plaintext bytes,Throws LinkError,30,3
-Which WABT command compiles a human-readable .wat file into .wasm bytecode?,wasm2wat add.wat -o add.wasm,wat2wasm add.wat -o add.wasm,deno bundle add.wat,npx wasm-init add.wat,30,2
-Which wasm-pack command compiles a Rust crate into ESM WASM bindings for Node?,wasm-pack build --target nodejs --release,wasm-pack compile --target deno,cargo install --wasm-cjs,wat2wasm src/lib.rs,30,1
-Node runs --permission --allow-fs-read=./pub and reads /etc/hosts. Error code?,ENOENT,ERR_MODULE_NOT_FOUND,ERR_ACCESS_DENIED,ECONNREFUSED,30,3
-Node --permission spawns git without --allow-child-process. What occurs?,Runs git read-only,Throws ERR_ACCESS_DENIED,Returns status 0 silently,Crashes V8 kernel,30,2
-Deno runs --allow-net=api.school.edu:443 and dep fetches evil.example. Result?,Allows request implicitly,Downgrades to HTTP,Denies with PermissionDenied,Strips query params,30,3
-Why must CapabilitySandboxPolicy.canRead() check denyPaths BEFORE readRoots?,readRoots throws ENOENT first,Deny exceptions inside readRoots fail otherwise,Set.has needs sorted arrays,path.resolve clears strings,30,2
-Why does path.resolve(target) protect canRead() from /pub/../../etc/passwd?,Collapses .. before prefix checks,Strips .env extensions,Hashes paths with SHA-256,Deletes unreadable files,30,1
-Why must auditRuntimeFlags('node' ['--allow-fs-read=./pub']) return REJECTED?,Path under 8 chars,Missing --permission leaves Node unsandboxed,Only .ts runs with flags,Deno-only flag name,30,2
-Saving an HTML 404 page as filter.wasm causes WebAssembly.instantiate to throw:,TypeError on UTF-8,SyntaxError Unexpected <,CompileError bad magic word,RangeError stack overflow,30,3
-A 1-page (65536 B) WASM module calls sumBytes(65530 16). What occurs at 65536?,Wraps to index 0,Auto-grows to 2 pages,Returns NaN cleanly,Throws RuntimeError out of bounds,30,4
-Why is a WASM linear memory out-of-bounds read safer than a C buffer over-read?,Bounds checks trap before host V8 RAM,Replaces bytes with random,Deletes JS closure safely,Disables OS ASLR,30,1
-xorRoundTrip returns garbled symbols instead of original text. Likely bug?,Used TextEncoder vs Uint16Array,Called xorTransform once not twice,Forgot node:crypto import,Used 2 pages vs 1 page,30,2
-Why should reviewers block changing deno run flags to -A in production?,Grants full OS rights voiding sandbox,Disables TypeScript mode,Forces HTTP/1.0 plain text,Blocks WebAssembly,60,1
-Which Deno flags give Least Privilege for static ./dist on 127.0.0.1:8080 + PORT?,--allow-all,--allow-read --allow-net,--allow-net=127.0.0.1:8080 --allow-read=./dist --allow-env=PORT,--allow-run --allow-write,60,3
-Read-only API manifest sets --permission --allow-fs-read=./cat --allow-fs-write=*. Verdict?,Approve --permission is set,Approve with style warning,Reject wildcard write violates least priv,Convert catalog to WAT,60,3
-Best architecture for running untrusted customer pricing plugins safely?,eval() raw JS strings,WASM with {} imports + --permission host,Save & run deno run -A,Spawn unsandboxed bash,60,2
-Why leave importsObj empty {} when instantiating untrusted WASM plugins?,Caps memory under 4 KiB,Blocks host FS net and env access,Forces UTF-16 encoding,Enables runtime Rust compile,60,2
-When is pure JS/TS preferable over porting a module to WebAssembly?,64-bit math on 50 MB buffers,Small JSON glue DOM or I/O-bound routes,Untrusted crypto codecs,Pixel DSP compression,60,2
-When does compiling Rust to WASM via wasm-pack pay off over pure JS?,Parsing 200-byte startup JSON,Tight linear-memory loops avoiding GC pauses,Serving two static HTML files,Logging ISO timestamps,60,2
-Why combine Deno/Node capability flags WITH WebAssembly memory sandboxing?,Guards JS deps OS surface + untrusted plugin RAM,Merges deno.json & package.json,Removes HTTPS TLS need,Doubles clock speed,60,1
-canFetch() checks allowedHosts.has(hostname) when allowlist has host:8443. Flaw?,URL throws on port strings,Ignores port limits on that host,DNS swaps localhost ports,Browsers strip hostnames,60,2
-A 2-page WASM memory holds 131072 bytes. Safe invariant before write at offset?,offset>=0 && offset+len<=131072,offset===65536 && len<64,ASCII lowercase only,Prime offset < 4096,60,1
+"Which security model denies filesystem, network, and env access until explicitly granted?",Disabled JIT mode,Ambient global access,Zero-Trust Least Privilege capability model,Implicit root trust,20,3
+What term describes unsandboxed scripts inheriting every permission of the parent OS user?,Zero-copy buffering,Ambient authority,Linear memory trapping,Capability isolation,20,2
+Which Node 24 CLI flag activates capability restrictions for filesystem & child processes?,--permission,--inspect,--experimental-repl,--watch,20,1
+Which POSIX mechanism prevents non-root server accounts from reading root-only system files?,World-writable /etc,chmod 777 everywhere,Global SUID bit,0600/0640 file ownership & user isolation,20,4
+Which 4-byte magic file signature begins EVERY valid compiled WebAssembly (.wasm) module?,%PDF,RIFF,\0asm (0x00 0x61 0x73 0x6d),\x7fELF,20,3
+What is the exact byte capacity of 1 WebAssembly linear memory page in host RAM?,1 KiB,"64 KiB (65,536 bytes)",4 KiB,16 MiB,20,2
+Which TypedArray wraps WebAssembly.Memory.buffer to read/write single unsigned bytes in JS?,new Uint8Array(memory.buffer),JSON.parse(),Object.keys(),String.fromCharCode(),20,1
+Which standard JS method compiles and initializes a .wasm Uint8Array asynchronously?,JSON.stringify(),require.resolve(),Deno.open(),WebAssembly.instantiate(),20,4
+Which specifier prefix imports ESM-first typed packages from the JSR registry in Deno?,ftp:,bin:,jsr:,cjs:,20,3
+"Which project file centralizes Deno tasks, formatter rules, linter, and import maps?",Makefile.old,deno.json (or deno.jsonc),.babelrc,Cargo.toml,20,2
+Why can a single compromised logging npm package steal API tokens in unsandboxed Node?,Packages share full process user permissions,V8 stores keys in HTML,JSON ignores const,TLS skips keys,20,1
+Why does WASM guarantee memory isolation even when running compiled C or Rust plugins?,WASM encrypts CPU cache,Host OS disables RAM,Plugins run on DNS,Guest accesses only bounds-checked linear memory,20,4
+Why disable child_process spawning under sandboxes when running untrusted user code?,Clears DNS resolvers,Forces TypeScript JIT,Prevents spawning bash/curl to bypass JS guards,Improves CSS frame rate,20,3
+Why do binary wire formats use LEB128 variable-length encoding instead of fixed 64-bit ints?,Runs SQL queries faster,Packs small numbers into 1 byte to shrink size,Stores CSS hex colors,Converts binary to XML,20,2
+"In bytes [0x01, 0x00, 0x00, 0x00] at offset 4..7, what value does Little-Endian uint32 decode?",1 (version 1),"16,777,216",0,256,20,1
+Why do modern JS server frameworks standardize on WHATWG Request and Response objects?,Removes async/await,Requires CommonJS,Blocks HTTP headers,"Code runs across browsers, Node, Deno, & Edge",20,4
+How do JavaScript and WebAssembly avoid slow JSON string serialization for big byte buffers?,Write temp SQL tables,Base64 encode every int,Share binary linear memory via TypedArrays,Save to cookies per byte,20,3
+How does human-readable .wat (WebAssembly Text) differ from binary .wasm bytecode?,WASM is uncompressed text,WAT is S-expression text compiled into binary,Both are JSON files,WAT runs directly in SQL,20,2
+What benefit do import maps in deno.json provide over huge nested node_modules folders?,Map clean aliases to pinned URL/JSR packages,Compile C++ kernels,Force require() globally,Disable network checks,20,1
+How does Deno execute TypeScript files differently from Node v20/standard npm builds?,Ignores all errors,Converts TS to Python,Requires Gulp tasks,Runs TypeScript directly with zero manual build,20,4
+Which capability policy meets Least Privilege for a server reading ./public on 127.0.0.1:8080?,Disable sandboxing,Allow write to /etc,"Allow net 127.0.0.1:8080, read ./public, env PORT",Allow all network & write,30,3
+Which configuration lets a Node --permission process read ./public while blocking writes?,node --chmod-777,node --permission --allow-fs-read=./public,node --root-fs,node --allow-all,20,2
+Which JS call synchronously returns true/false verifying a buffer holds valid WASM bytecode?,WebAssembly.validate(bytes),WebAssembly.parse(bytes),Buffer.isWasm(bytes),JSON.valid(bytes),20,1
+Which JS statement loads compiled WASM bytes with an empty isolated host import object?,eval(bytes),new WebAssembly(bytes),import(bytes),"await WebAssembly.instantiate(bytes, {})",20,4
+How do you encode JS string hello into UTF-8 bytes and write at offset 128 in WASM memory?,JSON.stringify at index 0,cookie = hello,"TextEncoder + memBytes.set(encoded, 128)",memory.push(hello),30,3
+"You run XOR transform xorTransform(offset, len, 0x5A) twice on the same WASM memory range. Result?",Double encrypted irreversibly,Original plaintext UTF-8 bytes restored cleanly,Throws SyntaxError,Zeroed buffer,20,2
+How should JS validate outbound URLs against an allowlist like api.school.edu:443 cleanly?,Parse new URL(raw) & compare host (host:port),String includes(school),Regex ending .com,Skip port comparison,30,1
+"In WASM header validation, which section order marks Type, Function, Memory, Export, Code?",Only section 0,"Sections 9, 8, 2, 1, 0","Sections 100, 200, 300","Sections 1, 3, 5, 7, 10",20,4
+Which Deno CLI command statically type-checks TypeScript files without executing code?,deno run -A,deno bundle --none,deno check app.ts,deno compile --eval,20,3
+Which command compiles Rust source into .wasm plus Node ESM glue wrappers cleanly?,eslint --wasm,wasm-pack build --target nodejs --release,npm audit fix,nodemon src/lib.rs,20,2
+"Under Node --permission --allow-fs-read=./pub, script calls readFileSync(/etc/hosts). Error?",ERR_ACCESS_DENIED,ENOENT,TypeError,ECONNREFUSED,20,1
+"Under Node --permission --allow-fs-read=*, a script spawns execSync(id). Why does it fail?",RAM full,Missing file extension,Sync API deprecated,Child processes require --allow-child-process,30,4
+Policy lists allow=./public and deny=./public/.env. Why did checking allow first leak .env?,Path strings are UTF-16,Allowlist was empty,Deny precedence must evaluate BEFORE allow checks,Dotfiles cannot be read,30,3
+Requested path ./public/../../etc/passwd slips past startsWith(./public). Exact fix?,Replace slashes with spaces,Canonicalize with path.resolve() first,Allow relative paths,Check string length < 50,30,2
+A script runs node --allow-fs-read=./pub app.js WITHOUT --permission. Audit verdict?,REJECTED: zero sandboxing active without --permission,Sandboxed safely,Passes Least Privilege,Only blocks network,30,1
+WebAssembly.instantiate fails: expected magic word 00 61 73 6d. What hit the loader?,Strict TypeScript,Too many exported ints,64 KiB page alignment,HTML 404 page or corrupt non-WASM payload,20,4
+"WASM reads 16 bytes at offset 65530 in a 1-page (65,536-byte) linear memory. Result?",Returns empty string,Reads Node env vars,Throws WebAssembly.RuntimeError out of bounds,Wraps around to byte 0,30,3
+Allowlist checks url.hostname === api.school.edu ignoring port. Why does :9000 bypass fail?,DNS strips port 443,Port validation requires comparing url.host,URL throws on HTTPS,Hostname includes protocol,30,2
+Deno allows --allow-net=api.school.edu:443. Fetching https://evil.example/data throws:,PermissionDenied (NotCapable),SyntaxError,RangeError,BufferOverflow,20,1
+Student runs xorTransform once instead of twice in wasmMemoryLab test and gets ciphertext. Cause?,UTF-16 key mismatch,Offset must be negative,Buffer allocates 0 pages,XOR decrypt requires a second pass with same key,20,4
+An engineer deploys deno run -A server.ts to production for convenience. Best critique?,Blocks supply-chain bugs,Improves TLS ciphers,"-A cancels sandboxing, exposing FS/net/env",Optimal minimal flags,20,3
+Passing --allow-fs-write=* on a read-only static web server violates which core audit rule?,Disables V8 GC,Wildcard write violates Least Privilege,Prevents UTF-8 output,Breaks HTTP GET,20,2
+Why run untrusted third-party pricing formulas inside WASM + host --permission together?,Defense-in-depth blocks both guest heap & OS I/O,Avoids writing unit tests,Doubles HTTP latency,Skips JSON parsing,30,1
+Why pair container/non-root OS user limits WITH runtime --permission flags in production?,Avoids git commits,Replaces TLS certificates,Doubles RAM capacity,Kernel + runtime containment limits compromise blast radius,30,4
+Which workload genuinely justifies compiling into WebAssembly instead of pure JavaScript?,Rendering static HTML links,Reading .env string,Tight math loops over large flat binary arrays,Simple 20-line JSON router,30,3
+Why is compiling a 20-line JSON REST endpoint to WASM usually slower than native JS?,HTTP forbids binary,Host-to-WASM string marshaling overhead dominates,V8 refuses async fetch,WASM lacks integers,30,2
+"Before calling memoryBytes.set(payload, offset) on 2-page memory (131072B), what guard prevents RangeError?",offset >= 0 && offset + payload.byteLength <= 131072,offset > 0 only,payload.length < 10,Skip validation,30,1
+Why instantiate untrusted plugin .wasm modules with empty imports {} rather than host fs/fetch wrappers?,Adds TypeScript types,Faster CSS paint,Enables SQL joins,Eliminates capability leakage into guest code,20,4
+Best Deno CLI command for a static file server serving ./dist on 127.0.0.1:8080 reading PORT env?,--deny-net --allow-all,--allow-write=* --allow-run,--allow-net=127.0.0.1:8080 --allow-read=./dist --allow-env=PORT,deno run -A server.ts,30,3
+Which tool pair disassembles .wasm back to readable .wat for binary inspection?,git & curl,wat2wasm & wasm2wat,gcc & docker,npm & eslint,20,2

@@ -1,11 +1,11 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
 const data = res.json() prints Promise pending. What keyword is missing?,return,await before res.json(),static,break,20,2
-Which check catches HTTP 404 or 500 inside async fetch()?,if (!res.ok) throw new Error(),if (res.ok) break,typeof res,delete res,20,1
-Sending JSON via fetch POST requires which request header?,Color: red,Content-Type: application/json,Port: 80,Cache: no,20,2
-Browser DevTools blocks fetch() to a different origin without permission via:,CORS Policy,SyntaxError,SSH Keygen,CSS Float,20,1
-An SEO-heavy public storefront needs HTML rendered on server before download:,Plain XHR,Next.js SSR,Alert dialog,Global var,30,2
-Holiday checkout traffic spikes 10x while Auth sits quiet. Ideal scaling?,Single monolith VM,Scale Payment container independently,Reboot laptop,Inline scripts,30,2
-Passing raw { a: 1 } into fetch body sends [object Object]. What fixes it?,parseInt(body),JSON.stringify(obj),obj.toString(),eval(obj),20,2
-Why must secret API keys NEVER live inside client browser JS files?,CSS hides keys,Users can read them in DevTools,Node deletes keys,JSON breaks keys,20,2
+Which check catches HTTP 404 or 500 inside async fetch()?,delete res,if (res.ok) break,typeof res,if (!res.ok) throw new Error(),20,4
+Sending JSON via fetch POST requires which request header?,Content-Type: application/json,Color: red,Port: 80,Cache: no,20,1
+Browser DevTools blocks fetch() to a different origin without permission via:,SSH Keygen,SyntaxError,CORS Policy,CSS Float,20,3
+Safely displaying untrusted API text in DOM without XSS risk uses:,el.innerHTML = text,el.textContent = text,document.write(text),eval(text),30,2
+Why prefer HttpOnly cookies over localStorage for auth tokens?,Blocks JS & XSS token theft,Holds GBs of data,localStorage lacks HTTPS,Bypasses CORS checks,30,1
+Passing raw { a: 1 } into fetch body sends [object Object]. What fixes it?,parseInt(body),eval(obj),obj.toString(),JSON.stringify(obj),20,4
+Why must secret API keys NEVER live inside client browser JS files?,CSS hides keys,Node deletes keys,Users can read them in DevTools,JSON breaks keys,20,3
 Which XHR handler fires when offline Wi-Fi drops a connection?,xhr.onerror,xhr.onhover,xhr.onclick,xhr.onfocus,20,1
-Code runs locally on Mac but crashes in Linux prod. Best fix?,More console logs,Standardized Docker container,Rename variables,Disable strict mode,20,2
+Code runs locally on Mac but crashes in Linux prod. Best fix?,More console logs,Disable strict mode,Rename variables,Standardized Docker container,20,4

@@ -1,13 +1,13 @@
 # Lesson Plan 19.3: FAA Part 107 Airspace, METAR Weather, Survey Grids & Mode-2 Flight Sim
 
 **Unit:** Unit 19 | **Duration:** 3 Class Periods × 50 min  
-**Standards:** West-MEC Drone Technology **`DT102` (`Stds 14.0–28.0`: `FAA 14 CFR Part 107 / TRUST`)** + **AZ CTE `9.0`, `15.0` (`15.5`), `19.0` (`19.8`)**
+**Standards:** **CTE Drone Tech (`49.0199.00` / `FAA 14 CFR Part 107 & TRUST`)** + **AZ CTE `9.0`, `15.0` (`15.5`), `19.0` (`19.8`)**
 
 ---
 
 ## Lesson SMART Objectives (Trackable)
-- [ ] **Student Objective (`SG-U19-6` | `[L3–L5]` | `DT102, 9.2, 15.5`):** **S** — Complete all `TODO` gates in `part107AndMetarLab.mjs` (Part 107 / LAANC preflight, `§107.9` 10-day `>$500` reporter, `METAR` parser, `75%/65%` lawnmower grid, and Mode-2 `stepDroneSim` bugfix); **M** — Pass 100% of Node verification checks and earn `>= 80%` on Post-Lesson 19.3; **A** — Using `part107MissionSimDemo.mjs` patterns; **R** — Unifies FAA aviation compliance with 4:3 Canvas/Gamepad mission simulation; **T** — End of Day 9.
-- [ ] **Teacher Objective (`TG-U19-6` | `[L2–L5]` | Formative & Aviation Safety QA):** **S** — Model live `METAR` token decoding (`3 SM / 500 ft` below clouds), `LAANC` ceiling denials, and Mode-2 Gamepad Y-axis inversion debugging; **M** — Confirm `>= 85%` of students accurately distinguish `TRUST` vs `Part 107 UAG`, `10`-day `>$500` reporting, and `75%/65%` overlap spacing on Post-Lesson 19.3; **A** — Supported by [`part107MissionSimDemo.test.mjs`](./code/part107MissionSimDemo.test.mjs); **R** — Connects Unit 19 handheld game engines directly to West-MEC `DT102` aviation career competencies; **T** — Graded by Day 9 close.
+- [ ] **Student Objective (`SG-U19-6` | `[L3–L5]` | `49.0199.00, 9.2, 15.5`):** **S** — Complete all `TODO` gates in `part107AndMetarLab.mjs` (Part 107 / LAANC preflight, `§107.9` 10-day `>$500` reporter, `METAR` parser, `75%/65%` lawnmower grid, and Mode-2 `stepDroneSim` bugfix); **M** — Pass 100% of Node verification checks and earn `>= 80%` on Post-Lesson 19.3; **A** — Using `part107MissionSimDemo.mjs` patterns; **R** — Unifies FAA aviation compliance with 4:3 Canvas/Gamepad mission simulation; **T** — End of Day 9.
+- [ ] **Teacher Objective (`TG-U19-6` | `[L2–L5]` | Formative & Aviation Safety QA):** **S** — Model live `METAR` token decoding (`3 SM / 500 ft` below clouds), `LAANC` ceiling denials, and Mode-2 Gamepad Y-axis inversion debugging; **M** — Confirm `>= 85%` of students accurately distinguish `TRUST` vs `Part 107 UAG`, `10`-day `>$500` reporting, and `75%/65%` overlap spacing on Post-Lesson 19.3; **A** — Supported by [`part107MissionSimDemo.test.mjs`](./code/part107MissionSimDemo.test.mjs); **R** — Connects Unit 19 handheld game engines directly to CTE Drone Tech (`49.0199.00`) / FAA Part 107 competencies and [Unit 21 Drone Bench Bring-Up](../../21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/unit-guide.md); **T** — Graded by Day 9 close.
 
 ---
 

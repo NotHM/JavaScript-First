@@ -17,7 +17,7 @@ If you've ever watched a restaurant crew or warehouse shift fall behind because 
   [`02-Arrays-Objects-Matrices/readme.md`](./02-Arrays-Objects-Matrices/readme.md) |
   [Slides](./02-Arrays-Objects-Matrices/slides/slides.md) |
   [Student Lab](./02-Arrays-Objects-Matrices/student-lesson.md)
-- **Lesson 5.3 — Data Cleaning, Feature Vectors, Statistics & PII Anonymization (`AI101/AI201`):**
+- **Lesson 5.3 — Data Cleaning, Feature Vectors, Statistics & PII Anonymization (`CTE AI (11.0102.00) / Azure AI-900`):**
   [`03-Data-Cleaning-Vectors-and-Feature-Engineering/readme.md`](./03-Data-Cleaning-Vectors-and-Feature-Engineering/readme.md) |
   [Slides](./03-Data-Cleaning-Vectors-and-Feature-Engineering/slides/slides.md) |
   [Student Lab](./03-Data-Cleaning-Vectors-and-Feature-Engineering/student-lesson.md)
@@ -177,7 +177,7 @@ console.log('Reachable from JS101:', bfs(graph, 'JS101'));
 
 ---
 
-## 4. AI Data Pipelines: Cleaning, PII Masking & Feature Vectors (`AI101 / AI201 | AI Stds 4.0, 5.0`)
+## 4. AI Data Pipelines: Cleaning, PII Masking & Feature Vectors (`CTE AI (11.0102.00) / Azure AI-900 | AI Stds 4.0, 5.0`)
 
 Here is an uncomfortable truth about machine learning: **80% of real-world AI engineering is data hygiene, not training neural nets.** Feed garbage, duplicated rows, or raw student Social Security numbers into a model and you don't get "smart AI"—you get a compliance incident and broken predictions.
 
@@ -202,7 +202,7 @@ Every clean AI tabular pipeline follows a strict order of operations:
 ```javascript
 import crypto from 'node:crypto';
 
-const hashId = (id, salt = 'westmec-ai') =>
+const hashId = (id, salt = 'cte-ai') =>
   crypto.createHash('sha256').update(`${salt}:${id}`).digest('hex').slice(0, 16);
 
 console.log('Pseudonym:', hashId('S101'));

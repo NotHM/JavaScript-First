@@ -1,13 +1,13 @@
 # Lesson Plan 11.2: Zero Trust, Firewalls, SIEM Correlation & STRIDE Threat Modeling
 
 **Unit:** Unit 11 | **Duration:** 2 Class Periods (100 min total)  
-**Standards:** West-MEC `ITS 201–202` (`CompTIA Security+`, `TestOut Security Pro`) | **ADE Network Security:** `1.0`, `4.5–4.6`, `5.1–5.10`, `9.1–9.10`, `10.7–10.8`, `11.1–11.6`
+**Standards:** CTE IT Security (`11.1999.00`) / CompTIA Security+ | **ADE Network Security:** `1.0`, `4.5–4.6`, `5.1–5.10`, `9.1–9.10`, `10.7–10.8`, `11.1–11.6`
 
 ---
 
 ## Lesson SMART Objectives (Teacher & Student Targets)
 - [ ] **Teacher SMART Goal 1 (`TG-L11.2-1` | `[L1–L2]` | `ADE 1.0, 4.5–5.10, 11.1–11.6`):** Teach the 3 data states, STRIDE threat model, Risk Matrix, AAA/SSO/Biometric privacy liability, and 9 compliance mandates before lab so >= 85% of students score cleanly on Part A during Day 1.
-- [ ] **Teacher SMART Goal 2 (`TG-L11.2-2` | `[L3–L5]` | `ITS 201–202 / ADE 9.1–10.8`):** Walk through `zeroTrustSiemDemo.mjs` (`node --test`) live and verify >= 85% of students pass all checks in `firewallSiemLab.mjs` (`exit 0`) and `post-lesson-eval.md` (`>= 4/5`) by Day 2 close.
+- [ ] **Teacher SMART Goal 2 (`TG-L11.2-2` | `[L3–L5]` | `CTE IT Security / ADE 9.1–10.8`):** Walk through `zeroTrustSiemDemo.mjs` (`node --test`) live and verify >= 85% of students pass all checks in `firewallSiemLab.mjs` (`exit 0`) and `post-lesson-eval.md` (`>= 4/5`) by Day 2 close.
 - [ ] **Student SMART Goal 1 (`SG-L11.2-1` | `[L1–L2]`):** Classify Data at Rest/In Motion/In Use, STRIDE threats, physical/biometric protections, and GDPR/HIPAA/PCI-DSS/SOX/FERPA/FCC/DRM/EFF/AUP mandates accurately in Part A on Day 1.
 - [ ] **Student SMART Goal 2 (`SG-L11.2-2` | `[L3–L5]`):** Implement first-match Packet/Stateful/NGFW firewall evaluation, SIEM + AI Z-score anomaly correlation, STRIDE Risk scoring, and RPO/RTO DRP selection cleanly in Node.js by Period 2 close.
 

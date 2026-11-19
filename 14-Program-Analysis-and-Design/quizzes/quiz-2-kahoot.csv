@@ -1,11 +1,11 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
-A fintech ledger requires strict ACID transactions across tables. Best choice?,Unstructured TXT,Relational SQL DB,Local cookies,Global var array,20,2
-A telehealth patient portal storing chart diagnoses must comply with:,PCI DSS only,HIPAA,MIT License,DMCA,20,2
-Which artifact defines verifiable pass/fail rules BEFORE coding starts?,Accepted Test Plan (Given/When/Then),Lorem ipsum CSS,node_modules folder,.gitignore,20,1
+A fintech ledger requires strict ACID transactions across tables. Best choice?,Unstructured TXT,Local cookies,Relational SQL DB,Global var array,20,3
+A telehealth patient portal storing chart diagnoses must comply with:,HIPAA,PCI DSS only,MIT License,DMCA,20,1
+Which artifact defines verifiable pass/fail rules BEFORE coding starts?,.gitignore,Lorem ipsum CSS,node_modules folder,Accepted Test Plan (Given/When/Then),20,4
 A 600-line function mixes HTTP HTML & SQL. Best architectural action?,Add more globals,Decompose into single-responsibility functions,Remove comments,Switch to var,30,2
-What is Step 1 of professional troubleshooting when a bug is reported?,Delete logs,Reproduce consistently & gather context,Rewrite DB from scratch,Push directly to main,20,2
-How fast can binary-search isolation (git bisect) pinpoint a bug across 64 commits?,64 steps,About 6 steps,500 steps,Never works,30,2
-What is the 4th phase of RUP after Inception Elaboration and Construction?,Cascade,Transition,Minification,Encryption,20,2
+What is Step 1 of professional troubleshooting when a bug is reported?,Delete logs,Rewrite DB from scratch,Reproduce consistently & gather context,Push directly to main,20,3
+How fast can binary-search isolation (git bisect) pinpoint a bug across 64 commits?,64 steps,Never works,500 steps,About 6 steps,30,4
+What is the 4th phase of RUP after Inception Elaboration and Construction?,Transition,Cascade,Minification,Encryption,20,1
 Telemetry logs show durationMs=4200 & status=503. This directly proves:,CSS font mismatch,Server latency spike & overload failure,Missing README,Valid fast path,30,2
 Which field must be STRIPPED from diagnostic telemetry logs?,statusCode,durationMs,Raw patient SSN & card CVV,endpoint path,20,3
-A startup validating weekly mockups with customers works best under:,2-year locked Waterfall,RAD / Iterative Prototyping,Static Assembly,No SDLC plan,20,2
+A startup validating weekly mockups with customers works best under:,RAD / Iterative Prototyping,2-year locked Waterfall,Static Assembly,No SDLC plan,20,1

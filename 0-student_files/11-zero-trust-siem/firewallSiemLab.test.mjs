@@ -1,6 +1,6 @@
 /**
  * Student Lesson 11.2 Automated Test Suite (node --test)
- * Standards: West-MEC ITS 201–202 (Security+ / Security Pro) | ADE NetSec 1.0, 4.5–5.10, 9.1–11.6
+ * Standards: CTE IT Security (11.1999.00) / CompTIA Security+ | ADE NetSec 1.0, 4.5–5.10, 9.1–11.6
  *
  * Run:
  *   node --test 0-student_files/11-zero-trust-siem/firewallSiemLab.test.mjs

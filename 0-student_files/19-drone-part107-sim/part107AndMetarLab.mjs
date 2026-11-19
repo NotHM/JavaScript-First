@@ -1,6 +1,6 @@
 /**
  * Student Lesson 19.3 Lab — FAA Part 107 Airspace, METAR Weather, Survey Grids & Mode-2 Flight Sim
- * Standards: West-MEC DT102 (14.0-28.0: FAA 14 CFR Part 107 / TRUST) + AZ CTE 9.0, 15.0, 19.0
+ * Standards: CTE Drone Tech (49.0199.00: FAA 14 CFR Part 107 / TRUST) + AZ CTE 9.0, 15.0, 19.0
  *
  * Instructions: Complete all TODOs and fix the buggy Mode-2 axis / dt spike function without changing exports.
  * Run: node 0-student_files/19-drone-part107-sim/part107AndMetarLab.mjs
@@ -19,7 +19,7 @@ export function evaluatePart107Preflight({
   airspaceClass = 'G',
   laancCeilingFt = null,
 }) {
-  // TODO [L3 Apply | DT102 Part 107]:
+  // TODO [L3 Apply | 49.0199.00 Part 107]:
   // Validate UAG cert, weight < 55 lbs, altitude <= 400 ft AGL, speed <= 87 kt (100 mph),
   // hasRemoteId === true, vlosMaintained === true, and Class B/C/D/E LAANC ceiling >= plannedAltFtAgl.
   void operatorCert;
@@ -44,7 +44,7 @@ export function evaluateAccidentReporting({ seriousInjury = false, lossOfConscio
 }
 
 export function parseMetarAndCheckVfr(metarString, plannedAltFtAgl = 200) {
-  // TODO [L3 Apply | DT102 METAR]:
+  // TODO [L3 Apply | 49.0199.00 METAR]:
   // Decode wind/gust, visibility in SM, lowest cloud base (FEW/SCT/BKN/OVC/VV * 100 ft),
   // and verify visibility >= 3 SM and >= 500 ft vertical clearance below lowest cloud base.
   void metarString;

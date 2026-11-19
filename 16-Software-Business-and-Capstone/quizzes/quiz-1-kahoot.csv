@@ -1,11 +1,11 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
-Which SDLC approach ships working software increments in 2-week sprints?,Waterfall,Agile / Scrum,Manual FTP,Hardcoded HTML,20,2
-Smallest core product shipped early to validate real demand cleanly is an:,IDE Theme,MVP Minimum Viable Product,Syntax Tree,Legacy Monolith,20,2
-What SaaS metric multiplies paying monthly subscribers by monthly price?,CPU Load,MRR Monthly Recurring Revenue,RTT Latency,XSS Payload,20,2
-Offering free basic tier plus paid cloud sync / team upgrades describes:,One-time DVD,Freemium monetization,Open-source zero rev,Pay-per-byte DNS,20,2
-Percentage of paying subscribers canceling their subscriptions per month is:,Churn Rate,Upload Bandwidth,Bitrate,Cache Hit Ratio,20,1
-Total sales and ad spend divided by new paying customers won equals:,RTO,CAC Customer Acquisition Cost,LTV,DNS TTL,20,2
-Healthy SaaS rule of thumb comparing Customer LTV against CAC is:,1 to 10,3 to 1 or greater,0.5 to 1,Exact equality 1:1,20,2
-Standard platform commission taken on mobile App Store digital purchases:,0%,15% to 30%,75%,100%,20,2
-Rigid sequential linear steps requiring signed requirements BEFORE design:,Agile,Waterfall Model,Kanban,CI/CD,20,2
-Sprint ceremony inspecting process bottlenecks to boost future team velocity:,Daily Password Reset,Sprint Retrospective,Schema Drop,Cold Boot,20,2
+Which SDLC methodology delivers working tested increments in 1-to-2 week sprints?,Manual Waterfall Lock,Agile / Scrum,Big Bang Release,Waterfall,20,2
+"Which linear SDLC model locks requirements before design, build, and verification?",Waterfall Model,Kanban Flow,Spiral Prototype,Trunk-Based CI,20,1
+Which software license permits commercial reuse and modification with attribution notice?,Unlicensed Private Code,Proprietary NDA-Only,Trade Secret Lock,MIT Open Source License,20,4
+Where should production API keys live so secrets are excluded from Git repositories?,Hardcoded inside app.js,Public README examples,Environment variables (.env + .gitignore),Browser localStorage,20,3
+"Why do production servers escape &, <, >, quotes before rendering user HTML?",Enable DNS caching,Block Cross-Site Scripting (XSS),Speed SQL joins,Shrink gzip size,20,2
+"Why do FERPA, COPPA, and GDPR require clear telemetry and data retention disclosures?",Protect user/student PII under privacy law,Boost app store rating,Disable HTTPS TLS,Avoid CSS media queries,20,1
+Why do startups often favor Cloud SaaS PaaS hosting over buying bare-metal racks?,Bypasses TLS certificates,Zero network latency globally,Eliminates code testing,Predictable monthly OpEx scales elastically,20,4
+Which Git command creates an immutable annotated release milestone on a verified commit?,git reset --hard,git clean -fd,git tag -a v1.0.0 -m release,git branch -d,20,3
+Which SaaS revenue metric multiplies paying monthly subscribers by plan price?,Churn Rate,MRR (Monthly Recurring Revenue),CAC,OpEx Ratio,20,2
+Which target ratio indicates sustainable SaaS unit economics vs ad spend?,LTV : CAC >= 3 : 1,CAC : LTV >= 5 : 1,Churn >= 50% monthly,Net Margin < $0,20,1

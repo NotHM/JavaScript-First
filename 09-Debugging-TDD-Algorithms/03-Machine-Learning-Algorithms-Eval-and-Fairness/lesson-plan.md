@@ -1,6 +1,6 @@
 # Lesson Plan 9.3: ML Algorithms, Evaluation Metrics & Fairness Audits (`AI Stds 1.0, 2.0, 6.0, 7.0`)
 
-**Unit:** Unit 9 | **Duration:** 3 Class Periods × 50 min (Days 46–48) | **Standards:** West-MEC `AI101` Unit 5, `AI102` Units 8–9, `AI201` Unit 2 (`AI Stds 1.0, 2.0, 6.0, 7.0`); AZ CTE `6.4–6.7, 12.1–12.5`
+**Unit:** Unit 9 | **Duration:** 3 Class Periods × 50 min (Days 46–48) | **Standards:** **CTE AI (11.0102.00) / Azure AI-900** (`AI Stds 1.0, 2.0, 6.0, 7.0`); AZ CTE `6.4–6.7, 12.1–12.5`
 
 ## Bloom's Objective Ladder
 - **L1–L2:** Classify Supervised/Unsupervised/RL paradigms, explain data leakage in splits, and state Confusion Matrix (`TP/FP/TN/FN`), $R^2$/`RMSE`, and `4/5ths` (`80%`) Disparate Impact rules.

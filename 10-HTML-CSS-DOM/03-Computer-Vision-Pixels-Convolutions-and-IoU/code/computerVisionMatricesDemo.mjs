@@ -1,6 +1,6 @@
 /**
  * Lesson 10.3 Instructor Reference: Computer Vision Matrices, Convolutions, IoU & AI Hardware.
- * Standards: West-MEC AI101 Unit 2, AI102 Unit 10, AI201 Units 3-4 (AI Stds 3.0, 8.0, 9.0); AZ CTE 15.5, 6.5, 4.0
+ * Standards: CTE AI (11.0102.00) / Azure AI-900 (AI Stds 3.0, 8.0, 9.0); AZ CTE 15.5, 6.5, 4.0
  *
  * Run:
  *   node 10-HTML-CSS-DOM/03-Computer-Vision-Pixels-Convolutions-and-IoU/code/computerVisionMatricesDemo.mjs

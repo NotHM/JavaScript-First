@@ -1,6 +1,6 @@
 # Lesson Plan 16.1: Software Economics, Agile Delivery & Capstone (`Std 19.0`)
 
-**Unit:** Unit 16 | **Duration:** 5 Class Periods × 50 min | **Stds:** `19.1`–`19.8` + Capstone
+**Unit:** Unit 16 (`30 hrs` Year 2 Sem 4 `CTE/CIS 202` SaaS Sprint + Agile Prep · or 1-Sem Week 18 Days 86–90) | **Duration:** 5 Class Periods × 50 min | **Stds:** `19.1`–`19.8` + Capstone
 
 ## Bloom's Objective Ladder
 - **L1–L2:** Contrast Waterfall, Top-Down, and Agile/Scrum (`19.1`); list store deployment rules (`19.2`), monetization strategies (`19.5`), and unit economics metrics (`19.4, 19.7`).

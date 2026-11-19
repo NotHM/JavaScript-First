@@ -191,11 +191,11 @@
     - C) git switch snapshot.json
     - D) npm audit snapshot.json
 
-30. **`[L3 Apply | Std 16.6]`** In AtomicInventoryStore.insert(item), what should happen if item.qty is -3?
-    - A) Silently convert -3 into 300
-    - B) Throw an Error validating qty >= 0
-    - C) Delete all previous inventory rows
-    - D) Return undefined without throwing
+30. **`[L3 Apply | Std 16.5]`** A DBA classifies upcoming SQL scripts into **DDL (Data Definition Language)** versus **DML (Data Manipulation Language)**. Which statement is **DDL** rather than **DML**?
+    - A) `INSERT INTO items (sku, qty) VALUES ('SSD-1', 10);`
+    - B) `ALTER TABLE items ADD COLUMN unit_price_cents INTEGER;`
+    - C) `UPDATE items SET qty = qty - 1 WHERE id = 42;`
+    - D) `DELETE FROM items WHERE qty = 0;`
 
 ---
 
@@ -237,11 +237,11 @@
     - C) Cross-device EXDEV rename failure
     - D) Torn JSON checksum mismatch
 
-37. **`[L4 Analyze | Std 16.6]`** Why does `updateById(id, { id: 999, qty: 20 })` pose a subtle integrity bug if spread blindly?
-    - A) Deletes all other rows in array
-    - B) Converts qty from number into boolean
-    - C) Skips writing tmp file completely
-    - D) Overwrites immutable primary key id to 999
+37. **`[L4 Analyze | Std 16.6]`** Audit ``db.execute(`DELETE FROM items WHERE sku = '${sku}'`)`` when an attacker sends `' OR '1'='1`. Why do parameterized statements (`WHERE sku = ?`, `[sku]`) defeat this wipe?
+    - A) Parameterized queries strip whitespace before SQL parsing
+    - B) Prepared statements compile the SQL query plan first and bind user input strictly as inert literal data, blocking injected SQL logic
+    - C) `WHERE sku = ?` converts DELETE permanently into read-only SELECT
+    - D) SQLite blocks every string containing apostrophes automatically
 
 38. **`[L4 Analyze | Std 16.4]`** Hospital backups run every 12 hrs; restoring takes 4 hrs. An outage occurs 10 hrs post-backup. Max lost?
     - A) Up to 10 hrs of data (RPO) & 4 hrs downtime

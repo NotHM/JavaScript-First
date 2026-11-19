@@ -44,5 +44,5 @@
 Check your intended Unit 20 Capstone target and defend how your architecture satisfies data sovereignty and offline testability:
 - [ ] **Core (100 pts):** Local SSE Chat + Voice STT/TTS + Persistence
 - [ ] **Bonus (+25%–50%):** Image Vision (`llava`) + Image Gen + Video Sampler
-- [ ] **Double Bonus (2x Score!):** Parametric 3D CAD (`box`, `l-bracket`, `spur-gear`) -> STL/OBJ + Canvas 3D Preview + Print Validator  
+- [ ] **Double Bonus (2x Score!):** Parametric 3D CAD (`box`, `l-bracket`, `spur-gear`, plus optional Unit 21 printable drone airframe canopies, camera brackets, or GPS masts) -> STL/OBJ + Canvas 3D Preview + Print Validator  
 > *(Your architectural pitch)*

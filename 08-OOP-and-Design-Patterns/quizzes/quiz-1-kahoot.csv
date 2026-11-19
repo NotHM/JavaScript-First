@@ -1,11 +1,11 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
 Which syntax prefix declares hard runtime private fields inside ES6 classes?,_name,#name,$name,@name,20,2
-Inside a subclass constructor which keyword runs the parent class setup first?,this(),super(),parent(),base(),20,2
-Which lightweight data format parses natively in JS via JSON.parse()?,XML,YAML,JSON,CSV,20,3
-Assembling classes with modular helper instances rather than deep extends is:,Recursion,Composition over Inheritance,Syntax sugar,Global hoisting,20,2
-Calling notifier.send(msg) identically on Email and SMS classes shows:,Polymorphism,Syntax error,Infinite loop,Buffer overflow,20,1
-Adding [Symbol.iterator]() to a custom class makes it compatible with:,for...of loops,SQL SELECT,CSS Grid,HTTP 404,20,1
-Wrapping fn() to inject logging without editing its code implements the:,Factory pattern,Decorator pattern,Singleton anti-pattern,CSS Reset,20,2
-When copy = userObj and copy.name = "Ali" what happens to userObj.name?,Stays old value,Also becomes "Ali",Throws SyntaxError,Becomes null,20,2
-Which SOLID letter states classes should have ONE clear reason to change?,S Single Responsibility,L Liskov,I Interface,D Dependency,20,1
+Inside a subclass constructor which keyword runs the parent class setup first?,this(),base(),parent(),super(),20,4
+Which lightweight data format parses natively in JS via JSON.parse()?,JSON,YAML,XML,CSV,20,1
+Which special class method runs automatically every time new ClassName() creates an instance?,render(),export(),constructor(),import(),20,3
+Calling notifier.send(msg) identically on Email and SMS classes shows:,Syntax error,Polymorphism,Infinite loop,Buffer overflow,20,2
+How should an XML parser prevent XXE (XML External Entity) file-disclosure attacks?,Disable external DTD & entity resolution,Convert XML to CSS,Add extra HTML comments,Use global var tags,20,1
+Wrapping fn() to inject logging without editing its code implements the:,Factory pattern,CSS Reset,Singleton anti-pattern,Decorator pattern,20,4
+"When copy = userObj and copy.name = ""Ali"" what happens to userObj.name?",Stays old value,Throws SyntaxError,"Also becomes ""Ali""",Becomes null,20,3
+Which SOLID letter states classes should have ONE clear reason to change?,D Dependency,L Liskov,I Interface,S Single Responsibility,20,4
 Verbose angle-bracket data format still used in SOAP APIs and RSS feeds:,JSON,XML,Binaryhex,TOML,20,2

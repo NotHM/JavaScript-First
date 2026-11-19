@@ -136,11 +136,14 @@
 
 ## Part C: Applied Tracing & Code Execution (`[L3 Apply]` — Questions 21–30)
 
-21. What pair of booleans does `[nor(false, false), xor(true, true)]` return?
-    - A) `[true, false]`
-    - B) `[false, true]`
-    - C) `[true, true]`
-    - D) `[false, false]`
+21. Evaluate the nested ternary expression when `score = 85` and `honor = false`:
+    ```javascript
+    const status = score >= 70 ? (honor ? 'HONOR' : 'PASS') : 'RETRY';
+    ```
+    - A) `'PASS'`
+    - B) `'HONOR'`
+    - C) `'RETRY'`
+    - D) `undefined`
 
 22. Apply **De Morgan's Law** to rewrite `!(isAdmin || isVerified)` cleanly without outer parentheses:
     - A) `!isAdmin || !isVerified`
@@ -203,11 +206,16 @@
     - C) `[4, 6, 8]`
     - D) `29`
 
-30. Both `const a = createSeededRng(99)` and `const b = createSeededRng(99)` initialize an LCG closure with seed `99`. What is `a() === b()` on the very first call?
-    - A) `false`
-    - B) `NaN`
-    - C) `undefined`
-    - D) `true`
+30. Trace what `tagItems(undefined, 4, 8)` returns with default and rest parameters:
+    ```javascript
+    function tagItems(prefix = 'ID', ...ids) {
+      return `${prefix}:${ids.length}`;
+    }
+    ```
+    - A) `'undefined:2'`
+    - B) `'ID:1'`
+    - C) `'ID:2'`
+    - D) `SyntaxError`
 
 ---
 
@@ -256,11 +264,16 @@
     - C) Single `=` mutates `user.role` to `'admin'` and evaluates to truthy `'admin'`, granting admin access unconditionally
     - D) `=` checks strict deep equality cleanly
 
-36. Two separate calls `const c1 = createCounter(); const c2 = createCounter();` share and overwrite each other's counts. What bug explains this?
-    - A) `++` modifies constants
-    - B) The `let count = 0` variable was placed outside `createCounter()` in shared module scope instead of privately inside the factory
-    - C) Returning an arrow function merges separate call stacks
-    - D) `const` converts closures into singletons
+36. Calling `countDown(3)` below crashes the runtime instead of stopping at zero. Why?
+    ```javascript
+    function countDown(n) {
+      return countDown(n - 1);
+    }
+    ```
+    - A) Recursive functions must use `while` loops internally
+    - B) Without a base case (`if (n <= 0) return 0;`), infinite recursion overflows the Call Stack (`RangeError: Maximum call stack size exceeded`)
+    - C) Returning a function call triggers `SyntaxError`
+    - D) Decrementing `n - 1` coerces numbers to `undefined`
 
 37. A CLI dispatcher runs `handleCommand('RESTART')` and unexpectedly hits `default: return 'UNKNOWN'`, even though `case 'restart':` exists. What is missing?
     - A) Case normalization (`cmd.trim().toLowerCase()`) before strict `===` `switch` matching

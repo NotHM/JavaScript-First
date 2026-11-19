@@ -1,6 +1,6 @@
 # Chapter 1: Reteaching JavaScript — Origins, Ethics, Node 24, Modules & Linux Safety
 
-*By Hans McMurdy (`@HansOnCoding`) · West-MEC / Arizona CTE Software & App Design (`Stds 2.0, 3.0, 11.0, 13.1, 18.2`) + IT Security (`ITS 101–102`)*
+*By Hans McMurdy (`@HansOnCoding`) · High School CTE (Grades 11–12) & Community College CIS (`Stds 2.0, 3.0, 11.0, 13.1, 18.2`) + CTE IT Security (`11.1999.00` / CompTIA A+ / RHCSA)*
 
 > **Chapter Navigation:** [Unit 1 Guide](./unit-guide.md) · [Setup & Standards Guide](./setup-guide.md) · [50-Question Mastery Exam](./quizzes/unit-test-50.md) · [Unit 1 Project](./projects/unit-project.md) · Run `npm run grade -- --unit 01`
 
@@ -100,7 +100,7 @@ When building CLI tools in Node (`Std 11.3–11.9`), use descriptive **`camelCas
 
 Ask a room full of developers to name JavaScript's primitive types and half of them forget two. Modern JavaScript has **exactly 7 primitive types**—immutable single values conceptually stored on the fixed-size **Stack** frame:
 
-1. `string` (`"West-MEC"`)
+1. `string` (`"CTE-CIS"`)
 2. `number` (IEEE-754 double-precision float: `42`, `3.14`, `NaN`)
 3. `boolean` (`true` / `false`)
 4. `undefined` (declared, not yet assigned)
@@ -161,7 +161,7 @@ In browser HTML, `<script type="module" src="./app.mjs"></script>` automatically
 
 ---
 
-## 6. Linux Admin, Hardware & OS Safety (`ITS 101–102 | ADE 2.1–2.6, 8.6–8.8, 10.2`)
+## 6. Linux Admin, Hardware & OS Safety (`CTE IT Security (11.1999.00) / CompTIA A+ / RHCSA | ADE 2.1–2.6, 8.6–8.8, 10.2`)
 
 JavaScript doesn't float in thin air—it runs on silicon inside a Linux kernel. Before you touch server hardware or deploy a production daemon, you must protect the machine, the OS, and yourself:
 

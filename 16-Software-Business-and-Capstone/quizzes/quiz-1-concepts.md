@@ -1,16 +1,18 @@
-# Unit 16 Quiz 1: SDLC, Monetization & SaaS Metrics (Concepts)
+# Unit 16 Quiz 1: SDLC, Cloud Ops, Security Hygiene & SaaS Fundamentals (Concepts)
 
-**Bloom's:** `[L1]`–`[L2]` | **CSV:** [`quiz-1-kahoot.csv`](./quiz-1-kahoot.csv) | **Stds:** `19.1`–`19.8`
+**Bloom's Focus:** `[L1 Remember]` & `[L2 Understand]`  
+**Kahoot Import File:** [`quiz-1-kahoot.csv`](./quiz-1-kahoot.csv)  
+**Certification Alignment:** **`8 / 10` (`80.0% >= 75%`)** mapped to `CompTIA-ITF+` (3), `CompTIA-Sec+` (3), `CompTIA-A+` (1), `RHCSA` (1) (2 `Domain: CTE-Lab`)
 
-| # | Question | Correct Answer | Time | Bloom's |
+| # | Question | Choices (* = Correct) | Time | Bloom's, Alignment & Rationale |
 |---|---|---|---|---|
-| 1 | Method delivering working software every `2-week` sprint (`19.1`): | **Agile / Scrum** | 20s | `[L1 \| 19.1]` |
-| 2 | Smallest product release solving real user pain for early feedback (`19.6`): | **MVP (Minimum Viable Product)** | 20s | `[L1 \| 19.6]` |
-| 3 | Revenue metric multiplying paying monthly subscribers by price (`19.5`): | **MRR (Monthly Recurring Rev.)** | 20s | `[L1 \| 19.5]` |
-| 4 | Pricing tier giving free baseline access & paid Pro upgrade (`19.5`): | **Freemium** | 20s | `[L1 \| 19.5]` |
-| 5 | Percentage of paying subscribers canceling their plan each month (`19.7`): | **Churn Rate** | 20s | `[L1 \| 19.7]` |
-| 6 | Average total ad/marketing cost to win ONE paying customer (`19.4`): | **CAC (Customer Acq. Cost)** | 20s | `[L1 \| 19.4]` |
-| 7 | Healthy benchmark ratio comparing Customer LTV to CAC (`19.7`): | **`LTV : CAC >= 3 : 1`** | 20s | `[L2 \| 19.7]` |
-| 8 | Typical Apple App Store / Google Play commission tiers (`19.2`): | **`15%–30%` of gross sales** | 20s | `[L1 \| 19.2]` |
-| 9 | Fixed linear progression `Requirements -> Design -> Build -> Test` (`19.1`): | **Waterfall Model** | 20s | `[L1 \| 19.1]` |
-| 10 | Short meeting reflecting after each sprint to improve team velocity (`19.6`): | **Sprint Retrospective** | 20s | `[L2 \| 19.6]` |
+| 1 | Which SDLC methodology delivers working tested increments in 1-to-2 week sprints? | A) Manual Waterfall Lock<br>**B) Agile / Scrum***<br>C) Big Bang Release<br>D) Waterfall | 20s | `[L1 Remember \| Std 19.1 \| Cert: CompTIA-ITF+]` Agile/Scrum iterates via short sprints with continuous stakeholder feedback and incremental testing. |
+| 2 | Which linear SDLC model locks requirements before design, build, and verification? | **A) Waterfall Model***<br>B) Kanban Flow<br>C) Spiral Prototype<br>D) Trunk-Based CI | 20s | `[L1 Remember \| Std 19.1 \| Cert: CompTIA-ITF+]` Waterfall advances sequentially phase-by-phase with formal stage gates before moving downstream. |
+| 3 | Which software license permits commercial reuse and modification with attribution notice? | A) Unlicensed Private Code<br>B) Proprietary NDA-Only<br>C) Trade Secret Lock<br>**D) MIT Open Source License*** | 20s | `[L1 Remember \| Std 19.5 \| Cert: CompTIA-ITF+]` Permissive MIT licensing allows reuse, modification, and commercial distribution while preserving copyright notice. |
+| 4 | Where should production API keys live so secrets are excluded from Git repositories? | A) Hardcoded inside app.js<br>B) Public README examples<br>**C) Environment variables (.env + .gitignore)***<br>D) Browser localStorage | 20s | `[L1 Remember \| Std 19.2 \| Cert: CompTIA-Sec+]` Injecting secrets via .env ignored by .gitignore prevents leaking credentials into source history. |
+| 5 | Why do production servers escape &, <, >, quotes before rendering user HTML? | A) Enable DNS caching<br>**B) Block Cross-Site Scripting (XSS)***<br>C) Speed SQL joins<br>D) Shrink gzip size | 20s | `[L2 Understand \| Std 1.5 \| Cert: CompTIA-Sec+]` HTML entity encoding neutralizes malicious `<script>` payloads from executing in client browsers. |
+| 6 | Why do FERPA, COPPA, and GDPR require clear telemetry and data retention disclosures? | **A) Protect user/student PII under privacy law***<br>B) Boost app store rating<br>C) Disable HTTPS TLS<br>D) Avoid CSS media queries | 20s | `[L2 Understand \| Std 19.2 \| Cert: CompTIA-Sec+]` Regulatory compliance mandates explicit disclosure, consent, and minimization of collected personal data. |
+| 7 | Why do startups often favor Cloud SaaS PaaS hosting over buying bare-metal racks? | A) Bypasses TLS certificates<br>B) Zero network latency globally<br>C) Eliminates code testing<br>**D) Predictable monthly OpEx scales elastically*** | 20s | `[L2 Understand \| Std 19.4 \| Cert: CompTIA-A+]` Cloud OpEx turns upfront hardware CapEx into elastic monthly compute billing matching demand. |
+| 8 | Which Git command creates an immutable annotated release milestone on a verified commit? | A) git reset --hard<br>B) git clean -fd<br>**C) git tag -a v1.0.0 -m release***<br>D) git branch -d | 20s | `[L1 Remember \| Std 19.6 \| Cert: RHCSA]` Annotated git tags store tagger, date, and release message pointing permanently to a tested commit. |
+| 9 | Which SaaS revenue metric multiplies paying monthly subscribers by plan price? | A) Churn Rate<br>**B) MRR (Monthly Recurring Revenue)***<br>C) CAC<br>D) OpEx Ratio | 20s | `[L1 Remember \| Std 19.5 \| Domain: CTE-Lab]` MRR measures predictable monthly subscription billing across active paying accounts. |
+| 10 | Which target ratio indicates sustainable SaaS unit economics vs ad spend? | **A) LTV : CAC >= 3 : 1***<br>B) CAC : LTV >= 5 : 1<br>C) Churn >= 50% monthly<br>D) Net Margin < $0 | 20s | `[L2 Understand \| Std 19.7 \| Domain: CTE-Lab]` Healthy SaaS targets lifetime contribution at least 3x customer acquisition cost. |

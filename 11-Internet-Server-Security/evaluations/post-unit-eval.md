@@ -1,4 +1,4 @@
-# Unit 11 Post-Unit Evaluation: Cybersecurity, Zero Trust, SIEM & STRIDE (`Std 1.0 | ITS 201–202`)
+# Unit 11 Post-Unit Evaluation: Cybersecurity, Zero Trust, SIEM & STRIDE (`Std 1.0 | CTE IT Security / CompTIA Security+`)
 
 **Name:** `______________________` **Date:** `__________` **Post-Score:** `____ / 16`
 
@@ -15,7 +15,7 @@
    > *(Your diagnosis)*
 7. **`[L2–L3 | ADE 4.5–5.10]`** Contrast **Data at Rest (`BitLocker`)** vs. **Data in Motion (`TLS 1.3`)**, distinguish **`VLAN`** vs. **`DMZ`**, and explain why central biometric storage violates **BIPA / GDPR** non-revocability principles:  
    > *(Your explanation)*
-8. **`[L4 | ITS 202 / ADE 9.1–9.10]`** Given ordered firewall ACL Rule 1 `ALLOW ANY -> DMZ:443` above Rule 2 `DENY IP_BAD -> DMZ:443`, explain why `IP_BAD` bypasses the deny rule, contrast passive **`IDS`** vs. inline **`IPS`**, and name what **NGFW L7** detects inside TLS/HTTP flows:  
+8. **`[L4 | CompTIA Security+ / ADE 9.1–9.10]`** Given ordered firewall ACL Rule 1 `ALLOW ANY -> DMZ:443` above Rule 2 `DENY IP_BAD -> DMZ:443`, explain why `IP_BAD` bypasses the deny rule, contrast passive **`IDS`** vs. inline **`IPS`**, and name what **NGFW L7** detects inside TLS/HTTP flows:  
    > *(Your diagnosis)*
 
 ### Part B — Higher-Order Evaluation & Hardening (2 pts each)
@@ -27,5 +27,5 @@
     ```javascript
     // Write buildSafeQueryAndPath:
     ```
-12. **`[L5 | ITS 201–202 / ADE 1.0, 9.6–11.6]`** A SaaS fintech serving EU & US hospitals sees **4 failed SSH logins followed by success**, an **impossible-travel `SAML` login (`us-az -> eu-de`)**, and a **`1.2 MB` egress anomaly spike** (`RPO <= 5m, RTO <= 15m`). Compute Risk Severity (`Asset=5, Likelihood=4, Impact=5`), map the threats to **STRIDE**, choose **Hot vs. Warm vs. Cold DRP**, and list **3 applicable laws/policies** (`GDPR, HIPAA, PCI-DSS, SOX, FERPA, AUP`):  
+12. **`[L5 | CTE IT Security / CompTIA Security+ / ADE 1.0, 9.6–11.6]`** A SaaS fintech serving EU & US hospitals sees **4 failed SSH logins followed by success**, an **impossible-travel `SAML` login (`us-az -> eu-de`)**, and a **`1.2 MB` egress anomaly spike** (`RPO <= 5m, RTO <= 15m`). Compute Risk Severity (`Asset=5, Likelihood=4, Impact=5`), map the threats to **STRIDE**, choose **Hot vs. Warm vs. Cold DRP**, and list **3 applicable laws/policies** (`GDPR, HIPAA, PCI-DSS, SOX, FERPA, AUP`):  
     > *(Your SIEM/STRIDE/DRP/Compliance analysis)*

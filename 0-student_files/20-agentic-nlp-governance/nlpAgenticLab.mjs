@@ -11,7 +11,7 @@ export const DEFAULT_STOPWORDS = new Set([
 ]);
 
 export function tokenizeAndStem(text, options = {}) {
-  // TODO [L3 Apply | AI101, ITS Python]:
+  // TODO [L3 Apply | CTE AI 11.0102.00, ITS Python]:
   // 1. Normalize Unicode/case and tokenize alphanumeric words using regex.
   // 2. Filter out stopwords unless options.removeStopwords === false.
   // 3. Apply deterministic suffix stemming (-ies -> y, -s, -ing, -ed, -ly, -ation, etc.).
@@ -21,7 +21,7 @@ export function tokenizeAndStem(text, options = {}) {
 }
 
 export function computeTfIdfCorpus(docs) {
-  // TODO [L3 Apply | AI102, 4.3]:
+  // TODO [L3 Apply | CTE AI 11.0102.00, 4.3]:
   // 1. Throw RangeError if docs is empty or not an array.
   // 2. Tokenize & stem each document to compute term frequencies (tf) and document frequency (df).
   // 3. Compute idf[term] = Math.log(N / df[term]) and each document's sparse TF-IDF vector.
@@ -39,7 +39,7 @@ export function computeTfIdfCorpus(docs) {
 }
 
 export function classifySentimentAndIntent(text) {
-  // TODO [L3 Apply | AI102, Azure AI-900]:
+  // TODO [L3 Apply | 11.0102.00, Azure AI-900]:
   // 1. Score lexicon sentiment in [-1, 1] accounting for negation cues ('not', 'no', 'never').
   // 2. Classify domain intent ('governance_audit', 'agent_tool_task', 'nlp_retrieval', 'safety_incident', 'general_query').
   // 3. Extract lightweight NER entities (EMAIL, STANDARD_OR_REG, METRIC).
@@ -60,7 +60,7 @@ export async function runReActAgent({
   state = null,
   approvalDecision = null,
 } = {}) {
-  // TODO [L4 Analyze -> L6 Create | AI202, Std 1.5]:
+  // TODO [L4 Analyze -> L6 Create | 11.0102.00, Std 1.5]:
   // 1. Loop up to maxSteps calling modelStep({ goal, step, memory, trace, allowedTools }).
   // 2. Enforce strict tool allowlist (Object.hasOwn(tools, action.name)) & argument type checks.
   // 3. Pause with status: 'awaiting_approval' + pendingAction + resumeState when HITL approval is required.
@@ -83,7 +83,7 @@ export async function runReActAgent({
 }
 
 export function buildAndValidateModelCard(spec) {
-  // TODO [L5 Evaluate | AI202, Std 14.0, EU AI Act, NIST AI RMF]:
+  // TODO [L5 Evaluate | 11.0102.00, Std 14.0, EU AI Act, NIST AI RMF]:
   // 1. Validate euAiActRiskTier ('unacceptable' | 'high' | 'limited' | 'minimal'), blocking 'unacceptable'.
   // 2. Verify all 4 NIST AI RMF functions (govern, map, measure, manage).
   // 3. Enforce mandatory sections: intendedUse, outOfScopeUses, trainingDataSummary,

@@ -4,7 +4,7 @@
  * Aviation METAR Decoder & Weather Minimums, Photogrammetry Lawnmower Survey Grid (75%/65%),
  * and Mode-2 RC Stick Mixer for 4:3 (640x480) Canvas / Gamepad Simulation.
  *
- * Standards: West-MEC DT102 (14.0-28.0: FAA Part 107 / TRUST) + AZ CTE 9.0, 15.0, 19.0
+ * Standards: CTE Drone Tech (49.0199.00: FAA Part 107 / TRUST) + AZ CTE 9.0, 15.0, 19.0
  *
  * Run: node 19-Game-Dev-Phaser-and-JSGameLauncher/03-Drone-Mission-Sim-Part107-and-METAR/code/part107MissionSimDemo.mjs
  */

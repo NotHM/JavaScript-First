@@ -1,6 +1,6 @@
 /**
  * Student Lesson 5.3 Lab: Data Cleaning, PII Anonymization, Feature Vectors & EDA Statistics
- * Standards: West-MEC AI101 Units 3-4, AI201 Unit 1 (AI Stds 4.0, 5.0); AZ CTE 6.1-6.5, 7.1-7.4
+ * Standards: CTE AI (11.0102.00) / Azure AI-900 (AI Stds 4.0, 5.0); AZ CTE 6.1-6.5, 7.1-7.4
  *
  * Run:
  *   node 0-student_files/05-ai-data-pipeline/dataPipelineLab.mjs
@@ -25,7 +25,7 @@ export function imputeMissingNumeric(records, field, strategy = 'mean') {
   return [];
 }
 
-export function anonymizePiiRecord(record, { hashFields = ['studentId', 'email'], redactFields = ['name', 'ssn'], salt = 'westmec-ai' } = {}) {
+export function anonymizePiiRecord(record, { hashFields = ['studentId', 'email'], redactFields = ['name', 'ssn'], salt = 'cte-ai' } = {}) {
   // TODO [L3 Apply | AI 4.0]: Use crypto.createHash('sha256') to replace each hashField with `<field>Hash`
   // (16-char hex digest) and delete raw key; overwrite redactFields with '[REDACTED]'.
   void crypto;

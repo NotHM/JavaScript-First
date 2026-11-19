@@ -1,11 +1,11 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
-What security model does Deno enforce by default?,Full root OS access,Explicit --allow-* permissions,Browser cookies only,Disabled JIT compiler,20,2
-Which Deno flag allows network traffic ONLY to api.school.edu:443?,--allow-all,--allow-read=api.school.edu,--allow-net=api.school.edu:443,--allow-env=NET,20,3
-What happens when running deno run app.ts directly on TypeScript?,Throws unknown extension,Executes TypeScript natively,Requires Babel manually,Only works in CJS,20,2
-Which import specifier prefix resolves modern JSR registry packages?,jsr:,cjs:,ftp:,sql:,20,1
-Which Node.js flag enables the built-in capability permission sandbox?,--inspect,--permission,--watch,--no-warnings,20,2
-What 4 magic bytes start EVERY valid WebAssembly .wasm binary?,\0asm (00 61 73 6d),\x7fELF,WASM,%PDF,20,1
-What is WAT in WebAssembly development?,Web Access Token,WebAssembly Text S-expression format,Windows Archive Tool,Wireless Async Transport,20,2
-What is the exact size of 1 WebAssembly linear memory page?,512 bytes,4 KiB,64 KiB (65536 bytes),1 MB,20,3
-Which JS API compiles and creates a runnable WebAssembly instance?,JSON.parse(),WebAssembly.instantiate(),Deno.serve(),createRequire(),20,2
-Can a compiled .wasm module open OS files without host imports?,Yes always,Only in Firefox,No—only linear memory & imports,Only from Rust,30,3
+"What security principle blocks FS, network, and env access unless explicitly granted?",Zero Trust / Least Privilege sandboxing,Implicit root trust,Global eval scope,Browser cookie cache,20,1
+Why does ambient authority in unsandboxed runtimes create supply-chain malware risk?,CSS alters RAM,JSON becomes XML,TypeScript skips loops,Packages share full OS user file/net rights,20,4
+Which runtime boundary protects /etc/passwd and process.env from unprivileged scripts?,Running Node as root,Shared TMP sticky off,Scoped FS/env permission isolation,chmod 777 /etc,20,3
+Which 4 magic bytes begin EVERY valid compiled WebAssembly (.wasm) binary header?,PK\x03\x04 (ZIP),\0asm (0x00 0x61 0x73 0x6d),%PDF- (PDF header),\x7fELF (Linux ELF),20,2
+What fixed unit size does WebAssembly linear memory allocate per memory page?,"64 KiB (65,536 bytes)",1 MiB,512 bytes,4 KiB,20,1
+Which standard JavaScript API compiles and instantiates .wasm bytes asynchronously?,eval(),JSON.parse(),fs.readFileSync(),WebAssembly.instantiate(),20,4
+How does JavaScript read and write raw bytes inside an exported WebAssembly.Memory?,document.cookie,CSS custom props,new Uint8Array(memory.buffer),localStorage strings,20,3
+Can a compiled WASM module open local sockets or files with an empty {} import object?,Yes as root,No—zero OS syscalls without host imports,Only on Linux,Only over HTTP,30,2
+Which package specifier prefix resolves typed ESM modules from JSR in Deno?,jsr:,cjs:,ftp:,bin:,20,1
+What happens when you execute deno run server.ts on a standard TypeScript source file?,Throws CommonJS error,Requires Babel first,Needs webpack.config,Executes TypeScript natively out of the box,20,4

@@ -3,7 +3,7 @@
 **Unit:** 01 — Reteaching JavaScript, Legal/Ethics, Data Types, Modules & Linux Safety  
 **Navigation:** [Chapter 1 Reading](./readme.md) · [Unit 1 Guide](./unit-guide.md) · [50-Question Exam](./quizzes/unit-test-50.md)
 
-This standalone guide locks down the exact workstation standards required for **Unit 01** (`AZ CTE Stds 2.0, 3.0, 11.0, 13.1, 18.2` & `West-MEC ITS 101–102`). Complete every check before starting the student labs in [`../0-student_files/`](../0-student_files/).
+This standalone guide locks down the exact workstation standards required for **Unit 01** (`AZ CTE Stds 2.0, 3.0, 11.0, 13.1, 18.2` & `CTE IT Security (11.1999.00) / CompTIA A+ / RHCSA`). Complete every check before starting the student labs in [`../0-student_files/`](../0-student_files/).
 
 ---
 
@@ -53,10 +53,10 @@ Follow these strict rules across Unit 1 labs:
    const __dirname = path.dirname(fileURLToPath(import.meta.url));
    ```
 
-### D. POSIX, `chmod` & OpenSSH Key Hygiene (`ITS 101–102`)
+### D. POSIX, `chmod` & OpenSSH Key Hygiene (`CTE IT Security (11.1999.00) / RHCSA`)
 ```bash
 # Generate modern Ed25519 SSH keypair (never deploy weak DSA/1024-bit RSA)
-ssh-keygen -t ed25519 -C "student@westmec.edu"
+ssh-keygen -t ed25519 -C "student@cte-cis.edu"
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/id_ed25519
 chmod 644 ~/.ssh/id_ed25519.pub

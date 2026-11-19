@@ -94,7 +94,7 @@
 14. **`[L2 Understand | Std 10.3]`** When do enterprise teams favor Java or C# over plain dynamic JavaScript?
     - A) Strict compile-time types & CPU threading
     - B) Quick 20-line DOM alert snippets
-    - C) Running inside browser <script> tags
+    - C) Running inside browser `<script>` tags
     - D) Zero-install browser static pages
 
 15. **`[L2 Understand | Std 10.8]`** What critical insight does an Entity-Relationship Diagram (ERD) reveal before writing code?
@@ -173,11 +173,11 @@
     - C) Browser cookie token
     - D) Unindexed comment text field
 
-27. **`[L3 Apply | Std 10.9]`** A bug appeared after tag v2.0.0. Which git bisect sequence initiates binary search cleanly?
-    - A) git switch bisect && git merge v2.0.0
-    - B) git revert HEAD && git reset --hard
-    - C) git diff v2.0.0 > bug.log
-    - D) git bisect start; git bisect bad; git bisect good v2.0.0
+27. **`[L3 Apply | Std 10.8]`** When drafting a control-flow diagram before coding an auth module, which standard flowchart shapes represent Start/End, Processing Step, and `if/else` Decision?
+    - A) Square for Start, Circle for `if/else`, Triangle for Process
+    - B) Oval (Terminator) for Start/End, Rectangle for Process Step, Diamond for `if/else` Decision
+    - C) Diamond for Start, Oval for Process, Hexagon for `if/else`
+    - D) Arrow for Decision, Circle for Database Schema
 
 28. **`[L3 Apply | Std 10.3]`** Data team runs PyTorch neural nets & pandas ETL pipelines. Which primary language fits best?
     - A) CSS3 + HTML5
@@ -219,11 +219,11 @@
     - C) DurationMs exceeded 5ms
     - D) Non-atomic read-then-write lacking DB lock
 
-34. **`[L4 Analyze | Std 10.9]`** Approximately how many steps does git bisect take across 128 commits to find 1 broken commit?
-    - A) ~7 steps (log2 128)
-    - B) 128 steps sequentially
-    - C) 64 steps minimum
-    - D) 2 steps regardless of history
+34. **`[L4 Analyze | Std 10.9]`** During systematic troubleshooting, an engineer isolates a bug, implements a fix, confirms the failing endpoint now returns HTTP 200, and closes the ticket immediately without wider tests or notes. Which troubleshooting steps were skipped?
+    - A) Gathering failure context in Step 1 (`Identify the problem`)
+    - B) Verify full system functionality, implement preventive measures (`Step 5`), and document findings (`Step 6`)
+    - C) Reboot production databases blindly in Step 0
+    - D) Rewrite requirements from scratch before checking logs
 
 35. **`[L4 Analyze | Std 10.10]`** Logs show telemetry { action:"book", durationMs:4820, succeeded:false, errorCode:"ETIMEDOUT" } at 2PM:
     - A) CSS Grid failed to center button

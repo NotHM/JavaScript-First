@@ -1,19 +1,21 @@
-# Unit 19 Quiz 1: Game Loops, Gamepad API, Phaser & Part 107 Drone Sim (Concepts)
+# Unit 19 Quiz 1: Canvas UI, Game Loops, Web Audio, Sandboxes & Part 107 (Concepts)
 
-**Bloom's:** `[L1]`–`[L2]` | **CSV:** [`quiz-1-kahoot.csv`](./quiz-1-kahoot.csv) | **Stds:** `9.2, 11.7, 15.5, 17.3, 19.8, DT102`
+**Bloom's Focus:** `[L1 Remember]` & `[L2 Understand]`  
+**Kahoot Import File:** [`quiz-1-kahoot.csv`](./quiz-1-kahoot.csv)  
+**Certification Alignment:** **`10 / 13` (`76.9% >= 75%`)** mapped to `CIW-JS` (3), `ITS-JS` (3), `ITS-HTML-CSS` (2), `CompTIA-A+` (1), `CompTIA-Sec+` (1) (1 `Domain: CTE-Lab`, 2 `Domain: CTE-Drone`)
 
-| # | Question | Correct Answer | Time | Bloom's |
+| # | Question | Choices (* = Correct) | Time | Bloom's, Alignment & Rationale |
 |---|---|---|---|---|
-| 1 | Default 4:3 `<canvas>` pixel dimensions recommended for `jsgamelauncher`: | **`640 x 480`** | 20s | `[L1 \| 15.5]` |
-| 2 | Browser scheduling function driving smooth 60 Hz display-synced game loops: | **`requestAnimationFrame`** | 20s | `[L1 \| 18.0]` |
-| 3 | Standard W3C Gamepad API method polling all connected controllers: | **`navigator.getGamepads()`** | 20s | `[L1 \| 9.2]` |
-| 4 | In `utils.js`, which standard button maps to keyboard `'z'` (Xbox A / Nintendo B)? | **`BUTTON_SOUTH`** | 20s | `[L1 \| 9.2]` |
-| 5 | Web Audio node inserted between `BufferSource` and `destination` for volume: | **`GainNode`** | 20s | `[L1 \| 9.2]` |
-| 6 | Required `package.json` property for ES module imports in Vite and `jsgamelauncher`: | **`"type": "module"`** | 20s | `[L1 \| 11.7]` |
-| 7 | `Phaser.Scene` lifecycle hook that runs ONCE before `create()` to queue images/audio: | **`preload()`** | 20s | `[L1 \| 17.3]` |
-| 8 | Why place an empty `<game>.jsg` file inside a game folder on Knulli or Batocera? | **Marks the game for EmulationStation** | 20s | `[L2 \| 19.8]` |
-| 9 | Which command launches a `jsgamelauncher` game directly without opening a browser? | **`npx rungame ./mygame.jsg`** | 20s | `[L1 \| 11.7]` |
-| 10 | Default ROMs folder path on Knulli and Batocera handhelds for JS games: | **`/userdata/roms/jsgames`** | 20s | `[L1 \| 19.8]` |
-| 11 | FAA Part 107 max takeoff weight, max AGL altitude, and required commercial certificate: | **`< 55 lbs / 400 ft AGL / Part 107 UAG`** | 20s | `[L1 \| DT102]` |
-| 12 | Part 107 `§107.9` accident report deadline & property damage threshold: | **`10 days` when damage `> $500`** | 20s | `[L1 \| DT102]` |
-| 13 | On a **Mode-2** transmitter, which flight controls map to the **Left Stick**? | **Throttle (vertical) & Yaw (horizontal)** | 20s | `[L1 \| DT102, 9.2]` |
+| 1 | Why set explicit HTML width=640 height=480 attributes on `<canvas>` while using CSS for sizing? | **A) Preserves crisp 4:3 internal pixel buffer***<br>B) Disables GPU compositing<br>C) Forces server rendering<br>D) Converts SVG into PNG | 20s | `[L1 Remember \| Std 15.5 \| Cert: ITS-HTML-CSS]` HTML attributes define the drawing bitmap size, while CSS scales presentation proportionally. |
+| 2 | Which browser scheduling API calls a callback synced cleanly to display refresh cycles? | A) Atomics.wait<br>B) setTimeout(fn, 1)<br>C) Promise.race<br>**D) requestAnimationFrame*** | 20s | `[L1 Remember \| Std 18.0 \| Cert: ITS-JS]` requestAnimationFrame synchronizes animation ticks with browser paint vsync (~16.67 ms at 60 Hz). |
+| 3 | Which W3C Gamepad API call polls connected USB or handheld controllers in the browser? | A) document.readStick()<br>B) gamepad.open()<br>**C) navigator.getGamepads()***<br>D) window.pollPads() | 20s | `[L1 Remember \| Std 9.2 \| Cert: ITS-JS]` navigator.getGamepads() returns a live array of standard-mapped controller states and axes. |
+| 4 | Which Web Audio API node sits between AudioBufferSourceNode and destination to control volume? | A) ScriptProcessorNode<br>**B) GainNode***<br>C) OscillatorNode<br>D) AnalyserNode | 20s | `[L1 Remember \| Std 9.2 \| Cert: CIW-JS]` GainNode scales audio signal amplitude smoothly before routing to audioContext.destination. |
+| 5 | Which package.json property lets Node and Vite parse .js files using ES import/export syntax? | **A) 'type': 'module'***<br>B) 'syntax': 'cjs'<br>C) 'legacy': true<br>D) 'sandbox': false | 20s | `[L1 Remember \| Std 11.7 \| Cert: ITS-JS]` Setting 'type': 'module' enables standard ECMAScript Module resolution across .js files. |
+| 6 | Which Phaser.Scene method runs ONCE before create() to queue textures and audio assets? | A) render()<br>B) update()<br>C) destroy()<br>**D) preload()*** | 20s | `[L1 Remember \| Std 17.3 \| Cert: CIW-JS]` Phaser queues assets once in preload(), builds entities in create(), and ticks update() per frame. |
+| 7 | How does class PlayScene extends Phaser.Scene organize reusable game scene behavior in JS? | A) Disables strict mode<br>B) Blocks module exports<br>**C) Inherits lifecycle & physics methods via OOP***<br>D) Converts classes to C structs | 20s | `[L2 Understand \| Std 17.1 \| Cert: CIW-JS]` ES6 class inheritance extends base Scene methods while keeping scene state encapsulated. |
+| 8 | Which CSS rules center a 4:3 game viewport cleanly inside a responsive `<main>` container? | A) float: right + zoom: 500%<br>**B) display: flex + aspect-ratio: 4 / 3***<br>C) visibility: hidden<br>D) position: static + font: bold | 20s | `[L2 Understand \| Std 15.5 \| Cert: ITS-HTML-CSS]` Flexbox centering paired with CSS aspect-ratio scales the canvas without distorting sprites. |
+| 9 | Why run untrusted game code in a VM sandbox that removes host fs and process globals? | **A) Prevents malicious scripts reading host files***<br>B) Doubles CPU clock speed<br>C) Compresses audio buffers<br>D) Skips JSON validation | 20s | `[L2 Understand \| Std 1.5 \| Cert: CompTIA-Sec+]` Principle of least privilege isolates untrusted code from OS filesystem and shell execution. |
+| 10 | At a 60 Hz display refresh rate vs 120 Hz, roughly how many milliseconds separate frames? | A) 500 ms vs 1000 ms<br>B) 100 ms vs 200 ms<br>C) 1 ms vs 50 ms<br>**D) 16.67 ms vs 8.33 ms*** | 20s | `[L1 Remember \| Std 4.3 \| Cert: CompTIA-A+]` 1000 ms / 60 Hz equals 16.67 ms per frame; 1000 ms / 120 Hz equals 8.33 ms per frame. |
+| 11 | What purpose do an empty `<game>.jsg` file and /userdata/roms/jsgames serve on handhelds? | A) Compile shaders to Vulkan<br>B) Replace package.json<br>**C) Mark folder for EmulationStation JS launcher***<br>D) Store AES root certificates | 20s | `[L1 Remember \| Std 19.8 \| Domain: CTE-Lab]` Knulli/Batocera scan /userdata/roms/jsgames for .jsg marker files to launch games locally. |
+| 12 | Recall Part 107 baseline limits & 14 CFR 107.9 accident filing rule: | A) <250 lbs, 500 ft MSL, 24 hours if >$5000<br>**B) <55 lbs, <=400 ft AGL, 10 days if damage >$500***<br>C) TRUST cert only, no altitude ceiling<br>D) <=100 lbs, 1000 ft AGL, 30 days if >$50 | 30s | `[L1 Remember \| Std 2.4 \| Domain: CTE-Drone]` Part 107 commercial flight requires UAG cert, <55 lbs, <=400 ft AGL, and 10-day filing above $500. |
+| 13 | On a Mode-2 drone transmitter preparing for Unit 21 bring-up, what does Left Stick control? | **A) Throttle (vertical) & Yaw (horizontal)***<br>B) Pitch & Roll only<br>C) Camera zoom & gimbal tilt<br>D) Wi-Fi channel & brightness | 20s | `[L1 Remember \| Std 9.2 \| Domain: CTE-Drone]` Mode-2 standardizes Throttle/Yaw on Left Stick and Pitch/Roll on Right Stick across sims and builds. |

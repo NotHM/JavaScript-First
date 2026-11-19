@@ -1,6 +1,6 @@
-# Lesson 5.3: Data Cleaning, Feature Vectors, Statistics & PII Anonymization (`AI101/AI201 | AI Stds 4.0, 5.0`)
+# Lesson 5.3: Data Cleaning, Feature Vectors, Statistics & PII Anonymization (`CTE AI (11.0102.00) / Azure AI-900 | AI Stds 4.0, 5.0`)
 
-**Standards:** West-MEC `AI101` Units 3–4 & `AI201` Unit 1 (**AI Stds `4.0, 5.0`**: Data Collection/Preparation & EDA / Math Foundations) | Reinforces **AZ CTE `6.1–6.5, 7.1–7.4`**
+**Standards:** CTE AI (`11.0102.00`) / Azure AI-900 (**AI Stds `4.0, 5.0`**: Data Collection/Preparation & EDA / Math Foundations) | Reinforces **AZ CTE `6.1–6.5, 7.1–7.4`**
 
 ## Student Learning Objectives (Bloom's Taxonomy)
 - **`[L1 Remember]`** Define missing-value **imputation** (mean, median, mode), **deduplication**, **PII anonymization**, **One-Hot Encoding**, **Min-Max Scaling**, **Z-Score Standardization**, and **Exploratory Data Analysis (EDA)** (`AI 4.0, 5.0`).

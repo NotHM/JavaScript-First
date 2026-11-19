@@ -1,15 +1,14 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
-What does (42).toString(16) return in JavaScript?,"42","2a","ff","101010",20,2
-What does parseInt("1100" 2) return?,6,10,12,14,20,3
-What evaluates from: 2 + 3 * (2 ** 3) ?,40,26,20,1000,30,2
-A 50 MB file transfers over a 40 Mbps network in how many seconds?,1.25 seconds,10 seconds,8 seconds,40 seconds,60,2
+What does (42).toString(16) return in JavaScript?,42,2a,ff,101010,20,2
+"What does parseInt('1100', 2) return?",6,10,14,12,20,4
+What evaluates from: 2 + 3 * (2 ** 3) ?,26,40,20,1000,30,1
+A 50 MB file transfers over a 40 Mbps network in how many seconds?,1.25 seconds,8 seconds,10 seconds,40 seconds,60,3
 What is (0b1010 | 0b0101) in decimal?,0,5,10,15,30,4
 What does bitwise (7 & 2) evaluate to?,0,2,5,9,20,2
-What does left-shift (6 << 2) return?,12,18,24,3,30,3
-With READ=1 WRITE=2 EXEC=4 what numeric mask equals READ | EXEC?,3,5,6,7,30,2
+What does left-shift (6 << 2) return?,24,18,12,3,30,1
+With READ=1 WRITE=2 EXEC=4 what numeric mask equals READ | EXEC?,3,6,5,7,30,3
 Which expression avoids GEMA precedence bugs for averaging a & b?,a + b / 2,(a + b) / 2,a / 2 + b,a * b / 2,20,2
-Which representation prevents rounding errors in corporate payroll?,Raw Float64,Integer cents,HTML Strings,Bitwise XOR,30,2
-A 4000mAh 4S LiPo draws 24A hover. Using 80% DoD what is flight time?,4.0 minutes,8.0 minutes,10.0 minutes,24.0 minutes,60,2
-At a 60-degree bank angle what is Load Factor n = 1 / cos(60 deg)?,0.5 G,1.0 G,1.41 G,2.0 G,30,4
-Why wrap (focalMm * widthPx) in parens for Photogrammetry GSD in JS?,GEMA forces dividing by full denominator,JS bans * without parens,Converts meters to feet,Fixes BigInt errors,30,1
-
+Which representation prevents rounding errors in corporate payroll?,Integer cents,Raw Float64,HTML Strings,Bitwise XOR,30,1
+A 4000mAh 4S LiPo draws 24A hover. Using 80% DoD what is flight time?,4.0 minutes,24.0 minutes,10.0 minutes,8.0 minutes,60,4
+At a 60-degree bank angle what is Load Factor n = 1 / cos(60 deg)?,0.5 G,1.0 G,2.0 G,1.41 G,30,3
+Why wrap (focalMm * widthPx) in parens for Photogrammetry GSD in JS?,JS bans * without parens,GEMA forces dividing by full denominator,Converts meters to feet,Fixes BigInt errors,30,2

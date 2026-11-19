@@ -1,6 +1,6 @@
 # Lesson Plan 10.3: Computer Vision Matrices, Convolutions, IoU & AI Hardware (`AI Stds 3.0, 8.0, 9.0`)
 
-**Unit:** Unit 10 | **Duration:** 3 Class Periods × 50 min (Days 75–77) | **Standards:** West-MEC `AI101` Unit 2, `AI102` Unit 10, `AI201` Units 3–4 (`AI Stds 3.0, 8.0, 9.0`); AZ CTE `15.5, 6.5, 4.0`
+**Unit:** Unit 10 | **Duration:** 3 Class Periods × 50 min (Days 75–77) | **Standards:** **CTE AI (11.0102.00) / Azure AI-900** (`AI Stds 3.0, 8.0, 9.0`); AZ CTE `15.5, 6.5, 4.0`
 
 ## Bloom's Objective Ladder
 - **L1–L2:** State AI processor characteristics (`CPU`/`GPU`/`TPU`/`NPU`), Canvas RGBA `ImageData` stride (`4` bytes), Rec. 601 grayscale formula, `zero` vs. `clamp` padding, and `IoU` bounds.

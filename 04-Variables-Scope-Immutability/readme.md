@@ -1,6 +1,6 @@
 # Chapter 4: What Do You Really Know About Variables, Scope, Data Types & Immutability?
 
-*By Hans McMurdy (`@HansOnCoding`) · West-MEC / Arizona CTE Software & App Design (`Stds 3.3, 3.4, 3.6, 18.2, 18.3`)*
+*By Hans McMurdy (`@HansOnCoding`) · High School CTE (Grades 11–12) & Community College CIS — Software & App Design (`AZ CTE CIP 11.0202.00 | Stds 3.3, 3.4, 3.6, 18.2, 18.3`)*
 
 > **Chapter Navigation:** [Unit 4 Guide](./unit-guide.md) · [Setup & Standards Guide](./setup-guide.md) · [50-Question Mastery Exam](./quizzes/unit-test-50.md) · [Unit 4 Project](./projects/unit-project.md) · Run `npm run grade -- --unit 04`
 

@@ -8,7 +8,7 @@ Every semester I watch the exact same pattern play out. A student writes a clean
 
 **Testing isn't extra homework bolted onto the end of a sprint. Testing is how you force assumptions into the open before users find them.**
 
-Chapter 9 brings together three pillars every developer and ML engineer relies on: **systematic debugging & TDD (`AZ CTE Std 12.0`)**, **searching, sorting, graphs, compression & Big-O efficiency (`AZ CTE Std 6.4–6.7`)**, and **ML evaluation metrics & algorithmic fairness audits (`West-MEC AI101/AI102/AI201 | AI Stds 1.0, 2.0, 6.0, 7.0`)**.
+Chapter 9 brings together three pillars every developer and ML engineer relies on: **systematic debugging & TDD (`AZ CTE Std 12.0`)**, **searching, sorting, graphs, compression & Big-O efficiency (`AZ CTE Std 6.4–6.7`)**, and **ML evaluation metrics & algorithmic fairness audits (`CTE AI (11.0102.00) / Azure AI-900 | AI Stds 1.0, 2.0, 6.0, 7.0`)**.
 
 ---
 

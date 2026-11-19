@@ -118,7 +118,7 @@ Every backend engineer eventually connects a sleek modern JSON service to a lega
 
 | Dimension | JSON (`application/json`) | XML (`application/xml`) |
 |---|---|---|
-| **Syntax Style** | Lightweight `{ "id": "CO101", "credits": 1.5 }` | Explicit tags `<course id="CO101"><credits>1.5</credits></course>` |
+| **Syntax Style** | Lightweight `{ "id": "CTE/CIS 101", "credits": 1.5 }` | Explicit tags `<course id="CTE/CIS 101"><credits>1.5</credits></course>` |
 | **Native JS Support** | **Zero-dependency (`JSON.parse` / `JSON.stringify`)** | Requires XML escaping & parser (`DOMParser` / regex / package) |
 | **Wire Size** | ~20–50% smaller payload | Verbose closing tags multiply bandwidth overhead |
 | **Schema & Attributes** | Keys only (plus JSON Schema validation) | Native tag attributes, XML namespaces, strict XSD schemas |

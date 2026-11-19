@@ -1,6 +1,6 @@
 /**
  * Student Lesson 12.2 Lab — Drone Flight Physics, LiPo Chemistry & Geodesic Math
- * Standards: West-MEC DT101 (1.0-12.0, 23.0) + AZ CTE 4.0 (4.1-4.7)
+ * Standards: CTE Drone Tech (49.0199.00: 1.0-12.0, 23.0) + AZ CTE 4.0 (4.1-4.7)
  *
  * SAFETY NOTICE: Always keep propellers OFF (PROPS OFF) on the workbench!
  * Instructions: Complete every TODO and fix the GEMA/radian bug without changing exports.

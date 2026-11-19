@@ -2,7 +2,7 @@
  * Lesson 11.2 Instructor Reference Demo:
  * Zero Trust Architecture, Ordered Firewall ACLs (Packet vs. Stateful vs. NGFW),
  * SIEM Correlation & AI Log Anomaly Detection, Risk & STRIDE Modeling, DRP (RPO/RTO) & Compliance.
- * Standards: West-MEC ITS 201-202 (Security+, Security Pro) | ADE NetSec 1.0, 4.5-4.6, 5.1-5.10, 9.1-9.10, 10.7-10.8, 11.1-11.6
+ * Standards: CTE IT Security (11.1999.00) / CompTIA Security+ | ADE NetSec 1.0, 4.5-4.6, 5.1-5.10, 9.1-9.10, 10.7-10.8, 11.1-11.6
  *
  * Run demo:  node 11-Internet-Server-Security/02-Zero-Trust-Firewalls-SIEM-and-STRIDE/code/zeroTrustSiemDemo.mjs
  * Run tests: node --test 11-Internet-Server-Security/02-Zero-Trust-Firewalls-SIEM-and-STRIDE/code/zeroTrustSiemDemo.test.mjs

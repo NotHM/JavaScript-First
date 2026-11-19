@@ -1,7 +1,7 @@
 # Lesson Plan 7.2: RF Telemetry, MAVLink/CRSF Framing & Async Fail-Safe State Machines
 
 **Unit:** Unit 7 | **Duration:** 3 Class Periods × 50 min  
-**Standards:** West-MEC Drone Technology **`DT101–DT102` (`Stds 11.0–16.0, 24.0–26.0`)** + **AZ CTE `18.0` (`18.1–18.7`, `16.3`)**
+**Standards:** **CTE Drone Tech (49.0199.00) / FAA Part 107 (`Stds 11.0–16.0, 24.0–26.0`)** + **AZ CTE `18.0` (`18.1–18.7`, `16.3`)**
 
 ---
 
@@ -54,7 +54,7 @@
 ## Teacher & Student SMART Objectives Alignment
 | Checkpoint | Aligned Unit Goal(s) | Bloom's & Standard | Measurable Target & Timing |
 |---|---|---|---|
-| **Pre-Lesson 7.2 & Framing (Part A)** | `SG-U07-6`, `TG-U07-6` | `L1–L2` (`DT101–DT102`, `18.4, 18.6`) | Score >= 80% identifying RF band roles, `LQ` vs `RSSI`, CRC-16 offsets, and CRM roles before lab implementation. |
+| **Pre-Lesson 7.2 & Framing (Part A)** | `SG-U07-6`, `TG-U07-6` | `L1–L2` (`CTE-Drone / Part 107`, `18.4, 18.6`) | Score >= 80% identifying RF band roles, `LQ` vs `RSSI`, CRC-16 offsets, and CRM roles before lab implementation. |
 | **Telemetry & Sensor Coding Lab (Part B)** | `SG-U07-6`, `TG-U07-6` | `L3` (`18.1–18.7`, `16.3`) | Pass 100% of `telemetryWatchdogLab.mjs` TODOs and verify deterministic fail-safe transitions matching `droneTelemetryDemo.test.mjs`. |
 | **PID/Async Forensics & CRM (Parts C–D)** | `SG-U07-6`, `TG-U07-6` | `L4–L5` (`18.1, 18.4–18.7`) | Fix `stepPidBuggy` windup & `finally` lock defects cleanly and earn Hake's $g \ge 0.55$ on Post-Lesson 7.2. |
 

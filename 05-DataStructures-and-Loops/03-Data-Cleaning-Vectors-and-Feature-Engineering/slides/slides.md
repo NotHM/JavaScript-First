@@ -7,7 +7,7 @@ slideNumber: true
 ---
 
 # Lesson 5.3: AI Data Cleaning & Feature Engineering
-**West-MEC `AI101` Units 3–4 & `AI201` Unit 1 (`AI Stds 4.0, 5.0`)**
+**CTE AI (`11.0102.00`) / Azure AI-900 (`AI Stds 4.0, 5.0`)**
 
 ---
 

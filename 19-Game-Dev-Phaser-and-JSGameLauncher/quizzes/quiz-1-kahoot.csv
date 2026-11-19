@@ -1,14 +1,14 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
-What default 4:3 pixel size does jsgamelauncher expect on #game-canvas?,320 x 200,640 x 480,1920 x 1080,100 x 100,20,2
-Which browser API schedules display-synced frame callbacks for a game loop?,setInterval,requestAnimationFrame,localStorage,fetch,20,2
-Which navigator method polls connected USB or handheld gamepads each frame?,navigator.readPad(),navigator.getGamepads(),window.pollKeys(),document.padList(),20,2
-In utils.js which standard button maps to Xbox A or Nintendo B (key z)?,BUTTON_NORTH,BUTTON_SOUTH,BUTTON_WEST,SELECT,20,2
-Which Web Audio node scales SFX volume between AudioBufferSource and destination?,GainNode,ScriptTag,CanvasContext,PromiseNode,20,1
-Which package.json field enables ES module imports for Vite and jsgamelauncher?,type: commonjs,type: module,esm: false,main: index.html,20,2
-Which Phaser.Scene method loads images and audio BEFORE create() executes?,render(),preload(),destroy(),physics(),20,2
-Why drop an empty <game-name>.jsg file into a handheld game directory?,Compresses audio,Lets EmulationStation list the game,Enables Wi-Fi,Compiles C++ code,20,2
-Which CLI command runs a jsgamelauncher game directly in a native SDL window?,npm run lint,npx rungame ./mygame.jsg,git checkout main,curl localhost,20,2
-Where are JS games copied on Knulli or Batocera retro handheld devices?,/etc/passwd,/userdata/roms/jsgames,/var/log/http,/tmp/browser,20,2
-Commercial FAA Part 107 flights require what cert weight and AGL altitude?,TRUST / <100 lb / 1000 ft,Part 107 UAG / <55 lb / 400 ft,Part 91 / 55 lb / 1200 ft,No cert / <250 lb / 500 ft,20,2
-Within how many days must Part 107 crashes >$500 non-UAS damage be reported?,24 hours,10 calendar days,30 business days,Never required,20,2
-On a Mode-2 RC transmitter which drone axes are controlled by the Left Stick?,Pitch and Roll,Throttle and Yaw,Camera Tilt and Zoom,Only Flaps,20,2
+Why set explicit HTML width=640 height=480 attributes on <canvas> while using CSS for sizing?,Preserves crisp 4:3 internal pixel buffer,Disables GPU compositing,Forces server rendering,Converts SVG into PNG,20,1
+Which browser scheduling API calls a callback synced cleanly to display refresh cycles?,Atomics.wait,"setTimeout(fn, 1)",Promise.race,requestAnimationFrame,20,4
+Which W3C Gamepad API call polls connected USB or handheld controllers in the browser?,document.readStick(),gamepad.open(),navigator.getGamepads(),window.pollPads(),20,3
+Which Web Audio API node sits between AudioBufferSourceNode and destination to control volume?,ScriptProcessorNode,GainNode,OscillatorNode,AnalyserNode,20,2
+Which package.json property lets Node and Vite parse .js files using ES import/export syntax?,'type': 'module','syntax': 'cjs','legacy': true,'sandbox': false,20,1
+Which Phaser.Scene method runs ONCE before create() to queue textures and audio assets?,render(),update(),destroy(),preload(),20,4
+How does class PlayScene extends Phaser.Scene organize reusable game scene behavior in JS?,Disables strict mode,Blocks module exports,Inherits lifecycle & physics methods via OOP,Converts classes to C structs,20,3
+Which CSS rules center a 4:3 game viewport cleanly inside a responsive <main> container?,float: right + zoom: 500%,display: flex + aspect-ratio: 4 / 3,visibility: hidden,position: static + font: bold,20,2
+Why run untrusted game code in a VM sandbox that removes host fs and process globals?,Prevents malicious scripts reading host files,Doubles CPU clock speed,Compresses audio buffers,Skips JSON validation,20,1
+"At a 60 Hz display refresh rate vs 120 Hz, roughly how many milliseconds separate frames?",500 ms vs 1000 ms,100 ms vs 200 ms,1 ms vs 50 ms,16.67 ms vs 8.33 ms,20,4
+What purpose do an empty <game>.jsg file and /userdata/roms/jsgames serve on handhelds?,Compile shaders to Vulkan,Replace package.json,Mark folder for EmulationStation JS launcher,Store AES root certificates,20,3
+Recall Part 107 baseline limits & 14 CFR 107.9 accident filing rule:,"<250 lbs, 500 ft MSL, 24 hours if >$5000","<55 lbs, <=400 ft AGL, 10 days if damage >$500","TRUST cert only, no altitude ceiling","<=100 lbs, 1000 ft AGL, 30 days if >$50",30,2
+"On a Mode-2 drone transmitter preparing for Unit 21 bring-up, what does Left Stick control?",Throttle (vertical) & Yaw (horizontal),Pitch & Roll only,Camera zoom & gimbal tilt,Wi-Fi channel & brightness,20,1

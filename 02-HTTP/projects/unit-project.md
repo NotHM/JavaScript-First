@@ -1,6 +1,6 @@
 # Unit 2 Project: Multi-Route Node HTTP Service, Cloud & VLSM Network Brief
 
-**Bloom's:** `[L5 Evaluate]` & `[L6 Create]` | **Stds:** `8.1–8.6, 11.3–11.7` | **IT Security:** `West-MEC ITS 102 / ADE 3.0, 6.0, 7.0, 8.1–8.5, 10.1–10.6`  
+**Bloom's:** `[L5 Evaluate]` & `[L6 Create]` | **Stds:** `8.1–8.6, 11.3–11.7` | **IT Security:** `CTE IT Security (11.1999.00) / CCNA 200-301 / ADE 3.0, 6.0, 7.0, 8.1–8.5, 10.1–10.6`  
 **Starter:** [`../../0-student_files/projects/unit-02-http-router/index.js`](../../0-student_files/projects/unit-02-http-router/index.js)  
 **Optional Network Helper Module:** [`../../0-student_files/02-subnetting-routing/subnetCalculatorLab.mjs`](../../0-student_files/02-subnetting-routing/subnetCalculatorLab.mjs)
 

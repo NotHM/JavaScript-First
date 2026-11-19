@@ -4,8 +4,8 @@
 **Starter Files:** [`../../0-student_files/20-agentic-nlp-governance/nlpAgenticLab.mjs`](../../0-student_files/20-agentic-nlp-governance/nlpAgenticLab.mjs) & [`nlpAgenticLab.test.mjs`](../../0-student_files/20-agentic-nlp-governance/nlpAgenticLab.test.mjs)
 
 ## My Lesson SMART Objectives
-- [ ] **`[L2 Understand -> L3 Apply | AI101–AI102]`** **S/M/A/R/T:** Trace TF-IDF (`tf * log(N / df)`), Discriminative vs. Generative controls, and lexicon negation in Part A, then implement `tokenizeAndStem`, `computeTfIdfCorpus`, and `classifySentimentAndIntent` inside `nlpAgenticLab.mjs` by Day 6.
-- [ ] **`[L4 Analyze -> L5 Evaluate | AI202, Std 14.0]`** **S/M/A/R/T:** Build `runReActAgent` (allowlist, `maxSteps`, HITL pause/resume) and `buildAndValidateModelCard` (NIST AI RMF, EU AI Act, 80% disparate impact rule) passing 100% of assertions in `node --test` by Day 7 (`SG-U20-6`).
+- [ ] **`[L2 Understand -> L3 Apply | CTE AI 11.0102.00]`** **S/M/A/R/T:** Trace TF-IDF (`tf * log(N / df)`), Discriminative vs. Generative controls, and lexicon negation in Part A, then implement `tokenizeAndStem`, `computeTfIdfCorpus`, and `classifySentimentAndIntent` inside `nlpAgenticLab.mjs` by Day 6.
+- [ ] **`[L4 Analyze -> L5 Evaluate | 11.0102.00, Std 14.0]`** **S/M/A/R/T:** Build `runReActAgent` (allowlist, `maxSteps`, HITL pause/resume) and `buildAndValidateModelCard` (NIST AI RMF, EU AI Act, 80% disparate impact rule) passing 100% of assertions in `node --test` by Day 7 (`SG-U20-6`).
 
 ---
 

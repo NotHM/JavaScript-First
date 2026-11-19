@@ -1,11 +1,11 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
-What returns: const dbl = x => x * 2; dbl(6); ?,6,12,36,undefined,20,2
-What evaluates from this IIFE: ((n) => n + 1)(9) ?,9,10,undefined,SyntaxError,20,2
-Why are impure functions harder to unit test reliably?,They return numbers,They depend on/mutate external state,They run too fast,They use const,30,2
+What returns: const dbl = x => x * 2; dbl(6); ?,6,36,12,undefined,20,3
+What evaluates from this IIFE: ((n) => n + 1)(9) ?,10,9,undefined,SyntaxError,20,1
+Why are impure functions harder to unit test reliably?,They return numbers,They use const,They run too fast,They depend on/mutate external state,30,4
 A JavaScript closure remembers variables from:,Only CSS stylesheets,Its enclosing outer lexical scope,Global window only,Sibling classes,20,2
 const next = makeCounter(0); next(); console.log(next()); Logs:,0,1,2,undefined,30,3
-Converting fn(a b c) into chained single-arg fn(a)(b)(c) is called:,Hoisting,Recursion,Currying,Coercion,20,3
+Converting fn(a b c) into chained single-arg fn(a)(b)(c) is called:,Hoisting,Recursion,Coercion,Currying,20,4
 Which cleanly checks logical XOR between booleans A and B?,Boolean(A) !== Boolean(B),A && B,A || B,!A,20,1
 Why pass a fixed seed to a deterministic PRNG when testing games?,Speeds up CSS,Makes random sequences repeatable,Blocks hackers,Saves memory,30,2
 Which function is IMPURE?,(a b) => a + b,(arr x) => [...arr x],(arr x) => arr.push(x),x => x * x,30,3
-Best pattern to generate tax calculators locked to 8.6% and 5% rates?,Copy-pasted switches,Curried HOF factory,Global var rate,Nested for loops,30,2
+Best pattern to generate tax calculators locked to 8.6% and 5% rates?,Curried HOF factory,Copy-pasted switches,Global var rate,Nested for loops,30,1

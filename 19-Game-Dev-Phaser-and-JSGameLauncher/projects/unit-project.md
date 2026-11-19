@@ -1,6 +1,6 @@
 # Unit 19 Project: Handheld-Ready Phaser 3 Arcade Game & Part 107 Drone Mission Sim (`jsgamelauncher`)
 
-**Bloom's:** `[L5 Evaluate]` & `[L6 Create]` | **Stds:** `1.5, 4.3, 9.2, 11.7, 12.0, 15.5, 17.3, 19.8` + **West-MEC `DT102` (`14.0–28.0`: Part 107 / TRUST)**  
+**Bloom's:** `[L5 Evaluate]` & `[L6 Create]` | **Stds:** `1.5, 4.3, 9.2, 11.7, 12.0, 15.5, 17.3, 19.8` + **CTE Drone Tech (`49.0199.00`) / FAA Part 107 (`14.0–28.0`)**  
 **Starter Workspaces:** [`../../0-student_files/projects/unit-19-phaser-jsgame/`](../../0-student_files/projects/unit-19-phaser-jsgame/src/main.js) & [`../../0-student_files/19-drone-part107-sim/part107AndMetarLab.mjs`](../../0-student_files/19-drone-part107-sim/part107AndMetarLab.mjs)
 
 Design, build, test, and package an original **4:3 (`640x480`) Arcade Game or sUAS Mission Simulator** runnable both in a web browser (`npm run dev`) and in `jsgamelauncher` (`npx rungame ./arcade-quest.jsg`):
@@ -15,7 +15,7 @@ Design, build, test, and package an original **4:3 (`640x480`) Arcade Game or sU
    - Implement `auditPackageForHandheld()` checking ESM status, `.jsg` marker presence, and `--ignore-scripts` supply-chain warnings.
 5. **Automated Test Suite (`12.2`):** Expand `packaging.test.mjs` with boundary tests covering physics bounds, input fallback, and packaging readiness (`node --test`).
 
-## Part 2 — Integrated Part 107 Drone Mission Sim Track (`DT102`, `9.0, 15.5, 19.0`)
+## Part 2 — Integrated Part 107 Drone Mission Sim Track (`CTE Drone Tech 49.0199.00 / FAA Part 107`, `9.0, 15.5, 19.0`)
 Extend your simulator (using [`part107AndMetarLab.mjs`](../../0-student_files/19-drone-part107-sim/part107AndMetarLab.mjs)) to integrate aviation compliance and Mode-2 control inside your 4:3 stage:
 1. **Part 107 & Class `B–G` / LAANC Preflight Gate:** Enforce `Part 107 UAG` vs. `TRUST`, `< 55 lbs`, `<= 400 ft AGL`, `<= 87 kt`, Remote ID, VLOS, waivers (`§107.29/31/39`), `LAANC` grid ceilings, AND `§107.9` `10`-day `> $500` accident reporting!
 2. **Aviation `METAR` Decoder (`3 SM / 500 ft`):** Parse live/fixture `METAR` strings and lock takeoff whenever visibility `< 3 SM` or cloud clearance `< 500 ft` below clouds.

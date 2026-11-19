@@ -1,4 +1,4 @@
-# Post-Lesson 1.5 Evaluation: Exit Ticket (`West-MEC ITS 101–102` | `ADE 2.1–2.6, 8.6–8.8, 10.2`)
+# Post-Lesson 1.5 Evaluation: Exit Ticket (`CTE IT Security (11.1999.00) / CompTIA A+ / RHCSA` | `ADE 2.1–2.6, 8.6–8.8, 10.2`)
 
 **Timing:** 5 minutes (Complete AFTER Lesson 1.5 instruction & `posixAuditLab.mjs`) | **Score:** `____ / 5`
 
@@ -6,7 +6,7 @@
    - `4755`: `____________` — enforces: `____________________________________`  
    - `1777`: `____________` — enforces: `____________________________________`
 
-2. **`[L3 Apply | CompTIA A+ / ITS 101]`** A workstation draws `350 W` continuous peak load. Using the **`+25%` headroom rule**, what minimum wattage is required and which standard PSU (`450 W / 550 W / 650 W`) fits? Then contrast **RAID 1** vs. **RAID 5**:  
+2. **`[L3 Apply | CompTIA A+]`** A workstation draws `350 W` continuous peak load. Using the **`+25%` headroom rule**, what minimum wattage is required and which standard PSU (`450 W / 550 W / 650 W`) fits? Then contrast **RAID 1** vs. **RAID 5**:  
    > *(Your calculation & contrast)*
 
 3. **`[L3 Apply | RH134 / ADE 8.7]`** Write a 5-field `crontab` line running `/opt/scripts/rotate-logs.sh` at **03:15 AM Monday through Friday**, and explain why **NTP (`chronyd`)** synchronization matters for `journalctl` forensics:  

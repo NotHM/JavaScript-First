@@ -1,0 +1,11 @@
+{
+  "name": "unit-21-hands-on-drone-gcs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Unit 21 Capstone Project: Hands-On Drone Build, Wiring/MSP Codec & Flight Controller GCS",
+  "scripts": {
+    "test": "node --test capstone.test.mjs",
+    "start": "node index.mjs"
+  }
+}

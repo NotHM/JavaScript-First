@@ -1,7 +1,7 @@
 # Lesson Plan 1.5: Linux System Administration, Hardware & OS Safety
 
 **Unit:** Unit 1 | **Duration:** 2 Class Periods (100 min total)  
-**Standards:** West-MEC `ITS 101–102` (`CompTIA ITF+ FC0-U61`, `CompTIA A+ 220-1101/1102`, `Red Hat RHCSA EX200 RH124/RH134`) | **ADE Network Security:** `2.0` (`2.1–2.6`), `8.6–8.8`, `10.2`
+**Standards:** CTE IT Security (`11.1999.00`) / `CompTIA ITF+ FC0-U61`, `CompTIA A+ 220-1101/1102`, `Red Hat RHCSA EX200 RH124/RH134` | **ADE Network Security:** `2.0` (`2.1–2.6`), `8.6–8.8`, `10.2`
 
 ---
 

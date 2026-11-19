@@ -1,6 +1,6 @@
 /**
  * Student Lesson 2.4 TDD Suite: CIDR/VLSM Subnetting, Longest-Prefix Routing, IANA Ports & 7-Step Triage
- * Standards: West-MEC ITS 102 (Cisco CCNA 200-301) | ADE Network Security 3.0, 6.0, 7.0, 8.1-8.5, 10.1-10.6
+ * Standards: CTE IT Security (11.1999.00) / Cisco CCNA 200-301 | ADE Network Security 3.0, 6.0, 7.0, 8.1-8.5, 10.1-10.6
  * Run: node --test 0-student_files/02-subnetting-routing/subnetCalculatorLab.test.mjs
  */
 import assert from 'node:assert/strict';

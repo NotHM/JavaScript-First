@@ -7,7 +7,7 @@ slideNumber: true
 ---
 
 # Lesson 19.3: Part 107 Airspace, METAR & Mode-2 Sim
-**West-MEC `DT102` (`14.0–28.0`: `Part 107 / TRUST`) + AZ CTE `9.0, 15.5, 19.8`**
+**CTE Drone Tech (`49.0199.00` / `FAA Part 107 & TRUST`) + AZ CTE `9.0, 15.5, 19.8`**
 
 ---
 

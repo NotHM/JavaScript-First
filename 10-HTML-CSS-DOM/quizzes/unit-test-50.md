@@ -1,7 +1,7 @@
 # Unit 10 Mastery Exam (50 Questions): UI/A11y, CSS/Canvas/DOM & Computer Vision
 
 **Course:** JavaScript First — Software & App Design (AZ CTE CIP `11.0202.00`)  
-**Standards:** AZ CTE 15.1–15.11 | West-MEC AI 3.0, 8.0, 9.0  
+**Standards:** AZ CTE 15.1–15.11 | CTE AI (11.0102.00) / Azure AI-900 (AI 3.0, 8.0, 9.0)  
 **Companion Resources:** [Unit Overview](../readme.md) | [Setup Guide](../setup-guide.md) | [Unit Guide](../unit-guide.md)  
 **Instructions:** Select the single best answer (`A`, `B`, `C`, or `D`) for each of the 50 items below (`[L1]`–`[L5]`). No calculators or external notes are required unless specified by your instructor.
 
@@ -15,11 +15,11 @@
    - C) Writing backend SQL queries before defining user goals
    - D) Maximizing third-party JavaScript megabytes per page
 
-2. Which planning artifact maps page-to-page navigation hierarchy, while the other sketches individual screen layout? `[15.2 | L1]`
-   - A) A **sitemap** maps navigation hierarchy; a **wireframe** sketches low-fidelity screen layout
-   - B) A wireframe tracks SQL schemas; a sitemap runs CSS animations
-   - C) Both terms exclusively mean minifying CSS files
-   - D) A wireframe replaces HTML `<title>` tags in browsers
+2. Which HTML `<meta>` tag ensures mobile browsers match actual device CSS pixel width instead of zooming out a virtual ~980px desktop viewport? `[15.4 | L1]`
+   - A) `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+   - B) `<meta name="robots" content="noindex">`
+   - C) `<meta http-equiv="refresh" content="10">`
+   - D) `<meta name="theme-color" content="#000000">`
 
 3. Which HTML5 landmark element identifies the single dominant primary body content of a document for screen readers? `[15.3 | L1]`
    - A) `<div class="top">`
@@ -109,11 +109,11 @@
    - C) `innerHTML` refuses strings shorter than 10 characters
    - D) `textContent` applies CSS Grid automatically
 
-17. Why does streaming raw `1080p @ 30 FPS` RGBA video over Wi-Fi to a **Cloud GPU** fail strict `33 ms` drone or smart-camera real-time constraints compared to an **Edge NPU**? `[AI 3.0 | L2]`
-   - A) Cloud GPUs cannot perform matrix multiplication
-   - B) Edge NPUs always carry 1,000 GB of HBM server memory
-   - C) Webcams only output black-and-white bytes to the cloud
-   - D) Uploading uncompressed streams wastes massive bandwidth (`> 221 Mbps`), incurs variable network round-trip latency, and exposes private raw video
+17. In a CSS Flexbox container (`display: flex; flex-direction: row;`), which property pair centers items horizontally along the main axis AND vertically along the cross axis? `[15.4 | L2]`
+   - A) `align-items: center; flex-wrap: nowrap;`
+   - B) `grid-template-columns: 1fr; text-align: center;`
+   - C) `float: center; vertical-align: middle;`
+   - D) `justify-content: center;` (main axis) and `align-items: center;` (cross axis)
 
 18. Why does the Rec. 601 grayscale formula multiply Green by `0.587` instead of weighting Red, Green, and Blue equally at `1/3`? `[AI 8.0 | L2]`
    - A) Human cone cells are far more sensitive to green wavelengths than blue (`0.114`), preserving perceptual brightness
@@ -121,13 +121,13 @@
    - C) Computers store Green using 16 bits instead of 8 bits
    - D) Equal `1/3` weighting crashes `Math.round()`
 
-19. How do the **Sobel $G_x$** and **Sobel $G_y$** $3 	imes 3$ convolution kernels work together to detect edges cleanly? `[AI 8.0 | L2]`
+19. How do the **Sobel $G_x$** and **Sobel $G_y$** $3 \times 3$ convolution kernels work together to detect edges cleanly? `[AI 8.0 | L2]`
    - A) $G_x$ averages pixels evenly to blur texture noise while $G_y$ crops bounding boxes
    - B) Both duplicate the exact same pixel values unchanged
    - C) $G_x$ measures horizontal left-to-right intensity changes (vertical edges), $G_y$ measures vertical top-to-bottom changes, and $\sqrt{G_x^2 + G_y^2}$ combines edge strength
    - D) $G_x$ scales Canvas DPI by 2 while $G_y$ adjusts WCAG contrast
 
-20. When applying a $3 	imes 3$ `convolve2D` Blur kernel across an image, why choose **`clamp` border mode** over **`zero` padding**? `[AI 8.0 | L2]`
+20. When applying a $3 \times 3$ `convolve2D` Blur kernel across an image, why choose **`clamp` border mode** over **`zero` padding**? `[AI 8.0 | L2]`
    - A) `clamp` cuts array size to 25% of input
    - B) `clamp` repeats edge pixel values rather than inventing black `0`s outside the frame, preventing dark halo outlines
    - C) `zero` padding converts grayscale buffers back to `RGBA`
@@ -161,23 +161,23 @@
    - C) `Math.PI * 2`
    - D) `0.9`
 
-25. In an HTML5 `ImageData.data` array of width `10` pixels, which starting index holds the **Red (`R`)** channel byte for pixel `(x = 3, y = 2)`? `[AI 8.0 | L3]`
-   - A) Index `23`
-   - B) Index `32`
-   - C) Index `64`
-   - D) Index `92` (`(2 * 10 + 3) * 4`)
+25. How does `document.querySelectorAll('.card.active')` differ from `document.querySelector('.card.active')` when updating highlighted DOM cards? `[15.7 | L3]`
+   - A) `querySelectorAll` updates styles directly without returning a list
+   - B) `querySelector` throws an error unless at least two elements match
+   - C) `querySelectorAll` only searches metadata inside `<head>`
+   - D) `querySelectorAll` returns a static `NodeList` of **all** matching elements, whereas `querySelector` returns only the first match (or `null`)
 
-26. Using Rec. 601 (`0.299R + 0.587G + 0.114B`), what rounded grayscale value represents pure green pixel `rgba(0, 200, 0, 255)`? `[AI 8.0 | L3]`
-   - A) `117` (`0.587 * 200 = 117.4`)
-   - B) `200`
-   - C) `67`
-   - D) `255`
+26. A gallery renders 500 dynamic `<li>` cards and lets users click any card's delete button. Which pattern handles existing AND newly added cards with one listener? `[15.7 | L3]`
+   - A) Attach one click listener on the parent `<ul>` using event bubbling (`event.target.closest('button')`)
+   - B) Call `window.location.reload()` after adding every item
+   - C) Poll `setInterval` every `10ms` over every button element
+   - D) Embed inline `onclick="..."` string attributes inside every `<li>`
 
-27. Apply a $3 	imes 3$ uniform Box Blur (`each weight = 1/9`) to the center pixel of a constant `[90, 90, ... 90]` image patch. What output value results? `[AI 8.0 | L3]`
-   - A) `10`
-   - B) `810`
-   - C) `90`
-   - D) `0`
+27. Which HTML5 form input enforces built-in email syntax validation before submit AND surfaces an `@`-equipped mobile virtual keyboard? `[15.6 | L3]`
+   - A) `<input type="text" placeholder="email">`
+   - B) `<textarea rows="1" name="email"></textarea>`
+   - C) `<input type="email" required>`
+   - D) `<div contenteditable="true">email</div>`
 
 28. Applying binary threshold (`val >= 128 ? 255 : 0`) to grayscale pixels `[40, 127, 128, 220]` yields which output array? `[AI 8.0 | L3]`
    - A) `[0, 255, 255, 255]`
@@ -233,7 +233,7 @@
    - C) `fillRect` must appear before `translate`
    - D) Multiplication by `Math.PI / 180` causes infinite recursion
 
-35. A peer reviews `gallery.innerHTML += `<li>${titleInput.value}</li>`` and flags a **Critical DOM XSS** defect. Why? `[15.7 | L4]`
+35. A peer reviews ``gallery.innerHTML += `<li>${titleInput.value}</li>` `` and flags a **Critical DOM XSS** defect. Why? `[15.7 | L4]`
    - A) `+=` fails to concatenate template literals in Chrome
    - B) `<li>` elements cannot sit inside `<ul>`
    - C) Typing `<img src=x onerror="stealCookies()">` executes attacker JavaScript inside every viewer's browser
@@ -245,11 +245,11 @@
    - C) Hardcode `width: 900px` on `<main>`
    - D) Switch every element to `position: fixed`
 
-37. Running a $3 	imes 3$ uniform Box Blur on an all-white `255` image produced `255` across the center yet **`113` on corners and `170` along every 1px border**. What setting caused this dark halo? `[AI 8.0 | L4]`
-   - A) `brightness` weight exceeded `1.0`
-   - B) Rec. 601 Alpha byte multiplied values by `0.5`
-   - C) `clamp` border mode copied corner white pixels twice
-   - D) `borderMode = "zero"` multiplied out-of-bounds missing neighbors as black `0` (`5*255/9 = 141`, `4*255/9 = 113`)
+37. A stylesheet declares `#submit-btn { background: blue; }` followed 20 lines later by `.btn-danger { background: red; }`, yet `<button id="submit-btn" class="btn-danger">` renders blue. Why? `[15.4 | L4]`
+   - A) Red is unsupported inside CSS classes
+   - B) CSS files stop parsing rules after line 20
+   - C) `<button>` elements ignore class selectors completely
+   - D) An ID selector (`1-0-0`) has higher CSS specificity than a single class selector (`0-1-0`), overriding source order
 
 38. An object detector predicts box `[20, 20, 60, 60]` against ground truth `[0, 0, 50, 50]`, achieving `IoU ≈ 0.28` (`900 / 3200`). Under standard **COCO `AP@50`** (`IoU >= 0.50`), how is this detection classified? `[AI 8.0 | L4]`
    - A) **False Positive** (poor localization `< 0.50`) AND the missed true object counts as a **False Negative**
@@ -257,11 +257,11 @@
    - C) **True Negative** since background matched
    - D) Automatically rescored to `IoU = 1.0` by edge NPU
 
-39. Audit this Canvas grayscale helper loop: `for (let i = 0; i < data.length; i++) { lum = 0.299*data[i] + 0.587*data[i+1] + 0.114*data[i+2]; ... }`. Why are pixels smeared and indices past end `NaN`? `[AI 8.0 | L4]`
-   - A) Rec. 601 coefficients should add to `255` instead of `1.0`
-   - B) `let` must be `var` inside pixel loops
-   - C) Loop increments by `i++` (1 byte) instead of `i += 4` (4-byte RGBA pixel stride), reading Green/Alpha as Red and overflowing the buffer
-   - D) `data.length` is measured in kilobytes instead of bytes
+39. Placing `<script src="app.js"></script>` inside `<head>` causes `document.querySelector('#canvas')` to return `null` on load. Which script attribute fixes this while still downloading in parallel? `[15.7 | L4]`
+   - A) `<script src="app.js" type="text/css">`
+   - B) `<script src="app.js" hidden>`
+   - C) `<script src="app.js" defer>` — fetches in parallel and waits to execute until HTML DOM parsing finishes
+   - D) `<script src="app.js" loop>`
 
 40. A commercial vision attendance scanner reports `99%` match accuracy on fair-skinned test lighting yet rejects `22%` of darker-skinned employees. Root cause? `[AI 9.0 | L4]`
    - A) Canvas `strokeWidth` is hardcoded to `2px`
@@ -285,11 +285,11 @@
    - C) Use Flexbox exclusively for complex 2D asymmetric rows+columns and CSS Grid only for 1D text links
    - D) Use **CSS Grid** for the 2D outer page layout shell and **Flexbox** inside 1D toolbars/nav pill rows
 
-43. A battery-powered agricultural drone needs obstacle avoidance (`<= 15 ms` reaction) over fields with **no cellular/Wi-Fi signal**. Which compute architecture must you select? `[AI 3.0 | L5]`
-   - A) Stream raw `4K` footage to an East-Coast Cloud TPU cluster
-   - B) Run heavy floating-point `float64` models sequentially on a legacy single-core microcontroller
-   - C) Quantized **on-device Edge NPU**, guaranteeing deterministic low-latency inference, offline autonomy, and minimal battery draw
-   - D) Store raw video on SD card and detect obstacles next morning
+43. Why does enabling hardware **GPU compositing** outperform single-threaded software **CPU rendering** when animating 60 FPS HTML5 Canvas shaders and 4K video overlays? `[15.5 | L5]`
+   - A) CPUs cannot perform floating-point multiplication
+   - B) GPUs convert CSS Grid rules into relational SQL tables
+   - C) Dedicated parallel GPU shader cores and wide-bandwidth VRAM accelerate rasterization cleanly while freeing CPU event threads
+   - D) GPU drivers compress HTML files into ZIP archives
 
 44. Conversely, your AI team is **training** a brand-new 150-million-parameter Vision Transformer across **50 million labeled satellite tiles**. Which compute tier fits? `[AI 3.0 | L5]`
    - A) Smartphone battery Edge NPU

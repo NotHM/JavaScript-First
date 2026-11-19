@@ -1,14 +1,14 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
-"What order logs: log(1); setTimeout(()=>log(2),0); Promise.then(()=>log(3)); log(4)?",1 2 3 4,1 4 2 3,1 4 3 2,3 1 4 2,30,3
-Closing a DB connection inside catch instead of finally leaks when:,No error occurs inside try,catch handles two lines,Promise resolves fast,await pauses,30,1
-Optional weather sidebar timed out while core page rendered cleanly. Log level?,FATAL,DEBUG,WARN,SILENT,20,3
-Concurrently fetching 3 optional widgets so 1 outage preserves others uses:,Promise.all,Promise.allSettled,Sync while loop,eval(),20,2
-parseInt("abc") returns NaN silently. Which guard safely checks that (18.5)?,typeof x === "null",Number.isNaN(x),x === false,!Array.isArray(x),20,2
+"What order logs: log(1); setTimeout(()=>log(2),0); Promise.then(()=>log(3)); log(4)?",1 2 3 4,1 4 3 2,1 4 2 3,3 1 4 2,30,2
+Closing a DB connection inside catch instead of finally leaks when:,await pauses,catch handles two lines,Promise resolves fast,No error occurs inside try,30,4
+An API or serial link fails transiently (timeout/503). Best retry policy?,Bounded retries + exponential backoff,Infinite 0ms loop,Disable timeouts,Ignore all errors,30,1
+Concurrently fetching 3 optional widgets so 1 outage preserves others uses:,Promise.all,Sync while loop,Promise.allSettled,eval(),20,3
+"parseInt(""abc"") returns NaN silently. Which guard safely checks that (18.5)?","typeof x === ""null""",!Array.isArray(x),x === false,Number.isNaN(x),20,4
 Using an empty catch (e) {} block causes critical maintenance issues via:,Automatic fixes,Silent failures hiding root causes,Faster loops,Lower RAM use,20,2
-Concurrent delays of 100ms 50ms and 80ms via Promise.all finish in about:,230 ms,100 ms,50 ms,80 ms,20,2
-Passing negative age -5 when valid range is 0..130 best matches which Error?,RangeError,EvalError,ReferenceError,URIError,20,1
-Why re-throw unknown non-ValidationError faults inside a helper catch block?,Keep caller notified of unexpected crashes,Hide stack traces,Restart Chrome,Delete logs,30,1
-Calling JSON.parse("{broken") inside try/catch throws a runtime:,SyntaxError catchable by catch,Permanent parse halt,Logical pass,TypeError only,20,1
-1-bit RF flip triggers CrcMismatchError inside DataView decoder. Best reaction?,Crash process immediately,Drop corrupt frame & log WARN cleanly,Disable CRC checks,Apply packet anyway,30,2
-Drone PID integral grows huge while waiting on pad causing flip-overs. Fix?,Clamp integral inside [-limit +limit],Divide by dtSec=0,Remove try/finally,Increase gain 10x,30,1
-Heartbeat times out past 1500ms while gpsHomeValid is false. Safe mode?,ARMED_CRUISE,FAILSAFE_RTH,FAILSAFE_LAND,IGNORE_TIMEOUT,30,3
+Concurrent delays of 100ms 50ms and 80ms via Promise.all finish in about:,100 ms,230 ms,50 ms,80 ms,20,1
+Passing negative age -5 when valid range is 0..130 best matches which Error?,ReferenceError,EvalError,RangeError,URIError,20,3
+Why re-throw unknown non-ValidationError faults inside a helper catch block?,Hide stack traces,Keep caller notified of unexpected crashes,Restart Chrome,Delete logs,30,2
+"Calling JSON.parse(""{broken"") inside try/catch throws a runtime:",SyntaxError catchable by catch,Permanent parse halt,Logical pass,TypeError only,20,1
+1-bit RF flip triggers CrcMismatchError inside DataView decoder. Best reaction?,Crash process immediately,Apply packet anyway,Disable CRC checks,Drop corrupt frame & log WARN cleanly,30,4
+Drone PID integral grows huge while waiting on pad causing flip-overs. Fix?,Remove try/finally,Divide by dtSec=0,Clamp integral inside [-limit +limit],Increase gain 10x,30,3
+Heartbeat times out past 1500ms while gpsHomeValid is false. Safe mode?,ARMED_CRUISE,FAILSAFE_LAND,FAILSAFE_RTH,IGNORE_TIMEOUT,30,2

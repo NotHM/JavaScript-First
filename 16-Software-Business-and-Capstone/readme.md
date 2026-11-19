@@ -4,7 +4,7 @@
 
 You now know how to design APIs, secure servers, persist atomic databases, and write automated `node:test` suites. Chapter 16 answers the question every engineer eventually faces: **How does clean code become a sustainable product people actually trust, adopt, and pay for?**
 
-Across **AZ CTE Standard 19.0 (`19.1–19.8`)** and the **Full-Semester Capstone**, you step into the shoes of a technical founder and release lead—balancing Agile sprint scope, App Store distribution fees, SaaS unit economics, privacy-first launches, and emerging AI/Edge workflows.
+Across **AZ CTE Standard 19.0 (`19.1–19.8`)**, the **1-Semester Core Capstone** (`Week 18, Days 86–90`), and the **Year 2 Semester 4 `CTE/CIS 202` SaaS Business Sprint (`30 hrs`)**, you step into the shoes of a technical founder and release lead—balancing Agile sprint scope, App Store distribution fees, SaaS unit economics, privacy-first launches, and emerging AI/Edge workflows that prepare your team's delivery rhythm for the [Unit 20 Local AI & 3D CAD Capstone](../20-Local-AI-Multimodal-and-3D-Capstone/unit-guide.md) (`65 hrs`) and the culminating [Unit 21 Hands-On Drone Build](../21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/unit-guide.md) (`85 hrs`).
 
 ---
 

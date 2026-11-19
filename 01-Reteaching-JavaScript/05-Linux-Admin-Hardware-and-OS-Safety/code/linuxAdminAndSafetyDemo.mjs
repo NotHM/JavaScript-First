@@ -1,7 +1,7 @@
 /**
  * Lesson 1.5 Instructor Reference Demo:
  * Linux System Administration, POSIX Permissions, Cron, Hardware/ESD Safety & SSH/Journal Hardening
- * Standards: West-MEC ITS 101-102 (ITF+, A+, RHCSA EX200) | ADE Network Security 2.0 (2.1-2.6), 8.6-8.8, 10.2
+ * Standards: CTE IT Security (11.1999.00) / CompTIA ITF+, A+, RHCSA EX200 | ADE Network Security 2.0 (2.1-2.6), 8.6-8.8, 10.2
  *
  * Run demo:  node 01-Reteaching-JavaScript/05-Linux-Admin-Hardware-and-OS-Safety/code/linuxAdminAndSafetyDemo.mjs
  * Run tests: node --test 01-Reteaching-JavaScript/05-Linux-Admin-Hardware-and-OS-Safety/code/linuxAdminAndSafetyDemo.test.mjs

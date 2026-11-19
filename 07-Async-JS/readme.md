@@ -1,4 +1,4 @@
-# Chapter 7: Asynchronous Concurrency, Error Hierarchies & Drone Telemetry (`AZ CTE Std 18.0` + `West-MEC DT101–DT102`)
+# Chapter 7: Asynchronous Concurrency, Error Hierarchies & Drone Telemetry (`AZ CTE Std 18.0` + `CTE Drone Tech / FAA Part 107`)
 
 > **Before we `await` anything:** Two bugs haunt async JavaScript more than any other. First, developers wrap `setTimeout(...)` or an un-awaited Promise inside `try/catch` and wonder why crashes still blow past their error handler. Second, they wire three microservices into `Promise.all()`, wait for one non-essential analytics widget to blip offline, and watch their entire checkout page burn down—or worse, in drone telemetry code, let one corrupted RF packet crash the flight monitor instead of isolating the frame cleanly.
 
@@ -15,7 +15,7 @@ Think of Node.js like an air-traffic controller handling a single runway (the **
   [`slides/slides.md`](./slides/slides.md) |
   [`code/asyncDemo.js`](./code/asyncDemo.js) |
   [`code/asyncQueueAndTreeDemo.test.js`](./code/asyncQueueAndTreeDemo.test.js)
-- **Lesson 7.2 — RF Telemetry, MAVLink/CRSF Framing & Async Fail-Safe State Machines (`DT101–DT102` + `18.0`):**
+- **Lesson 7.2 — RF Telemetry, MAVLink/CRSF Framing & Async Fail-Safe State Machines (`CTE-Drone / Part 107` + `18.0`):**
   [`02-Telemetry-FailSafe-and-Sensor-Streams/readme.md`](./02-Telemetry-FailSafe-and-Sensor-Streams/readme.md) |
   [`lesson-plan.md`](./02-Telemetry-FailSafe-and-Sensor-Streams/lesson-plan.md) |
   [`student-lesson.md`](./02-Telemetry-FailSafe-and-Sensor-Streams/student-lesson.md) |
@@ -123,7 +123,7 @@ When async producers outpace consumers, a Promise-based **`AsyncQueue`** ([`code
 
 ---
 
-## 4. Drone RF Telemetry, Framing, PID Anti-Windup & Fail-Safe CRM (`DT101–DT102`)
+## 4. Drone RF Telemetry, Framing, PID Anti-Windup & Fail-Safe CRM (`CTE Drone Tech / FAA Part 107`)
 
 Every async pattern above maps directly to uncrewed aircraft flight controllers, where **latency, corrupted radio frames, or unguarded `finally` locks are safety hazards**:
 

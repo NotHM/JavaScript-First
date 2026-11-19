@@ -1,6 +1,6 @@
 /**
  * Lesson 9.3 Automated Test Suite (node --test)
- * Standards: West-MEC AI101 Unit 5, AI102 Units 8-9, AI201 Unit 2 (AI Stds 1.0, 2.0, 6.0, 7.0); AZ CTE 6.4-6.7, 12.1-12.5
+ * Standards: CTE AI (11.0102.00) / Azure AI-900 (AI Stds 1.0, 2.0, 6.0, 7.0); AZ CTE 6.4-6.7, 12.1-12.5
  *
  * Run:
  *   node --test 09-Debugging-TDD-Algorithms/03-Machine-Learning-Algorithms-Eval-and-Fairness/code/mlAlgorithmsAndFairnessDemo.test.mjs

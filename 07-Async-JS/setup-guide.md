@@ -1,6 +1,6 @@
 # Unit 7 Setup & Diagnostics Guide: Async Concurrency, Promises & Drone Telemetry
 
-**Applies to:** `07-Async-JS/` (`AZ CTE Std 18.0` + `West-MEC DT101–DT102`)  
+**Applies to:** `07-Async-JS/` (`AZ CTE Std 18.0` + `CTE Drone Tech (49.0199.00) / FAA Part 107`)  
 **Chapter Guide:** [`readme.md`](./readme.md) | **Unit Plan:** [`unit-guide.md`](./unit-guide.md) | **50-Q Exam:** [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md)
 
 ---

@@ -10,7 +10,7 @@
 
 ## Part A: Bench Safety, LiPo Chemistry & Flight Forces (`[L1 Remember]` & `[L2 Understand]`)
 
-1. Complete the **LiPo `3S–6S` Reference Table** (`DT101`, `AZ CTE 4.5–4.6`):
+1. Complete the **LiPo `3S–6S` Reference Table** (`CTE Drone Tech`, `AZ CTE 4.5–4.6`):
    | Cell State | Volts / Cell | Integer `mV` / Cell | `4S` Pack Voltage |
    |---|---:|---:|---:|
    | Critical Min Floor | `____ V` | `______ mV` | `______ V` |
@@ -54,7 +54,7 @@
 
 ## Part D: Quantitative Precision & Density Altitude Evaluation (`[L5 Evaluate]` & `[L6 Create]`)
 
-A West-MEC team plans a noon photogrammetry survey in Phoenix, AZ (`field elevation = 1,135 ft`, `ambient temp = 42°C`).
+A CTE/CIS flight team plans a noon photogrammetry survey in Phoenix, AZ (`field elevation = 1,135 ft`, `ambient temp = 42°C`).
 1. Evaluate how **Density Altitude** affects thrust margin and flight time compared to a `15°C` sea-level test day.
 2. Justify why your flight logger stores **LiPo cell readings as integer millivolts (`mV`)** while storing **WGS-84 GPS lat/lon coordinates as `Float64` (`number`)** (`4.5, 4.6`):  
    > *(Your engineering evaluation)*
@@ -63,6 +63,6 @@ A West-MEC team plans a noon photogrammetry survey in Phoenix, AZ (`field elevat
 
 ## Lesson SMART Objectives Tracker
 
-- [ ] **SL-L12.2-1 (`[L1–L2]` | `DT101 1.0–12.0`, `4.5` | `SG-U12-6`):** Verify Props-Off bench rules, complete Part A LiPo `3S–6S` / `80%` DoD / `TWR` calculations with >= 80% accuracy.
-- [ ] **SL-L12.2-2 (`[L3]` | `4.3–4.6`, `DT101 23.0` | `SG-U12-6`):** Implement all `dronePhysicsLab.mjs` functions cleanly and pass `node --check` + runtime checks.
+- [ ] **SL-L12.2-1 (`[L1–L2]` | `CTE Drone Tech 1.0–12.0`, `4.5` | `SG-U12-6`):** Verify Props-Off bench rules, complete Part A LiPo `3S–6S` / `80%` DoD / `TWR` calculations with >= 80% accuracy.
+- [ ] **SL-L12.2-2 (`[L3]` | `4.3–4.6`, `CTE Drone Tech 23.0` | `SG-U12-6`):** Implement all `dronePhysicsLab.mjs` functions cleanly and pass `node --check` + runtime checks.
 - [ ] **SL-L12.2-3 (`[L4–L5]` | `4.3–4.6` | `SG-U12-6`):** Diagnose both Part C trig/GEMA defects, defend Part D Density Altitude + precision choices, and complete [`post-lesson-eval.md`](./post-lesson-eval.md).

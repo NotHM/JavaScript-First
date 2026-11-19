@@ -1,7 +1,7 @@
 # Unit 1 Project: CLI Open-Source License, Privacy & Host-Safety Compliance Auditor
 
 **Bloom's Target:** `[L5 Evaluate]` & `[L6 Create]`  
-**AZ CTE & West-MEC Standards:** `2.0` (`2.1`–`2.4`), `3.0` (`3.1`–`3.4`), `11.0` (`11.3`–`11.9`) | `ITS 101–102 / ADE 2.1–2.6, 8.6–8.8, 10.2`  
+**High School CTE (Grades 11–12) & Community College CIS Standards:** `2.0` (`2.1`–`2.4`), `3.0` (`3.1`–`3.4`), `11.0` (`11.3`–`11.9`) | `CTE IT Security (11.1999.00) / CompTIA A+ / RHCSA / ADE 2.1–2.6, 8.6–8.8, 10.2`  
 **Starter Workspace:** [`../../0-student_files/projects/unit-01-license-cli-auditor/index.js`](../../0-student_files/projects/unit-01-license-cli-auditor/index.js)
 
 ---
@@ -27,7 +27,7 @@ You are a junior platform engineer onboarding to a school-district edtech startu
 4. **Create ANSI-Formatted CLI Report (`Std 11.3–11.5, 11.9` — Bloom's L6):**
    - Output clean camelCase-structured audit results using ANSI color codes (green for `APPROVED`, yellow for `REVIEW_COPYLEFT`, red for `BLOCKED` / violations, ending cleanly with `\x1b[0m` reset).
    - Provide an npm script in `package.json` (`"audit": "node index.js"`) to execute the tool cleanly.
-5. **Integrated IT Security & Linux Host-Safety Audit (`Lesson 1.5` — `ITS 101–102 / ADE 2.1–2.6, 8.6–8.8`):**
+5. **Integrated IT Security & Linux Host-Safety Audit (`Lesson 1.5` — `CTE IT Security (11.1999.00) / CompTIA A+ / RHCSA / ADE 2.1–2.6, 8.6–8.8`):**
    - Extend your CLI auditor (preserving `classifyType`, `auditDependencies`, and `auditStudentRecord`) to inspect a Linux deployment manifest: flag world-writable (`777`) or unsafe `setuid` (`4xxx`) deployment scripts, verify `PermitRootLogin no` and `PasswordAuthentication no` in SSH configuration, and validate hardware PSU headroom (`+25%`) + EPA battery/e-waste disposal routing.
 
 ---

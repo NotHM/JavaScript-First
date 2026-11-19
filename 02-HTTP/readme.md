@@ -1,6 +1,6 @@
 # Chapter 2: Internet Protocols, Cloud Models, Node.js HTTP, Express SSR & Network Engineering
 
-*By Hans McMurdy (`@HansOnCoding`) · West-MEC / Arizona CTE Software & App Design (`Stds 8.0, 11.3–11.7, 1.5, 15.6`) + IT Security (`ITS 102 / CCNA 200-301 | ADE 3.0, 6.0, 7.0, 8.1–8.5, 10.1–10.6`)*
+*By Hans McMurdy (`@HansOnCoding`) · High School CTE (Grades 11–12) & Community College CIS (`Stds 8.0, 11.3–11.7, 1.5, 15.6`) + CTE IT Security (`11.1999.00` / CCNA 200-301 | ADE 3.0, 6.0, 7.0, 8.1–8.5, 10.1–10.6)*
 
 > **Chapter Navigation:** [Unit 2 Guide](./unit-guide.md) · [Setup & Standards Guide](./setup-guide.md) · [50-Question Mastery Exam](./quizzes/unit-test-50.md) · [Unit 2 Project](./projects/unit-project.md) · Run `npm run grade -- --unit 02`
 
@@ -12,7 +12,7 @@ Nope. Node.js is a **JavaScript runtime environment**, not a web server. It happ
 **Myth #2: "Subnetting, fiber optics, and TCP/UDP ports are 'IT helpdesk trivia' that software engineers can ignore."**  
 Tell that to the developer whose app passes every unit test on `localhost:7000` and collapses on launch day because a `/26` CIDR subnet mask dropped half the database pool, an emoji caused `string.length` to lie to `Content-Length` and slice a JSON response in half, or a forgotten `path.resolve()` prefix check exposed `/etc/passwd` over a URL query!
 
-In this chapter, we bridge **the physical wire and IP packet** (`Std 8.0`, `ITS 102`, `CCNA`) all the way up to **production Node.js HTTP servers and modular ES-module SSR** (`Stds 11.3–11.7`).
+In this chapter, we bridge **the physical wire and IP packet** (`Std 8.0`, `CCNA 200-301`, `ADE NetSec`) all the way up to **production Node.js HTTP servers and modular ES-module SSR** (`Stds 11.3–11.7`).
 
 <p align="center">
   <img src="./http-01.drawio.svg" alt="HTTP client request and server response cycle" width="540"/>
@@ -174,7 +174,7 @@ Express gives you a clean middleware chain `(req, res, next)`, parameterized rou
 
 ---
 
-## 4. Subnetting, OSI vs. TCP/IP, Media & 7-Step Troubleshooting (`West-MEC ITS 102 / CCNA 200-301`)
+## 4. Subnetting, OSI vs. TCP/IP, Media & 7-Step Troubleshooting (`CTE IT Security (11.1999.00) / CCNA 200-301`)
 
 Now zoom down the stack to the routers, switches, cables, and binary masks carrying every HTTP packet (`ADE 3.0, 6.0, 7.0, 8.1–8.5, 10.1–10.6`).
 

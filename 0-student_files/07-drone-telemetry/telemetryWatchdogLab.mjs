@@ -1,6 +1,6 @@
 /**
  * Student Lesson 7.2 Lab — RF Telemetry Framing, PID Control, IMU Fusion & Fail-Safe Watchdog
- * Standards: West-MEC DT101-DT102 (11.0-16.0, 24.0-26.0) + AZ CTE 18.0 (18.1-18.7)
+ * Standards: CTE Drone Tech (49.0199.00) / FAA Part 107 (11.0-16.0, 24.0-26.0) + AZ CTE 18.0 (18.1-18.7)
  *
  * Instructions: Complete all TODOs and fix the PID windup / missing finally bug without changing exports.
  * Run: node 0-student_files/07-drone-telemetry/telemetryWatchdogLab.mjs

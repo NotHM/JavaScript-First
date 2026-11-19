@@ -1,326 +1,326 @@
-# Unit 18 Mastery Exam (50 Questions): Bun, SQLite & MongoDB REST APIs
+# Unit 18 Mastery Exam (50 Questions): RDBMS, HTTP REST, Security & Dual-DB Systems
 
-**Course:** JavaScript First (`AZ CTE Stds 8.3, 11.6–11.8, 13.3, 16.3, 16.5–16.6, 17.1–17.13`)  
+**Course:** JavaScript First (`CTE/CIS 201` — Grades 11–12 High School CTE & Community College)  
 **Directions:** Choose the best option (`A`, `B`, `C`, or `D`) for each question. Record your answers on your answer sheet. Do not write in shared reference booklets.
 
 **Name:** `__________________________` **Date:** `______________` **Score:** `____ / 50`
 
 ---
 
-## Part A — Core Recall & Vocabulary (`[L1 Remember]`, Questions 1–10)
+## Part A — Core Recall (`[L1 Remember]`, Questions 1–10)
 
-1. **`[L1 Remember | Std 11.6]`** Which systems language and JavaScript engine power the **Bun** runtime?
-   - A) Rust and SpiderMonkey
-   - B) Zig and Apple JavaScriptCore
-   - C) Go and ChakraCore
-   - D) C# and Rhino
+1. **`[L1 Remember]`** Which relational constraint prevents deleting a catalog item referenced by existing orders?
+   - A) VARCHAR(50)
+   - B) FOREIGN KEY ... ON DELETE RESTRICT
+   - C) DEFAULT NULL
+   - D) PRIMARY AUTOINCREMENT
 
-2. **`[L1 Remember | Std 11.7]`** Which native Bun API starts a Web-standard HTTP server, and which built-in import opens SQLite databases?
-   - A) `Bun.serve()` and `bun:sqlite`
-   - B) `Bun.http()` and `npm:sqlite3`
-   - C) `Deno.serve()` and `node:fs`
-   - D) `express()` and `mongo:sqlite`
+2. **`[L1 Remember]`** Which SQL clause combines matching rows across two relational tables by key equality?
+   - A) JOIN ... ON
+   - B) GROUP FILTER
+   - C) CAST AS TEXT
+   - D) SORT MERGE
 
-3. **`[L1 Remember | Std 16.5]`** Which built-in Node 24 module and class provide zero-dependency synchronous SQLite support?
-   - A) `node:http` (`HttpSync`)
-   - B) `node:fs` (`SqlFile`)
-   - C) `node:sqlite` (`DatabaseSync`)
-   - D) `node:cluster` (`SqlitePool`)
+3. **`[L1 Remember]`** Which HTTP status codes represent Created, Bad Request, Not Found, and Conflict in REST?
+   - A) 204, 302, 401, 500
+   - B) 200, 301, 403, 502
+   - C) 100, 200, 405, 503
+   - D) 201, 400, 404, 409
 
-4. **`[L1 Remember | Std 16.5]`** Which SQLite statement MUST execute on each connection before `ON DELETE RESTRICT` foreign keys are enforced?
-   - A) `PRAGMA foreign_keys = ON;`
-   - B) `ALTER TABLE ENABLE KEYS;`
-   - C) `SET STRICT_FOREIGN = TRUE;`
-   - D) `GRANT REFERENCES ALL;`
+4. **`[L1 Remember]`** Which HTTP request header specifies the media formats a client prefers in response bodies?
+   - A) Host
+   - B) Referer
+   - C) Accept
+   - D) Cookie
 
-5. **`[L1 Remember | Std 8.3]`** Match standard HTTP status codes in order: created resource, bad input, missing ID, and duplicate/stock conflict.
-   - A) `200`, `404`, `409`, `500`
-   - B) `201`, `400`, `404`, `409`
-   - C) `204`, `401`, `403`, `400`
-   - D) `201`, `302`, `404`, `503`
+5. **`[L1 Remember]`** Which official MIME type identifies the JSON:API media specification?
+   - A) application/json
+   - B) application/vnd.api+json
+   - C) application/hal+json
+   - D) text/plain
 
-6. **`[L1 Remember | Std 16.5]`** What exact coordinate order does MongoDB's GeoJSON `2dsphere` index require inside a `Point`'s `coordinates` array?
-   - A) `[altitude, latitude]`
-   - B) `[latitude, longitude]`
-   - C) `[x_pixels, y_pixels]`
-   - D) `[longitude, latitude]`
+6. **`[L1 Remember]`** In RFC 7946 GeoJSON REST payloads, what coordinate order is required?
+   - A) [longitude, latitude]
+   - B) [latitude, longitude]
+   - C) [x, y, z]
+   - D) [altitude, latitude]
 
-7. **`[L1 Remember | Std 16.5]`** Which MongoDB aggregation pipeline stage performs a left outer join with documents from a second collection?
-   - A) `$innerJoin`
-   - B) `$lookup`
-   - C) `$relate`
-   - D) `$foreign`
+7. **`[L1 Remember]`** Which SQL query binding mechanism isolates user strings from executable SQL syntax?
+   - A) HTML entity decode
+   - B) Template literal interpolation
+   - C) Base64 string wrap
+   - D) Parameterized ? placeholders
 
-8. **`[L1 Remember | Std 16.5]`** What MongoDB numeric error code triggers when inserting a duplicate value into a `{ unique: true }` index?
-   - A) `404`
-   - B) `10054`
-   - C) `11000` (`E11000`)
-   - D) `20001`
+8. **`[L1 Remember]`** Which JS response method parses an async fetch() JSON body into a JavaScript object?
+   - A) res.parseXml()
+   - B) Buffer.decode(res)
+   - C) await res.json()
+   - D) JSON.encode(res)
 
-9. **`[L1 Remember | Std 8.3]`** Which HTTP request header tells a content-negotiating REST API whether the client wants `JSend`, `JSON:API`, or `HAL+JSON`?
-   - A) `Accept`
-   - B) `Host`
-   - C) `User-Agent`
-   - D) `Cookie`
+9. **`[L1 Remember]`** Which built-in Node 24 module supplies synchronous SQLite access matching bun:sqlite?
+   - A) node:pg
+   - B) node:sqlite (DatabaseSync)
+   - C) node:sqlserver
+   - D) node:mongo
 
-10. **`[L1 Remember | Std 17.10]`** Which official media type in the `Accept` header identifies a **JSON:API** client?
-    - A) `text/html`
-    - B) `application/hal+json`
-    - C) `application/jsend+xml`
-    - D) `application/vnd.api+json`
+10. **`[L1 Remember]`** Which SQLite connection pragma must run before foreign-key constraints are enforced?
+   - A) PRAGMA foreign_keys = ON;
+   - B) SET STRICT = 1;
+   - C) ENABLE KEYS;
+   - D) USE FOREIGN;
 
 ---
 
 ## Part B — Conceptual Understanding (`[L2 Understand]`, Questions 11–20)
 
-11. **`[L2 Understand | Std 11.6]`** Why can synchronous prepared queries in `bun:sqlite` or `node:sqlite` execute in microseconds compared with separate database servers?
-    - A) SQLite disables disk persistence completely on every query
-    - B) SQLite runs in-process via direct memory reads with zero TCP socket round-trips
-    - C) JavaScriptCore compiles SQL queries directly into CSS animations
-    - D) HTTP automatically caches every `POST` request in DNS
+11. **`[L2 Understand]`** Why is single-node SQLite often lower-latency for reads than networked client-server DBs?
+   - A) Compresses JS code
+   - B) Skips disk storage
+   - C) Uses UDP broadcasts
+   - D) Eliminates TCP packet marshaling across localhost/LAN
 
-12. **`[L2 Understand | Std 11.8]`** How does Node 24's `node:sqlite` preserve full classroom lab parity with native `bunRestApp.js`?
-    - A) It automatically translates JavaScript files into Zig binaries
-    - B) It connects remotely to Bun cloud servers over WebSockets
-    - C) Both expose synchronous prepared statements with `?` parameter binding using identical SQL schemas
-    - D) It converts relational tables silently into unindexed `.txt` logs
+12. **`[L2 Understand]`** When should a schema embed child subdocuments inside one JSON doc instead of a separate table?
+   - A) Cross-bank wire transfers
+   - B) Static HTML CSS files
+   - C) Bounded child items loaded together (e.g., room specs)
+   - D) Unbounded million-row audit logs
 
-13. **`[L2 Understand | Std 16.6]`** How do `?` parameter placeholders in `db.prepare('SELECT * FROM items WHERE sku = ?').get(sku)` stop SQL Injection?
-    - A) SQLite binds the parameter strictly as literal string/numeric data rather than executable SQL tokens
-    - B) Node automatically strips every space and quotation mark from `req.url`
-    - C) `?` placeholders encrypt the database file with AES-256 on every call
-    - D) SQLite refuses to accept strings longer than five characters
+13. **`[L2 Understand]`** Why run stock checks, decrementing quantity, and inserting orders inside ONE ACID transaction?
+   - A) Enables GET caching
+   - B) Prevents race conditions or half-finished failures
+   - C) Clears browser history
+   - D) Halves JSON payload size
 
-14. **`[L2 Understand | Std 17.1]`** In the `Learn-MongoDB-4.x` architecture, why separate `ProductEntity` from `StorefrontDomainService`?
-    - A) MongoDB refuses to store objects without at least three inheritance layers
-    - B) HTTP headers cannot reach JSON parsers otherwise
-    - C) Node requires Entity files to live inside `.sqlite` tables
-    - D) Entities validate field invariants in pure JS *before* database calls, while Domain services orchestrate indexes, aggregations, and queries
+14. **`[L2 Understand]`** Why does ? binding prevent malicious payload OR 1=1 -- from dumping all rows?
+   - A) DB treats entire input strictly as literal string
+   - B) Parser removes all spaces
+   - C) Query runs in HTML
+   - D) TCP drops hyphens
 
-15. **`[L2 Understand | Std 16.5]`** In `booksomeplace`, why embed `rooms` inside each `property` document instead of forcing a separate collection + `$lookup` on every card?
-    - A) MongoDB limits every database to two collections maximum
-    - B) Bounded per-property room arrays are read together on property detail views, enabling one atomic read without cross-collection joins
-    - C) Arrays inside MongoDB documents cannot be queried by field
-    - D) `$lookup` cannot join string keys in JSON
+15. **`[L2 Understand]`** What separation of responsibilities distinguishes Entity classes from Domain Repository services?
+   - A) Both wrap SQL directly
+   - B) Entities open TCP sockets
+   - C) Domains render CSS buttons
+   - D) Entities validate data; Domains manage indexes & I/O
 
-16. **`[L2 Understand | Std 16.5]`** Why use `$set: { price: 8.5 }` inside `updateOne()` instead of passing a raw `{ price: 8.5 }` update object?
-    - A) `$set` automatically adds SQL foreign keys to MongoDB
-    - B) `$set` deletes every document missing a `price` field
-    - C) `$set` updates only the specified field(s) while preserving existing document fields like `title` and `category`
-    - D) Raw objects are rejected unless wrapped in SQL `UPDATE` syntax
+16. **`[L2 Understand]`** How does the Strategy Pattern keep REST route controllers clean across multiple JSON formats?
+   - A) Stores HTML in SQL
+   - B) Uses nested switch trees
+   - C) Swaps formatter classes behind one .render() method
+   - D) Copies 3 duplicate routes
 
-17. **`[L2 Understand | Std 16.5]`** Why place `$match: { 'bookingInfo.paymentStatus': 'confirmed' }` *before* `$group` in a revenue aggregation pipeline?
-    - A) It excludes unpaid/canceled bookings upfront so fewer documents enter `$group` and revenue totals stay accurate
-    - B) `$group` throws a syntax error unless `$match` runs immediately after `$sort`
-    - C) `$match` automatically creates a unique index on `_id`
-    - D) `$group` strips all numeric fields unless `$match` multiplies them by 100
+17. **`[L2 Understand]`** In an aggregation/reporting pipeline, why filter status = confirmed BEFORE grouping totals?
+   - A) Breaks primary keys
+   - B) Excludes canceled/unpaid rows prior to summing
+   - C) Sorts rows backward
+   - D) Increases memory usage
 
-18. **`[L2 Understand | Std 16.5]`** What goes wrong when a developer accidentally stores `[latitude, longitude]` instead of `[longitude, latitude]` in MongoDB?
-    - A) MongoDB silently converts the point into a SQLite integer ID
-    - B) GeoJSON automatically swaps negative coordinates to positive values
-    - C) `$near` drops the collection completely on startup
-    - D) East/North axes flip (`-112.06` treated as latitude `<-90`), throwing out-of-bounds geo key errors or wrong distance calculations
+18. **`[L2 Understand]`** Why distinguish HTTP 400 Bad Request from 409 Conflict in REST API design?
+   - A) 400 = malformed syntax; 409 = valid request vs state
+   - B) Both mean missing route
+   - C) 409 redirects browser
+   - D) 400 means server crash
 
-19. **`[L2 Understand | Std 17.13]`** Which two structural conventions distinguish a **HAL+JSON** payload (`application/hal+json`) from plain `JSend`?
-    - A) `status` and `sqlRows`
-    - B) `_links` for hypermedia navigation and `_embedded` for nested resource arrays
-    - C) `attributes` and `errors`
-    - D) `$group` and `$lookup`
+19. **`[L2 Understand]`** In MongoDB updateOne, why pass { $set: { price: 9 } } instead of a plain { price: 9 } object?
+   - A) Plain objects throw 404
+   - B) MongoDB only accepts SQL
+   - C) $set deletes the ID
+   - D) $set updates specific fields without wiping untouched fields
 
-20. **`[L2 Understand | Std 17.10]`** Why use the **Strategy Pattern** (`negotiateResponder`) instead of duplicating `if/else` format checks across 12 REST route handlers?
-    - A) Strategy Pattern skips calling `JSON.stringify()` entirely
-    - B) Node throws `ERR_HTTP_HEADERS_SENT` whenever routes contain `if` statements
-    - C) Each formatter (`JSend`, `JSON:API`, `HAL+JSON`) encapsulates its own headers and envelope behind one `.render()` interface, eliminating duplicated branching
-    - D) Strategy Pattern replaces HTTP `GET` routes with SQLite triggers
+20. **`[L2 Understand]`** Which top-level keys characterize HAL+JSON hypermedia envelopes vs JSend status/data?
+   - A) rows and pragma
+   - B) head and body
+   - C) _links and _embedded
+   - D) attributes and errors
 
 ---
 
 ## Part C — Practical Application (`[L3 Apply]`, Questions 21–30)
 
-21. **`[L3 Apply | Std 16.6]`** Which SQLite search statement safely handles arbitrary user input `q` without SQL Injection?
-    - A) `db.prepare('SELECT * FROM items WHERE name LIKE ?').all(\`%\${q.trim()}%\`)`
-    - B) ``db.prepare(`SELECT * FROM items WHERE name LIKE '%${q}%'`).all()``
-    - C) `db.exec('SELECT * FROM items WHERE name = ' + q)`
-    - D) `db.query('SELECT * FROM items').filter(q)`
+21. **`[L3 Apply]`** Which prepared SQL pattern safely searches partial titles without risking SQL injection?
+   - A) EXEC(SELECT + q)
+   - B) stmt.all(% + q.trim() + % ) with WHERE title LIKE ?
+   - C) eval(sql)
+   - D) WHERE title LIKE ${q}
 
-22. **`[L3 Apply | Std 16.5]`** Given `page = 3` and `limit = 10`, what exact SQL `LIMIT` and `OFFSET` values return page 3 cleanly?
-    - A) `LIMIT 3 OFFSET 10`
-    - B) `LIMIT 10 OFFSET 20`
-    - C) `LIMIT 30 OFFSET 3`
-    - D) `LIMIT 10 OFFSET 30`
+22. **`[L3 Apply]`** Compute LIMIT and OFFSET for REST pagination query ?page=3&limit=10:
+   - A) LIMIT 10 OFFSET 20
+   - B) LIMIT 3 OFFSET 10
+   - C) LIMIT 20 OFFSET 10
+   - D) LIMIT 10 OFFSET 30
 
-23. **`[L3 Apply | Std 16.5]`** Which expression cleanly clamps untrusted query inputs `?page=0&limit=999` to `page >= 1` and `1 <= limit <= 50`?
-    - A) `page = Math.min(0, rawPage); limit = Math.max(50, rawLimit);`
-    - B) `page = rawPage || 0; limit = rawLimit % 50;`
-    - C) `page = Math.max(1, Number(rawPage) || 1); limit = Math.min(50, Math.max(1, Number(rawLimit) || 20));`
-    - D) `page = 50; limit = 1;`
+23. **`[L3 Apply]`** How do you clamp raw query params so page >= 1 and limit stays safely inside [1, 50]?
+   - A) l % 50
+   - B) parseInt(p) || 0
+   - C) Math.random() * 50
+   - D) Math.max(1, p) & Math.min(50, Math.max(1, l))
 
-24. **`[L3 Apply | Std 16.5]`** Which constructor sequence initializes `node:sqlite` with foreign keys enforced?
-    - A) `this.db = DatabaseSync.open(path); this.db.enableFk();`
-    - B) `this.db = new DatabaseSync(path); this.db.pragma('ignore_fk');`
-    - C) `this.db = new MongoClient(path); this.db.exec('ENABLE ALL');`
-    - D) `this.db = new DatabaseSync(path); this.db.exec('PRAGMA foreign_keys = ON;');`
+24. **`[L3 Apply]`** Client sends Accept: application/vnd.api+json. Which response status and header confirm creation?
+   - A) 404 + application/xml
+   - B) 302 + Location: /
+   - C) 201 + Content-Type: application/vnd.api+json
+   - D) 200 + text/plain
 
-25. **`[L3 Apply | Std 16.5]`** Which MQL filter finds `sweetscomplete` products priced `>= 5` while excluding category `'chocolate'`?
-    - A) `{ price: 5, category: 'chocolate' }`
-    - B) `{ $and: [{ price: { $gte: 5 } }, { category: { $nin: ['chocolate'] } }] }`
-    - C) `{ $or: [{ price: { $lt: 5 } }, { category: 'chocolate' }] }`
-    - D) `{ price: { $sum: 5 }, $drop: ['chocolate'] }`
+25. **`[L3 Apply]`** Which fetch() options object sends JSON via POST with explicit Content-Type and body?
+   - A) fetch.post(url, d)
+   - B) { method: 'POST', headers: {'Content-Type':'application/json'}, body }
+   - C) { method: 'GET', body: d }
+   - D) { body: d }
 
-26. **`[L3 Apply | Std 16.5]`** Which MQL filter queries `booksomeplace` properties in `'US'` whose `propInfo.rating` is at least `4`?
-    - A) `{ 'address.country': 'US', 'propInfo.rating': { $gte: 4 } }`
-    - B) `{ addressCountry: 'US', rating: 4 }`
-    - C) `{ 'address[country]': 'US', rating: '>4' }`
-    - D) `{ $lookup: 'US', rating: 4 }`
+26. **`[L3 Apply]`** Which database index definition guarantees two products can never share the same productKey?
+   - A) UNIQUE constraint / { unique: true } index
+   - B) NONCLUSTERED sort
+   - C) TEXT FULLSCAN
+   - D) AUTO_INCREMENT only
 
-27. **`[L3 Apply | Std 16.5]`** In `booksomeplace`, each property stores a `rooms` array of objects `{ roomType, view }`. Which query finds properties offering a `'lake'` room view?
-    - A) `{ 'rooms[0].view': { $nin: ['lake'] } }`
-    - B) `{ view: { $sum: 'lake' } }`
-    - C) `{ 'rooms.view': 'lake' }`
-    - D) `{ $group: '$rooms.view' }`
+27. **`[L3 Apply]`** In an OOP SQLite service class constructor, what should run right after opening DatabaseSync?
+   - A) Clear process.env
+   - B) Delete database file
+   - C) Bind port 80
+   - D) Initialize PRAGMA foreign_keys = ON & schema DDL
 
-28. **`[L3 Apply | Std 16.5]`** Which command creates a unique constraint on `productKey` inside the `products` collection?
-    - A) `db.products.setPrimary('productKey')`
-    - B) `db.products.insertUnique({ key: 'productKey' })`
-    - C) `db.products.alterTable('UNIQUE productKey')`
-    - D) `db.products.createIndex({ productKey: 1 }, { unique: true })`
+28. **`[L3 Apply]`** A DELETE /api/items/5 call fails with FOREIGN KEY constraint error. Clean exception mapping?
+   - A) Return HTTP 200 OK
+   - B) Force DELETE CASCADE blindly
+   - C) Catch constraint code -> return HTTP 409 JSON
+   - D) Leak raw SQL stack 500
 
-29. **`[L3 Apply | Std 16.5]`** Which `$lookup` stage joins `customers` (`customerKey`) to `purchases` (`customerKey`) storing matching orders in `orders`?
-    - A) `{ $join: { table: 'purchases', on: 'customerKey' } }`
-    - B) `{ $lookup: { from: 'purchases', localField: 'customerKey', foreignField: 'customerKey', as: 'orders' } }`
-    - C) `{ $group: { _id: '$purchases', orders: { $push: '$customerKey' } } }`
-    - D) `{ $match: { from: 'purchases', as: 'orders' } }`
+29. **`[L3 Apply]`** Which MongoDB dot-notation query matches properties with nested address.country equal to US?
+   - A) { US: address }
+   - B) { 'address.country': 'US' }
+   - C) { address[country]: US }
+   - D) { addressCountry: US }
 
-30. **`[L3 Apply | Std 17.10]`** A client sends `Accept: application/vnd.api+json`. Which `Content-Type` header and `data` entry shape must the server return?
-    - A) `application/vnd.api+json; charset=utf-8` with `data: [{ type, id, attributes }]`
-    - B) `application/json` with `{ status: 'success', data: { items } }`
-    - C) `application/hal+json` with `{ _links, _embedded }`
-    - D) `text/csv` with comma-separated rows
+30. **`[L3 Apply]`** Which MongoDB query matches any listing where an embedded rooms element has view = lake?
+   - A) { 'rooms.view': 'lake' }
+   - B) { rooms: lake }
+   - C) JOIN rooms ON view
+   - D) { $elemExists: lake }
 
 ---
 
 ## Part D — Analysis & Debugging (`[L4 Analyze]`, Questions 31–40)
 
-31. **`[L4 Analyze | Std 16.5]`** A test deletes item `id = 1` even though `orders` defines `FOREIGN KEY(item_id) REFERENCES items(id) ON DELETE RESTRICT`. What caused SQLite to ignore the constraint?
-    - A) `orders` used `INTEGER` instead of `TEXT` for `item_id`
-    - B) `node:sqlite` disables foreign keys permanently in memory mode
-    - C) `PRAGMA foreign_keys = ON;` was never executed on that `DatabaseSync` connection
-    - D) `DELETE FROM items` only triggers foreign keys when preceded by `SELECT *`
+31. **`[L4 Analyze]`** Orders still insert referencing non-existent item_id 999 in SQLite despite FOREIGN KEY DDL. Cause?
+   - A) JSON converted int to float
+   - B) SQLite ignores integers
+   - C) PRIMARY KEY overrides FK
+   - D) Forgot PRAGMA foreign_keys = ON on connection
 
-32. **`[L4 Analyze | Std 16.6]`** Calling `GET /api/items?q=' OR 1=1 --` dumps every product in the SQLite table! Which buggy line explains this bug?
-    - A) ``db.prepare(`SELECT * FROM items WHERE name LIKE '%${q}%'`).all()``
-    - B) `db.prepare('SELECT * FROM items WHERE name LIKE ?').all(\`%\${q}%\`)`
-    - C) `db.prepare('SELECT * FROM items LIMIT ? OFFSET ?').all(limit, offset)`
-    - D) `db.exec('PRAGMA foreign_keys = ON;')`
+32. **`[L4 Analyze]`** Searching q = "x" + "' OR 1=1 --" returns the entire catalog table. Exact vulnerability?
+   - A) CSS selector leak
+   - B) Buffer overrun
+   - C) SQL Injection from string interpolation
+   - D) Cross-Site Request Forgery
 
-33. **`[L4 Analyze | Std 8.3]`** Creating a product with an existing `sku` crashes the Node HTTP route with an unhandled `500` instead of `409 Conflict`. What check is missing?
-    - A) Check `req.method === 'GET'` before parsing JSON
-    - B) Convert `price_cents` from integer to floating point
-    - C) Delete the old item silently before inserting
-    - D) Catch SQLite `UNIQUE` / `FOREIGN KEY` constraint errors (`err.message` or `err.code`) and return `409`
+33. **`[L4 Analyze]`** Checkout inserts order using req.body.total_cents BEFORE checking stock. Two security bugs?
+   - A) Broken CSS grid & CORS
+   - B) Client price tampering & negative overselling race
+   - C) Extra UTF-8 BOM bytes
+   - D) Slow DNS & missing JPEG
 
-34. **`[L4 Analyze | Std 16.5]`** In `StorefrontDomainService`, inserting `'birthday_cake'` twice rejects with `MongoServerError: E11000 duplicate key error`. How should the REST controller respond?
-    - A) Return `201 Created` with `null` body
-    - B) Catch `err.code === 11000` and return HTTP **`409 Conflict`**
-    - C) Retry the same insert in a `while (true)` loop
-    - D) Strip `productKey` from the payload and return `200 OK`
+34. **`[L4 Analyze]`** Strict JSON:API client fails parsing even though body JSON looks valid. Most likely omission?
+   - A) Missing Content-Type: application/vnd.api+json
+   - B) Missing SQLite WAL file
+   - C) HTTP status was 200
+   - D) Port was above 1024
 
-35. **`[L4 Analyze | Std 16.5]`** `summarizeRevenueByCountry()` returns `$883` for `'US'` instead of `$645` because a `'pending'` `$238` booking was added in. Which pipeline stage is missing or misconfigured?
-    - A) Missing `{ $match: { 'bookingInfo.paymentStatus': 'confirmed' } }` prior to `$group`
-    - B) `$sort` should sort `{ _id: 1 }` instead of `{ totalRevenue: -1 }`
-    - C) `$group` used `$sum` instead of `$avg`
-    - D) `bookingKey` lacked a unique index
+35. **`[L4 Analyze]`** Integration test assertions pass, yet node --test hangs 10s before timing out. Cause?
+   - A) Missing var declarations
+   - B) Async await freezes V8
+   - C) SQLite uses threads
+   - D) Forgot server.close() and db.close() in finally
 
-36. **`[L4 Analyze | Std 16.5]`** A student's `booksomeplace` seed fails with `Can't extract geo keys: latitude out of bounds` on Phoenix location `[33.5092, -112.0676]`. Diagnose why:
-    - A) Phoenix does not have a valid zip code
-    - B) GeoJSON requires degrees multiplied by `100`
-    - C) Coordinates are swapped `[lat, lng]`, placing `-112.0676` in the latitude slot (`[-90, 90]`); fix to `[-112.0676, 33.5092]`
-    - D) `2dsphere` indexes only allow coordinates in Europe
+36. **`[L4 Analyze]`** GeoJSON $near rejects Phoenix coordinates [33.5092, -112.0676] with out-of-bounds error. Fix?
+   - A) Wrap in HTML tags
+   - B) Convert to base64
+   - C) Reorder to [longitude -112.0676, latitude 33.5092]
+   - D) Round coordinates to ints
 
-37. **`[L4 Analyze | Std 17.10]`** A client sends `Accept: application/vnd.api+json`, receives `{ links: {...}, data: [{ type, id, attributes }] }`, yet fails strict JSON:API validation. Look at the HTTP headers—what bug breaks spec compliance?
-    - A) The response omitted `status: 'success'` inside the root object
-    - B) The server sent `Content-Type: application/json` instead of `Content-Type: application/vnd.api+json; charset=utf-8`
-    - C) `JSON.stringify` sorted keys alphabetically
-    - D) The response returned status `200 OK` instead of `201 Created`
+37. **`[L4 Analyze]`** Duplicate email signup crashes with unhandled SQLite UNIQUE constraint 500 error. Better fix?
+   - A) Drop UNIQUE index
+   - B) Catch unique error & return 409 without stack trace
+   - C) Log password to stdout
+   - D) Return 200 OK anyway
 
-38. **`[L4 Analyze | Std 8.3]`** A student's `POST /api/orders` handler stores `req.body.total_cents` directly and subtracts `stock` *after* returning `201`. What two bugs exist?
-    - A) `stock` must be multiplied by `2`, and orders should use `PUT`
-    - B) Clients cannot send JSON numbers over `http://127.0.0.1`, and SQLite lacks subtraction
-    - C) `total_cents` must be stored as HTML, and `201` must become `404`
-    - D) Attackers can spoof `total_cents: 1` (server must compute `item.price_cents * qty`), and failing to validate/decrement stock atomically risks overselling negative inventory
+38. **`[L4 Analyze]`** Aggregation revenue summed $500 too high because pending/unpaid rows were included. Missing step?
+   - A) Filter status === confirmed BEFORE grouping sums
+   - B) Divide totals by page count
+   - C) Sort keys alphabetically
+   - D) Use Math.floor on prices
 
-39. **`[L4 Analyze | Std 11.8]`** All assertions pass in a student's `node --test` file, yet the terminal hangs forever until the 15-second timeout kills it! What resource cleanup was missed?
-    - A) Closing the HTTP server (`server.close()`) and/or `DatabaseSync` handle (`catalog.close()`) inside `finally`
-    - B) Calling `console.clear()` at the top of the test file
-    - C) Passing `--allow-net` to Node 24
-    - D) Installing `nodemon` inside `devDependencies`
+39. **`[L4 Analyze]`** MongoDB updateOne({ sku }, { price: 12 }) throws atomic update error. What operator is missing?
+   - A) Call PRAGMA foreign_keys
+   - B) Add $lookup stage
+   - C) Use $near instead
+   - D) Wrap fields in { $set: { price: 12 } }
 
-40. **`[L4 Analyze | Std 16.5]`** Calling `collection.updateOne({ productKey: 'apple_pie' }, { price: 7.5 })` in MongoDB throws an update operator error (or in custom mocks fails to mutate properly). Why?
-    - A) `productKey` cannot contain underscores
-    - B) `updateOne` only accepts numbers in the first filter argument
-    - C) Update payloads must use atomic operator syntax like `{ $set: { price: 7.5 } }`
-    - D) `apple_pie` must be deleted before calling `updateOne`
+40. **`[L4 Analyze]`** Route crashes with 500 whenever MongoDB throws error code 11000 on duplicate key. Fix?
+   - A) Delete unique index
+   - B) Return 201 Created
+   - C) Detect err.code === 11000 -> return 409 Conflict
+   - D) Retry loop infinitely
 
 ---
 
-## Part E — Architecture & Evaluation (`[L5 Evaluate]`, Questions 41–50)
+## Part E — Evaluation & Architecture (`[L5 Evaluate]`, Questions 41–50)
 
-41. **`[L5 Evaluate | Std 16.5]`** A team is building an e-commerce service combining strict SKU stock ledgers/orders alongside flexible property listings containing nested room arrays and GPS coords. Best architecture?
-    - A) Store both relational stock ledgers and nested property catalogs in flat `.csv` files
-    - B) Use **SQLite/SQL** (`ACID`, `UNIQUE`, `ON DELETE RESTRICT`) for inventory & orders, and **MongoDB** (`GeoJSON`, nested `rooms`, `$lookup`) for catalogs & analytics
-    - C) Keep inventory in browser `localStorage` and properties in HTTP cookies
-    - D) Put nested room arrays into 15 string-concatenated SQLite `TEXT` columns
+41. **`[L5 Evaluate]`** Evaluate dual-DB fit: ACID inventory/order ledger vs flexible catalog with nested reviews:
+   - A) Flat CSV files for orders
+   - B) SQLite/SQL for ledger; Document DB for catalog
+   - C) Document DB without transactions for banking
+   - D) Store both in localStorage
 
-42. **`[L5 Evaluate | Std 11.6]`** When does a single-process **Bun + `bun:sqlite`** REST service outperform a client-server database—and when should a team migrate to PostgreSQL/MongoDB clusters?
-    - A) SQLite wins only on multi-datacenter write clusters; PostgreSQL is strictly for CLI scripts
-    - B) Bun should never serve HTTP traffic in production under any workload
-    - C) Single-process SQLite excels at read-heavy single-host edge APIs with zero network overhead; migrate to client-server DBs when concurrent multi-node writers must scale horizontally
-    - D) PostgreSQL runs inside the browser while SQLite requires Kubernetes
+42. **`[L5 Evaluate]`** When must a growing service migrate from single-file embedded SQLite to a client-server RDBMS?
+   - A) Multiple horizontally scaled nodes need concurrent writes
+   - B) App adds CSS Grid
+   - C) Routes switch from GET to POST
+   - D) Tests run offline
 
-43. **`[L5 Evaluate | Std 16.5]`** In `sweetscomplete`, why store purchased line items (`skuNumber`, unit `price`) embedded inside `purchases.productsPurchased` while keeping customer profiles in `customers` linked via `$lookup`?
-    - A) Embedding freezes the exact checkout price snapshot permanently against future catalog edits, while `$lookup` keeps live customer contact info DRY
-    - B) `$lookup` cannot project numbers in MongoDB aggregations
-    - C) Embedded arrays execute only in SQLite, not MongoDB
-    - D) Storing live prices inside `purchases` forces `E11000` errors on every read
+43. **`[L5 Evaluate]`** Why run stock validation, decrement, and order insert atomically inside one DB transaction?
+   - A) Removes primary keys
+   - B) Bypasses HTTP headers
+   - C) Disables input checks
+   - D) Guarantees concurrent buyers cannot oversell last unit
 
-44. **`[L5 Evaluate | Std 17.10]`** Compare maintaining `/api/jsend/products`, `/api/jsonapi/products`, and `/api/hal/products` vs. one `/api/products` route using `Accept` header Strategy negotiation. Why choose Strategy negotiation?
-    - A) URL paths cannot contain more than two slashes in Node HTTP
-    - B) `Accept` headers automatically encrypt response payloads
-    - C) Separate endpoints are incompatible with JSON parsing
-    - D) Resource identity stays clean at one canonical URL (`/api/products`), and adding a 4th format (like CSV) requires only one new Strategy class without modifying routes
+44. **`[L5 Evaluate]`** Why enforce ?limit <= 50 and validate ?page >= 1 at the API gateway before querying DB?
+   - A) Forces JSON:API output
+   - B) Encrypts database files
+   - C) Prevents memory exhaustion DoS from huge queries
+   - D) Speeds TCP DNS lookups
 
-45. **`[L5 Evaluate | Std 16.6]`** Why wrap `SELECT stock`, `UPDATE items SET stock = stock - ?`, and `INSERT INTO orders` inside an atomic SQLite transaction (`BEGIN` / `COMMIT`)?
-    - A) SQLite refuses to execute `UPDATE` without `COMMIT` on `:memory:` databases
-    - B) Prevents race conditions and partial writes if a crash or error occurs between decrementing stock and recording the order
-    - C) Transactions turn SQLite schemas into MongoDB documents automatically
-    - D) `BEGIN` bypasses `PRAGMA foreign_keys = ON` intentionally
+45. **`[L5 Evaluate]`** Order POST sends qty=-2 (A), missing itemId 999 (B), and qty=50 when stock=4 (C). HTTP status trio?
+   - A) 500, 502, 503
+   - B) 400, 404, 409
+   - C) 301, 302, 401
+   - D) 200, 201, 204
 
-46. **`[L5 Evaluate | Std 17.1]`** A teammate suggests removing `ProductEntity.validate()` and letting MongoDB catch bad fields at write time. Best engineering critique?
-    - A) Entities should always trigger SQL `DROP TABLE` on validation error
-    - B) MongoDB drivers reject JavaScript classes unconditionally
-    - C) Failing fast in `Entity` catches `400 Bad Request` domain rule bugs cleanly in pure JS unit tests without opening DB sockets or masking business error messages
-    - D) Validation belongs inside frontend CSS stylesheets
+46. **`[L5 Evaluate]`** Why use HTTP Accept content negotiation on /api/products rather than /api/v1/hal/products URLs?
+   - A) Preserves clean canonical URIs decoupled from format
+   - B) Forces browser cookies
+   - C) Breaks GET idempotency
+   - D) Bypasses TCP ports
 
-47. **`[L5 Evaluate | Std 8.3]`** Why should `listItems({ page, limit })` ALWAYS enforce an upper bound like `limit <= 50` even for authenticated internal dashboards?
-    - A) Unbounded queries (`?limit=10000000`) allow trivial memory/JSON-serialization Denial-of-Service (DoS) spikes against single-process Node/Bun APIs
-    - B) SQLite crashes whenever `OFFSET` exceeds `10`
-    - C) HTTP `200 OK` responses cannot exceed 4 KiB per RFC 9110
-    - D) `Math.min` runs faster than `SELECT *` without `LIMIT`
+47. **`[L5 Evaluate]`** Why validate Entity constraints in pure JS before ever calling repository DB methods?
+   - A) Replaces unit testing
+   - B) Avoids writing try/catch
+   - C) Eliminates REST status codes
+   - D) Rejects invalid inputs early in zero-I/O tests
 
-48. **`[L5 Evaluate | Std 8.3]`** Pick the exact HTTP status triplet for these three `POST /api/orders` failures: (1) `qty: -2`, (2) `item_id: 99999` doesn't exist, (3) `qty: 50` when `stock: 4`.
-    - A) `500`, `400`, `200`
-    - B) `404`, `409`, `400`
-    - C) `401`, `403`, `422`
-    - D) `400 Bad Request`, `404 Not Found`, `409 Conflict`
+48. **`[L5 Evaluate]`** How does programming DomainService against an abstract DB adapter boost CI reliability?
+   - A) Skips JSON parsing
+   - B) Hardcodes root tokens
+   - C) Fast offline mocks mirror live DB contracts
+   - D) Disables async Promises
 
-49. **`[L5 Evaluate | Std 11.8]`** How does decoupling `StorefrontDomainService` over a shared DB interface (`MqlDatabase` offline + `MongoClient` Docker) improve automated grading and CI reliability?
-    - A) It hides all database errors so broken code still passes CI
-    - B) Students and CI run deterministic MQL/aggregation/negotiation tests offline in milliseconds while preserving drop-in parity with real `mongo:7` containers
-    - C) It converts MongoDB into SQLite during `npm run grade`
-    - D) It removes the need for `assert.equal` in `node:test`
+49. **`[L5 Evaluate]`** Why store embedded line-item unit prices inside orders while $lookup pulls live customer emails?
+   - A) Saves 100% disk
+   - B) Keeps historical invoice prices immutable as catalog edits
+   - C) Prevents 404 errors
+   - D) MongoDB forbids numbers
 
-50. **`[L5 Evaluate | Std 16.5, 17.10]`** A new developer proposes merging all SQLite inventory, MongoDB property catalogs, and JSend/JSON:API/HAL formatting into one 600-line `server.js` file. What refactoring do you recommend?
-    - A) Move everything into a single global SQLite trigger
-    - B) Replace Node and Bun with synchronous file reads in `.txt` files
-    - C) Keep clear boundaries: `SqliteCatalog` (`PRAGMA foreign_keys`, `?` params), Entity/Domain (`E11000`, pipelines), `ResponderStrategy` classes, and a thin HTTP router tested on port `0`
-    - D) Disable `node --test` and verify routes manually by copying screenshots
+50. **`[L5 Evaluate]`** Which runtime API allows Bun servers to accept Web Request and return Web Response with 1 call?
+   - A) Bun.serve({ port, fetch(req) { ... } })
+   - B) Deno.openFile()
+   - C) express.bootSql()
+   - D) Mongo.listenHtml()

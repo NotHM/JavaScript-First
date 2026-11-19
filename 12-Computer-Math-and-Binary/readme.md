@@ -1,4 +1,4 @@
-# Chapter 12: Computer Mathematics, Binary, Bitwise Logic & Drone Flight Physics (`Std 4.0 + DT101`)
+# Chapter 12: Computer Mathematics, Binary, Bitwise Logic & Drone Flight Physics (`Std 4.0 + CTE Drone Tech`)
 
 > **Before you write another dollar invoice calculator or drone flight script in plain JavaScript floats:** Open Node and evaluate `0.1 + 0.2 === 0.3` and `3.8 + 0.1 + 0.1`. If watching your terminal print `false` and `4.000000000000001` surprises you—welcome to the chapter that saves your checkout carts, bitmask flags, and sUAS LiPo battery packs from silent math bugs.
 
@@ -8,7 +8,7 @@ Wait until a billing microservice drops a penny on every tenth invoice, a file-t
 
 **Computers don't do base-10 textbook arithmetic. Every number you type lives inside fixed binary bits, IEEE-754 mantissas, or `BigInt` limbs—and ignoring that costs money, safety, or altitude.**
 
-Chapter 12 bridges **AZ CTE Standard 4.0 (`4.1–4.7`)** with autonomous aviation math in **West-MEC Drone Technology `DT101` (`Stds 1.0–12.0, 23.0`)**.
+Chapter 12 bridges **AZ CTE Standard 4.0 (`4.1–4.7`)** with autonomous aviation math aligned to **CTE Drone Tech (`49.0199.00`: `1.0–12.0, 23.0`)**.
 
 ---
 
@@ -20,7 +20,7 @@ Bookmark these unit hubs before diving into the deep read:
    - Lesson Plan & Slides: [`lesson-plan.md`](./lesson-plan.md) | [`slides/slides.md`](./slides/slides.md)
    - Teacher Demos: [`computerMathDemo.js`](./code/computerMathDemo.js) & [`pythagoreanDemo.js`](./code/pythagoreanDemo.js)
    - Student Starter: [`computerMathLab.js`](../0-student_files/12-computer-math/computerMathLab.js)
-2. **[Lesson 12.2 — Drone Flight Physics, LiPo Chemistry & Geodesic Math (`DT101 + 4.3–4.6`)](./02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/readme.md)**
+2. **[Lesson 12.2 — Drone Flight Physics, LiPo Chemistry & Geodesic Math (`CTE Drone Tech + 4.3–4.6`)](./02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/readme.md)**
    - Lesson Plan, Slides & Lab: [`lesson-plan.md`](./02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/lesson-plan.md) | [`slides/slides.md`](./02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/slides/slides.md) | [`student-lesson.md`](./02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/student-lesson.md)
    - Demo & Starter: [`droneFlightMathDemo.mjs`](./02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/code/droneFlightMathDemo.mjs), [`droneFlightMathDemo.test.mjs`](./02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/code/droneFlightMathDemo.test.mjs) & [`dronePhysicsLab.mjs`](../0-student_files/12-drone-flight-math/dronePhysicsLab.mjs)
 
@@ -142,7 +142,7 @@ console.log('Signed (-8 >> 1):', -8 >> 1, '| Unsigned (-8 >>> 1):', -8 >>> 1);
 
 ---
 
-## 4. Drone Flight Physics, LiPo Chemistry & Geodesic Math (`DT101 + Std 4.3–4.6`)
+## 4. Drone Flight Physics, LiPo Chemistry & Geodesic Math (`CTE Drone Tech + Std 4.3–4.6`)
 
 > **MANDATORY SAFETY RULE — PROPS OFF ON THE BENCH:** Physically remove ALL propellers from every motor shaft before plugging USB configurators, bench supplies, or LiPo packs indoors! An accidental ESC calibration chime or slider test spins blades over `20,000 RPM`. Always inspect lead polarity and power through a smoke stopper first.
 
@@ -196,7 +196,7 @@ const preFlightGo = twr >= 2.0 && twr / loadG >= 1.1;                  // 1.2 >=
 console.log({ hoverMin, loadG: Number(loadG.toFixed(2)), twr, gsdCmPx: Number(gsdCmPx.toFixed(3)), legMeters: Number(legMeters.toFixed(2)), preFlightGo });
 ```
 
-### Pre-Flight Engineering Gate Checklist (`DT101`)
+### Pre-Flight Engineering Gate Checklist (`CTE Drone Tech`)
 1. **Hardware:** Props verified tight and CW/CCW matched outdoors (and **PROPS OFF** strictly on the indoor bench).
 2. **Power:** Integer-`mV` telemetry balanced within `< 100 mV` across cells and `80%` DoD runtime comfortably exceeds mission leg duration.
 3. **Aerodynamics & Navigation:** `TWR >= 2:1`, bank-turn `Load Factor` checked in radians (`effectiveTwr >= 1.1`), and **Float64** GPS waypoints verified via Haversine.

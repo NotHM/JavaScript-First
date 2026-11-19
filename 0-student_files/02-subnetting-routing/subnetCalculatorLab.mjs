@@ -1,7 +1,7 @@
 /**
  * Student Lesson 2.4 Lab: CIDR/VLSM Subnet Calculator, Longest-Prefix Routing,
  * IANA Port Classification & 7-Step Network Troubleshooting
- * Standards: West-MEC ITS 102 (Cisco CCNA 200-301) | ADE Network Security 3.0, 6.0, 7.0, 8.1-8.5, 10.1-10.6
+ * Standards: CTE IT Security (11.1999.00) / Cisco CCNA 200-301 | ADE Network Security 3.0, 6.0, 7.0, 8.1-8.5, 10.1-10.6
  *
  * Run:
  *   node 0-student_files/02-subnetting-routing/subnetCalculatorLab.mjs
@@ -14,13 +14,13 @@
 import assert from 'node:assert/strict';
 
 export function ipToInt(ip) {
-  // TODO [L3 Apply | ITS 102]: Validate 4 decimal octets (0..255) and pack into an unsigned 32-bit int (>>> 0).
+  // TODO [L3 Apply | CCNA 200-301]: Validate 4 decimal octets (0..255) and pack into an unsigned 32-bit int (>>> 0).
   void ip;
   return 0;
 }
 
 export function intToIp(num) {
-  // TODO [L3 Apply | ITS 102]: Unpack an unsigned 32-bit integer back into 'a.b.c.d'.
+  // TODO [L3 Apply | CCNA 200-301]: Unpack an unsigned 32-bit integer back into 'a.b.c.d'.
   void num;
   return '0.0.0.0';
 }

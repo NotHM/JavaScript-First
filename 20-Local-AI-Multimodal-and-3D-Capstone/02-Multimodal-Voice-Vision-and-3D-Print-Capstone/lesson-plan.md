@@ -11,7 +11,7 @@
 - **L3 Apply:** Build `generatePcmWavBuffer`, `buildOllamaVisionPayload`, and `extractVideoFramePlan`.
 - **L4 Analyze:** Diagnose inverted triangle winding (`signedVolumeMm3 < 0`), naked manifold edges, and sub-1.2 mm wall defects.
 - **L5 Evaluate:** Audit STL printability (`<= 220x220x250 mm`, `zMin === 0`) and produce PrusaSlicer/Cura checklists.
-- **L6 Create:** Ship full-stack Multimodal AI Chat + Voice + Vision/Video + Parametric 3D CAD STL Studio.
+- **L6 Create:** Ship full-stack Multimodal AI Chat + Voice + Vision/Video + Parametric 3D CAD STL Studio (with optional printable STL/OBJ drone airframe canopies, camera brackets, or GPS masts for [Unit 21](../../21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/unit-guide.md)).
 
 ## 50-Minute Pacing & Teacher Answer Keys
 - **Day 4:** Pre-Lesson 20.2 (4m), Slides Part 1 + RIFF/WAVE binary walkthrough (22m), `voiceVisionLab.mjs` coding (24m).

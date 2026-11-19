@@ -1,11 +1,11 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
-What is the initial SDLC phase evaluating goals and feasibility?,Deployment,Maintenance,Planning,Compilation,20,3
-Which completes a User Story: As a user I want X...,using SQL databases,with var variables,so that I achieve value Y,without writing tests,20,3
+What is the initial SDLC phase evaluating goals and feasibility?,Deployment,Planning,Maintenance,Compilation,20,2
+Which completes a User Story: As a user I want X...,using SQL databases,with var variables,without writing tests,so that I achieve value Y,20,4
 Which methodology prioritizes fast visual prototypes and rapid user feedback?,RAD (Rapid App Dev),Waterfall Only,Assembly Loops,Cold Storage,20,1
-Which U.S. regulation requires financial institutions to safeguard consumer data?,DMCA,GLBA,HTML5,MIT License,20,2
+Which U.S. regulation requires financial institutions to safeguard consumer data?,DMCA,HTML5,GLBA,MIT License,20,3
 Which standard regulates processing storing and transmitting credit cards?,FERPA,PCI DSS,GPLv3,DNS,20,2
-Breaking a giant task into small focused helper functions is:,Polymorphism,Problem Decomposition,Hoisting,Coercion,20,2
-Which diagram visualizes classes methods and system flow before coding?,CSS Grid,UML / Flowchart,npm audit,JSON string,20,2
-Which language ecosystem runs natively in both browsers and Node.js servers?,C++,JavaScript / TypeScript,SQL,Assembly,20,2
-Relational SQL databases enforce schemas via tables rows and foreign keys:,True,False,Only in CSS,Never uses keys,20,1
+Breaking a giant task into small focused helper functions is:,Problem Decomposition,Polymorphism,Hoisting,Coercion,20,1
+Which diagram visualizes classes methods and system flow before coding?,CSS Grid,JSON string,npm audit,UML / Flowchart,20,4
+Which language ecosystem runs natively in both browsers and Node.js servers?,C++,SQL,JavaScript / TypeScript,Assembly,20,3
+Relational SQL databases enforce schemas via tables rows and foreign keys:,Never uses keys,False,Only in CSS,True,20,4
 Why collect structured production Telemetry events?,Increase CPU heat,Measure real latency and error rates,Expose student PII,Delete Git commits,20,2

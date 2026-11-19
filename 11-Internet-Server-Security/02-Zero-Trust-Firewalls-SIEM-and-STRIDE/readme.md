@@ -1,18 +1,18 @@
 # Lesson 11.2: Zero Trust, Firewalls, SIEM Correlation & STRIDE Threat Modeling
 
-**Standards Alignment:** West-MEC `ITS 201–202` (`CompTIA Security+`, `TestOut Security Pro`) & **ADE Network Security `1.0`, `4.5–4.6`, `5.1–5.10`, `9.1–9.10`, `10.7–10.8`, `11.1–11.6`**
+**Standards Alignment:** `CTE IT Security (11.1999.00)` (`CompTIA Security+`) & **ADE Network Security `1.0`, `4.5–4.6`, `5.1–5.10`, `9.1–9.10`, `10.7–10.8`, `11.1–11.6`**
 
 ## Student Learning Objectives (Bloom's Taxonomy & SMART)
 - **`[L1 Remember]`** Recall the 3 data states (At Rest, In Motion, In Use), quantitative Risk Matrix (`Asset × Likelihood × Impact`), **STRIDE** categories, AAA/MFA/SSO (`SAML`/`OIDC`), physical security controls (`BitLocker`, Faraday, locks), and regulatory frameworks (`GDPR, HIPAA, PCI-DSS, SOX, FERPA, FCC, DRM, EFF, AUP`) (`ADE 1.0, 4.5, 11.1`).
 - **`[L2 Understand]`** Contrast Packet-Filtering vs. Stateful vs. Application/NGFW firewalls, passive IDS vs. inline IPS, forward/reverse proxies, `VLAN`/`DMZ` segmentation, Hot/Warm/Cold DRP sites (`RPO`/`RTO`), and **biometrics privacy liability** (`ADE 5.1–5.10, 9.1–9.10`).
-- **`[L3 Apply]`** Evaluate ordered first-match firewall ACLs (`Packet vs. Stateful vs. NGFW`), calculate quantitative Risk & STRIDE controls, and map `RPO/RTO` requirements to DRP site tiers in JavaScript (`ITS 201–202`).
+- **`[L3 Apply]`** Evaluate ordered first-match firewall ACLs (`Packet vs. Stateful vs. NGFW`), calculate quantitative Risk & STRIDE controls, and map `RPO/RTO` requirements to DRP site tiers in JavaScript (`CTE IT Security (11.1999.00) / CompTIA Security+`).
 - **`[L4 Analyze]`** Correlate SIEM event streams to detect brute-force bursts, credential compromise, impossible-travel SSO logins, unapproved RBAC escalation, and **AI/statistical log anomaly spikes** (`ADE 10.7–10.8`).
-- **`[L5 Evaluate]`** Architect Zero Trust segmented enterprise networks balancing physical security, biometric privacy law, compliance mandates, and disaster recovery SLAs (`Security+`).
+- **`[L5 Evaluate]`** Architect Zero Trust segmented enterprise networks balancing physical security, biometric privacy law, compliance mandates, and disaster recovery SLAs (`CompTIA Security+`).
 
 ### Lesson 11.2 SMART Objectives Checklist
 - [ ] **S/M/A/R/T Goal 1 (`[L1–L2]` | `ADE 1.0, 4.5–4.6, 5.1–5.10, 11.1–11.6`):** Classify the 3 data states, STRIDE threat categories, physical/AAA/SSO/biometric privacy controls, and 9 compliance frameworks with >= 85% accuracy on Day 1 (`student-lesson.md` Part A).
-- [ ] **S/M/A/R/T Goal 2 (`[L3–L4]` | `ITS 201–202 / ADE 9.1–10.8`):** Complete all 5 `TODO` security engines (`evaluateFirewallAcl`, `correlateSiemEvents`, `calculateRiskAndStride`, `recommendDrpSite`, `auditComplianceObligations`) in [`0-student_files/11-zero-trust-siem/firewallSiemLab.mjs`](../../0-student_files/11-zero-trust-siem/firewallSiemLab.mjs) so all checks exit `0` during lab.
-- [ ] **S/M/A/R/T Goal 3 (`[L4–L5]` | `Security+`):** Diagnose ordered ACL ordering traps, SIEM + AI anomaly correlations, RPO/RTO Hot/Warm/Cold trade-offs, and compliance audits cleanly on `post-lesson-eval.md` (`>= 4/5`).
+- [ ] **S/M/A/R/T Goal 2 (`[L3–L4]` | `CTE IT Security (11.1999.00) / ADE 9.1–10.8`):** Complete all 5 `TODO` security engines (`evaluateFirewallAcl`, `correlateSiemEvents`, `calculateRiskAndStride`, `recommendDrpSite`, `auditComplianceObligations`) in [`0-student_files/11-zero-trust-siem/firewallSiemLab.mjs`](../../0-student_files/11-zero-trust-siem/firewallSiemLab.mjs) so all checks exit `0` during lab.
+- [ ] **S/M/A/R/T Goal 3 (`[L4–L5]` | `CompTIA Security+`):** Diagnose ordered ACL ordering traps, SIEM + AI anomaly correlations, RPO/RTO Hot/Warm/Cold trade-offs, and compliance audits cleanly on `post-lesson-eval.md` (`>= 4/5`).
 
 ---
 
@@ -46,7 +46,7 @@
 
 ---
 
-## 3. Segmentation (`VLAN`/`DMZ`), Firewalls, Proxies, `IDS/IPS` & SIEM + AI (`ITS 202`, `ADE 9.1–10.8`)
+## 3. Segmentation (`VLAN`/`DMZ`), Firewalls, Proxies, `IDS/IPS` & SIEM + AI (`CompTIA Security+`, `ADE 9.1–10.8`)
 
 ### Network Segmentation & Perimeter Controls
 - **`VLANs` (`802.1Q`):** Partition L2 broadcast domains (`Guest`, `Corp`, `CDE/Payment`, `Prod-DB`) so compromised guest devices cannot sniff internal database traffic.

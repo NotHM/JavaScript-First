@@ -1,7 +1,7 @@
 {
   "name": "javascript-first",
   "version": "2.0.0",
-  "description": "JavaScript First — Open-source coding book, Reveal.js slides, and 2-Year West-MEC / AZ CTE-aligned curriculum with PDF publishing tools.",
+  "description": "JavaScript First — Open-source coding book, Reveal.js slides, and 2-Year High School CTE & Community College curriculum with automated TDD and PDF publishing tools.",
   "private": true,
   "scripts": {
     "build:student": "node tools/publish.mjs --student",
@@ -24,9 +24,11 @@
     "wasm",
     "phaser",
     "local-ai",
+    "drone-build",
     "curriculum",
-    "west-mec",
+    "community-college",
     "cte",
+    "certification-prep",
     "ebook",
     "revealjs"
   ],

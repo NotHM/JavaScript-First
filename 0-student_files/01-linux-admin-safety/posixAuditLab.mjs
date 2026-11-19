@@ -1,6 +1,6 @@
 /**
  * Student Lesson 1.5 Lab: POSIX Permissions, Cron Schedules, Hardware/Safety & SSH Hardening
- * Standards: West-MEC ITS 101-102 | ADE Network Security 2.0 (2.1-2.6), 8.6-8.8, 10.2
+ * Standards: CTE IT Security (11.1999.00) / CompTIA A+ / RHCSA | ADE Network Security 2.0 (2.1-2.6), 8.6-8.8, 10.2
  *
  * Run:
  *   node 0-student_files/01-linux-admin-safety/posixAuditLab.mjs

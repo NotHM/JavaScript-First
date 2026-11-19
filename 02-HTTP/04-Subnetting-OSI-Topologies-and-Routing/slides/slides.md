@@ -7,7 +7,7 @@ slideNumber: true
 ---
 
 # Lesson 2.4: Subnetting, OSI Topologies & Routing
-**West-MEC `ITS 102` (`Cisco CCNA 200-301`) | ADE `3.0, 6.0, 7.0, 8.1–8.5, 10.1–10.6`**
+**CTE IT Security (`11.1999.00`) / `Cisco CCNA 200-301` | ADE `3.0, 6.0, 7.0, 8.1–8.5, 10.1–10.6`**
 
 *Binary/Hex, OSI vs. TCP/IP, CIDR/VLSM, IANA Ports, Longest-Prefix Routing & 7-Step Diagnostics*
 

@@ -7,7 +7,7 @@ slideNumber: true
 ---
 
 # Lesson 20.3: NLP, Agentic AI & Model Cards
-**West-MEC `AI101–AI202` (`AI Stds 1.0–2.0, 10.0–15.0`) | `Azure AI-900` • `ITS AI` • `ITS Python`**
+**CTE AI (`11.0102.00` · `AI Stds 1.0–2.0, 10.0–15.0`) | `Azure AI-900` • `ITS AI` • `ITS Python`**
 
 ---
 

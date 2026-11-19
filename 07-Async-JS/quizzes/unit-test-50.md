@@ -1,6 +1,6 @@
 # Unit 7 Mastery Exam: Asynchronous Concurrency, Errors & Drone Telemetry (50 Questions)
 
-**Course:** JavaScript First — Software & App Design (`AZ CTE Std 18.0` | `West-MEC DT101–DT102`)  
+**Course:** JavaScript First — Software & App Design (`AZ CTE Std 18.0` | `CTE Drone Tech / FAA Part 107`)  
 **Reading & Setup:** [Chapter 7 Reading](../readme.md) · [Setup Guide](../setup-guide.md)  
 **Directions:** Select the single best answer (`A`, `B`, `C`, or `D`) for each item from `1.` through `50.`.
 
@@ -32,11 +32,11 @@
    - C) Network timeout rejection
    - D) `RangeError` at runtime
 
-5. Which standard severity level (`Std 18.4`) logs a **recoverable fallback hit**, such as dropping one corrupted RF telemetry frame without crashing the monitor?
-   - A) `FATAL`
-   - B) `DEBUG`
-   - C) `WARN`
-   - D) `INFO`
+5. Which built-in JavaScript function schedules a callback to run once after at least `delayMs` milliseconds without blocking subsequent synchronous code?
+   - A) `while (delayMs)`
+   - B) `sleepSync(delayMs)`
+   - C) `setTimeout(fn, delayMs)`
+   - D) `throw Error(delayMs)`
 
 6. Which block inside `try { ... } catch (err) { ... } finally { ... }` executes **regardless** of whether `try` returned normally or threw an error?
    - A) `finally`
@@ -44,7 +44,7 @@
    - C) `switch`
    - D) `throw`
 
-7. Which sUAS radio band delivers the best foliage and terrain diffraction for long-range MAVLink/CRSF telemetry (`West-MEC DT101`)?
+7. Which sUAS radio band delivers the best foliage and terrain diffraction for long-range MAVLink/CRSF telemetry (`CTE Drone Tech`)?
    - A) `5.8 GHz`
    - B) `60 GHz`
    - C) `2.4 GHz`
@@ -84,17 +84,17 @@
     - C) `Promise.race` immediately adopts the rejection of whichever input promise settles first
     - D) It retries `fetchApi()` in a `finally` block
 
-13. Why is Node's `EventEmitter` preferred over hardcoding `console.log()` calls across async pipelines (`Std 18.4`)?
-    - A) Publishers emit typed events (`INFO`/`WARN`/`ERROR`) while independent listeners subscribe to audit, filter, or alert without coupling
-    - B) `EventEmitter` encrypts all logs with AES-256 automatically
-    - C) `console.log()` throws inside `async` functions
-    - D) `EventEmitter` guarantees zero memory allocation
+13. Why must an `async` API client explicitly check `if (!response.ok)` after `await fetch(url)` before parsing JSON?
+    - A) `fetch()` fulfills normally on HTTP `404` or `500` server errors and only rejects on network failures or aborts
+    - B) `fetch()` always deletes response headers unless `response.ok` runs
+    - C) `response.ok` automatically converts HTML error pages into JSON
+    - D) HTTP `404` responses throw `SyntaxError` immediately inside `fetch()`
 
-14. How does Node Stream processing inspect a 4 GB telemetry log file in `O(1)` memory compared to `fs.readFileSync()` (`Std 16.3`)?
-    - A) Streams delete the file from disk while reading
-    - B) Streams store every chunk inside `globalThis`
-    - C) Streams require converting text to XML first
-    - D) Streams process one sequential chunk buffer at a time rather than buffering the entire 4 GB payload into RAM
+14. On an asynchronous serial communication link (`UART` / `RS-232`) with no shared clock wire, why must both endpoints match baud rate, framing bits, and parity/checksum settings?
+    - A) Mismatched baud timing shifts bit sampling boundaries and corrupts incoming frames unless validated
+    - B) Serial hardware requires CSS Grid headers before transmitting
+    - C) Higher baud rates permanently disable DC power lines
+    - D) `UART` automatically translates packets into synchronous HDMI video
 
 15. Why define custom error subclasses (`class ValidationError extends Error` setting `this.name`) instead of throwing raw strings like `throw "bad input"` (`Std 18.6`)?
     - A) Raw strings cannot cross `async/await` boundaries
@@ -157,23 +157,23 @@
     - C) `'TypeError'`
     - D) A fulfilled promise resolving to `'ValidationError'`
 
-23. What hex checksum does the standard ASCII vector `'123456789'` produce under **CRC-16/CCITT-FALSE** (`poly 0x1021`, `init 0xFFFF`)?
-    - A) `0x0000`
-    - B) `0xFFFF`
-    - C) `0x29b1`
-    - D) `0x1021`
+23. A receiver recomputes a frame CRC / FCS and finds a mismatch against the transmitted trailer. What is the correct link-layer action?
+    - A) Assume bits self-heal automatically in RAM
+    - B) Promote the payload upward as valid data
+    - C) Drop the corrupted frame immediately so malformed payload bytes never propagate upward
+    - D) Disable CRC checks permanently
 
-24. Inside a 16-byte Little-Endian telemetry packet `bytes`, unsigned 16-bit battery `packMv` sits at byte offset `4..5`. Which `DataView` call reads it accurately?
-    - A) `view.getInt16(4, false)`
-    - B) `view.getUint16(4, true)`
-    - C) `view.getUint8(4)`
-    - D) `view.getUint32(4, true)`
+24. Two independent API requests take `120 ms` and `80 ms`. What is the approximate total runtime of `await Promise.all([fetchA(), fetchB()])`?
+    - A) `~200 ms` (sequential)
+    - B) `~120 ms` (tasks execute concurrently in parallel)
+    - C) `~80 ms`
+    - D) `0 ms`
 
-25. `bytes` is a 16-byte `Uint8Array` beginning with `bytes[0] === 0xAA` instead of `0xFE`. Which custom exception should `decodeTelemetryFrame(bytes)` throw?
-    - A) `TelemetryFrameError` (sync byte mismatch)
-    - B) `SyntaxError`
-    - C) `ValidationError`
-    - D) `LinkTimeoutError`
+25. Given `class ApiTimeoutError extends Error {}` thrown and caught inside `catch (err)`, what does `err instanceof Error` evaluate to?
+    - A) `true` (`ApiTimeoutError` inherits from `Error.prototype`)
+    - B) `false`
+    - C) `'TypeError'`
+    - D) `undefined`
 
 26. Compute the **Complementary IMU fused angle** given `alpha = 0.98`, `prevAngleDeg = 10`, `gyroDegPerSec = 50`, `dtSec = 0.02`, and `accelAngleDeg = 0`:
     - A) `11.00 deg`
@@ -187,11 +187,20 @@
     - C) `FAILSAFE_RTH` (`ERROR`)
     - D) `LINK_DEGRADED` (`INFO`)
 
-28. Under the same `1,600 ms` silence, battery drops to `3420 mV/cell` (`<= 3500 mV`). Which fail-safe mode must take priority?
-    - A) `FAILSAFE_RTH`
-    - B) `FAILSAFE_LAND`
-    - C) `ARMED_CRUISE`
-    - D) `FAILSAFE_HOVER`
+28. What exact output prints to the console from:
+    ```javascript
+    async function go() {
+      console.log('A');
+      await 0;
+      console.log('B');
+    }
+    go();
+    console.log('C');
+    ```
+    - A) `'A'`, `'B'`, `'C'`
+    - B) `'A'`, `'C'`, `'B'`
+    - C) `'C'`, `'A'`, `'B'`
+    - D) `'B'`, `'A'`, `'C'`
 
 29. Implementing abortable `delay(ms, value, signal)`, what should happen if `signal?.aborted` is already `true` when `delay()` is called?
     - A) Reject immediately with `signal.reason` (or an `AbortError`) without scheduling `setTimeout`
@@ -199,11 +208,18 @@
     - C) Mute `signal` and sleep infinitely
     - D) Return `NaN` synchronously
 
-30. Inside `class CrcMismatchError extends Error`, which three diagnostic properties verify a corrupted binary packet cleanly?
-    - A) `port`, `host`, `pid`
-    - B) `alpha`, `dtSec`, `gyro`
-    - C) `row`, `col`, `matrix`
-    - D) `expectedCrc`, `actualCrc`, `seq`
+30. What value does calling `f()` return?
+    ```javascript
+    function f() {
+      try { return 1; }
+      catch { return 2; }
+      finally { return 3; }
+    }
+    ```
+    - A) `1`
+    - B) `2`
+    - C) `undefined`
+    - D) `3` (`finally` return overrides `try` return)
 
 ---
 
@@ -255,17 +271,17 @@
     - C) `let` variables become immutable inside `try`
     - D) Arrow objects reset booleans to `true`
 
-34. A PID flight controller computes `const derivative = (error - prevError) / dtSec;`. What happens if telemetry arrives with `dtSec = 0` or `dtSec = NaN` without a guard?
-    - A) JavaScript clamps `derivative` to `0` automatically
-    - B) `try/catch` converts `0` into `0.02`
-    - C) `dtSec = 0` triggers a `SyntaxError`
-    - D) Division yields `Infinity` or `NaN`, propagating invalid motor torque commands instead of failing loudly with `RangeError`
+34. Why does `new Promise((resolve) => { setTimeout(() => { throw new Error('x'); }, 10); })` crash Node.js instead of cleanly rejecting the Promise?
+    - A) Timer callbacks require Promises inside `setTimeout`
+    - B) The `setTimeout` callback executes outside the `Promise` constructor's `try/catch`, so `throw` crashes instead of rejecting unless `reject(err)` is called
+    - C) Errors cannot cross `setTimeout` delays
+    - D) Promises ignore `Error` names completely
 
-35. A ground station encodes CRC-16 via `view.setUint16(14, crc, true)` (Little-Endian), while the flight receiver reads `view.getUint16(14, false)`. What symptom occurs?
-    - A) Packets pass silently with inverted altitude
-    - B) Byte order flips silently to Big-Endian everywhere
-    - C) Every valid non-symmetric packet triggers `CrcMismatchError` because high/low checksum bytes are swapped
-    - D) `DataView` automatically detects sender endianness
+35. Running `items.forEach(async (item) => await save(item)); console.log('Done');` prints `'Done'` *before* any saves finish! Why?
+    - A) `Array.prototype.forEach` ignores returned Promises and does not `await`; use `for...of` (`await`) or `Promise.all(items.map(...))`
+    - B) `forEach` executes synchronously in reverse order
+    - C) `async` disables array callback parameters
+    - D) `console.log` always runs before loops
 
 36. Critique this error handler inside an order-charging helper:
     ```javascript
@@ -286,11 +302,11 @@
     - C) `if (...)` automatically awaits Promises in Node 24
     - D) Missing `=== true` reverses `false` to `true`
 
-38. Receiving 1,000 telemetry frames, byte `[7]` of frame `#412` flips due to RF static (`CrcMismatchError`). Instead of catching and logging `WARN`, the receiver lets `CrcMismatchError` bubble unhandled. What design principle broke?
-    - A) Graceful degradation (`Std 18.1`): transient packet corruption should drop only that bad frame and keep telemetry tracking alive
-    - B) `CRC-16` only works on even sequence numbers
-    - C) `Uint8Array` requires `try/finally` around arrays
-    - D) Frame errors should freeze PID state permanently
+38. What happens when dozens of clients retry failed `503` API/network links inside a tight `0 ms` loop without exponential backoff?
+    - A) A retry storm / thundering herd saturates the recovering link with simultaneous traffic instead of backing off
+    - B) Guaranteed instant `200 OK` recovery
+    - C) Faster `CRC-16` checksum computation
+    - D) Automatic failover to local DNS cache
 
 39. A student implements a retry delay using a synchronous loop (`while (Date.now() - start < 500) {}`) inside an async watchdog. Why do `AbortController` triggers and incoming heartbeats freeze?
     - A) `Date.now()` returns strings in ESM
@@ -320,29 +336,29 @@
     - C) Convert both errors to `'INFO'` logs and resolve `null`
     - D) **Fail fast** on `ValidationError` (bad input won't heal on retry), while retrying `TransientError` with bounded backoff respecting `AbortSignal`
 
-43. Why is a Promise-based **`AsyncQueue`** superior to polling an array every `5ms` via `setInterval` for coordinating asynchronous telemetry producers and consumers?
-    - A) `setInterval` throws `SyntaxError` in ESM
-    - B) `AsyncQueue` allocates a new OS thread per packet
-    - C) `AsyncQueue` wakes blocked consumers instantaneously on `enqueue()` with zero idle timer wakeups or CPU polling waste
-    - D) `AsyncQueue` converts all values to JSON automatically
+43. Over flaky WAN or serial communication links, which retry strategy provides the safest operational resilience?
+    - A) Never retry any transient network error
+    - B) Retry infinitely in a `1 ms` spin loop
+    - C) Exponential backoff + jitter + a `maxRetries` bound prevents synchronized retry storms and guarantees finite failure termination
+    - D) Convert all HTTP requests into HTML tags
 
-44. Planning an outdoor beyond-block canyon inspection drone carrying both live pilot FPV goggles and long-distance telemetry commands, which RF band assignment fits best?
-    - A) Video over `900 MHz` and control telemetry over `5.8 GHz`
-    - B) Long-range C2 telemetry over **`900 MHz`** (high obstacle diffraction) and high-bandwidth LOS FPV over **`5.8 GHz`** (or balanced `2.4 GHz` C2)
-    - C) Both high-bandwidth HD video and control over `433 Hz`
-    - D) Disable CRC checks so packets move faster
+44. You fetch configuration from 3 redundant CDN mirrors and want the Promise to resolve on the **first fulfilled** payload even if mirror #1 rejects in 5 ms. Which combinator should you use?
+    - A) `Promise.all()`
+    - B) `Promise.any()` (ignores early mirror rejections and resolves on the first fulfilled CDN payload unless all mirrors fail)
+    - C) `Promise.race()`
+    - D) Synchronous `while` loop
 
-45. Why should CI flight-watchdog tests execute with `--unhandled-rejections=strict` AND injected synthetic clocks (`nowFn`) instead of real `setTimeout(..., 1600)` sleeps?
-    - A) Strict mode immediately catches dangling rejections, while injected `nowFn` clocks make 1,500ms+ fail-safe timing suites deterministic and finish in milliseconds
-    - B) Injected clocks skip `AbortController` checks
-    - C) Real timers leak OS kernel handles permanently
-    - D) `--unhandled-rejections=strict` converts `Error` to strings
+45. Why wrap `JSON.parse(raw)` in `try/catch` and throw `new PayloadFormatError('Malformed JSON', { cause: err })`?
+    - A) Preserves original `SyntaxError` diagnostics in `.cause` while exposing clean domain-specific `instanceof PayloadFormatError` checks
+    - B) `JSON.parse` fails unconditionally inside `try` blocks
+    - C) `{ cause }` hides call stack traces automatically
+    - D) Custom `Error` subclasses disable `throw`
 
-46. A flight dashboard displays `rssiDbm: -62`, `snrDb: -7`, and `lqPct: 40`. Which operational evaluation matches `DT101–DT102` link telemetry engineering?
-    - A) Report `INFO: Strong signal` because `-62 dBm` exceeds `-95 dBm`
-    - B) Ignore `lqPct` whenever `rssiDbm` is above `-70 dBm`
-    - C) Switch immediately to `FAILSAFE_LAND` (`FATAL`) while packets arrive cleanly
-    - D) Flag **`LINK_DEGRADED` (`WARN`)** immediately: high `RSSI` masks noise interference exposed by negative `SNR` and `40%` `LQ`
+46. Why pair sequence numbers with packet checksums and timeouts on unreliable transport links?
+    - A) It boosts raw RF transmission wattage
+    - B) It skips ACK handshakes permanently
+    - C) It turns UDP into synchronous blocking code
+    - D) Sequence numbers detect dropped or reordered frames, checksums catch silent bit corruption, and timeouts prevent indefinite hangs
 
 47. Ground control issues an abort (`controller.abort()`) while a retry backoff timer is pending inside `runFailSafeWatchdog()`. Which design cleans up promptly?
     - A) Ignore `AbortSignal` until all 10 retries finish sleeping
@@ -350,17 +366,17 @@
     - C) Listen to `signal`'s `'abort'` event (calling `clearTimeout` + rejecting immediately) and reset `monitorActive = false` inside **`finally`**
     - D) Restart the Node process via `while (true)`
 
-48. Why route pipeline diagnostics through an `EventEmitter` bus emitting `{ level, message, timestamp }` objects instead of unformatted `console.log()` calls?
-    - A) `console.log` cannot print inside ES modules
-    - B) Structured `EventEmitter` events decouple log emission from storage/alerting, letting UI badges, files, and tests filter by severity cleanly (`18.4`)
-    - C) `EventEmitter` prevents `RangeError` in math helpers
-    - D) `console.log` drops integers
+48. Why attach an `AbortSignal.timeout()` or `AbortController` signal to every outbound `fetch()` call in production services?
+    - A) It disables HTTPS TLS encryption
+    - B) Canceling hung network calls via `AbortSignal.timeout()` / `AbortController` releases stuck sockets and prevents memory/connection exhaustion
+    - C) It forces synchronous DNS blocking
+    - D) It skips parsing `200 OK` JSON bodies
 
-49. A drone hovering at 35 m encounters `1,700 ms` C2 link loss with healthy `3,820 mV/cell` battery and valid GPS home lock. Why pick **`FAILSAFE_RTH`** over **`FAILSAFE_LAND`**?
-    - A) Healthy voltage and valid GPS enable controlled autonomous Return-to-Home instead of blindly descending onto unknown hazards (`water`/`trees`)
-    - B) `FAILSAFE_LAND` disables motor ESCs in mid-air
-    - C) `FAILSAFE_RTH` increases RF `5.8 GHz` bandwidth
-    - D) `FAILSAFE_RTH` requires zero GPS signal
+49. An API route awaits four independent `200 ms` `fetch()` calls sequentially inside a loop (`~800 ms` total). What refactor cuts latency best?
+    - A) Launch all 4 independent `fetch()` calls concurrently via `Promise.all` / `Promise.allSettled` (~200ms total instead of ~800ms)
+    - B) Nest the four requests inside nested `setTimeout(..., 800)` callbacks
+    - C) Convert Promises to synchronous `while` spin loops
+    - D) Strip all `try/catch` error handling completely
 
 50. The same `1,700 ms` link loss occurs, EXCEPT pack telemetry reads `3,450 mV/cell` (`<= 3500 mV`) and GPS home is invalid (`gpsHomeValid: false`). Why enforce **`FAILSAFE_LAND` (`FATAL`)**?
     - A) Low battery improves gyroscope precision

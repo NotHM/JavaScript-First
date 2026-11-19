@@ -83,7 +83,7 @@ function verifyPayloadSignature(payload, signatureHex, publicKeyPem) {
 test('AES-256-GCM encrypts with unique IVs, decrypts cleanly, and detects tampering', () => {
   const key = generateAes256Key();
   const secret = 'Student API Token: sk_live_987654';
-  const aad = 'tenant:west-mec';
+  const aad = 'tenant:cte-cis';
 
   const box1 = encryptAes256Gcm(secret, key, aad);
   const box2 = encryptAes256Gcm(secret, key, aad);

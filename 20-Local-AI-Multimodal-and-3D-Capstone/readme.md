@@ -1,13 +1,13 @@
 # Unit 20: Final Capstone — Local Multimodal AI, Agentic Governance & 3D Print Studio
 
-**Course:** JavaScript First — Software & App Design (`AZ CTE CIP 11.0202.00` & West-MEC `AI101–AI202`)  
+**Course:** JavaScript First — High School CTE (Grades 11–12) & Community College CIS (`CTE/CIS 202` · **65 Hours** · `AZ CTE 11.0202.00` & **CTE AI `11.0102.00` / `Azure AI-900`**)  
 **Quick Links:** [`setup-guide.md`](./setup-guide.md) · [`unit-guide.md`](./unit-guide.md) · [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md) · `npm run grade -- --unit 20`
 
 ---
 
 > *Look at how most tutorials teach "AI apps" right now: install one wrapper SDK, paste a credit-card API key into `.env`, and celebrate because a spinning loader printed a streaming paragraph. Then take that app into a real school district, robotics lab, or clinic. Suddenly your app is blasting student IEPs, audio transcripts, or proprietary engineering drawings to a remote third-party endpoint you do not control—breaking FERPA, blowing up per-token bills, and trusting unverified LLM JSON straight against your backend. Wait—we already know JavaScript can run HTTP servers, binary Buffers, vector math, and computational geometry natively. Why not own the entire stack locally?*
 
-Welcome to Unit 20. Everything you built in Units `01–19`—asynchronous streams, HTTP endpoints, binary file headers, `<canvas>` rendering, automated `node --test` assertions, and defensive security—comes together here in a **100% private, zero-cloud-egress, responsibly governed Full-Stack Multimodal AI Application**. You will move cleanly from **Core local LLM streaming + Voice + Governance (`20.1` + `20.3`)**, through **Bonus Vision & Video inspection**, all the way to a **Double-Bonus (2x Score) Parametric 3D CAD engine** that turns natural-language prompts into watertight `.stl` / `.obj` parts ready for a physical 3D printer (`20.2`).
+Welcome to Unit 20 (`65 Hours` in Year 2 Semester 4 `CTE/CIS 202`, feeding directly into the [Unit 21 Hands-On Drone Build](../21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/unit-guide.md) `85 hrs`). Everything you built in Units `01–19`—asynchronous streams, HTTP endpoints, binary file headers, `<canvas>` rendering, automated `node --test` assertions, and defensive security—comes together here in a **100% private, zero-cloud-egress, responsibly governed Full-Stack Multimodal AI Application**. You will move cleanly from **Core local LLM streaming + Voice + Governance (`20.1` + `20.3`)**, through **Bonus Vision & Video inspection**, all the way to a **Double-Bonus (2x Score) Parametric 3D CAD engine** that turns natural-language prompts into watertight `.stl` / `.obj` parts ready for a physical 3D printer—including optional TPU/PETG airframe canopies, camera brackets, or GPS masts for your Unit 21 drone build (`20.2`).
 
 Let's peel off the AI hype and engineer the real plumbing step by step.
 
@@ -117,12 +117,13 @@ export function exportBinaryStl(headerText, triangles) {
    - **Positive Signed Volume:** Divergence theorem $\frac{1}{6}\sum a \cdot (b \times c) > 0$ (negative means inverted normals!).
    - **Build-Plate & Grounding:** Fits `<= 220 x 220 x 250 mm` (Ender-3 / Prusa MK3/MK4 envelope) and sits flat (`zMin === 0`).
    - **Wall Thickness:** `>= 1.2 mm` (`>= 3` perimeters on a standard `0.4 mm` nozzle).
+   - **Unit 21 Physical Showcase Option:** Teams moving into [Unit 21 Hands-On Drone Build](../21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/unit-guide.md) can also design and export printable STL/OBJ TPU/PETG **airframe canopies, camera brackets, or GPS masts** (`>= 1.2 mm` walls, watertight manifold) alongside Core Voice/RAG/Agentic AI.
 
 ---
 
 ## 3. Classical/Modern NLP, Sandboxed ReAct Agents & AI Governance (`20.3`)
 
-In West-MEC `AI101–AI202` and `Azure AI-900`, knowing *how* to ship a model matters less than proving your pipeline is accurate, bounded, and legally deployable:
+In CTE AI (`11.0102.00`) and `Azure AI-900`, knowing *how* to ship a model matters less than proving your pipeline is accurate, bounded, and legally deployable:
 
 ### Classical NLP & TF-IDF (`tf * log(N / df)`)
 Before neural attention, `tokenizeAndStem()` normalizes Unicode (`NFKD`), expands contractions (`n't` -> ` not`), drops stopwords, and stems suffixes (`models` -> `model`, `running` -> `run`, `validating` -> `valid`). Next, `computeTfIdfCorpus()` computes sparse vectors using:
@@ -176,7 +177,7 @@ Before diving into extra features on [`projects/unit-project.md`](./projects/uni
 |---|---|---|
 | **Core (100 pts)** | Node SSE `/api/chat` + offline simulator, `16 kHz` PCM WAV `/api/voice/tts` & `/api/voice/stt`, accessible `localStorage` chat UI, sandboxed ReAct HITL gate & validated Model Card | `ragAndStreamLab.test.mjs`, `nlpAgenticLab.test.mjs`, `/api/health`, `/api/voice/tts`, `/api/chat` |
 | **Bonus (+25%–50%)** | `llava` Base64 upload stripping, Stable Diffusion WebUI / ComfyUI adapter, & video keyframe sampling (`<= 512 px`) | `multimodalAndCadLab.test.mjs` (`buildOllamaVisionPayload`, `extractVideoFramePlan`) |
-| **Double Bonus (2x — 200 pts)** | Pure-JS parametric meshes (`box`, `l-bracket`, `spur-gear`), ASCII/Binary `.stl`, `.obj`, `<canvas>` 3D orbit viewer, & automated printability gate (`<= 220x220x250 mm`, `>= 1.2 mm`) | `multimodalAndCadLab.test.mjs` + `capstone.test.mjs` (`/api/cad/generate`) |
+| **Double Bonus (2x — 200 pts)** | Pure-JS parametric meshes (`box`, `l-bracket`, `spur-gear` + optional Unit 21 printable drone canopies/brackets/masts), ASCII/Binary `.stl`, `.obj`, `<canvas>` 3D orbit viewer, & automated printability gate (`<= 220x220x250 mm`, `>= 1.2 mm`) | `multimodalAndCadLab.test.mjs` + `capstone.test.mjs` (`/api/cad/generate`) |
 
 ---
 
@@ -234,7 +235,7 @@ Want to spin up live local inference (`ollama pull llama3.2`), wire up Whisper/P
    - Slides: [`02-Multimodal-Voice-Vision-and-3D-Print-Capstone/slides/slides.md`](./02-Multimodal-Voice-Vision-and-3D-Print-Capstone/slides/slides.md)
    - Student Lab: [`02-Multimodal-Voice-Vision-and-3D-Print-Capstone/student-lesson.md`](./02-Multimodal-Voice-Vision-and-3D-Print-Capstone/student-lesson.md)
    - Full-Stack Capstone & Tests: [`code/capstone-app/`](./02-Multimodal-Voice-Vision-and-3D-Print-Capstone/code/capstone-app/server.mjs) • [`multimodalAnd3dCad.test.mjs`](./02-Multimodal-Voice-Vision-and-3D-Print-Capstone/code/multimodalAnd3dCad.test.mjs)
-3. **[Lesson 20.3 — NLP Pipelines, Agentic AI Loops, Model Cards & Responsible Governance (`AI101–AI202`, `Std 14.0`, `Azure AI-900`, `ITS AI`, `ITS Python`)](./03-NLP-Pipelines-Agentic-AI-and-Responsible-Governance/readme.md)**
+3. **[Lesson 20.3 — NLP Pipelines, Agentic AI Loops, Model Cards & Responsible Governance (`CTE AI 11.0102.00`, `Std 14.0`, `Azure AI-900`, `ITS AI`, `ITS Python`)](./03-NLP-Pipelines-Agentic-AI-and-Responsible-Governance/readme.md)**
    - Slides: [`03-NLP-Pipelines-Agentic-AI-and-Responsible-Governance/slides/slides.md`](./03-NLP-Pipelines-Agentic-AI-and-Responsible-Governance/slides/slides.md)
    - Student Lab: [`03-NLP-Pipelines-Agentic-AI-and-Responsible-Governance/student-lesson.md`](./03-NLP-Pipelines-Agentic-AI-and-Responsible-Governance/student-lesson.md) • [`nlpAgenticLab.mjs`](../0-student_files/20-agentic-nlp-governance/nlpAgenticLab.mjs)
    - Reference Code & Tests: [`nlpAgenticGovernanceDemo.mjs`](./03-NLP-Pipelines-Agentic-AI-and-Responsible-Governance/code/nlpAgenticGovernanceDemo.mjs) • [`nlpAgenticGovernanceDemo.test.mjs`](./03-NLP-Pipelines-Agentic-AI-and-Responsible-Governance/code/nlpAgenticGovernanceDemo.test.mjs)

@@ -2,7 +2,7 @@
  * Lesson 2.4 Instructor Reference Demo:
  * IPv4 Binary/Hex/CIDR/VLSM Subnetting, RFC 1918 vs IPv6 Classification,
  * Longest-Prefix Routing Lookup, IANA Port Classification & 7-Step Troubleshooting.
- * Standards: West-MEC ITS 102 (Cisco CCNA 200-301) | ADE Network Security 3.0, 6.0, 7.0, 8.1-8.5, 10.1-10.6
+ * Standards: CTE IT Security (11.1999.00) / Cisco CCNA 200-301 | ADE Network Security 3.0, 6.0, 7.0, 8.1-8.5, 10.1-10.6
  *
  * Run demo:  node 02-HTTP/04-Subnetting-OSI-Topologies-and-Routing/code/subnetAndRoutingDemo.mjs
  * Run tests: node --test 02-HTTP/04-Subnetting-OSI-Topologies-and-Routing/code/subnetAndRoutingDemo.test.mjs

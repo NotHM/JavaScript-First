@@ -1,6 +1,6 @@
 # Unit 12 Setup-Standard Guide: Node Math REPL, `BigInt`, Fixed-Point & Props-Off Telemetry
 
-**Unit:** 12 — Computer Mathematics, Binary, Bitwise Logic & Drone Flight Physics (`AZ CTE Std 4.0 | West-MEC DT101`)  
+**Unit:** 12 — Computer Mathematics, Binary, Bitwise Logic & Drone Flight Physics (`AZ CTE Std 4.0 | CTE Drone Tech 49.0199.00`)  
 **Companion Docs:** [`readme.md`](./readme.md) | [`unit-guide.md`](./unit-guide.md) | [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md)
 
 Use this workstation setup checklist before building or verifying Unit 12 labs so your interactive Node math REPL checks binary/hex/BigInt precision cleanly AND your physical/virtual sUAS workbench adheres strictly to **Props-Off Bench Safety**.
@@ -43,7 +43,7 @@ node 0-student_files/12-computer-math/computerMathLab.js
 
 ---
 
-## 3. Physical Props-Off Safety & Telemetry Flight Calculator CLI (`DT101`)
+## 3. Physical Props-Off Safety & Telemetry Flight Calculator CLI (`CTE Drone Tech`)
 
 > [!CAUTION]
 > **MANDATORY BENCH CHECKLIST (PROPS OFF):** Before powering any flight controller, ESC, USB configurator, or LiPo test harness indoors, physically verify **all propellers are removed**, inspect red/black XT60 polarity, check LiPo cell `mV` balance (`< 100 mV` spread), and connect through a current-limiting smoke stopper.
@@ -94,9 +94,9 @@ node --test 0-student_files/projects/unit-12-bitwise-permission-calc/index.test.
 | Base-2 / Base-16 | `toBinaryAndHex(42)` / `(255)` | `101010 / 2A`, `11111111 / FF` | `AZ CTE 4.2` |
 | Fixed-Point USD | `exactTotalDollars([10, 20])` | `'$0.30'` (zero `.00000000000000004` drift) | `AZ CTE 4.5, 4.6` |
 | RBAC Bitmask | `READ (1) \| DEPLOY (4)` | `5` (`0b101` / `0x5`) | `AZ CTE 4.7` |
-| LiPo `80%` Hover | `4000mAh`, `80% DoD`, `24A` | `8` min, `STORAGE_READY` (`~3800mV`) | `DT101` + `4.5` |
-| Banked Load Factor | `60°` bank (`60 * Math.PI / 180`) | `2.0 G` (throws `RangeError` for `< 0 \| >= 90`) | `DT101` + `4.3, 4.4` |
-| Photogrammetry GSD | `13.2mm, 120m, 8.8mm, 5472px` | `3.289 cm/px` (exact GEMA grouping) | `DT101` + `4.3` |
+| LiPo `80%` Hover | `4000mAh`, `80% DoD`, `24A` | `8` min, `STORAGE_READY` (`~3800mV`) | `CTE Drone Tech` + `4.5` |
+| Banked Load Factor | `60°` bank (`60 * Math.PI / 180`) | `2.0 G` (throws `RangeError` for `< 0 \| >= 90`) | `CTE Drone Tech` + `4.3, 4.4` |
+| Photogrammetry GSD | `13.2mm, 120m, 8.8mm, 5472px` | `3.289 cm/px` (exact GEMA grouping) | `CTE Drone Tech` + `4.3` |
 
 ---
 

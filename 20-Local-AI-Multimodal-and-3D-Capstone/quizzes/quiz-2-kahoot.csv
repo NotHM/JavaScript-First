@@ -1,14 +1,14 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
-Streaming Ollama NDJSON throws SyntaxError mid-reply. Why?,Server port closed,Calling JSON.parse without newline buffering,CORS disabled,Wrong CSS theme,30,2
-What do cosineSimilarity([1 0] [0 1]) and cosineSimilarity([2 0] [5 0]) return?,1 and 0,0 and 1,-1 and 0,0.5 and 0.5,30,2
-LLM emits tool call delete_db when only rag_lookup is permitted. How to stop it?,Run eval(),Validate against strict tool allowlist,Disable HTTPS,Lower font size,20,2
-Ollama llava rejects images containing data:image/png;base64 prefix. Fix?,Convert to MP3,Strip the data-URL header leaving raw base64,Add HTML tags,Double image size,20,2
-How many bytes is a 16000 Hz 16-bit mono WAV file lasting 1.0 second?,16044 bytes,32044 bytes,64000 bytes,8044 bytes,30,2
-In an STL mesh directed edge u->v has no opposite twin edge v->u. This means:,Smooth shading,Non-watertight naked edge gap,Too much infill,Fast print speed,30,2
-Computed signed mesh volume returns -1400 mm^3 instead of +1400. Cause?,Too many vertices,Inverted inward triangle winding order,Empty PNG,High nozzle temp,30,2
-A 0.4 mm nozzle needs >= 1.2 mm min wall thickness. What happens at 0.6 mm?,Prints twice as fast,Validator rejects fragile thin wall,Doubles infill,Auto-scales bed,20,2
-Why build an offline local-inference simulator when OLLAMA_HOST is down?,Hides bugs,Provides graceful degradation and deterministic CI tests,Sends PII to cloud,Disables SSE,20,2
-Sampling 1 frame every 2 seconds of a 10-second video yields timestamps:,[1 3 5],[0 2 4 6 8],[0 5 10],[2 4 6],30,2
-A ReAct agent requests "toString" as a tool name. What blocks prototype bypasses?,eval(action.name),Object.hasOwn allowlist check,Disable JSON.parse,Increase temperature to 1.8,30,2
-High-risk rates 0.90 and 0.63 give disparate impact 0.70. Model Card verdict?,Auto-approves deploy,Blocks deploy (< 0.80 four-fifths rule),Boosts temperature,Switches to Minimal tier,30,2
-Sentiment analyzer strips stopword "not" BEFORE scoring "not safe". Bug result?,Throws SyntaxError,Falsely classifies unsafe text positive,Doubles IDF weight,Triggers maxSteps,20,2
+Calling JSON.parse(chunk) straight on ReadableStream Ollama reads throws SyntaxError. Root fix?,Double request timeout to 60s,Switch SSE to SQLite blobs,Buffer partial chunks and parse only full \n lines,Disable UTF-8 TextDecoder,30,3
+"What do cosineSimilarity([1, 0], [0, 1]) and cosineSimilarity([2, 0], [5, 0]) return?",-1 and 0.5,0 and 1,10 and 0,1 and 0,30,2
+"Vision API rejects images: ['data:image/png;base64,iVBOR...']. What quick JS transform fixes it?","Strip data:image/...;base64, prefix via regex",Wrap string inside <img> tags,Encode base64 a second time,Pass an empty string [],20,1
+"Model outputs tool call { name: 'delete_db', arguments: {} } when only rag_lookup exists. Action?",Return HTTP 200 OK blindly,Run function inside eval(),Log database password in stdout,Reject call via strict schema allowlist,20,4
+Agent requests tool name 'toString'. Which JavaScript guard stops Object.prototype bypasses?,typeof toolMap == object,JSON.stringify(toolMap),"Object.hasOwn(toolMap, name)",Boolean(toolMap[name]),30,3
+High-risk classifier passes 0.90 of Group A and 0.63 of Group B (ratio 0.70). Governance verdict?,Raise temperature to 2.0,Block deployment (< 0.80 four-fifths rule),Hide metric from Model Card,Deploy publicly without notice,30,2
+Lexicon sentiment removes stopword 'not' BEFORE scoring 'not safe'. What bug follows?,Falsely classifies unsafe text as positive,Throws Array RangeError,Doubles TF-IDF document count,Strips numeric digits,20,1
+"A 16000 Hz, 16-bit (2 bytes/sample) mono PCM audio clip lasts 1.0 second. Exact .wav byte size?","8,044 bytes","16,044 bytes","64,000 bytes","32,044 bytes",30,4
+3D printer uses a 0.4 mm nozzle requiring >= 3 extruded walls. Part wall is 0.6 mm. Verdict?,Print in mid-air at zMin = 10 mm,Skip slicing and stream raw JSON,Reject (< 1.2 mm minimum) before slicing,Scale nozzle size inside CSS,20,3
+"Before FileReader readAsDataURL loads into vision preview, which security MIME check applies?",Disable alt text and aria-label,Allowlist image/png and image/jpeg only,Embed file bytes inside SQLite table name,Accept image/svg+xml <script> blobs,20,2
+Why include a deterministic offline fallback simulator alongside live OLLAMA_HOST requests?,Ensures CI tests & air-gapped demos pass deterministically,Eliminates HTTP status validation,Compresses 7B weights into 2 KB,Disables HITL tool confirmation,20,1
+A ReAct agent hits maxSteps limit OR encounters a high-risk delete tool. Clean HITL safety step?,Grant root shell access automatically,Execute tool twice then ask later,Reset maxSteps inside infinite loop,Pause BEFORE side effect awaiting human approval,20,4
+A Unit 21 GPS mast .stl has unmatched directed edge u->v and negative signed volume (-1400 mm3). Why?,Nozzle size is too large for ABS,Audio sample rate exceeds 44.1 kHz,Open naked edge gap AND inward triangle winding,Model width fits 220x220 bed cleanly,30,3

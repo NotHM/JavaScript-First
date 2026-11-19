@@ -77,7 +77,7 @@
 12. **`[L4 Analyze | Std 18.2]`** A student writes `import { tax } from './math';` inside `app.mjs` and Node throws `Error [ERR_MODULE_NOT_FOUND]` even though `math.mjs` exists in the same folder. Why did Node reject it, and what fixes it?  
     > *(Your response)*  
 
-13. **`[L1 Remember | ITS 101 / ADE 2.1–2.6]`** Which disposal practice is REQUIRED for a swollen Lithium-ion laptop battery?  
+13. **`[L1 Remember | CompTIA A+ / ADE 2.1–2.6]`** Which disposal practice is REQUIRED for a swollen Lithium-ion laptop battery?  
     - A) Crush flat and place in standard municipal trash  
     - B) Isolate in a fire-safe container and deliver to an EPA-compliant hazardous battery recycler  
     - C) Store inside an ungrounded cardboard box next to a radiator  

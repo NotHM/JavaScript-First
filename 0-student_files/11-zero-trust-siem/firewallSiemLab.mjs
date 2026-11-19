@@ -1,6 +1,6 @@
 /**
  * Student Lesson 11.2 Lab: Zero Trust Firewalls, SIEM Correlation, STRIDE Risk & DRP Compliance
- * Standards: West-MEC ITS 201-202 (Security+ / Security Pro) | ADE NetSec 1.0, 4.5-4.6, 5.1-5.10, 9.1-9.10, 10.7-10.8, 11.1-11.6
+ * Standards: CTE IT Security (11.1999.00) / CompTIA Security+ | ADE NetSec 1.0, 4.5-4.6, 5.1-5.10, 9.1-9.10, 10.7-10.8, 11.1-11.6
  *
  * Run:
  *   node 0-student_files/11-zero-trust-siem/firewallSiemLab.mjs
@@ -13,7 +13,7 @@
 import assert from 'node:assert/strict';
 
 export function evaluateFirewallAcl(packet, rules, stateTable = new Set(), { mode = 'stateful' } = {}) {
-  // TODO [L3-L4 | ITS 202 / ADE 9.1-9.10]:
+  // TODO [L3-L4 | CTE IT Security / CompTIA-Sec+ / ADE 9.1-9.10]:
   // 1. In 'ngfw' mode, immediately return { action: 'DENY', matchedRuleId: 'NGFW-L7-IPS' } if packet.appThreatDetected is true.
   // 2. In 'stateful' or 'ngfw' mode, allow packets with state === 'ESTABLISHED' matching reverse tuple in stateTable.
   // 3. Evaluate rules top-to-bottom (first match wins); record forward tuple into stateTable when allowed;

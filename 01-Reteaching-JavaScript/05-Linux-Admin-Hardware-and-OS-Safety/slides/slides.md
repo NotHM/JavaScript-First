@@ -7,7 +7,7 @@ slideNumber: true
 ---
 
 # Lesson 1.5: Linux Admin, Hardware & OS Safety
-**West-MEC `ITS 101–102` (`ITF+`, `A+`, `RHCSA EX200`) | ADE `2.1–2.6, 8.6–8.8, 10.2`**
+**CTE IT Security (`11.1999.00`) / CompTIA A+ / RHCSA EX200 | ADE `2.1–2.6, 8.6–8.8, 10.2`**
 
 *Physical Safety, POSIX Special Bits, `systemd`/`cron`, SELinux & SSH Hardening*
 

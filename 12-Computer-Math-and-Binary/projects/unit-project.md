@@ -1,6 +1,6 @@
 # Unit 12 Project: Cloud Storage, Precision Invoice, Bitmask & sUAS Flight Math Engine
 
-**Bloom's Target:** `[L5 Evaluate]` & `[L6 Create]` | **AZ CTE Std:** `4.0` (`4.1`–`4.7`) + **West-MEC `DT101` (`1.0–12.0, 23.0`)**  
+**Bloom's Target:** `[L5 Evaluate]` & `[L6 Create]` | **AZ CTE Std:** `4.0` (`4.1`–`4.7`) + **CTE Drone Tech (`49.0199.00`: `1.0–12.0, 23.0`)**  
 **Starter Workspaces:** [`../../0-student_files/projects/unit-12-bitwise-permission-calc/index.js`](../../0-student_files/projects/unit-12-bitwise-permission-calc/index.js) & [`../../0-student_files/12-drone-flight-math/dronePhysicsLab.mjs`](../../0-student_files/12-drone-flight-math/dronePhysicsLab.mjs)
 
 ---
@@ -14,7 +14,7 @@ Build a zero-dependency Node.js CLI calculator & unit test module that solves th
 
 ---
 
-## Part 2 — Integrated Drone / sUAS Mission Math Track (`DT101`, `4.3–4.6`)
+## Part 2 — Integrated Drone / sUAS Mission Math Track (`CTE Drone Tech`, `4.3–4.6`)
 Extend your engineering calculator (using [`dronePhysicsLab.mjs`](../../0-student_files/12-drone-flight-math/dronePhysicsLab.mjs) or a companion `.mjs` mission script) to output a **Pre-Flight Quantitative GO/NO-GO Report** enforcing **Props-Off Bench Safety**:
 1. **LiPo Pack & Ohm Budget (`4.4–4.6`):** Sum `3S–6S` cell voltages in integer millivolts (`mV`, zero float drift), classify pack status (`3000 mV` floor / `3800 mV` storage / `4200 mV` full), verify C-rate max current, and compute hover duration using **`80%` safe DoD**.
 2. **Propulsion & Banked Load Factor (`4.3–4.4`):** Verify **`TWR >= 2.0`**, `KV * V` RPM, and `1 / Math.cos(rad)` Load Factor at a `45°`–`60°` mission turn.

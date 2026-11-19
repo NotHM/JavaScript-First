@@ -1,6 +1,6 @@
 # Lesson 2.4 Student Lab: Subnetting, OSI Topologies, Routing & Troubleshooting
 
-**Standards:** West-MEC `ITS 102` (`Cisco CCNA 200-301`) | ADE Network Security `3.0`, `6.0`, `7.0`, `8.1–8.5`, `10.1–10.6`
+**Standards:** CTE IT Security (`11.1999.00`) / `Cisco CCNA 200-301` | ADE Network Security `3.0`, `6.0`, `7.0`, `8.1–8.5`, `10.1–10.6`
 
 Complete all `TODO` functions inside [`subnetCalculatorLab.mjs`](./subnetCalculatorLab.mjs) **without** looking at instructor solutions:
 

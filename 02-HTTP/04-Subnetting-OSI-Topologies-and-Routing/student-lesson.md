@@ -1,6 +1,6 @@
 # Student Lesson 2.4: Subnetting, OSI Topologies, Protocols & Troubleshooting
 
-**Standards:** West-MEC `ITS 102` (`Cisco CCNA 200-301`) | **ADE:** `3.0, 6.0, 7.0, 8.1–8.5, 10.1–10.6`  
+**Standards:** CTE IT Security (`11.1999.00`) / `Cisco CCNA 200-301` | **ADE:** `3.0, 6.0, 7.0, 8.1–8.5, 10.1–10.6`  
 **Reading:** [`readme.md`](./readme.md) | **Slides:** [`slides/slides.md`](./slides/slides.md)  
 **Starter Lab:** [`../../0-student_files/02-subnetting-routing/subnetCalculatorLab.mjs`](../../0-student_files/02-subnetting-routing/subnetCalculatorLab.mjs)
 

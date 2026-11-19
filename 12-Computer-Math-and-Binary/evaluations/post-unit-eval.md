@@ -21,9 +21,9 @@
 6. **`[L4 Analyze | Std 4.7]`** Trace bitwise expression: `(0b1010 | 0b0011) & ~0b0010`:  
    > Binary result: `________` (Decimal: `____`)
 
-7. **`[L3 Apply | DT101, Std 4.4]`** A `4S` `5,000 mAh` LiPo (`30C`) powers a quadcopter drawing `20 A` in hover. Compute **max continuous amps** (`______ A`) and **hover time using `80%` safe DoD** (`______ min`).
+7. **`[L3 Apply | CTE Drone Tech, Std 4.4]`** A `4S` `5,000 mAh` LiPo (`30C`) powers a quadcopter drawing `20 A` in hover. Compute **max continuous amps** (`______ A`) and **hover time using `80%` safe DoD** (`______ min`).
 
-8. **`[L3 Apply | DT101, Std 4.3–4.4]`** Compute the **Load Factor** ($1/\cos\theta$) at a `60°` bank (`______ G`), and state why JavaScript `Math.cos(60)` fails without `(60 * Math.PI) / 180`:  
+8. **`[L3 Apply | CTE Drone Tech, Std 4.3–4.4]`** Compute the **Load Factor** ($1/\cos\theta$) at a `60°` bank (`______ G`), and state why JavaScript `Math.cos(60)` fails without `(60 * Math.PI) / 180`:  
    > *(Your explanation)*
 
 ### Part B — Deeper Reasoning (2 pts each)
@@ -32,7 +32,7 @@
    > *(Your analysis)*
 
 10. **`[L5 Evaluate | Std 4.5 / 4.6]`** Your API must track (a) microsecond transaction IDs up to $9 \times 10^{18}$, (b) exact sales tax totals in USD / LiPo cell millivolts (`mV`), and (c) 6-decimal WGS-84 GPS waypoints. Compare JS `number` (`Float64`), fixed-point integers (`cents`/`mV`), and `BigInt` (`> 9007199254740991`), recommending the right choice for **(a)**, **(b)**, and **(c)**.  
-   > *(Your evaluation)*
+    > *(Your evaluation)*
 
 11. **`[L6 Create | Std 4.7]`** Write two compact JavaScript helper functions using bitwise shifts & masks:  
    - `toggleFlag(mask, flag)` (flips a single flag bit using `^`)  
@@ -41,7 +41,7 @@
    // Write your helpers below:
    ```
 
-12. **`[L4 Analyze -> L5 Evaluate | DT101 23.0, Std 4.3–4.4]`** Explain why hot afternoon flying (`high Density Altitude`) lowers quadcopter `TWR` reserve, AND write a clean parenthesized JS expression for Photogrammetry `GSD` (`cm/px`) given `sensorMm`, `altM`, `focalMm`, and `imgWidthPx`:  
+12. **`[L4 Analyze -> L5 Evaluate | CTE Drone Tech 23.0, Std 4.3–4.4]`** Explain why hot afternoon flying (`high Density Altitude`) lowers quadcopter `TWR` reserve, AND write a clean parenthesized JS expression for Photogrammetry `GSD` (`cm/px`) given `sensorMm`, `altM`, `focalMm`, and `imgWidthPx`:  
    ```javascript
    // Write your GSD helper below:
    ```

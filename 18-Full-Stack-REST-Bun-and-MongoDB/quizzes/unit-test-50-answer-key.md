@@ -1,89 +1,89 @@
-# Unit 18 Mastery Exam — Teacher Answer Key & Rationales (`Q1–Q50`)
+# Unit 18 Mastery Exam — Teacher Answer Key & Certification Rationales (`Q1–Q50`)
 
 **Assessment:** [`unit-test-50.md`](./unit-test-50.md) · **Kahoot Import:** [`unit-test-50-kahoot.csv`](./unit-test-50-kahoot.csv)  
-**Coverage:** AZ CTE Stds `8.3, 11.6–11.8, 13.3, 16.3, 16.5–16.6, 17.1–17.13` across Bloom's `L1–L5` (10 items per tier).
+**Certification Alignment Summary:** **`40 / 50` (`80.0% >= 75%`)** aligned across `CCNA` (11), `CompTIA-ITF+` (9), `CompTIA-Sec+` (9), `CIW-JS` (6), `ITS-JS` (5), plus 10 `Domain: CTE-Lab` specialist items across Bloom's `L1–L5` (`10` per tier).
 
 ---
 
 ## Part A — Core Recall (`[L1 Remember]`, Q1–Q10)
 
-| Q# | Key | Standard & Bloom's | Rationale / Distractor Explanation |
+| Q# | Key | Alignment, Standard & Bloom's | Rationale / Distractor Explanation |
 |---|---|---|---|
-| **Q1** | **B** | `[L1 Remember \| 11.6]` | Bun is implemented in **Zig** on top of Apple's **JavaScriptCore** engine; the other choices mix unrelated languages/engines. |
-| **Q2** | **A** | `[L1 Remember \| 11.7]` | Bun exposes `Bun.serve()` for Web-standard HTTP servers and `bun:sqlite` for built-in SQLite; B/C/D invent invalid namespaces. |
-| **Q3** | **C** | `[L1 Remember \| 16.5]` | Node 24 ships `DatabaseSync` inside `node:sqlite`, matching `bun:sqlite` ergonomics with zero external addons. |
-| **Q4** | **A** | `[L1 Remember \| 16.5]` | SQLite ignores `ON DELETE RESTRICT` foreign keys unless `PRAGMA foreign_keys = ON;` runs on each opened connection. |
-| **Q5** | **B** | `[L1 Remember \| 8.3]` | Standard REST codes pair `201` (created), `400` (bad request), `404` (not found), and `409` (duplicate/stock/FK conflict). |
-| **Q6** | **D** | `[L1 Remember \| 16.5]` | RFC 7946 GeoJSON and MongoDB `2dsphere` mandate `[longitude, latitude]` (`[-180..180, -90..90]`); swapping breaks distance math. |
-| **Q7** | **B** | `[L1 Remember \| 16.5]` | `$lookup` performs left outer joins between collections using `from`, `localField`, `foreignField`, and `as`; A/C/D are nonexistent stages. |
-| **Q8** | **C** | `[L1 Remember \| 16.5]` | MongoDB throws error code `11000` (`E11000 duplicate key error`) when violating a unique index. |
-| **Q9** | **A** | `[L1 Remember \| 8.3]` | Clients signal desired response media type via the HTTP `Accept` request header for content negotiation. |
-| **Q10** | **D** | `[L1 Remember \| 17.10]` | `application/vnd.api+json` is the official MIME type for JSON:API; `application/hal+json` identifies HAL+JSON. |
+| **Q1** | **B** | `[L1 Remember \| Std 16.5 \| Cert: CompTIA-ITF+]` | ON DELETE RESTRICT enforces referential integrity whenever child rows depend on a parent key. |
+| **Q2** | **A** | `[L1 Remember \| Std 16.5 \| Cert: CompTIA-ITF+]` | SQL JOIN links normalized tables cleanly using primary and foreign keys. |
+| **Q3** | **D** | `[L1 Remember \| Std 8.3 \| Cert: CCNA]` | Standard REST mapping assigns 201 created, 400 validation failure, 404 missing, 409 state conflict. |
+| **Q4** | **C** | `[L1 Remember \| Std 8.3 \| Cert: CCNA]` | Content negotiation reads the client Accept header to pick matching JSON/HAL/JSON:API serializers. |
+| **Q5** | **B** | `[L1 Remember \| Std 17.10 \| Cert: CCNA]` | JSON:API uses registered media type application/vnd.api+json. |
+| **Q6** | **A** | `[L1 Remember \| Std 16.5 \| Cert: CCNA]` | GeoJSON strictly requires [longitude, latitude] so 2dsphere indexes calculate distances accurately. |
+| **Q7** | **D** | `[L1 Remember \| Std 16.6 \| Cert: CompTIA-Sec+]` | Prepared ? bindings ensure user strings remain data literals rather than SQL commands. |
+| **Q8** | **C** | `[L1 Remember \| Std 17.10 \| Cert: CIW-JS]` | Response.prototype.json() returns a Promise resolving the parsed JavaScript value. |
+| **Q9** | **B** | `[L1 Remember \| Std 11.6 \| Domain: CTE-Lab]` | Node 24 includes DatabaseSync inside node:sqlite for zero-dependency offline SQL queries. |
+| **Q10** | **A** | `[L1 Remember \| Std 16.5 \| Domain: CTE-Lab]` | SQLite disables FK enforcement per connection unless PRAGMA foreign_keys = ON executes. |
 
 ---
 
 ## Part B — Conceptual Understanding (`[L2 Understand]`, Q11–Q20)
 
-| Q# | Key | Standard & Bloom's | Rationale / Distractor Explanation |
+| Q# | Key | Alignment, Standard & Bloom's | Rationale / Distractor Explanation |
 |---|---|---|---|
-| **Q11** | **B** | `[L2 Understand \| 11.6]` | Embedded SQLite executes inside the host application process via direct memory reads without TCP network latency. |
-| **Q12** | **C** | `[L2 Understand \| 11.8]` | Both `bun:sqlite` and Node 24 `node:sqlite` provide synchronous prepared statements with `?` placeholders over identical SQL schemas. |
-| **Q13** | **A** | `[L2 Understand \| 16.6]` | Parameterized `?` placeholders isolate untrusted input values as bound literals so injected `' OR 1=1 --` text cannot alter SQL parsing. |
-| **Q14** | **D** | `[L2 Understand \| 17.1]` | Entities enforce pure-JS data invariants prior to I/O, while Domain services isolate database indexes, queries, and aggregations. |
-| **Q15** | **B** | `[L2 Understand \| 16.5]` | Bounded `rooms` subdocuments load atomically alongside each property card without expensive cross-collection `$lookup` joins. |
-| **Q16** | **C** | `[L2 Understand \| 16.5]` | `$set` mutates only specified fields rather than replacing the full document (which would drop untouched fields like `title`). |
-| **Q17** | **A** | `[L2 Understand \| 16.5]` | Running `$match` before `$group` filters out canceled/pending bookings upfront so revenue totals reflect confirmed payments only. |
-| **Q18** | **D** | `[L2 Understand \| 16.5]` | Flipping `[lat, lng]` puts longitudes like `-112` into the latitude slot (`[-90, 90]`), causing index errors or wrong `$near` hits. |
-| **Q19** | **B** | `[L2 Understand \| 17.13]` | HAL+JSON structures responses with `_links` hypermedia URIs and `_embedded` resource arrays rather than `JSend`'s `status`/`data`. |
-| **Q20** | **C** | `[L2 Understand \| 17.10]` | Strategy Pattern hides format headers and envelope building behind one `.render()` method so controllers never duplicate `if/else` trees. |
+| **Q11** | **D** | `[L2 Understand \| Std 11.6 \| Cert: CCNA]` | In-process library calls bypass TCP sockets and wire protocol overhead. |
+| **Q12** | **C** | `[L2 Understand \| Std 16.5 \| Cert: CompTIA-ITF+]` | Embedding small bounded subdocuments avoids extra joins on every parent read. |
+| **Q13** | **B** | `[L2 Understand \| Std 16.5 \| Cert: CompTIA-ITF+]` | Atomic transactions guarantee either both inventory and order commit or neither mutates state. |
+| **Q14** | **A** | `[L2 Understand \| Std 16.6 \| Cert: CompTIA-Sec+]` | Prepared statement drivers never re-parse bound parameters as SQL syntax tokens. |
+| **Q15** | **D** | `[L2 Understand \| Std 17.1 \| Cert: ITS-JS]` | Pure Entity classes enforce invariants before Domain services touch storage handles. |
+| **Q16** | **C** | `[L2 Understand \| Std 17.10 \| Cert: CIW-JS]` | Strategy polymorphism encapsulates format-specific serialization behind a uniform interface. |
+| **Q17** | **B** | `[L2 Understand \| Std 16.5 \| Cert: CompTIA-ITF+]` | Filtering early avoids inflating revenue metrics with unpaid or voided records. |
+| **Q18** | **A** | `[L2 Understand \| Std 8.3 \| Cert: CCNA]` | Accurate HTTP status codes guide clients cleanly between input validation fixes vs state/stock clashes. |
+| **Q19** | **D** | `[L2 Understand \| Std 16.5 \| Domain: CTE-Lab]` | Atomic update operators like $set mutate targeted attributes safely without overwriting full docs. |
+| **Q20** | **C** | `[L2 Understand \| Std 17.13 \| Domain: CTE-Lab]` | HAL+JSON relies on _links for navigational URIs and _embedded for nested sub-resources. |
 
 ---
 
 ## Part C — Practical Application (`[L3 Apply]`, Q21–Q30)
 
-| Q# | Key | Standard & Bloom's | Rationale / Distractor Explanation |
+| Q# | Key | Alignment, Standard & Bloom's | Rationale / Distractor Explanation |
 |---|---|---|---|
-| **Q21** | **A** | `[L3 Apply \| 16.6]` | Preparing `LIKE ?` and binding `%${q.trim()}%` safely escapes wildcards/quotes without allowing SQL syntax injection. |
-| **Q22** | **B** | `[L3 Apply \| 16.5]` | Pagination computes `offset = (page - 1) * limit = (3 - 1) * 10 = 20`, paired with `LIMIT 10`. |
-| **Q23** | **C** | `[L3 Apply \| 16.5]` | Clamping enforces `page >= 1` via `Math.max(1, ...)` and caps `limit` cleanly between `1` and `50` via `Math.min(50, Math.max(1, ...))`. |
-| **Q24** | **D** | `[L3 Apply \| 16.5]` | Instantiating `new DatabaseSync(path)` followed immediately by `this.db.exec('PRAGMA foreign_keys = ON;')` activates FK protection per handle. |
-| **Q25** | **B** | `[L3 Apply \| 16.5]` | MQL pairs `$and`, `$gte: 5`, and `$nin: ['chocolate']` to express compound numeric + exclusion filters cleanly. |
-| **Q26** | **A** | `[L3 Apply \| 16.5]` | MongoDB dot notation (`'address.country'`, `'propInfo.rating'`) traverses nested subdocuments inside query predicates. |
-| **Q27** | **C** | `[L3 Apply \| 16.5]` | `{ 'rooms.view': 'lake' }` automatically matches any element inside the `rooms` embedded array whose `view` equals `'lake'`. |
-| **Q28** | **D** | `[L3 Apply \| 16.5]` | `createIndex({ productKey: 1 }, { unique: true })` enforces uniqueness at the storage engine level, throwing `E11000` on collisions. |
-| **Q29** | **B** | `[L3 Apply \| 16.5]` | `$lookup` links `from: 'purchases'` matching `localField: 'customerKey'` to `foreignField: 'customerKey'` into array `as: 'orders'`. |
-| **Q30** | **A** | `[L3 Apply \| 17.10]` | Matching `application/vnd.api+json` emits `Content-Type: application/vnd.api+json; charset=utf-8` with `data: [{ type, id, attributes }]`. |
+| **Q21** | **B** | `[L3 Apply \| Std 16.6 \| Cert: CompTIA-Sec+]` | Binding wildcard patterns as a ? parameter prevents wildcard or quote characters from breaking SQL. |
+| **Q22** | **A** | `[L3 Apply \| Std 16.5 \| Cert: CIW-JS]` | offset = (page - 1) * limit = (3 - 1) * 10 = 20 rows skipped. |
+| **Q23** | **D** | `[L3 Apply \| Std 16.5 \| Cert: ITS-JS]` | Math.max and Math.min clamp numeric parameters deterministically against negative or oversized requests. |
+| **Q24** | **C** | `[L3 Apply \| Std 8.3 \| Cert: CCNA]` | POST resource creation returns 201 Created paired with the negotiated JSON:API media header. |
+| **Q25** | **B** | `[L3 Apply \| Std 8.3 \| Cert: CIW-JS]` | HTTP POST requests must specify method, Content-Type: application/json, and serialized string body. |
+| **Q26** | **A** | `[L3 Apply \| Std 16.5 \| Cert: CompTIA-ITF+]` | Unique indexes enforce duplicate rejection atomically inside the storage engine. |
+| **Q27** | **D** | `[L3 Apply \| Std 16.5 \| Cert: ITS-JS]` | Encapsulating pragma activation and table creation in setup ensures every instance starts consistent. |
+| **Q28** | **C** | `[L3 Apply \| Std 16.6 \| Cert: CompTIA-Sec+]` | Mapping constraint codes to clean 409 messages hides internal schema paths from callers. |
+| **Q29** | **B** | `[L3 Apply \| Std 16.5 \| Domain: CTE-Lab]` | MongoDB uses quoted dot-notation strings to filter nested document fields cleanly. |
+| **Q30** | **A** | `[L3 Apply \| Std 16.5 \| Domain: CTE-Lab]` | Dot notation into an embedded array automatically matches documents containing a matching element. |
 
 ---
 
 ## Part D — Analysis & Debugging (`[L4 Analyze]`, Q31–Q40)
 
-| Q# | Key | Standard & Bloom's | Rationale / Distractor Explanation |
+| Q# | Key | Alignment, Standard & Bloom's | Rationale / Distractor Explanation |
 |---|---|---|---|
-| **Q31** | **C** | `[L4 Analyze \| 16.5]` | SQLite accepts FK DDL syntax silently without enforcing `ON DELETE RESTRICT` unless `PRAGMA foreign_keys = ON;` runs per connection. |
-| **Q32** | **A** | `[L4 Analyze \| 16.6]` | String interpolation inside `` `... LIKE '%${q}%'` `` lets `' OR 1=1 --` break out of SQL quotes and evaluate true for every row. |
-| **Q33** | **D** | `[L4 Analyze \| 8.3]` | Uncaught constraint exceptions bubble into HTTP `500`; catching `UNIQUE` / `FOREIGN KEY` failures maps them cleanly to `409 Conflict`. |
-| **Q34** | **B** | `[L4 Analyze \| 16.5]` | `err.code === 11000` signals a unique-key collision (`E11000`), which controllers map to `409 Conflict` rather than retrying or dropping keys. |
-| **Q35** | **A** | `[L4 Analyze \| 16.5]` | Missing `{ $match: { 'bookingInfo.paymentStatus': 'confirmed' } }` lets pending/unpaid bookings inflate summed country revenue totals. |
-| **Q36** | **C** | `[L4 Analyze \| 16.5]` | Phoenix coordinates `[33.5092, -112.0676]` swapped lat/lng, putting `-112` outside valid `[-90, 90]` latitude bounds; swap to `[-112.0676, 33.5092]`. |
-| **Q37** | **B** | `[L4 Analyze \| 17.10]` | Strict JSON:API clients check both the JSON envelope shape AND exact `Content-Type: application/vnd.api+json` response header. |
-| **Q38** | **D** | `[L4 Analyze \| 8.3]` | Trusting client `total_cents` allows checkout price spoofing, and updating stock after returning `201` allows overselling negative inventory. |
-| **Q39** | **A** | `[L4 Analyze \| 11.8]` | Open HTTP sockets or unclosed handles keep Node's event loop alive after assertions pass; close `server` and DB cleanly inside `finally`. |
-| **Q40** | **C** | `[L4 Analyze \| 16.5]` | MongoDB `updateOne` rejects plain replacement objects without atomic operators like `$set` to prevent accidental document overwrites. |
+| **Q31** | **D** | `[L4 Analyze \| Std 16.5 \| Cert: CompTIA-ITF+]` | SQLite parses FK DDL silently without enforcing rules unless enabled per connection. |
+| **Q32** | **C** | `[L4 Analyze \| Std 16.6 \| Cert: CompTIA-Sec+]` | Interpolated quotes let attackers close strings early and inject always-true OR predicates. |
+| **Q33** | **B** | `[L4 Analyze \| Std 8.3 \| Cert: CompTIA-Sec+]` | Servers must compute authoritative pricing from DB rows and verify/decrement stock atomically first. |
+| **Q34** | **A** | `[L4 Analyze \| Std 17.10 \| Cert: CCNA]` | Strict content-negotiated clients verify the Content-Type media header matches application/vnd.api+json. |
+| **Q35** | **D** | `[L4 Analyze \| Std 11.8 \| Cert: ITS-JS]` | Open server sockets or active handles keep Node event loop alive until closed inside after/finally. |
+| **Q36** | **C** | `[L4 Analyze \| Std 16.5 \| Cert: CCNA]` | -112.06 exceeds latitude bounds [-90, 90]; swapping to [lng, lat] fixes spherical indexing. |
+| **Q37** | **B** | `[L4 Analyze \| Std 8.3 \| Cert: CompTIA-Sec+]` | Catching known constraint errors maps collisions to 409 Conflict without leaking internal DB errors. |
+| **Q38** | **A** | `[L4 Analyze \| Std 16.5 \| Cert: CIW-JS]` | Pre-filtering confirmed records before aggregation prevents unpaid drafts from skewing revenue. |
+| **Q39** | **D** | `[L4 Analyze \| Std 16.5 \| Domain: CTE-Lab]` | MongoDB updateOne requires atomic operators such as $set rather than raw replacement objects. |
+| **Q40** | **C** | `[L4 Analyze \| Std 16.5 \| Domain: CTE-Lab]` | Mapping Mongo E11000 duplicate key errors cleanly yields semantic 409 Conflict responses. |
 
 ---
 
-## Part E — Architecture & Evaluation (`[L5 Evaluate]`, Q41–Q50)
+## Part E — Evaluation & Architecture (`[L5 Evaluate]`, Q41–Q50)
 
-| Q# | Key | Standard & Bloom's | Rationale / Distractor Explanation |
+| Q# | Key | Alignment, Standard & Bloom's | Rationale / Distractor Explanation |
 |---|---|---|---|
-| **Q41** | **B** | `[L5 Evaluate \| 16.5]` | Hybrid architecture pairs ACID SQLite/SQL integrity for order ledgers with MongoDB's agile nested documents and `$near`/`$lookup` queries. |
-| **Q42** | **C** | `[L5 Evaluate \| 11.6]` | Single-process SQLite excels on low-ops single-node reads, while multi-node concurrent write scaling calls for client-server clusters. |
-| **Q43** | **A** | `[L5 Evaluate \| 16.5]` | Embedded line-item snapshots preserve immutable checkout prices historically while `$lookup` keeps live customer contact details normalized. |
-| **Q44** | **D** | `[L5 Evaluate \| 17.10]` | HTTP `Accept` negotiation preserves clean canonical URLs (`/api/products`) while keeping new response formats modular behind Strategy classes. |
-| **Q45** | **B** | `[L5 Evaluate \| 16.6]` | Atomic transactions prevent race conditions or split-brain failures between reading/decrementing stock and inserting `orders`. |
-| **Q46** | **C** | `[L5 Evaluate \| 17.1]` | Entity validation fails fast with clear `400` domain errors in zero-I/O unit tests before touching database sockets. |
-| **Q47** | **A** | `[L5 Evaluate \| 8.3]` | Uncapped `limit` params let callers request huge allocations per request; capping at `<= 50` protects memory and event-loop latency. |
-| **Q48** | **D** | `[L5 Evaluate \| 8.3]` | Invalid input (`qty: -2`) is `400`, missing target item (`99999`) is `404`, and exceeding available stock (`50 > 4`) is `409 Conflict`. |
-| **Q49** | **B** | `[L5 Evaluate \| 11.8]` | Programming `DomainService` to a shared adapter lets fast offline tests (`MqlDatabase`) mirror live `mongo:7` Docker behavior identically. |
-| **Q50** | **C** | `[L5 Evaluate \| 16.5, 17.10]` | Clean layered separation (`SqliteCatalog`, Entity/Domain, `ResponderStrategy`, thin HTTP router) preserves testability and maintainability. |
+| **Q41** | **B** | `[L5 Evaluate \| Std 16.5 \| Cert: CompTIA-ITF+]` | Relational ACID tables protect transactional inventory, while documents absorb evolving catalog attributes. |
+| **Q42** | **A** | `[L5 Evaluate \| Std 11.6 \| Cert: CompTIA-ITF+]` | Multi-container horizontal scaling needs a shared client-server database supporting concurrent writes. |
+| **Q43** | **D** | `[L5 Evaluate \| Std 16.6 \| Cert: CompTIA-Sec+]` | Transactional isolation stops interleaved requests from reading stale stock and creating negative qty. |
+| **Q44** | **C** | `[L5 Evaluate \| Std 8.3 \| Cert: CompTIA-Sec+]` | Bounds checking prevents callers from triggering full-table multi-megabyte allocations per request. |
+| **Q45** | **B** | `[L5 Evaluate \| Std 8.3 \| Cert: CCNA]` | Invalid input -> 400; missing parent resource -> 404; insufficient stock conflict -> 409. |
+| **Q46** | **A** | `[L5 Evaluate \| Std 17.10 \| Cert: CCNA]` | REST decouples resource identity (URI) from representation format via Accept headers. |
+| **Q47** | **D** | `[L5 Evaluate \| Std 17.1 \| Cert: ITS-JS]` | Pure entity validation enforces domain invariants fast without touching network or disk storage. |
+| **Q48** | **C** | `[L5 Evaluate \| Std 11.8 \| Cert: CIW-JS]` | Dependency injection lets offline node:test suites verify exact production behavior without live containers. |
+| **Q49** | **B** | `[L5 Evaluate \| Std 16.5 \| Domain: CTE-Lab]` | Snapshots protect historical receipts from future price edits while $lookup keeps live profile info fresh. |
+| **Q50** | **A** | `[L5 Evaluate \| Std 11.7 \| Domain: CTE-Lab]` | Bun.serve mirrors Web Standards Request/Response ergonomics directly on top of JavaScriptCore. |

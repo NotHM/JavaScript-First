@@ -1,0 +1,7 @@
+{
+  "name": "unit-21-drone-build-labs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Unit 21 Student TDD Labs: Drone Soldering/Power Safety, FC Wiring & Binary MSP, and FAA Cert Resources"
+}

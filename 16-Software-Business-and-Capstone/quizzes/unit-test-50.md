@@ -1,326 +1,326 @@
-# Unit 16 Mastery Exam (50 Questions): Software Business, Agile & Semester Capstone
+# Unit 16 Mastery Exam (50 Questions): SDLC, Security Hygiene, Ops & SaaS Economics
 
-**Course:** JavaScript First (`AZ CTE Std 19.0 & Capstone Synthesis`)  
+**Course:** JavaScript First (`CTE/CIS 202` — Grades 11–12 High School CTE & Community College)  
 **Directions:** Choose the best option (`A`, `B`, `C`, or `D`) for each question. Record your answers on your answer sheet. Do not write in shared reference booklets.
 
 **Name:** `__________________________` **Date:** `______________` **Score:** `____ / 50`
 
 ---
 
-## Part A — Core Recall & Vocabulary (`[L1 Remember]`, Questions 1–10)
+## Part A — Core Recall (`[L1 Remember]`, Questions 1–10)
 
-1. **`[L1 Remember | Std 19.1]`** Which software methodology ships working increments in time-boxed 2-week sprints?
-   - A) Strict Waterfall
-   - B) Agile / Scrum
-   - C) Single-Pass Assembly
-   - D) Manual FTP Deployment
+1. **`[L1 Remember]`** Which SDLC methodology ships tested working increments across short 1-to-2 week sprints?
+   - A) Manual Stage-Lock
+   - B) Waterfall
+   - C) Ad-Hoc Patching
+   - D) Agile / Scrum
 
-2. **`[L1 Remember | Std 19.1]`** Which linear model executes Requirements -> Design -> Build -> Test -> Deploy in sequential gates?
-   - A) Waterfall Model
-   - B) Kanban Continuous Flow
-   - C) Scrum Retro Cycle
-   - D) Freemium Trial
+2. **`[L1 Remember]`** Which fixed linear SDLC model completes Requirements, Design, Build, and Test sequentially?
+   - A) Extreme Prototyping
+   - B) Continuous Canary
+   - C) Waterfall Model
+   - D) Kanban Pull
 
-3. **`[L1 Remember | Std 19.6]`** What does MVP stand for in Agile product delivery?
-   - A) Most Valuable Programmer
-   - B) Monthly Variable Price
-   - C) Minimum Viable Product
-   - D) Multi-Version Package
+3. **`[L1 Remember]`** What is an MVP (Minimum Viable Product) in iterative software engineering?
+   - A) Internal compiler binary
+   - B) Smallest tested release validating core user value
+   - C) Maximum 10-year roadmap
+   - D) Unfinished broken prototype
 
-4. **`[L1 Remember | Std 19.2]`** What standard commission range do Apple App Store and Google Play typically charge on app sales?
-   - A) 0.1% flat fee
-   - B) 2.9% exactly
-   - C) 75%–90% revenue share
-   - D) 15% (Small Biz) to 30% (Standard)
+4. **`[L1 Remember]`** Which open-source license lets businesses modify and ship software if copyright notice stays?
+   - A) MIT License
+   - B) All Rights Reserved NDA
+   - C) Single-Seat Trial
+   - D) Hardware Firmware Lock
 
-5. **`[L1 Remember | Std 19.5]`** What does MRR stand for in SaaS software metrics?
-   - A) Maximum Runtime Memory
-   - B) Monthly Recurring Revenue
-   - C) Minimum Refund Ratio
-   - D) Managed Route Registry
+5. **`[L1 Remember]`** Which file pairing loads local secrets cleanly in Node while preventing Git commits?
+   - A) index.html + robots.txt
+   - B) config.json + README.md
+   - C) package.json + dist/
+   - D) .env + .gitignore
 
-6. **`[L1 Remember | Std 19.5]`** Which monetization model gives core functionality free while charging for Pro upgrades?
-   - A) Freemium
-   - B) One-Time Hardware Shrinkwrap
-   - C) Pure Waterfall Licensing
-   - D) Internal Intranet Only
+6. **`[L1 Remember]`** Which Git command attaches an immutable annotated version tag like v1.0.0 to a commit?
+   - A) git status -s
+   - B) git merge --squash
+   - C) git tag -a v1.0.0 -m release
+   - D) git stash push
 
-7. **`[L1 Remember | Std 19.7]`** What percentage does Monthly Churn Rate measure?
-   - A) CPU load on Demo Day
-   - B) Code lines added per sprint
-   - C) Paying users canceling per month
-   - D) HTTPS redirect latency
+7. **`[L1 Remember]`** How are monthly cloud SaaS server fees classified in IT hardware vs cloud budgeting?
+   - A) Static Licensing Debt
+   - B) OpEx (Operating Expense)
+   - C) Depreciated Hardware
+   - D) CapEx (Capital Expense)
 
-8. **`[L1 Remember | Std 19.4]`** What does CAC stand for in software business modeling?
-   - A) Centralized API Cache
-   - B) Compiled App Certificate
-   - C) Cloud Availability Check
-   - D) Customer Acquisition Cost
+8. **`[L1 Remember]`** Which built-in Node.js error class validates out-of-range numbers like negative pricing?
+   - A) RangeError
+   - B) SyntaxError
+   - C) EvalError
+   - D) ReferenceError
 
-9. **`[L1 Remember | Std 19.7]`** What minimum LTV : CAC ratio signals healthy, sustainable SaaS growth?
-   - A) 0.5 : 1
-   - B) 3 : 1 or higher (LTV >= 3 * CAC)
-   - C) 1 : 1 exactly
-   - D) 0.1 : 1
+9. **`[L1 Remember]`** Which SaaS metric sums predictable monthly revenue from all active paying subscribers?
+   - A) Server CPU Utilization
+   - B) Gross Churn Rate
+   - C) CAC Payback Lag
+   - D) MRR (Monthly Recurring Revenue)
 
-10. **`[L1 Remember | Std 19.6]`** Which Scrum ceremony inspects the past sprint workflow to pick concrete team improvements?
-    - A) Sprint Retrospective
-    - B) Database DROP Migration
-    - C) App Store Legal Review
-    - D) Initial Cold Call
+10. **`[L1 Remember]`** Which healthy SaaS ratio compares Customer Lifetime Value (LTV) to acquisition cost (CAC)?
+   - A) 1 : 10
+   - B) 1 : 1
+   - C) LTV : CAC >= 3 : 1
+   - D) CAC > 2 * LTV
 
 ---
 
 ## Part B — Conceptual Understanding (`[L2 Understand]`, Questions 11–20)
 
-11. **`[L2 Understand | Std 19.1]`** How does Top-Down Design help teams regardless of whether they use Waterfall or Agile?
-    - A) Removes the need for unit testing
-    - B) Increases Apple App Store fees to 30%
-    - C) Breaks big systems into small testable modules
-    - D) Replaces Git branches with ZIP files
+11. **`[L2 Understand]`** How does Top-Down software decomposition help teams inside either Agile or Waterfall?
+   - A) Forces global variables
+   - B) Breaks complex systems into testable pure modules
+   - C) Deletes version control
+   - D) Avoids all unit testing
 
-12. **`[L2 Understand | Std 19.4]`** What distinguishes Fixed Costs from Variable Costs in running a SaaS product?
-    - A) Fixed costs double every API login
-    - B) Fixed stays constant; variable scales per user
-    - C) Variable costs never include cloud egress
-    - D) Fixed costs only exist in hardware
+12. **`[L2 Understand]`** Why do Kanban engineering boards enforce strict WIP (Work-In-Progress) limits?
+   - A) Reduce context switching and expose bottlenecks
+   - B) Pause all commits
+   - C) Hide bugs from QA
+   - D) Increase sprint meetings
 
-13. **`[L2 Understand | Std 19.3]`** Why do users frequently abandon new consumer apps within the first 60 seconds?
-    - A) App lacks 40 advanced enterprise tabs
-    - B) Code uses CommonJS require() internally
-    - C) Privacy label lists MIT License cleanly
-    - D) High Time-to-Value onboarding friction/crashes
+13. **`[L2 Understand]`** What is the primary purpose of an Agile Sprint Retrospective ceremony?
+   - A) Reset Git history
+   - B) Demo features to buyers
+   - C) Sign legal NDAs
+   - D) Inspect process and pick workflow fixes
 
-14. **`[L2 Understand | Std 19.7]`** Why does halving monthly subscriber churn (e.g., 10% -> 5%) double Customer LTV?
-    - A) Average lifetime (1 / churn) doubles!
-    - B) Store commission automatically drops to 0%
-    - C) Monthly fixed rent gets cut in half
-    - D) CAC doubles at the same time
+14. **`[L2 Understand]`** Why must server-rendered HTML escape characters like <, >, and & before browser output?
+   - A) Enable browser cache
+   - B) Speed CSS flexbox
+   - C) Neutralize stored/reflected XSS script injection
+   - D) Reduce TCP packet MTU
 
-15. **`[L2 Understand | Std 19.6]`** Why do Kanban boards enforce explicit WIP (Work-In-Progress) limits?
-    - A) To ban code reviews on Pull Requests
-    - B) To force 15 concurrent open branches
-    - C) Focuses team on finishing tasks before starting
-    - D) Hides bugs from Sprint Review demos
+15. **`[L2 Understand]`** Why do privacy laws (FERPA/COPPA/GDPR) require explicit consent and privacy disclosures?
+   - A) Hide server logs
+   - B) Protect PII and enforce transparent handling
+   - C) Bypass TLS handshakes
+   - D) Increase CPU clocks
 
-16. **`[L2 Understand | Std 19.5]`** Why does a SaaS subscription typically yield more predictable growth than one-time licenses?
-    - A) One-time licenses charge users every day
-    - B) Subscriptions compound recurring MRR monthly
-    - C) SaaS eliminates all cloud hosting fees
-    - D) Subscriptions never experience churn
+16. **`[L2 Understand]`** Why must human engineers review AI-generated authentication or billing helpers before merge?
+   - A) AI code can hide security bugs and edge errors
+   - B) Linters fix all math errors
+   - C) Tests never catch typos
+   - D) Browsers ignore JS syntax
 
-17. **`[L2 Understand | Std 19.2]`** How does shipping a Web SaaS app compare to Apple App Store distribution regarding velocity?
-    - A) Web apps wait 7 days per bugfix review
-    - B) App Stores take 0% commission always
-    - C) Web SaaS cannot use HTTPS or JSON APIs
-    - D) Web SaaS ships via CI/CD without store waits
+17. **`[L2 Understand]`** Why do fixed costs vs variable costs behave differently as SaaS active users double?
+   - A) Both equal zero in cloud
+   - B) Variable stays zero forever
+   - C) Fixed doubles per click
+   - D) Fixed stays flat; variable scales per active user
 
-18. **`[L2 Understand | Std 19.8]`** What risk arises if an engineer pastes AI-generated backend code directly into production?
-    - A) Silent security flaws (XSS/SQLi) or logic bugs
-    - B) AI code disables Git branch protection
-    - C) JavaScript stops recognizing const keywords
-    - D) Node deletes node:test automatically
+18. **`[L2 Understand]`** Why should Node CI scripts set process.exitCode = 1 rather than 0 when verification fails?
+   - A) Clears bash history
+   - B) Compresses source maps
+   - C) Signals pipeline runner to block broken deploys
+   - D) Restarts Linux kernel
 
-19. **`[L2 Understand | Std 19.8]`** Why do teams deploy APIs to Edge Compute / Serverless platforms?
-    - A) Stores 10 TB local files inside CPU cache
-    - B) Eliminates automated unit testing needs
-    - C) Cuts latency by running code closer to users
-    - D) Replaces HTTP status codes with FTP
+19. **`[L2 Understand]`** How does halving monthly subscriber churn from 10% to 5% alter Customer Lifetime (1/churn)?
+   - A) Drops MRR to zero
+   - B) Doubles lifetime from 10 to 20 mos
+   - C) Leaves LTV unchanged
+   - D) Halves lifetime to 5 mos
 
-20. **`[L2 Understand | Std 19.2]`** Why do Apple and Google reject apps whose network traffic contradicts their Privacy Labels?
-    - A) Privacy labels optimize JPEG compression
-    - B) Stores enforce user disclosure & data laws
-    - C) App Store requires plain HTTP port 80
-    - D) Privacy labels increase MRR automatically
+20. **`[L2 Understand]`** Why do web SaaS teams gain higher margin than mobile apps paying 15%-30% store cuts?
+   - A) Web keeps ~97% after card fees & deploys fast
+   - B) Web runs without HTTP
+   - C) Stores ban JavaScript
+   - D) Mobile never uses TLS
 
 ---
 
 ## Part C — Practical Application (`[L3 Apply]`, Questions 21–30)
 
-21. **`[L3 Apply | Std 19.4]`** App charges $20/mo via 15% Small Biz store fee with $1/user infra cost. Net contribution/user?
-    - A) $19.00/mo
-    - B) $16.00/mo
-    - C) $17.00/mo
-    - D) $13.00/mo
+21. **`[L3 Apply]`** Which Node 24 CLI flag injects key-value pairs from .env without adding third-party packages?
+   - A) node --git-load app.js
+   - B) node --eval-env app.js
+   - C) node --unsafe-dot app.js
+   - D) node --env-file=.env app.js
 
-22. **`[L3 Apply | Std 19.4]`** Fixed costs = $6,000/mo; Net contribution per subscriber = $12/mo. Break-even subscriber count?
-    - A) 250 subscribers
-    - B) 600 subscribers
-    - C) 500 subscribers
-    - D) 1,200 subscribers
+22. **`[L3 Apply]`** In Node XSS sanitization, which map converts &, <, > safely before HTML template output?
+   - A) JSON.stringify only
+   - B) String.trim() only
+   - C) escapeHtml -> &amp; &lt; &gt;
+   - D) encodeURI on HTML body
 
-23. **`[L3 Apply | Std 19.7]`** Net/user = $8/mo with 5% (0.05) monthly churn (20 mo avg life). Customer LTV equals:
-    - A) $160.00
-    - B) $40.00
-    - C) $80.00
-    - D) $400.00
+23. **`[L3 Apply]`** A finance module rejects unitMargin <= 0. Which statement validates and aborts safely?
+   - A) alert(m);
+   - B) if (m <= 0) throw new RangeError(bad);
+   - C) process.env.MARGIN = m;
+   - D) return m * 0;
 
-24. **`[L3 Apply | Std 19.7]`** With LTV = $160 and CAC = $40, what is LTV : CAC and is it healthy?
-    - A) 0.25 : 1 (Unhealthy)
-    - B) 2.0 : 1 (Below target)
-    - C) 120 : 1 (Invalid)
-    - D) 4.0 : 1 (Healthy >= 3:1)
+24. **`[L3 Apply]`** Which async pattern cleanly catches failed external fetch/webhook calls in Node handlers?
+   - A) try { await fetch(...) } catch (err) { ... }
+   - B) Ignore rejected Promise
+   - C) Infinite while loop
+   - D) eval(response.text())
 
-25. **`[L3 Apply | Std 19.4]`** Monthly expenses are $6,000 and net revenue is $2,000. Cash in bank = $32,000. Startup runway?
-    - A) 16 months
-    - B) 8 months ($4,000/mo net burn)
-    - C) 5.3 months
-    - D) 4 months
+25. **`[L3 Apply]`** In Node HTTP tests, what does server.listen(0, 127.0.0.1) achieve for parallel test stability?
+   - A) Skips TCP handshake
+   - B) Exposes LAN root shell
+   - C) Forces port 443 always
+   - D) Binds loopback on free OS ephemeral port
 
-26. **`[L3 Apply | Std 19.5]`** 400 paying Pro users pay $15/mo gross. What is Monthly Recurring Revenue (MRR)?
-    - A) $6,000 MRR ($72,000 ARR)
-    - B) $4,000 MRR
-    - C) $72,000 MRR
-    - D) $26.67 MRR
+26. **`[L3 Apply]`** Which POSIX permission mode secures an app .env secret file so only its service owner reads it?
+   - A) chmod 444 .env
+   - B) chmod 777 .env
+   - C) chmod 600 .env
+   - D) chmod 755 .env
 
-27. **`[L3 Apply | Std 19.2]`** Which command loads local secrets cleanly in Node 24 without installing dotenv?
-    - A) npm publish --secret .env
-    - B) git commit -a .env
-    - C) node --env-file=.env index.js
-    - D) node --allow-all index.js
+27. **`[L3 Apply]`** Why register a Node process.on(SIGTERM) handler closing server & DB before exit?
+   - A) Disables console logs
+   - B) Ensures clean in-flight shutdown in containers
+   - C) Forces kernel panic
+   - D) Overwrites Git branches
 
-28. **`[L3 Apply | Std 1.5]`** In the Capstone, how must escapeHtml("<script>") transform dangerous characters?
-    - A) Strip brackets leaving script text
-    - B) Wrap inside console.log() only
-    - C) Return raw string unescaped
-    - D) Encode < and > as &lt; and &gt;
+28. **`[L3 Apply]`** Which response header prevents browsers from MIME-sniffing user uploads as executable JS?
+   - A) X-Content-Type-Options: nosniff
+   - B) X-Powered-By: Node
+   - C) Accept: text/plain
+   - D) Access-Control: allow-all
 
-29. **`[L3 Apply | Std 12.0]`** How should Capstone automated HTTP tests bind a port to avoid EADDRINUSE conflicts in CI?
-    - A) Hardcode port 80 as root
-    - B) server.listen(0, "127.0.0.1") ephemeral port
-    - C) Hardcode port 3000 forever
-    - D) Skip closing server sockets after tests
+29. **`[L3 Apply]`** A plan charges $20/mo minus a 15% store fee and $1.00 variable cost. Net margin per user?
+   - A) $17.00
+   - B) $19.00
+   - C) $14.00
+   - D) $16.00
 
-30. **`[L3 Apply | Std 19.6]`** Which Git command stamps an annotated semantic release tag v1.0.0 for Demo Day?
-    - A) git tag -a v1.0.0 -m "Capstone MVP"
-    - B) git reset --hard v1.0.0
-    - C) git rm --cached v1.0.0
-    - D) git push --force origin v1
+30. **`[L3 Apply]`** Startup holds $32,000 cash, fixed costs $6,000/mo, revenue $2,000/mo. Cash runway?
+   - A) 5.3 months
+   - B) 16 months
+   - C) 8 months
+   - D) 4 months
 
 ---
 
 ## Part D — Analysis & Debugging (`[L4 Analyze]`, Questions 31–40)
 
-31. **`[L4 Analyze | Std 19.4]`** Price = $5/mo, App Store cut = 30%, infra cost = $4.00/user. What happens to unit economics?
-    - A) Net profit is +$1.00/user
-    - B) Net = -$0.50/user (loses money per signup!)
-    - C) Break-even reaches 100 users easily
-    - D) Churn drops automatically to 0%
+31. **`[L4 Analyze]`** All tests pass yet the process hangs 30s before closing. Which HTTP behavior caused this?
+   - A) JSON.parse uses UDP
+   - B) Idle HTTP keep-alive sockets hold event loop
+   - C) Strict mode blocks exit
+   - D) Arrow functions leak RAM
 
-32. **`[L4 Analyze | Std 19.7]`** StudySync has LTV = $70 and paid ad CAC = $45 (ratio 1.56 : 1). What happens if they triple ad spend?
-    - A) Becomes profitable at 10,000 users
-    - B) LTV : CAC jumps above 5 : 1 automatically
-    - C) Burns cash faster on an unsustainable funnel
-    - D) App Store drops fees to 0%
+32. **`[L4 Analyze]`** A mobile client freezes with uncaught errors when switching LTE to Wi-Fi. Root cause?
+   - A) Missing network retry & error boundary
+   - B) Too many semantic HTML tags
+   - C) Using const variables
+   - D) HTTPS port 443 TLS
 
-33. **`[L4 Analyze | Std 19.7]`** Funnel: 1,000 visits -> 400 signups -> 80 complete onboarding -> 20 upgrade. Biggest leak?
-    - A) Signup -> Activation wall (only 20% finish)
-    - B) Paid upgrade rate from activated (25%)
-    - C) Landing page visit -> signup (40%)
-    - D) Stripe checkout latency
+33. **`[L4 Analyze]`** A commit exposed Stripe keys inside git log before adding .env to .gitignore. Next step?
+   - A) Delete local node_modules
+   - B) Simply add .env to .gitignore now
+   - C) Switch to HTTP port 80
+   - D) Rotate exposed keys immediately + purge Git
 
-34. **`[L4 Analyze | Std 19.6]`** 4 days before Demo Day, team adds video chat & 3D themes; on Demo Day login returns 500 error. Cause?
-    - A) Followed MVP Kanban limits too strictly
-    - B) Used node:test on port 0 too early
-    - C) Chose Agile instead of Waterfall
-    - D) Uncontrolled mid-sprint scope creep broke MVP
+34. **`[L4 Analyze]`** User profile names render inside template literal `<p>${name}</p>` with no escaping. Risk?
+   - A) SQLite foreign-key lock
+   - B) IPv6 address exhaustion
+   - C) Stored Cross-Site Scripting (XSS)
+   - D) Stack overflow in V8
 
-35. **`[L4 Analyze | Std 19.3]`** Mobile field app crashes with blank screen whenever delivery driver loses LTE in elevators. Missing trait?
-    - A) Dark mode font gradient
-    - B) Offline resilience & graceful error handling
-    - C) Ad-supported popups
-    - D) Higher monthly subscription price
+35. **`[L4 Analyze]`** An EdTech beta exports student emails to an unapproved ad tracker without notice. Violation?
+   - A) Improves unit test coverage
+   - B) Violates COPPA/FERPA privacy & store disclosure
+   - C) Required for HTTP/2
+   - D) Valid A/B testing
 
-36. **`[L4 Analyze | Std 12.0]`** Capstone test suite passes every assert() yet node --test hangs 30 seconds before timing out. Cause?
-    - A) Missing escapeHtml on <script> tags
-    - B) Churn rate divided by zero
-    - C) HTTP keep-alive sockets left open on server
-    - D) Using port 0 instead of 8080
+36. **`[L4 Analyze]`** Why did eslint pass an AI-written invoice helper that miscalculated tax * 10 instead of 0.1?
+   - A) Linters check syntax/style, not business math
+   - B) ESLint disables multiplication
+   - C) Node rounds floats up
+   - D) JSON strips decimals
 
-37. **`[L4 Analyze | Std 19.4]`** Switching same $12 app from 30% store fee ($1.40 infra) to 15% Small Biz drops break-even from 1000 to:
-    - A) 796 users ($8.80 net vs $7.00 net)
-    - B) 5,000 users (increases 5x)
-    - C) Unchanged at 1,000 users
-    - D) Zero users needed
+37. **`[L4 Analyze]`** In Node, Math.ceil(fixedCost / netMargin) avoids NaN only if netMargin > 0. What guards zero?
+   - A) Convert string to Array
+   - B) Wrap in setTimeout()
+   - C) Use == null only
+   - D) Check Number.isFinite(net) && net > 0 first
 
-38. **`[L4 Analyze | Std 19.2]`** Capstone HTTP server renders user notes via `<h2>${title}</h2>` without X-Content-Type-Options. Risk?
-    - A) SQL orphan row mismatch
-    - B) Negative SaaS churn rate
-    - C) Infinite Git rebase loop
-    - D) Stored XSS injection & MIME sniffing exposure
+38. **`[L4 Analyze]`** Which Linux gitignore entry mistake still tracks an already-committed .env file?
+   - A) Missing execute bit +x
+   - B) Running git fetch
+   - C) Forgetting git rm --cached .env after adding rule
+   - D) Using LF line endings
 
-39. **`[L4 Analyze | Std 19.8]`** Copilot generates a billing helper computing LTV = net * churnRate instead of net / churnRate. Root fix?
-    - A) Trust AI math since syntax had 0 ESLint errors
-    - B) Catch wrong formula via node:test + human audit
-    - C) Increase ad spend so churn shrinks
-    - D) Remove try/catch blocks around server
+39. **`[L4 Analyze]`** Price $5.00 minus 30% store fee ($3.50) minus $4.00 variable cost yields -$0.50. Diagnosis?
+   - A) Profitable by Q4
+   - B) Negative unit margin loses cash per user
+   - C) Break-even is 100 users
+   - D) Scale ads fast
 
-40. **`[L4 Analyze | Std 19.2]`** Play Store reviewer rejects student edtech app because telemetry uploads raw student emails silently:
-    - A) Need 30% commission payment first
-    - B) Change MIT license to GPLv3
-    - C) Violates COPPA/FERPA & Privacy disclosure
-    - D) Must rewrite Node backend into C#
+40. **`[L4 Analyze]`** Funnel: 400 visits -> 200 signups -> 80 onboarded -> 40 paid. Largest drop-off stage?
+   - A) Signup-to-Onboard activation (60% lost)
+   - B) Payments checkout
+   - C) Billing renewal
+   - D) Visit-to-Signup
 
 ---
 
 ## Part E — Evaluation & Architecture (`[L5 Evaluate]`, Questions 41–50)
 
-41. **`[L5 Evaluate | Std 19.1]`** NASA spacecraft flight software vs EdTech classroom app: match each to the optimal lifecycle model:
-    - A) Agile for NASA; Waterfall for EdTech
-    - B) Waterfall for NASA; Agile/Scrum for EdTech
-    - C) Both skip testing and use ad-hoc hacking
-    - D) Waterfall for both with 3-year releases
+41. **`[L5 Evaluate]`** Compare medical avionics vs an EdTech classroom web app. Best SDLC choices respectively?
+   - A) No SDLC for either
+   - B) Agile for both unreviewed
+   - C) Waterfall for rapid UI tweaks
+   - D) Waterfall for avionics; Agile for EdTech web
 
-42. **`[L5 Evaluate | Std 19.5]`** Launching an AI PDF-summarizer API with unpredictable per-request GPU inference costs. Best pricing?
-    - A) Usage-Based / Tiered Credits matching compute
-    - B) $2 flat lifetime one-time purchase
-    - C) Completely free unlimited calls + zero ads
-    - D) Charge users only once per decade
+42. **`[L5 Evaluate]`** Under change control 2 days pre-demo, how should leads evaluate a non-essential UI request?
+   - A) Delete existing login
+   - B) Disable all tests to save time
+   - C) Protect tested MVP & defer extras to Sprint 2
+   - D) Merge directly to main untested
 
-43. **`[L5 Evaluate | Std 19.7]`** Startup has LTV:CAC = 1.4:1 and 12% monthly churn. Rank the highest-leverage executive action:
-    - A) Raise $50K and triple TikTok ad budget
-    - B) Add 5 cosmetic dark-mode icon themes
-    - C) Double App Store commission voluntarily
-    - D) Pause paid ads, interview churned users, fix UX
+43. **`[L5 Evaluate]`** Which production policy safely pairs AI coding speed with enterprise security rigor?
+   - A) Store tokens in cookies
+   - B) Enforce human audit, OWASP checks, & node:test
+   - C) Skip authentication headers
+   - D) Paste raw AI code into prod
 
-44. **`[L5 Evaluate | Std 19.6]`** 3 days before Capstone Demo Day, stakeholder asks for live video chat alongside broken CRUD export:
-    - A) Drop CRUD tests and rush WebRTC video chat
-    - B) Push .env keys to finish 1 hour faster
-    - C) Fix CRUD bug first; log video to Phase 2
-    - D) Cancel Demo Day presentation completely
+44. **`[L5 Evaluate]`** Release checklist flags an exposed hardcoded API secret in a test helper. Proper gate verdict?
+   - A) Block release, scrub & rotate key, use .env
+   - B) Ship now and patch next month
+   - C) Obfuscate with Base64
+   - D) Ignore if repo is private
 
-45. **`[L5 Evaluate | Std 19.2]`** Founder compares launching MVP first as Web SaaS vs Native iOS App for B2B clinic scheduling:
-    - A) Launch Web SaaS: 0% store cut & instant CI fixes
-    - B) Launch iOS first to pay 30% fee immediately
-    - C) Distribute raw ZIP files over email
-    - D) Avoid CI/CD and deploy via USB drives
+45. **`[L5 Evaluate]`** Why run production Node APIs under a dedicated non-root systemd user with read-only app code?
+   - A) Removes package.json
+   - B) Increases disk speed 50%
+   - C) Allows unencrypted SSH
+   - D) Minimizes blast radius under least privilege
 
-46. **`[L5 Evaluate | Std 19.8]`** Best engineering policy for using AI coding assistants across a 4-person Capstone team?
-    - A) Merge all AI PRs blindly if they compile
-    - B) Use AI for drafts; require security & test gates
-    - C) Ban all documentation and tests when using AI
-    - D) Let AI commit .env credentials directly
+46. **`[L5 Evaluate]`** What proves a capstone JS module survives refactoring cleanly across Sprint 1 to Unit 20?
+   - A) Zero comments anywhere
+   - B) Global window state
+   - C) Passing deterministic node --test suite
+   - D) Large screenshot gallery
 
-47. **`[L5 Evaluate | Std 19.3]`** Which change most increases real Day-1 user adoption on a complex productivity web app?
-    - A) Require 14 profile fields before first screen
-    - B) Play unskippable 3-minute marketing video
-    - C) Hide main button below a 40-page EULA
-    - D) Interactive 1-click template workspace (<60s TTV)
+47. **`[L5 Evaluate]`** Which engineering choice best improves Time-to-Value within 60 seconds on initial web load?
+   - A) Force 40 MB bundle upfront
+   - B) Lazy-load bloat; render immediate core task
+   - C) Poll every 5 ms synchronously
+   - D) Block render behind 5 modals
 
-48. **`[L5 Evaluate | Std 19.2]`** Evaluate a Capstone repo for public release: green tests, README, MIT LICENSE, yet .env tracked in Git:
-    - A) Ship immediately since tests pass
-    - B) Only remove README.md before pitch
-    - C) BLOCK release: untrack .env & rotate secrets
-    - D) Ignore .env because repo is small
+48. **`[L5 Evaluate]`** Before switching prod DNS to a new release, what operational safeguard enables 30s recovery?
+   - A) Tagged rollback artifact + staging health check
+   - B) Delete previous server disk
+   - C) Disable HTTP status checks
+   - D) Run untested DB drop
 
-49. **`[L5 Evaluate | Std 19.5]`** Freemium app: 50,000 users cost $2,500/mo infra; 0.3% (150) pay $5/mo ($750 MRR). Verdict?
-    - A) Unsustainable: $750 MRR loses $1,750/mo infra
-    - B) Healthy SaaS printing massive profit margin
-    - C) Freemium always guarantees 20% conversion
-    - D) Raising churn improves profitability
+49. **`[L5 Evaluate]`** A local-AI SaaS sells metered inference tokens ($0.002/call). Best pricing alignment?
+   - A) Zero-margin ad banner
+   - B) Unlimited free lifetime tier
+   - C) Flat $1 annual plan
+   - D) Usage-Based (Pay-As-You-Go) billing
 
-50. **`[L5 Evaluate | Std 19.0]`** What makes a 3-minute Capstone Demo Day pitch truly compelling to technical & business judges?
-    - A) Reading 40 slides of raw HTML CSS tags
-    - B) Live working app + green tests + LTV:CAC math
-    - C) Promising 12 unbuilt features without code
-    - D) Disabling security headers during live demo
+50. **`[L5 Evaluate]`** Which combination defines a top Capstone Demo Day engineering & SaaS business pitch?
+   - A) Unencrypted .env dump
+   - B) 6-hour theory lecture
+   - C) Live crash-free demo, node:test, & LTV:CAC plan
+   - D) Slides only with mocked UI

@@ -1,14 +1,14 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
 Binary Search halves the search range each step. What is its Big-O time?,O(1),O(log n),O(n),O(n^2),20,2
-About how many comparisons does Binary Search need for 1 million sorted items?,1000000,500000,About 20,About 1000,30,3
-Why does binarySearch([50 10 90] 10) return -1 incorrectly?,10 is even,Input array is not sorted,binarySearch skips index 1,Number coercion error,20,2
+About how many comparisons does Binary Search need for 1 million sorted items?,1000000,500000,About 1000,About 20,30,4
+Why does binarySearch([50 10 90] 10) return -1 incorrectly?,Input array is not sorted,10 is even,binarySearch skips index 1,Number coercion error,20,1
 Which sorting algorithm divides arrays in half and merges cleanly in O(n log n)?,Bubble Sort,Selection Sort,Merge Sort,Linear Sort,20,3
-Which simple sort runs near O(n) when an array is almost sorted already?,Bubble Sort,Insertion Sort,Random Sort,Heap Overflow,20,2
-What is Bubble Sort's worst-case scaling on 10000 reversed items?,O(log n),O(n),O(n log n),O(n^2),30,4
-"What does [10 2 1].sort() return in JS without a comparator?",[1 2 10],[1 10 2] string sort,[10 2 1],Throws TypeError,30,2
-How do you sort numbers numerically ascending in JS?,arr.sort(),arr.sort((a b) => a - b),arr.reverse(),JSON.stringify(arr),20,2
+Which simple sort runs near O(n) when an array is almost sorted already?,Bubble Sort,Heap Overflow,Random Sort,Insertion Sort,20,4
+What is Bubble Sort's worst-case scaling on 10000 reversed items?,O(log n),O(n^2),O(n log n),O(n),30,2
+What does [10 2 1].sort() return in JS without a comparator?,[1 10 2] string sort,[1 2 10],[10 2 1],Throws TypeError,30,1
+How do you sort numbers numerically ascending in JS?,arr.sort(),arr.reverse(),arr.sort((a b) => a - b),JSON.stringify(arr),20,3
 When left=0 & right=0 in binarySearch what breaks with while(left < right)?,Infinite loop,Skips checking final element 0,Sorts backwards,Division by zero,30,2
-Which guarantees O(n log n) worst-case sorting on 500k records?,Bubble Sort,Insertion Sort,Merge Sort,Unsorted scan,20,3
-A model gets TP=8 FP=2 TN=85 FN=5. What is its Precision TP/(TP+FP)?,0.62,0.80,0.93,0.10,30,2
-Model has trainError=0.02 and valError=0.31. What issue occurred?,Underfitting (high bias),Overfitting (high variance),SyntaxError,Zero variance,30,2
-Group A selection rate is 0.80 and Group B is 0.50. Disparate Impact ratio?,0.625 (FAILS 4/5ths rule),1.60 (PASSES rule),0.80 (PASSES rule),0.30 (PASSES rule),30,1
+A recursive function omits its halting base case (if n <= 0 return). What occurs?,Infinite recursion causing RangeError stack overflow,Automatic O(1) speedup,Sorts array descending,Quietly returns null,20,1
+A model gets TP=8 FP=2 TN=85 FN=5. What is its Precision TP/(TP+FP)?,0.62,0.10,0.93,0.80,30,4
+Model has trainError=0.02 and valError=0.31. What issue occurred?,Underfitting (high bias),SyntaxError,Overfitting (high variance),Zero variance,30,3
+Group A selection rate is 0.80 and Group B is 0.50. Disparate Impact ratio?,1.60 (PASSES rule),0.625 (FAILS 4/5ths rule),0.80 (PASSES rule),0.30 (PASSES rule),30,2

@@ -91,7 +91,7 @@
     - C) `-rwxrws---` (`setgid`: strips execute permissions)  
     - D) `-rwx------` (blocks root access completely)  
 
-12. **`[L3 Apply | ITS 101 / ADE 2.1–2.6]`** A workstation draws `440 W` under peak CPU/GPU load. Applying the **`+25%` PSU headroom rule** (`440 * 1.25`), which standard PSU rating should you purchase, and how must spent motherboards be disposed?  
+12. **`[L3 Apply | CompTIA A+ / ADE 2.1–2.6]`** A workstation draws `440 W` under peak CPU/GPU load. Applying the **`+25%` PSU headroom rule** (`440 * 1.25`), which standard PSU rating should you purchase, and how must spent motherboards be disposed?  
     - A) `450 W` PSU; toss old motherboards in standard dumpster  
     - B) `550 W` (or `650 W`) PSU; recycle motherboards via certified R2/e-Stewards e-waste recycler  
     - C) `400 W` PSU; open sealed PSU housing to adjust capacitors manually  
@@ -120,5 +120,5 @@
     // Write your solution here:
     ```
 
-16. **`[L4 Analyze / L5 Evaluate | ITS 102 / ADE 8.6–8.8, 10.2]`** An operations audit flags a Linux build server with: (1) `/etc/ssh/sshd_config` containing `PermitRootLogin yes` and `PasswordAuthentication yes`, (2) `journalctl` showing 120 failed `root` logins plus backwards timestamps, and (3) `SELinux` set to `Disabled` with `firewalld` stopped. Prescribe **exact remediations** across SSH, NTP/logging, `firewalld`, and SELinux (`Enforcing`).  
+16. **`[L4 Analyze / L5 Evaluate | RHCSA / CompTIA Sec+ / ADE 8.6–8.8, 10.2]`** An operations audit flags a Linux build server with: (1) `/etc/ssh/sshd_config` containing `PermitRootLogin yes` and `PasswordAuthentication yes`, (2) `journalctl` showing 120 failed `root` logins plus backwards timestamps, and (3) `SELinux` set to `Disabled` with `firewalld` stopped. Prescribe **exact remediations** across SSH, NTP/logging, `firewalld`, and SELinux (`Enforcing`).  
     > *(Your remediation plan)*  

@@ -1,6 +1,6 @@
 /**
  * Student Lesson 10.3 Automated Test Suite (node --test)
- * Standards: West-MEC AI101 Unit 2, AI102 Unit 10, AI201 Units 3-4 (AI Stds 3.0, 8.0, 9.0)
+ * Standards: CTE AI (11.0102.00) / Azure AI-900 (AI Stds 3.0, 8.0, 9.0)
  *
  * Run:
  *   node --test 0-student_files/10-computer-vision/cvKernelAndIouLab.test.mjs

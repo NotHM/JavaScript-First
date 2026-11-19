@@ -1,7 +1,7 @@
 # Unit 19: Game Loops, Phaser 3, `jsgamelauncher` & Part 107 Drone Mission Sim
 
-**AZ CTE Standards:** `1.5, 4.3, 9.2, 11.4, 11.7, 12.0, 15.5, 17.3, 18.0, 19.8` + **West-MEC `DT102` (`14.0–28.0`: FAA Part 107 / TRUST)**  
-**Project Brief:** [`projects/unit-project.md`](./projects/unit-project.md) · **Setup Guide:** [`setup-guide.md`](./setup-guide.md) · **50-Q Mastery Exam:** [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md)
+**AZ CTE Standards:** `1.5, 4.3, 9.2, 11.4, 11.7, 12.0, 15.5, 17.3, 18.0, 19.8` + **CTE Drone Tech (`49.0199.00`) / FAA Part 107 (`14.0–28.0`)**  
+**Semester Schedule:** Year 2 Semester 4 (`CTE/CIS 202` · **45 Hours**) · **Project Brief:** [`projects/unit-project.md`](./projects/unit-project.md) · **Setup Guide:** [`setup-guide.md`](./setup-guide.md) · **50-Q Mastery Exam:** [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md)
 
 ---
 
@@ -11,7 +11,7 @@ Every new web developer writes the same first Canvas toy: `player.x += 5` inside
 
 Then you flash that game onto a \$40 Linux retro handheld running **Knulli** or **ROCKNIX**—no mouse, no physical keyboard, a 60 Hz 4:3 screen (`640x480`), a slightly worn left thumbstick outputting `0.07` even when nobody touches it, and `npm install` disabled on an air-gapped microSD card. Suddenly every shortcut in your tutorial collapses on frame one.
 
-Unit 19 fixes that forever by pairing [**`monteslu/jsgamelauncher`**](https://github.com/monteslu/jsgamelauncher) (grounded in [`developing-games.md`](https://github.com/monteslu/jsgamelauncher/blob/main/docs/developing-games.md), [`simple-jsgame-starter`](https://github.com/monteslu/simple-jsgame-starter), and [`jsgames/simple-phaser`](https://github.com/monteslu/jsgames/tree/main/simple-phaser)) with **FAA 14 CFR Part 107 commercial sUAS simulation** (`West-MEC DT102`). Everything you build works seamlessly in a desktop browser (`npm run dev`), inside native `npx rungame` handheld execution, AND inside offline `node --test` suites.
+Unit 19 (`45 hrs`, Year 2 Semester 4 `CTE/CIS 202`) fixes that forever by pairing [**`monteslu/jsgamelauncher`**](https://github.com/monteslu/jsgamelauncher) (grounded in [`developing-games.md`](https://github.com/monteslu/jsgamelauncher/blob/main/docs/developing-games.md), [`simple-jsgame-starter`](https://github.com/monteslu/simple-jsgame-starter), and [`jsgames/simple-phaser`](https://github.com/monteslu/jsgames/tree/main/simple-phaser)) with **FAA 14 CFR Part 107 commercial sUAS simulation** (`CTE Drone Tech 49.0199.00`). Everything you build works seamlessly in a desktop browser (`npm run dev`), inside native `npx rungame` handheld execution, AND inside offline `node --test` suites—directly preparing your flight rules, Mode-2 stick intuition, and telemetry mindset for physical **bench bring-up, soldering, UART/MSP coding, and external FAA `TRUST`/`Part 107` certifications** in [Unit 21](../21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/unit-guide.md).
 
 ---
 
@@ -25,7 +25,7 @@ Unit 19 fixes that forever by pairing [**`monteslu/jsgamelauncher`**](https://gi
    - Slides: [`02-Phaser-JS-and-JSGameLauncher/slides/slides.md`](./02-Phaser-JS-and-JSGameLauncher/slides/slides.md)
    - Student Lab: [`02-Phaser-JS-and-JSGameLauncher/student-lesson.md`](./02-Phaser-JS-and-JSGameLauncher/student-lesson.md)
    - Reference Demo & Tests: [`02-Phaser-JS-and-JSGameLauncher/code/phaser-starter/`](./02-Phaser-JS-and-JSGameLauncher/code/phaser-starter/src/main.js) • [`jsgamePackaging.test.mjs`](./02-Phaser-JS-and-JSGameLauncher/code/jsgamePackaging.test.mjs)
-3. **[Lesson 19.3 — FAA Part 107 Airspace, METAR Weather, Survey Grids & Mode-2 Flight Sim (`West-MEC DT102 14.0–28.0` + `AZ CTE 9.0, 15.0, 19.0`)](./03-Drone-Mission-Sim-Part107-and-METAR/readme.md)**
+3. **[Lesson 19.3 — FAA Part 107 Airspace, METAR Weather, Survey Grids & Mode-2 Flight Sim (`CTE Drone Tech 49.0199.00` + `AZ CTE 9.0, 15.0, 19.0`)](./03-Drone-Mission-Sim-Part107-and-METAR/readme.md)**
    - Slides: [`03-Drone-Mission-Sim-Part107-and-METAR/slides/slides.md`](./03-Drone-Mission-Sim-Part107-and-METAR/slides/slides.md)
    - Student Lab: [`03-Drone-Mission-Sim-Part107-and-METAR/student-lesson.md`](./03-Drone-Mission-Sim-Part107-and-METAR/student-lesson.md) | [`../0-student_files/19-drone-part107-sim/part107AndMetarLab.mjs`](../0-student_files/19-drone-part107-sim/part107AndMetarLab.mjs)
    - Reference Demo & Tests: [`03-Drone-Mission-Sim-Part107-and-METAR/code/part107MissionSimDemo.mjs`](./03-Drone-Mission-Sim-Part107-and-METAR/code/part107MissionSimDemo.mjs) • [`part107MissionSimDemo.test.mjs`](./03-Drone-Mission-Sim-Part107-and-METAR/code/part107MissionSimDemo.test.mjs)
@@ -164,9 +164,9 @@ export default defineConfig({
 
 ---
 
-## Part 3: `DT102` FAA Part 107 Compliance, METAR Weather & Mode-2 Drone Sim
+## Part 3: CTE Drone Tech FAA Part 107 Compliance, METAR Weather & Mode-2 Drone Sim
 
-Your exact 4:3 Canvas + Gamepad loop also powers commercial sUAS flight simulators (`West-MEC DT102 14.0–28.0`). Instead of bouncing arcade balls, every pre-flight dispatch enforces federal airspace and weather constraints before virtual motors ever spin:
+Your exact 4:3 Canvas + Gamepad loop also powers commercial sUAS flight simulators (`CTE Drone Tech 49.0199.00 / FAA Part 107`). Instead of bouncing arcade balls, every pre-flight dispatch enforces federal airspace and weather constraints before virtual motors ever spin—preparing directly for physical [Unit 21 drone bench bring-up](../21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/unit-guide.md) and external [FAA TRUST](https://www.faa.gov/uas/recreational_flyers/knowledge_test_updates) / [Part 107](https://www.faa.gov/regulations_policies/handbooks_manuals/aviation) credentials:
 
 ### 1. Part 107 Rules, LAANC Ceilings & `§107.9` Accident Reporting
 

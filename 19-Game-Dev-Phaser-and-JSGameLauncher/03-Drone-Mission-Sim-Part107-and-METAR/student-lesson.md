@@ -4,9 +4,9 @@
 **Starter File:** [`../../0-student_files/19-drone-part107-sim/part107AndMetarLab.mjs`](../../0-student_files/19-drone-part107-sim/part107AndMetarLab.mjs)
 
 ## My Lesson SMART Objectives
-- [ ] **SL-L19.3-1 (`[L1–L2]` | `DT102` | `SG-U19-6`):** Complete Part A covering Part 107 limits, `TRUST` vs. `UAG`, Class `B–G`/LAANC rules, `§107.9` reporting, `METAR`/`TAF`, and `75%/65%` spacing math before lab coding.
-- [ ] **SL-L19.3-2 (`[L3]` | `DT102, 9.2, 15.5` | `SG-U19-6`):** Implement every `TODO` function in [`part107AndMetarLab.mjs`](../../0-student_files/19-drone-part107-sim/part107AndMetarLab.mjs) and pass `node --check` + runtime checks cleanly.
-- [ ] **SL-L19.3-3 (`[L4–L5]` | `4.3, 18.0, DT102` | `SG-U19-6`):** Diagnose all Mode-2 Gamepad Y-axis, deadzone, and `dt`-clamping defects in Part C, complete Part D GO/NO-GO dispatch, and finish [`post-lesson-eval.md`](./post-lesson-eval.md).
+- [ ] **SL-L19.3-1 (`[L1–L2]` | `49.0199.00` | `SG-U19-6`):** Complete Part A covering Part 107 limits, `TRUST` vs. `UAG`, Class `B–G`/LAANC rules, `§107.9` reporting, `METAR`/`TAF`, and `75%/65%` spacing math before lab coding.
+- [ ] **SL-L19.3-2 (`[L3]` | `49.0199.00, 9.2, 15.5` | `SG-U19-6`):** Implement every `TODO` function in [`part107AndMetarLab.mjs`](../../0-student_files/19-drone-part107-sim/part107AndMetarLab.mjs) and pass `node --check` + runtime checks cleanly.
+- [ ] **SL-L19.3-3 (`[L4–L5]` | `4.3, 18.0, 49.0199.00` | `SG-U19-6`):** Diagnose all Mode-2 Gamepad Y-axis, deadzone, and `dt`-clamping defects in Part C, complete Part D GO/NO-GO dispatch, and finish [`post-lesson-eval.md`](./post-lesson-eval.md).
 
 ---
 

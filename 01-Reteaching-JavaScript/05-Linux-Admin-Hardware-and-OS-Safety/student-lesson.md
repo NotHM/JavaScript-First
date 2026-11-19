@@ -1,6 +1,6 @@
 # Student Lesson 1.5: Linux System Administration, Hardware & OS Safety
 
-**Standards:** West-MEC `ITS 101–102` (`ITF+`, `A+`, `RHCSA EX200`) | **ADE:** `2.1–2.6, 8.6–8.8, 10.2`  
+**Standards:** CTE IT Security (`11.1999.00`) / `CompTIA ITF+`, `CompTIA A+`, `RHCSA EX200` | **ADE:** `2.1–2.6, 8.6–8.8, 10.2`  
 **Reading:** [`readme.md`](./readme.md) | **Slides:** [`slides/slides.md`](./slides/slides.md)  
 **Starter Lab:** [`../../0-student_files/01-linux-admin-safety/posixAuditLab.mjs`](../../0-student_files/01-linux-admin-safety/posixAuditLab.mjs)
 
@@ -17,7 +17,7 @@
 
 ## Part A: Hardware, Safety & Linux Architecture (`[L1 Remember]` & `[L2 Understand]`)
 
-1. Complete the hardware & safety reference table (`ITS 101`, `ADE 2.1–2.6`):
+1. Complete the hardware & safety reference table (`CompTIA A+`, `ADE 2.1–2.6`):
    - **RAID 0** survives `____` failed drives, while **RAID 1** survives `____` drive and **RAID 5** requires at least `____` drives.
    - An **ESD wrist strap** contains a `________` safety resistor and connects to a `________________`.
    - A swollen **Li-ion battery** must NEVER go in municipal trash; dispose via `________________`.
@@ -73,7 +73,7 @@
 ## Part D: Defense-in-Depth Server Architecture (`[L5 Evaluate]`)
 
 Your lab team is provisioning an on-premise Ubuntu/RHEL Node.js build server drawing **460 W** peak under load (`2x NVMe` drives for OS + `4x SATA SSD` for database). Recommend:
-1. Minimum **PSU wattage** (show `+25%` headroom math) and **RAID level** for the DB array (`ITS 101`).
+1. Minimum **PSU wattage** (show `+25%` headroom math) and **RAID level** for the DB array (`CompTIA A+`).
 2. **SELinux mode** (`Enforcing` vs `Disabled`) and **`firewalld`** rule strategy (`RH134`).
 3. **Automated backup scheduling** (`cron` or `systemd.timer`) + **`sudo`** access policy (`ADE 8.7`).
 > *(Your architecture recommendation)*

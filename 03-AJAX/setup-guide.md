@@ -51,7 +51,7 @@ if (req.method === 'OPTIONS') {
 ### D. SSH Ed25519 Keys & Docker Baseline Commands (`Std 9.3, 9.5`)
 ```bash
 # SSH key-based remote workflow
-ssh-keygen -t ed25519 -C "dev@westmec.edu"
+ssh-keygen -t ed25519 -C "dev@cte-cis.edu"
 chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_ed25519
 ssh -i ~/.ssh/id_ed25519 deploy@staging.internal "node -v"
 

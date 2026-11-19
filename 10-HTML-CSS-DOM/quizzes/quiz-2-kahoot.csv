@@ -1,14 +1,14 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
 Clicking Form Submit refreshes browser and wipes roster array. Missing call?,event.stopLoop(),event.preventDefault(),form.delete(),window.close(),20,2
-Setting li.innerHTML = userBio risks HTML script injection XSS. Safe property?,li.outerHTML,li.textContent,li.cssText,li.eval,20,2
+Setting li.innerHTML = userBio risks HTML script injection XSS. Safe property?,li.outerHTML,li.eval,li.cssText,li.textContent,20,4
 Calling ctx.rotate(0.5) tilts every later Canvas frame unless paired with:,ctx.save() and ctx.restore(),ctx.reload(),clearTimeout(),alert(),30,1
-Live status banner updates must announce smoothly to screen readers using:,hidden="true",aria-live="polite",role="marquee",placeholder,20,2
-Hide navigation sidebars when users print a ticket to paper or PDF using:,@media print,@import css,@keyframes,@font-face,20,1
+Live status banner updates must announce smoothly to screen readers using:,"hidden=""true""","role=""marquee""","aria-live=""polite""",placeholder,20,3
+Hide navigation sidebars when users print a ticket to paper or PDF using:,@font-face,@import css,@keyframes,@media print,20,4
 Automated contrast scan passed 100% yet Tab key traps users inside modal. Needs:,Disable keyboard,Human keyboard usability testing,Darker gray fonts,Remove focus outline,30,2
-Box width 300px plus 20px padding plus 5px border under content-box totals:,300px,325px,350px,250px,30,3
-Low-fidelity structural skeleton boxes validating page layout BEFORE styling are:,Production APKs,Wireframes,Memory leaks,Unit tests,20,2
-Placeholder-only inputs lose label context once typed. Semantic accessibility fix?,Larger placeholder,Bound <label for="id">,Remove borders,Use <span> only,20,2
-Two-page portfolio needing 0ms JS/CSS framework overhead is best styled with:,Heavy 300KB enterprise suite,Lightweight native CSS variables,Flash plugins,Inline font tags,30,2
-Corner pixels turn dark when applying 3x3 Box Blur on a bright white grid. Likely fix?,Switch borderMode from zero padding to clamp edge replication,Multiply RGB alpha values by zero,Set threshold to 999,Delete top and left columns,30,1
+Box width 300px plus 20px padding plus 5px border under content-box totals:,350px,325px,300px,250px,30,1
+Mobile cards overflow a fixed 3-column CSS Grid horizontally. Clean responsive fix?,Delete all mobile CSS,Force 1600px fixed body width,Add @media (max-width: 640px) stacking to 1fr,Use inline <font> tags,20,3
+Placeholder-only inputs lose label context once typed. Semantic accessibility fix?,Larger placeholder,"Bound <label for=""id"">",Remove borders,Use <span> only,20,2
+Two-page portfolio needing 0ms JS/CSS framework overhead is best styled with:,Lightweight native CSS variables,Heavy 300KB enterprise suite,Flash plugins,Inline font tags,30,1
+Corner pixels turn dark when applying 3x3 Box Blur on a bright white grid. Likely fix?,Delete top and left columns,Multiply RGB alpha values by zero,Set threshold to 999,Switch borderMode from zero padding to clamp edge replication,30,4
 Sobel gradients compute Gx = 60 and Gy = 80 at an edge pixel. Combined magnitude?,20 (80 - 60),140 (60 + 80),100 (sqrt(60^2 + 80^2)),4800 (60 * 80),30,3
 30fps safety cam requires <25ms latency + zero raw video uploads despite 85ms WAN RTT:,Send uncompressed RGB frames to Cloud TPU,Run quantized model locally on Edge NPU,Render frames on paper with @media print,Wait for nightly batch cron job,30,2

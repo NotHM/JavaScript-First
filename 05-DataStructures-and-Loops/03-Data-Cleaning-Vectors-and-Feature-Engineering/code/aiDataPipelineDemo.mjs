@@ -1,7 +1,7 @@
 /**
  * Lesson 5.3 Instructor Reference: Data Cleaning, PII Anonymization,
  * Feature Vectors, Matrix Algebra, Statistics & EDA Pipeline.
- * Standards: West-MEC AI101 Units 3-4, AI201 Unit 1 (AI Stds 4.0, 5.0); AZ CTE 6.1-6.5, 7.1-7.4
+ * Standards: CTE AI (11.0102.00) / Azure AI-900 (AI Stds 4.0, 5.0); AZ CTE 6.1-6.5, 7.1-7.4
  *
  * Run:
  *   node 05-DataStructures-and-Loops/03-Data-Cleaning-Vectors-and-Feature-Engineering/code/aiDataPipelineDemo.mjs
@@ -182,7 +182,7 @@ export function redactPiiText(text) {
  */
 export function anonymizePiiRecord(
   record,
-  { hashFields = ['studentId', 'email'], redactFields = ['name', 'ssn'], textFields = ['notes'], salt = 'westmec-ai-salt' } = {}
+  { hashFields = ['studentId', 'email'], redactFields = ['name', 'ssn'], textFields = ['notes'], salt = 'cte-ai-salt' } = {}
 ) {
   const out = { ...record };
 
@@ -526,14 +526,14 @@ export function buildEdaHealthSummary(records, { numericFields = [], categorical
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const sampleCsv = [
     'studentId,name,email,studyHours,score,track,notes',
-    'S101,Ada Lovelace,ada@westmec.edu,6,92,AI,Contact 602-555-0199',
-    'S102,Alan Turing,alan@westmec.edu,4,81,Systems,SSN 123-45-6789',
-    'S102,Alan Turing,alan@westmec.edu,4,81,Systems,Duplicate entry',
-    'S103,Grace Hopper,grace@westmec.edu,NA,95,AI,Compiler pioneer',
-    'S104,Katherine Johnson,kj@westmec.edu,8,98,AI,Orbital math',
-    'S105,Mary Jackson,mary@westmec.edu,5,88,AI,Aerospace data',
-    'S106,Dorothy Vaughan,dorothy@westmec.edu,6,90,Systems,FORTRAN lead',
-    'S107,Test Outlier,outlier@westmec.edu,2,250,Systems,Sensor glitch score',
+    'S101,Ada Lovelace,ada@cte-cis.edu,6,92,AI,Contact 602-555-0199',
+    'S102,Alan Turing,alan@cte-cis.edu,4,81,Systems,SSN 123-45-6789',
+    'S102,Alan Turing,alan@cte-cis.edu,4,81,Systems,Duplicate entry',
+    'S103,Grace Hopper,grace@cte-cis.edu,NA,95,AI,Compiler pioneer',
+    'S104,Katherine Johnson,kj@cte-cis.edu,8,98,AI,Orbital math',
+    'S105,Mary Jackson,mary@cte-cis.edu,5,88,AI,Aerospace data',
+    'S106,Dorothy Vaughan,dorothy@cte-cis.edu,6,90,Systems,FORTRAN lead',
+    'S107,Test Outlier,outlier@cte-cis.edu,2,250,Systems,Sensor glitch score',
   ].join('\n');
 
   const rawRecords = parseCsvToRecords(sampleCsv);

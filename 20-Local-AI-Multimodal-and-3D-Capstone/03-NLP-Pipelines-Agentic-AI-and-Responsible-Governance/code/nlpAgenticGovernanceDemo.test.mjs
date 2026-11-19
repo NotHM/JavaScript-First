@@ -215,7 +215,7 @@ test('buildAndValidateModelCard validates EU AI Act risk tiers, NIST AI RMF, and
     },
     oecdPrinciples: ['Transparency', 'Accountability', 'Fairness'],
     ieeeAlignment: 'Prioritizes student agency and human oversight',
-    intendedUse: 'Local classroom study assistant for West-MEC coding labs',
+    intendedUse: 'Local classroom study assistant for High School CTE & CIS coding labs',
     outOfScopeUses: ['Automated disciplinary decisions', 'Medical or clinical diagnosis'],
     trainingDataSummary: { sources: 'Curated JavaScript-First curriculum', piiFiltered: true },
     metrics: { f1: 0.91, groundedCitationRate: 0.96, hallucinationRate: 0.02 },

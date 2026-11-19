@@ -4,10 +4,11 @@
  *
  * Usage:
  *   node tools/verify.mjs --tests   (Syntax checks + all instructor node:test suites)
- *   node tools/verify.mjs --full    (Full QA: syntax, node:test, HTML scripts, 60 Kahoot CSVs,
- *                                    >=5 Student/Teacher SMART Goals x 20 units, Medium readmes,
+ *   node tools/verify.mjs --full    (Full QA: syntax, node:test, HTML scripts, 63 Kahoot CSVs,
+ *                                    >=5 Student/Teacher SMART Goals x 21 units, Medium readmes,
  *                                    setup guides, 50-Q Mastery Exams & keys, TDD test manifest,
- *                                    link integrity, 00-Drafts removal check, and spoiler scan)
+ *                                    link integrity, 00-Drafts removal, zero legacy brand refs,
+ *                                    >=75% 8-cert quiz alignment, and spoiler scan)
  */
 
 import { execFileSync, spawnSync } from 'node:child_process';
@@ -150,8 +151,8 @@ function checkKahootCsvs() {
   const failures = [];
   let totalQuestions = 0;
 
-  if (csvFiles.length !== 60) {
-    failures.push(`Expected 60 Kahoot CSV files across 20 units (quiz-1, quiz-2, unit-test-50), found ${csvFiles.length}`);
+  if (csvFiles.length !== 63) {
+    failures.push(`Expected 63 Kahoot CSV files across 21 units (quiz-1, quiz-2, unit-test-50), found ${csvFiles.length}`);
   }
 
   for (const file of csvFiles) {
@@ -200,13 +201,13 @@ function checkKahootCsvs() {
 function checkUnitMasterySetupAndTdd() {
   const unitDirs = fs
     .readdirSync(ROOT, { withFileTypes: true })
-    .filter((d) => d.isDirectory() && /^(0[1-9]|1[0-9]|20)-/.test(d.name))
+    .filter((d) => d.isDirectory() && /^(0[1-9]|1[0-9]|2[01])-/.test(d.name))
     .map((d) => d.name)
     .sort();
 
   const failures = [];
-  if (unitDirs.length !== 20) {
-    failures.push(`Expected 20 unit directories (01–20), found ${unitDirs.length}`);
+  if (unitDirs.length !== 21) {
+    failures.push(`Expected 21 unit directories (01–21), found ${unitDirs.length}`);
   }
 
   for (const unit of unitDirs) {
@@ -254,8 +255,8 @@ function checkUnitMasterySetupAndTdd() {
   }
 
   let registeredSuites = 0;
-  if (UNITS_MANIFEST.length !== 20) {
-    failures.push(`tools/grade.mjs UNITS_MANIFEST has ${UNITS_MANIFEST.length} units (expected 20)`);
+  if (UNITS_MANIFEST.length !== 21) {
+    failures.push(`tools/grade.mjs UNITS_MANIFEST has ${UNITS_MANIFEST.length} units (expected 21)`);
   }
   for (const entry of UNITS_MANIFEST) {
     if (!entry.labs || entry.labs.length === 0) {
@@ -293,13 +294,13 @@ function checkUnitMasterySetupAndTdd() {
 function checkSmartGoals() {
   const unitDirs = fs
     .readdirSync(ROOT, { withFileTypes: true })
-    .filter((d) => d.isDirectory() && /^(0[1-9]|1[0-9]|20)-/.test(d.name))
+    .filter((d) => d.isDirectory() && /^(0[1-9]|1[0-9]|2[01])-/.test(d.name))
     .map((d) => d.name)
     .sort();
 
   const failures = [];
-  if (unitDirs.length !== 20) {
-    failures.push(`Expected 20 unit directories (01–20), found ${unitDirs.length}`);
+  if (unitDirs.length !== 21) {
+    failures.push(`Expected 21 unit directories (01–21), found ${unitDirs.length}`);
   }
 
   for (const unit of unitDirs) {
@@ -339,6 +340,79 @@ function checkSmartGoals() {
   console.log(`[smart] Verified ${unitDirs.length} unit guides (>=5 Student & >=5 Teacher SMART goals each) + ${lessonFiles.length} lesson docs -> ${failures.length} failure(s)`);
   if (failures.length) {
     throw new Error(`SMART Goal validation errors:\n${failures.join('\n')}`);
+  }
+}
+
+function checkNoLegacyBrandOrCourseCodes() {
+  // Dynamically construct forbidden brand and legacy course regexes so verify.mjs never flags its own source
+  const brandPattern = ['w', 'e', 's', 't', '[-_\\s]?', 'm', 'e', 'c', '|', 'w', 'e', 's', 't', 'm', 'e', 'c', 'o', 'r', 'g'].join('');
+  const legacyBrandRe = new RegExp(brandPattern, 'i');
+  const legacyCourseRe = new RegExp(['\\bC', 'O(?:101|102|201|202)\\b'].join(''));
+  const textExtRe = /\.(md|js|mjs|cjs|html|ts|json|yml|csv|svg)$/i;
+
+  const hits = [];
+  for (const file of ALL_FILES) {
+    const r = rel(file);
+    if (legacyBrandRe.test(r) || legacyCourseRe.test(r)) {
+      hits.push(`path matches legacy token: ${r}`);
+    }
+    if (!textExtRe.test(r)) continue;
+    const lines = fs.readFileSync(file, 'utf8').split(/\r?\n/);
+    for (let idx = 0; idx < lines.length; idx++) {
+      if (legacyBrandRe.test(lines[idx]) || legacyCourseRe.test(lines[idx])) {
+        hits.push(`${r}:${idx + 1}: ${lines[idx].trim().slice(0, 120)}`);
+      }
+    }
+  }
+  console.log(`[branding] Audited ${ALL_FILES.length} files for removed regional brand / legacy course codes -> ${hits.length} hit(s)`);
+  if (hits.length) {
+    throw new Error(`Legacy regional branding / course code hits:\n${hits.slice(0, 50).join('\n')}`);
+  }
+}
+
+function checkQuizCertAlignment() {
+  const unitDirs = fs
+    .readdirSync(ROOT, { withFileTypes: true })
+    .filter((d) => d.isDirectory() && /^(0[1-9]|1[0-9]|2[01])-/.test(d.name))
+    .map((d) => d.name)
+    .sort();
+
+  const certTokenRe = /Cert:\s*(CIW-JS|ITS-JS|ITS-HTML-CSS|CompTIA-ITF\+|CompTIA-A\+|CompTIA-Sec\+|RHCSA|CCNA)(?![A-Za-z0-9_+-])/;
+  const failures = [];
+  let auditedFiles = 0;
+  let totalItems = 0;
+  let totalCertItems = 0;
+
+  for (const unit of unitDirs) {
+    for (const fname of ['quiz-1-concepts.md', 'quiz-2-application.md', 'unit-test-50-answer-key.md']) {
+      const fpath = path.join(ROOT, unit, 'quizzes', fname);
+      const r = rel(fpath);
+      if (!fs.existsSync(fpath)) {
+        failures.push(`${r}: file missing`);
+        continue;
+      }
+      auditedFiles++;
+      const lines = fs.readFileSync(fpath, 'utf8').split(/\r?\n/);
+      const itemRows = lines.filter((line) => /^\|\s*\*?\*?Q?\d+/.test(line));
+      if (itemRows.length === 0) {
+        failures.push(`${r}: no numbered question table rows found`);
+        continue;
+      }
+      const certRows = itemRows.filter((line) => certTokenRe.test(line));
+      const minRequired = Math.ceil(itemRows.length * 0.75);
+      totalItems += itemRows.length;
+      totalCertItems += certRows.length;
+      if (certRows.length < minRequired) {
+        const pct = ((certRows.length / itemRows.length) * 100).toFixed(1);
+        failures.push(`${r}: only ${certRows.length}/${itemRows.length} (${pct}%) cert-aligned items (requires >= ${minRequired} / 75%)`);
+      }
+    }
+  }
+
+  const overallPct = totalItems > 0 ? ((totalCertItems / totalItems) * 100).toFixed(1) : '0.0';
+  console.log(`[certs] Audited ${auditedFiles} quiz/key files (${totalCertItems}/${totalItems} = ${overallPct}% 8-cert aligned) -> ${failures.length} failure(s)`);
+  if (failures.length) {
+    throw new Error(`Certification alignment failures (< 75%):\n${failures.slice(0, 50).join('\n')}`);
   }
 }
 
@@ -429,9 +503,27 @@ function checkSpoilers() {
       hits.push(rel(file));
     }
   }
-  console.log(`[spoilers] Audited ${studentDocs.length} student assessment/worksheet files -> ${hits.length} spoiler warning(s)`);
+  // Ensure no unbackticked <script> tags sit inside book/quiz/eval Markdown (breaks Pandoc+Chromium PDF output)
+  const rawScriptHits = [];
+  for (const file of ALL_FILES.filter((f) => f.endsWith('.md'))) {
+    const r = rel(file);
+    if (r === '0-documentation/section-footer.md' || /\/slides\//.test(r) || r === '02-HTTP/03-http.md') continue;
+    let inFence = false;
+    fs.readFileSync(file, 'utf8').split(/\r?\n/).forEach((line, idx) => {
+      if (/^\s*(```|~~~)/.test(line)) { inFence = !inFence; return; }
+      if (inFence) return;
+      const stripped = line.replace(/`[^`]*`/g, '');
+      if (/<\/?script\b/i.test(stripped)) {
+        rawScriptHits.push(`${r}:${idx + 1}`);
+      }
+    });
+  }
+  console.log(`[spoilers] Audited ${studentDocs.length} student assessment/worksheet files -> ${hits.length} spoiler warning(s), ${rawScriptHits.length} unescaped <script> tag(s)`);
   if (hits.length) {
     throw new Error(`Possible answer spoiler headings in student files:\n${hits.join('\n')}`);
+  }
+  if (rawScriptHits.length) {
+    throw new Error(`Unbackticked <script> tags found in Markdown (breaks Pandoc/Chromium PDF builds):\n${rawScriptHits.join('\n')}`);
   }
 }
 
@@ -447,6 +539,8 @@ if (runFull && !runTestsOnly) {
   checkKahootCsvs();
   checkUnitMasterySetupAndTdd();
   checkSmartGoals();
+  checkNoLegacyBrandOrCourseCodes();
+  checkQuizCertAlignment();
   checkLinksAndDrafts();
   checkSpoilers();
   console.log('\nALL VERIFICATION CHECKS PASSED CLEANLY!');

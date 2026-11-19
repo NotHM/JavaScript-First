@@ -1,16 +1,16 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
-What does (typeof null === "object") evaluate to in JavaScript?,true,false,"null",Throws SyntaxError,20,1
-What does (typeof [10 20]) return in Node.js?,"array","object","list","number",20,2
+What does (typeof null === 'object') evaluate to in JavaScript?,Throws SyntaxError,false,'null',true,20,4
+"What does (typeof [10, 20]) return in Node.js?",'object','array','list','number',20,1
 "What prints: const s = ""  node ""; console.log(s.trim().length);?",7,4,5,undefined,30,2
-What does typeof x return after running: let x; ?,"null",Throws ReferenceError,"undefined","void",20,3
-Which expression safely tests if x is ANY JavaScript primitive?,typeof x !== "object",x===null || (typeof x!=="object" && typeof x!=="function"),Boolean(x),x != "",60,2
-Why does if (!score) treat a student score of 0 as missing?,0 is a string,typeof 0 is "null",0 is falsy so !0 is true,score must use var,30,3
-Which ANSI escape sequence resets terminal colors to default?,\x1b[31m,\x1b[0m,\n\r,console.reset,30,2
-Logging raw student SSNs and birthdays to debug.log violates which rule?,ES6 syntax,FERPA / GDPR privacy minimization,MIT attribution,Terminal ANSI spec,30,2
-Which third-party code must a closed commercial team REJECT?,MIT licensed utility,ISC licensed parser,Unlicensed code copied off a blog,Apache 2.0 helper,30,3
-"Error: Missing script 'audit-deps'. Where do you define npm scripts?",test.js,"scripts" in package.json,.gitignore,README.md,30,2
+What does typeof x return after running: let x; ?,'null',Throws ReferenceError,'undefined','void',20,3
+Which expression safely tests if x is ANY JavaScript primitive?,x===null || (typeof x!=='object' && typeof x!=='function'),typeof x !== 'object',Boolean(x),x != '',60,1
+Why does if (!score) treat a student score of 0 as missing?,0 is a string,typeof 0 is 'null',score must use var,0 is falsy so !0 is true,30,4
+Which 5-field crontab schedule runs audit.sh daily at 02:15 AM?,2 15 * * * /usr/local/bin/audit.sh,15 2 * * * /usr/local/bin/audit.sh,15 2 1-7 * * /usr/local/bin/audit.sh,02:15 * * * /usr/local/bin/audit.sh,30,2
+Logging raw student SSNs and birthdays to debug.log violates which rule?,ES6 syntax,MIT attribution,FERPA / GDPR privacy minimization,Terminal ANSI spec,30,3
+Which third-party code must a closed commercial team REJECT?,Unlicensed code copied off a blog,ISC licensed parser,MIT licensed utility,Apache 2.0 helper,30,1
+"What do Number('42px') and parseInt('42px', 10) return in JavaScript?",42 and 42,'42px' and 42,NaN and NaN,NaN and 42,30,4
 In main.mjs why does import from './tax' throw ERR_MODULE_NOT_FOUND?,var is banned,ESM requires explicit .mjs/.js extensions,JSON failed,Browsers block .mjs,30,2
 Inside .mjs calling require('./legacy.cjs') fails. Which API bridges CJS?,window.require,try/catch wrapper,createRequire(import.meta.url),<script type='module'>,30,3
-Alice owns file 0070 and belongs to group ops. What happens when Alice reads it?,Allowed via group rwx,Denied because owner tier 000 wins first,Allowed via sticky bit,Kernel converts to 777,30,2
-System draws 400W peak load. With +25% headroom which standard PSU rating fits?,350W,400W,550W,250W,30,3
+Alice owns file 0070 and belongs to group ops. What happens when Alice reads it?,Denied because owner tier 000 wins first,Allowed via group rwx,Allowed via sticky bit,Kernel converts to 777,30,1
+System draws 400W peak load. With +25% headroom which standard PSU rating fits?,350W,400W,250W,550W,30,4
 Which sshd_config pair enforces key-based login and blocks direct root SSH brute force?,PermitRootLogin yes & EmptyPass yes,PermitRootLogin no & PasswordAuthentication no,chmod 4777 /etc/shadow,setenforce 0 permanently,30,2

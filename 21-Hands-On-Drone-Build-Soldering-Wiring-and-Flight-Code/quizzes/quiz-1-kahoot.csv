@@ -1,0 +1,14 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Which two safety steps are mandatory before soldering or USB-connecting a drone?,Props-OFF and ESD/ANSI goggles,Spin test with props ON,Wet sponge only,Skip fume extractor,20,1
+Why does 12 AWG XT60 need 375-400C while 28 AWG UART pads use 315-340C?,UART uses higher-melt alloy,Thermal mass differs; heat lifts pads,28 AWG carries 80A,Flux boils at 400C only,20,2
+Which terminal connects to the white stripe on a 1000 uF low-ESR ESC cap?,VBAT Positive (+),TX1 Signal,GND Negative (-),5V BEC,20,3
+What does a 0.3 ohm beep across XT60 + and - mean before battery hookup?,Healthy 1000 uF capacitor,Charged 4S LiPo,Dead short across rails,Active Wi-Fi telemetry,20,3
+Which tool pair cleanly removes a small solder bridge between UART pins?,6S LiPo and steel file,Rosin flux and copper braid,Hot glue and water,Electrical tape only,20,2
+How must UART serial pins connect between GPS and STM32 flight controller?,TX to TX and RX to RX,Both tied to SDA,Crossed: TX->RX and RX->TX,Directly to VBAT,20,3
+How do multiple I2C sensors share SDA/SCL pads cleanly without colliding?,Crossed TX-RX swaps,PWM pulse timing,Unique 7-bit hex addresses,Separate 6S batteries,20,3
+Which Linux supplementary group lets users open /dev/ttyACM0 without sudo?,www-data,dialout (or uucp),docker,games,20,2
+Why does MSP v1 exclude $M< bytes 0..2 from the packet XOR checksum byte?,Binary skips index 0 in C,UTF-16 forbids $ in RAM,Hardware strips byte 0,Spec XORs len/cmd/payload only,20,4
+Which Node.js method creates a mutable raw byte Buffer for MSP telemetry?,JSON.parse(),Buffer.alloc(length),Math.random(),Array.join(),20,2
+Which CSS layout adapts telemetry GCS status cards into responsive columns?,display: grid,blink tag,font-weight: bold,marquee layout,20,1
+Which FAA rule triggers at strictly > 250 g (0.55 lb) for hobby drones?,FAADroneZone reg + Remote ID,Airline medical license,Banned from outdoor flight,Commercial hangar fee,20,1
+What happens if a 5.8 GHz VTX transmits full RF power with no antenna on?,Reflected RF burns VTX PA chip,Doubles video range,Charges 4S pack faster,Auto-calibrates gyro,20,1

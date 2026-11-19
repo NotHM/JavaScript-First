@@ -1,7 +1,7 @@
 # Unit 9 Mastery Exam (50 Questions): Testing, Debugging, Algorithms & ML Fairness
 
 **Course:** JavaScript First — Software & App Design (AZ CTE CIP `11.0202.00`)  
-**Standards:** AZ CTE 12.1–12.5, 6.4–6.7 | West-MEC AI 1.0, 2.0, 6.0, 7.0  
+**Standards:** AZ CTE 12.1–12.5, 6.4–6.7 | CTE AI (11.0102.00) / Azure AI-900 (AI 1.0, 2.0, 6.0, 7.0)  
 **Companion Resources:** [Unit Overview](../readme.md) | [Setup Guide](../setup-guide.md) | [Unit Guide](../unit-guide.md)  
 **Instructions:** Select the single best answer (`A`, `B`, `C`, or `D`) for each of the 50 items below (`[L1]`–`[L5]`). No calculators or external notes are required unless specified by your instructor.
 
@@ -51,11 +51,11 @@
    - C) Elements must all be positive strings
    - D) Every item must appear twice
 
-8. Which graph algorithm finds minimum-cost paths across edges with **non-negative** weights, and which tree algorithm assigns shortest bit codes to frequent symbols? `[6.4–6.6 | L1]`
-   - A) Bubble Sort and Quick Sort
-   - B) Insertion Sort and Linear Search
-   - C) k-Means and OLS Regression
-   - D) Dijkstra's algorithm and Huffman coding
+8. In CompTIA's 7-step troubleshooting methodology, which action immediately follows "Establish a theory of probable cause"? `[12.5 | L1]`
+   - A) Skip testing and jump straight to documentation
+   - B) Rewrite all unit tests before identifying the root cause
+   - C) Delete production error logs
+   - D) Test the theory to determine the cause (Step 3)
 
 9. `k-Means` partitions unlabeled feature vectors into `k` groups without ground-truth labels, making it an example of: `[AI 6.0 | L1]`
    - A) Supervised Classification
@@ -109,11 +109,11 @@
    - C) JS `number` only permits subtraction inside `while` loops
    - D) It guarantees integer indexing cleanly and avoids signed 32-bit overflow patterns across languages
 
-17. Why does standard **Dijkstra's algorithm** produce wrong answers when a graph contains negative edge weights? `[6.4 | L2]`
-   - A) Adjacency lists cannot store negative numbers in JS objects
-   - B) Dijkstra can only traverse undirected cycles
-   - C) Dijkstra assumes once a node is popped as minimum distance, future paths cannot reduce it—which negative weights break
-   - D) Negative weights turn Dijkstra into Huffman coding
+17. Why does CompTIA troubleshooting Step 6 ("Verify full system functionality and implement preventive measures") look beyond the one fixed line? `[12.5 | L2]`
+   - A) It skips automated regression tests to ship faster
+   - B) It deletes previous commits from Git history
+   - C) It confirms adjacent workflows have no regressions and adds preventive checks/tests so the bug cannot recur
+   - D) It hides production stack traces from developers
 
 18. Why MUST z-score mean/std scalers and missing-value imputers be fitted ONLY on the `train` split before transforming `validation` and `test` splits? `[AI 6.0 | L2]`
    - A) JavaScript arrays forbid calculating `mean` on `test` slices
@@ -173,11 +173,17 @@
    - C) Precision = `0.90` (`18/20`), Recall = `0.60` (`18/30`)
    - D) Precision = `0.18`, Recall = `0.68`
 
-27. An Ordinary Least Squares (`OLS`) model fits slope `w = 2.5` and intercept `b = 10` (`y_hat = w*x + b`). What is the predicted output and squared error when `x = 4` and true `y = 22`? `[AI 6.0 | L3]`
-   - A) Prediction `y_hat = 20`; residual `-2`, squared error `4`
-   - B) Prediction `y_hat = 42.5`; squared error `420.25`
-   - C) Prediction `y_hat = 14`; squared error `64`
-   - D) Prediction `y_hat = 22`; squared error `0`
+27. Trace this recursive function for `sumDown(4)`: `[12.4 | L3]`
+   ```javascript
+   function sumDown(n) {
+     if (n <= 0) return 0;
+     return n + sumDown(n - 1);
+   }
+   ```
+   - A) `10` (`4 + 3 + 2 + 1 + 0`)
+   - B) `4`
+   - C) `15`
+   - D) `RangeError: Maximum call stack size exceeded`
 
 28. A hiring model selects `60%` of Group A applicants and `42%` of Group B applicants. What is the **Disparate Impact ratio** and audit verdict? `[AI 7.0 | L3]`
    - A) `1.43` — Passes 4/5ths fairness audit
@@ -185,17 +191,17 @@
    - C) `0.18` — Passes because `0.60 - 0.42 < 0.20`
    - D) `0.70` (`0.42 / 0.60`) — Fails the `>= 0.80` 4/5ths fairness threshold
 
-29. During Dijkstra's relaxation step at vertex `u` (`dist[u] = 4`), an outgoing edge `(u -> v)` has weight `3` while `dist[v]` is currently `9`. What becomes the updated `dist[v]`? `[6.4–6.6 | L3]`
-   - A) Remains `9` because `9 > 4`
-   - B) Relaxes to `7` (`4 + 3 < 9`)
-   - C) Updates to `12` (`9 + 3`)
-   - D) Resets to `Infinity`
+29. A debugger is paused on `const total = calcTax(sub);`. Which debugger action enters line 1 **inside** `calcTax` rather than skipping over its execution? `[12.5 | L3]`
+   - A) `Step Out` (`Shift+F11`)
+   - B) `Step Into` (`F11`)
+   - C) `Continue` (`F5`)
+   - D) `Toggle Line Comment`
 
-30. When constructing a **Huffman prefix code** for characters appearing `{ A: 50, B: 30, C: 15, D: 5 }` times, which symbol receives the shortest binary bit code? `[6.4 | L3]`
-   - A) `D` (`5`), so rare symbols decode fastest
-   - B) All four receive identical 8-bit ASCII codes
-   - C) `A` (`50`), because assigning fewer bits to the highest-frequency symbol minimizes total encoded size
-   - D) `C` (`15`), because it sits in the middle
+30. A loop processes 10,000 records and only corrupts state when `user.id === 8421`. Which debugging approach inspects the exact state cleanly? `[12.5 | L3]`
+   - A) Insert 10,000 unconditional `console.log()` calls
+   - B) Restart the operating system repeatedly
+   - C) Set a **conditional breakpoint** (`user.id === 8421`) and inspect variables in the Watch panel
+   - D) Delete the `for` loop entirely
 
 ---
 
@@ -260,27 +266,23 @@
    - C) EEOC Disparate Impact above `0.80`
    - D) High Variance (Overfitting) — model memorized training noise instead of generalizing
 
-37. Spot the evaluation flaw in this pipeline snippet: `[AI 6.0 | L4]`
-   ```javascript
-   const scaled = zScoreNormalizeAll(dataset);
-   const { train, val, test } = splitTrainValTest(scaled, 0.7, 0.15, 42);
-   ```
-   - A) `42` is invalid as a deterministic PRNG seed
-   - B) Data leakage — `zScoreNormalizeAll` leaked `val` and `test` mean/variance into `train` before splitting
-   - C) Split ratios must sum to `1.5` instead of `1.0`
-   - D) `const` breaks array destructuring
+37. You confirmed a production null-dereference bug and are ready for Step 4 ("Establish a plan of action to resolve the problem"). What MUST happen before touching production code? `[12.5 | L4]`
+   - A) Push edits straight to production without testing
+   - B) Assess potential downstream impact and backups, then validate the fix inside isolated tests before deploying
+   - C) Delete the existing automated test suite
+   - D) Disable Git commit history temporarily
 
-38. Why did `k-Means` cluster users almost solely by annual `salary` (`$25,000–$180,000`) while completely ignoring `age` (`18–65`)? `[AI 6.0 | L4]`
-   - A) `k-Means` automatically discards the second column in every CSV
-   - B) Salary contains floating-point decimals while age is integer
-   - C) Unscaled Euclidean distance is dominated by large-magnitude features unless standardized on the training split first
-   - D) Euclidean distance only measures cosine angle
+38. How do loop-based **iteration** and function **recursion** compare in runtime memory behavior? `[6.6 / 12.4 | L4]`
+   - A) Loops leak heap memory faster than recursion
+   - B) Recursion uses zero call stack frames
+   - C) Iteration reuses one `O(1)` stack frame, whereas each recursive call pushes a new frame and risks stack overflow on deep inputs
+   - D) JavaScript forbids `for` loops inside algorithm helpers
 
-39. A cancer triage model achieves `Accuracy = 94%`, `Precision = 0.96`, and `Recall = 0.28`. What critical operational hazard does the Recall score expose? `[AI 6.0 | L4]`
-   - A) 72% of actual positive cancer cases are falsely cleared (`False Negatives`), putting patients at high risk
-   - B) 96% of healthy patients are flagged unnecessarily
-   - C) Too many True Positives are lowering accuracy
-   - D) The model suffers from zero variance
+39. Calling `[10, 5, 100, 25].sort()` outputs `[10, 100, 25, 5]` instead of ascending numeric order. Why does this occur and what fixes it? `[6.4 | L4]`
+   - A) `.sort()` defaults to UTF-16 string ordering; pass a numeric comparator `(a, b) => a - b`
+   - B) Arrays of integers are secretly stored as strings
+   - C) `.sort()` always reverses array indices
+   - D) The function needs an `async` modifier
 
 40. During a VS Code debugger inspection, your recursive `mergeSort` throws `RangeError: Maximum call stack size exceeded` with thousands of `mergeSort` frames on the Call Stack. What caused it? `[12.5 / 6.6 | L4]`
    - A) Input array contained unsorted integers
@@ -316,23 +318,23 @@
    - C) Rely exclusively on `k-Means` inertia
    - D) High **Precision** (`TP / (TP + FP)`), ensuring accounts auto-banned are genuinely fraudulent before human review
 
-45. After spotting severe **High Variance overfitting** (`Train RMSE = 0.8`, `Val RMSE = 14.5`), which combination of interventions directly reduces variance? `[AI 6.0 | L5]`
-   - A) Add higher-degree polynomial interaction features and turn off regularization
-   - B) Collect more diverse training examples, apply L2 regularization / pruning, and remove noisy redundant features
-   - C) Leak validation rows into the training loop
-   - D) Drop validation testing completely
+45. When debugging a bug spanning UI, API, and DB layers, why isolate subsystems and change ONE variable at a time? `[12.5 | L5]`
+   - A) It doubles random error rates across modules
+   - B) It deterministically isolates the true failing layer without masking causes behind multiple simultaneous edits
+   - C) It skips inspecting root-cause logs
+   - D) It converts `O(n)` code into `O(n^2)` loops
 
-46. If a model suffers from **High Bias underfitting** (`Train RMSE = 24.0`, `Val RMSE = 25.1`), why will adding 100,000 more identical rows barely help? `[AI 6.0 | L5]`
-   - A) Node.js runs out of heap memory above 1,000 rows
-   - B) More rows always convert linear models into `k-Means`
-   - C) An overly simple model lacks representational capacity; you must add richer/non-linear features or reduce excessive regularization
-   - D) Validation error can never fall below `Train RMSE`
+46. A pseudocode helper computes `SET max = 0; FOR EACH n IN [-9, -3, -5]: IF n > max THEN max = n`. What bug occurs? `[12.4 | L5]`
+   - A) It raises a `SyntaxError` on negative integers
+   - B) It creates an infinite `while` loop
+   - C) It fails on all-negative inputs (`0` instead of `-3`); initialize `max = arr[0]` instead of `0`
+   - D) It always returns `NaN`
 
-47. A Disparate Impact audit records `Ratio = 0.72` even after deleting the protected gender field. As lead fairness engineer, what should you approve before ship? `[AI 7.0 | L5]`
-   - A) Block release, audit correlated proxy features & feature weights, calibrate group thresholds/re-weight data, and add human review gates
-   - B) Ship immediately because the literal column name `"gender"` is absent
-   - C) Raise threshold only for the disadvantaged group until they match 0%
-   - D) Hide the fairness test output from CI logs
+47. Why does CompTIA Step 7 ("Document findings, actions, and outcomes") matter AFTER a production outage is already resolved? `[12.5 | L5]`
+   - A) It creates an actionable runbook and root-cause history so future incidents resolve dramatically faster
+   - B) It erases prior Git commits automatically
+   - C) It bypasses automated CI unit tests
+   - D) It converts JavaScript source files into CSS
 
 48. All mocked unit tests pass (`100% GREEN`), yet production crashes because a SQL query column was renamed. What CI strategy closes this blind spot? `[12.3 | L5]`
    - A) Delete all unit tests since mocks are useless
@@ -346,8 +348,8 @@
    - C) Binary Search for (1), Quick Sort for (2), DFS for (3)
    - D) BFS for unweighted hops (1), Dijkstra for non-negative weights (2), Bellman-Ford when negative weights exist (3)
 
-50. Why should an ML evaluation suite enforce a **deterministic PRNG seed** (`seed = 42`) inside `splitTrainValTest` during CI regression checks? `[12.2 / AI 6.0 | L5]`
-   - A) Deterministic seeds turn `O(n^2)` algorithms into `O(1)`
-   - B) Fixed seeds eliminate the need for a held-out test set
-   - C) Reproducible splits guarantee CI failures trace to actual model/metric regressions rather than random shuffle luck
-   - D) JavaScript `Math.random()` accepts seeds natively without custom code
+50. Why should engineering teams commit a failing-then-passing automated test reproducing every fixed production bug? `[12.3 | L5]`
+   - A) It turns `O(n^2)` algorithms into `O(1)`
+   - B) It deletes user error messages from logs
+   - C) It establishes a permanent **regression test** so future edits cannot silently reintroduce the bug
+   - D) It disables `Math.random()` inside Node.js

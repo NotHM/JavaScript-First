@@ -1,16 +1,16 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
-A POST request creates a new user record. What HTTP status fits best?,200 OK,201 Created,404 Not Found,301 Redirect,20,2
-Client requests an undefined URL /ghost. Server must respond:,200 OK,204 Empty,404 Not Found,503 Timeout,20,3
-Client sends DELETE to a GET-only endpoint. Ideal status code?,405 Method Not Allowed,201 Created,304 Not Modified,100 Continue,30,1
-Sending emoji using str.length for Content-Length truncates because:,JSON rejects UTF-8,UTF-8 byte length exceeds char count,Port 80 blocks symbols,Node strips emojis,30,2
-Browser shows raw JSON string without MIME hint. Fix which header?,User-Agent,Content-Type: application/json,Host,Referer,20,2
-Best wireless link for remote field sensors 4km from Wi-Fi routers?,NFC,BLE,LTE Cellular or LPWAN,Bluetooth Audio,20,3
-Which component sits before Node handling TLS and load balancing?,Reverse Proxy,LocalStorage,CSS Grid,NPM Audit,20,1
-A 100 KB asset gzips by 80%. How many KB travel over the wire?,80 KB,20 KB,50 KB,100 KB,20,2
-Zero server ops needed for a rare webhook running twice daily. Pick:,Custom IaaS Kernel,FaaS Serverless Function,Buy bare-metal rack,Manual Cron FTP,30,2
-Why inspect BOTH req.method and req.url in node:http routers?,Methods ignore URLs,Same URL handles GET and POST differently,Headers require POST,Browsers only send PUT,20,2
+A POST request creates a new user record. What HTTP status fits best?,200 OK,301 Redirect,404 Not Found,201 Created,20,4
+Client requests an undefined URL /ghost. Server must respond:,404 Not Found,204 Empty,200 OK,503 Timeout,20,1
+Client sends DELETE to a GET-only endpoint. Ideal status code?,201 Created,405 Method Not Allowed,304 Not Modified,100 Continue,30,2
+Sending emoji using str.length for Content-Length truncates because:,JSON rejects UTF-8,Port 80 blocks symbols,UTF-8 byte length exceeds char count,Node strips emojis,30,3
+Browser shows raw JSON string without MIME hint. Fix which header?,Content-Type: application/json,User-Agent,Host,Referer,20,1
+Best wireless link for remote field sensors 4km from Wi-Fi routers?,NFC,BLE,Bluetooth Audio,LTE Cellular or LPWAN,20,4
+Which component sits before Node handling TLS and load balancing?,LocalStorage,Reverse Proxy,CSS Grid,NPM Audit,20,2
+Why deploy Single-Mode Fiber (SMF) + RSTP for 450m dual uplinks near power conduits?,Cat6a + disabled STP,BLE mesh + APIPA,SMF EMI-free 10km+ & RSTP loop guard,NFC tap + repeater,30,3
+Which HTML form setup sends credentials in the HTTP body instead of the URL query string?,<form method='POST'>,<form method='GET'>,<div type='post'>,<a href='body'>,20,1
+Why inspect BOTH req.method and req.url in node:http routers?,Methods ignore URLs,Browsers only send PUT,Headers require POST,Same URL handles GET and POST differently,20,4
 Why wrap user names with escapeHtml() inside SSR template strings?,Shrink file byte size,Block script XSS injection,Enable JSON parsing,Speed up DNS lookup,20,2
-A static file handler must reject ../../.env requests with what check?,path.resolve prefix boundary check,String.toLowerCase check,JSON.stringify wrapper,Array.sort comparison,30,1
-How many usable host IPs does a /26 IPv4 subnet (255.255.255.192) offer?,30 hosts,62 hosts,64 hosts,126 hosts,30,2
-Router holds 0.0.0.0/0 (eth0) and 10.50.12.0/24 (eth2 metric 50). How routes 10.50.12.77?,eth0 lower metric wins,eth2 longest-prefix /24 wins,Dropped due to Loopback,Broadcast to both links,30,2
+A static file handler must reject ../../.env requests with what check?,JSON.stringify wrapper,String.toLowerCase check,path.resolve prefix boundary check,Array.sort comparison,30,3
+How many usable host IPs does a /26 IPv4 subnet (255.255.255.192) offer?,62 hosts,30 hosts,64 hosts,126 hosts,30,1
+Router holds 0.0.0.0/0 (eth0) and 10.50.12.0/24 (eth2 metric 50). How routes 10.50.12.77?,eth0 lower metric wins,Broadcast to both links,Dropped due to Loopback,eth2 longest-prefix /24 wins,30,4
 Host has IP 169.254.18.9 and cannot ping gateway. What failed and step 1?,DNS timeout / reboot router,DHCP failed APIPA / Identify problem,Port 443 down / rewrite TLS,Cat6 > 10m / swap to HTTP,30,2

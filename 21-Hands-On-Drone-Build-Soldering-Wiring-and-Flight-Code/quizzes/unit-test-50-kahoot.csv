@@ -1,0 +1,51 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Which two safety precautions are ALWAYS mandatory before soldering or USB-connecting an FC?,Props ON on metal foil,Props-OFF + Z87.1 goggles + ESD/fumes,Plug 6S LiPo first,Skip goggles w/ rosin core,20,2
+Which terminal connects to the white stripe (-) on a 1000 uF ESC capacitor?,5V BEC rail,TX1 UART pad,GND (- negative),VBAT (+ positive),20,3
+Which iron setup wets a heavy 12 AWG XT60 lead onto a 4-in-1 ESC pad cleanly?,210C needle for 15s,500C torch on STM32,Cold tip + tape,375-400C wide chisel + flux <= 4s,20,4
+How must TX and RX pins wire between GPS/ELRS and an STM32 UART port?,Crossed: TX->RX & RX->TX + GND,Tied together to SDA,TX-TX & RX-RX straight,Direct to VBAT +,20,1
+How do multiple I2C sensors (barometer/compass) share SDA/SCL without collision?,HTML class attributes,Separate VBAT cables,Crossed TX-RX UART clocks,Unique 7-bit hex addresses,20,4
+Which Linux group grants non-root read/write access to /dev/ttyACM0?,www-data,docker,dialout (or uucp),nogroup,20,3
+In MSP v1 telemetry what do ASCII headers $M< and $M> denote?,TLS encrypt vs motor spin,$M< request TO FC; $M> response FROM FC,Disable Buffer vs reboot,Both mean CRC fail,20,2
+Which built-in Node.js method allocates raw zeroed bytes for binary MSP frames?,JSON.stringify(),Array.join(),Math.floor(),Buffer.alloc(length),20,4
+Above what weight triggers registration + Remote ID for recreational hobby drones?,> 250 g (0.55 lb),> 55 g (0.12 lb),> 5000 g (11 lb),Never required,20,1
+Which FAA cert fits recreational hobby flyers vs paid commercial drone work?,TRUST for airlines; 107 hobby,Either covers paid work equally,TRUST hobby (§44809); Part 107 UAG commercial,Driver license only,20,3
+Why does 400C for 5s ruin tiny 28 AWG UART pads while 12 AWG XT60 tabs solder fine?,28 AWG melts below 100C,UART AC repels heat,Only positive tabs solder,Lower thermal mass lifts thin FR4 PCB pads,20,4
+What does a 0.3 ohm beep across XT60 + and - prove before connecting a battery?,Dead short tying VBAT to GND - STOP!,LiPo is 100% full,Capacitor is healthy,ExpressLRS bound OK,20,1
+Why solder a 1000 uF low-ESR cap near main ESC VBAT/GND battery pads?,Power motors without LiPo,Clamp active-braking inductive voltage spikes,Boost motor KV 300%,Broadcast Remote ID BLE,20,2
+Why combine semantic <th scope=col> tables with CSS display: grid on a web GCS?,Tables cross UART TX-RX,Grid disables fetch(),Screen readers parse headers while Grid adapts layout,<th> compiles to WASM,20,3
+What does ls -l listing crw-rw---- root dialout signify for /dev/ttyACM0?,World-readable text log,Log backup folder,Setuid shell executable,Character device rw for root & dialout only,20,4
+Why does setting 9600 baud when FC transmits 115200 baud scramble MSP frames?,Mismatched baud slips UART start/stop bit timing,9600 runs MSB-first backwards,USB blocks odd speeds,JS requires >100k,20,1
+Why decode STM32 MSP battery bytes via readUInt16LE() instead of readUInt16BE()?,LE swaps high byte first,Node blocks BE reads,ARM/STM32 sends Little-Endian LSB first,LE strips checksums,20,3
+Why verify SHA-256 checksum / signature before flashing Betaflight or GCS firmware?,Double UART baud speed,Verify integrity & guard against tampered binaries,Convert hex to STL 3D,Skip DMM check,20,2
+Why MUST a 5.8 GHz VTX have an antenna screwed on before DC power is applied?,High VSWR reflects RF heat burning PA chip,ESC forgets DShot spin,Antennas store LiPo energy,Unlocks airspace waivers,20,1
+Compare FAA rules on a 240g drone flown for hobby vs paid roof inspection:,Both exempt under 250g,Hobby needs UAG,Paid uses TRUST under 250g,Hobby: TRUST only; Paid 107: Reg + Remote ID + UAG,20,4
+How much copper waste heat at 50A (0.4m) does 18 AWG vs 12 AWG dissipate (P=I^2R)?,1.0 W vs 0.5 W,20.95 W (18 AWG) vs 5.21 W (12 AWG),100 W vs 99 W,0 W in DC circuits,30,2
+Which Linux steps safely grant serial permissions and check /dev/ttyACM*?,usermod -aG dialout $USER + relogin + ls -l,chmod -R 777 /dev,npm install dialout,chmod 000 /dev/ttyACM0,30,1
+24: What is the exact hex XOR checksum CS for MSP 0x24 0x4D 0x3E 0x04 0x6E 0xA8 0x00 0x1E 0x00 CS?,0x04,0x6E,0xDC,0xFF,30,3
+Which JS pattern freezes GCS states and accumulates an 8-bit XOR payload checksum?,~payload[0],Array.sort() + join('+'),payload.length + 256,Object.freeze(STATES) + reduce(a^b & 0xff),30,4
+Which RF + serial setup avoids self-interference and configures Betaflight MSP?,5.8 GHz RC + 5.8 GHz VTX + 300 7E2,2.4 GHz ELRS + 5.8 GHz VTX + 115200 8N1,100 MHz FM + no antenna,Both GPS & CRSF on UART2,30,2
+Which CSS/HTML combo makes a GCS HUD dashboard responsive AND screen-reader labeled?,Red div + marquee,Font tag + unclosed br,display: grid auto-fit minmax() + canvas aria-label,Fixed width 4000px,30,3
+Which practice protects a local Node serial GCS bridge from unauthorized /api/arm calls?,Bind 127.0.0.1 + verify Origin + allowlist cmds,Bind 0.0.0.0:80 & eval(),Pass password in URL,Disable CORS while armed,30,1
+In DShot 16-bit framing what hex value signals throttle=0 & telem=false (DISARM)?,0xFFFF,0x1010,0x0400,0x0000 (0),30,4
+Part 107 UAG flight in Class C (LAANC 250ft) at 200ft w/ 10SM & 1500ft BKN ceiling:,Denied > 150 ft ceiling,Approved: <55lb & <=250ft LAANC & >=500ft below cloud,Denied Class G only,Needs airline ATP,30,2
+Paid survey drone causes $650 damage to client pergola (0 injuries). Rule per 107.9?,No report (< 55 lbs),90 days if > $5000,Report to FAA within 10 calendar days (> $500),Local library only,30,3
+Diagnose: dull XT60 joint; solder joining GND to M1; torn copper trace on UART3:,All from 99% IPA cleaning,Excess ELRS baud rate,Smoke stopper + bad Node,Cold joint + Solder bridge + Lifted pad,30,4
+lsusb shows STM32 Virtual COM Port yet Node throws EACCES on /dev/ttyACM0. Why?,Dead USB data wires,User lacks active dialout group session (0660),Needs Windows .exe driver,Buffer > 255 bytes,30,2
+Why does for (i=0; i<buf.length-1; i++) xor^=buf[i] reject EVERY valid $M< MSP packet?,Bitwise ^= is exponent,Skips last byte,Starts at index 0 ($M<) instead of index 3 (len),Needs minus 10,30,3
+Untrusted payload length 260 pushed into uint8 slot (260 & 0xff). What bug triggers?,Wraps silently to length 4 corrupting framing,Converts to 64-bit float safely,Deletes USB device node,Flips LE to BE,30,1
+Both GPS and ELRS sit on UART2 (TX2->TX & RX2->RX) with zero data moving. Two bugs?,1000uF cap blocks RF,UART2 contention + non-crossed TX-TX / RX-RX,Missing CSS Grid,USB only supports 9600,30,2
+Two BMP280 barometers hardwired to 0x76 share SDA1/SCL1. Why do reads scramble?,Doubles pressure reading,Need 25.2V VBAT power,I2C needs UDP > 1024,Identical 0x76 slave IDs collide on open-drain SDA,30,4
+Why reject chmod 777 /dev/ttyACM0 in cron as a fix for student serial permission errors?,Violates Least Privilege & resets on udev replug,Makes USB cable slower,Wipes STM32 flash,Linux blocks numeric modes,30,1
+A telemetry banner switches green dot to red dot with zero text or ARIA tag. Defect?,Breaks HTTP codes,Blocks Buffer.alloc(),Violates WCAG 1.4.1 Use of Color & screen-reader alert,Disables DShot600,30,3
+Which inputs expose bugs in rec=g>=250 | ok107=lbs<=55 | report=usd>=500?,100g & 10lb & $100,250g & 55lb & $500 (strict >250/<55/>500 bounds),400g & 40lb & $900,Negative weight values,30,2
+Builder wires 5V ExpressLRS power pad straight to 25.2V 6S VBAT. What happens?,Boots 5x faster safely,Multimeter shows scope,Auto-switches to 900MHz,Overvoltage pops 5V LDO/MCU immediately,30,4
+QA shows R=2.4 kOhm & cap OK yet one dull grainy XT60 main solder joint remains. Verdict?,NO-GO - cold main power joint risks breaking; reflow,GO - high resistance OK,GO - skip smoke stopper,Install props to cool it,30,1
+Best Zero-Trust architecture for browser telemetry UI talking to local /dev/ttyACM0?,Bind 0.0.0.0 & eval() POST,Store secrets in query URL,Bind 127.0.0.1 + verify Origin + strict command whitelist,Disable CORS when armed,30,3
+On Linux telemetry server compare running collector as root vs systemd user + dialout:,Root is best for /etc/shadow access,Unprivileged user + dialout enforces Least Privilege,Identical exploit blast radius,systemd requires root shell,30,2
+Select best RF + GCS topology for outdoor field crowded with 2.4GHz Wi-Fi phones:,Put RC + VTX + Wi-Fi on Ch 6,Disable all receivers,Run bare UART 100m outside,900MHz ELRS + 5.8GHz VTX + wired Ethernet GCS LAN,30,4
+Why inject MockSerialTransport behind the same interface as live /dev/ttyACM0 in Node?,Run deterministic frame & state machine CI tests < 1s,Skip learning binary MSP,Drones avoid binary Buffers,Eliminate all soldering,30,1
+Compare Node infinite while(true) serial polling vs async 'data' stream accumulation:,while(true) handles 1k RPS,Streams drop checksums,while(true) blocks Event Loop/ESTOP; streams stay responsive,try/catch fails Buffers,30,3
+50Hz pitch counters with aria-live=assertive drown out LOW BATTERY warning. Fix?,Delete all ARIA globally,Print 50 caps alerts/s,Flash whole screen blink,Silence fast numbers + reserve role=alert for discrete faults,30,4
+Choose main cap for 6S (25.2V max) build: 220uF 16V vs 1000uF 50V Low-ESR:,220uF 16V saves 2g,1000uF 50V Low-ESR (16V bursts on 25.2V pack!),Wire two 16V reversed,Omit caps on 6S,30,2
+Mid-air at 300ft AGL RC link drops to -112 dBm over empty grass field. Safest policy?,FAILSAFE_RTH autonomous level return & log anomaly,Spin max throttle blindly,Immediate EMERGENCY_DISARM,Delete Object.freeze(),30,1
+420g drone passes ALL Unit 21 TDD & bench checks; realtor pays $100; TRUST only & no Reg:,GO - green TDD approves flight,Remove Remote ID module,GO under 200ft anonymously,NO-GO until: Part 107 UAG (IACRA) + FAADroneZone reg + LAANC,30,4

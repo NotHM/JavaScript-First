@@ -1,6 +1,6 @@
 /**
  * Lesson 5.3 Automated Test Suite (node --test)
- * Standards: West-MEC AI101 Units 3-4, AI201 Unit 1 (AI Stds 4.0, 5.0); AZ CTE 6.1-6.5, 7.1-7.4
+ * Standards: CTE AI (11.0102.00) / Azure AI-900 (AI Stds 4.0, 5.0); AZ CTE 6.1-6.5, 7.1-7.4
  *
  * Run:
  *   node --test 05-DataStructures-and-Loops/03-Data-Cleaning-Vectors-and-Feature-Engineering/code/aiDataPipelineDemo.test.mjs
@@ -68,10 +68,10 @@ test('anonymizePiiRecord and redactPiiText scrub raw names, emails, SSNs, and ph
   const raw = {
     studentId: 'S-904',
     name: 'Ada Lovelace',
-    email: 'ada@westmec.edu',
+    email: 'ada@cte-cis.edu',
     ssn: '123-45-6789',
     score: 94,
-    notes: 'Call 602-555-0199 or email ada@westmec.edu ref 123-45-6789',
+    notes: 'Call 602-555-0199 or email ada@cte-cis.edu ref 123-45-6789',
   };
 
   const anonA = anonymizePiiRecord(raw);
@@ -83,7 +83,7 @@ test('anonymizePiiRecord and redactPiiText scrub raw names, emails, SSNs, and ph
   assert.equal(anonA.ssn, '[REDACTED]');
   assert.equal(anonA.studentIdHash, anonB.studentIdHash);
   assert.equal(anonA.studentIdHash.length, 16);
-  assert.doesNotMatch(JSON.stringify(anonA), /ada@westmec\.edu|123-45-6789|602-555-0199|Ada Lovelace/);
+  assert.doesNotMatch(JSON.stringify(anonA), /ada@cte-cis\.edu|123-45-6789|602-555-0199|Ada Lovelace/);
   assert.equal(redactPiiText('user@example.org 999-00-1111'), '[REDACTED_EMAIL] [REDACTED_SSN]');
 });
 

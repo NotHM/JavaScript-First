@@ -1,6 +1,6 @@
-# Lesson 10.3: Computer Vision Matrices, Convolutions, IoU & AI Compute Hardware (`AI101/AI102/AI201 | AI Stds 3.0, 8.0, 9.0`)
+# Lesson 10.3: Computer Vision Matrices, Convolutions, IoU & AI Compute Hardware (`CTE AI / Azure AI-900 | AI Stds 3.0, 8.0, 9.0`)
 
-**Standards:** West-MEC `AI101` Unit 2, `AI102` Unit 10 & `AI201` Units 3–4 (**AI Stds `3.0, 8.0, 9.0`**) | Reinforces **AZ CTE `15.5, 6.5, 4.0`**
+**Standards:** **CTE AI (11.0102.00) / Azure AI-900** (**AI Stds `3.0, 8.0, 9.0`**) | Reinforces **AZ CTE `15.5, 6.5, 4.0`**
 
 ## Student Learning Objectives (Bloom's Taxonomy)
 - **`[L1 Remember]`** Recall the four AI processor classes (**`CPU`**, **`GPU`**, **`TPU`**, **`NPU`**), RGBA `ImageData` byte stride (`4` bytes/pixel), the **Rec. 601 Luminance** formula ($0.299R + 0.587G + 0.114B$), **Box Blur** vs. **Sobel $G_x / G_y$** kernels, and **Bounding-Box `IoU`** (`AI 3.0, 8.0`).

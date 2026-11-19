@@ -1,51 +1,51 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
-Which JavaScript loop guarantees running its body at least once even if false?,for (let i = 0; i < n; i++),while (cond),do { ... } while (cond),for (const x of list),20,3
-What does the continue statement immediately do inside a for or while loop?,Exits the entire loop forever,Skips current pass to next check,Returns undefined from function,Resets loop index to zero,20,2
-Why does every recursive function require a base case?,Stop descent before stack overflow,Sort arrays ascending,Convert CJS into ESM files,Move primitives to the heap,20,1
-Which pair matches Stack vs. Queue removal order?,Stack FIFO / Queue LIFO,Stack LIFO / Queue FIFO,Both remove smallest integer,Both remove backwards only,20,2
-How many boolean flags fit inside one 32-bit Uint32Array word in a BitSet?,8,16,32,64,20,3
-What distinguishes a classic Tree from a general Graph?,Trees only store strings,Tree is acyclic; Graph allows cycles,Trees ban recursion,Graphs are 1D boolean arrays,20,2
-Filling missing tabular cells with statistical defaults is called:,Serialization,Imputation,Concatenation,Hoisting,20,2
+Which JavaScript loop guarantees running its body at least once even if false?,for (let i = 0; i < n; i++),do { ... } while (cond),while (cond),for (const x of list),20,2
+What does the continue statement immediately do inside a for or while loop?,Exits the entire loop forever,Resets loop index to zero,Returns undefined from function,Skips current pass to next check,20,4
+Why does every recursive function require a base case?,Convert CJS into ESM files,Sort arrays ascending,Stop descent before stack overflow,Move primitives to the heap,20,3
+Which pair matches Stack vs. Queue removal order?,Stack LIFO / Queue FIFO,Stack FIFO / Queue LIFO,Both remove smallest integer,Both remove backwards only,20,1
+Which built-in JS collection stores only unique values without duplicates?,Array,RegExp,Object.seal(),Set,20,4
+What distinguishes a classic Tree from a general Graph?,Tree is acyclic; Graph allows cycles,Trees only store strings,Trees ban recursion,Graphs are 1D boolean arrays,20,1
+"How does a JSON array of {id, score} records differ from raw log prose?",JSON cannot be parsed in code,Prose supports native SQL natively,JSON is structured vs unstructured prose,JSON stores pixels only,20,3
 Why do AI pipelines One-Hot encode categories like ['AI' 'Security' 'Web']?,Compress PNGs to SHA-256,Make orthogonal vectors w/o order,Sort CSV columns in place,Delete numeric columns,20,2
-Which built-in Node module provides createHash('sha256') for PII masking?,node:path,node:crypto,node:os,node:readline,20,2
-Within what closed interval does Pearson correlation r always fall?,"[0, 1]","[-1, 1]","[0, 100]","(-Infinity, +Infinity)",20,2
-Why does break inside items.forEach((x) => ...) fail to stop the loop?,forEach requires async Promises,Callback is a fn; break=SyntaxError,forEach skips even indices,forEach turns arrays into objects,30,2
+Which JS loop iterates over VALUES of an Array / String / Set directly?,switch (iterable),do...if (iterable),for (const key in iterable),for (const val of iterable),20,4
+Which plain-text tabular format separates columns with commas & rows by line?,CSV (Comma-Separated Values),PNG,ELF,TLS,20,1
+Why does break inside items.forEach((x) => ...) fail to stop the loop?,forEach requires async Promises,forEach skips even indices,Callback is a fn; break=SyntaxError,forEach turns arrays into objects,30,3
 Why avoid for (const k in array) when looping over JS array elements?,It sorts elements slowly first,Yields string keys & inherited props,Converts ints into BigInt,Throws TypeError over 10 items,30,2
-Why does Array.shift() on 100k items run O(n^2) vs O(1) pointer Queue?,shift hashes string keys,shift re-indexes every remaining item,LinkedList runs in L1 cache only,shift uses setTimeout timers,30,2
-Which properties silently vanish during JSON.stringify(record)?,Strings and nested arrays,"Functions, undefined, Symbol keys",Booleans and null values,Zero integer IDs,30,2
-Why must BFS/DFS graph traversals track nodes in a visited = new Set()?,Double matrix row width,Avoid revisiting cycles endlessly,Convert recursion to JSON strings,Keep edges sorted ascending,30,2
-Why use Median imputation over Mean on [21 22 22 23 9999] sensor data?,Median always equals zero,9999 spike warps Mean; Median stays 22,Median hashes PII automatically,Mean rejects negative ints,30,2
-Why hash studentId with salted SHA-256 instead of deleting join keys?,Reverses student passwords easily,Preserves safe cross-table joins,Prevents CSV parser SyntaxError,Creates One-Hot vectors automatically,30,2
-How does one 50000 outlier impact Min-Max [0 1] vs Z-Score scaling?,Min-Max squashes points near 0; Z-Score uses stdDev,Min-Max makes negatives only,Neither scaler uses outliers,Both drop rows before dividing,30,1
-What is cosine similarity of orthogonal vectors [1 0 0] and [0 1 0]?,1.0 (unit length),"0 (dot=0, zero overlap)",-1.0 (index starts at 0),NaN (zeros in vector),30,2
-To multiply an m x k matrix A by B cleanly which shape must B have?,m x n (match A rows),k x n (inner k dims match),3 x 3 square only,Symmetric diagonal only,30,2
-Total after: for(r=1..2) for(c=1..3){ if(c===2)continue; total+=r*c; }?,9,12,18,6,30,2
-Trace return of recursive sumDigits(456) using base case (n < 10) return n:,10,15,24,456,30,2
+Why does Array.shift() on 100k items run O(n^2) vs O(1) pointer Queue?,shift hashes string keys,shift uses setTimeout timers,LinkedList runs in L1 cache only,shift re-indexes every remaining item,30,4
+Which properties silently vanish during JSON.stringify(record)?,"Functions, undefined, Symbol keys",Strings and nested arrays,Booleans and null values,Zero integer IDs,30,1
+Why must BFS/DFS graph traversals track nodes in a visited = new Set()?,Double matrix row width,Convert recursion to JSON strings,Avoid revisiting cycles endlessly,Keep edges sorted ascending,30,3
+"Which static method returns an array of an object's [key, value] pairs?",Array.from(obj),Object.entries(obj),Math.floor(obj),JSON.parse(obj),20,2
+Why hash studentId with salted SHA-256 instead of storing plaintext IDs?,Reverses student passwords easily,Creates One-Hot vectors automatically,Prevents CSV parser SyntaxError,Preserves safe cross-table joins,30,4
+"Why does [10, 2, 1].sort() return [1, 10, 2] without a callback?",Defaults to UTF-16 string sort,Moves largest integer to center,JS cannot sort 1-digit ints,Strips digits after '1',30,1
+Which 3 control-flow structures can express every structured algorithm?,"Compile, Minify, Encrypt","Grid, Flexbox, Shadow DOM","Sequence, Selection, Iteration","Stack, Pointer, Cache",20,3
+How does Array.prototype.some() differ from .every()?,some mutates original array,some=any match; every=all match,every stops at index 0 always,some checks string keys only,30,2
+Total after: for(r=1..2) for(c=1..3){ if(c===2)continue; total+=r*c; }?,9,6,18,12,30,4
+Trace return of recursive sumDigits(456) using base case (n < 10) return n:,15,10,24,456,30,1
 Given grid = [[10 20 30] [40 50 60]] which expression reads 60?,grid[2][1],grid[1][2],grid[1][3],grid[0][2],20,2
-Result of [95 62 88 70].filter(s => s >= 75).map(s => s + 2)?,"[97, 64, 90, 72]","[97, 90]","[95, 88]","[97, 90, 72]",30,2
-In Uint32Array BitSet which (wordIndex mask) targets flag index 35?,word 0 / bit 3,word 1 (35>>>5) / 1<<(35&31),word 35 / bit 1,word 2 / bit 5,30,2
-"How should parseCsvToRecords parse row 'S1,92.5' and 'S2,NA'?",score '92.5' and 0,score 92.5 and null,score 92.5 and NaN,Delete row S2 immediately,30,2
-With Q1 = 10 and Q3 = 30 what is Tukey upper fence (Q3 + 1.5 * IQR)?,45,50,60,75,30,3
-Apply Min-Max scaling to x = 75 inside dataset [50 75 100]:,0.25,0.5,0.75,1.5,30,2
-Compute Z-Score for x = 80 when mean = 60 and stdDev = 10:,0.8,1.5,2.0,-2.0,30,3
-Compute the dot product of vectors A = [2 -1 3] and B = [4 5 1]:,6,16,8,0,30,1
+Result of [95 62 88 70].filter(s => s >= 75).map(s => s + 2)?,"[97, 64, 90, 72]","[95, 88]","[97, 90]","[97, 90, 72]",30,3
+"What does [10, 20, 30, 40].slice(1, 3) return, and does it mutate?","[20, 30, 40]; mutates original",[30]; throws TypeError,"[10, 20]; mutates original","[20, 30]; leaves original intact",30,4
+"What does [2, 4, 6].reduce((sum, v) => sum + v, 10) evaluate to?",22,12,48,10,30,1
+What returns if switch(2) appends 'B' in case 2 WITHOUT break before case 3 ('C')?,'B','BC','A','BCF',30,2
+"With Map roles, which updates Ada to 'lead' and reads it back?","roles.put('ada','lead'); roles['ada']","roles.push('ada','lead'); roles.find('ada')","roles.set('ada','lead'); roles.get('ada')",roles.ada='lead'; roles.read('ada'),30,3
+"With const [first, , third] = ['A', 'B', 'C'], what are first & third?",first='B' and third='C',SyntaxError from empty slot,first='A' and third='B',first='A' and third='C',20,4
+"With m = [[1,2,3],[4,5,6],[7,8,9]], what is main-diagonal sum m[i][i]?",15,45,12,6,30,1
 Why does for (i = 0; i <= scores.length; i++) sum += scores[i] yield NaN?,+= rejects integer values,<= reads undefined at scores[length],i = 0 skips slot zero,JS arrays are 1-indexed,30,2
-What happens if sumDigits(-42) checks base case (n < 10) return n?,Throws SyntaxError,-42 < 10 triggers early returning -42,Runs infinite recursion loop,Converts -42 to string '42',30,2
-What bug hides inside function median(arr) { arr.sort((a b) => a - b); ... }?,sort rejects positive integers,sort mutates caller arr in place,a - b sorts descending,median throws on odd arrays,30,2
-Why does BFS on {CS101:['CS102'] CS102:['CS101']} hang node --test forever?,Needs for...in loop,Missing visited = new Set() check,Needs JSON.stringify(graph),Requires --stack-size=128,30,2
-HashTable sums char codes without % buckets.length. Why do gets fail?,charCodeAt returns floats,Indices exceed 15 creating sparse gaps,for...of cannot read strings,h must initialize to 1,30,2
-Why does minMaxScale([5 5 5]) or zScoreStandardize([5 5 5]) return NaN?,Loop skipped index 0,max===min / stdDev===0 gives 0/0=NaN,JS fails dividing negatives,Math.sqrt rejects integers,30,2
-How does Number('') corrupt mean attendance when 'NA' parses to ''?,Number('') throws TypeError,Number('') becomes 0 dragging mean down,Number('') turns to Infinity,Number('') hashes automatically,30,2
-Imputation test fails: caller records were modified. Best fix?,Mutate records[i] directly,Return shallow clones {...row},Delete every row with null,Sort records in place first,30,2
-Why does cosineSimilarity([0 0 0] [1 2 3]) return NaN instead of 0?,Vectors must hold negatives,Zero-magnitude denominator yields 0/0,Dot product becomes Infinity,Math.hypot takes 2 args only,30,2
-transpose([]) crashes accessing matrix[0].length. Which guard fixes it?,Return null for all arrays,Return [] if empty rows or cols,Catch syntax errors with console,Wrap numbers in String(...),30,2
-Scanning 500k sorted alerts to stop at FIRST critical item: best loop?,events.forEach with return,for...of with break (or .find),500k-deep recursion,for...in over keys,30,2
+What happens if sumDigits(-42) checks base case (n < 10) return n?,Throws SyntaxError,Converts -42 to string '42',Runs infinite recursion loop,-42 < 10 triggers early returning -42,30,4
+What bug hides inside function median(arr) { arr.sort((a b) => a - b); ... }?,sort rejects positive integers,a - b sorts descending,sort mutates caller arr in place,median throws on odd arrays,30,3
+Why does BFS on {CS101:['CS102'] CS102:['CS101']} hang node --test forever?,Missing visited = new Set() check,Needs for...in loop,Needs JSON.stringify(graph),Requires --stack-size=128,30,1
+Which pair of Array methods adds an item to the END vs BEGINNING?,append() vs prepend(),push() vs unshift(),pop() vs shift(),slice() vs splice(),20,2
+let n = 5; while (n > 0) { console.log(n); } hangs forever. Cause?,console.log pauses while loops,while requires >= instead of >,n never updates toward exit condition,5 exceeds loop integer cap,30,3
+How does Number('') corrupt mean attendance when 'NA' parses to ''?,Number('') throws TypeError,Number('') hashes automatically,Number('') turns to Infinity,Number('') becomes 0 dragging mean down,30,4
+Imputation test fails: caller records were modified. Best fix?,Return shallow clones {...row},Mutate records[i] directly,Delete every row with null,Sort records in place first,30,1
+users.find(u => u.id === 99).name crashes with TypeError when missing. Why?,find mutates users array,find returns undefined on no match,find throws RangeError on ints,Arrow callbacks ban === checks,30,2
+transpose([]) crashes accessing matrix[0].length. Which guard fixes it?,Return null for all arrays,Catch syntax errors with console,Return [] if empty rows or cols,Wrap numbers in String(...),30,3
+Scanning 500k sorted alerts to stop at FIRST critical item: best loop?,events.forEach with return,for...in over keys,500k-deep recursion,for...of with break (or .find),30,4
 20k loop calls students.find(id). Why refactor to a pre-indexed Map?,Cuts O(n*m) quadratic to O(n+m) O(1) lookup,Map auto-hashes IDs w/ SHA-256,.find() mutates students array,Map uses zero heap RAM,30,1
-Running BFS on 80k graph nodes why prefer pointer Queue over arr.shift()?,Pointer Queue keeps O(V+E); shift is O(n),Array.shift rejects strings,Pointer Queue skips neighbors,shift adds cyclic edges,30,1
-Traversing depth-12 tree vs 100k linked chain in Node: safest plan?,Recurse 100k chain; loop trees,Iterative while for 100k chain; recurse shallow tree,Loop indices up to <= length,Use .forEach for deep chains,30,2
-Which structure handles 1M boolean flags per sec with lowest RAM in O(1)?,Nested objects {flag:{active}},Uint32Array-backed BitSet (32/word),"'true,false' string splits",Singly-linked boolean objects,30,2
+Running BFS on 80k graph nodes why prefer pointer Queue over arr.shift()?,Array.shift rejects strings,Pointer Queue keeps O(V+E); shift is O(n),Pointer Queue skips neighbors,shift adds cyclic edges,30,2
+Traversing depth-12 tree vs 100k linked chain in Node: safest plan?,Recurse 100k chain; loop trees,Loop indices up to <= length,Iterative while for 100k chain; recurse shallow tree,Use .forEach for deep chains,30,3
+Stripping emails/SSNs/tokens before exporting logs enforces what practice?,Loop unrolling optimization,Bitwise shift packing,Polynomial matrix multiplication,PII redaction / data sanitization,30,4
 Safest AI pipeline step order before training a regression model?,Train -> Scale -> Mask -> Dedupe,Clean/PII -> Split -> Fit train stats -> Scale/Encode,One-Hot names -> Fill NA,Pearson r on IDs -> Drop numbers,60,2
-Skewed telemetry w/ 9999 glitches: which cleaning + scaling pair wins?,Mean + Min-Max [0 1],IQR flag + Median + Z-Score,Zero-fill + Ordinal ints,Drop 90% rows over Z=0.5,60,2
-Model sets {AI:1 Web:3} and passes raw studentEmail to matrix. Two flaws?,One-Hot bloat + missing fs,False ordinal math + PII privacy leak,BitSet overflow + missing base,JSON drops booleans,60,2
-EDA flags 18% duplicates + 45% missing income + 42 IQR outliers. Why halt?,Models auto-fix 45% blanks,Duplicates overweight & high missing/skew corrupt model,Pearson r bans integers,Z-Score auto-deletes dupes,60,2
-Comparing 500-word vs 5000-word on-topic articles: why pick Cosine Sim?,Measures directional angle ignoring length,Runs in O(1) without loops,Euclidean always negative,Cosine converts to strings,30,1
+Skewed telemetry w/ 9999 glitches: which cleaning + scaling pair wins?,IQR flag + Median + Z-Score,Mean + Min-Max [0 1],Zero-fill + Ordinal ints,Drop 90% rows over Z=0.5,60,1
+Model sets {AI:1 Web:3} and passes raw studentEmail to matrix. Two flaws?,One-Hot bloat + missing fs,BitSet overflow + missing base,False ordinal math + PII privacy leak,JSON drops booleans,60,3
+Which one-liner cleanly deduplicates an array of rawEmails strings?,rawEmails.filter(true),rawEmails.sort().pop(),Object.freeze(rawEmails),[...new Set(rawEmails)],20,4
+Comparing 500-word vs 5000-word on-topic articles: why pick Cosine Sim?,Runs in O(1) without loops,Measures directional angle ignoring length,Euclidean always negative,Cosine converts to strings,30,2

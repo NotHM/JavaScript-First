@@ -1,6 +1,6 @@
-# Lesson 9.3: Machine Learning Algorithms, Evaluation Metrics & Fairness Audits (`AI101/AI102/AI201 | AI Stds 1.0, 2.0, 6.0, 7.0`)
+# Lesson 9.3: Machine Learning Algorithms, Evaluation Metrics & Fairness Audits (`CTE AI / Azure AI-900 | AI Stds 1.0, 2.0, 6.0, 7.0`)
 
-**Standards:** West-MEC `AI101` Unit 5, `AI102` Units 8–9 & `AI201` Unit 2 (**AI Stds `1.0, 2.0, 6.0, 7.0`**) | Reinforces **AZ CTE `6.4–6.7, 12.1–12.5`**
+**Standards:** **CTE AI (11.0102.00) / Azure AI-900** (**AI Stds `1.0, 2.0, 6.0, 7.0`**) | Reinforces **AZ CTE `6.4–6.7, 12.1–12.5`**
 
 ## Student Learning Objectives (Bloom's Taxonomy)
 - **`[L1 Remember]`** Recall the three ML paradigms (**Supervised**, **Unsupervised**, **Reinforcement Learning**), the four **Confusion Matrix** counts (`TP`, `FP`, `TN`, `FN`), `RMSE` / $R^2$, and the **EEOC 4/5ths (`80%`) Disparate Impact rule** (`AI 1.0, 6.0, 7.0`).

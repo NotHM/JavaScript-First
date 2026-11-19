@@ -1,0 +1,14 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+How much waste heat is saved at 50A on 0.4m cable using 12 AWG vs 18 AWG?,0 W,2.0 W,~15.74 W (20.95 W vs 5.21 W),250 W,30,3
+Inline smoke stopper trips red on first bring-up. What is the safe next step?,Bypass straight to 6S LiPo,Raise trip limit to 60A,Add propellers now,Unplug and inspect DMM/bridges safely,20,4
+Linux reports Permission denied: /dev/ttyACM0 (dialout). Persistent fix?,sudo usermod -aG dialout $USER,rm -rf /dev/ttyACM0,chmod 777 /,killall node,30,1
+Which RC + VTX wireless band pair avoids co-channel interference cleanly?,Both on 2.4 GHz max overlap,2.4 GHz ELRS + 5.8 GHz VTX,Both on 120V AC,Both without antennas,20,2
+Compute XOR checksum byte for MSP [0x24 0x4D 0x3E 0x02 0x6C 0x64 0x00 CS]:,0x0A,0xFF,0x24,0x00,30,1
+Why does for (i=0; i<buf.length-1; i++) cs^=buf[i] reject valid MSP frames?,Subtracting 2 needed,Buffer needs UTF-16 strings,Forgot += operator,Loops over $M< instead of start at 3,30,4
+How should a GCS verify downloaded firmware or telemetry wasn't altered?,Rename to .zip,Strip MIME headers,Checksum/SHA-256 and signature verify,Disable HTTPS,20,3
+Why give GCS FAILSAFE_RTH warnings role=alert and clear contrast?,Hide failures from pilots,Support accessible WCAG screen-reader alerts,Reduce image DPI,Bypass JS validation,20,2
+Why freeze GCS_STATES with Object.freeze() inside strict JS telemetry code?,Runs faster GPU loops,Disables ESLint rules,Deletes properties later,Prevents accidental state key mutation,20,4
+Two BMP280 barometers share I2C 0x76 on SDA1/SCL1. Cleanest hardware fix?,Shift one strap to 0x77 or split bus,Short SDA to VCC,Twist wires around LiPo,Wire SDA to TX1,30,1
+Paid roof shoot with 240g quad in Class D: why is FAA TRUST rejected?,Weight exceeds 55 lbs,Commercial flight needs Part 107 UAG + RID,Sub-250 skips Class D LAANC,TRUST works anywhere paid,30,2
+Why does if (weightGrams >= 250) wrongly flag a 250.0g hobby drone?,Needs <= 250,Convert grams to volts,Statute triggers strictly > 250 g,Delete check,20,3
+RC RSSI drops to -112 dBm at 300 ft AGL. Safest automated GCS transition?,Immediate EMERGENCY_DISARM,Transition to FAILSAFE_RTH,Stay in ARMED ignoring link loss,Disable barometer,30,2

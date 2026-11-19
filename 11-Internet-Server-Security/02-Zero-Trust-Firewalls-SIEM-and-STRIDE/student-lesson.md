@@ -1,6 +1,6 @@
 # Student Lesson 11.2: Zero Trust, Firewalls, SIEM Correlation & STRIDE
 
-**Standards:** West-MEC `ITS 201–202` (`CompTIA Security+`, `Security Pro`) | **ADE:** `1.0, 4.5–4.6, 5.1–5.10, 9.1–9.10, 10.7–10.8, 11.1–11.6`  
+**Standards:** CTE IT Security (`11.1999.00`) / CompTIA Security+ | **ADE:** `1.0, 4.5–4.6, 5.1–5.10, 9.1–9.10, 10.7–10.8, 11.1–11.6`  
 **Reading:** [`readme.md`](./readme.md) | **Slides:** [`slides/slides.md`](./slides/slides.md)  
 **Starter Lab:** [`../../0-student_files/11-zero-trust-siem/firewallSiemLab.mjs`](../../0-student_files/11-zero-trust-siem/firewallSiemLab.mjs)
 

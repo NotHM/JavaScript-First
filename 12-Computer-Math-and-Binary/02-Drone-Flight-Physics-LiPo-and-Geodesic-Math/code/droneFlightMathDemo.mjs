@@ -3,7 +3,7 @@
  * Drone Flight Physics, LiPo Battery Chemistry, Density Altitude,
  * WGS-84 Haversine Geodesic Distance & Photogrammetry GSD Math.
  *
- * Standards: West-MEC Drone Technology DT101 (1.0-12.0, 23.0) + AZ CTE 4.0 (4.1-4.7)
+ * Standards: CTE Drone Tech (49.0199.00: 1.0-12.0, 23.0) + AZ CTE 4.0 (4.1-4.7)
  * Bench Safety Reminder: Always remove propellers (PROPS OFF) before energizing motors/ESCs!
  *
  * Run: node 12-Computer-Math-and-Binary/02-Drone-Flight-Physics-LiPo-and-Geodesic-Math/code/droneFlightMathDemo.mjs

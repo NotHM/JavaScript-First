@@ -1,6 +1,6 @@
 # Unit 11 Setup-Standard Guide: OpenSSL TLS Certs, Socket/ACL Checks & Hardening
 
-**Unit:** 11 — Cybersecurity, OWASP Top 10, Cryptography, Zero Trust & SIEM (`Std 1.0 | ITS 201–202 / Sec+`)  
+**Unit:** 11 — Cybersecurity, OWASP Top 10, Cryptography, Zero Trust & SIEM (`Std 1.0 | CTE IT Security / CompTIA Security+`)  
 **Companion Docs:** [`readme.md`](./readme.md) | [`unit-guide.md`](./unit-guide.md) | [`quizzes/unit-test-50.md`](./quizzes/unit-test-50.md)
 
 Use this setup checklist before building or grading Unit 11 labs so OpenSSL keys stay local, test suites never hang on live ports, and local security/socket verification commands work across OSes.

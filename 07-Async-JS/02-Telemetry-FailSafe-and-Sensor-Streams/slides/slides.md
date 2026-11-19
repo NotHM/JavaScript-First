@@ -7,7 +7,7 @@ slideNumber: true
 ---
 
 # Lesson 7.2: RF Telemetry & Async Fail-Safe State Machines
-**West-MEC `DT101–DT102` (`11.0–16.0, 24.0–26.0`) + AZ CTE `18.0` (`18.1–18.7`)**
+**CTE Drone Tech (49.0199.00) / FAA Part 107 (`11.0–16.0, 24.0–26.0`) + AZ CTE `18.0` (`18.1–18.7`)**
 
 ---
 

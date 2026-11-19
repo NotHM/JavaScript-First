@@ -1,17 +1,17 @@
 # Lesson 20.3: NLP Pipelines, Agentic AI Loops, Model Cards & Responsible Governance
 
-**West-MEC AI Alignment:** `AI101` (Units 1 & 7) • `AI102` (Units 11–14) • `AI202` (Units 5–8) | **AI Standards:** `1.0–2.0, 10.0–15.0` | **AZ CTE:** `1.5, 2.3, 4.3, 12.2, 18.0, 19.8`  
+**CTE AI Alignment:** `CTE AI (11.0102.00)` (NLP, Agentic Loops & Responsible AI Governance) | **AI Standards:** `1.0–2.0, 10.0–15.0` | **AZ CTE:** `1.5, 2.3, 4.3, 12.2, 18.0, 19.8`  
 **Industry Certifications:** `Microsoft Azure AI-900 (AI Fundamentals)` • `IT Specialist: Python` • `IT Specialist: Artificial Intelligence`
 
 ## Lesson SMART Objectives
-- [ ] **`[L2 Understand -> L3 Apply | AI101–AI102, 4.3]`** Implement deterministic classical NLP pipelines (normalization, regex tokenization, stopword filtering, suffix stemming, **Bag-of-Words**, **TF-IDF** `tf * log(N / df)`, cosine ranking, lexicon Sentiment Analysis, Intent Classification, and NER intuition) in pure JavaScript.
-- [ ] **`[L2 Understand -> L4 Analyze | AI102–AI202, 14.0]`** Contrast **Discriminative (`P(y|x)`)** vs. **Generative (`P(x, y)`)** models, configure `temperature`/`top-p`/system-role controls, and mitigate LLM hallucinations, confabulation, and toxicity via grounded RAG citations.
-- [ ] **`[L4 Analyze -> L6 Create | AI202, 1.5, 18.0]`** Architect a sandboxed **ReAct Agentic Loop (`Thought -> Action -> Observation -> Final Answer`)** enforcing working memory, `maxSteps` loop budgets, strict tool allowlists, and **Human-in-the-Loop (HITL)** pause/resume approval gates.
+- [ ] **`[L2 Understand -> L3 Apply | CTE AI 11.0102.00, 4.3]`** Implement deterministic classical NLP pipelines (normalization, regex tokenization, stopword filtering, suffix stemming, **Bag-of-Words**, **TF-IDF** `tf * log(N / df)`, cosine ranking, lexicon Sentiment Analysis, Intent Classification, and NER intuition) in pure JavaScript.
+- [ ] **`[L2 Understand -> L4 Analyze | CTE AI 11.0102.00, 14.0]`** Contrast **Discriminative (`P(y|x)`)** vs. **Generative (`P(x, y)`)** models, configure `temperature`/`top-p`/system-role controls, and mitigate LLM hallucinations, confabulation, and toxicity via grounded RAG citations.
+- [ ] **`[L4 Analyze -> L6 Create | 11.0102.00, 1.5, 18.0]`** Architect a sandboxed **ReAct Agentic Loop (`Thought -> Action -> Observation -> Final Answer`)** enforcing working memory, `maxSteps` loop budgets, strict tool allowlists, and **Human-in-the-Loop (HITL)** pause/resume approval gates.
 - [ ] **`[L5 Evaluate | AI Std 14.0]`** Audit AI deployments against **NIST AI RMF** (`Govern, Map, Measure, Manage`), **OECD AI Principles**, **EU AI Act** risk tiers, **IEEE Ethically Aligned Design**, and **Model Card** validation (`disparateImpactAudit` 80% rule & `hitlControls`).
 
 ---
 
-## 1. Classical & Modern NLP Pipelines (`AI101` / `AI102`)
+## 1. Classical & Modern NLP Pipelines (`CTE AI 11.0102.00`)
 
 Before large language models generate fluent prose, natural language pipelines convert messy text into clean mathematical representations:
 
@@ -29,7 +29,7 @@ Before large language models generate fluent prose, natural language pipelines c
 
 ---
 
-## 2. Discriminative vs. Generative AI (`AI102` / `AI202`)
+## 2. Discriminative vs. Generative AI (`Azure AI-900` / `11.0102.00`)
 
 | Dimension | Discriminative Models (`P(y\|x)`) | Generative Models (`P(x, y)` or `P(x\|context)`) |
 |---|---|---|
@@ -45,7 +45,7 @@ Before large language models generate fluent prose, natural language pipelines c
 
 ---
 
-## 3. Agentic AI & Sandboxed ReAct Loops (`AI202`)
+## 3. Agentic AI & Sandboxed ReAct Loops (`11.0102.00` Agentic AI)
 
 Modern AI applications move beyond single-turn chat by combining four agentic building blocks:
 1. **Planning:** Decompose a complex user goal into verifiable sub-steps.

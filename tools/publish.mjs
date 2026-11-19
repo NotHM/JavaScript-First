@@ -6,11 +6,11 @@
  * for print-ready PDF generation, plus Reveal.js HTML generation for slides.
  *
  * Usage:
- *   node tools/publish.mjs --student   (Units 01–20 complete Student Book PDF)
- *   node tools/publish.mjs --teacher   (Units 01–20 complete Teacher's Manual PDF)
- *   node tools/publish.mjs --slides    (All 49 Reveal.js slide decks -> dist/slides/)
- *   node tools/publish.mjs --year1     (West-MEC Year 1 CO101+CO102 Student & Teacher PDFs)
- *   node tools/publish.mjs --year2     (West-MEC Year 2 CO201+CO202 Student & Teacher PDFs)
+ *   node tools/publish.mjs --student   (Units 01–21 complete Student Book PDF)
+ *   node tools/publish.mjs --teacher   (Units 01–21 complete Teacher's Manual PDF)
+ *   node tools/publish.mjs --slides    (All 52 Reveal.js slide decks -> dist/slides/)
+ *   node tools/publish.mjs --year1     (Year 1 CTE/CIS 101+102 Student & Teacher PDFs)
+ *   node tools/publish.mjs --year2     (Year 2 CTE/CIS 201+202 Student & Teacher PDFs)
  *   node tools/publish.mjs --all       (Default: Student Book, Teacher's Manual & Slides)
  */
 
@@ -25,7 +25,7 @@ const DIST = path.join(ROOT, 'dist');
 
 const STUDENT_FRONT_MATTER = [
   'README.md',
-  '0-documentation/west-mec-scope-and-sequence.md',
+  '0-documentation/cte-scope-and-sequence.md',
   '0-documentation/blooms-taxonomy-framework.md',
   '0-student_files/README.md',
 ];
@@ -33,11 +33,11 @@ const STUDENT_FRONT_MATTER = [
 const TEACHER_FRONT_MATTER = [
   'STANDARDS.md',
   'roadmap.md',
-  '0-documentation/west-mec-scope-and-sequence.md',
+  '0-documentation/cte-scope-and-sequence.md',
   '0-documentation/blooms-taxonomy-framework.md',
 ];
 
-// Unit definitions ordered cleanly with West-MEC Year tagging + 18-Week Core progression
+// Unit definitions ordered cleanly for High School CTE & Community College (CTE/CIS 101–202) + 18-Week Core progression
 const UNITS = {
   U01: {
     year: 1,
@@ -645,19 +645,53 @@ const UNITS = {
       '20-Local-AI-Multimodal-and-3D-Capstone/projects/project-rubric.md',
     ],
   },
+  U21: {
+    year: 2,
+    student: [
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/readme.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/setup-guide.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/evaluations/pre-unit-eval.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/01-Soldering-Power-Distribution-and-Hardware-Safety/readme.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/01-Soldering-Power-Distribution-and-Hardware-Safety/pre-lesson-eval.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/01-Soldering-Power-Distribution-and-Hardware-Safety/student-lesson.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/01-Soldering-Power-Distribution-and-Hardware-Safety/post-lesson-eval.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/02-Flight-Controller-Wiring-UART-Protocols-and-JS-Telemetry/readme.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/02-Flight-Controller-Wiring-UART-Protocols-and-JS-Telemetry/pre-lesson-eval.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/02-Flight-Controller-Wiring-UART-Protocols-and-JS-Telemetry/student-lesson.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/02-Flight-Controller-Wiring-UART-Protocols-and-JS-Telemetry/post-lesson-eval.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/03-FAA-Regulations-Overview-External-Cert-Resources-and-Bench-Test/readme.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/03-FAA-Regulations-Overview-External-Cert-Resources-and-Bench-Test/pre-lesson-eval.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/03-FAA-Regulations-Overview-External-Cert-Resources-and-Bench-Test/student-lesson.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/03-FAA-Regulations-Overview-External-Cert-Resources-and-Bench-Test/post-lesson-eval.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/evaluations/post-unit-eval.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/quizzes/unit-test-50.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/projects/unit-project.md',
+    ],
+    teacher: [
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/unit-guide.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/01-Soldering-Power-Distribution-and-Hardware-Safety/lesson-plan.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/02-Flight-Controller-Wiring-UART-Protocols-and-JS-Telemetry/lesson-plan.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/03-FAA-Regulations-Overview-External-Cert-Resources-and-Bench-Test/lesson-plan.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/evaluations/eval-answer-key.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/quizzes/quiz-1-concepts.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/quizzes/quiz-2-application.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/quizzes/unit-test-50-answer-key.md',
+      '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/projects/project-rubric.md',
+    ],
+  },
 };
 
-// Default full order: 18-Week Core Units (01–16) followed by Year 2 Advanced & Capstone Units (17–20)
+// Default full order: 18-Week Core Units (01–16) followed by Year 2 Advanced & Capstone Units (17–21)
 const FULL_ORDER = [
   'U01', 'U12', 'U04', 'U05', 'U06',
   'U13', 'U14', 'U09', 'U02', 'U03',
   'U07', 'U15', 'U10', 'U08', 'U11', 'U16',
-  'U17', 'U18', 'U19', 'U20',
+  'U17', 'U18', 'U19', 'U20', 'U21',
 ];
 
-// West-MEC Year 1 (CO101 + CO102) & Year 2 (CO201 + CO202) exact semester order
+// High School CTE & Community College Year 1 (CTE/CIS 101 + 102) & Year 2 (CTE/CIS 201 + 202) exact semester order
 const YEAR1_ORDER = ['U01', 'U12', 'U04', 'U05', 'U06', 'U13', 'U14', 'U09', 'U02', 'U03', 'U10'];
-const YEAR2_ORDER = ['U07', 'U15', 'U08', 'U11', 'U17', 'U18', 'U19', 'U16', 'U20'];
+const YEAR2_ORDER = ['U07', 'U15', 'U08', 'U11', 'U17', 'U18', 'U19', 'U16', 'U20', 'U21'];
 
 const collectSources = (order, kind, frontMatter) => [
   ...frontMatter,
@@ -721,6 +755,9 @@ const SLIDE_DECKS = [
   { src: '20-Local-AI-Multimodal-and-3D-Capstone/01-Local-LLM-Architecture-and-Streaming/slides/slides.md', out: '20-1-local-llm-streaming-rag-slides.html', title: 'Lesson 20.1: Local LLM Hosting, Ollama SSE & RAG Safety' },
   { src: '20-Local-AI-Multimodal-and-3D-Capstone/02-Multimodal-Voice-Vision-and-3D-Print-Capstone/slides/slides.md', out: '20-2-multimodal-voice-vision-3d-print-slides.html', title: 'Lesson 20.2: Voice/Vision AI & Parametric 3D CAD/STL Capstone' },
   { src: '20-Local-AI-Multimodal-and-3D-Capstone/03-NLP-Pipelines-Agentic-AI-and-Responsible-Governance/slides/slides.md', out: '20-3-nlp-agentic-ai-governance-slides.html', title: 'Lesson 20.3: NLP Pipelines, Agentic AI & Responsible Governance' },
+  { src: '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/01-Soldering-Power-Distribution-and-Hardware-Safety/slides/slides.md', out: '21-1-soldering-power-hardware-safety-slides.html', title: 'Lesson 21.1: Drone Bench Soldering, Power Distribution & Hardware Safety' },
+  { src: '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/02-Flight-Controller-Wiring-UART-Protocols-and-JS-Telemetry/slides/slides.md', out: '21-2-fc-wiring-uart-msp-telemetry-slides.html', title: 'Lesson 21.2: Flight Controller Wiring, UART/I2C & Binary MSP Programming' },
+  { src: '21-Hands-On-Drone-Build-Soldering-Wiring-and-Flight-Code/03-FAA-Regulations-Overview-External-Cert-Resources-and-Bench-Test/slides/slides.md', out: '21-3-faa-overview-external-cert-bench-slides.html', title: 'Lesson 21.3: Top-Level Drone Laws, External FAA Cert Portals & Bench Verification' },
 ];
 
 function ensureDir(dir) {
@@ -779,14 +816,19 @@ function combineMarkdown(files, title, subtitle) {
   assertAllSourcesExist(files, title);
 
   const sections = [
-    `<div class="cover-page"><h1>${title}</h1><p class="subtitle">${subtitle}</p><p class="meta">JavaScript First — Coding Book &amp; West-MEC AZ CTE Course (CIP 11.0202.00)</p></div>\n\n<div class="page-break"></div>\n`,
+    `<div class="cover-page"><h1>${title}</h1><p class="subtitle">${subtitle}</p><p class="meta">JavaScript First — High School CTE &amp; Community College CIS Curriculum (CIP 11.0202.00)</p></div>\n\n<div class="page-break"></div>\n`,
   ];
 
   for (const relPath of files) {
     const absPath = path.join(ROOT, relPath);
     const raw = fs.readFileSync(absPath, 'utf8');
     // Built HTML lives inside dist/, so relative image assets step up to ROOT cleanly
-    const cleaned = rewriteAssetPaths(stripFrontmatter(raw), relPath, 'dist');
+    let cleaned = rewriteAssetPaths(stripFrontmatter(raw), relPath, 'dist');
+    // Avoid headless Chromium stalls/SSL errors fetching external shields.io/gitpod.io badges inside offline print PDFs
+    cleaned = cleaned.replace(
+      /<img\b[^>]*\bsrc=["']https?:\/\/(?:img\.shields\.io|gitpod\.io)\b[^"']*["'][^>]*>/gi,
+      ''
+    );
     sections.push(`\n<!-- Source: ${relPath} -->\n\n${cleaned}\n\n<div class="page-break"></div>\n`);
   }
 
@@ -899,8 +941,8 @@ const runAll = args.size === 0 || args.has('--all');
 if (runAll || args.has('--student')) {
   buildPdfBook({
     name: 'JavaScript-First-Student-Book',
-    title: 'JavaScript First — Complete Student Book, Evaluations & Labs (Units 1–20)',
-    subtitle: '2-Year West-MEC Node-First Textbook: Software & App Design (11.0202.00) + AI, Drone & IT Security Pathways',
+    title: 'JavaScript First — Complete Student Book, Evaluations & Labs (Units 1–21)',
+    subtitle: 'High School CTE (Grades 11–12) & Community College CIS (900 Hrs · CTE/CIS 101–202) — Software Design, AI, Security & Hands-On Drone Build',
     files: STUDENT_SOURCES,
   });
 }
@@ -908,8 +950,8 @@ if (runAll || args.has('--student')) {
 if (runAll || args.has('--teacher')) {
   buildPdfBook({
     name: 'JavaScript-First-Teachers-Manual',
-    title: "JavaScript First — Complete Teacher's Manual (Units 1–20)",
-    subtitle: 'West-MEC & AZ CTE Software & App Design (11.0202.00) + AI, Drone & IT Security SMART Goals, Lesson Plans, Keys & Rubrics',
+    title: "JavaScript First — Complete Teacher's Manual (Units 1–21)",
+    subtitle: 'High School CTE & Community College CIS — SMART Goals, Lesson Plans, >=75% Cert-Aligned Quiz Keys & Rubrics',
     files: TEACHER_SOURCES,
   });
 }
@@ -917,14 +959,14 @@ if (runAll || args.has('--teacher')) {
 if (args.has('--year1')) {
   buildPdfBook({
     name: 'JavaScript-First-Year1-Student-Book',
-    title: 'JavaScript First — Year 1 Student Book (West-MEC CO101 + CO102)',
+    title: 'JavaScript First — Year 1 Student Book (CTE/CIS 101 + 102)',
     subtitle: 'Linux Safety, Modules, Drone Math, AI Vectors, ML Fairness, Networking/HTTP & Computer Vision',
     files: YEAR1_STUDENT_SOURCES,
   });
   buildPdfBook({
     name: 'JavaScript-First-Year1-Teachers-Manual',
-    title: "JavaScript First — Year 1 Teacher's Manual (West-MEC CO101 + CO102)",
-    subtitle: 'Year 1 SMART Goals, Lesson Plans, Answer Keys & Rubrics (450 Hours)',
+    title: "JavaScript First — Year 1 Teacher's Manual (CTE/CIS 101 + 102)",
+    subtitle: 'Year 1 SMART Goals, Lesson Plans, Cert-Aligned Answer Keys & Rubrics (450 Hours)',
     files: YEAR1_TEACHER_SOURCES,
   });
 }
@@ -932,14 +974,14 @@ if (args.has('--year1')) {
 if (args.has('--year2')) {
   buildPdfBook({
     name: 'JavaScript-First-Year2-Student-Book',
-    title: 'JavaScript First — Year 2 Student Book (West-MEC CO201 + CO202)',
-    subtitle: 'RF Telemetry, Zero-Trust SIEM, Deno/WASM, Bun/Mongo REST, Part 107 Drone Sim & Agentic Local AI Capstone',
+    title: 'JavaScript First — Year 2 Student Book (CTE/CIS 201 + 202)',
+    subtitle: 'RF Telemetry, Zero-Trust SIEM, Deno/WASM, Bun/Mongo REST, Part 107 Sim, Local AI 3D & Hands-On Drone Build Capstone',
     files: YEAR2_STUDENT_SOURCES,
   });
   buildPdfBook({
     name: 'JavaScript-First-Year2-Teachers-Manual',
-    title: "JavaScript First — Year 2 Teacher's Manual (West-MEC CO201 + CO202)",
-    subtitle: 'Year 2 SMART Goals, Lesson Plans, Answer Keys & Capstone Rubrics (450 Hours)',
+    title: "JavaScript First — Year 2 Teacher's Manual (CTE/CIS 201 + 202)",
+    subtitle: 'Year 2 SMART Goals, Lesson Plans, Cert-Aligned Answer Keys & Capstone Rubrics (450 Hours)',
     files: YEAR2_TEACHER_SOURCES,
   });
 }

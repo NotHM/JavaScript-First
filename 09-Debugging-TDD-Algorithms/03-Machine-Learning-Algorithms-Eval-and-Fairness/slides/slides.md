@@ -7,7 +7,7 @@ slideNumber: true
 ---
 
 # Lesson 9.3: ML Algorithms, Evaluation & Fairness
-**West-MEC `AI101` U5, `AI102` U8–9 & `AI201` U2 (`AI Stds 1.0, 2.0, 6.0, 7.0`)**
+**CTE AI (11.0102.00) / Azure AI-900 (`AI Stds 1.0, 2.0, 6.0, 7.0`)**
 
 ---
 

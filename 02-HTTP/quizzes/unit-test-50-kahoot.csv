@@ -1,7 +1,7 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
 Default TCP ports for HTTP and HTTPS?,21 and 22,80 and 443,143 and 993,8080 and 3389,20,2
 Which TCP port handles encrypted SSH and SFTP?,Port 21,Port 25,Port 22,Port 53,20,3
-Cloud model running stateless functions billed per ms?,IaaS,FaaS (Serverless),SaaS,Bare Metal,20,2
+Cloud model delivering complete vendor-hosted software in a browser?,IaaS,SaaS (Software as a Service),PaaS,On-Premises Bare Metal,20,2
 Passive <4 cm wireless standard for badge/card taps?,NFC,Wi-Fi 802.11ax,5G CBRS,Single-Mode Fiber,20,1
 HTTP status family for client errors like 404 or 405?,2xx,3xx,4xx,5xx,20,3
 "package.json field enabling ESM import in .js files?","""module"": true","""type"": ""module""","""esm"": ""strict""","""engines"": ""esm""",20,2
@@ -11,7 +11,7 @@ Max standardized cable length for Cat6a UTP copper?,25 meters,50 meters,100 mete
 IANA Dynamic / Ephemeral client source port range?,0-1023,1024-4095,1024-49151,49152-65535,20,4
 Why was 128-bit IPv6 introduced alongside 32-bit IPv4?,IPv4 cannot carry JSON,Prevent IPv4 exhaustion & NAT,IPv6 skips switches,IPv6 drops TCP ports,20,2
 How do SFTP and FTPS differ?,SFTP uses SSH; FTPS uses TLS,SFTP is plain; FTPS uses UDP,SFTP syncs email; FTPS HTML,Both are HTTP aliases,30,1
-How does a CDN speed up global page loads?,Disables TLS encryption,Caches static assets at edge,Blocks async JS execution,Forces DB hits on images,20,2
+How do 2.4 GHz and 5 GHz Wi-Fi bands compare indoors?,5 GHz passes concrete walls better,2.4 GHz: longer range; 5 GHz: faster throughput,2.4 GHz eliminates IPv4/IPv6,Both bands have identical range,30,2
 Why separate createAppServer() from server.listen()?,Node forbids same file,HTTP requires Express,Tests bind port 0 without hang,Buffer needs no listen(),30,3
 Why is express.static() safer than fs.readFile(req.url)?,Encrypts CSS with AES,Sets MIME & blocks ../ escapes,Converts JS into HTML,Removes TCP sockets,30,2
 Why pick SMF fiber over Cat6a for 2 km near high voltage?,Cat6a caps at 10 m,SMF carries DC power,SMF spans 10+ km EMI-free,Cat6a runs DNS per frame,20,3
@@ -19,7 +19,7 @@ How does WPA3 improve Wi-Fi security over WPA2?,Drops management auth,Uses SAE v
 Contrast TCP vs UDP at Layer 4 Transport?,TCP ordered; UDP low-overhead,UDP ordered; TCP unacked,TCP Layer 2; UDP optical,Neither uses IANA ports,30,1
 How does STP / RSTP enable redundant switch uplinks?,Loops broadcasts forever,Blocks backup port until fail,Assigns RFC 1918 IPs,Acts as FaaS worker,30,2
 What does an APIPA IPv4 (169.254.x.x) address mean?,Valid public unicast IP,IPv6 DNS resolved cleanly,DHCP failed; link-local IP,CORS header rejected,20,3
-1000 KB gzipped 75% over 2000 kbps (0 ms RTT) transfer?,0.25 seconds,1.0 second,4.0 seconds,3.0 seconds,60,2
+HTML form attribute sending fields in body instead of URL query string?,action='body',method='POST',method='GET',target='_blank',20,2
 What are 'Hi 👋'.length vs Buffer.byteLength('Hi 👋')?,5 units and 5 bytes,4 units and 4 bytes,5 UTF-16 vs 7 UTF-8 bytes,7 UTF-16 vs 5 UTF-8 bytes,30,3
 Best HTTP status after POST /api/students creates a row?,204 No Content,201 Created,304 Not Modified,405 Method Not Allowed,20,2
 Header telling clients to parse JSON rather than text?,Content-Type: application/json,Content-Encoding: utf-16,Accept-Ranges: html,X-Frame-Options: json,20,1
@@ -40,9 +40,9 @@ Linux command diagnosing listen EADDRINUSE :::7000?,ping 127.0.0.1:7000,ss -tuln
 Why does sorting VLSM smallest-first break allocations?,Breaks power-of-2 alignment,RFC 1918 bans /28,Small subnets lack bcast,IEEE 802.11 forbids it,30,1
 Risk when SSR template interpolates ${item.name} raw?,XSS <script> injection,EADDRINUSE exhaustion,Routing loop,Const TypeError,30,1
 Startup needs custom Linux kernel sysctls & VPC control:,IaaS (AWS EC2 / GCE),SaaS (Figma),FaaS (AWS Lambda),Static CDN,30,1
-Invoice PDF worker runs 3 min/day and idles 23+ hours:,Bare-metal rack,Always-on IaaS VMs,FaaS / Serverless,Local laptop port 7000,30,3
+Keep sensitive local DB on-prem + run burst cloud analytics via VPN?,Pure Public Cloud,Single Local Laptop,Hybrid Cloud (on-prem + public cloud),Zero-Trust Static CDN,30,3
 Soil sensors span 5 km rural orchard without Wi-Fi:,NFC (< 4 cm),BLE (10-100 m),Cat6a UTP (100 m),LTE / 5G Cellular,20,4
-Security proxy needs zero npm CVEs & minimal cold start:,40 Express plugins,Zero-dependency node:http,Plaintext Telnet,Serve /tmp unchecked,30,2
+Why enforce HTTPS (TLS 443) + HSTS over plain HTTP 80 on login portals?,Compresses PNG fonts cleanly,Encrypts credentials & blocks SSL-stripping,Replaces DNS port 53 completely,Bypasses TCP 3-way handshake,30,2
 When is Express.js clearly justified over bare node:http?,Single /health JSON probe,Multi-route static/JSON/params,App with zero HTTP,UDP packet inspection,30,2
 "450 m link near HV conduits with dual uplinks; pick tech:",Cat6a UTP + no STP,BLE mesh + APIPA,SMF fiber + RSTP failover,NFC bridge + hub,30,3
 Data center needing uniform east-west hops per leaf rack:,Daisy-chain bus,Spine-Leaf Clos fabric,Token Ring,Single Star hub,30,2

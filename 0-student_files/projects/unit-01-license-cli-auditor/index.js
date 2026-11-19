@@ -1,7 +1,7 @@
 /**
  * Unit 1 Capstone Project Starter:
  * CLI Open-Source License, Privacy & Host-Safety Compliance Auditor
- * (AZ CTE Stds 2.0, 3.0, 11.0 | West-MEC ITS 101-102 / ADE 2.1-2.6, 8.6-8.8)
+ * (AZ CTE Stds 2.0, 3.0, 11.0 | CTE IT Security (11.1999.00) / CompTIA A+ / RHCSA / ADE 2.1-2.6, 8.6-8.8)
  *
  * Instructions:
  * 1. Implement `classifyType(value)` handling null, arrays, and all 7 primitives.

@@ -1,19 +1,19 @@
 # Unit 10 Quiz 2: Debugging Accessibility, Canvas, DOM & Computer Vision (Application)
 
-**Bloom's:** `[L3]`–`[L5]` | **CSV:** [`quiz-2-kahoot.csv`](./quiz-2-kahoot.csv) | **Stds:** `15.3`–`15.11, AI 3.0, 8.0, 9.0`
+**Bloom's:** `[L3]`–`[L5]` | **CSV:** [`quiz-2-kahoot.csv`](./quiz-2-kahoot.csv) | **Stds:** `15.3`–`15.11, CTE AI 3.0, 8.0, 9.0` | **Cert Alignment:** `10/13 (76.9%)` (`ITS-HTML-CSS`, `ITS-JS`, `CIW-JS`)
 
-| # | Question | Correct Answer | Time | Bloom's |
-|---|---|---|---|---|
-| 1 | Clicking Submit reloads page & wipes JS list. What line is missing? | **`event.preventDefault()`** | 20s | `[L4 \| 15.6]` |
-| 2 | Inserting `li.innerHTML = userText` risks executing malicious `<script>`/`<img onerror>`: | **Use `li.textContent = userText`** | 20s | `[L4 \| 15.7]` |
-| 3 | Canvas shapes drawn AFTER `ctx.rotate(0.5)` stay tilted forever unless calling: | **`ctx.save()` & `ctx.restore()`** | 30s | `[L3 \| 15.5]` |
-| 4 | Status update div should be read aloud dynamically to blind screen reader users: | **`aria-live="polite"`** | 20s | `[L3 \| 15.8]` |
-| 5 | Printouts waste toner rendering nav sidebars & Submit buttons. CSS rule fix? | **`@media print { nav { display: none; } }`** | 20s | `[L3 \| 15.4]` |
-| 6 | Automated accessibility check scored 100%, yet Tab key gets trapped inside modal: | **Manual keyboard usability testing** | 30s | `[L5 \| 15.10]` |
-| 7 | `width: 300px; padding: 20px; border: 5px solid;` with default `content-box` totals: | **`350px`** | 30s | `[L4 \| 15.4]` |
-| 8 | Low-fidelity gray box sketches built BEFORE visual UI polish (`15.2`) are: | **Wireframes** | 20s | `[L3 \| 15.2]` |
-| 9 | Gray placeholder `"Email"` disappears on focus—leaving screen readers blind! Fix? | **Explicit `<label for="id">`** | 20s | `[L4 \| 15.8]` |
-| 10 | Best fit for simple 2-page brochure landing page prioritizing 0KB CSS build speed: | **Lightweight custom CSS variables** | 30s | `[L5 \| 15.11]` |
-| 11 | Corner pixels turn dark when applying $3 \times 3$ Box Blur to a bright grid (`borderMode`). Fix? | **Switch `'zero'` padding to `'clamp'` replication** | 30s | `[L4 \| AI 8.0]` |
-| 12 | Sobel gradients compute `Gx = 60` and `Gy = 80` at an edge pixel. Magnitude? | **`100`** ($\sqrt{60^2 + 80^2}$) | 30s | `[L3 \| AI 8.0]` |
-| 13 | 30fps safety cam needs `< 25 ms` latency & private local frames despite `85 ms` WAN RTT: | **Run quantized model locally on Edge `NPU`** | 30s | `[L5 \| AI 3.0, 9.0]` |
+| # | Question | Correct Answer | Time | Bloom's | Alignment |
+|---|---|---|---|---|---|
+| 1 | Clicking Submit reloads page & wipes JS list. What line is missing? | **`event.preventDefault()`** | 20s | `[L4 \| 15.6]` | `Cert: ITS-JS` |
+| 2 | Inserting `li.innerHTML = userText` risks executing malicious `<script>`/`<img onerror>`: | **Use `li.textContent = userText`** | 20s | `[L4 \| 15.7]` | `Cert: CIW-JS` |
+| 3 | Canvas shapes drawn AFTER `ctx.rotate(0.5)` stay tilted forever unless calling: | **`ctx.save()` & `ctx.restore()`** | 30s | `[L3 \| 15.5]` | `Cert: CIW-JS` |
+| 4 | Status update div should be read aloud dynamically to blind screen reader users: | **`aria-live="polite"`** | 20s | `[L3 \| 15.8]` | `Cert: ITS-HTML-CSS` |
+| 5 | Printouts waste toner rendering nav sidebars & Submit buttons. CSS rule fix? | **`@media print { nav { display: none; } }`** | 20s | `[L3 \| 15.4]` | `Cert: ITS-HTML-CSS` |
+| 6 | Automated accessibility check scored 100%, yet Tab key gets trapped inside modal: | **Manual keyboard usability testing** | 30s | `[L5 \| 15.10]` | `Cert: ITS-HTML-CSS` |
+| 7 | `width: 300px; padding: 20px; border: 5px solid;` with default `content-box` totals: | **`350px`** | 30s | `[L4 \| 15.4]` | `Cert: ITS-HTML-CSS` |
+| 8 | Mobile cards overflow a fixed 3-column CSS Grid horizontally. Responsive CSS fix? | **`@media (max-width: 640px)` stacking `1fr`** | 20s | `[L3 \| 15.4]` | `Cert: ITS-HTML-CSS` |
+| 9 | Gray placeholder `"Email"` disappears on focus—leaving screen readers blind! Fix? | **Explicit `<label for="id">`** | 20s | `[L4 \| 15.8]` | `Cert: ITS-HTML-CSS` |
+| 10 | Best fit for simple 2-page brochure landing page prioritizing 0KB CSS build speed: | **Lightweight custom CSS variables** | 30s | `[L5 \| 15.11]` | `Cert: ITS-HTML-CSS` |
+| 11 | Corner pixels turn dark when applying $3 \times 3$ Box Blur to a bright grid (`borderMode`). Fix? | **Switch `'zero'` padding to `'clamp'` replication** | 30s | `[L4 \| AI 8.0]` | `Domain: CTE-AI` |
+| 12 | Sobel gradients compute `Gx = 60` and `Gy = 80` at an edge pixel. Magnitude? | **`100`** ($\sqrt{60^2 + 80^2}$) | 30s | `[L3 \| AI 8.0]` | `Domain: CTE-AI` |
+| 13 | 30fps safety cam needs `< 25 ms` latency & private local frames despite `85 ms` WAN RTT: | **Run quantized model locally on Edge `NPU`** | 30s | `[L5 \| AI 3.0, 9.0]` | `Domain: CTE-AI` |

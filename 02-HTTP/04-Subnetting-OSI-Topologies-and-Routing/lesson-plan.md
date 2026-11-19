@@ -1,13 +1,13 @@
 # Lesson Plan 2.4: Subnetting, OSI Topologies, Protocols & Network Troubleshooting
 
 **Unit:** Unit 2 | **Duration:** 2 Class Periods (100 min total)  
-**Standards:** West-MEC `ITS 102` (`Cisco CCNA 200-301`) | **ADE Network Security:** `3.0`, `6.0`, `7.0`, `8.1–8.5`, `10.1–10.6`
+**Standards:** CTE IT Security (`11.1999.00`) / `Cisco CCNA 200-301` | **ADE Network Security:** `3.0`, `6.0`, `7.0`, `8.1–8.5`, `10.1–10.6`
 
 ---
 
 ## Lesson SMART Objectives (Teacher & Student Targets)
 - [ ] **Teacher SMART Goal 1 (`TG-L2.4-1` | `[L1–L2]` | `ADE 3.0, 6.0, 7.0`):** Model binary/hex conversion, OSI vs. TCP/IP encapsulation, physical media (`UTP` vs. `SMF/MMF` vs. `WPA3`/`CBRS`), and STP loop prevention before lab so >= 85% of students pass Part A cleanly on Day 1.
-- [ ] **Teacher SMART Goal 2 (`TG-L2.4-2` | `[L3–L5]` | `ITS 102 / ADE 8.1–8.5, 10.1–10.6`):** Demonstrate `subnetAndRoutingDemo.mjs` (`node --test`) live and verify >= 85% of students complete `subnetCalculatorLab.mjs` (`exit 0`) and pass `post-lesson-eval.md` (`>= 4/5`) by Day 2 close.
+- [ ] **Teacher SMART Goal 2 (`TG-L2.4-2` | `[L3–L5]` | `CCNA 200-301 / ADE 8.1–8.5, 10.1–10.6`):** Demonstrate `subnetAndRoutingDemo.mjs` (`node --test`) live and verify >= 85% of students complete `subnetCalculatorLab.mjs` (`exit 0`) and pass `post-lesson-eval.md` (`>= 4/5`) by Day 2 close.
 - [ ] **Student SMART Goal 1 (`SG-L2.4-1` | `[L1–L2]`):** Accurately convert IPv4 to binary/hex, classify OSI/TCP-IP layers and IANA port ranges, and list RFC 1918 private blocks in Part A during Day 1.
 - [ ] **Student SMART Goal 2 (`SG-L2.4-2` | `[L3–L5]`):** Implement bitwise CIDR/VLSM allocation, longest-prefix routing, and 7-step diagnostic checks cleanly in Node.js by Period 2 close.
 

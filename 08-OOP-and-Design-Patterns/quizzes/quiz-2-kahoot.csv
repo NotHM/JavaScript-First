@@ -1,11 +1,11 @@
 Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
-Extracting const fn = acc.deposit; fn(50) throws TypeError because:,Constructor ran twice,this lost its object receiver binding,Numbers need floats,Factory failed,30,2
-Checking if (new.target === BaseShape) throw new Error() enforces an:,Infinite loop,Abstract class instantiation guard,Public field,XML tag,20,2
-Multiple charts must refresh automatically whenever price updates. Best pattern?,Iterator,Observer,Singleton,Waterfall,20,2
-Enforcing strict allowed step transitions DRAFT -> REVIEW -> PUBLISHED uses:,Decorator,State pattern,Factory,CSS Grid,20,2
-Function mutateOrder(o) altered caller object unexpectedly via reference. Fix?,Return a shallow/cloned new object,Remove return,Use var,Disable strict mode,30,1
-Adding PushNotifier class cleanly WITHOUT modifying CheckoutService proves:,S Single Responsibility,O Open/Closed Principle,Syntax coercion,Loop unrolling,30,2
-Selecting and returning CSV vs JSON exporter instances from a type string uses:,Observer,Factory pattern,Bubble sort,Event bubbling,20,2
-Why guard price behind set price(v) instead of open property assignment?,Reject negative/NaN values before saving,Run HTML faster,Hide syntax errors,Slow reads,20,1
-Breaking a huge 900-line GodClass into focused export modules satisfies:,S Single Responsibility and Modularity,XSS injection,FIFO starvation,Infinite recursion,20,1
-High-traffic mobile JSON REST service replaces legacy XML payloads mainly for:,Larger bandwidth usage,Smaller byte size and instant native JS parsing,Mandatory SOAP schemas,Slower networks,20,2
+Extracting const fn = acc.deposit; fn(50) throws TypeError because:,Constructor ran twice,Numbers need floats,this lost its object receiver binding,Factory failed,30,3
+class Dog extends Animal { constructor(n){ this.name = n; super(); } } throws:,ReferenceError (super() before this),SyntaxError,RangeError,Returns undefined,30,1
+Multiple charts must refresh automatically whenever price updates. Best pattern?,Iterator,Waterfall,Singleton,Observer,20,4
+Raw XML template '<msg>' + user + '</msg>' breaks on '&' or '<'. Security fix?,Wrap inside setTimeout,Escape & < > entities and disable DTDs,Replace with CSS var(),Ignore malformed XML,30,2
+Function mutateOrder(o) altered caller object unexpectedly via reference. Fix?,Use var,Remove return,Return a shallow/cloned new object,Disable strict mode,30,3
+How define Validator.isEmail(s) callable directly on the class without new?,for...of generator,private #field,abstract interface,static method inside class,20,4
+Selecting and returning CSV vs JSON exporter instances from a type string uses:,Factory pattern,Observer,Bubble sort,Event bubbling,20,1
+Why guard price behind set price(v) instead of open property assignment?,Run HTML faster,Reject negative/NaN values before saving,Hide syntax errors,Slow reads,20,2
+Why does JSON.stringify(new Wallet()) drop #balance and methods needing .toJSON()?,stringify emits XML tags,Classes cannot hold strings,JSON drops #private fields & functions,Methods always throw Error,30,3
+High-traffic mobile JSON REST service replaces legacy XML payloads mainly for:,Smaller byte size and instant native JS parsing,Larger bandwidth usage,Mandatory SOAP schemas,Slower networks,20,1
