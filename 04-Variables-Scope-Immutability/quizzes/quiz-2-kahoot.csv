@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+What logs: console.log(a); var a = 5; ?,5,undefined,ReferenceError,null,20,2
+What happens: console.log(b); let b = 5; ?,5,undefined,ReferenceError,TypeError,20,3
+What prints: const c={n:1}; c.n=2; console.log(c.n); ?,1,2,TypeError,undefined,20,2
+After Object.freeze({nested:{x:1}}) can nested.x still mutate?,Yes (shallow freeze only),No (freezes recursively),Throws SyntaxError,Converts to null,30,1
+After d = structuredClone(f); d.nested.x = 5; does f.nested.x change?,Yes,No it stays unchanged,Throws ReferenceError,Becomes NaN,30,2
+What prints: if (true) { var x = 1; } console.log(x); ?,1,undefined,ReferenceError,null,20,1
+What happens when let replaces var above: if(true){let x=1;} console.log(x)?,1,undefined,ReferenceError,0,20,3
+Why does (0 == "") return true in JavaScript?,=== rules,Both coerce to numeric 0,Empty string is null,Bug in console.log,30,2
+Spreading { ...cart } then running copy.items.push mutates original due to:,SyntaxError,Shallow-copy array aliasing,TDZ leakage,Float drift,30,2
+Which pattern guarantees nested undo-history state stays isolated?,var globals,structuredClone pure updates,String concatenation,Loop reassignment,30,2

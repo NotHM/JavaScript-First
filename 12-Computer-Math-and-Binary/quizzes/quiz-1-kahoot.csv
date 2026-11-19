@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+How many bits equal one byte?,4 bits,8 bits,16 bits,32 bits,10,2
+Which frequency equals one billion CPU cycles per second?,Kilohertz (kHz),Megahertz (MHz),Gigahertz (GHz),Terabit (Tb),20,3
+Which number system uses digits 0-9 and letters A-F?,Binary,Octal,Decimal,Hexadecimal,10,4
+What decimal number equals binary 0b1010?,8,10,12,16,20,2
+What is hexadecimal 0xFF in decimal?,100,128,255,256,20,3
+In GEMA precedence which runs BEFORE multiplication (*)?,Addition (+),Grouping & Exponents,Comparison (===),Subtraction (-),20,2
+Which built-in JS helper computes hypotenuse sqrt(a^2+b^2)?,Math.pow(a b),Math.hypot(a b),Math.abs(a b),Math.floor(a b),20,2
+Why does (0.1 + 0.2 === 0.3) return false in JavaScript?,IEEE-754 binary float drift,JS bans decimals,Strict equality fails on numbers,Memory leak,30,1
+Which type prevents integer precision loss above 2^53 - 1?,Float32,BigInt,String,Boolean,20,2
+Why do payment backends store prices in integer cents?,To avoid JSON files,To eliminate float rounding errors,Strings are faster,Required by HTML,20,2

@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Which cloud storage type stores blobs keyed by URL IDs such as AWS S3?,RAM cache,Object Storage,CPU L1 cache,DOM Tree,20,2
+In the 3-2-1 Backup Rule what does the "1" enforce?,1 password,1 copy stored offsite or offline,1 zip file only,1 server reboot,20,2
+Fastest temporary computer memory that loses data when power cuts out:,NVMe SSD,Tape Archive,RAM Primary Memory,Cold S3 Glacier,20,3
+Which metric sets maximum acceptable data loss window RPO vs RTO?,RPO Recovery Point Objective,RTO Downtime,DNS TTL,HTTP 200,20,1
+Which Node built-in module exports async Promise readFile and writeFile?,node:http,node:fs/promises,node:dns,node:os,20,2
+Verifying a restored backup has zero bit corruption or tampering uses:,Font check,SHA-256 cryptographic checksum,Random port,CSS reset,20,2
+In CRUD databases which letter maps to SQL INSERT INTO and Mongo insertOne?,Read,Create,Update,Delete,20,2
+Relational SQL tables link rows safely across tables by enforcing:,Primary and Foreign Keys,CSS Selectors,Global arrays,Comments,20,1
+In MongoDB individual document records live grouped inside named:,Tablesheets,Collections,DOM Nodes,Closures,20,2
+Maximum tolerable downtime duration during disaster recovery is:,RPO,RTO Recovery Time Objective,ACID,BSON,20,2

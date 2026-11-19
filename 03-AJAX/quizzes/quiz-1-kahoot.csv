@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+AJAX fetches server data asynchronously without triggers of a:,CSS grid reset,Full browser page reload,Hard drive format,CPU clock boost,20,2
+Which protocol opens encrypted remote shell sessions on port 22?,HTTP,SSH,FTP,DOM,20,2
+Which browser DevTools tab inspects API status codes and JSON payloads?,Elements,Network,Animations,Fonts,20,2
+Which Promise-based HTTP client is built into browsers and Node 24?,Axios,fetch(),jQuery,Webpack,20,2
+What packages app code plus Node runtime identically across OS hosts?,GIF sprite,Docker Container,CSS sheet,YAML tag,20,2
+What does fetch() do when the server responds with HTTP 404 Not Found?,Throws immediately,Resolves with res.ok false,Restarts Node,Deletes cookies,20,2
+Which React framework excels at Server-Side Rendering SSR for SEO?,Next.js,HTML4,jQuery UI,Bootstrap,20,1
+Splitting Auth Billing and Alerts into isolated deployable services uses:,Monolith files,Microservices,Global vars,Inline styles,20,2
+Real-time collaborative editing inside IDE workspaces uses:,Paint,VS Code Live Share,FTP,Telnet,20,2
+Which popular npm library auto-parses JSON responses into response.data?,Axios,XHR,Node fs,DOM API,20,1

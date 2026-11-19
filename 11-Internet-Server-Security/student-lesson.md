@@ -1,20 +1,33 @@
-# Student Lesson 11.1: DNS, Modules & Web Security
+# Student Lesson 11.1: Cybersecurity, OWASP & Server Hardening (`Std 1.0`)
 
-**Reading:** [`readme.md`](./readme.md) | **Starter File:** [`../0-student_files/12-security-server/secureServer.js`](../0-student_files/12-security-server/secureServer.js)
+**Reading:** [`readme.md`](./readme.md) | **Slides:** [`slides/slides.md`](./slides/slides.md)  
+**Starter Files:** [`../0-student_files/12-security-server/cryptoSanitizeLab.js`](../0-student_files/12-security-server/cryptoSanitizeLab.js) & [`../0-student_files/12-security-server/secureServer.js`](../0-student_files/12-security-server/secureServer.js)
 
-## Part 1: Internet & Security Check
-1. What is the role of **DNS** when you type a URL into your browser?  
-   > *(Your answer)*
-2. What does **CORS** control, and why do browsers enforce it?  
-   > *(Your answer)*
-3. Why is raw string interpolation of user input into HTML dangerous (which OWASP risk is this)?  
-   > *(Your answer)*
+## Part A: CIA Triad, Crypto & Access Control (`[L1 Remember]` & `[L2 Understand]`)
+1. Assign each security defense to **Confidentiality**, **Integrity**, or **Availability** (`1.6`):
+   - SHA-256 checksum & Digital Signature: `________________`
+   - HTTPS/TLS Encryption & Least Privilege RBAC: `________________`
+   - Rate limiting + multi-region load balancer: `________________`
+2. Contrast reversible **AES Encryption** vs one-way **Salted `scrypt` Hashing** (`1.4`):  
+   > `____________________________________________________`
 
-## Part 2: Hardened Node.js Server Lab
-1. Open [`0-student_files/12-security-server/secureServer.js`](../0-student_files/12-security-server/secureServer.js).
-2. Implement `escapeHtml(str)` to neutralize `<`, `>`, `&`, `"`, and `'`.
-3. Add `X-Content-Type-Options: nosniff` and CORS headers to your server responses.
-4. Run:
-   ```bash
-   node 0-student_files/12-security-server/secureServer.js
-   ```
+## Part B: Applied Hashing, Escaping & Server Hardening (`[L3 Apply]`)
+1. Complete `hashPassword`, `verifyPassword`, and `resolveSafeFile` inside [`cryptoSanitizeLab.js`](../0-student_files/12-security-server/cryptoSanitizeLab.js).
+2. Complete `escapeHtml`, `nosniff` header, and CORS rules inside [`secureServer.js`](../0-student_files/12-security-server/secureServer.js).
+
+## Part C: Vulnerability Audit (`[L4 Analyze]`)
+Inspect this vulnerable Express/Node endpoint and diagnose ALL THREE severe OWASP defects (`1.2, 1.5`):
+```javascript
+app.get('/search', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  const sql = `SELECT * FROM items WHERE name = '${req.query.q}'`;
+  res.send(`<p>Results for: ${req.query.q}</p>`);
+});
+```
+1. Injection flaw (`SQLi`): `____________________________________`
+2. XSS flaw: `____________________________________________________`
+3. CORS/Header remediation: `________________________________________`
+
+## Part D: Incident Remediation & Threat Triage (`[L5 Evaluate]`)
+A coworker clicks a convincing **AI voice-cloning / phishing (`1.1`)** link and leaks their password, while `npm audit` reports a Critical CVE (`1.2`). Outline an incident response plan enforcing **MFA**, **Least Privilege rotation**, **SIEM alerting**, and **dependency patching (`1.7`)**:  
+> *(Your incident response brief)*

@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Building SQL via `WHERE id = '${req.query.id}'` exposes your app to:,CSS Overflow,SQL Injection SQLi,DNS Caching,Buffer underflow,20,2
+What completely neutralizes SQL Injection inside database drivers?,Hiding errors,Parameterized queries ($1 placeholders),Switching ports,Encrypting HTML,20,2
+Stopping GET /download?file=../../.env directory traversal enforces:,CSS display none,path.resolve prefix boundary check,Minified JS,Global try/catch,30,2
+Rendering ?name=<img src=x onerror=alert(1)> unescaped triggers:,DOM Optimization,Reflected XSS attack,SQL rollback,Valid JSON,20,2
+Unsalted identical MD5 password digests fall rapidly to Rainbow Tables. Cure?,Store shorter hashes,Per-user unique salt + slow scrypt,Use Base64,Rename column,30,2
+API secret accidentally committed to public repo. First critical action (1.7)?,Edit later locally,Revoke and rotate the credential immediately,Rename branch,Add CSS banner,30,1
+Staff clicked realistic AI voice-phish giving up password. Best defense?,Longer timeouts,Enforce Multi-Factor Auth MFA,Disable HTTPS,Clear cookies,20,2
+Why reject oversized payloads BEFORE buffering gigabytes into memory (1.5)?,Prevent DoS/overflow exhaustion,Improve color contrast,Skip MIME checks,Enable sorting,20,1
+Replacing wildcard Access-Control-Allow-Origin: * with exact domain enforces:,XSS injection,Tight cross-origin trust boundary,Open file read,SQL migration,20,2
+Flooding /login with 10000 requests/sec crashing servers violates which CIA pillar?,Availability (mitigate via Rate Limit),CSS Grid,Immutability,Syntax check,20,1

@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Binary Search halves the search range each step. What is its Big-O time?,O(1),O(log n),O(n),O(n^2),20,2
+About how many comparisons does Binary Search need for 1 million sorted items?,1000000,500000,About 20,About 1000,30,3
+Why does binarySearch([50 10 90] 10) return -1 incorrectly?,10 is even,Input array is not sorted,binarySearch skips index 1,Number coercion error,20,2
+Which sorting algorithm divides arrays in half and merges cleanly in O(n log n)?,Bubble Sort,Selection Sort,Merge Sort,Linear Sort,20,3
+Which simple sort runs near O(n) when an array is almost sorted already?,Bubble Sort,Insertion Sort,Random Sort,Heap Overflow,20,2
+What is Bubble Sort's worst-case scaling on 10000 reversed items?,O(log n),O(n),O(n log n),O(n^2),30,4
+"What does [10 2 1].sort() return in JS without a comparator?",[1 2 10],[1 10 2] string sort,[10 2 1],Throws TypeError,30,2
+How do you sort numbers numerically ascending in JS?,arr.sort(),arr.sort((a b) => a - b),arr.reverse(),JSON.stringify(arr),20,2
+When left=0 & right=0 in binarySearch what breaks with while(left < right)?,Infinite loop,Skips checking final element 0,Sorts backwards,Division by zero,30,2
+Which guarantees O(n log n) worst-case sorting on 500k records?,Bubble Sort,Insertion Sort,Merge Sort,Unsorted scan,20,3

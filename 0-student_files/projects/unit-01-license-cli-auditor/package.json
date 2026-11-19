@@ -1,0 +1,9 @@
+{
+  "name": "unit-01-license-cli-auditor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Unit 1 Project Starter: CLI Open-Source License & Privacy Compliance Auditor",
+  "scripts": {
+    "audit": "node index.js"
+  }
+}

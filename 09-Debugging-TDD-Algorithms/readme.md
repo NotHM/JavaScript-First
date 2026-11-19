@@ -1,40 +1,15 @@
-# Chapter 9: Debugging, Test-Driven Development (TDD) & Algorithms
+# Chapter 9: Testing, Debugging & Searching/Sorting Algorithms (`Std 12.0, 6.4–6.7`)
 
-## Student Learning Objectives
-By the end of this chapter, you should be able to:
-1. Debug JavaScript effectively using `console` methods (`console.table`, `console.error`, `console.time`) and VS Code breakpoints.
-2. Follow the **Red → Green → Refactor** cycle of **Test-Driven Development (TDD)** using Node's built-in `node:test` and `node:assert/strict`.
-3. Implement and analyze fundamental algorithms (searching, sorting, palindrome/anagram checks).
+Chapter 9 separates systematic verification (**Std `12.0`**) from algorithmic efficiency (**Std `6.4–6.7`**):
 
----
+1. **[Lesson 9.1 — Error Categories, Boundary Testing, Debugger & TDD (`Std 12.0`)](./01-Testing-and-Debugging/readme.md)**  
+   - Slides: [`01-Testing-and-Debugging/slides/slides.md`](./01-Testing-and-Debugging/slides/slides.md)
+   - Student Lab: [`01-Testing-and-Debugging/student-lesson.md`](./01-Testing-and-Debugging/student-lesson.md)
+2. **[Lesson 9.2 — Searching (`O(n)` vs `O(log n)`) & Sorting Algorithms (`Std 6.4, 6.6–6.7`)](./02-Search-and-Sort-Algorithms/readme.md)**  
+   - Slides: [`02-Search-and-Sort-Algorithms/slides/slides.md`](./02-Search-and-Sort-Algorithms/slides/slides.md)
+   - Student Lab: [`02-Search-and-Sort-Algorithms/student-lesson.md`](./02-Search-and-Sort-Algorithms/student-lesson.md)
 
-## 1. Debugging: `console` & Breakpoints
-- `console.table(arrayOfObjects)` formats structured data cleanly in the terminal.
-- **Breakpoints** in VS Code (`F9` / Run & Debug) pause execution so you can inspect the **Call Stack** and **Variables** in real time without cluttering code with logs.
-
-## 2. Test-Driven Development (TDD) with `node:test`
-Node.js includes a zero-dependency test runner (`node --test`):
-
-```javascript
-const test = require('node:test');
-const assert = require('node:assert/strict');
-
-test('binarySearch finds target index', () => {
-  assert.equal(binarySearch([1, 3, 5, 7], 5), 2);
-});
-```
-
-1. **Red:** Write a failing test describing the desired behavior.
-2. **Green:** Write the simplest code that makes the test pass.
-3. **Refactor:** Clean up the implementation while keeping all tests green.
-
-## 3. Core Algorithms
-- **Linear Search ($O(n)$)** vs **Binary Search ($O(\log n)$)** on sorted arrays.
-- **Frequency Counter / Two-Pointer** techniques for string and array problems.
-
----
-
-## Chapter Contents
-- **Slides:** [`slides/slides.md`](./slides/slides.md)
-- **Code Example:** [`code/algorithms.test.js`](./code/algorithms.test.js)
-- **Student Lesson:** [`student-lesson.md`](./student-lesson.md)
+## Unit Assessments & Project
+- **Pre/Post Unit Evals:** [`evaluations/pre-unit-eval.md`](./evaluations/pre-unit-eval.md) | [`evaluations/post-unit-eval.md`](./evaluations/post-unit-eval.md)
+- **Quizzes:** [`quizzes/quiz-1-concepts.md`](./quizzes/quiz-1-concepts.md) | [`quizzes/quiz-2-application.md`](./quizzes/quiz-2-application.md)
+- **Unit Project:** [`projects/unit-project.md`](./projects/unit-project.md) (`0-student_files/projects/unit-09-algo-test-suite/`)

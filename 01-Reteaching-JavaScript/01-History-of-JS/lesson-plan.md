@@ -1,34 +1,49 @@
-# Lesson Plan 1.1: A Brief History of JavaScript
+# Lesson Plan 1.1: History of JavaScript, Legal & Ethical IT (`Std 2.0`)
 
-**Unit:** Unit 1 — Reteaching JavaScript & Node.js  
-**Duration:** 1 Class Period (50 minutes)  
-**AZ CTE Standards:** Software & App Design 11.0202.00 — Standard 2.0 (2.2 Open-source vs. proprietary systems); AZ CTE Professional Skills 1.0 (Complex Communication), 3.0 (Thinking & Innovation)
+**Unit:** Unit 1 | **Duration:** 2 Class Periods (100 min total)  
+**AZ CTE Standards:** `2.0` (`2.1`–`2.4`) | **Prof. Skills:** `1.0` Communication, `8.0` Legal & Ethical Practices
 
 ---
 
-## Learning Objectives
-Students will be able to:
-1. Trace JavaScript's origin from LiveScript (1995) to ECMAScript standardization (ES1 → ES5 → ES6+).
-2. Explain why the abandoned ES4 proposal led to CommonJS, Node.js, and later ES6 features.
-3. Contrast browser JavaScript with server-side Node.js, TypeScript, and Deno.
+## Bloom's Taxonomy Objective Ladder
+| Tier | Student Learning Objective |
+|---|---|
+| **L1 Remember** | Identify JS history milestones (1995–2015+) and name COPPA, FERPA, GDPR, HIPAA, PCI DSS, DMCA. |
+| **L2 Understand** | Contrast permissive (`MIT`/`Apache-2.0`) vs. copyleft (`GPL-3.0`) vs. proprietary vs. unlicensed code. |
+| **L3 Apply** | Implement Node.js helpers that evaluate SPDX license compatibility and redact student PII. |
+| **L4 Analyze** | Diagnose privacy, cookie-tracking, and AI confidentiality risks across real app telemetry records. |
+| **L5 Evaluate** | Defend library procurement and consent-UI decisions for a commercial K–12 software release. |
 
-## Materials & Resources
-- Reading: [`readme.md`](./readme.md)
-- Student Worksheet: [`student-lesson.md`](./student-lesson.md)
-- Reference: [The Real Story Behind ECMAScript 4](https://auth0.com/blog/the-real-story-behind-es4/)
+---
 
-## Lesson Pacing
-1. **Bell Ringer (5 min):** Prompt: *"Why do you think JavaScript and Java have similar names even though they are completely different languages?"* Collect quick responses.
-2. **Direct Instruction (15 min):** Walk through the 1995 browser wars, ECMAScript standardization, why ES4 failed, and how Node.js (2009) + V8 + npm unlocked full-stack JavaScript.
-3. **Guided Reading & Discussion (15 min):** Students read [`readme.md`](./readme.md) in pairs and build a 5-milestone timeline (1995, 1997, 2009, 2015, 2018+).
-4. **Independent Practice (10 min):** Students complete the reflection and comparison questions in [`student-lesson.md`](./student-lesson.md).
-5. **Closure & Exit Ticket (5 min):** Each student shares one reason Node.js changed how companies hire and build web apps.
+## Materials & Assessments
+- **Reading:** [`readme.md`](./readme.md) | **Slides:** [`slides/slides.md`](./slides/slides.md)
+- **Teacher Demo:** [`code/licenseComplianceDemo.js`](./code/licenseComplianceDemo.js)
+- **Student Worksheet & Starter:** [`student-lesson.md`](./student-lesson.md), [`../../0-student_files/01-legal-ethics/licenseAudit.js`](../../0-student_files/01-legal-ethics/licenseAudit.js)
+- **Growth Proof:** [`pre-lesson-eval.md`](./pre-lesson-eval.md) & [`post-lesson-eval.md`](./post-lesson-eval.md)
 
-## Differentiation
-- **Support:** Provide a pre-filled timeline skeleton with years so students only fill in the milestone descriptions.
-- **Extension:** Research how **Bun** or **Deno** compares to **Node.js** in 2025+ and write a 3-sentence summary.
+---
 
-## Answer Key (Teacher Reference)
-- **LiveScript → JavaScript:** Renamed for marketing alignment with Java's 1995 popularity.
-- **ES4 vs. ES6:** ES4 risked breaking existing websites; ES6 (2015) delivered classes, modules, `let`/`const`, and destructuring in a backwards-compatible way.
-- **Why Node.js mattered:** Brought V8 + CommonJS modules + `npm` + built-in `fs`/`http` APIs outside the browser.
+## 2-Day Pacing Plan
+- **Day 1 (50 min):** `pre-lesson-eval.md` (4 min) → Slides & JS Evolution + IP/DMCA/Open-Source Licensing (`slides/slides.md`, 20 min) → Pairs complete Part A of `student-lesson.md` & Parts 1–2 of compliance scenarios (20 min) → Exit share-out (6 min).
+- **Day 2 (50 min):** Review Privacy Laws (`2.3`) & Ethical AI/Cookies (`2.4`) via live walkthrough of `code/licenseComplianceDemo.js` (15 min) → Independent coding lab in `0-student_files/01-legal-ethics/licenseAudit.js` + Parts C–D (28 min) → `post-lesson-eval.md` (7 min).
+
+---
+
+## Instructor Answer Key (Pre/Post Checks & Worksheet)
+
+### Pre-Lesson 1.1 Key
+1. **False** — Without a license, US copyright defaults to **All Rights Reserved**.
+2. School Records = **FERPA**; Medical = **HIPAA**; Under 13 = **COPPA**; Credit Cards = **PCI DSS**.
+3. **Permissive (`MIT`)** allows reuse in proprietary software with attribution; **Copyleft (`GPL-3.0`)** requires redistributed derivatives to stay open under compatible copyleft terms.
+4. Leaking proprietary IP into public training logs, violating NDAs, or receiving unvetted copyrighted/vulnerable code.
+
+### Post-Lesson 1.1 Key
+1. **Digital Millennium Copyright Act** — prohibits unauthorized copyright distribution and circumvention of DRM/access controls.
+2. **Yes** (`MIT` is permissive; commercial distribution is permitted provided the copyright and MIT notice are preserved).
+3. **COPPA** (age 12 < 13 without parental consent) & **FERPA** (`.edu` school student record). Redact `email` and `ssn` (`[REDACTED]`) prior to any log write.
+4. Default tracking violates **GDPR opt-in** & **COPPA under-13 rules** (`2.3`) and manipulates users with a pre-checked **dark pattern** (`2.4`).
+5. **Rank (Best → Riskiest):** `(C) Apache-2.0` (clear permissive + patent grant) → `(B) GPL-3.0` (legal if whole product becomes GPL; unsafe for closed commercial) → `(A) Unlicensed Gist` (no legal right to copy/ship at all).
+
+### Student Code Solution Reference
+See [`code/licenseComplianceDemo.js`](./code/licenseComplianceDemo.js).

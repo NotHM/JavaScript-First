@@ -1,29 +1,17 @@
-# Lesson Plan 3.1: Asynchronous Requests with XHR & Fetch
+# Lesson Plan 3.1: Client-Side Web Software, AJAX & Modern APIs (`Std 9.0`)
 
-**Unit:** Unit 3 — Asynchronous JavaScript & AJAX  
-**Duration:** 3 Class Periods (50 minutes each)  
-**AZ CTE Standards:** Software & App Design 11.0202.00 — Standard 1.0, Standard 3.0, Standard 16.0 (16.3), Standard 18.0 (18.1, 18.7); AZ CTE Professional Skills 1.0, 3.0
+**Unit:** Unit 3 | **Duration:** 5 Class Periods × 50 min | **Stds:** `9.1`–`9.5`, `18.1`, `18.7`
 
----
+## Bloom's Objective Ladder
+- **L1–L2:** Identify DevTools Network inspection, SSH, XHR/Fetch/Axios differences (`res.ok` behavior), React SPA vs Next.js SSR, and Docker containers/microservices.
+- **L3 Apply:** Implement XHR, Node `fetch()`, and Browser DOM rendering with loading/error states (`0-student_files/04-ajax/`).
+- **L4 Analyze:** Spot un-awaited `res.json()`, ignored HTTP `404`/`500` responses, and missing `Content-Type` headers.
+- **L5 Evaluate:** Choose SPA vs SSR and microservice containers cleanly using real latency, SEO, and deployment criteria.
 
-## Learning Objectives
-Students will be able to:
-1. Compare `XMLHttpRequest` (XHR), `fetch()`, and `Axios` in terms of syntax, Promise support, and error handling.
-2. Make asynchronous `GET` requests using `fetch()` with both `.then()` chains and `async`/`await`.
-3. Handle HTTP and network errors using `if (!response.ok)` and `try`/`catch`.
-
-## Materials & Resources
-- Chapter Overview: [`readme.md`](./readme.md) | [`00-fetch/readme.md`](./00-fetch/readme.md)
-- Diagram: [`AJAX.drawio.svg`](./AJAX.drawio.svg)
-- Teacher Reference Code: [`00-XHR/xhr.js`](./00-XHR/xhr.js), [`00-fetch/index.html`](./00-fetch/index.html), [`00-fetch/node-fetch.js`](./00-fetch/node-fetch.js)
-- Student Lesson: [`student-lesson.md`](./student-lesson.md)
-- Blank Student Starters: [`../0-student_files/04-ajax/`](../0-student_files/04-ajax/)
-
-## Lesson Pacing
-- **Day 1 (AJAX & XHR):** Walk through `AJAX.drawio.svg` and `00-XHR/xhr.js`. Students complete Part 1 (Comparison Matrix) in `student-lesson.md` and inspect `xhr-exercise.js`.
-- **Day 2 (Fetch in Node.js):** Demonstrate `fetch()` with `async`/`await` and `try`/`catch`. Students complete `0-student_files/04-ajax/fetch-node-exercise.js` and run it in Node.js.
-- **Day 3 (Fetch in the Browser):** Students complete `0-student_files/04-ajax/fetch-exercise.html` to fetch JSON and render results into the DOM.
-
-## Differentiation
-- **Support:** Provide a sample JSON response structure and `try { const res = await fetch(url); ... } catch (err) { ... }` template.
-- **Extension:** Add a `POST` request example or display loading/error states in `fetch-exercise.html`.
+## Pacing & Teacher Answer Keys
+- **Day 1:** Pre-Lesson 3.1 (4m), Slides (`slides/slides.md`) + Browser Engine/DevTools Network Walkthrough (`9.1–9.3`).
+- **Day 2–3:** XHR vs Fetch demo (`code/ajaxClientDemo.js` offline test server!), `xhr-exercise.js` & `fetch-node-exercise.js`.
+- **Day 4–5:** Browser DOM `fetch-exercise.html` + Containers/SSR debate (`9.4–9.5`), Unit 3 Project & Post-Lesson 3.1 Exit Ticket.
+- **Pre 3.1 Key:** 1) Asynchronous JavaScript and XML (updating UI fragments without full page reload); 2) `False` (`fetch` only rejects on network failures); 3) **Network** tab; 4) Containers lock exact runtime/OS versions (`Zero works-on-my-machine drift`) while microservices isolate scaling & blast radius.
+- **Post 3.1 Key:** 1) React renders client-side in JS (`SPA`), Next.js can pre-render HTML on the server (`SSR/SSG`) boosting SEO & First Paint; 2) Axios auto-parses `.data` & rejects on `4xx/5xx`, whereas `fetch()` requires explicit `if (!res.ok)` and `await res.json()`; 3) `if (!res.ok) throw new Error(\`HTTP ${res.status}\`);`; 4) Server skips JSON body parser / treats body as plain text, and `res.json()` returns a pending `Promise` so `data.username` is `undefined`; 5) Choose **Next.js SSR** for fast Google SEO indexing of product pages + client `fetch()` polling + **Docker** containers per microservice for reproducible scaling.
+- **Worksheet Part C Key:** 1) No `try`/`catch` AND no `if (!res.ok)`; 2) Missing `await` on `res.json()` (`data` is a Promise so `data.username === undefined`); 3) Wrap in `try/catch`, add `if (!res.ok) throw ...`, `const data = await res.json();`.

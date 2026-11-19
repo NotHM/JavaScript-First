@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Which command creates AND checks out new branch feat/auth?,git commit -b feat/auth,git switch -c feat/auth,git merge feat/auth,git init feat/auth,20,2
+Seeing <<<<<<< HEAD and ======= inside server.js indicates:,SyntaxError in V8,Unresolved Git merge conflict,Missing npm package,TypeScript config,20,2
+Does SemVer '~4.18.1' allow auto-upgrading to 4.19.0?,Yes always,No tilde restricts to 4.18.x patches,Only on Linux,Converts to 5.0.0,30,2
+Does caret SemVer '^29.0.0' allow updating to 29.7.0?,Yes caret permits minor updates,No locks exact patch,Only major bumps,Throws npm error,20,1
+Pushing .env in Commit 1 then deleting it in Commit 2 makes secrets safe:,True completely gone,False history keeps Commit 1 forever,Only if private repo,Git auto-encrypts .env,30,2
+Which command checks installed packages against known CVE vulnerabilities?,npm init -y,npm test,npm audit,npm start,20,3
+What is the core goal of DevSecOps CI/CD automation?,Skip all tests,Auto-run tests lint & security checks on PRs,Deploy FTP manually,Disable Git branches,20,2
+Why use node:path path.join() over manual slash concatenation?,Shorter names,Handles Windows \ and POSIX / cleanly,Uploads files to DNS,Compresses JSON,20,2
+When a 2014 Q&A snippet contradicts official 2026 MDN docs choose:,Top-voted 2014 hack,Official up-to-date MDN/Node docs,Skip documentation,Random blog gist,20,2
+Best factor when choosing whether to adopt an npm dependency?,Funny package name,Zero CVEs active maintainer & valid license,Biggest download size,Oldest last commit,30,2

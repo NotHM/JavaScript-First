@@ -1,47 +1,15 @@
-# Chapter 6: Functions, Closures & Functional Programming
+# Chapter 6: Conditionals, Boolean Logic & Functions (`Std 5.0, 11.11`)
 
-## Student Learning Objectives
-By the end of this chapter, you should be able to:
-1. Contrast **function declarations** (hoisted), **function expressions**, **arrow functions**, **anonymous functions**, and **IIFEs** (Immediately Invoked Function Expressions).
-2. Explain **closures** and how inner functions retain access to their lexical scope.
-3. Write **pure functions** with no side effects and deterministic outputs.
-4. Compose **higher-order functions** (HOFs), **callbacks**, and **curried functions**.
+Unit 6 explores decision-making logic (**AZ CTE Standard 5.0**) and modular software design (`Std 5.5, 11.10–11.12`) across two progressive lessons:
 
----
+1. **[Lesson 6.1 — Conditionals, Boolean Logic, Truth Tables & Switch (`Std 5.1–5.4`)](./01-Conditionals-and-Boolean-Logic/readme.md)**  
+   - Slides: [`01-Conditionals-and-Boolean-Logic/slides/slides.md`](./01-Conditionals-and-Boolean-Logic/slides/slides.md)
+   - Student Lab: [`01-Conditionals-and-Boolean-Logic/student-lesson.md`](./01-Conditionals-and-Boolean-Logic/student-lesson.md)
+2. **[Lesson 6.2 — Functions, Closures, Currying & Seeded RNG (`Std 5.5, 11.10–11.12`)](./02-Functions-and-Closures/readme.md)**  
+   - Slides: [`02-Functions-and-Closures/slides/slides.md`](./02-Functions-and-Closures/slides/slides.md)
+   - Student Lab: [`02-Functions-and-Closures/student-lesson.md`](./02-Functions-and-Closures/student-lesson.md)
 
-## 1. Forms of Functions
-- **Function Declaration:** `function add(a, b) { return a + b; }` (hoisted to the top of its scope).
-- **Function Expression:** `const add = function (a, b) { return a + b; };` (not hoisted).
-- **Arrow Function:** `const add = (a, b) => a + b;` (concise syntax, lexical `this`).
-- **IIFE:** `(() => { /* isolated scope */ })();` (executes immediately to avoid polluting global scope).
-
-## 2. Closures
-A **closure** is formed when a function remembers and continues to access variables from its outer lexical scope even after the outer function has returned:
-
-```javascript
-function createCounter(start = 0) {
-  let count = start;
-  return () => ++count;
-}
-const next = createCounter(10);
-next(); // 11
-next(); // 12
-```
-
-## 3. Functional Programming Foundations
-- **Pure Functions:** Given the same arguments, always return the same output and cause zero external side effects.
-- **Higher-Order Functions & Callbacks:** Functions that accept another function as an argument (e.g., `applyTwice(fn, x)`) or return a function.
-- **Currying:** Transforming a multi-argument function `f(a, b)` into a chain of single-argument functions `f(a)(b)`:
-
-```javascript
-const multiply = (a) => (b) => a * b;
-const double = multiply(2);
-double(5); // 10
-```
-
----
-
-## Chapter Contents
-- **Slides:** [`slides/slides.md`](./slides/slides.md)
-- **Code Example:** [`code/functions.js`](./code/functions.js)
-- **Student Lesson:** [`student-lesson.md`](./student-lesson.md)
+## Unit Assessments & Project
+- **Pre/Post Unit Evals:** [`evaluations/pre-unit-eval.md`](./evaluations/pre-unit-eval.md) | [`evaluations/post-unit-eval.md`](./evaluations/post-unit-eval.md)
+- **Quizzes:** [`quizzes/quiz-1-concepts.md`](./quizzes/quiz-1-concepts.md) | [`quizzes/quiz-2-application.md`](./quizzes/quiz-2-application.md)
+- **Unit Project:** [`projects/unit-project.md`](./projects/unit-project.md) (`0-student_files/projects/unit-06-rules-engine/`)

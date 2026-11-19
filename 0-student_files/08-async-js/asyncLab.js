@@ -1,23 +1,35 @@
 /**
- * Student Lesson 7.1 — Async JS, Promises & EventEmitter
- *
- * Instructions:
- * 1. Implement `delay(ms, value)` returning a Promise that resolves with `value` after `ms`.
- * 2. Implement `async function runAll()` using `await Promise.all([...])` inside `try/catch`.
- * 3. Create an `EventEmitter` from `'node:events'`, register a `'complete'` listener,
- *    and emit `'complete'` after `runAll()` finishes.
- * 4. Run with:
- *      node 0-student_files/08-async-js/asyncLab.js
+ * Student Lesson 7.1 — Event Loop, Custom Errors & Resilient Concurrency (Std 18.0)
+ * Run: node 0-student_files/08-async-js/asyncLab.js
  */
-
+const assert = require('node:assert/strict');
 const { EventEmitter } = require('node:events');
 
+class ValidationError extends Error {
+  // TODO [L3 Apply | 18.6]: Extend Error cleanly, setting this.name = 'ValidationError' and this.field
+}
+
 function delay(ms, value) {
-  // TODO: Return a Promise that resolves after ms milliseconds
+  return new Promise((resolve) => setTimeout(() => resolve(value), ms));
 }
 
-async function runAll() {
-  // TODO: Await two delay() calls concurrently with Promise.all inside try/catch
+async function loadGracefully(tasks) {
+  // TODO [L3 Apply | 18.1, 18.7]:
+  // Run Promise.allSettled(tasks), return { okValues, errors },
+  // and ensure a `finally` block executes cleanup!
+  return { okValues: [], errors: [] };
 }
 
-// TODO: Create an EventEmitter, listen for 'complete', and emit it after runAll()
+console.log('Complete asyncLab.js TODOs, then uncomment checks to verify!');
+/*
+(async () => {
+  const err = new ValidationError('Invalid email', 'email');
+  assert.equal(err instanceof Error, true);
+  assert.equal(err.name, 'ValidationError');
+
+  const out = await loadGracefully([delay(5, 'A'), Promise.reject(new Error('Down'))]);
+  assert.deepEqual(out.okValues, ['A']);
+  assert.equal(out.errors.length, 1);
+  console.log('Lesson 7.1 Lab passed!');
+})();
+*/

@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+What are the three pillars of the cybersecurity CIA Triad?,Cookies Images Audio,Confidentiality Integrity Availability,Code Index Access,Cache Input Arrays,20,2
+Granting services only the minimal permissions needed to operate enforces:,Global Admin Access,Principle of Least Privilege,Open CORS Policy,Unauthenticated Admin,20,2
+Which method safely stores user passwords irreversibly in Node.js?,Plaintext JSON,Fast unsalted MD5,Per-user salt + slow scryptSync,AES reversible ZIP,20,3
+Comparing cryptographic digests in constant time to stop timing attacks uses:,== loose equals,crypto.timingSafeEqual(),JSON.stringify(),Array.sort(),20,2
+Fake password-reset emails and AI voice clones targeting staff exploit:,Syntax coercion,Social Engineering and Phishing,Binary search,Pure functions,20,2
+Public standardized IDs tracking known security flaws like Log4Shell are:,CSS,CVEs,DOM,XML,20,2
+Central security log aggregator alerting teams on intrusion spikes is a:,CDN,SIEM,IDE,CSS Grid,20,2
+Running untrusted plugins inside isolated VMs or containers utilizes:,Sandboxing,Recursion,Global scoping,Hoisting,20,1
+Which HTTP header prevents browsers MIME-sniffing text uploads as scripts?,X-Content-Type-Options: nosniff,Color: blue,Cache-Control: 0,Allow: *,20,1
+Why store hashed salted passwords rather than two-way encrypted passwords?,Hashes take zero bytes,Leaked decryption key exposes every password,Encryption is illegal,AES crashes on strings,20,2

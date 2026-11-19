@@ -1,27 +1,15 @@
-# Chapter 2: HTTP, HTML & Node.js Servers
+# Chapter 2: Internet Protocols, Cloud Models & Node.js HTTP Servers (`Std 8.0, 11.3–11.7`)
 
-## About
-This chapter builds a strong foundational understanding of **HTTP** and **HTML** using **Node.js** and modern JavaScript (ES6+).
+Chapter 2 connects network protocols and cloud infrastructure (**Std `8.0`**) directly to bare-metal Node.js HTTP servers (**Std `11.3–11.7`**):
 
-## Student Learning Objectives
-By the end of this chapter, you should be able to:
-1. Describe what HTTP is and why it was created.
-2. Explain what HTML is and how browsers render it.
-3. Identify basic HTML syntax and document structure.
-4. Explain how HTML is sent from a server to a browser over HTTP (requests, responses, headers, and status codes).
-5. Use Node's built-in `fs` and `http` modules to read HTML files and serve them from a local server.
-6. Create reusable functions that use template literals to compose dynamic HTML layouts.
+1. **[Lesson 2.1 — Internet Protocols, Cloud Models, Performance & IoT (`Std 8.0`)](./01-Internet-Protocols-and-Cloud/readme.md)**  
+   - Slides: [`01-Internet-Protocols-and-Cloud/slides/slides.md`](./01-Internet-Protocols-and-Cloud/slides/slides.md)  
+   - Student Lab: [`01-Internet-Protocols-and-Cloud/student-lesson.md`](./01-Internet-Protocols-and-Cloud/student-lesson.md)
+2. **[Lesson 2.2 — HTTP Verbs, Headers, Status Codes & Node `http` Server (`Std 11.3–11.7`)](./02-Node-HTTP-Server/readme.md)**  
+   - Slides: [`03-http.md`](./03-http.md)  
+   - Student Lab: [`02-Node-HTTP-Server/student-lesson.md`](./02-Node-HTTP-Server/student-lesson.md)
 
----
-
-## Chapter Contents
-- **Course Slides:** [`03-http.md`](./03-http.md) (open with `vscode-reveal`)
-- **Code Example:** [`code/simpleHTTP.js`](./code/simpleHTTP.js)
-- **Student Workspace:** [`0-student_files/`](../0-student_files/) (`index.html`, `simpleHTTP.js`)
-
-## Additional Resources
-- Build Your Own Express.js:
-  - [Part 1](https://devtools.tech/build-your-own-express-js-part-one/)
-  - [Part 2](https://devtools.tech/build-your-own-express-js-part-two/?ref=code-devtools-tec)
-- Deep Dive:
-  - [Streaming requests with fetch — HTTP 203](https://www.youtube.com/watch?v=G9PpImUEeUA)
+## Unit Assessments & Project
+- **Pre/Post Unit Evals:** [`evaluations/pre-unit-eval.md`](./evaluations/pre-unit-eval.md) | [`evaluations/post-unit-eval.md`](./evaluations/post-unit-eval.md)
+- **Quizzes:** [`quizzes/quiz-1-concepts.md`](./quizzes/quiz-1-concepts.md) | [`quizzes/quiz-2-application.md`](./quizzes/quiz-2-application.md)
+- **Unit Project:** [`projects/unit-project.md`](./projects/unit-project.md) (`0-student_files/projects/unit-02-http-router/`)

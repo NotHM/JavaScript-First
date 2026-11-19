@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+A POST request creates a new user record. What HTTP status fits best?,200 OK,201 Created,404 Not Found,301 Redirect,20,2
+Client requests an undefined URL /ghost. Server must respond:,200 OK,204 Empty,404 Not Found,503 Timeout,20,3
+Client sends DELETE to a GET-only endpoint. Ideal status code?,405 Method Not Allowed,201 Created,304 Not Modified,100 Continue,30,1
+Sending emoji using str.length for Content-Length truncates because:,JSON rejects UTF-8,UTF-8 byte length exceeds char count,Port 80 blocks symbols,Node strips emojis,30,2
+Browser shows raw JSON string without MIME hint. Fix which header?,User-Agent,Content-Type: application/json,Host,Referer,20,2
+Best wireless link for remote field sensors 4km from Wi-Fi routers?,NFC,BLE,LTE Cellular or LPWAN,Bluetooth Audio,20,3
+Which component sits before Node handling TLS and load balancing?,Reverse Proxy,LocalStorage,CSS Grid,NPM Audit,20,1
+A 100 KB asset gzips by 80%. How many KB travel over the wire?,80 KB,20 KB,50 KB,100 KB,20,2
+Zero server ops needed for a rare webhook running twice daily. Pick:,Custom IaaS Kernel,FaaS Serverless Function,Buy bare-metal rack,Manual Cron FTP,30,2
+Why inspect BOTH req.method and req.url in node:http routers?,Methods ignore URLs,Same URL handles GET and POST differently,Headers require POST,Browsers only send PUT,20,2

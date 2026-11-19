@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+In the CSS Box Model which layer provides inner spacing inside the border?,margin,padding,z-index,float,20,2
+Which CSS rule ensures padding and borders are included within width?,display: none,box-sizing: border-box,overflow: hidden,position: fixed,20,2
+What WCAG AA minimum color contrast ratio applies to normal body text?,1.5 to 1,4.5 to 1,2.0 to 1,1.1 to 1,20,2
+Which CSS layout mode aligns BOTH 2D rows and columns together cleanly?,Inline float,CSS Grid,Table borders,Static block,20,2
+Federal legal frameworks governing educational tech accessibility are:,GDPR and PCI,ADA Section 504 and 508,HTML4 and FTP,DNS and IPv6,20,2
+Which HTML5 Canvas 2D API moves the coordinate origin before drawing?,ctx.translate(x y),ctx.erase(),ctx.stretch(),ctx.padding(),20,1
+Which semantic HTML5 tag wraps the unique primary page body content?,<div class="box">,<main>,<marquee>,<blink>,20,2
+Why does semantic <button> beat <div onclick> for accessibility?,<button> automatically supports Tab and Enter,<div> forbids JS events,CSS ignores <button>,<button> disables mobile tap,20,1
+Which HTML head tag populates search engine result preview descriptions?,<meta name="description">,<script>,<style>,<canvas>,20,1
+Which browser API stores small strings persistently across page refreshes?,RAM cache,localStorage,Promise.race,DNS TTL,20,2

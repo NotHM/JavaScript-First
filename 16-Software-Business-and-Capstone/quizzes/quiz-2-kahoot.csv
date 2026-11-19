@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Fixed expenses equal $5000/mo and net profit per user is $10/mo. Break-even users?,50 users,500 users,5000 users,250 users,20,2
+Net contribution is $8/user/mo and monthly churn is 5% avg 20 months. LTV equals:,$40,$80,$160,$400,30,3
+Your app has $90 LTV but pays $110 CAC per user. What happens if you double ads?,Instant profits,Accelerates losing $20 per new customer,Reduces churn automatically,Zero hosting fee,30,2
+Client asks for 6 unscheduled extras 3 days before MVP deadline (19.6). Best step?,Rewrite everything night before,Freeze MVP sprint and log extras to Phase 2 backlog,Delete unit tests,Double server size,20,2
+Users uninstall app within 5 minutes due to 6-second spinners and lost drafts:,Optimal SEO,Poor reliability and onboarding UX (19.3),Valid ACID SQL,Good LTV ratio,20,2
+Improving retention cleanly to cut monthly churn from 10% down to 5% affects LTV by:,Cutting LTV in half,Doubling LTV cleanly,Zero financial change,Doubling CAC,30,2
+AI assistant generates a login handler in 2 seconds (19.8). Mandatory next step?,Deploy blindly straight to prod,Inspect OWASP flaws and run automated node:test,Delete git history,Disable MFA,20,2
+Cloud API billing customers per 1000 requests processed uses which pricing tier?,Flat DVD boxed price,Usage-Based pricing,Print ads only,Free donation ware,20,2
+Safety-critical medical infusion pump firmware demanding rigid up-front gate checks:,Random cowboy hacks,Waterfall formal verification stages,Weekly meme changes,No specs,20,2
+App Store rejects binary because data-collection privacy policy is missing. Cure?,Ignore warning,Publish accurate Privacy Label and consent UX,Hide logs,Change font,20,2

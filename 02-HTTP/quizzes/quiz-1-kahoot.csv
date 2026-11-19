@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Which protocol provides encrypted remote terminal shell login?,FTP,SSH,HTTP,IMAP,20,2
+Why was 128-bit IPv6 introduced alongside 32-bit IPv4?,Faster CPU clock,IPv4 address exhaustion,HTML5 support,Larger CSS files,20,2
+Which cloud model runs event functions billed per millisecond?,IaaS,SaaS,FaaS Serverless,Bare Metal,20,3
+Which cloud model gives rent of virtual machines and full OS control?,SaaS,IaaS,FaaS,DNS,20,2
+Transferring files securely over an encrypted SSH channel uses:,HTTP,SFTP,IMAP,SMTP,20,2
+Short 4cm contactless tap payments use which wireless protocol?,LTE,Wi-Fi,NFC,Fiber,20,3
+Which email protocol syncs folders across phones and laptops?,IMAP,FTPS,SSH,ICMP,20,1
+What primary benefit does Cloud elasticity offer web apps?,Manual cable swaps,Scale capacity on demand,Zero electricity use,Local-only access,20,2
+Shrinking text bundles before transmission across the network uses:,Gzip or Brotli compression,RAW BMP encoding,Infinite loops,Plaintext storage,20,1
+Caching static assets near global end users is handled by a:,IDE Debugger,CDN Edge Network,USB Hub,RAM Stick,20,2

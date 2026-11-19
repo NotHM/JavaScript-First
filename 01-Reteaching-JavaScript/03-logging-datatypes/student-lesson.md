@@ -1,34 +1,48 @@
-# Student Lesson 1.3: Logging & JavaScript Data Types
+# Student Lesson 1.3: Logging, Data Types & Memory (`Std 3.0`)
 
-**Reading & Slides:**
-- [`readme.md`](./readme.md)
-- [`slides/01-primitiveTypes.md`](./slides/01-primitiveTypes.md)
-
+**Reading & Slides:** [`readme.md`](./readme.md) | [`slides/01-primitiveTypes.md`](./slides/01-primitiveTypes.md) | [`slides/02-objectTypes.md`](./slides/02-objectTypes.md) | [`slides/03-logging.md`](./slides/03-logging.md)  
 **Starter Files:** [`../../0-student_files/02-logging-datatypes/`](../../0-student_files/02-logging-datatypes/)
 
 ---
 
-## Part 1: Explore Primitive Types (`primitives.js`)
-1. Open [`0-student_files/02-logging-datatypes/primitives.js`](../../0-student_files/02-logging-datatypes/primitives.js).
-2. Follow the `TODO` instructions to:
-   - Declare 7 variables, one for each primitive type: `undefined`, `null`, `string`, `number`, `boolean`, `symbol`, and `bigint`.
-   - Write a function `LOGprimitive(value)` that checks whether `value` is a primitive or non-primitive type.
-   - Call `LOGprimitive()` on all 7 variables and run the file:
-     ```bash
-     node 0-student_files/02-logging-datatypes/primitives.js
-     ```
-3. **Reflection Question:** Why does `typeof null` return `"object"` in JavaScript, and how should you check if a variable is `null`?  
-   > *(Write your answer here)*
+## Part A: Remember & Understand Concepts (`[L1]` & `[L2]`)
+
+1. List all **7 primitive data types** in JavaScript (`3.1`):  
+   `1. ________  2. ________  3. ________  4. ________  5. ________  6. ________  7. ________`
+2. Explain in one clear sentence the **Stack vs. Heap** difference between assigning primitives (`const x = 5`) and non-primitive objects (`const arr = [5]`) (`3.6`):  
+   > *(Your explanation)*
+3. Why does `typeof null === "object"` evaluate to `true` in JavaScript? How do you check for `null` reliably (`3.1`)?  
+   > *(Your answer)*
 
 ---
 
-## Part 2: Conditional Type Logging (`logIf.js` & `logTern.js`)
-1. Open [`0-student_files/02-logging-datatypes/logIf.js`](../../0-student_files/02-logging-datatypes/logIf.js).
-2. Implement `checkTypeIf(value)` using `if` / `else if` / `else` statements to handle `null`, `Array.isArray(value)`, and `typeof value`.
-3. Open [`0-student_files/02-logging-datatypes/logTern.js`](../../0-student_files/02-logging-datatypes/logTern.js).
-4. Implement `checkTypeTernary(value)` using chained ternary operators (`condition ? a : b`).
-5. Run both files in Node.js and verify every test case prints accurately:
+## Part B: Applied Coding Labs (`[L3 Apply]`)
+
+1. Complete [`0-student_files/02-logging-datatypes/primitives.js`](../../0-student_files/02-logging-datatypes/primitives.js) to test all 7 primitives with `LOGprimitive()` and run:
    ```bash
-   node 0-student_files/02-logging-datatypes/logIf.js
-   node 0-student_files/02-logging-datatypes/logTern.js
+   node 0-student_files/02-logging-datatypes/primitives.js
    ```
+2. Complete [`logIf.js`](../../0-student_files/02-logging-datatypes/logIf.js) (`if`/`else if`/`else`) and [`logTern.js`](../../0-student_files/02-logging-datatypes/logTern.js) (chained ternaries) to accurately label `null`, `Array`, `Object`, `Function`, and primitives. Run both files in Node.js!
+
+---
+
+## Part C: Bug & Memory Analysis (`[L4 Analyze]`)
+
+Inspect what occurs when running this code:
+```javascript
+const userA = { role: "student" };
+const userB = userA;
+userB.role = "admin";
+console.log(userA.role);
+```
+What prints for `userA.role`, why did it change even though `userA` used `const`, and what `structuredClone()` fix prevents aliasing (`3.6`)?  
+> *(Your analysis)*
+
+---
+
+## Part D: Choose Optimal Strategy (`[L5 Evaluate]` & `[L6 Create]`)
+
+You must build a clean function `safeTruncate(text, maxLen)` that guards against non-strings, returns `""` cleanly for `null`/`undefined`, trims whitespace, and appends `"..."` only when text exceeds `maxLen` (`3.4`). Write and test your 6-line function in Node or on paper:
+```javascript
+// Write your function below:
+```

@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Which SDLC approach ships working software increments in 2-week sprints?,Waterfall,Agile / Scrum,Manual FTP,Hardcoded HTML,20,2
+Smallest core product shipped early to validate real demand cleanly is an:,IDE Theme,MVP Minimum Viable Product,Syntax Tree,Legacy Monolith,20,2
+What SaaS metric multiplies paying monthly subscribers by monthly price?,CPU Load,MRR Monthly Recurring Revenue,RTT Latency,XSS Payload,20,2
+Offering free basic tier plus paid cloud sync / team upgrades describes:,One-time DVD,Freemium monetization,Open-source zero rev,Pay-per-byte DNS,20,2
+Percentage of paying subscribers canceling their subscriptions per month is:,Churn Rate,Upload Bandwidth,Bitrate,Cache Hit Ratio,20,1
+Total sales and ad spend divided by new paying customers won equals:,RTO,CAC Customer Acquisition Cost,LTV,DNS TTL,20,2
+Healthy SaaS rule of thumb comparing Customer LTV against CAC is:,1 to 10,3 to 1 or greater,0.5 to 1,Exact equality 1:1,20,2
+Standard platform commission taken on mobile App Store digital purchases:,0%,15% to 30%,75%,100%,20,2
+Rigid sequential linear steps requiring signed requirements BEFORE design:,Agile,Waterfall Model,Kanban,CI/CD,20,2
+Sprint ceremony inspecting process bottlenecks to boost future team velocity:,Daily Password Reset,Sprint Retrospective,Schema Drop,Cold Boot,20,2

@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Which keyword ignores {} block boundaries and uses function scope?,let,const,var,block,20,3
+Which two declaration keywords obey {} block scope?,var and let,let and const,var and const,global and var,20,2
+What error throws when reassigning a const binding?,SyntaxError,ReferenceError,TypeError,RangeError,20,3
+What term describes reading a let variable above its declaration?,Event Loop,Temporal Dead Zone,Shadowing,Closures,20,2
+Assigning an undeclared variable x = 10 in strict mode causes:,Zero errors,ReferenceError,NaN value,undefined cast,20,2
+Why is ('5' == 5) true while ('5' === 5) is false?,=== uses strings only,== performs type coercion,=== ignores numbers,== checks memory refs,20,2
+What does Object.freeze(obj) stop on obj?,Top-level property edits,Nested array edits,Function calls,Garbage collection,20,1
+When using { ...obj } what happens to nested array properties?,Deep cloned cleanly,Shared by reference,Converted to JSON,Deleted automatically,30,2
+Which native API deep-clones nested objects and arrays safely?,Object.freeze(),JSON.stringify(),structuredClone(),Array.isArray(),20,3
+Why does const arr = []; arr.push(1); run without TypeError?,const locks binding not heap,Arrays ignore const rules,push coerces to var,strict mode off,30,1

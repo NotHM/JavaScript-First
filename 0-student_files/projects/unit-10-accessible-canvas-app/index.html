@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Unit 10 Project: Accessible 2D Canvas Transformer and Preset Manager" />
+  <title>Unit 10 Project: Accessible Canvas Studio</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; color: #111827; background: #ffffff; margin: 0 auto; max-width: 900px; padding: 1rem; }
+    .studio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    canvas { border: 2px solid #1f2937; width: 100%; height: auto; background: #f9fafb; }
+    /* TODO [L3 Apply | 15.4]: Add @media (max-width: 720px) stacking .studio-grid to 1fr AND @media print hiding controls */
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Accessible 2D Canvas Studio</h1>
+  </header>
+  <main class="studio-grid">
+    <section aria-label="Transform Controls">
+      <form id="presetForm">
+        <label for="angleRange">Rotation (deg)</label>
+        <input id="angleRange" type="range" min="0" max="360" value="45" />
+        <label for="presetName">Preset Name</label>
+        <input id="presetName" type="text" required minlength="2" />
+        <button type="submit">Save Preset</button>
+      </form>
+      <p id="statusMsg" role="status" aria-live="polite"></p>
+      <ul id="presetList"></ul>
+    </section>
+    <section aria-label="Canvas Stage">
+      <canvas id="stage" width="320" height="240" aria-label="Rotated shape preview"></canvas>
+    </section>
+  </main>
+  <script>
+    const canvas = document.getElementById('stage');
+    const ctx = canvas.getContext('2d');
+    const angleRange = document.getElementById('angleRange');
+
+    function drawScene(deg) {
+      // TODO [L3 Apply | 15.5]: Clear canvas, call ctx.save(), translate to center (160,120),
+      // rotate (deg * Math.PI / 180), draw fillRect(-45, -25, 90, 50), then ctx.restore()
+      void ctx;
+      void deg;
+    }
+
+    // TODO [L6 Create | 15.6–15.8]: Hook angleRange input -> drawScene, handle presetForm submit
+    // using preventDefault() + textContent + localStorage persistence!
+    drawScene(Number(angleRange.value));
+  </script>
+</body>
+</html>

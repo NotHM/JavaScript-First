@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+What does (typeof null === "object") evaluate to in JavaScript?,true,false,"null",Throws SyntaxError,20,1
+What does (typeof [10 20]) return in Node.js?,"array","object","list","number",20,2
+"What prints: const s = ""  node ""; console.log(s.trim().length);?",7,4,5,undefined,30,2
+What does typeof x return after running: let x; ?,"null",Throws ReferenceError,"undefined","void",20,3
+Which expression safely tests if x is ANY JavaScript primitive?,typeof x !== "object",x===null || (typeof x!=="object" && typeof x!=="function"),Boolean(x),x != "",60,2
+Why does if (!score) treat a student score of 0 as missing?,0 is a string,typeof 0 is "null",0 is falsy so !0 is true,score must use var,30,3
+Which ANSI escape sequence resets terminal colors to default?,\x1b[31m,\x1b[0m,\n\r,console.reset,30,2
+Logging raw student SSNs and birthdays to debug.log violates which rule?,ES6 syntax,FERPA / GDPR privacy minimization,MIT attribution,Terminal ANSI spec,30,2
+Which third-party code must a closed commercial team REJECT?,MIT licensed utility,ISC licensed parser,Unlicensed code copied off a blog,Apache 2.0 helper,30,3
+"Error: Missing script 'audit-deps'. Where do you define npm scripts?",test.js,"scripts" in package.json,.gitignore,README.md,30,2

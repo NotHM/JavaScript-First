@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+In Red-Green-Refactor TDD what do you write FIRST?,Production UI CSS,A failing test asserting expected behavior,Database schema,Git tag,20,2
+Which built-in Node module provides test suites with node --test?,node:http,node:test,node:fs,node:crypto,20,2
+Forgetting a closing brace } in JS triggers which error category?,Runtime error,Logic error,Syntax error,Integration error,20,3
+Adding +10% tax instead of -10% discount without crashing is a:,SyntaxError,Logic error,Network error,Semantic crash,20,2
+Accessing obj.name when obj is undefined triggers a:,Syntax error,Runtime TypeError,Compile warning,CSS error,20,2
+Testing empty arrays [] null negative values and zero checks:,Minification,Boundary / Edge-case testing,DNS lookup,CORS policy,20,2
+Pressing F9 next to a line number in VS Code adds a:,Git commit,Breakpoint,npm script,Syntax tree,20,2
+Which Debugger panel lists every nested active function call up to the pause?,Call Stack,File Explorer,Markdown Preview,Terminal Colors,20,1
+Auto-running all tests inside GitHub Actions on every PR is:,Manual debugging,Continuous Integration testing,Waterfall design,Minifying JS,20,2
+Which method checks strict deep object equality in node:assert/strict?,assert.loosely(),assert.deepEqual(),console.log(),JSON.parse(),20,2

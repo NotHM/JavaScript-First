@@ -1,35 +1,55 @@
-# Unit 1 Guide: Reteaching JavaScript & Node.js
+# Unit 1 Guide: Developer Environment, Legal/Ethical IT & Data Types
 
-**Course:** JavaScript First — Software & App Design  
-**Estimated Duration:** 5–6 Class Periods (45–55 minutes each)  
-**Target Grade Level:** 9–12 / Post-Secondary Introductory  
+**Course:** JavaScript First — Software & App Design (AZ CTE CIP **11.0202.00**)  
+**Semester Schedule:** Weeks 1–2 (Days 1–7 | 7 Class Periods × 50 Minutes)  
+**Target Grade Level:** 9–12 / Post-Secondary Introductory
 
 ---
 
-## Unit Overview
-This unit introduces students to JavaScript not as a browser-only scripting afterthought, but as a full-stack programming language powered by the **Node.js** runtime environment. Students trace JavaScript's evolution from LiveScript to ES6/TypeScript, master essential command-line navigation and **NVM/Node.js** tooling, and practice inspecting **primitive and non-primitive data types** using `console`, `typeof`, and conditional logic.
+## 1. Unit Overview
 
-## Arizona CTE Standards Alignment
-**Program:** Software and App Design (CIP **11.0202.00**)
+Unit 1 establishes the professional software engineering foundation before writing complex algorithms or web servers. Students explore the legal and ethical boundaries of technology (IP, DMCA, open-source vs. proprietary licensing, GDPR/COPPA/FERPA/HIPAA, tracking & AI ethics — **Standard 2.0**), configure developer toolchains using the Unix terminal, NVM, Node.js, and `npm` scripts (**Standard 11.0**), and classify JavaScript's 7 primitive and non-primitive types including stack vs. heap memory and string operations (**Standard 3.0**).
 
-| Standard | Competency / Indicator | How Addressed in Unit 1 |
+---
+
+## 2. Arizona CTE Standards Alignment
+
+| Standard | Official Indicator Coverage | Unit 1 Instructional Artifacts |
 |---|---|---|
-| **Standard 2.0** | Examine Legal & Ethical Issues Related to Information Technology (2.2 Open-source vs. proprietary ecosystems) | History of ECMAScript, CommonJS, Node.js, and open-source npm ecosystem |
-| **Standard 3.0** | Utilize Primitive Data Types and Strings in Writing Programs (3.1 Differentiate numeric, boolean, string, null, undefined; 3.2 Select appropriate data types) | Section 1.3 Logging & Data Types (`primitives.js`, `logIf.js`, `logTern.js`) |
-| **Standard 14.0** | Use Version Control Systems & Developer Workflows | Terminal basics, Git awareness, and managing Node versions with NVM |
-| **Standard 18.0** | Employ Runtime and Error Handling Techniques (18.1–18.3 Debugging & resolving runtime/logical errors) | Diagnosing `typeof null === "object"` and debugging `LOGprimitive()` |
-| **AZ CTE Prof. Skills 1.0** | Complex Communication | Explaining code behavior and technical vocabulary in student worksheets |
-| **AZ CTE Prof. Skills 3.0** | Thinking & Innovation | Troubleshooting NVM setup and writing conditional type checkers |
+| **Standard 2.0** — Examine Legal & Ethical Issues Related to IT | `2.1` IP, copyright & DMCA; `2.2` Open-source vs. proprietary licenses (MIT/GPL/Apache); `2.3` GDPR, COPPA, FERPA, HIPAA, PCI DSS; `2.4` Ethical cookies, tracking & AI | Lesson 1.1 Reading, [`slides.md`](./01-History-of-JS/slides/slides.md), `licenseComplianceDemo.js`, Quiz 1 & 2, Unit 1 Project |
+| **Standard 11.0** — Develop a Program | `11.1`–`11.2` Editors & extensions; `11.3`–`11.5` I/O statements, sanitization & ANSI formatted CLI output; `11.6` Interpreted/JIT vs. compiled; `11.7` Build scripts (`package.json`); `11.9` camelCase naming | Lesson 1.2 Readings, Slides, `cliFormatterDemo.js`, `0-student_files/01-terminal-and-node/` |
+| **Standard 3.0** — Utilize Primitive Data Types & Strings | `3.1`–`3.3` Primitives (`string`, `number`, `boolean`, `null`, `undefined`, `symbol`, `bigint`) & constants/variables; `3.4` Safe string ops; `3.5` Big-O memory awareness; `3.6` Stack vs. Heap | Lesson 1.3 Readings, Slides (`01`–`03`), `code/`, `0-student_files/02-logging-datatypes/` |
+| **AZ CTE Prof. Skills** | `1.0` Complex Communication, `4.0` Professionalism, `5.0` Initiative, `8.0` Legal & Ethical Practices | Worksheets, license audit memos, CLI professionalism |
 
-## Unit Sequence & Pacing
+---
 
-| Lesson | Topic | Book / Reading | Course Slides | Student Lab |
-|---|---|---|---|---|
-| **1.1** | History of JavaScript & Runtimes | [01-History-of-JS/readme.md](./01-History-of-JS/readme.md) | — | [Student Lesson 1.1](./01-History-of-JS/student-lesson.md) |
-| **1.2** | Terminal Basics, NVM & Node.js | [00-terminal-basics...md](./02-Terminal-NVM/00-terminal-basics-and-installing-nvm-node-js.md), [01-node-overview.md](./02-Terminal-NVM/01-node-overview.md) | [Chapter 1 Slides](./readme.md) | [Student Lesson 1.2](./02-Terminal-NVM/student-lesson.md) |
-| **1.3** | Logging & Data Types | [03-logging-datatypes/readme.md](./03-logging-datatypes/readme.md) | [Primitive Types](./03-logging-datatypes/slides/01-primitiveTypes.md), [Object Types](./03-logging-datatypes/slides/02-objectTypes.md), [Logging](./03-logging-datatypes/slides/03-logging.md) | [Student Lesson 1.3](./03-logging-datatypes/student-lesson.md) |
+## 3. Bloom's Taxonomy Progression Matrix (L1 → L6)
 
-## Unit Summative Assessment
-Students demonstrate mastery by:
-1. Navigating the file system and executing Node.js scripts from the terminal without GUI assistance.
-2. Completing `primitives.js`, `logIf.js`, and `logTern.js` in `0-student_files/02-logging-datatypes/` to accurately classify all 7 primitive types (including `null` and `undefined`) and 3 non-primitive object types.
+| Bloom's Tier | Cognitive Focus in Unit 1 | Student Evidence & Assessment Items |
+|---|---|---|
+| **L1 — Remember** | Recall license types (MIT vs. GPL), privacy acronyms (FERPA/COPPA/GDPR), CLI verbs, and all 7 JS primitives | `pre-unit-eval.md` (Q1–Q4), Kahoot Quiz 1 |
+| **L2 — Understand** | Explain interpreted/JIT execution, `typeof null === "object"`, and stack vs. heap storage | Lesson 1.1–1.3 `student-lesson.md` Part A, Post-Lesson Exit Tickets |
+| **L3 — Apply** | Run Node scripts via CLI, inspect types with `logIf`/`logTern`, implement license & PII sanitizer helpers | `0-student_files/01-legal-ethics/`, `01-terminal-and-node/`, `02-logging-datatypes/` |
+| **L4 — Analyze** | Diagnose broken type checks (`LOGprimitive`), catch PII leaks across datasets, trace copyleft license conflicts | Kahoot Quiz 2, Post-Unit Eval Q7–Q10 |
+| **L5 — Evaluate** | Audit a simulated app manifest against open-source license compatibility & COPPA/FERPA privacy compliance | Unit 1 Project Part A (Compliance Audit Defense) |
+| **L6 — Create** | Architect and ship a CLI **Package License & PII Compliance Auditor** formatted with ANSI color and typed reports | **Unit 1 Project** (`0-student_files/projects/unit-01-license-cli-auditor/`) |
+
+---
+
+## 4. Day-by-Day Pacing Calendar (7 Days)
+
+| Day | Instructional Focus | Assessments & Deliverables |
+|---|---|---|
+| **Day 1** | Unit Diagnostic & Lesson 1.1 (JS Evolution + Standard 2.0 IP, Licenses & Privacy) | **Pre-Unit Eval**, **Pre-Lesson 1.1**, Slide Deck 1.1, **Post-Lesson 1.1** |
+| **Day 2** | Lesson 1.1 Lab (Open-Source & Privacy Audit in Node.js) + Review | `0-student_files/01-legal-ethics/licenseAudit.js` |
+| **Day 3** | Lesson 1.2 (Terminal Navigation, NVM, Interpreted vs. Compiled, ANSI CLI I/O) | **Pre-Lesson 1.2**, Part 1 CLI drills |
+| **Day 4** | Lesson 1.2 Lab (`npm` scripts, `process.argv` CLI Formatter) + Formative Game | `cliFormatter.js`, **Post-Lesson 1.2**, **Kahoot Quiz 1** |
+| **Day 5** | Lesson 1.3 (7 Primitives, `typeof`, Stack vs. Heap, String Safety) | **Pre-Lesson 1.3**, `primitives.js`, Slides `01`–`02` |
+| **Day 6** | Lesson 1.3 Conditional Type Loggers (`if`/`else` & Ternary) + Formative Game | `logIf.js`, `logTern.js`, **Post-Lesson 1.3**, **Kahoot Quiz 2** |
+| **Day 7** | Unit 1 Project Build (**CLI Package & Privacy Auditor**) & Summative Proof | **Unit 1 Project Submission**, **Post-Unit Eval** |
+
+---
+
+## 5. Measuring Learning Growth (Unit Evaluation Protocol)
+
+Administer [`evaluations/pre-unit-eval.md`](./evaluations/pre-unit-eval.md) on Day 1 before teaching and [`evaluations/post-unit-eval.md`](./evaluations/post-unit-eval.md) on Day 7. Grade using [`evaluations/eval-answer-key.md`](./evaluations/eval-answer-key.md) and compute Normalized Gain $g = \frac{\text{Post\%} - \text{Pre\%}}{100 - \text{Pre\%}}$ (target $g \ge 0.55$).

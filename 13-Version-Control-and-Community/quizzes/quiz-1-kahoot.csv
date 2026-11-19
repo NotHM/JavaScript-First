@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+What category of Version Control System is Git?,Local File Copy,Centralized Server Only,Distributed VCS,Proprietary SQL,20,3
+What category of Version Control System is Apache Subversion (SVN)?,Centralized VCS,Distributed VCS,NoSQL VCS,Browser Storage,20,1
+Which Git command stages edited files before committing?,git push,git add,git merge,git init,20,2
+Which file prevents .env secrets and node_modules from being tracked?,package.json,.gitignore,README.md,LICENSE,20,2
+Which command undoes a shared commit safely by adding an inverse commit?,git reset --hard,git rm -rf,git revert,git branch -D,20,3
+In SemVer 2.3.4 which digit marks backward-compatible features?,2 (Major),3 (Minor),4 (Patch),All three,20,2
+Which file guarantees identical installed dependency trees on CI?,README.md,package-lock.json,.vscode/settings.json,test.js,20,2
+Built-in modules like node:path and node:crypto belong to:,npm Registry,Node Standard Library,DOM Browser API,Third-party DLLs,20,2
+Which Conventional Commit prefix announces a new backward-compatible feature?,fix:,docs:,feat:,style:,20,3
+Which repository file teaches developers how to install and use your software?,CHANGELOG.md,README.md,.gitignore,eslint.json,20,2

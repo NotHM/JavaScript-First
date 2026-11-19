@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Clicking Form Submit refreshes browser and wipes roster array. Missing call?,event.stopLoop(),event.preventDefault(),form.delete(),window.close(),20,2
+Setting li.innerHTML = userBio risks HTML script injection XSS. Safe property?,li.outerHTML,li.textContent,li.cssText,li.eval,20,2
+Calling ctx.rotate(0.5) tilts every later Canvas frame unless paired with:,ctx.save() and ctx.restore(),ctx.reload(),clearTimeout(),alert(),30,1
+Live status banner updates must announce smoothly to screen readers using:,hidden="true",aria-live="polite",role="marquee",placeholder,20,2
+Hide navigation sidebars when users print a ticket to paper or PDF using:,@media print,@import css,@keyframes,@font-face,20,1
+Automated contrast scan passed 100% yet Tab key traps users inside modal. Needs:,Disable keyboard,Human keyboard usability testing,Darker gray fonts,Remove focus outline,30,2
+Box width 300px plus 20px padding plus 5px border under content-box totals:,300px,325px,350px,250px,30,3
+Low-fidelity structural skeleton boxes validating page layout BEFORE styling are:,Production APKs,Wireframes,Memory leaks,Unit tests,20,2
+Placeholder-only inputs lose label context once typed. Semantic accessibility fix?,Larger placeholder,Bound <label for="id">,Remove borders,Use <span> only,20,2
+Two-page portfolio needing 0ms JS/CSS framework overhead is best styled with:,Heavy 300KB enterprise suite,Lightweight native CSS variables,Flash plugins,Inline font tags,30,2

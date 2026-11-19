@@ -1,36 +1,47 @@
-# Lesson Plan 1.2: Terminal Basics, NVM & Node.js
+# Lesson Plan 1.2: Terminal Basics, NVM, Node.js & Program Development (`Std 11.0`)
 
-**Unit:** Unit 1 — Reteaching JavaScript & Node.js  
-**Duration:** 2 Class Periods (50 minutes each)  
-**AZ CTE Standards:** Software & App Design 11.0202.00 — Standard 14.0 (Developer workflows & CLI), Standard 18.0 (Runtime troubleshooting); AZ CTE Professional Skills 4.0 (Professionalism), 5.0 (Initiative & Self-Direction)
+**Unit:** Unit 1 | **Duration:** 2 Class Periods (100 min total)  
+**AZ CTE Standards:** `11.0` (`11.1`–`11.7`, `11.9`) | **Prof. Skills:** `4.0` Professionalism, `5.0` Initiative
 
 ---
 
-## Learning Objectives
-Students will be able to:
-1. Navigate directories and create/remove files using `pwd`, `ls`, `cd`, `mkdir`, `touch`, and `rm`.
-2. Explain the purpose of NVM and `npm` in managing Node.js versions and project dependencies.
-3. Write and execute a Node.js script from the terminal (`node test.js`).
+## Bloom's Taxonomy Objective Ladder
+| Tier | Student Learning Objective |
+|---|---|
+| **L1 Remember** | Recall Bash commands (`pwd`, `ls`, `cd`, `mkdir`, `touch`, `rm`) and roles of Node.js, `npm`, NVM. |
+| **L2 Understand** | Contrast compiled vs. interpreted/JIT execution and explain `package.json` scripts. |
+| **L3 Apply** | Execute CLI navigation, complete `test.js` using camelCase, and format sanitized CLI banners with ANSI codes. |
+| **L4 Analyze** | Diagnose runtime crashes from missing `process.argv` validation and un-reset ANSI escape codes. |
+| **L5 Evaluate** | Critique non-portable OS paths and justify standardized `npm run` automation scripts. |
 
-## Materials & Resources
-- Readings: [`00-terminal-basics-and-installing-nvm-node-js.md`](./00-terminal-basics-and-installing-nvm-node-js.md), [`01-node-overview.md`](./01-node-overview.md)
-- Slides: [`../readme.md`](../readme.md)
-- Student Lesson: [`student-lesson.md`](./student-lesson.md)
-- Student Starter File: [`../../0-student_files/01-terminal-and-node/test.js`](../../0-student_files/01-terminal-and-node/test.js)
+---
 
-## Lesson Pacing (2 Days)
-### Day 1: Command Line Navigation
-1. **Pre-Assessment (5 min):** Quick Kahoot/bell-ringer on `pwd`, `ls`, `cd`, `mkdir`.
-2. **Direct Instruction (15 min):** Demonstrate terminal navigation in VS Code integrated terminal, highlighting safety with `rm -rf`.
-3. **Guided Practice (20 min):** Students complete Part 1 of [`student-lesson.md`](./student-lesson.md) (`mkdir`, `cd`, `touch`, `pwd`, `ls`, `rm -rf`).
-4. **Closure (10 min):** Verify every student can explain `../` vs `./` and `pwd`.
+## Materials & Assessments
+- **Readings:** [`00-terminal-basics...md`](./00-terminal-basics-and-installing-nvm-node-js.md), [`01-node-overview.md`](./01-node-overview.md)
+- **Slides:** [`slides/slides.md`](./slides/slides.md) (and [`../readme.md`](../readme.md))
+- **Teacher Demo:** [`code/cliFormatterDemo.js`](./code/cliFormatterDemo.js)
+- **Student Files:** [`student-lesson.md`](./student-lesson.md), [`../../0-student_files/01-terminal-and-node/`](../../0-student_files/01-terminal-and-node/)
+- **Growth Proof:** [`pre-lesson-eval.md`](./pre-lesson-eval.md) & [`post-lesson-eval.md`](./post-lesson-eval.md)
 
-### Day 2: NVM, Node.js & First Script
-1. **Bell Ringer (5 min):** *"Why might a developer need two different versions of Node.js on the same computer?"*
-2. **Direct Instruction (15 min):** Present [`../readme.md`](../readme.md) slides on Node.js, `npm`, `package.json`, and NVM.
-3. **Lab / Independent Practice (25 min):** Students verify `node -v` and `npm -v`, then complete [`../../0-student_files/01-terminal-and-node/test.js`](../../0-student_files/01-terminal-and-node/test.js) and run it with `node`.
-4. **Closure (5 min):** Exit ticket: Check terminal output from `node test.js`.
+---
 
-## Differentiation
-- **Support:** Provide a printable CLI cheat-sheet (`pwd`, `ls`, `cd`, `mkdir`, `touch`, `rm`) and pair students in GitPod.
-- **Extension:** Have early finishers initialize a `package.json` (`npm init -y`) in a scratch folder and add an `"start": "node test.js"` script.
+## 2-Day Pacing Plan
+- **Day 1 (50 min):** `pre-lesson-eval.md` (4 min) → CLI Demo & Interpreted/Compiled comparison (`slides/slides.md`, 18 min) → Terminal navigation lab + `test.js` (22 min) → Quick verbal check on `../` vs `./` (6 min).
+- **Day 2 (50 min):** NVM & `package.json` scripts (`11.7`) + Walkthrough of `code/cliFormatterDemo.js` (15 min) → Student lab completing `cliFormatter.js` & Parts C–D (28 min) → `post-lesson-eval.md` (7 min) + Unit **Kahoot Quiz 1**.
+
+---
+
+## Instructor Answer Key
+
+### Pre-Lesson 1.2 Key
+1. Moves up one parent directory.
+2. Interpreted / JIT compiled inside V8.
+3. Declares project metadata, dependencies, and automation `"scripts"` reproducibly across teammates.
+4. `process.argv[2]` is `undefined` when omitted (throws `TypeError` on `.trim()`), or raw whitespace/control characters distort output.
+
+### Post-Lesson 1.2 Key
+1. `mkdir src && touch src/index.js`
+2. **NVM** switches Node.js runtime versions per project; **npm** installs/manages project packages and runs `package.json` scripts.
+3. Uses snake/Pascal naming (`Student_status` instead of `camelCase` `studentStatus`), and omits `\x1b[0m` reset code, leaving green styling stuck in the terminal.
+4. Source `.js` stays platform-neutral text executed by the platform's installed V8/Node runtime.
+5. Windows-only absolute path crashes on macOS/Linux/GitPod; `"start": "node index.js"` invokes the active `$PATH` runtime portably everywhere.

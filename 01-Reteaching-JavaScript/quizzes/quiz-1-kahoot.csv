@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Why was LiveScript renamed to JavaScript in 1995?,Written by Sun,Marketing tie-in with Java hype,Replaced HTML tags,Java ran inside Chromium,20,2
+What does the ECMAScript specification define?,Linux file permissions,CSS Grid rules,Core JavaScript language spec,Only Node HTTP ports,20,3
+Which law protects children under 13 from unconsented online data tracking?,PCI DSS,COPPA,MIT,DMCA,20,2
+What happens if code on GitHub has NO LICENSE file?,Public domain by default,MIT License applies,All rights reserved by author,Forces GPLv3,30,3
+Which terminal command prints your current directory path?,ls,cd,pwd,mkdir,10,3
+What is the main purpose of NVM (Node Version Manager)?,Switch Node.js versions,Compile TypeScript to C++,Encrypt .env files,Manage SQL tables,20,1
+Which JavaScript engine powers Node.js?,JVM,Chrome V8 Engine,SpiderMonkey PHP,CPython,20,2
+How many primitive data types exist in modern JavaScript?,3,5,7,12,20,3
+Which operator checks both value AND type with no coercion?,=,==,===,typeof,10,3
+Where are small primitive values stored vs dynamic Objects?,Primitives on Stack / Objects on Heap,Objects on Stack / Strings on Disk,All in JSON files,Both in Browser CSS,30,1

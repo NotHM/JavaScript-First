@@ -1,33 +1,39 @@
-# Chapter 3: Asynchronous JavaScript & AJAX
+# Chapter 3: Client-Side Internet Software, AJAX & Modern Web Architecture (`Std 9.0`)
 
-## Student Learning Objectives
-By the end of this chapter, you should be able to:
-1. Explain **XHR** (`XMLHttpRequest`), **Fetch**, and **Axios**.
-2. Compare and contrast XHR, Fetch, and Axios for making HTTP requests.
-3. Write asynchronous functions using XHR and Fetch to retrieve and handle data.
+## Student Learning Objectives (Bloom's Taxonomy)
+- **`[L1 Remember]`** Identify core browser engines, DevTools **Network/Console** panels (`9.1–9.2`), **SSH** remote development (`9.3`), **XHR/Fetch/Axios**, **React/Next.js** (`9.4`), and **Containers/Microservices** (`9.5`).
+- **`[L2 Understand]`** Contrast synchronous full-page reloads vs. asynchronous **AJAX** JSON updates (`AJAX.drawio.svg`), and explain why `fetch()` only rejects on network failures—not HTTP `404`/`500`.
+- **`[L3 Apply]`** Write robust `async`/`await` `fetch()` clients in Node.js and browser DOM checking `if (!res.ok)` inside `try`/`catch`.
+- **`[L4 Analyze]`** Debug failed API calls (`CORS`, wrong `Content-Type`, unparsed JSON, missing `await`) using DevTools & test harnesses.
+- **`[L5 Evaluate]`** Choose between Client-Side Rendering (**React SPA**) vs. Server-Side Rendering (**Next.js SSR**), and between Monolith vs. Containerized Microservices (`9.4–9.5`).
 
 ---
 
-## What is AJAX?
-**AJAX** (Asynchronous JavaScript and XML) is the pattern of making HTTP requests from JavaScript without reloading the entire page, allowing applications to update data dynamically.
+## 1. Browsers, DevTools & Collaborative Cloud Workflows (`Std 9.1–9.3`)
+- **Browser Engine Flow (`9.1`):** Fetches HTML/CSS/JS over HTTP, constructs the **DOM**, executes JavaScript asynchronously, and patches live views without flickering reloads.
+- **DevTools & Collaboration (`9.2`):** Inspect **Network** payloads/headers/timings (`200`, `404`, CORS preflight `OPTIONS`), debug in **Console**, and collaborate in **GitHub PRs** & **VS Code Live Share**.
+- **SSH & Cloud IDE Dev (`9.3`):** Securely tunnel into remote staging servers (`ssh user@host`) or cloud workspaces (`Gitpod`/`Codespaces`) using Ed25519 keypairs.
 
-## What is XHR?
-`XMLHttpRequest` (**XHR**) is the original browser API for sending asynchronous HTTP requests. While still supported, modern codebases generally prefer the Promise-based **Fetch API** or libraries like **Axios**.
+---
 
-## HTTP Request Methods
-- **`GET`** — Retrieve data from a server.
-- **`POST`** — Submit new data to a server.
-- **`PUT` / `PATCH`** — Update existing data on a server.
-- **`DELETE`** — Remove data from a server.
+## 2. XHR vs. Fetch vs. Axios & SPA/SSR Frameworks (`Std 9.4`)
 
-## Chapter Contents
-- **Diagram:** [`AJAX.drawio.svg`](./AJAX.drawio.svg)
-- **XHR Example:** [`00-XHR/xhr.js`](./00-XHR/xhr.js)
-- **Fetch Guide & Examples:** [`00-fetch/readme.md`](./00-fetch/readme.md)
+| Feature | `XMLHttpRequest` (XHR) | Native `fetch()` API | Axios (npm Library) |
+|---|---|---|---|
+| Built into Modern Browsers + Node 18+? | Browser only | **Yes (Both!)** | Requires install |
+| Returns Promises (`async`/`await`)? | No (Callback events) | **Yes** | **Yes** |
+| Rejects Promise automatically on `404`/`500`? | No | **No — Check `res.ok`!** | **Yes** |
+| Auto-parses JSON response body? | Manual `JSON.parse()` | Manual `await res.json()` | **Yes (`res.data`)** |
 
-## External Resources
-1. **Videos**
-   - [Academind — Sending JavaScript HTTP Requests with XMLHttpRequest](https://www.youtube.com/watch?v=4K33w-0-p2c)
-2. **Documentation**
-   - [MDN — Using the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
-   - [MDN — XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
+- **React (SPA)** ships JavaScript to render UI dynamically in the browser (`great interactivity`), while **Next.js (SSR/SSG)** renders initial HTML on the server (`faster First Contentful Paint + stronger SEO`).
+
+---
+
+## 3. Containers & Microservices (`Std 9.5`)
+- **Containers (Docker):** Package your Node app + exact runtime dependencies into an identical Linux image (`FROM node:24-alpine`), eliminating OS drift.
+- **Microservices:** Split huge apps into independent single-responsibility services (Auth, Billing, Notifications) communicating over HTTP/JSON APIs rather than one coupled monolith.
+
+## Chapter Resources
+- **Slides:** [`slides/slides.md`](./slides/slides.md) | **Diagram:** [`AJAX.drawio.svg`](./AJAX.drawio.svg)
+- **Teacher Demos:** [`code/ajaxClientDemo.js`](./code/ajaxClientDemo.js), [`00-XHR/xhr.js`](./00-XHR/xhr.js), [`00-fetch/node-fetch.js`](./00-fetch/node-fetch.js)
+- **Student Starters:** [`../0-student_files/04-ajax/`](../0-student_files/04-ajax/)

@@ -1,25 +1,24 @@
-# Unit 3 Guide: Asynchronous JavaScript & AJAX
+# Unit 3 Guide: Client-Side Web Software, AJAX & Modern APIs
 
-**Course:** JavaScript First — Software & App Design  
-**Estimated Duration:** 3 Class Periods (50 minutes each)  
-**Target Grade Level:** 9–12 / Post-Secondary Introductory  
+**Course:** JavaScript First — Software & App Design (AZ CTE CIP **11.0202.00**)  
+**Semester Schedule:** Week 11 (Days 52–56 | 5 Class Periods × 50 Minutes)
 
----
+## 1. Unit Overview
+Unit 3 delivers full mastery of **AZ CTE Standard 9.0 (Client-Side Internet Software & Collaboration Ecosystems)**. Students trace browser DOM hydration & DevTools inspection (`9.1`), GitHub + Live Share + IDE workflows (`9.2`), SSH/remote workspaces (`9.3`), asynchronous AJAX clients comparing **XHR vs. Fetch vs. Axios** alongside **React/Next.js SPA vs. SSR** architectures (`9.4`), and **Containers/Microservices** (`9.5`).
 
-## Unit Overview
-Students transition from synchronous scripts to **asynchronous HTTP communication**. They compare legacy `XMLHttpRequest` (**XHR**) with the modern Promise-based **Fetch API** (`fetch()`, `.then()`, `async`/`await`) and **Axios**, practicing how to request JSON data from APIs in both the browser and Node.js and handle network errors gracefully.
-
-## Arizona CTE Standards Alignment
-**Program:** Software and App Design (CIP **11.0202.00**)
-
-| Standard | Competency / Indicator | How Addressed in Unit 3 |
+## 2. Arizona CTE Standards Alignment
+| Standard | Official Indicators | Unit 3 Deliverable |
 |---|---|---|
-| **Standard 1.0** | Recognize Security Issues | Discussing HTTPS endpoints, CORS, and never exposing API keys in client-side code |
-| **Standard 3.0** | Utilize Data Types & JSON Structures | Parsing JSON API responses (`response.json()`) and extracting object/array fields |
-| **Standard 16.0** | Explore Storage & Data Retrieval (16.3 CRUD operations) | Mapping `GET`, `POST`, `PUT`, `DELETE` requests to API endpoints |
-| **Standard 18.0** | Employ Runtime & Error Handling Techniques (18.1, 18.4, 18.7 `try`/`catch`) | Checking `response.ok` and wrapping `async`/`await` `fetch()` calls in `try`/`catch` |
-| **AZ CTE Prof. Skills 1.0 & 3.0** | Complex Communication & Thinking/Innovation | Comparing XHR, Fetch, and Axios trade-offs and debugging live API responses |
+| **Standard 9.0** — Client-Side Internet Software | `9.1` Browser DevTools & DOM fetch cycle; `9.2` DevTools Network tab, Live Share & PR reviews; `9.3` SSH key auth & remote containers; `9.4` XHR, Fetch, Axios, React/Next.js SPA/SSR; `9.5` Docker containers & microservices | [`readme.md`](./readme.md), [`slides/slides.md`](./slides/slides.md) |
+| **Standard 18.0 & 1.0** — Fetch Error Guards & Security | `18.1–18.7` `if (!res.ok)` & `try`/`catch` for `fetch()` (`4xx/5xx` does not reject!); `1.0` CORS & protecting API secrets | [`code/ajaxClientDemo.js`](./code/ajaxClientDemo.js) |
+| **AZ CTE Prof. Skills** | `1.0` Complex Communication; `2.0` Collaboration | Async sequence diagrams & Live Share pair debugging |
 
-## Unit Sequence & Pacing
-- **Lesson 3.1 (Day 1):** AJAX Concepts, HTTP Verbs & `XMLHttpRequest` (`00-XHR/xhr.js`, `AJAX.drawio.svg`)
-- **Lesson 3.2 (Days 2–3):** Promises, `fetch()`, `async`/`await` & Error Handling (`00-fetch/`, `0-student_files/04-ajax/`)
+## 3. Bloom's Taxonomy Progression Matrix (L1 → L6)
+| Tier | Focus | Evidence |
+|---|---|---|
+| **L1 Remember** | Name HTTP client evolution (**XHR → Fetch → Axios**), SPA vs SSR traits, Docker container benefits, & SSH purpose | `pre-unit-eval.md`, Quiz 1 |
+| **L2 Understand** | Explain why `fetch()` does NOT automatically reject on HTTP `404`/`500` unlike Axios, and contrast monoliths vs microservices | Slides, `readme.md` |
+| **L3 Apply** | Execute `GET` and `POST` JSON requests using `async`/`await` + `fetch()` in both Node.js & browser DOM | `0-student_files/04-ajax/` |
+| **L4 Analyze** | Inspect DevTools Network tabs (`status`, `CORS`, headers) to catch missing `if (!res.ok)` or malformed JSON errors | Quiz 2, Post-Unit Eval |
+| **L5 Evaluate** | Select SPA (`React`) vs SSR (`Next.js`) and Docker microservices vs monoliths given SEO, team scale, and startup speed | Post-Unit Eval Q7–Q8 |
+| **L6 Create** | Build a **Resilient Multi-Endpoint API Dashboard** handling loading spinners, HTTP `4xx/5xx` retry states, & DOM cards | **Unit 3 Project** (`0-student_files/projects/unit-03-api-dashboard/`) |

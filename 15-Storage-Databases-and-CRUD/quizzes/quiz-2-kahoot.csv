@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Why write JSON to db.json.tmp then call fs.rename() to db.json?,Makes files larger,Atomic swap prevents partial crash corruption,Sorts keys alphabetically,Compresses images,20,2
+A banking transfer needs strict ACID debit + credit rollback guarantees. Pick:,Flat TXT files,Relational SQL database,Browser cookies,localStorage,30,2
+A storefront stores wildly varying specs per product category. Best fit?,Fixed SQL 80 columns,Document NoSQL like MongoDB,DNS records,Raw assembly,30,2
+Which MongoDB filter mirrors SQL SELECT * FROM items WHERE qty > 5?,find({ qty: 5 }),find({ qty: { $gt: 5 } }),insert({ qty: 5 }),drop({ qty: 5 }),30,2
+Copying backups onto a second folder on the SAME server disk violates 3-2-1 via:,Single hardware failure destroys both,Excess RAM speed,Slower DNS,Strict mode errors,20,1
+Which SQL keyword filters matched rows in a SELECT UPDATE or DELETE query?,ORDER BY,WHERE,DROP,EXPORT,20,2
+Calling readFileSync on a 500 MB CSV inside an HTTP handler hurts via:,Blocking Event Loop and spiking RAM,Automatic SQL join,Faster caching,Encryption overhead,20,1
+Deleting a Customer row still referenced by Invoices without guard risks:,Orphaned foreign keys,Infinite binary search,Missing CSS,TLS downgrade,20,1
+Which DDL statement permanently deletes an entire SQL table and schema?,TRUNCATE ROW,DROP TABLE,REMOVE ROW,CLEAR CACHE,20,2
+Sub-millisecond shared session cache across 10 Node API servers suits:,Tape drive,In-Memory Store like Redis,DVD-ROM,SFTP server,20,2

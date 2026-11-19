@@ -63,7 +63,54 @@ In 2018, Ryan Dahl announced **Deno**, a new JavaScript and TypeScript runtime b
 
 ## Looking Ahead
 
+## Learning Objectives (Bloom's Taxonomy)
+By the end of this lesson, you should be able to:
+- **`[L1 Remember]`** Recall how JavaScript evolved from LiveScript (1995) to ECMAScript, CommonJS, and Node.js (`2.2`).
+- **`[L2 Understand]`** Explain intellectual property (IP), copyright, the Digital Millennium Copyright Act (DMCA), and differences between proprietary and open-source licenses (`2.1`, `2.2`).
+- **`[L3 Apply]`** Implement automated license-checking and PII-redaction helpers in Node.js (`2.3`).
+- **`[L4 Analyze]`** Diagnose privacy compliance failures involving **GDPR**, **COPPA**, **FERPA**, **HIPAA**, and **PCI DSS** (`2.3`).
+- **`[L5 Evaluate]`** Defend ethical engineering choices around tracking cookies, dark patterns, and generative AI attribution/safety (`2.4`).
+
+---
+
+## Legal, Licensing & Ethical Issues in Software Engineering (AZ CTE Standard 2.0)
+
+While ECMAScript (`ECMA-262`) and Node.js unlocked one of the world's largest shared codebases (`npm`), building software professionally requires navigating **intellectual property law**, **open-source licensing**, **data privacy regulations**, and **engineering ethics**.
+
+### 1. Intellectual Property, Copyright & DMCA (`Std 2.1`)
+- **Copyright Protection:** Original source code is automatically protected by copyright the moment it is written—even if it is hosted publicly on GitHub or a personal blog. **No `LICENSE` file = All Rights Reserved** (you may read it, not legally copy or redistribute it in commercial products).
+- **Patents & Trademarks:** Patents protect novel technical inventions; trademarks protect brand names and logos (e.g., Java vs. JavaScript trademark).
+- **DMCA (Digital Millennium Copyright Act):** U.S. law establishing takedown procedures for unauthorized copyrighted software/media and restricting circumvention of digital rights controls.
+
+### 2. Open-Source vs. Proprietary Licensing (`Std 2.2`)
+| License Category | Examples | Key Rules for Developers |
+|---|---|---|
+| **Permissive Open Source** | `MIT`, `ISC`, `BSD-3-Clause`, `Apache-2.0` | Free to use, modify, and ship inside **proprietary commercial** apps if copyright notices and license text are preserved (`Apache-2.0` also grants explicit patent rights). |
+| **Copyleft Open Source** | `GPL-3.0`, `AGPL-3.0`, `LGPL` | Requires derivative distributed (or network-served for AGPL) works to release source code under the same copyleft license ("share-alike"). |
+| **Proprietary / Closed** | Commercial EULAs, Enterprise SDKs | Source code remains confidential; redistribution or reverse engineering is forbidden without paid seat/enterprise agreements. |
+
+### 3. Privacy Regulations You Must Engineer For (`Std 2.3`)
+| Regulation | Scope | Engineering Requirement |
+|---|---|---|
+| **COPPA** | U.S. Children under age 13 | Verifiable parental consent before collecting emails, persistent tracking cookies, location, or behavior data. |
+| **FERPA** | U.S. Student Educational Records | Schools and edtech vendors must safeguard grades, rosters, transcripts, and student PII from unauthorized disclosure. |
+| **GDPR** | European Union Residents | Explicit opt-in consent, data minimization, **Right to Erasure ("be forgotten")**, and breach notification. |
+| **HIPAA** | U.S. Healthcare Providers | Strict encryption, audit logs, and access control over Protected Health Information (PHI). |
+| **PCI DSS** | Credit/Debit Card Processing | Never store raw CVV codes; encrypt cardholder data or delegate tokenization to certified processors. |
+
+### 4. Cookies, Tracking & Ethical AI (`Std 2.4`)
+- **Ethical Tracking:** Essential session cookies (keeping you logged in) differ from covert third-party ad-tracking pixels. Always honor opt-out signals (`GPC` / cookie consent) and avoid deceptive UI **dark patterns**.
+- **AI & Responsible Use:** Verify training/licensing terms, audit generated code for hallucinated packages or copied proprietary code, disclose synthetic/AI content responsibly, and test algorithms for demographic bias.
+
+---
+
+## JavaScript Evolution Timeline (Summary)
 Three technologies continue to shape modern web and JavaScript development:
 1. **TypeScript & Modern Runtimes (Node.js, Deno, Bun)** — Stronger tooling, type safety, and standards-aligned server-side JavaScript.
 2. **Modern CSS (Grid, Container Queries, CSS Houdini)** — Native browser layout and rendering capabilities.
 3. **WebAssembly (Wasm)** — Near-native performance for compute-intensive workloads in the browser and on the server.
+
+## Lesson Resources
+- **Slides:** [`slides/slides.md`](./slides/slides.md)
+- **Teacher Demo:** [`code/licenseComplianceDemo.js`](./code/licenseComplianceDemo.js)
+- **Student Starter:** [`../../0-student_files/01-legal-ethics/licenseAudit.js`](../../0-student_files/01-legal-ethics/licenseAudit.js)

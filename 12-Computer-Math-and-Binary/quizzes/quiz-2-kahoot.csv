@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+What does (42).toString(16) return in JavaScript?,"42","2a","ff","101010",20,2
+What does parseInt("1100" 2) return?,6,10,12,14,20,3
+What evaluates from: 2 + 3 * (2 ** 3) ?,40,26,20,1000,30,2
+A 50 MB file transfers over a 40 Mbps network in how many seconds?,1.25 seconds,10 seconds,8 seconds,40 seconds,60,2
+What is (0b1010 | 0b0101) in decimal?,0,5,10,15,30,4
+What does bitwise (7 & 2) evaluate to?,0,2,5,9,20,2
+What does left-shift (6 << 2) return?,12,18,24,3,30,3
+With READ=1 WRITE=2 EXEC=4 what numeric mask equals READ | EXEC?,3,5,6,7,30,2
+Which expression avoids GEMA precedence bugs for averaging a & b?,a + b / 2,(a + b) / 2,a / 2 + b,a * b / 2,20,2
+Which representation prevents rounding errors in corporate payroll?,Raw Float64,Integer cents,HTML Strings,Bitwise XOR,30,2

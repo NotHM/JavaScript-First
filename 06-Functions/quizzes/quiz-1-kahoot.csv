@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Which JavaScript operator represents logical AND?,||,&&,!,^,10,2
+When does Exclusive OR (A XOR B) return true?,Both true,Both false,Inputs have opposite booleans,Always false,20,3
+When does logical NOR (!(A || B)) evaluate to true?,Both A and B are false,Both A and B are true,Exactly one is true,Only when A is true,20,1
+Which keyword stops execution from falling into the next switch case?,continue,exit,break,skip,20,3
+By De Morgan's Law what is equivalent to !(A && B)?,!A && !B,!A || !B,A || B,!A === !B,30,2
+In (true || check()) does check() run?,Yes always,No because || short-circuits,Only in strict mode,Throws SyntaxError,20,2
+Which keyword acts as a catch-all inside a switch statement?,else,catch,default,finally,20,3
+Which flowchart symbol represents a binary decision branch?,Rectangle,Parallelogram,Diamond,Oval,20,3
+How do early-return Guard Clauses improve nested if/else pyramids?,Force infinite loops,Return edge errors immediately,Remove all variables,Convert to XML,30,2
+Why does (1 < 10 < 5) evaluate to true in JS?,Chained math works like Python,1<10 is true (1) and 1<5 is true,Compiler skips 10,Throws TypeError,30,2

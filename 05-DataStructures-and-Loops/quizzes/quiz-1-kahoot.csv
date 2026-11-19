@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Which loop runs its body AT LEAST ONCE before checking the condition?,while,for,do...while,forEach,20,3
+Which loop cleanly iterates directly over array values without index i?,for...in,for...of,while,switch,20,2
+Which keyword exits an enclosing for loop immediately?,continue,skip,break,exit,20,3
+What prevents a recursive function from infinite self-calls?,try/catch,Base case return,const flag,forEach,20,2
+What error throws if recursion lacks a base case?,TypeError,RangeError (stack overflow),SyntaxError,ReferenceError,20,2
+Outer loop repeats 4 times and inner loop 5 times. Total inner steps?,9,1,20,25,20,3
+Which keyword skips remaining code in the current cycle to next iteration?,break,continue,return,yield,20,2
+What is the main purpose of a variable trace table?,Format CSS grid,Track variable values step-by-step,Encrypt passwords,Install packages,30,2
+Which standard flowchart symbol depicts a loop condition check?,Circle,Rectangle,Diamond,Cloud,20,3
+Can the break keyword terminate Array.prototype.forEach early?,Yes anytime,No triggers SyntaxError,Only in strict mode,Only inside async,20,2

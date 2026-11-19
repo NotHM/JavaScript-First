@@ -1,37 +1,53 @@
-# Student Lesson 1.1: A Brief History of JavaScript
+# Student Lesson 1.1: History of JavaScript, Licensing & Tech Ethics
 
-**Reading:** [`readme.md`](./readme.md)
+**AZ CTE Standard:** `2.0` (`2.1`–`2.4`) | **Reading:** [`readme.md`](./readme.md) | **Slides:** [`slides/slides.md`](./slides/slides.md)  
+**Starter Code:** [`../../0-student_files/01-legal-ethics/licenseAudit.js`](../../0-student_files/01-legal-ethics/licenseAudit.js)
 
-## Instructions
-1. Read **A Brief History of JavaScript** (`./readme.md`).
-2. Complete each blank section below in your own words.
-3. Submit your completed answers according to your instructor's directions.
+> **Instructions:** Do not read answer keys in advance. Complete Parts A through D in order to climb from foundational recall (`[L1]`) to evaluation (`[L5]`).
 
 ---
 
-## Part 1: JavaScript Timeline
-Fill in the key event and why it mattered for each year:
+## Part A: Foundations & Concepts (`[L1 Remember]` & `[L2 Understand]`)
 
-| Year | Key Event / Milestone | Why It Mattered |
-|---|---|---|
-| **1995** | *(Your answer)* | *(Your answer)* |
-| **1997** | *(Your answer)* | *(Your answer)* |
-| **2009** | *(Your answer)* | *(Your answer)* |
-| **2015** | *(Your answer)* | *(Your answer)* |
-| **2018** | *(Your answer)* | *(Your answer)* |
+1. Fill in the key JavaScript history milestones (`2.2`):
+   - **1995:** Netscape creates `__________`, renamed to `__________`.
+   - **1997:** First official ECMAScript specification (`ES1`).
+   - **2009:** Ryan Dahl releases `__________`, bringing V8 and `CommonJS` outside the browser.
+   - **2015:** `__________` adds `let`, `const`, `class`, and native ES Modules (`import`/`export`).
+2. Why does a GitHub repository **without a `LICENSE` file** prohibit commercial reuse? (`2.1`)  
+   > *(Your answer)*
+3. Compare permissive (`MIT`, `Apache-2.0`) vs. copyleft (`GPL-3.0`) open-source licenses in one clear sentence: (`2.2`)  
+   > *(Your answer)*
 
 ---
 
-## Part 2: Short-Answer Questions
+## Part B: Applied Coding Lab (`[L3 Apply]`)
 
-1. **Why was JavaScript originally named "LiveScript" and then renamed?**  
-   > *(Write your answer here)*
+1. Open [`0-student_files/01-legal-ethics/licenseAudit.js`](../../0-student_files/01-legal-ethics/licenseAudit.js).
+2. Complete `evaluateLicense(license)` to classify `'MIT'`/`'Apache-2.0'` as `'APPROVED'`, `'GPL-3.0'` as `'REVIEW_REQUIRED'`, and `null`/`'NONE'` as `'BLOCKED'`.
+3. Complete `sanitizeRecord(record)` to mask PII (`email`) and flag under-13 records lacking `parentalConsent`.
+4. Run and verify in Node.js:
+   ```bash
+   node 0-student_files/01-legal-ethics/licenseAudit.js
+   ```
 
-2. **Why was ECMAScript 4 (ES4) abandoned, and which later standard delivered most of its ideas?**  
-   > *(Write your answer here)*
+---
 
-3. **Name two core features Node.js introduced or popularized that enabled JavaScript to run outside the browser:**  
-   > *(Write your answer here)*
+## Part C: Compliance Analysis (`[L4 Analyze]`)
 
-4. **In your own words, what problem does TypeScript solve compared to plain JavaScript?**  
-   > *(Write your answer here)*
+Inspect this bug report from a youth coding camp portal:
+- Users aged **10–14** register with first name, birth date, school name, and home address.
+- Google Analytics & third-party ad cookies activate immediately on page load.
+- An error log records plaintext passwords when validation fails.
+
+Identify **3 distinct compliance/ethical failures** mapped to **COPPA**, **FERPA**, and **GDPR**:  
+1. `____________________________________________________________`  
+2. `____________________________________________________________`  
+3. `____________________________________________________________`
+
+---
+
+## Part D: Engineering Defense (`[L5 Evaluate]` & `[L6 Create]`)
+
+A classmate copied a 40-line validation algorithm directly from a Stack Overflow answer posted under **CC BY-SA 4.0** and used an AI copilot to generate 100 lines of authentication logic without testing or attributing it. Write a **3–4 sentence policy recommendation** explaining what licensing, security, and academic/professional attribution steps must be taken before merging.  
+> *(Your policy recommendation)*

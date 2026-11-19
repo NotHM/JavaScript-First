@@ -1,85 +1,127 @@
-# JavaScript First — Curriculum & Standards Roadmap
+# JavaScript First — Semester Curriculum & AZ CTE Standards Roadmap
 
 **Program Alignment:** Arizona Department of Education (ADE) CTE **Software and App Design (CIP 11.0202.00)**  
-**Reference Standards:** [Software and App Design Technical Standards (2024)](https://www.azed.gov/sites/default/files/2024/08/SoftwareAndAppDesignTS.pdf) & [AZ CTE Professional Skills Standards](https://www.azed.gov/cte/profskills)  
-**Visual Curriculum Map:** [`JavaScriptRoadmap.drawio.svg`](./JavaScriptRoadmap.drawio.svg)
+**Reference Standards:** [Software and App Design Technical Standards (Aug 2024)](https://www.azed.gov/sites/default/files/2024/08/SoftwareAndAppDesignTS.pdf) & [AZ CTE Professional Skills Standards](https://www.azed.gov/cte/profskills)  
+**Pedagogical Framework:** [`0-documentation/blooms-taxonomy-framework.md`](./0-documentation/blooms-taxonomy-framework.md) (Revised Bloom's Taxonomy L1–L6 + Hake's $g$ Growth Proof)  
+**Repository Conventions:** [`STANDARDS.md`](./STANDARDS.md) | **Visual Map:** [`JavaScriptRoadmap.drawio.svg`](./JavaScriptRoadmap.drawio.svg)
 
 ---
 
-## 1. Program Design Philosophy
+## 1. Program Architecture & Bloom's-Driven Instructional Model
 
-**JavaScript First** is structured as both an **open-source coding book** and a **2-Carnegie-unit CTE course**. Rather than starting JavaScript inside a browser sandbox, students learn JavaScript first in the **Node.js** runtime environment—building strong foundations in data types, control flow, modular architecture, testing, HTTP servers, and web security before connecting to browser DOM and client-side interfaces.
+**JavaScript First** is engineered simultaneously as an **open-source textbook** and an **18-week (90-day × 50-minute) CTE course** spanning **16 Instructional Units**, **24 Standard Lessons**, **29 Reveal.js slide decks**, **32 Kahoot quizzes**, **pre/post evaluations at both lesson and unit granularity**, and **16 hands-on L5–L6 projects** culminating in a full-semester capstone.
 
-Every chapter in this repository delivers four synchronized artifacts:
-1. **Book Chapter (`readme.md`)** — Self-paced technical reading and code walkthroughs.
-2. **Instructor Materials (`unit-guide.md`, `lesson-plan.md`)** — Pacing, bell ringers, differentiation, and AZ CTE standard mappings.
-3. **Course Slides (`slides/*.md`)** — `vscode-reveal` presentations exportable to standalone HTML/PDF via `npm run build:slides`.
-4. **Student Labs (`student-lesson.md` + `0-student_files/`)** — Blank starter files with step-by-step `TODO` instructions.
+Rather than trapping beginners inside a browser console early on, students learn JavaScript first inside **Node.js**—building rigorous engineering habits in computer mathematics, immutability, control flow, Git/CI workflows, TDD, HTTP/AJAX, storage/CRUD, OOP, security, and UI accessibility.
 
----
+### Every Lesson Delivers 8 Synchronized Components
+1. **Diagnostic Pre-Lesson Evaluation (`pre-lesson-eval.md`)** — 3–5 min baseline readiness & misconception probe (`L1–L4`).
+2. **Book Reading (`readme.md`)** — Self-paced technical text mapped explicitly to AZ CTE indicators.
+3. **Reveal.js Slideshow (`slides/*.md`)** — `vscode-reveal` classroom presentation with interactive *"Predict Before Running"* checks.
+4. **Instructor Reference Code (`code/`)** — Executable Node/HTML demos & `node:test` suites for live tracing.
+5. **Blank Student Lab (`0-student_files/`)** — Unsolved `TODO` starter workspace aligned to L3–L4 application and analysis.
+6. **Student Worksheet (`student-lesson.md`)** — Solution-free Parts A–D escalating progressively from **L1 Remember → L6 Create**.
+7. **Teacher Lesson Plan (`lesson-plan.md`)** — 50-minute pacing script, Bloom's ladder, differentiation & full answer keys.
+8. **Summative Post-Lesson Evaluation (`post-lesson-eval.md`)** — Paired exit ticket proving same-day student growth.
 
-## 2. AZ CTE Standards-to-Curriculum Crosswalk (CIP 11.0202.00)
-
-| AZ CTE Standard | Standard Focus | Mapped Chapters | Primary Student Labs |
-|---|---|---|---|
-| **Standard 1.0** | Recognize Security Issues | Ch. 2, Ch. 3, Ch. 11 | [`0-student_files/12-security-server/secureServer.js`](./0-student_files/12-security-server/secureServer.js) |
-| **Standard 2.0** | Legal & Ethical Issues (IP, Open Source, Privacy) | Ch. 1, Ch. 10, Ch. 11 | [Student Lesson 1.1](./01-Reteaching-JavaScript/01-History-of-JS/student-lesson.md), [Student Lesson 11.1](./11-Internet-Server-Security/student-lesson.md) |
-| **Standard 3.0** | Primitive Data Types, Strings & Operations | Ch. 1, Ch. 2, Ch. 4, Ch. 5 | [`0-student_files/02-logging-datatypes/`](./0-student_files/02-logging-datatypes/), [`0-student_files/05-variables-scope/immutability.js`](./0-student_files/05-variables-scope/immutability.js) |
-| **Standard 4.0** | Basic Computer Mathematics & Algorithmic Reasoning | Ch. 4, Ch. 5, Ch. 6, Ch. 9 | [`0-student_files/06-data-structures/dataStructures.js`](./0-student_files/06-data-structures/dataStructures.js), [`0-student_files/10-debugging-tdd/algorithms.test.js`](./0-student_files/10-debugging-tdd/algorithms.test.js) |
-| **Standard 5.0** | Functions, Scope & Modular Logic | Ch. 4, Ch. 6 | [`0-student_files/07-functions/functions.js`](./0-student_files/07-functions/functions.js) |
-| **Standard 6.0** | Basic Data Structures (`Object`, `Array`, `JSON`) | Ch. 5, Ch. 8 | [`0-student_files/06-data-structures/dataStructures.js`](./0-student_files/06-data-structures/dataStructures.js), [`0-student_files/09-oop-patterns/patterns.js`](./0-student_files/09-oop-patterns/patterns.js) |
-| **Standard 9.0** | Apply Client-Side Internet Software | Ch. 3, Ch. 10 | [`0-student_files/04-ajax/fetch-exercise.html`](./0-student_files/04-ajax/fetch-exercise.html), [`0-student_files/11-html-css-dom/form-dom.html`](./0-student_files/11-html-css-dom/form-dom.html) |
-| **Standard 14.0** | Use Version Control Systems & CLI Workflows | Ch. 1 | [`0-student_files/01-terminal-and-node/test.js`](./0-student_files/01-terminal-and-node/test.js) |
-| **Standard 15.0** | Apply User Design Principles (Websites & Apps) | Ch. 2, Ch. 10 | [`0-student_files/index.html`](./0-student_files/index.html), [`0-student_files/11-html-css-dom/form-dom.html`](./0-student_files/11-html-css-dom/form-dom.html) |
-| **Standard 16.0** | Storage Management, File I/O & CRUD | Ch. 2, Ch. 3, Ch. 7, Ch. 11 | [`0-student_files/simpleHTTP.js`](./0-student_files/simpleHTTP.js), [`0-student_files/08-async-js/asyncLab.js`](./0-student_files/08-async-js/asyncLab.js) |
-| **Standard 18.0** | Runtime, Debugging & Error Handling (`try`/`catch`) | Ch. 1, Ch. 3, Ch. 7, Ch. 9 | [`0-student_files/04-ajax/fetch-node-exercise.js`](./0-student_files/04-ajax/fetch-node-exercise.js), [`0-student_files/10-debugging-tdd/algorithms.test.js`](./0-student_files/10-debugging-tdd/algorithms.test.js) |
-| **Standard 19.0** | Software Development Lifecycle & Design | Ch. 8, Ch. 10, Ch. 11 | [`0-student_files/09-oop-patterns/patterns.js`](./0-student_files/09-oop-patterns/patterns.js) |
-
-### Embedded AZ CTE Professional Skills
-- **1.0 Complex Communication:** Technical documentation, HTTP/API diagrams, and code explanations in every `student-lesson.md`.
-- **2.0 Collaboration:** Git workflows, GitPod pair programming, and code reviews.
-- **3.0 Thinking & Innovation:** Red-Green-Refactor TDD, debugging `typeof null`, and selecting design patterns.
-- **4.0 Professionalism & 5.0 Initiative:** CLI discipline, NVM version management, and independent lab completion.
-- **8.0 Legal & Ethical Practices:** Open-source licensing ([`LICENSE`](./LICENSE)), data privacy, and OWASP security hygiene.
+### Every Unit (`01`–`16`) Delivers 4 Unit-Level Assessment Layers
+- **Unit Guide (`unit-guide.md`)** — Day-by-day pacing, AZ CTE mapping & Bloom's L1–L6 matrix.
+- **Pre/Post Unit Evaluations (`evaluations/`)** — Day 1 Baseline (`pre-unit-eval.md`), Final Day Summative (`post-unit-eval.md`), and Teacher Key (`eval-answer-key.md`) using **Hake's Normalized Learning Gain** $g = \frac{\text{Post\%} - \text{Pre\%}}{100 - \text{Pre\%}}$ (Target: $g \ge 0.55$).
+- **Two Kahoot Formative Quizzes (`quizzes/`)** — `quiz-1-concepts` (L1–L2 Remember/Understand) and `quiz-2-application` (L3–L5 Apply/Analyze/Evaluate), each with a teacher rationale key (`.md`) and validated 7-column Kahoot import spreadsheet (`-kahoot.csv`).
+- **Authentic Engineering Project (`projects/`)** — Multi-day `unit-project.md` build, starter scaffold in `0-student_files/projects/unit-XX-*/`, and 4-tier `project-rubric.md`.
 
 ---
 
-## 3. Scope & Sequence (11-Chapter Instructional Pathway)
+## 2. 18-Week (90-Day) Full-Semester Pacing Calendar
 
-### Year 1 / Semester 1: Foundations & Core JavaScript
-| Unit / Chapter | Duration | Core Topics | Standards |
-|---|---|---|---|
-| **Ch. 1:** [Reteaching JavaScript & Node.js](./01-Reteaching-JavaScript/unit-guide.md) | 5–6 days | JS History, Terminal/CLI, NVM/npm, Primitives vs. Objects, `typeof` | 2.0, 3.0, 14.0, 18.0 |
-| **Ch. 4:** [Variables, Scope, Hoisting & Immutability](./04-Variables-Scope-Immutability/unit-guide.md) | 3 days | `var`/`let`/`const`, Lexical/Block Scope, `===`, `Object.freeze`, `structuredClone` | 3.0, 4.0, 18.0 |
-| **Ch. 5:** [Control Flow, Loops, JSON & Data Structures](./05-DataStructures-and-Loops/unit-guide.md) | 4 days | Conditionals, `for`/`while`/`for...of`, Recursion, `Object`, `JSON`, `.map`/`.filter`/`.reduce`, `Math`/`Date`/`RegExp` | 3.0, 4.0, 6.0 |
-| **Ch. 6:** [Functions, Closures & Functional Programming](./06-Functions/unit-guide.md) | 4 days | Declarations, Expressions, Arrows, IIFE, Closures, Pure Functions, HOFs, Currying | 3.0, 4.0, 5.0, 18.0 |
+Units are ordered pedagogically across **Four Quarter Blocks** (90 instructional days) so each topic builds cleanly on prior computer science and software design prerequisites.
 
-### Year 1 / Semester 2: Web Architecture, Async & Testing
-| Unit / Chapter | Duration | Core Topics | Standards |
-|---|---|---|---|
-| **Ch. 2:** [Web & HTTP Fundamentals with Node.js](./02-HTTP/unit-guide.md) | 4 days | HTTP Request/Response, Status Codes, Verbs, HTML5, `http` + `fs` Server, Template Literals | 1.0, 3.0, 15.0, 16.0, 18.0 |
-| **Ch. 3:** [Asynchronous JavaScript & AJAX](./03-AJAX/unit-guide.md) | 3 days | AJAX, XHR vs. Fetch vs. Axios, `async`/`await`, `response.ok` & `try`/`catch` | 1.0, 3.0, 9.0, 16.0, 18.0 |
-| **Ch. 7:** [Async JS, Promises & Concurrency](./07-Async-JS/unit-guide.md) | 3 days | Event Loop, Microtasks vs. Macrotasks, `Promise.all`, `EventEmitter`, Streams | 16.0, 18.0 |
-| **Ch. 9:** [Debugging, TDD & Algorithms](./09-Debugging-TDD-Algorithms/unit-guide.md) | 4 days | `console.table`, Breakpoints, Red-Green-Refactor with `node:test`, Binary Search | 4.0, 18.0 |
+### Quarter 1: Engineering Foundations, Math & Core JavaScript (Weeks 1–5 | Days 1–24)
 
-### Year 2 / Capstone Track: UI Engineering, Architecture & Security
-| Unit / Chapter | Duration | Core Topics | Standards |
-|---|---|---|---|
-| **Ch. 10:** [HTML, CSS, Accessibility, SEO & DOM](./10-HTML-CSS-DOM/unit-guide.md) | 5 days | Forms & Validation, a11y, SEO, Box Model, Flexbox/Grid, `@media`/`@print`, DOM Events | 2.0, 3.0, 9.0, 15.0, 19.0 |
-| **Ch. 8:** [OOP & Design Patterns](./08-OOP-and-Design-Patterns/unit-guide.md) | 4 days | Prototypes, `class`, Factory, Decorator, Observer, Iterator, State | 3.0, 6.0, 19.0 |
-| **Ch. 11:** [Internet, Server Modules & Web Security](./11-Internet-Server-Security/unit-guide.md) | 4 days | DNS, Domains, Hosting, CommonJS vs. ESM, HTTPS/TLS, CORS, OWASP XSS Prevention | 1.0, 2.0, 16.0 |
+| Weeks | Days | Unit | Lessons Covered | AZ CTE Stds | Key Project & Assessments |
+|---|---|---|---|---|---|
+| **Wks 1–2** | **1–7** | [**Unit 1:** Reteaching JS, Legal/Ethics & Types](./01-Reteaching-JavaScript/unit-guide.md) | [1.1 History & Legal/Ethics](./01-Reteaching-JavaScript/01-History-of-JS/readme.md) • [1.2 CLI, NVM & Node](./01-Reteaching-JavaScript/02-Terminal-NVM/01-node-overview.md) • [1.3 Primitives & Memory](./01-Reteaching-JavaScript/03-logging-datatypes/readme.md) | `2.0, 11.0, 3.0` | Pre/Post Unit 1 • Quizzes 1–2 • [Unit 1 Project (`CLI License Auditor`)](./01-Reteaching-JavaScript/projects/unit-project.md) |
+| **Wks 2–3** | **8–12** | [**Unit 12:** Computer Math, Binary & Bitwise](./12-Computer-Math-and-Binary/unit-guide.md) | [12.1 Binary, Hex, GEMA, IEEE-754 & Bitflags](./12-Computer-Math-and-Binary/readme.md) | `4.0` | Pre/Post Unit 12 • Quizzes 1–2 • [Unit 12 Project (`Bitwise Permission Calc`)](./12-Computer-Math-and-Binary/projects/unit-project.md) |
+| **Wks 3–4** | **13–17** | [**Unit 4:** Variables, Scope & Immutability](./04-Variables-Scope-Immutability/unit-guide.md) | [4.1 `let`/`const`, TDZ, `===`, Freeze & Clone](./04-Variables-Scope-Immutability/readme.md) | `3.3, 3.6, 18.2` | Pre/Post Unit 4 • Quizzes 1–2 • [Unit 4 Project (`Immutable State Store`)](./04-Variables-Scope-Immutability/projects/unit-project.md) |
+| **Wks 4–5** | **18–24** | [**Unit 5:** Loops, Arrays, Matrices & Trees](./05-DataStructures-and-Loops/unit-guide.md) | [5.1 Iteration, Trace Tables & Recursion](./05-DataStructures-and-Loops/01-Iteration-and-Loops/readme.md) • [5.2 Arrays, Matrices, Trees & Graphs](./05-DataStructures-and-Loops/02-Arrays-Objects-Matrices/readme.md) | `7.0, 6.0` | Pre/Post Unit 5 • Quizzes 1–2 • [Unit 5 Project (`Matrix Gradebook Engine`)](./05-DataStructures-and-Loops/projects/unit-project.md) |
+
+### Quarter 2: Logic, Team Workflows, System Architecture & QA (Weeks 6–9 | Days 25–45)
+
+| Weeks | Days | Unit | Lessons Covered | AZ CTE Stds | Key Project & Assessments |
+|---|---|---|---|---|---|
+| **Wk 6** | **25–29** | [**Unit 6:** Conditionals, Boolean Logic & Functions](./06-Functions/unit-guide.md) | [6.1 Truth Tables, Logic & `switch`](./06-Functions/01-Conditionals-and-Boolean-Logic/readme.md) • [6.2 Closures, Currying & PRNG](./06-Functions/02-Functions-and-Closures/readme.md) | `5.0, 11.10–11.12` | Pre/Post Unit 6 • Quizzes 1–2 • [Unit 6 Project (`Declarative Rules Engine`)](./06-Functions/projects/unit-project.md) |
+| **Wk 7** | **30–34** | [**Unit 13:** Version Control & Community Docs](./13-Version-Control-and-Community/unit-guide.md) | [13.1 Git, Branching, PRs & CI/CD](./13-Version-Control-and-Community/01-Version-Control-Git-CICD/readme.md) • [13.2 Stdlib, `npm` & Docs](./13-Version-Control-and-Community/02-Community-Resources-NPM-Docs/readme.md) | `14.0, 13.0` | Pre/Post Unit 13 • Quizzes 1–2 • [Unit 13 Project (`OSS Release Toolkit`)](./13-Version-Control-and-Community/projects/unit-project.md) |
+| **Wk 8** | **35–39** | [**Unit 14:** Program Analysis, SDLC & Design](./14-Program-Analysis-and-Design/unit-guide.md) | [14.1 SDLC, Stacks, UI/Data Arch & Feasibility](./14-Program-Analysis-and-Design/readme.md) | `10.0` | Pre/Post Unit 14 • Quizzes 1–2 • [Unit 14 Project (`System Design Specification`)](./14-Program-Analysis-and-Design/projects/unit-project.md) |
+| **Wk 9** | **40–45** | [**Unit 9:** Testing, Debugging & Algorithms](./09-Debugging-TDD-Algorithms/unit-guide.md) | [9.1 Error Taxonomy, Debugger & TDD](./09-Debugging-TDD-Algorithms/01-Testing-and-Debugging/readme.md) • [9.2 Search, Sort & Big-O](./09-Debugging-TDD-Algorithms/02-Search-and-Sort-Algorithms/readme.md) | `12.0, 6.4–6.7` | Pre/Post Unit 9 • Quizzes 1–2 • [Unit 9 Project (`Algorithm Test Suite`)](./09-Debugging-TDD-Algorithms/projects/unit-project.md) |
+
+### Quarter 3: Web Protocols, Client APIs, Concurrency & Storage (Weeks 10–13 | Days 46–67)
+
+| Weeks | Days | Unit | Lessons Covered | AZ CTE Stds | Key Project & Assessments |
+|---|---|---|---|---|---|
+| **Wk 10** | **46–51** | [**Unit 2:** Internet Protocols, Cloud & HTTP](./02-HTTP/unit-guide.md) | [2.1 Protocols, Cloud (`SaaS/PaaS/IaaS/FaaS`) & IoT](./02-HTTP/01-Internet-Protocols-and-Cloud/readme.md) • [2.2 `node:http` Servers & Routing](./02-HTTP/02-Node-HTTP-Server/readme.md) | `8.0, 11.3–11.7` | Pre/Post Unit 2 • Quizzes 1–2 • [Unit 2 Project (`Multi-Route HTTP Service`)](./02-HTTP/projects/unit-project.md) |
+| **Wk 11** | **52–56** | [**Unit 3:** Client-Side Web, AJAX & Containers](./03-AJAX/unit-guide.md) | [3.1 Fetch, XHR, Browser Storage & Docker/K8s](./03-AJAX/readme.md) | `9.0` | Pre/Post Unit 3 • Quizzes 1–2 • [Unit 3 Project (`Live API Client Dashboard`)](./03-AJAX/projects/unit-project.md) |
+| **Wk 12** | **57–61** | [**Unit 7:** Async JS, Event Loop & Resilience](./07-Async-JS/unit-guide.md) | [7.1 Event Loop, `Promise.allSettled` & Severity](./07-Async-JS/readme.md) | `18.0` | Pre/Post Unit 7 • Quizzes 1–2 • [Unit 7 Project (`Resilient Async Pipeline`)](./07-Async-JS/projects/unit-project.md) |
+| **Wk 13** | **62–67** | [**Unit 15:** Storage, File I/O & Databases](./15-Storage-Databases-and-CRUD/unit-guide.md) | [15.1 Memory Hierarchy, Atomic I/O & Backups](./15-Storage-Databases-and-CRUD/01-Storage-Architecture-File-IO/readme.md) • [15.2 SQL vs. MongoDB & CRUD](./15-Storage-Databases-and-CRUD/02-Databases-SQL-Mongo-CRUD/readme.md) | `16.0` | Pre/Post Unit 15 • Quizzes 1–2 • [Unit 15 Project (`Dual Inventory CRUD DB`)](./15-Storage-Databases-and-CRUD/projects/unit-project.md) |
+
+### Quarter 4: Accessible UI, OOP Architecture, Security & Capstone (Weeks 14–18 | Days 68–90)
+
+| Weeks | Days | Unit | Lessons Covered | AZ CTE Stds | Key Project & Assessments |
+|---|---|---|---|---|---|
+| **Wks 14–15** | **68–74** | [**Unit 10:** UCD, Accessibility, CSS, Canvas & DOM](./10-HTML-CSS-DOM/unit-guide.md) | [10.1 UCD, W3C HTML5, ADA & SEO](./10-HTML-CSS-DOM/01-UCD-W3C-Accessibility-SEO/readme.md) • [10.2 CSS Grid, 2D Canvas & DOM](./10-HTML-CSS-DOM/02-Responsive-CSS-Canvas-DOM/readme.md) | `15.0` | Pre/Post Unit 10 • Quizzes 1–2 • [Unit 10 Project (`Accessible Canvas App`)](./10-HTML-CSS-DOM/projects/unit-project.md) |
+| **Wks 15–16** | **75–80** | [**Unit 8:** OOP, Data Formats & SOLID Patterns](./08-OOP-and-Design-Patterns/unit-guide.md) | [8.1 Classes, `#private` & Polymorphism](./08-OOP-and-Design-Patterns/01-OOP-Classes-and-Polymorphism/readme.md) • [8.2 XML/JSON, SOLID & Patterns](./08-OOP-and-Design-Patterns/02-DataFormats-SOLID-Patterns/readme.md) | `17.0` | Pre/Post Unit 8 • Quizzes 1–2 • [Unit 8 Project (`OOP Plugin System`)](./08-OOP-and-Design-Patterns/projects/unit-project.md) |
+| **Wk 17** | **81–85** | [**Unit 11:** Web Security, Crypto & OWASP Defense](./11-Internet-Server-Security/unit-guide.md) | [11.1 OWASP, TLS, `scrypt` & Sanitization](./11-Internet-Server-Security/readme.md) | `1.0` | Pre/Post Unit 11 • Quizzes 1–2 • [Unit 11 Project (`Security Hardening Audit`)](./11-Internet-Server-Security/projects/unit-project.md) |
+| **Wk 18** | **86–90** | [**Unit 16:** Software Business & Semester Capstone](./16-Software-Business-and-Capstone/unit-guide.md) | [16.1 Agile, Store Fees, LTV:CAC & Capstone](./16-Software-Business-and-Capstone/readme.md) | `19.0 + 1–19` | Pre/Post Unit 16 • Quizzes 1–2 • [Capstone (`End-to-End SaaS App`)](./16-Software-Business-and-Capstone/projects/unit-project.md) |
 
 ---
 
-## 4. Publishing & Classroom Delivery
+## 3. Complete 1:1+ AZ CTE Standards Crosswalk (`1.0`–`19.0`)
 
-Use the built-in toolchain in [`tools/publish.mjs`](./tools/publish.mjs) and [`package.json`](./package.json):
+Every single standard `1.0` through `19.0` in **ADE Software and App Design (`11.0202.00`)** has dedicated primary instruction, slides, runnable demos, student starter code, evaluations, Kahoot quizzes, and an L5–L6 project:
+
+| AZ CTE Standard | Official Competency Focus & Indicators | Primary Unit & Lesson | Slideshow Deck(s) | Teacher Demo / Student Lab | Evaluations, Quizzes & Project |
+|---|---|---|---|---|---|
+| **1.0** | Recognize security issues (`1.1–1.7`: CIA, `scrypt` hashing, OWASP XSS/SQLi, CORS, TLS/HTTPS, input sanitization) | [**Unit 11**](./11-Internet-Server-Security/readme.md) | [Unit 11 Slides](./11-Internet-Server-Security/slides/slides.md) | [`cryptoSanitizationDemo.js`](./11-Internet-Server-Security/code/cryptoSanitizationDemo.js) • [`cryptoSanitizeLab.js`](./0-student_files/12-security-server/cryptoSanitizeLab.js) | [Evals](./11-Internet-Server-Security/evaluations/) • [Quizzes](./11-Internet-Server-Security/quizzes/) • [Unit 11 Project](./0-student_files/projects/unit-11-security-hardening-audit/index.js) |
+| **2.0** | Examine legal & ethical issues (`2.1–2.4`: IP/DMCA, MIT vs. GPL vs. Proprietary, COPPA/FERPA/GDPR/HIPAA/PCI, AI ethics) | [**Unit 1 — Lesson 1.1**](./01-Reteaching-JavaScript/01-History-of-JS/readme.md) | [Lesson 1.1 Slides](./01-Reteaching-JavaScript/01-History-of-JS/slides/slides.md) | [`licenseComplianceDemo.js`](./01-Reteaching-JavaScript/01-History-of-JS/code/licenseComplianceDemo.js) • [`licenseAudit.js`](./0-student_files/01-legal-ethics/licenseAudit.js) | [Unit 1 Evals](./01-Reteaching-JavaScript/evaluations/) • [Quizzes](./01-Reteaching-JavaScript/quizzes/) • [Unit 1 Project](./0-student_files/projects/unit-01-license-cli-auditor/index.js) |
+| **3.0** | Utilize primitive data types, strings & scope (`3.1–3.6`: 7 primitives, stack vs. heap, string safety, `const`/`let`, freeze) | [**Unit 1 (L1.3)**](./01-Reteaching-JavaScript/03-logging-datatypes/readme.md) & [**Unit 4**](./04-Variables-Scope-Immutability/readme.md) | [Slides 01–03](./01-Reteaching-JavaScript/03-logging-datatypes/slides/01-primitiveTypes.md) • [Unit 4 Slides](./04-Variables-Scope-Immutability/slides/slides.md) | [`testPrimitives.js`](./01-Reteaching-JavaScript/03-logging-datatypes/code/testPrimitives.js) • [`immutability.js`](./04-Variables-Scope-Immutability/code/immutability.js) | [Unit 1/4 Evals](./04-Variables-Scope-Immutability/evaluations/) • [Quizzes](./04-Variables-Scope-Immutability/quizzes/) • [Unit 4 Project](./0-student_files/projects/unit-04-immutable-state-store/index.js) |
+| **4.0** | Apply basic computer mathematics (`4.1–4.7`: base-2/10/16 conversions, GEMA, formulas, fixed-point int cents, IEEE-754, bitwise) | [**Unit 12**](./12-Computer-Math-and-Binary/readme.md) | [Unit 12 Slides](./12-Computer-Math-and-Binary/slides/slides.md) | [`computerMathDemo.js`](./12-Computer-Math-and-Binary/code/computerMathDemo.js) • [`computerMathLab.js`](./0-student_files/12-computer-math/computerMathLab.js) | [Evals](./12-Computer-Math-and-Binary/evaluations/) • [Quizzes](./12-Computer-Math-and-Binary/quizzes/) • [Unit 12 Project](./0-student_files/projects/unit-12-bitwise-permission-calc/index.js) |
+| **5.0** | Utilize conditional structures & functions (`5.1–5.5`: truth tables, `&&`/`\|\|`/`^`, flowcharts, `switch`, helper Decomposition) | [**Unit 6 — Lesson 6.1 & 6.2**](./06-Functions/readme.md) | [Lesson 6.1 Slides](./06-Functions/01-Conditionals-and-Boolean-Logic/slides/slides.md) • [6.2 Slides](./06-Functions/02-Functions-and-Closures/slides/slides.md) | [`booleanLogicDemo.js`](./06-Functions/01-Conditionals-and-Boolean-Logic/code/booleanLogicDemo.js) • [`booleanLogicLab.js`](./0-student_files/07-functions/booleanLogicLab.js) | [Evals](./06-Functions/evaluations/) • [Quizzes](./06-Functions/quizzes/) • [Unit 6 Project](./0-student_files/projects/unit-06-rules-engine/index.js) |
+| **6.0** | Utilize basic data structures (`6.1–6.8`: arrays, `Map`/`Set`, JSON, linear vs. binary search, quadratic vs. merge sort, matrices, trees) | [**Unit 5 (L5.2)**](./05-DataStructures-and-Loops/02-Arrays-Objects-Matrices/readme.md) & [**Unit 9 (L9.2)**](./09-Debugging-TDD-Algorithms/02-Search-and-Sort-Algorithms/readme.md) | [Lesson 5.2 Slides](./05-DataStructures-and-Loops/02-Arrays-Objects-Matrices/slides/slides.md) • [Lesson 9.2 Slides](./09-Debugging-TDD-Algorithms/02-Search-and-Sort-Algorithms/slides/slides.md) | [`matricesTreesDemo.js`](./05-DataStructures-and-Loops/02-Arrays-Objects-Matrices/code/matricesTreesDemo.js) • [`searchAndSortDemo.test.js`](./09-Debugging-TDD-Algorithms/02-Search-and-Sort-Algorithms/code/searchAndSortDemo.test.js) | [Unit 5/9 Evals](./05-DataStructures-and-Loops/evaluations/) • [Unit 5 Project](./0-student_files/projects/unit-05-matrix-gradebook/index.js) |
+| **7.0** | Identify iterative structures (`7.1–7.5`: `for`/`while`/`do...while`/`for...of`, `break`/`continue`, nested loop trace tables, recursion) | [**Unit 5 — Lesson 5.1**](./05-DataStructures-and-Loops/01-Iteration-and-Loops/readme.md) | [Lesson 5.1 Slides](./05-DataStructures-and-Loops/01-Iteration-and-Loops/slides/slides.md) | [`loopsAndTraceDemo.js`](./05-DataStructures-and-Loops/01-Iteration-and-Loops/code/loopsAndTraceDemo.js) • [`loopsLab.js`](./0-student_files/06-data-structures/loopsLab.js) | [Unit 5 Evals](./05-DataStructures-and-Loops/evaluations/) • [Quizzes](./05-DataStructures-and-Loops/quizzes/) |
+| **8.0** | Identify Internet protocols & cloud models (`8.1–8.6`: HTTP/S/SSH/SFTP/IMAP/IPv6, proxy/edge, gzip/CDN, SaaS/PaaS/IaaS/FaaS, IoT) | [**Unit 2 — Lesson 2.1**](./02-HTTP/01-Internet-Protocols-and-Cloud/readme.md) | [Lesson 2.1 Slides](./02-HTTP/01-Internet-Protocols-and-Cloud/slides/slides.md) | [`protocolInspectorDemo.js`](./02-HTTP/01-Internet-Protocols-and-Cloud/code/protocolInspectorDemo.js) • [`protocolLab.js`](./0-student_files/03-http-server/protocolLab.js) | [Unit 2 Evals](./02-HTTP/evaluations/) • [Quizzes](./02-HTTP/quizzes/) • [Unit 2 Project](./0-student_files/projects/unit-02-http-router/index.js) |
+| **9.0** | Apply client-side Internet software (`9.1–9.5`: thin/thick clients, XHR vs. Fetch, SPA/SSR, browser cookies/localStorage, Docker/K8s) | [**Unit 3**](./03-AJAX/readme.md) | [Unit 3 Slides](./03-AJAX/slides/slides.md) | [`ajaxClientDemo.js`](./03-AJAX/code/ajaxClientDemo.js) • [`fetch-exercise.html`](./0-student_files/04-ajax/fetch-exercise.html) | [Evals](./03-AJAX/evaluations/) • [Quizzes](./03-AJAX/quizzes/) • [Unit 3 Project](./0-student_files/projects/unit-03-api-dashboard/index.html) |
+| **10.0** | Analyze program requirements & system design (`10.1–10.10`: SDLC phases, target audience, stack trade-offs, ERD, feasibility) | [**Unit 14**](./14-Program-Analysis-and-Design/readme.md) | [Unit 14 Slides](./14-Program-Analysis-and-Design/slides/slides.md) | [`sdlcDesignDemo.js`](./14-Program-Analysis-and-Design/code/sdlcDesignDemo.js) • [`systemDesignLab.js`](./0-student_files/14-program-design/systemDesignLab.js) | [Evals](./14-Program-Analysis-and-Design/evaluations/) • [Quizzes](./14-Program-Analysis-and-Design/quizzes/) • [Unit 14 Project](./0-student_files/projects/unit-14-system-spec/index.js) |
+| **11.0** | Develop a program (`11.1–11.12`: IDE/NVM/CLI, ANSI I/O, JIT vs. AOT, `npm` scripts, `camelCase`, `node:http` routes, closures & PRNG) | [**Unit 1 (L1.2)**](./01-Reteaching-JavaScript/02-Terminal-NVM/01-node-overview.md), [**Unit 2 (L2.2)**](./02-HTTP/02-Node-HTTP-Server/readme.md) & [**Unit 6 (L6.2)**](./06-Functions/02-Functions-and-Closures/readme.md) | [Lesson 1.2 Slides](./01-Reteaching-JavaScript/02-Terminal-NVM/slides/slides.md) • [2.2 Slides](./02-HTTP/03-http.md) • [6.2 Slides](./06-Functions/02-Functions-and-Closures/slides/slides.md) | [`cliFormatterDemo.js`](./01-Reteaching-JavaScript/02-Terminal-NVM/code/cliFormatterDemo.js) • [`httpRouterDemo.js`](./02-HTTP/02-Node-HTTP-Server/code/httpRouterDemo.js) • [`functionsDemo.js`](./06-Functions/02-Functions-and-Closures/code/functionsDemo.js) | [Unit 1/2/6 Evals & Projects](./02-HTTP/projects/unit-project.md) |
+| **12.0** | Test & debug software (`12.1–12.8`: boundary cases, unit/integration/regression tests, TDD, syntax/runtime/logic errors, breakpoints) | [**Unit 9 — Lesson 9.1**](./09-Debugging-TDD-Algorithms/01-Testing-and-Debugging/readme.md) | [Lesson 9.1 Slides](./09-Debugging-TDD-Algorithms/01-Testing-and-Debugging/slides/slides.md) | [`debuggingAndTddDemo.test.js`](./09-Debugging-TDD-Algorithms/01-Testing-and-Debugging/code/debuggingAndTddDemo.test.js) • [`debuggingLab.test.js`](./0-student_files/10-debugging-tdd/debuggingLab.test.js) | [Unit 9 Evals](./09-Debugging-TDD-Algorithms/evaluations/) • [Quizzes](./09-Debugging-TDD-Algorithms/quizzes/) • [Unit 9 Project](./0-student_files/projects/unit-09-algo-test-suite/index.test.js) |
+| **13.0** | Leverage community resources & docs (`13.1–13.5`: Node stdlib, npm SemVer/supply-chain vetting, REST APIs, JSDoc & README) | [**Unit 13 — Lesson 13.2**](./13-Version-Control-and-Community/02-Community-Resources-NPM-Docs/readme.md) | [Lesson 13.2 Slides](./13-Version-Control-and-Community/02-Community-Resources-NPM-Docs/slides/slides.md) | [`communityResourcesDemo.js`](./13-Version-Control-and-Community/02-Community-Resources-NPM-Docs/code/communityResourcesDemo.js) • [`pkgEvaluatorLab.js`](./0-student_files/13-vcs-community/pkgEvaluatorLab.js) | [Unit 13 Evals](./13-Version-Control-and-Community/evaluations/) • [Quizzes](./13-Version-Control-and-Community/quizzes/) • [Unit 13 Project](./0-student_files/projects/unit-13-oss-toolkit/index.js) |
+| **14.0** | Use Version Control Systems (`14.1–14.8`: Git stage/commit/diff/rebase, feature branches, PR reviews, CI/CD, tags & changelogs) | [**Unit 13 — Lesson 13.1**](./13-Version-Control-and-Community/01-Version-Control-Git-CICD/readme.md) | [Lesson 13.1 Slides](./13-Version-Control-and-Community/01-Version-Control-Git-CICD/slides/slides.md) | [`gitChangelogDemo.js`](./13-Version-Control-and-Community/01-Version-Control-Git-CICD/code/gitChangelogDemo.js) • [`changelogLab.js`](./0-student_files/13-vcs-community/changelogLab.js) | [Unit 13 Evals](./13-Version-Control-and-Community/evaluations/) • [Quizzes](./13-Version-Control-and-Community/quizzes/) • [Unit 13 Project](./0-student_files/projects/unit-13-oss-toolkit/index.js) |
+| **15.0** | Apply UCD, accessibility & interface design (`15.1–15.11`: W3C HTML5, ARIA/ADA 508, SEO, responsive Grid/Flexbox, 2D Canvas, DOM) | [**Unit 10 — Lesson 10.1 & 10.2**](./10-HTML-CSS-DOM/readme.md) | [Lesson 10.1 Slides](./10-HTML-CSS-DOM/01-UCD-W3C-Accessibility-SEO/slides/slides.md) • [10.2 Slides](./10-HTML-CSS-DOM/02-Responsive-CSS-Canvas-DOM/slides/slides.md) | [`a11ySeoAuditDemo.js`](./10-HTML-CSS-DOM/01-UCD-W3C-Accessibility-SEO/code/a11ySeoAuditDemo.js) • [`canvasDomDemo.html`](./10-HTML-CSS-DOM/02-Responsive-CSS-Canvas-DOM/code/canvasDomDemo.html) | [Unit 10 Evals](./10-HTML-CSS-DOM/evaluations/) • [Quizzes](./10-HTML-CSS-DOM/quizzes/) • [Unit 10 Project](./0-student_files/projects/unit-10-accessible-canvas-app/index.html) |
+| **16.0** | Manage storage & database CRUD (`16.1–16.6`: RAM/SSD/Object storage, atomic File I/O, 3-2-1 backups, SQL vs. NoSQL/MongoDB CRUD) | [**Unit 15 — Lesson 15.1 & 15.2**](./15-Storage-Databases-and-CRUD/readme.md) | [Lesson 15.1 Slides](./15-Storage-Databases-and-CRUD/01-Storage-Architecture-File-IO/slides/slides.md) • [15.2 Slides](./15-Storage-Databases-and-CRUD/02-Databases-SQL-Mongo-CRUD/slides/slides.md) | [`fileStorageDemo.js`](./15-Storage-Databases-and-CRUD/01-Storage-Architecture-File-IO/code/fileStorageDemo.js) • [`crudEngineDemo.js`](./15-Storage-Databases-and-CRUD/02-Databases-SQL-Mongo-CRUD/code/crudEngineDemo.js) | [Unit 15 Evals](./15-Storage-Databases-and-CRUD/evaluations/) • [Quizzes](./15-Storage-Databases-and-CRUD/quizzes/) • [Unit 15 Project](./0-student_files/projects/unit-15-inventory-crud-db/index.js) |
+| **17.0** | Apply OOP, data formats & patterns (`17.1–17.13`: `#private`, inheritance vs. composition, polymorphism, XML/JSON, SOLID, patterns) | [**Unit 8 — Lesson 8.1 & 8.2**](./08-OOP-and-Design-Patterns/readme.md) | [Lesson 8.1 Slides](./08-OOP-and-Design-Patterns/01-OOP-Classes-and-Polymorphism/slides/slides.md) • [8.2 Slides](./08-OOP-and-Design-Patterns/02-DataFormats-SOLID-Patterns/slides/slides.md) | [`oopPillarsDemo.js`](./08-OOP-and-Design-Patterns/01-OOP-Classes-and-Polymorphism/code/oopPillarsDemo.js) • [`solidAndFormatsDemo.js`](./08-OOP-and-Design-Patterns/02-DataFormats-SOLID-Patterns/code/solidAndFormatsDemo.js) | [Unit 8 Evals](./08-OOP-and-Design-Patterns/evaluations/) • [Quizzes](./08-OOP-and-Design-Patterns/quizzes/) • [Unit 8 Project](./0-student_files/projects/unit-08-oop-plugin-system/index.js) |
+| **18.0** | Implement runtime error handling (`18.1–18.7`: compile vs. runtime vs. logic, Event Loop, `try/catch/finally`, `allSettled`, severity) | [**Unit 7**](./07-Async-JS/readme.md) | [Unit 7 Slides](./07-Async-JS/slides/slides.md) | [`asyncDemo.js`](./07-Async-JS/code/asyncDemo.js) • [`asyncLab.js`](./0-student_files/08-async-js/asyncLab.js) | [Unit 7 Evals](./07-Async-JS/evaluations/) • [Quizzes](./07-Async-JS/quizzes/) • [Unit 7 Project](./0-student_files/projects/unit-07-resilient-pipeline/index.js) |
+| **19.0** | Execute software business & Capstone (`19.1–19.8`: Waterfall vs. Agile, store deployment, SaaS burn/LTV:CAC, KPIs, AI/Edge trends) | [**Unit 16**](./16-Software-Business-and-Capstone/readme.md) | [Unit 16 Slides](./16-Software-Business-and-Capstone/slides/slides.md) | [`saasEconomicsDemo.js`](./16-Software-Business-and-Capstone/code/saasEconomicsDemo.js) • [`appLaunchPlanner.js`](./0-student_files/16-business-capstone/appLaunchPlanner.js) | [Unit 16 Evals](./16-Software-Business-and-Capstone/evaluations/) • [Quizzes](./16-Software-Business-and-Capstone/quizzes/) • [Capstone](./0-student_files/projects/unit-16-semester-capstone/index.js) |
+
+---
+
+## 4. Embedded AZ CTE Professional Skills (`1.0`–`9.0`)
+
+| Professional Skill | Where Demonstrated Across Every Unit |
+|---|---|
+| **1.0 Complex Communication** | Architecture diagrams (`JavaScriptRoadmap.drawio.svg`, `AJAX.drawio.svg`), PR descriptions, JSDoc headers, Capstone pitches |
+| **2.0 Collaboration** | Feature branch PRs (`Unit 13`), GitPod live sharing, structured peer rubric audits across all projects |
+| **3.0 Thinking & Innovation** | Bloom's L4–L6 bug triage, algorithm complexity benchmarks (`Unit 9`), MVC/OOP plugin design (`Unit 8`) |
+| **4.0 Professionalism & 5.0 Initiative** | Clean CLI habits, Red-Green-Refactor discipline, atomic saves, independent lab & project extensions |
+| **6.0–7.0 Inter/Intrapersonal & Organizational Leadership** | Agile stand-ups, MVP critical-path triage, SaaS unit economics defense (`Unit 16`) |
+| **8.0 Legal & Ethical Practices** | MIT/GPL license auditing (`Unit 1`), FERPA/COPPA/GDPR compliance (`Units 1 & 14`), OWASP defense (`Unit 11`) |
+| **9.0 Financial Practices** | App Store `15%–30%` net revenue math, SaaS break-even, `LTV:CAC`, and fixed-point integer cents (`Units 12 & 16`) |
+
+---
+
+## 5. Publishing & Classroom Tooling (`tools/publish.mjs`)
+
+Generate synchronized print books (Pandoc + Chromium PDF) and all 29 Reveal.js slide presentations into `dist/`:
 
 ```bash
-npm run build:student   # -> dist/JavaScript-First-Student-Book.pdf
-npm run build:teacher   # -> dist/JavaScript-First-Teachers-Manual.pdf
-npm run build:slides    # -> dist/slides/*.html (Reveal.js; append ?print-pdf for PDF)
-npm run build:all       # -> Builds Student Book, Teacher's Manual, and all slide decks
+npm run build:student   # -> dist/JavaScript-First-Student-Book.pdf  (Solution-free textbook, evals, labs & projects)
+npm run build:teacher   # -> dist/JavaScript-First-Teachers-Manual.pdf (Guides, plans, keys, quizzes & rubrics)
+npm run build:slides    # -> dist/slides/*.html (29 Reveal.js decks; append ?print-pdf for slide PDFs)
+npm run build:all       # -> Builds Student Book, Teacher's Manual, and all 29 Reveal.js slide decks
 ```
-
-For end-of-program **AZ CTE Technical Skills Assessment (TSA)** preparation, instructors can combine the Chapter 1–11 `student-lesson.md` checks with the `node --test` suites in Chapter 9 and the capstone security server in Chapter 11.

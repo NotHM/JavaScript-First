@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+What does [[10 20] [30 40]][1][0] evaluate to?,10,20,30,40,20,3
+What returns from: [1 2 3].map(x => x * 10)?,[10 20 30],[1 2 3],60,undefined,20,1
+What returns from: [5 12 8].filter(x => x >= 10)?,[5 8],[12],true,25,20,2
+What returns from: [2 3 4].reduce((a n) => a + n 1)?,9,10,24,0,30,2
+Which data structure is strictly hierarchical with a single Root and no cycles?,Directed Cyclic Graph,Tree,1D Queue,Bitmask,20,2
+"What does JSON.stringify({fn: () => 1, a: 2}) output?",Throws SyntaxError,'{"a":2}' (drops fn),"{""fn"":""()=>1"",""a"":2}",null,30,2
+"Trace: let s=0; for(let i=0;i<3;i++) for(let j=0;j<=i;j++) s++; Final s?",3,6,9,1,60,2
+Why pick a Map over Array.find() for looking up 50k user IDs?,Map saves disk files,O(1) hash lookup vs O(n) scan,Arrays hold strings only,Map stops hoisting,30,2
+Which structure naturally models two-way road maps with cycles?,Strict Tree,Graph,Primitive BigInt,Set,20,2
+Which array method mutates the original array in place?,map(),filter(),slice(),push() / sort(),30,4
