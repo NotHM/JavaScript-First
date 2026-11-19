@@ -48,7 +48,13 @@ function binarySearch(sortedArr, target) {
 }
 ```
 
+---
+
+## 4. Beyond Sorting: Graphs, Compression & Numerical Convergence (`Std 6.4–6.8`)
+For deeper Big-O analysis, static loop-depth classification (`analyzeTimeComplexity`), **Dijkstra** & **Floyd-Warshall** shortest paths, **Huffman coding** compression, **Newton-Raphson** root convergence, and **Travelling Salesman** optimization, study [`BigO.md`](./BigO.md) and run [`code/advancedAlgosAndBigODemo.test.js`](./code/advancedAlgosAndBigODemo.test.js).
+
 ## Lesson Resources
 - **Slides:** [`slides/slides.md`](./slides/slides.md)
-- **Teacher Demo:** [`code/searchAndSortDemo.test.js`](./code/searchAndSortDemo.test.js)
+- **Big-O & Advanced Algorithms Guide:** [`BigO.md`](./BigO.md)
+- **Teacher Demos:** [`code/searchAndSortDemo.test.js`](./code/searchAndSortDemo.test.js) & [`code/advancedAlgosAndBigODemo.test.js`](./code/advancedAlgosAndBigODemo.test.js)
 - **Student Starter:** [`../../0-student_files/10-debugging-tdd/sortSearchLab.test.js`](../../0-student_files/10-debugging-tdd/sortSearchLab.test.js)

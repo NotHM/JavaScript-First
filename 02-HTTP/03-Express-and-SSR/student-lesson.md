@@ -1,0 +1,60 @@
+# Student Lesson 2.3: Express.js, Static Middleware & Modular SSR (`Std 8.3, 11.4–11.7`)
+
+**Reading:** [`readme.md`](./readme.md) | **Slides:** [`slides/slides.md`](./slides/slides.md)  
+**Starter File:** [`../../0-student_files/03-http-server/expressLab.js`](../../0-student_files/03-http-server/expressLab.js)
+
+---
+
+## Student SMART Goals (Trackable)
+- [ ] **Goal 1 (`[L1 Remember]` | `11.7`):** **Specific:** Identify `"type": "module"`, `"scripts"`, and the 4 SSR layers (`routes`, `components`, `layout`, `pages`). **Measurable:** Score 100% on Part A architecture matching. **Achievable:** Reference [`readme.md`](./readme.md) diagrams. **Relevant:** Organizes multi-page web apps cleanly. **Time-bound:** Complete within 10 minutes of Day 1 instruction.
+- [ ] **Goal 2 (`[L2 Understand]` | `8.3, 11.5`):** **Specific:** Explain how `app.use('/public', express.static(...))` resolves MIME headers and blocks `../` traversal. **Measurable:** Correctly distinguish 2 Express middleware duties vs. raw `fs.readFile`. **Achievable:** Trace `slides/slides.md` slides 3–4. **Relevant:** Eliminates boilerplate static handlers. **Time-bound:** Complete prior to starting the Part B lab.
+- [ ] **Goal 3 (`[L3 Apply]` | `11.6, 15.6`):** **Specific:** Implement `escapeHtml`, `renderNavLinks`, `renderLayout`, `resolveMimeType`, and `isPathInsidePublic` in `expressLab.js`. **Measurable:** All 6 uncommented assertions in `expressLab.js` pass with exit code `0`. **Achievable:** Build iteratively using Node.js `path.resolve()`. **Relevant:** Core full-stack SSR engineering skill. **Time-bound:** Complete during the 30-minute Day 1–2 lab block.
+- [ ] **Goal 4 (`[L4 Analyze]` | `1.5, 15.6`):** **Specific:** Audit SSR templates and static file paths for XSS `<script>` injection and directory traversal defects. **Measurable:** Identify both vulnerabilities and exact fixes in Part C. **Achievable:** Apply string-escaping and `path.resolve()` prefix rules. **Relevant:** Prevents top OWASP web exploits. **Time-bound:** Finish within 8 minutes during Part C.
+- [ ] **Goal 5 (`[L5 Evaluate -> L6 Create]` | `8.3, 11.12`):** **Specific:** Justify choosing raw `node:http` SSR vs. Express.js for two contrasting production architectures. **Measurable:** Deliver a 2-criterion defense citing cold starts, CVEs, and middleware speed in Part D and Pass Post-Lesson 2.3 (`>= 4/5`). **Achievable:** Synthesize Lesson 2.2 and 2.3 benchmarks. **Relevant:** Real-world backend architecture decision making. **Time-bound:** Submit before end of Lesson 2.3 Day 2.
+
+## Teacher SMART Goals (Trackable — Instructional Commitments)
+- [ ] **Goal 1 (`[L1–L2]` | `11.7`):** **Specific:** Deliver diagnostic `pre-lesson-eval.md` and walk through modular SSR refactoring (`refactor1.png` / `refactor2.svg`). **Measurable:** Capture 100% baseline diagnostic scores before live coding. **Achievable:** Run 4-minute bell-ringer + 15-minute slide walkthrough. **Relevant:** Reveals string-escaping misconceptions early. **Time-bound:** Within first 20 minutes of Day 1.
+- [ ] **Goal 2 (`[L3]` | `11.6`):** **Specific:** Model running `node --test` against `expressVsNodeSsrDemo.mjs` live on projector. **Measurable:** Verify students observe `200`, `403`, `404`, and `405` automated assertions pass. **Achievable:** Zero-dependency built-in Node test suite. **Relevant:** Connects HTTP design directly to TDD. **Time-bound:** During 15-minute guided demo on Day 1.
+- [ ] **Goal 3 (`[L3–L4]` | `1.5, 15.6`):** **Specific:** Circulate during `expressLab.js` lab checking `escapeHtml` and `path.resolve()` prefix guards. **Measurable:** Provide live verbal/desk feedback to 100% of pairs before assertion checkoff. **Achievable:** Structured 25-minute lab circulation checklist. **Relevant:** Reinforces secure coding habits early. **Time-bound:** Before end of Day 2 lab window.
+- [ ] **Goal 4 (`[L5]` | `8.3`):** **Specific:** Facilitate a 5-minute architecture debate comparing raw `node:http` vs. Express.js trade-offs. **Measurable:** Collect written justification from every student in Part D. **Achievable:** Use decision matrix in `readme.md`. **Relevant:** Builds CTE Professional Skill 1.0 (Communication). **Time-bound:** Minutes 35–40 of Day 2.
+- [ ] **Goal 5 (`[L1–L5]` | `8.3, 11.5–11.7`):** **Specific:** Administer `post-lesson-eval.md` and compute class Hake's normalized gain $g$. **Measurable:** Achieve class mean gain $g \ge 0.55$ or trigger targeted 10-minute reteach. **Achievable:** Paired 5-item exit ticket. **Relevant:** Proves measurable daily growth. **Time-bound:** Final 5 minutes of Day 2.
+
+---
+
+## Part A: Modular SSR & `package.json` Mapping (`[L1 Remember]` & `[L2 Understand]`)
+Match each component to its single responsibility and answer the middleware prompt:
+
+| File / Config | Primary Responsibility |
+|---|---|
+| `routes.mjs` | `__________________________________________________` |
+| `components/nav.mjs` | `__________________________________________________` |
+| `layout/template.mjs` | `__________________________________________________` |
+| `pages/catalog.mjs` | `__________________________________________________` |
+| `"type": "module"` | `__________________________________________________` |
+
+## Part B: Modular SSR & Static Security Lab (`[L3 Apply]`)
+Open [`0-student_files/03-http-server/expressLab.js`](../../0-student_files/03-http-server/expressLab.js) and implement:
+1. `escapeHtml(raw)` (`15.6`)
+2. `renderNavLinks(routes, activeUrl)` (`11.6`)
+3. `renderLayout({ title, navHtml, bodyHtml })` (`11.7`)
+4. `resolveMimeType(filePath)` (`11.5`)
+5. `isPathInsidePublic(publicDir, requestedSubpath)` (`1.5`)
+
+Uncomment the assertions at the bottom of `expressLab.js` and verify `node 0-student_files/03-http-server/expressLab.js` passes cleanly.
+
+## Part C: Security Defect Hunt (`[L4 Analyze]`)
+Inspect this Express snippet and diagnose ALL TWO security flaws:
+```javascript
+app.get('/profile', (req, res) => {
+  res.send(`<h1>Welcome, ${req.query.name}</h1>`);
+});
+app.get('/files', (req, res) => {
+  res.sendFile(path.join(PUBLIC_DIR, req.query.file));
+});
+```
+1. Defect 1 (`/profile`): `____________________________________________________`
+2. Defect 2 (`/files`): `______________________________________________________`
+
+## Part D: Framework Architecture Defense (`[L5 Evaluate]`)
+A school district is deploying (1) a tiny edge redirector running inside AWS Lambda with strict cold-start limits, and (2) an internal club portal serving 15 HTML routes, static CSS/images, and JSON form submissions. Recommend **bare `node:http` SSR** vs. **Express.js** for each and defend your choice (`8.3`):  
+> *(Your defense)*

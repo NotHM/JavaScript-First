@@ -1,0 +1,10 @@
+{
+  "name": "student-module-standards-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Lesson 1.4 Student Bug-Hunt Lab: ESM vs. CommonJS Module Diagnostics",
+  "scripts": {
+    "start": "node brokenModuleLab.mjs"
+  }
+}

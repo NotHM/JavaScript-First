@@ -34,3 +34,14 @@ for (let i = 1; i <= 2; i++) {
 ## Part D: Loop Strategy Evaluation (`[L5 Evaluate]` & `[L6 Create]`)
 Draw an ASCII flowchart or write pseudocode (`7.5`) defending why `for...of` beats `.forEach()` when searching a 10,000-item inventory log for an error code:  
 > *(Your justification)*
+
+---
+
+## Lesson SMART Objectives Tracker
+
+Check off each milestone after completing and testing your own work (**zero solution spoilers — verify every trace row with Node execution**):
+
+- [ ] **SL-L5.1-1 (`[L1–L2 Remember/Understand]` | Std `7.1–7.2` | `SG-U05-1`):** Contrast `while` vs. `do...while` and `break` vs. `continue` in Part A with >= 80% accuracy by Day 19.
+- [ ] **SL-L5.1-2 (`[L3 Apply]` | Std `7.1–7.3` | `SG-U05-2`):** Implement and execute all Part B functions cleanly in `loopsLab.js` before end of Day 19.
+- [ ] **SL-L5.1-3 (`[L4 Analyze]` | Std `7.4` | `SG-U05-3`):** Complete all 6 rows of the Part C nested-loop variable trace table accurately before Kahoot Quiz 1 on Day 20.
+- [ ] **SL-L5.1-4 (`[L5–L6 Evaluate/Create]` | Std `7.5` | `SG-U05-4`):** Draft your Part D ASCII flowchart/pseudocode defending `for...of` vs. `.forEach()` and complete [`post-lesson-eval.md`](./post-lesson-eval.md) by end of Day 20.

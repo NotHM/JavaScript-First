@@ -5,6 +5,13 @@
 
 ---
 
+## Lesson SMART Objectives Checklist
+- [ ] **Goal 1 (`[L1–L2]`):** Navigate folders via Bash (`pwd`, `ls`, `cd`, `mkdir`, `touch`, `rm`) and contrast AOT vs. JIT execution cleanly in Part A.
+- [ ] **Goal 2 (`[L3–L4]`):** Complete `test.js` and `cliFormatter.js` with camelCase identifiers, input validation, and reset ANSI escape codes (`\x1b[0m`) by the end of Part B.
+- [ ] **Goal 3 (`[L5–L6]`):** Author a portable 3-script `package.json` `"scripts"` block in Part D.
+
+---
+
 ## Part A: CLI & Runtime Knowledge (`[L1 Remember]` & `[L2 Understand]`)
 
 1. Describe what each Bash command does (`11.1`):

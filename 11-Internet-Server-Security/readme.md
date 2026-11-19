@@ -20,7 +20,13 @@
 ---
 
 ## 2. Cryptography, Sandboxing & Input Sanitization (`Std 1.4–1.5, 1.7`)
-- **Encryption (`Ciphertext <-> Plaintext`):** Reversible with secret key (**AES-GCM**, **TLS** in transit).
+- **Encryption (`Ciphertext <-> Plaintext`):** Reversible with secret key (**`AES-256-GCM`** authenticated encryption protecting confidentiality *and* tampering via an auth tag, plus **TLS/HTTPS** in transit — see [`code/aesTlsDemo.test.js`](./code/aesTlsDemo.test.js)).
+- **HTTPS / TLS Certificates in Node.js (`Std 1.4, 8.2`):** Generate self-signed development keys locally with OpenSSL (`openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365 -nodes`) and pass them to `https.createServer({ key, cert }, handler)` so traffic encrypts end-to-end instead of leaking plaintext over HTTP (and avoids SEO ranking penalties!).
+
+<p align="center">
+  <img src="./imgs/createKey.png" alt="Generating a local 2048-bit RSA self-signed TLS certificate with OpenSSL" width="560"/>
+</p>
+
 - **Password Hashing (`scrypt` / `Argon2`):** Deliberately slow + unique per-user **salt**, **one-way irreversible**! Never store passwords encrypted or hashed with fast unsalted MD5/SHA-1; compare using `crypto.timingSafeEqual()` to block timing side-channels (`1.4`).
 - **Digital Signatures & Sandboxes (`1.4`):** Private keys sign releases proving publisher authenticity; Containers/VMs/Browsers sandbox untrusted code from host disks.
 - **Injection & Overflow Defenses (`1.5`):**
@@ -30,5 +36,5 @@
 
 ## Chapter Resources
 - **Slides:** [`slides/slides.md`](./slides/slides.md)
-- **Teacher Demos:** [`code/cryptoSanitizationDemo.js`](./code/cryptoSanitizationDemo.js) & [`code/secureServer.js`](./code/secureServer.js)
+- **Teacher Demos:** [`code/cryptoSanitizationDemo.js`](./code/cryptoSanitizationDemo.js), [`code/aesTlsDemo.test.js`](./code/aesTlsDemo.test.js) & [`code/secureServer.js`](./code/secureServer.js)
 - **Student Starters:** [`../0-student_files/12-security-server/cryptoSanitizeLab.js`](../0-student_files/12-security-server/cryptoSanitizeLab.js) & [`../0-student_files/12-security-server/secureServer.js`](../0-student_files/12-security-server/secureServer.js)

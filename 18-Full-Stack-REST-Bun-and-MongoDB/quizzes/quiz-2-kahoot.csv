@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Building SQL via string interpolation instead of ? placeholders risks:,Slow CPU cache,SQL Injection (SQLi),Port collision,Missing CORS,20,2
+Deleting a SQLite item referenced by an order (RESTRICT) returns:,200 OK,201 Created,409 Conflict,302 Found,30,3
+What LIMIT and OFFSET return page 3 with 10 items per page?,LIMIT 3 OFFSET 10,LIMIT 10 OFFSET 20,LIMIT 30 OFFSET 3,LIMIT 10 OFFSET 30,30,2
+Which MQL filter matches price >= 5 excluding category 'chocolate'?,{ price: 5 },{ price:{$gte:5} category:{$nin:['chocolate']} },{ $or: [] },WHERE price >= 5,30,2
+What happens when inserting a duplicate key on a { unique: true } index?,Overwrites old doc,Throws E11000 duplicate key error,Drops collection,Converts to SQL,20,2
+How do you query nested address.country === 'US' in MongoDB?,{ addressCountry: 'US' },{ 'address.country': 'US' },{ address[country]: 'US' },{ US: 'address' },20,2
+Which $group stage sums totalPrice per customer country?,{_id:'$customer.customerAddr.country' total:{$sum:'$totalPrice'}},{_id:'country' total:'sum'},{$match:'totalPrice'},{$set:{total:1}},30,1
+Which top-level keys identify a HAL+JSON collection response?,{ status data },{ _links _embedded },{ attributes errors },{ rows columns },30,2
+Why does storing [lat lng] break a MongoDB 2dsphere $near query?,Mongo deletes coords,Swapped axes break bounds & distances,GeoJSON requires strings,2dsphere needs SQL,30,2
+Best fit for an ACID order ledger vs. nested hotel room catalog?,SQLite/SQL for ledger; MongoDB for catalog,Plain .txt files for both,Browser cookies for both,CSS for catalog,30,1

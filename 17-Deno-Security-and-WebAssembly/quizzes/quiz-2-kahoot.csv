@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+In node --permission --allow-fs-read=./pub reading /etc/hosts throws:,ENOENT,ERR_ACCESS_DENIED,ERR_MODULE_NOT_FOUND,SyntaxError,20,2
+Which Deno flags allow ./public/ reads while blocking ./public/.env?,--allow-all,--allow-read=./public --deny-read=./public/.env,--allow-env=.env,--deny-all,30,2
+Why should a security auditor reject deno run -A untrusted.ts?,-A disables ESM,-A means --allow-all granting full OS access,-A breaks Deno.serve,-A drops TS types,30,2
+What does a deno.json imports map for @std/path -> jsr:... accomplish?,Installs C++ binaries,Maps clean imports to pinned JSR URLs,Forces CommonJS require,Disables sandboxing,30,2
+In a .wasm header after \0asm what do bytes 0x01 0x00 0x00 0x00 represent?,WASM binary version 1 (uint32 LE),1 GB RAM,1 exported string,Exit code 1,30,1
+What does WebAssembly.validate(bytes) return if header magic is \0bad?,Throws ENOENT,false,undefined,"wasm",20,2
+Writing [65 66] at offset 10 of new Uint8Array(memory.buffer) stores data in:,WASM shared linear memory bytes 10..11,Disk file memory.bin,Browser cookies,process.env,30,1
+What happens if WASM loads byte 70000 inside a 1-page (65536 B) memory?,Leaks Node heap secrets,Traps with WebAssembly.RuntimeError,Returns 0 silently,Crashes the OS kernel,30,2
+Which toolchain builds Rust crates into .wasm + JS glue bindings?,nvm,eslint,wasm-pack,nodemon,20,3
+Best architecture for running untrusted user formulas in a Node API?,eval(userFormula),WASM with zero OS imports + --permission,deno run -A,Browser localStorage,30,2

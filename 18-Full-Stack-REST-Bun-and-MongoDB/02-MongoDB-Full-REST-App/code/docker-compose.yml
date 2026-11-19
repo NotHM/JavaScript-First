@@ -1,0 +1,20 @@
+# Lesson 18.2 Local MongoDB + Seed Data Docker Compose
+# Modeled on HansUXdev/Learn-MongoDB-4.x (chapters/02/docker-compose.yml)
+services:
+  mongodb:
+    image: mongo:7
+    container_name: jsfirst-learn-mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: sweetscomplete
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  mongo_data: {}

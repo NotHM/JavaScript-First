@@ -31,3 +31,14 @@ app.get('/search', (req, res) => {
 ## Part D: Incident Remediation & Threat Triage (`[L5 Evaluate]`)
 A coworker clicks a convincing **AI voice-cloning / phishing (`1.1`)** link and leaks their password, while `npm audit` reports a Critical CVE (`1.2`). Outline an incident response plan enforcing **MFA**, **Least Privilege rotation**, **SIEM alerting**, and **dependency patching (`1.7`)**:  
 > *(Your incident response brief)*
+
+---
+
+## Lesson SMART Objectives Tracker
+
+Check off each milestone after completing and testing your own work (**zero solution spoilers — verify every security guard with Node tests**):
+
+- [ ] **SL-L11.1-1 (`[L1–L2 Remember/Understand]` | Std `1.4, 1.6` | `SG-U11-1`):** Map each Part A defense to the CIA Triad and contrast AES encryption vs. salted `scrypt` hashing with >= 80% accuracy by Day 82.
+- [ ] **SL-L11.1-2 (`[L3 Apply]` | Std `1.4–1.5, 16.3` | `SG-U11-2`):** Implement and verify all security helpers in `cryptoSanitizeLab.js` and `secureServer.js` in Node.js by end of Day 84.
+- [ ] **SL-L11.1-3 (`[L4 Analyze]` | Std `1.2, 1.5` | `SG-U11-3`):** Identify all 3 OWASP defects in the Part C snippet and specify exact header and query remediations before Day 85.
+- [ ] **SL-L11.1-4 (`[L5–L6 Evaluate/Create]` | Std `1.1–1.3, 1.7` | `SG-U11-4`, `SG-U11-5`):** Draft your Part D incident response plan (MFA, Least Privilege, SIEM, CVE patching) and complete [`post-lesson-eval.md`](./post-lesson-eval.md) by Day 85.

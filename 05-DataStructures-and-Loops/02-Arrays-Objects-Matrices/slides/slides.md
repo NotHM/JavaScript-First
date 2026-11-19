@@ -1,5 +1,5 @@
 ---
-title: "Lesson 5.2 — Arrays, Hash Maps, Matrices, Trees & Graphs (Std 6.0)"
+title: "Lesson 5.2 — Arrays, Hash Maps, Classic Structures, Matrices & Trees (Std 6.0)"
 theme: "night"
 transition: "slide"
 highlightTheme: "monokai"
@@ -19,6 +19,18 @@ const catalog = [{ sku: "A1", price: 12 }, { sku: "B2", price: 25 }];
 const catalogMap = new Map(catalog.map((item) => [item.sku, item]));
 console.log(catalogMap.get("B2")); // { sku: "B2", price: 25 }
 ```
+
+---
+
+### `[L2 Understand -> L3 Apply]` Classic Linear & Bit Structures
+
+| Structure | Order / Storage | Core `O(1)` Operations |
+|---|---|---|
+| **LinkedList** | Chained `{ value, next }` nodes | `append(val)`, `prepend(val)` |
+| **Stack** | LIFO (Last-In, First-Out) | `push(val)`, `pop()`, `peek()` |
+| **Queue** | FIFO (First-In, First-Out) | `enqueue(val)`, `dequeue()` via head pointer |
+| **HashTable** | Bucketed key hashes | `set(k, v)`, `get(k)` (`O(1)` avg) |
+| **BitSet** | `Uint32Array` bit masks | `add(n)`, `has(n)` (`1 << (n % 32)`) |
 
 ---
 
@@ -57,5 +69,5 @@ console.log(board[1][2]); // "O" (Row 1, Col 2)
 
 ### `[L5 Evaluate -> L6 Create]` Lab Checkpoint
 
-1. Open `0-student_files/06-data-structures/dataStructures.js` & `matricesTreesLab.js`.
-2. Build matrix sums, `Map` indexing, JSON round-trips, and cycle-safe graph traversal!
+1. Run `node --test 05-DataStructures-and-Loops/02-Arrays-Objects-Matrices/code/classicStructuresDemo.test.js`.
+2. Complete `0-student_files/06-data-structures/dataStructures.js`, `matricesTreesLab.js` & `classicStructuresLab.js`!

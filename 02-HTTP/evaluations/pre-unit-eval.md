@@ -1,6 +1,6 @@
-# Unit 2 Pre-Unit Evaluation: Internet Protocols, Cloud & HTTP (`Std 8.0, 11.0`)
+# Unit 2 Pre-Unit Evaluation: Internet Protocols, Cloud, HTTP & SSR (`Std 8.0, 11.0`)
 
-**Name:** `______________________` **Date:** `__________` **Pre-Score:** `____ / 8`
+**Name:** `______________________` **Date:** `__________` **Pre-Score:** `____ / 10`
 
 1. **`[L1 | 8.2]`** Which protocol encrypts web traffic over TLS (`port 443`) rather than plaintext (`port 80`)?  
    - A) HTTP | B) HTTPS | C) SFTP | D) IMAP
@@ -15,3 +15,6 @@
    > *(Your analysis)*
 8. **`[L4 | 11.6]`** A route returns status `200 OK` when `/missing-page` is requested instead of `404`. What defect does this cause for API clients and crawlers?  
    > *(Your analysis)*
+9. **`[L1 | 11.7]`** Which Express middleware serves static CSS, JS, and images from a `public/` folder automatically? `____________________`
+10. **`[L4 | 15.6]`** Why is interpolating unescaped user input directly inside an HTML template literal (`` `<p>${name}</p>` ``) a security risk?  
+    > *(Your analysis)*

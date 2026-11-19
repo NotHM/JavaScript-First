@@ -44,9 +44,9 @@ async function runWithLock(fn) {
 ## 2. Event Loop, Concurrent Promises, `EventEmitter` & Streams (`Std 16.3`)
 1. **Event Loop Order:** Execute current Call Stack synchronously → drain **ALL Microtasks** (`Promise.then`, `await` continuations, `queueMicrotask`) → pull **1 Macrotask** (`setTimeout`, I/O callbacks) → repeat!
 2. **`Promise.all([a, b])` vs `Promise.allSettled([a, b])`:** `Promise.all` aborts immediately on any rejection; `Promise.allSettled` returns `{ status: 'fulfilled'|'rejected', ... }` for every task so resilient UIs can degrade gracefully!
-3. **`EventEmitter` & Streams:** Subscribe to async lifecycle events (`bus.on('warn', ...)`) and stream gigabyte logs chunk-by-chunk (`O(1)` memory!).
+3. **`EventEmitter`, Async Queues & Streams:** Subscribe to async lifecycle events (`bus.on('warn', ...)`), coordinate producer/consumer backpressure with Promise-based **`AsyncQueue`** and **`AsyncBinarySearchTree`** structures ([`code/asyncQueueAndTreeDemo.test.js`](./code/asyncQueueAndTreeDemo.test.js)), and stream gigabyte logs chunk-by-chunk (`O(1)` memory!).
 
 ## Chapter Resources
 - **Slides:** [`slides/slides.md`](./slides/slides.md)
-- **Teacher Demo:** [`code/asyncDemo.js`](./code/asyncDemo.js)
+- **Teacher Demos:** [`code/asyncDemo.js`](./code/asyncDemo.js) & [`code/asyncQueueAndTreeDemo.test.js`](./code/asyncQueueAndTreeDemo.test.js)
 - **Student Starter:** [`../0-student_files/08-async-js/asyncLab.js`](../0-student_files/08-async-js/asyncLab.js)

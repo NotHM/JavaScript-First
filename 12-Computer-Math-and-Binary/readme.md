@@ -44,6 +44,10 @@ const hypotenuse = (a, b) => Math.hypot(a, b); // sqrt(a**2 + b**2)
 const voltage = (amps, ohms) => amps * ohms;   // V = I * R (Ohm's Law)
 ```
 
+<p align="center">
+  <img src="./imgs/operators.drawio.svg" alt="JavaScript arithmetic, assignment, comparison, and bitwise operators overview" width="540"/>
+</p>
+
 ---
 
 ## 4. Floating-Point Precision vs. Integer Cents (`Std 4.5, 4.6`)
@@ -76,5 +80,5 @@ perms ^= WRITE;                    // toggle WRITE off -> 0b001
 
 ## Chapter Resources
 - **Slides:** [`slides/slides.md`](./slides/slides.md)
-- **Teacher Demo:** [`code/computerMathDemo.js`](./code/computerMathDemo.js)
+- **Teacher Demos:** [`code/computerMathDemo.js`](./code/computerMathDemo.js) & [`code/pythagoreanDemo.js`](./code/pythagoreanDemo.js)
 - **Student Starter:** [`../0-student_files/12-computer-math/computerMathLab.js`](../0-student_files/12-computer-math/computerMathLab.js)

@@ -5,6 +5,13 @@
 
 ---
 
+## Lesson SMART Objectives (Teacher & Student Targets)
+- [ ] **Teacher SMART Goal 1:** Verify 100% of student machines navigate directories and run `node -v`, `npm -v`, and `test.js` cleanly within the first 25 minutes of Day 1.
+- [ ] **Student SMART Goal 1 (`[L1–L2]`):** Execute 6 core terminal commands (`pwd`, `ls`, `cd`, `mkdir`, `touch`, `rm`) and contrast AOT compiled vs. V8 JIT execution with >= 80% accuracy on `post-lesson-eval.md`.
+- [ ] **Student SMART Goal 2 (`[L3–L4]`):** Build `sanitizeCliInput()` and `formatBanner()` in `cliFormatter.js` using camelCase and reset ANSI codes (`\x1b[0m`) with zero uncaught `TypeError`s by Day 2 wrap-up.
+
+---
+
 ## Bloom's Taxonomy Objective Ladder
 | Tier | Student Learning Objective |
 |---|---|

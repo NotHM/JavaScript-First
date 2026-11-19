@@ -1,0 +1,11 @@
+{
+  "name": "student-phaser-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/student-phaser-lab.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  }
+}

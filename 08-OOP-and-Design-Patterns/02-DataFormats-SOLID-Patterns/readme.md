@@ -1,9 +1,9 @@
 # Lesson 8.2: JSON vs. XML, SOLID Principles & Classic Design Patterns (`Std 17.11, 17.13`)
 
 ## Student Learning Objectives (Bloom's Taxonomy)
-- **`[L1 Remember]`** Recall the **SOLID** acronym (`S`, `O`, `L`, `I`, `D`), Creational (**Factory**), Structural (**Decorator**), and Behavioral (**Observer, Iterator, State**) patterns (`17.13`), plus **JSON vs. XML** structural syntax (`17.11`).
+- **`[L1 Remember]`** Recall the **SOLID** acronym (`S`, `O`, `L`, `I`, `D`), Creational (**Factory**), Structural (**Adapter**, **Decorator**), and Behavioral (**Observer, Iterator, State**) patterns (`17.13`), plus **JSON vs. XML** structural syntax (`17.11`).
 - **`[L2 Understand]`** Contrast JSON's compact key-value syntax & native JS speed against XML's opening/closing tags, element attributes, and strict XSD document validation (`17.11`).
-- **`[L3 Apply]`** Implement **Factory**, **Decorator**, **Observer**, **Iterator (`[Symbol.iterator]`)**, **State**, and safe **JSON/XML** formatters (`17.11, 17.13`).
+- **`[L3 Apply]`** Implement **Factory**, **Adapter**, **Decorator**, **Observer**, **Iterator (`[Symbol.iterator]`)**, **State**, and safe **JSON/XML** formatters (`17.11, 17.13`).
 - **`[L4 Analyze]`** Spot SOLID Single-Responsibility / Open-Closed violations and invalid unescaped XML/HTML characters (`<`, `&`) (`17.11, 17.13`).
 - **`[L5 Evaluate]`** Select optimal serialization formats (**JSON vs XML**) and design patterns for extensible plugin/workflow systems (`17.11, 17.13`).
 
@@ -27,9 +27,9 @@
   - **O**pen/Closed (extend via new classes/plugins cleanly without editing core code)
   - **L**iskov Substitution (subclasses honor parent contracts safely)
   - **I**nterface Segregation & **D**ependency Inversion (depend on narrow injected interfaces, not rigid globals)
-- **GoF Patterns in JS:** **Factory** (central creation), **Decorator** (wrapper enhancing behavior), **Observer** (subscribe/notify), **Iterator** (`*[Symbol.iterator]()` for `for...of`), **State** (explicit workflow state transitions).
+- **GoF Patterns in JS:** **Factory** (central creation), **Adapter** (translates incompatible legacy XML/CJS interfaces into modern JSON contracts without modifying legacy code), **Decorator** (wrapper enhancing behavior), **Observer** (subscribe/notify), **Iterator** (`*[Symbol.iterator]()` for `for...of`), **State** (explicit workflow state transitions).
 
 ## Lesson Resources
 - **Slides:** [`slides/slides.md`](./slides/slides.md)
-- **Teacher Demos:** [`code/solidAndFormatsDemo.js`](./code/solidAndFormatsDemo.js) & [`../code/patterns.js`](../code/patterns.js)
+- **Teacher Demos:** [`code/solidAndFormatsDemo.js`](./code/solidAndFormatsDemo.js), [`code/adapterPatternDemo.test.js`](./code/adapterPatternDemo.test.js) & [`../code/patterns.js`](../code/patterns.js)
 - **Student Starter:** [`../../0-student_files/09-oop-patterns/patterns.js`](../../0-student_files/09-oop-patterns/patterns.js)

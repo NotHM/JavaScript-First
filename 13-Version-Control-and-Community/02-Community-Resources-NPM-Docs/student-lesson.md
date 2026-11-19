@@ -22,3 +22,14 @@ Draft a concise, copy-paste-ready Markdown `README.md` snippet (Title, Install, 
 ```markdown
 # ...
 ```
+
+---
+
+## Lesson SMART Objectives Tracker
+
+Check off each milestone after completing and testing your own work (**zero solution spoilers — confirm your package evaluator in Node.js**):
+
+- [ ] **SL-L13.2-1 (`[L1–L2 Remember/Understand]` | Std `13.1–13.2` | `SG-U13-1`):** Identify all 3 SemVer components and explain `package-lock.json` guarantees in Part A with >= 80% accuracy on Day 33.
+- [ ] **SL-L13.2-2 (`[L3 Apply]` | Std `13.1–13.2` | `SG-U13-2`):** Complete `pkgEvaluatorLab.js` and verify clean execution in Node.js by the end of Day 33.
+- [ ] **SL-L13.2-3 (`[L4 Analyze]` | Std `13.2, 13.4` | `SG-U13-3`):** Complete the Part C dependency CVE/maintenance risk audit accurately before Kahoot Quiz 2 on Day 33.
+- [ ] **SL-L13.2-4 (`[L5–L6 Evaluate/Create]` | Std `13.5` | `SG-U13-4`, `SG-U13-5`):** Draft a complete Part D `README.md` snippet (Title, Install, Usage, License) and finish [`post-lesson-eval.md`](./post-lesson-eval.md) by Day 34.

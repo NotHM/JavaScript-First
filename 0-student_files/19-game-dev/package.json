@@ -1,0 +1,10 @@
+{
+  "name": "student-19-game-dev-labs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Student blank starter labs for Unit 19 (Canvas Game Loop, Gamepad API, Phaser & jsgamelauncher)",
+  "scripts": {
+    "test": "node --test gameLoopLab.test.mjs"
+  }
+}

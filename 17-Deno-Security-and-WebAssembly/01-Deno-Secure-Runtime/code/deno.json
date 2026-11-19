@@ -1,0 +1,19 @@
+{
+  "tasks": {
+    "dev": "deno run --watch --allow-net=127.0.0.1:8080 --allow-env=PORT,APP_ENV --allow-read=./ deno_server.ts",
+    "start": "deno run --allow-net=127.0.0.1:8080 --allow-env=PORT,APP_ENV deno_server.ts",
+    "check": "deno check deno_server.ts"
+  },
+  "imports": {
+    "@std/path": "jsr:@std/path@^1.0.8"
+  },
+  "fmt": {
+    "semiColons": true,
+    "singleQuote": true
+  },
+  "lint": {
+    "rules": {
+      "tags": ["recommended"]
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 **Directions:** Complete this baseline evaluation **before** beginning Unit 1 instruction. Your score is used strictly to measure your learning growth across the unit—answer honestly without looking up notes.
 
-**Name:** `______________________` **Date:** `__________` **Pre-Score:** `____ / 10`
+**Name:** `______________________` **Date:** `__________` **Pre-Score:** `____ / 12`
 
 ---
 
@@ -67,3 +67,12 @@
 
 10. **`[L4 Analyze | Std 3.1 / 11.4]`** Why does checking `if (input)` fail when `input` is `0` or `""`? Suggest a safer JavaScript check for distinguishing `null`/`undefined` from valid values.  
    > *(Your response)*  
+
+11. **`[L2 Understand | Std 11.7 / 13.1]`** Which `package.json` field forces `.js` files in a package to execute as ES Modules (`import`/`export`), and which extension forces CommonJS (`require`) regardless of `package.json`?  
+    - A) `"module": true` and `.jsm`  
+    - B) `"type": "module"` and `.cjs`  
+    - C) `"esm": "strict"` and `.mjs`  
+    - D) `"scripts": "esm"` and `.node`  
+
+12. **`[L4 Analyze | Std 18.2]`** A student writes `import { tax } from './math';` inside `app.mjs` and Node throws `Error [ERR_MODULE_NOT_FOUND]` even though `math.mjs` exists in the same folder. Why did Node reject it, and what fixes it?  
+    > *(Your response)*  

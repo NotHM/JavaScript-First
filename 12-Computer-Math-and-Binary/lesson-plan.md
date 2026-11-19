@@ -39,3 +39,17 @@
 
 ### Code Answer Key
 See [`code/computerMathDemo.js`](./code/computerMathDemo.js).
+
+---
+
+## Teacher & Student SMART Objectives Alignment
+
+| Lesson Checkpoint | Aligned Unit Goal(s) | Bloom's & Standard | Measurable Target & Timing |
+|---|---|---|---|
+| **Pre-Lesson 12.1 & Part A Units/Bases** | `SG-U12-1`, `TG-U12-1` | `L1–L2` (`4.1–4.2`) | Administer [`pre-lesson-eval.md`](./pre-lesson-eval.md) on Day 8; >= 80% accuracy on Part A storage/frequency scales & binary/hex table by Day 9. |
+| **Applied Math & Bitwise Lab (Part B)** | `SG-U12-2`, `TG-U12-2` | `L3` (`4.2, 4.4–4.5, 4.7`) | Live checkoff of [`computerMathLab.js`](../0-student_files/12-computer-math/computerMathLab.js) verifying all 5 helpers in Node.js by end of Day 11. |
+| **IEEE-754/GEMA Forensics & Quizzes (Part C)** | `SG-U12-3`, `TG-U12-3` | `L4` (`4.3, 4.5–4.6`) | >= 80% accuracy diagnosing float drift & GEMA ordering in Part C; run 10-min reteach if Kahoot Quiz 1/2 falls < 75% on Day 9 or Day 11. |
+| **Type Selection, Exit Ticket & Project (Part D)** | `SG-U12-4`, `SG-U12-5`, `TG-U12-1`, `TG-U12-4`, `TG-U12-5` | `L5–L6` (`4.5–4.7`) | Administer [`post-lesson-eval.md`](./post-lesson-eval.md) on Day 11/12 targeting Hake's $g \ge 0.55$; grade [`project-rubric.md`](./projects/project-rubric.md) within 72 hours and archive CTE evidence. |
+
+- [ ] **Teacher Checkpoint (`TG-U12-1..5`):** Pre/Post Lesson 12.1 growth ($g \ge 0.55$) verified, 100% `computerMathLab.js` checkoffs completed, Kahoot < 75% gaps retaught, and Unit 12 rubrics returned within 3 school days.
+- [ ] **Student Checkpoint (`SG-U12-1..5`):** Parts A–D verified without spoilers, `computerMathLab.js` passing cleanly, and Bitmask Engine submitted on Day 12.

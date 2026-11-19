@@ -9,3 +9,6 @@ Which ANSI escape sequence resets terminal colors to default?,\x1b[31m,\x1b[0m,\
 Logging raw student SSNs and birthdays to debug.log violates which rule?,ES6 syntax,FERPA / GDPR privacy minimization,MIT attribution,Terminal ANSI spec,30,2
 Which third-party code must a closed commercial team REJECT?,MIT licensed utility,ISC licensed parser,Unlicensed code copied off a blog,Apache 2.0 helper,30,3
 "Error: Missing script 'audit-deps'. Where do you define npm scripts?",test.js,"scripts" in package.json,.gitignore,README.md,30,2
+In main.mjs why does import from './tax' throw ERR_MODULE_NOT_FOUND?,var is banned,ESM requires explicit .mjs/.js extensions,JSON failed,Browsers block .mjs,30,2
+Inside .mjs calling require('./legacy.cjs') fails. Which API bridges CJS?,window.require,try/catch wrapper,createRequire(import.meta.url),<script type='module'>,30,3
+

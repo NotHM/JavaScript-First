@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Student Unit 20 Capstone: Local Multimodal AI Chat & 3D CAD Studio" />
+  <title>Unit 20 Capstone Starter — Local Multimodal AI &amp; 3D Studio</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, sans-serif; background: #0b1120; color: #f1f5f9; padding: 1rem; }
+    main { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
+    section { background: #111827; border: 1px solid #1e293b; border-radius: 8px; padding: 1rem; }
+    canvas { background: #020617; border: 1px solid #334155; width: 100%; max-width: 400px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Local Multimodal AI &amp; 3D Print Capstone (Starter)</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Core: Local SSE Chat + Voice STT/TTS</h2>
+      <div id="chatLog" aria-live="polite"></div>
+      <form id="chatForm">
+        <label for="promptInput">Prompt</label>
+        <input id="promptInput" type="text" required />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+    <section>
+      <h2>Bonus: Vision &amp; Video Frame Sampling</h2>
+      <label for="visionFile">Attach Image (Base64)</label>
+      <input id="visionFile" type="file" accept="image/*" />
+    </section>
+    <section>
+      <h2>Double Bonus: 3D CAD Preview &amp; STL Export</h2>
+      <canvas id="cadCanvas" width="400" height="280" aria-label="3D Mesh Preview Canvas"></canvas>
+    </section>
+  </main>
+  <script>
+    // TODO [CORE]: Wire #chatForm submit -> fetch('/api/chat') SSE stream + SpeechRecognition/TTS + localStorage.
+    // TODO [BONUS]: Wire #visionFile FileReader base64 attachment + image-gen & video keyframe sampler.
+    // TODO [DOUBLE BONUS]: Render 3D wireframe triangles onto #cadCanvas + export .stl / .obj!
+    const chatForm = document.getElementById('chatForm');
+    chatForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+    });
+  </script>
+</body>
+</html>

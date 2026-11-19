@@ -1,0 +1,18 @@
+# Unit 17 Quiz 2: Runtime Auditing, Permission Errors & WASM Memory (Application)
+
+**Bloom's Focus:** `[L3 Apply]`, `[L4 Analyze]`, `[L5 Evaluate]`  
+**Kahoot Import File:** [`quiz-2-kahoot.csv`](./quiz-2-kahoot.csv)  
+**AZ CTE Standards:** `1.3`, `1.4`, `4.7`, `11.6`, `11.7`
+
+| # | Prompt / Code Trace | Choices (* = Correct) | Time | Bloom's & Rationale |
+|---|---|---|---|---|
+| 1 | Running `node --permission --allow-fs-read=./pub app.mjs` when `app.mjs` reads `/etc/hosts` throws: | A) `ENOENT`<br>**B) `ERR_ACCESS_DENIED`***<br>C) `ERR_MODULE_NOT_FOUND`<br>D) `SyntaxError` | 20s | `[L3 Apply \| 1.4]` Node Permission Model throws `ERR_ACCESS_DENIED` for out-of-scope paths. |
+| 2 | Which Deno flags let a server read `./public/` while STILL blocking `./public/.env`? | A) `--allow-all`<br>**B) `--allow-read=./public --deny-read=./public/.env`***<br>C) `--allow-env=.env`<br>D) `--deny-all` | 30s | `[L3 Apply \| 1.3]` `--deny-read` overrides broader `--allow-read` scopes. |
+| 3 | Why should a security auditor reject `deno run -A untrusted.ts`? | A) `-A` disables ESM<br>**B) `-A` equals `--allow-all` granting full FS/net/env/run access***<br>C) `-A` breaks `Deno.serve`<br>D) `-A` drops TypeScript types | 30s | `[L5 Evaluate \| 1.3]` `-A` removes every capability boundary. |
+| 4 | Look at `deno.json` `"imports": { "@std/path": "jsr:@std/path@^1.0.8" }`. What benefit does this provide? | A) Installs C++ binaries into `/usr/bin`<br>**B) Maps clean bare specifiers to pinned JSR URLs without `node_modules`***<br>C) Forces CommonJS `require()`<br>D) Disables permissions | 30s | `[L2 Understand \| 13.1]` Import maps keep code clean while pinning JSR package versions. |
+| 5 | In `wasmBytes = [0x00, 0x61, 0x73, 0x6d, 0x01, 0x00, 0x00, 0x00, ...]`, what does `0x01,0,0,0` specify? | **A) WebAssembly binary version `1` (little-endian uint32)***<br>B) 1 GB memory<br>C) 1 exported string<br>D) Exit code `1` | 30s | `[L4 Analyze \| 4.1]` Bytes 4..7 represent WASM version `1` in little-endian order. |
+| 6 | What does `WebAssembly.validate(bytes)` return if a `.wasm` header has `\0bad` instead of `\0asm`? | A) Throws `ENOENT`<br>**B) `false`***<br>C) `undefined`<br>D) `"wasm"` | 20s | `[L3 Apply \| 11.6]` `WebAssembly.validate()` synchronously returns a boolean. |
+| 7 | A WASM module exports `memory` (1 page = 64 KiB). JS runs `new Uint8Array(memory.buffer).set([65, 66], 10)`. Where is `'AB'` stored? | **A) Linear memory bytes `10..11` shared directly with WASM***<br>B) Disk file `memory.bin`<br>C) Browser cookies<br>D) `process.env` | 30s | `[L3 Apply \| 4.7]` JS `Uint8Array` writes directly into the module's linear `ArrayBuffer`. |
+| 8 | What happens if WASM runs `i32.load8_u` at byte index `70000` inside a 1-page (`65536`-byte) `WebAssembly.Memory`? | A) Reads adjacent Node password variables<br>**B) Throws `WebAssembly.RuntimeError` (memory access out of bounds)***<br>C) Returns `0` silently<br>D) Crashes the Linux kernel | 30s | `[L4 Analyze \| 1.4]` Linear memory bounds checks trap cleanly before touching host memory. |
+| 9 | Which toolchain compiles Rust (`src/lib.rs`) into `.wasm` + JS glue bindings for Node/web? | A) `nvm`<br>B) `eslint`<br>**C) `wasm-pack`***<br>D) `nodemon` | 20s | `[L1 Remember \| 11.8]` `wasm-pack` compiles Rust targets to `wasm32-unknown-unknown`. |
+| 10 | You run untrusted customer pricing formulas inside a multi-tenant Node API. Best defense-in-depth architecture? | A) Pass raw strings to `eval()`<br>**B) Run compiled WASM with zero OS imports inside a `--permission` runtime***<br>C) Run `deno run -A`<br>D) Store scripts in `localStorage` | 30s | `[L5 Evaluate \| 1.4 / 11.6]` Isolating untrusted logic in WASM + runtime `--permission` enforces dual sandboxes. |

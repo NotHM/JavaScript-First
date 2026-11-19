@@ -36,3 +36,14 @@ async function loadProfile() {
 ## Part D: Architecture Evaluation (`[L5 Evaluate]` & `[L6 Create]`)
 Design a weather & transit portal requiring (1) rapid SEO indexing on Google, (2) live client-side polling every 60s via `fetch()`, and (3) isolated Billing vs Transit services running identically across laptops & AWS. Choose **React SPA vs Next.js**, **XHR vs Fetch**, and **Containers vs Manual VMs**, justifying each tradeoff (`9.4, 9.5`):  
 > *(Your architectural proposal)*
+
+---
+
+## Lesson SMART Objectives Tracker
+
+Check off each milestone after completing and verifying your own work (**zero solution spoilers — confirm with your own code runs and DevTools checks**):
+
+- [ ] **SL-L3.1-1 (`[L1–L2 Remember/Understand]` | Std `9.1–9.5` | `SG-U03-1`):** Complete the Part A comparison table and define SSH, Next.js SSR, and Docker Containers in your own words with >= 80% accuracy before the end of Day 53.
+- [ ] **SL-L3.1-2 (`[L3 Apply]` | Std `9.4, 18.7` | `SG-U03-2`):** Implement and run all Part B `TODO` handlers in `xhr-exercise.js`, `fetch-node-exercise.js`, and `fetch-exercise.html` cleanly in Node.js and the browser by the end of Day 54.
+- [ ] **SL-L3.1-3 (`[L4 Analyze]` | Std `9.2, 18.1–18.5` | `SG-U03-3`):** Inspect the Part C snippet to identify all HTTP/async defects and write a clean corrected handler before starting the Unit 3 Project on Day 55.
+- [ ] **SL-L3.1-4 (`[L5–L6 Evaluate/Create]` | Std `9.4–9.5` | `SG-U03-4`, `SG-U03-5`):** Defend your Part D SPA vs. SSR, XHR vs. Fetch, and Container tradeoffs and complete [`post-lesson-eval.md`](./post-lesson-eval.md) by the end of Week 11 (Day 56).

@@ -5,6 +5,13 @@
 
 ---
 
+## Lesson SMART Objectives Checklist
+- [ ] **Goal 1 (`[L1–L2]`):** List all 7 JS primitives and explain `typeof null === "object"` plus Stack vs. Heap allocation by the end of Part A.
+- [ ] **Goal 2 (`[L3]`):** Complete and run `primitives.js`, `logIf.js`, and `logTern.js` distinguishing `null`, `Array`, `Object`, and primitives during Part B.
+- [ ] **Goal 3 (`[L4–L6]`):** Diagnose `const` object aliasing in Part C and implement `safeTruncate()` in Part D without mutating inputs.
+
+---
+
 ## Part A: Remember & Understand Concepts (`[L1]` & `[L2]`)
 
 1. List all **7 primitive data types** in JavaScript (`3.1`):  

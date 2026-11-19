@@ -1,6 +1,6 @@
-# Unit 2 Quiz 2: HTTP Servers, Headers & Cloud Tradeoffs (Application)
+# Unit 2 Quiz 2: HTTP Servers, Headers, Express SSR & Cloud Tradeoffs (Application)
 
-**Bloom's:** `[L3]`–`[L5]` | **CSV:** [`quiz-2-kahoot.csv`](./quiz-2-kahoot.csv) | **Stds:** `8.3–8.6, 11.3–11.7`
+**Bloom's:** `[L3]`–`[L5]` | **CSV:** [`quiz-2-kahoot.csv`](./quiz-2-kahoot.csv) | **Stds:** `8.3–8.6, 11.3–11.7, 1.5, 15.6`
 
 | # | Question | Correct Answer | Time | Bloom's |
 |---|---|---|---|---|
@@ -14,3 +14,5 @@
 | 8 | A 100 KB script gzips by 80%. How many KB travel over the network? | **`20 KB`** | 20s | `[L3 \| 8.4]` |
 | 9 | You need zero server admin for an image thumbnailer triggered twice/hr: | **FaaS (Serverless Function)** | 30s | `[L5 \| 8.5]` |
 | 10 | Why inspect `req.method` alongside `req.url` in `node:http`? | **Same URL serves GET vs POST** | 20s | `[L4 \| 11.6]` |
+| 11 | Why wrap user names with `escapeHtml()` inside SSR template strings? | **Block script XSS injection** | 20s | `[L3 \| 15.6]` |
+| 12 | A static file handler must reject `../../.env` requests with what check? | **`path.resolve` prefix boundary check** | 30s | `[L4 \| 1.5]` |

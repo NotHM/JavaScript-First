@@ -1,0 +1,10 @@
+{
+  "name": "unit-18-dual-db-rest",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Unit 18 Project Starter: Dual-Database Full-Stack REST API (SQLite + MQL + Content Negotiation)",
+  "scripts": {
+    "test": "node --test index.test.mjs"
+  }
+}

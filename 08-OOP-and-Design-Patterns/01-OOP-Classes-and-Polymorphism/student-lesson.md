@@ -32,3 +32,14 @@ const detached = t.tick;
 ## Part D: Composition Over Inheritance Defense (`[L5 Evaluate]`)
 A ride-sharing simulation models `ElectricBike`, `GasSedan`, `HybridSUV`, and `AutonomousDrone`. Design a **Composition architecture** (`BatteryEngine`, `GPSRouter`, `PassengerCabin`) explaining why `extends` inheritance breaks down here (`17.6`):  
 > *(Your architecture defense)*
+
+---
+
+## Lesson SMART Objectives Tracker
+
+Check off each milestone after completing and testing your own work (**zero solution spoilers — verify every OOP contract in Node.js**):
+
+- [ ] **SL-L8.1-1 (`[L1–L2 Remember/Understand]` | Std `17.1, 17.4–17.9` | `SG-U08-1`):** Complete Part A value-vs-reference predictions and OOP pillar explanations with >= 80% accuracy by Day 76.
+- [ ] **SL-L8.1-2 (`[L3 Apply]` | Std `17.4–17.8` | `SG-U08-2`):** Implement `Shape`, `Rectangle`, and `addScoreSafe` in `oopPillarsLab.js` and pass all verification checks by end of Day 77.
+- [ ] **SL-L8.1-3 (`[L4 Analyze]` | Std `17.9–17.10` | `SG-U08-3`):** Diagnose the detached `this` error in Part C and write a one-line binding fix before Kahoot Quiz 1 on Day 77.
+- [ ] **SL-L8.1-4 (`[L5 Evaluate]` | Std `17.6, 17.12` | `SG-U08-4`):** Defend your Part D Composition architecture over Inheritance and complete [`post-lesson-eval.md`](./post-lesson-eval.md) by end of Day 77.

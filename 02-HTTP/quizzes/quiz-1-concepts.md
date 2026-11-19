@@ -1,6 +1,6 @@
-# Unit 2 Quiz 1: Internet Protocols, Cloud & IoT (Concepts)
+# Unit 2 Quiz 1: Internet Protocols, Cloud, IoT & SSR Basics (Concepts)
 
-**Bloom's:** `[L1]`–`[L2]` | **CSV:** [`quiz-1-kahoot.csv`](./quiz-1-kahoot.csv) | **Stds:** `8.1`–`8.6`
+**Bloom's:** `[L1]`–`[L2]` | **CSV:** [`quiz-1-kahoot.csv`](./quiz-1-kahoot.csv) | **Stds:** `8.1`–`8.6`, `11.6`–`11.7`
 
 | # | Question | Correct Answer | Time | Bloom's |
 |---|---|---|---|---|
@@ -14,3 +14,5 @@
 | 8 | What primary benefit does Cloud elasticity offer web apps? | **Scale capacity on demand** | 20s | `[L2 \| 8.1]` |
 | 9 | Reducing JS/CSS payload sizes before network transfer uses: | **Gzip / Brotli compression** | 20s | `[L2 \| 8.4]` |
 | 10 | Caching static assets globally close to end users relies on a: | **CDN (Content Delivery Network)** | 20s | `[L1 \| 8.4]` |
+| 11 | Which `package.json` property enables ES module `import` syntax in `.js` files? | **`"type": "module"`** | 20s | `[L1 \| 11.7]` |
+| 12 | Which Express middleware serves CSS and image files from a folder? | **`express.static()`** | 20s | `[L2 \| 8.3, 11.6]` |

@@ -1,0 +1,10 @@
+{
+  "name": "unit-17-deno-wasm-audit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Unit 17 Project Starter: Runtime Capability & WASM Sandbox Auditor",
+  "scripts": {
+    "test": "node --test index.test.mjs"
+  }
+}

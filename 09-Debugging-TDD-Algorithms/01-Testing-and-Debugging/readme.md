@@ -44,9 +44,15 @@ Never test only the "middle" valid value. Always design tests at **boundaries**:
 ## 4. Hand-Tracing & Live Debugger (`Std 12.5`)
 
 - **Hand-Tracing Table:** Track variables column-by-column (`i`, `sum`, `mid`, `left`, `right`) across every iteration before touching the keyboard.
+- **Structured Console & Type Inspection:** Guard debug flags cleanly (`DEBUG_FLAGS`), format tabular arrays (`console.table()`), snapshot call stacks (`console.trace()`), and verify runtime types/freeze state without falling into the `typeof null === 'object'` trap (see [`code/console.js`](./code/console.js) & [`code/typeChecker.js`](./code/typeChecker.js)).
 - **VS Code Live Debugger:** Toggle a red **Breakpoint (`F9`)**, launch **Debug JS**, inspect the **Variables** & **Call Stack** panes, and step **Over (`F10`)** / **Into (`F11`)**—faster and cleaner than temporary `console.log()` clutter.
+
+<p align="center">
+  <img src="./imgs/logType.png" alt="Runtime type and object state checker utility" width="460"/>
+  <img src="./imgs/consoleResults.png" alt="Structured console debugging output in Node terminal" width="460"/>
+</p>
 
 ## Lesson Resources
 - **Slides:** [`slides/slides.md`](./slides/slides.md)
-- **Teacher Demo:** [`code/debuggingAndTddDemo.test.js`](./code/debuggingAndTddDemo.test.js)
+- **Teacher Demos:** [`code/debuggingAndTddDemo.test.js`](./code/debuggingAndTddDemo.test.js), [`code/console.js`](./code/console.js) & [`code/typeChecker.js`](./code/typeChecker.js)
 - **Student Starters:** [`../../0-student_files/10-debugging-tdd/debuggingLab.test.js`](../../0-student_files/10-debugging-tdd/debuggingLab.test.js) & [`../../0-student_files/10-debugging-tdd/algorithms.test.js`](../../0-student_files/10-debugging-tdd/algorithms.test.js)

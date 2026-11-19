@@ -1,0 +1,19 @@
+{
+  "name": "canvas-arcade-starter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "main.js",
+  "description": "Lesson 19.1 playable 4:3 HTML5 Canvas + Gamepad API + Web Audio pooling starter for browser & jsgamelauncher",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test ../gameLoopAndInput.test.mjs"
+  },
+  "devDependencies": {
+    "fflate": "^0.8.3",
+    "vite": "^8.0.16"
+  },
+  "license": "MIT"
+}

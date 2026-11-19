@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "start": "deno run --allow-net=127.0.0.1:8080 --allow-env=PORT deno_starter.ts",
+    "check": "deno check deno_starter.ts"
+  }
+}

@@ -32,6 +32,13 @@ Before installing packages from npm, check Node's zero-dependency built-ins:
 
 ---
 
+### `[L2 Understand -> L3 Apply]` Production Tooling: ESLint & Babel
+
+- **ESLint (`eslint.config.mjs`):** Automatically flags `no-var`, `eqeqeq` (`===`), and unsafe `eval()` before code reaches PR review!
+- **Babel (`@babel/preset-env`):** Compiles modern ES syntax into browser-compatible JS using **preset** or **custom** configs when targeting older runtimes.
+
+---
+
 ### `[L3 Apply]` Evaluating Docs vs. Q&A (`Std 13.3, 13.4`)
 
 - Verify community Stack Overflow snippets against **MDN** and **Node.js Docs**.
@@ -47,4 +54,4 @@ Every professional repository MUST document:
 3. Copy-paste Quickstart Usage Example
 4. License (`MIT`)
 
-> **Lab:** Open `0-student_files/13-vcs-community/pkgEvaluatorLab.js` & score candidate packages!
+> **Labs:** Open `0-student_files/13-vcs-community/pkgEvaluatorLab.js` and run `node --test 13-Version-Control-and-Community/02-Community-Resources-NPM-Docs/code/eslintPresetReference.mjs`!

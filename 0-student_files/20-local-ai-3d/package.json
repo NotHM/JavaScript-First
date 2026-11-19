@@ -1,0 +1,10 @@
+{
+  "name": "student-20-local-ai-3d-labs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Student blank starter labs for Unit 20 (Local LLM Streaming, RAG, Voice WAV, Vision & 3D CAD STL)",
+  "scripts": {
+    "test": "node --test ragAndStreamLab.test.mjs"
+  }
+}

@@ -7,6 +7,13 @@
 
 ---
 
+## Lesson SMART Objectives Checklist
+- [ ] **Goal 1 (`[L1–L2]`):** Explain JS evolution (1995–2015+), default copyright rules, and permissive vs. copyleft licenses accurately by the end of Part A.
+- [ ] **Goal 2 (`[L3–L4]`):** Implement `evaluateLicense()` and `sanitizeRecord()` in `licenseAudit.js` and flag all COPPA/FERPA/GDPR risks cleanly during Part B–C lab time.
+- [ ] **Goal 3 (`[L5]`):** Write an evidence-based licensing & AI attribution policy memo in Part D.
+
+---
+
 ## Part A: Foundations & Concepts (`[L1 Remember]` & `[L2 Understand]`)
 
 1. Fill in the key JavaScript history milestones (`2.2`):

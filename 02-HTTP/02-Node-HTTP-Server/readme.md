@@ -15,6 +15,11 @@
 - **Server Response:** Status Code (`200`, `201`, `404`, `405`, `500`) + Response Headers (`Content-Type`, `Content-Length`, `Cache-Control`) + Payload Body.
 - **Byte-Accurate Content-Length:** JavaScript `.length` counts UTF-16 code units, NOT UTF-8 bytes! Always pass `Buffer.byteLength(body)` so emojis/accents never get clipped mid-transfer.
 
+<p align="center">
+  <img src="../imgs/HTTP-readFile.png" alt="Serving an HTML file from disk via Node fs.readFile and http" width="460"/>
+  <img src="../imgs/httpServerTemplate.png" alt="Dynamic HTML template composition in a Node HTTP server" width="460"/>
+</p>
+
 ---
 
 ## 2. Routing Methods & Template Composition (`Std 11.6, 11.7`)

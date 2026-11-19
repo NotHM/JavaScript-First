@@ -7,6 +7,9 @@
     "bierner.markdown-mermaid",
     "hediet.vscode-drawio",
     "formulahendry.code-runner",
+    "dbaeumer.vscode-eslint",
+    "denoland.vscode-deno",
+    "oven.bun-vscode",
     "aaron-bond.better-comments",
     "esbenp.prettier-vscode"
   ]

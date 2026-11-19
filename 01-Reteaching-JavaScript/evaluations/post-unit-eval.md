@@ -2,7 +2,7 @@
 
 **Directions:** Complete this evaluation at the end of Unit 1 **independently without notes**. Compare your score against your Unit 1 Pre-Unit Evaluation to document measurable growth across AZ CTE Standards `2.0`, `3.0`, and `11.0`.
 
-**Name:** `______________________` **Date:** `__________` **Post-Score:** `____ / 14`
+**Name:** `______________________` **Date:** `__________` **Post-Score:** `____ / 16`
 
 ---
 
@@ -73,25 +73,37 @@
    - C) Because numbers cannot be passed as function arguments  
    - D) Because `0` is a BigInt  
 
+9. **`[L3 Apply | Std 11.7 / 13.1]`** Inside an ES Module (`index.mjs`), which combination safely derives the current directory path AND loads a legacy `.cjs` helper module?  
+   - A) `__dirname` and `require('./legacy.cjs')`  
+   - B) `fileURLToPath(import.meta.url)` + `path.dirname(...)` and `createRequire(import.meta.url)`  
+   - C) `window.location.href` and `<script src="./legacy.cjs">`  
+   - D) `process.cwd()` and `JSON.parse('./legacy.cjs')`  
+
+10. **`[L4 Analyze | Std 18.2]`** A module `fmt.mjs` contains ONLY `export default function badge(s) { return "[" + s + "]"; }`. Calling `import { badge } from './fmt.mjs';` throws:  
+    - A) `SyntaxError: The requested module './fmt.mjs' does not provide an export named 'badge'`  
+    - B) `TypeError: Assignment to constant variable`  
+    - C) `ReferenceError: window is not defined`  
+    - D) `ERR_UNKNOWN_FILE_EXTENSION`  
+
 ---
 
 ### Part B — Higher-Order Thinking: Analyze, Evaluate & Create (2 pts each = 6 pts)
 
-9. **`[L4 Analyze | Std 2.3 / 1.5]`** Look at this logging call from a telemetry microservice:  
-   ```javascript
-   console.log({ event: "signup", email: user.email, dob: user.dob, age: 12 });
-   ```  
-   Identify **two legal/privacy violations** introduced by writing raw `email` and `dob` for a 12-year-old user into plaintext logs, and specify how to sanitize them before logging.  
-   > *(Your response)*  
+11. **`[L4 Analyze | Std 2.3 / 1.5]`** Look at this logging call from a telemetry microservice:  
+    ```javascript
+    console.log({ event: "signup", email: user.email, dob: user.dob, age: 12 });
+    ```  
+    Identify **two legal/privacy violations** introduced by writing raw `email` and `dob` for a 12-year-old user into plaintext logs, and specify how to sanitize them before logging.  
+    > *(Your response)*  
 
-10. **`[L5 Evaluate | Std 2.1 / 2.2]`** Your team must pick ONE library for a commercial school-management SaaS product:  
+12. **`[L5 Evaluate | Std 2.1 / 2.2]`** Your team must pick ONE library for a commercial school-management SaaS product:  
     - **Library A:** Unlicensed code copied from a public blog post (no `LICENSE` file).  
     - **Library B:** Apache 2.0 licensed npm package with `0` audit vulnerabilities and active maintainers.  
     - **Library C:** Proprietary paid binary that collects student behavioral telemetry with no privacy policy.  
     Evaluate why Library A and Library C fail professional software engineering criteria and defend selecting Library B.  
     > *(Your response)*  
 
-11. **`[L6 Create | Std 3.1 / 11.4 / 11.9]`** On the lines below, write a clean camelCase Node.js function `formatCliBanner(courseTitle, credits)` that validates `typeof courseTitle === "string"` and `typeof credits === "number"`, trims `courseTitle`, and returns an uppercase formatted banner string (or throws a clear `TypeError` on invalid input).  
+13. **`[L6 Create | Std 3.1 / 11.4 / 11.9]`** On the lines below, write a clean camelCase Node.js function `formatCliBanner(courseTitle, credits)` that validates `typeof courseTitle === "string"` and `typeof credits === "number"`, trims `courseTitle`, and returns an uppercase formatted banner string (or throws a clear `TypeError` on invalid input).  
     ```javascript
     // Write your solution here:
     ```

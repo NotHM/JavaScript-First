@@ -1,0 +1,13 @@
+{
+  "name": "local-multimodal-3d-capstone",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "server.mjs",
+  "description": "Unit 20 Final Capstone: Full-Stack Local Multimodal AI Chat (Voice + Vision/Video Bonus + 3D CAD STL/OBJ Double Bonus)",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test ../multimodalAnd3dCad.test.mjs"
+  },
+  "license": "MIT"
+}

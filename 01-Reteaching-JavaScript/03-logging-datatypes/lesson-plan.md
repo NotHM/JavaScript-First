@@ -5,6 +5,13 @@
 
 ---
 
+## Lesson SMART Objectives (Teacher & Student Targets)
+- [ ] **Teacher SMART Goal 1:** Model Stack vs. Heap references and the `typeof null === "object"` quirk via live code traces so >= 85% of students pass Lesson 1.3 `post-lesson-eval.md` item 3.
+- [ ] **Student SMART Goal 1 (`[L1–L2]`):** Recall all 7 JS primitive types and explain Stack vs. Heap reference aliasing accurately by end of Day 1.
+- [ ] **Student SMART Goal 2 (`[L3–L5]`):** Implement `primitives.js`, `logIf.js`, and `logTern.js` accurately labeling `null`, `Array`, `Object`, and `Function` plus an $O(n)$ `safeTruncate()` helper by end of Day 2.
+
+---
+
 ## Bloom's Taxonomy Objective Ladder
 | Tier | Student Learning Objective |
 |---|---|

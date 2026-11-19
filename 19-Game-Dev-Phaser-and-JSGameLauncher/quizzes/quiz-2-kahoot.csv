@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+Tab switch causes dt=4000ms and player tunnels past walls. Best fix?,Remove requestAnimationFrame,Clamp dt with Math.min(dt 50),Double player speed,Clear localStorage,30,2
+Web Audio fails at startup until the player clicks or hits a key. Why?,AudioContext needs gesture resume(),Browser lacks speakers,Canvas blocks MP3 files,Vite disables sound,20,1
+One USB gamepad is plugged in. What does utils.js getInput() return?,Keyboard only,[Gamepad as p1 and Keyboard as p2],Null array,Two keyboards,30,2
+Holding BUTTON_SOUTH triggers SFX 60 times every second. How do you stop spam?,Delete AudioContext,Check button-release edge flag,Lower screen FPS to 1,Mute browser tab,30,2
+Make a Phaser Arcade sprite bounce off 640x480 walls forever using:,setStatic(true),setBounce(1 1) and setCollideWorldBounds(true),disableBody(),setVisible(false),20,2
+Untrusted game package.json contains a malicious postinstall script. Safe flag?,npm install --force,npm install --ignore-scripts,npm install --global,npm start --eval,20,2
+Inside jsgamelauncher vm.SourceTextModule realm calling import('fs') will:,Delete user files,Reject with an error (Node APIs absent),Open SSH shell,Return C:/ root,30,2
+Why bundle games into a .jsgame zip archive via Vite library build?,Hides syntax errors,Ships self-contained JS avoiding runtime npm install,Requires Chrome extensions,Disables Gamepad API,30,2
+Which flag attaches Node Inspector breakpoints inside jsgamelauncher?,--no-audio,--inspect,--disable-gpu,--mute,20,2
+Idle handheld analog stick drifts at axis=0.06. How do you stabilize input?,Multiply by 100,Apply a 0.15 deadzone threshold,Reverse D-Pad wiring,Disable update(),30,2

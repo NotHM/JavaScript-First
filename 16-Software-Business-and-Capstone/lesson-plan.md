@@ -15,3 +15,17 @@
 - **Pre 16.1 Key:** 1) Waterfall tests at end; Agile ships working increments every sprint for live feedback; 2) Minimum Viable Product—launches core problem solver fast to validate demand before wasting months on unused features; 3) `$8.00`; 4) Every customer loses `-$20`, accelerating bankruptcy as marketing scales!
 - **Post 16.1 Key:** 1) `SaaS Subscription`, `Freemium`, `Ad-Supported`, `One-Time License`, `Usage-Based`; 2) Top-Down decomposes technical modules cleanly; Retrospectives improve team velocity/process after each sprint; 3) LTV=`$80`, Max CAC=`$26.67`; 4) Violated reliability (`8s hangs`), onboarding simplicity (`19.3`), and retention cohorts (`19.7`); 5) AI accelerates boilerplate while human devs enforce architecture, security audits (`1.0`), & automated `node:test` gates (`12.0`).
 - **Worksheet Part C Key:** 1) `$12 * 0.70 - $1.40 = $7.00`; 2) `7000 / 7 = 1,000` subs; 3) LTV=`$7 * 10 = $70`; Ratio = `1.56 : 1` -> **NO** (`< 3:1`). Improve via qualifying for 15% Small Business App Store cut, annual pricing plans, & fixing onboarding to slash churn!
+
+---
+
+## Teacher & Student SMART Objectives Alignment
+
+| Lesson Checkpoint | Aligned Unit Goal(s) | Bloom's & Standard | Measurable Target & Timing |
+|---|---|---|---|
+| **Pre-Lesson 16.1 & Part A Lifecycle/Models** | `SG-U16-1`, `TG-U16-1` | `L1–L2` (`19.1, 19.5`) | Administer [`pre-lesson-eval.md`](./pre-lesson-eval.md) on Day 86; >= 80% accuracy completing Part A Waterfall/Agile/SaaS/Freemium matrix by Day 86. |
+| **SaaS Economics Planner Lab (Part B)** | `SG-U16-2`, `TG-U16-2` | `L3` (`19.4`) | Live checkoff of [`appLaunchPlanner.js`](../0-student_files/16-business-capstone/appLaunchPlanner.js) verifying net subscriber, break-even, and `LTV:CAC` helpers by end of Day 87. |
+| **Startup Financial Forensics & Kahoot (Part C)** | `SG-U16-3`, `TG-U16-3` | `L4` (`19.4, 19.7`) | >= 80% accuracy solving Part C StudySync unit-economics diagnostics; run 10-min churn/`LTV:CAC` reteach if Kahoot Quiz 1/2 falls < 75%. |
+| **MVP Launch Strategy, Capstone & Exit Ticket (Part D)** | `SG-U16-4`, `SG-U16-5`, `TG-U16-1`, `TG-U16-4`, `TG-U16-5` | `L5–L6` (`19.2–19.8` + Capstone) | Administer [`post-lesson-eval.md`](./post-lesson-eval.md) on Day 90 targeting Hake's $g \ge 0.55$; grade [`project-rubric.md`](./projects/project-rubric.md) within 72 hours and archive full-semester CTE evidence. |
+
+- [ ] **Teacher Checkpoint (`TG-U16-1..5`):** Pre/Post Lesson 16.1 growth ($g \ge 0.55$) verified, 100% `appLaunchPlanner.js` + Capstone `npm test` checkoffs completed, Kahoot < 75% gaps retaught, and final rubrics returned within 3 school days.
+- [ ] **Student Checkpoint (`SG-U16-1..5`):** Parts A–D verified without spoilers, `appLaunchPlanner.js` passing cleanly, and Semester Capstone demoed on Day 90.

@@ -28,3 +28,14 @@ Explain what each section means, which version keeps cloud configurability, and 
 ## Part D: DevSecOps Gate Design (`[L5 Evaluate]` & `[L6 Create]`)
 A teammate accidentally committed `.env` containing an AWS API key and pushed it to GitHub. Describe BOTH (a) why `git rm .env && git commit` alone isn't enough security hygiene, and (b) the two-part incident response (`rotate key` + `.gitignore` / CI secret scan) (`14.7`):  
 > *(Your defense)*
+
+---
+
+## Lesson SMART Objectives Tracker
+
+Check off each milestone after completing and testing your own work (**zero solution spoilers — verify your commit linter and CI checks in Node.js**):
+
+- [ ] **SL-L13.1-1 (`[L1–L2 Remember/Understand]` | Std `14.1–14.3` | `SG-U13-1`):** Compare Local, Centralized, and Distributed VCS architectures and order the 4 daily Git commands in Part A with >= 80% accuracy by Day 31.
+- [ ] **SL-L13.1-2 (`[L3 Apply]` | Std `14.6–14.8` | `SG-U13-2`):** Implement `isConventionalCommit()` and `checkCiPullRequest()` in `changelogLab.js` and pass Node checks by end of Day 32.
+- [ ] **SL-L13.1-3 (`[L4 Analyze]` | Std `14.4` | `SG-U13-3`):** Explain all conflict markers and list the 3 Git steps to resolve Part C cleanly before Kahoot Quiz 1 on Day 32.
+- [ ] **SL-L13.1-4 (`[L5–L6 Evaluate/Create]` | Std `14.7` | `SG-U13-4`):** Outline your two-part `.env` incident response plan in Part D and complete [`post-lesson-eval.md`](./post-lesson-eval.md) by end of Day 32.

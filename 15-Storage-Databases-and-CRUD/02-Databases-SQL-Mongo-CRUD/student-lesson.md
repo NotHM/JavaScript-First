@@ -25,3 +25,14 @@ Inspect BOTH production incidents and explain how to prevent them (`16.6`):
 ## Part D: Database Selection Brief (`[L5 Evaluate]`)
 Compare **PostgreSQL (Relational SQL)** vs **MongoDB (Document NoSQL)** for a **Hospital Billing System** (strict insurance codes & payment rollbacks) vs a **Smart Home Telemetry Lake** (different firmware payloads per sensor model) (`16.5`):  
 > *(Your defense)*
+
+---
+
+## Lesson SMART Objectives Tracker
+
+Check off each milestone after completing and testing your own work (**zero solution spoilers — prove every CRUD operation in Node.js**):
+
+- [ ] **SL-L15.2-1 (`[L1–L2 Remember/Understand]` | Std `16.5` | `SG-U15-1`):** Translate all 4 Part A SQL operations (`INSERT`, `SELECT`, `UPDATE`, `DELETE`) into MongoDB MQL syntax with >= 80% accuracy on Day 65.
+- [ ] **SL-L15.2-2 (`[L3 Apply]` | Std `16.3, 16.5–16.6` | `SG-U15-2`):** Implement and verify all 4 CRUD methods (including `$gte` queries) in `crudLab.js` via Node.js by end of Day 66.
+- [ ] **SL-L15.2-3 (`[L4 Analyze]` | Std `16.6` | `SG-U15-3`):** Diagnose both Part C production wipeout and concurrent lost-update incidents accurately before Kahoot Quiz 2 on Day 66.
+- [ ] **SL-L15.2-4 (`[L5–L6 Evaluate/Create]` | Std `16.5` | `SG-U15-4`, `SG-U15-5`):** Defend your Part D PostgreSQL vs. MongoDB architectural choices and complete [`post-lesson-eval.md`](./post-lesson-eval.md) by Day 67.

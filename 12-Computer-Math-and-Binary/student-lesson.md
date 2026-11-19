@@ -44,3 +44,14 @@
 
 You are building an astronomy & fintech app tracking: (1) spacecraft distance in meters exceeding $10^{17}$, and (2) exact ticket purchases in USD. Evaluate `number`, **integer fixed-point cents**, and `BigInt`, recommending the best type for each requirement and explaining what bug happens if you swap them (`4.5`, `4.6`).  
 > *(Your defense)*
+
+---
+
+## Lesson SMART Objectives Tracker
+
+Check off each milestone after completing and testing your own work (**zero solution spoilers — verify every conversion and bitmask calculation in Node.js**):
+
+- [ ] **SL-L12.1-1 (`[L1–L2 Remember/Understand]` | Std `4.1–4.2` | `SG-U12-1`):** Complete the Part A storage/frequency unit ordering and decimal/binary/hex table with >= 80% accuracy by Day 9.
+- [ ] **SL-L12.1-2 (`[L3 Apply]` | Std `4.2, 4.4–4.5, 4.7` | `SG-U12-2`):** Implement and verify all 5 Part B math and bitwise functions in `computerMathLab.js` via Node.js by end of Day 11.
+- [ ] **SL-L12.1-3 (`[L4 Analyze]` | Std `4.3, 4.5–4.6` | `SG-U12-3`):** Explain both Part C IEEE-754 rounding drift and GEMA precedence traces before Day 12 project launch.
+- [ ] **SL-L12.1-4 (`[L5–L6 Evaluate/Create]` | Std `4.5–4.6` | `SG-U12-4`, `SG-U12-5`):** Defend your Part D numeric type selections (`BigInt`, fixed-point cents, `number`) and complete [`post-lesson-eval.md`](./post-lesson-eval.md) by Day 12.

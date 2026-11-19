@@ -18,6 +18,9 @@ vscode:
     # Code Execution & Formatting
     - formulahendry.code-runner
     - esbenp.prettier-vscode
+    - dbaeumer.vscode-eslint
+    - denoland.vscode-deno
+    - oven.bun-vscode
     - svipas.control-snippets
     # Collaboration & Teaching
     - vsls-contrib.codetour

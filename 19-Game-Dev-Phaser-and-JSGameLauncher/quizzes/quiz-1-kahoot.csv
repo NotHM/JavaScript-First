@@ -1,0 +1,11 @@
+Question,Answer 1,Answer 2,Answer 3,Answer 4,Time limit,Correct answer
+What default 4:3 pixel size does jsgamelauncher expect on #game-canvas?,320 x 200,640 x 480,1920 x 1080,100 x 100,20,2
+Which browser API schedules display-synced frame callbacks for a game loop?,setInterval,requestAnimationFrame,localStorage,fetch,20,2
+Which navigator method polls connected USB or handheld gamepads each frame?,navigator.readPad(),navigator.getGamepads(),window.pollKeys(),document.padList(),20,2
+In utils.js which standard button maps to Xbox A or Nintendo B (key z)?,BUTTON_NORTH,BUTTON_SOUTH,BUTTON_WEST,SELECT,20,2
+Which Web Audio node scales SFX volume between AudioBufferSource and destination?,GainNode,ScriptTag,CanvasContext,PromiseNode,20,1
+Which package.json field enables ES module imports for Vite and jsgamelauncher?,type: commonjs,type: module,esm: false,main: index.html,20,2
+Which Phaser.Scene method loads images and audio BEFORE create() executes?,render(),preload(),destroy(),physics(),20,2
+Why drop an empty <game-name>.jsg file into a handheld game directory?,Compresses audio,Lets EmulationStation list the game,Enables Wi-Fi,Compiles C++ code,20,2
+Which CLI command runs a jsgamelauncher game directly in a native SDL window?,npm run lint,npx rungame ./mygame.jsg,git checkout main,curl localhost,20,2
+Where are JS games copied on Knulli or Batocera retro handheld devices?,/etc/passwd,/userdata/roms/jsgames,/var/log/http,/tmp/browser,20,2

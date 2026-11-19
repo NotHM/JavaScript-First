@@ -24,3 +24,14 @@ Your nightly cron ran `fs.writeFile('users.json', data)` directly WITHOUT `.tmp 
 ## Part D: Disaster Recovery Policy (`[L5 Evaluate]`)
 A school district stores student IEPs and grade records. Propose a **3-2-1 Backup Strategy** specifying offsite encryption, automated monthly restore tests, `RPO <= 1 hr`, and `RTO <= 2 hrs` (`16.4`):  
 > *(Your recovery policy)*
+
+---
+
+## Lesson SMART Objectives Tracker
+
+Check off each milestone after completing and testing your own work (**zero solution spoilers — prove atomic writes and SHA-256 verification in Node.js**):
+
+- [ ] **SL-L15.1-1 (`[L1–L2 Remember/Understand]` | Std `16.1–16.2, 16.4` | `SG-U15-1`):** Complete the Part A storage-tier table and define RPO vs. RTO accurately with >= 80% mastery by Day 63.
+- [ ] **SL-L15.1-2 (`[L3 Apply]` | Std `16.3–16.4` | `SG-U15-2`):** Implement `computeSha256`, `writeAtomicJson`, and `loadVerifiedJson` cleanly in `fileStorageLab.js` by end of Day 64.
+- [ ] **SL-L15.1-3 (`[L4 Analyze]` | Std `16.3–16.4` | `SG-U15-3`):** Diagnose both consequences of the Part C partial-write crash and explain how atomic `.tmp` renaming prevents them before Kahoot Quiz 1 on Day 64.
+- [ ] **SL-L15.1-4 (`[L5 Evaluate]` | Std `16.4` | `SG-U15-4`):** Author your Part D 3-2-1 backup policy (`RPO <= 1 hr`, `RTO <= 2 hrs`) and complete [`post-lesson-eval.md`](./post-lesson-eval.md) by end of Day 64.

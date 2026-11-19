@@ -25,3 +25,14 @@ Trace `for (let i = 0; i < 3; i++) { sum += i * 2; }` starting at `sum = 10`:
 ## Part D: CI & QA Gate Design (`[L5 Evaluate]`)
 Imagine a teammate commits code directly to `main` without running tests and breaks checkout totals. Explain how adding an automated CI workflow (`node --test`) + boundary test cases catches this defect before deployment (`12.2, 12.3`):  
 > *(Your defense)*
+
+---
+
+## Lesson SMART Objectives Tracker
+
+Check off each milestone after completing and verifying your own work (**zero solution spoilers — prove your fixes with green `node --test` output**):
+
+- [ ] **SL-L9.1-1 (`[L1–L2 Remember/Understand]` | Std `12.1, 12.4` | `SG-U09-1`):** Classify all 4 Part A error scenarios accurately with >= 80% mastery by end of Day 40.
+- [ ] **SL-L9.1-2 (`[L3 Apply]` | Std `12.2–12.3` | `SG-U09-2`):** Turn `debuggingLab.test.js` and `algorithms.test.js` from Red to Green via `node --test` by end of Day 42.
+- [ ] **SL-L9.1-3 (`[L4 Analyze]` | Std `12.5` | `SG-U09-3`):** Complete all 3 passes in the Part C hand-tracing table and step through a VS Code breakpoint before Kahoot Quiz 1 on Day 42.
+- [ ] **SL-L9.1-4 (`[L5 Evaluate]` | Std `12.2–12.3` | `SG-U09-4`):** Defend your Part D CI workflow and boundary-test gate and complete [`post-lesson-eval.md`](./post-lesson-eval.md) by end of Day 42.

@@ -9,3 +9,5 @@ Which component sits before Node handling TLS and load balancing?,Reverse Proxy,
 A 100 KB asset gzips by 80%. How many KB travel over the wire?,80 KB,20 KB,50 KB,100 KB,20,2
 Zero server ops needed for a rare webhook running twice daily. Pick:,Custom IaaS Kernel,FaaS Serverless Function,Buy bare-metal rack,Manual Cron FTP,30,2
 Why inspect BOTH req.method and req.url in node:http routers?,Methods ignore URLs,Same URL handles GET and POST differently,Headers require POST,Browsers only send PUT,20,2
+Why wrap user names with escapeHtml() inside SSR template strings?,Shrink file byte size,Block script XSS injection,Enable JSON parsing,Speed up DNS lookup,20,2
+A static file handler must reject ../../.env requests with what check?,path.resolve prefix boundary check,String.toLowerCase check,JSON.stringify wrapper,Array.sort comparison,30,1

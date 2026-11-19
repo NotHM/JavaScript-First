@@ -22,7 +22,7 @@ JavaScript resolves variables through three main scopes:
 2. **Local Scope (Function & Block):** `var` respects function boundaries; `let` and `const` respect `{ ... }` block boundaries (`if`, `for`, `{}`).
 3. **Lexical Scope:** Inner functions can access variables defined in their outer enclosing functions.
 
-**Hoisting** moves declarations (`var` and `function` declarations) to the top of their scope during compilation. Avoid relying on `var` hoisting—prefer `const` by default and `let` when reassignment is needed.
+**Hoisting** moves declarations (`var` and `function` declarations) to the top of their scope during compilation. Avoid relying on `var` hoisting—prefer `const` by default and `let` when reassignment is needed. Always enable `'use strict'` (automatic in ES modules) so undeclared assignments like `number = 100` throw `ReferenceError` instead of creating accidental globals (see [`code/hoisting.js`](./code/hoisting.js)).
 
 ## 3. Operators & Strict Equality
 - **Assignment:** `=`, `+=`, `-=`
@@ -42,11 +42,16 @@ const frozenUser = Object.freeze({ name: 'Alex', role: 'student' });
 frozenUser.role = 'admin'; // Ignored (or throws TypeError in strict mode)
 ```
 
+<p align="center">
+  <img src="./imgs/const-trick-question.png" alt="Why const objects still allow property mutation" width="460"/>
+  <img src="./imgs/freezeObj.png" alt="Locking top-level properties with Object.freeze" width="460"/>
+</p>
+
 For nested objects, `Object.freeze()` is only **shallow**; use `structuredClone(obj)` when you need an independent deep copy.
 
 ---
 
 ## Chapter Contents
 - **Slides:** [`slides/slides.md`](./slides/slides.md)
-- **Code Example:** [`code/immutability.js`](./code/immutability.js)
+- **Code Examples:** [`code/immutability.js`](./code/immutability.js) & [`code/hoisting.js`](./code/hoisting.js)
 - **Student Lesson:** [`student-lesson.md`](./student-lesson.md)

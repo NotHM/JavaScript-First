@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Local Multimodal AI Chat Studio with Offline Voice STT/TTS, Vision/Video Bonus, and Parametric 3D CAD STL/OBJ Print Pipeline" />
+  <title>Unit 20 Capstone — Local Multimodal AI &amp; 3D Print Studio</title>
+  <style>
+    * { box-sizing: border-box; }
+    :root {
+      --bg: #0b1120;
+      --panel: #111827;
+      --border: #1e293b;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --ok: #22c55e;
+      --warn: #f59e0b;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    h1 { margin: 0; font-size: 1.25rem; color: var(--accent); }
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+    section {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    h2 { margin: 0; font-size: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+    .badge { font-size: 0.72rem; padding: 0.15rem 0.5rem; border-radius: 999px; background: #1e293b; color: var(--accent); }
+    .chat-log {
+      min-height: 210px;
+      max-height: 280px;
+      overflow-y: auto;
+      background: #020617;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.75rem;
+      font-size: 0.9rem;
+    }
+    .msg { margin-bottom: 0.6rem; }
+    .msg-role { font-weight: 700; color: var(--accent); }
+    label { font-size: 0.85rem; color: var(--muted); display: block; }
+    input, select, textarea, button {
+      font: inherit;
+      color: var(--text);
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 6px;
+      padding: 0.45rem 0.65rem;
+    }
+    button {
+      background: #0284c7;
+      border-color: #0369a1;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:hover { background: #0369a1; }
+    button.secondary { background: #1e293b; border-color: #334155; }
+    .row { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+    canvas#cadCanvas {
+      width: 100%;
+      max-width: 440px;
+      height: auto;
+      background: #020617;
+      border: 1px solid #334155;
+      border-radius: 8px;
+    }
+    pre {
+      margin: 0;
+      background: #020617;
+      padding: 0.6rem;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      overflow-x: auto;
+      color: #cbd5e1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Local Multimodal AI &amp; 3D Print Studio</h1>
+    <span class="badge">100% Local-First &bull; Core Voice + Bonus Vision/Video + 2x 3D CAD STL</span>
+  </header>
+
+  <main>
+    <section aria-labelledby="core-heading">
+      <h2 id="core-heading">1. Core: Local LLM Chat + Voice STT/TTS</h2>
+      <div id="chatLog" class="chat-log" aria-live="polite"></div>
+      <form id="chatForm">
+        <label for="promptInput">Prompt (mention "box", "l-bracket", or "gear" to auto-generate 3D CAD!)</label>
+        <div class="row">
+          <input id="promptInput" type="text" required style="flex:1" placeholder="Design a 12-tooth spur gear or ask a local RAG question..." />
+          <button type="submit">Send</button>
+        </div>
+      </form>
+      <div class="row">
+        <button id="micBtn" type="button" class="secondary">Mic STT (Web Speech / Sim)</button>
+        <button id="ttsBtn" type="button" class="secondary">Speak Last Reply (Piper WAV)</button>
+        <button id="clearBtn" type="button" class="secondary">Clear History</button>
+      </div>
+      <audio id="ttsAudio" controls style="width:100%"></audio>
+    </section>
+
+    <section aria-labelledby="bonus-heading">
+      <h2 id="bonus-heading">2. Bonus: Local Vision, Image Gen &amp; Video Sampling</h2>
+      <label for="visionFile">Attach Image for Local Vision (`llava` Base64)</label>
+      <input id="visionFile" type="file" accept="image/png,image/jpeg,image/webp" />
+      <div id="visionStatus" class="badge">No image attached</div>
+
+      <label for="imgGenPrompt">Local Image Gen Adapter (SD WebUI / ComfyUI)</label>
+      <div class="row">
+        <input id="imgGenPrompt" type="text" style="flex:1" value="Isometric robotics bracket blueprint" />
+        <button id="imgGenBtn" type="button">Generate Preview</button>
+      </div>
+      <img id="imgGenPreview" alt="Generated local concept preview" style="max-width:100%; border-radius:8px; display:none;" />
+
+      <label for="videoDuration">Video Keyframe Sampler Plan (Duration sec)</label>
+      <div class="row">
+        <input id="videoDuration" type="number" min="1" max="120" value="10" style="width:90px" />
+        <button id="videoPlanBtn" type="button" class="secondary">Plan Keyframes</button>
+      </div>
+      <pre id="videoPlanOut">Click "Plan Keyframes" to sample video frames for vision inference.</pre>
+    </section>
+
+    <section aria-labelledby="cad-heading">
+      <h2 id="cad-heading">3. Double Bonus: Parametric 3D CAD &amp; STL Slicer Pipeline</h2>
+      <div class="row">
+        <label for="cadShape">Shape</label>
+        <select id="cadShape">
+          <option value="l-bracket">L-Bracket</option>
+          <option value="spur-gear">Spur Gear (12T)</option>
+          <option value="box">Enclosure Box</option>
+        </select>
+        <button id="cadBuildBtn" type="button">Build &amp; Validate Mesh</button>
+      </div>
+      <div class="row">
+        <label for="yawRange">Orbit Yaw</label>
+        <input id="yawRange" type="range" min="-180" max="180" value="35" />
+        <label for="pitchRange">Pitch</label>
+        <input id="pitchRange" type="range" min="-80" max="80" value="25" />
+      </div>
+      <canvas id="cadCanvas" width="440" height="300" aria-label="Interactive 3D STL Wireframe Preview"></canvas>
+      <div id="cadStatus" class="badge">Awaiting mesh build...</div>
+      <div class="row">
+        <button id="dlAsciiStl" type="button" class="secondary" disabled>Download ASCII .STL</button>
+        <button id="dlBinStl" type="button" class="secondary" disabled>Download Binary .STL</button>
+        <button id="dlObj" type="button" class="secondary" disabled>Download .OBJ</button>
+      </div>
+      <pre id="slicerChecklist">Slicer validation &amp; PrusaSlicer/Cura checklist will appear here.</pre>
+    </section>
+  </main>
+
+  <script>
+    const STORAGE_KEY = 'unit20_local_ai_chat_v1';
+    const chatLog = document.getElementById('chatLog');
+    const chatForm = document.getElementById('chatForm');
+    const promptInput = document.getElementById('promptInput');
+    const ttsAudio = document.getElementById('ttsAudio');
+    const cadCanvas = document.getElementById('cadCanvas');
+    const cadCtx = cadCanvas.getContext('2d');
+
+    let attachedImages = [];
+    let lastAssistantText = '';
+    let currentCad = null;
+
+    function appendMessage(role, text) {
+      const div = document.createElement('div');
+      div.className = 'msg';
+      const strong = document.createElement('span');
+      strong.className = 'msg-role';
+      strong.textContent = `${role}: `;
+      const body = document.createElement('span');
+      body.textContent = text;
+      div.append(strong, body);
+      chatLog.appendChild(div);
+      chatLog.scrollTop = chatLog.scrollHeight;
+      return body;
+    }
+
+    function saveHistoryLocal(role, text) {
+      const items = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      items.push({ role, text });
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(items.slice(-30)));
+    }
+
+    for (const item of JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')) {
+      appendMessage(item.role, item.text);
+    }
+
+    function project3D(v, yawDeg, pitchDeg, center, scale) {
+      const yr = (yawDeg * Math.PI) / 180;
+      const pr = (pitchDeg * Math.PI) / 180;
+      const x0 = v[0] - center[0];
+      const y0 = v[1] - center[1];
+      const z0 = v[2] - center[2];
+      const x1 = x0 * Math.cos(yr) - y0 * Math.sin(yr);
+      const y1 = x0 * Math.sin(yr) + y0 * Math.cos(yr);
+      const z2 = z0 * Math.cos(pr) - y1 * Math.sin(pr);
+      const y2 = z0 * Math.sin(pr) + y1 * Math.cos(pr);
+      const perspective = 320 / (320 + y2);
+      return [
+        cadCanvas.width / 2 + x1 * scale * perspective,
+        cadCanvas.height / 2 - z2 * scale * perspective,
+      ];
+    }
+
+    function renderCadPreview() {
+      cadCtx.fillStyle = '#020617';
+      cadCtx.fillRect(0, 0, cadCanvas.width, cadCanvas.height);
+      if (!currentCad || !currentCad.triangles) return;
+
+      const b = currentCad.bounds;
+      const center = [(b.xMin + b.xMax) / 2, (b.yMin + b.yMax) / 2, (b.zMin + b.zMax) / 2];
+      const maxDim = Math.max(b.widthMm, b.depthMm, b.heightMm, 1);
+      const scale = 170 / maxDim;
+      const yaw = Number(document.getElementById('yawRange').value);
+      const pitch = Number(document.getElementById('pitchRange').value);
+
+      cadCtx.strokeStyle = '#38bdf8';
+      cadCtx.lineWidth = 1;
+      for (const tri of currentCad.triangles) {
+        const p0 = project3D(tri.vertices[0], yaw, pitch, center, scale);
+        const p1 = project3D(tri.vertices[1], yaw, pitch, center, scale);
+        const p2 = project3D(tri.vertices[2], yaw, pitch, center, scale);
+        cadCtx.beginPath();
+        cadCtx.moveTo(p0[0], p0[1]);
+        cadCtx.lineTo(p1[0], p1[1]);
+        cadCtx.lineTo(p2[0], p2[1]);
+        cadCtx.closePath();
+        cadCtx.fillStyle = 'rgba(56, 189, 248, 0.12)';
+        cadCtx.fill();
+        cadCtx.stroke();
+      }
+    }
+
+    function loadCadResult(data) {
+      currentCad = data;
+      const v = data.validation;
+      document.getElementById('cadStatus').textContent = v.printable
+        ? `PRINTABLE: ${data.name} (${v.triangleCount} tris, watertight=${v.watertight})`
+        : `REJECTED: ${v.issues.join('; ')}`;
+      document.getElementById('slicerChecklist').textContent = JSON.stringify(v.slicerChecklist, null, 2);
+      document.getElementById('dlAsciiStl').disabled = false;
+      document.getElementById('dlBinStl').disabled = false;
+      document.getElementById('dlObj').disabled = false;
+      renderCadPreview();
+    }
+
+    document.getElementById('yawRange').addEventListener('input', renderCadPreview);
+    document.getElementById('pitchRange').addEventListener('input', renderCadPreview);
+
+    document.getElementById('cadBuildBtn').addEventListener('click', async () => {
+      const shape = document.getElementById('cadShape').value;
+      const res = await fetch('/api/cad/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ spec: { shape } }),
+      });
+      loadCadResult(await res.json());
+    });
+
+    function downloadText(filename, text, mime) {
+      const blob = new Blob([text], { type: mime });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = filename;
+      a.click();
+    }
+
+    document.getElementById('dlAsciiStl').addEventListener('click', () => {
+      if (currentCad) downloadText(`${currentCad.name}-ascii.stl`, currentCad.asciiStl, 'model/stl');
+    });
+    document.getElementById('dlObj').addEventListener('click', () => {
+      if (currentCad) downloadText(`${currentCad.name}.obj`, currentCad.objText, 'text/plain');
+    });
+    document.getElementById('dlBinStl').addEventListener('click', () => {
+      if (!currentCad) return;
+      const raw = atob(currentCad.binaryStlBase64);
+      const bytes = new Uint8Array(raw.length);
+      for (let i = 0; i < raw.length; i++) bytes[i] = raw.charCodeAt(i);
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([bytes], { type: 'application/octet-stream' }));
+      a.download = `${currentCad.name}-binary.stl`;
+      a.click();
+    });
+
+    document.getElementById('visionFile').addEventListener('change', (e) => {
+      const file = e.target.files?.[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        attachedImages = [String(reader.result)];
+        document.getElementById('visionStatus').textContent = `Attached: ${file.name}`;
+      };
+      reader.readAsDataURL(file);
+    });
+
+    document.getElementById('imgGenBtn').addEventListener('click', async () => {
+      const prompt = document.getElementById('imgGenPrompt').value;
+      const res = await fetch('/api/bonus/image-gen', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt, backend: 'sd-webui' }),
+      });
+      const data = await res.json();
+      const img = document.getElementById('imgGenPreview');
+      img.src = data.previewSvgDataUrl;
+      img.style.display = 'block';
+    });
+
+    document.getElementById('videoPlanBtn').addEventListener('click', async () => {
+      const durationSec = Number(document.getElementById('videoDuration').value);
+      const res = await fetch('/api/bonus/video-plan', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ durationSec, sampleIntervalSec: 2 }),
+      });
+      document.getElementById('videoPlanOut').textContent = JSON.stringify(await res.json(), null, 2);
+    });
+
+    document.getElementById('ttsBtn').addEventListener('click', async () => {
+      const text = lastAssistantText || 'Local multimodal voice pipeline active';
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.speak(new SpeechSynthesisUtterance(text));
+      }
+      const res = await fetch('/api/voice/tts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text }),
+      });
+      const wavBlob = await res.blob();
+      ttsAudio.src = URL.createObjectURL(wavBlob);
+    });
+
+    document.getElementById('micBtn').addEventListener('click', () => {
+      const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (SpeechRec) {
+        const rec = new SpeechRec();
+        rec.onresult = (evt) => {
+          promptInput.value = evt.results[0][0].transcript;
+        };
+        rec.start();
+      } else {
+        promptInput.value = 'Design a 12-tooth spur gear for 3D printing';
+      }
+    });
+
+    document.getElementById('clearBtn').addEventListener('click', async () => {
+      localStorage.removeItem(STORAGE_KEY);
+      chatLog.textContent = '';
+      await fetch('/api/chats', { method: 'DELETE' });
+    });
+
+    chatForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const prompt = promptInput.value.trim();
+      if (!prompt) return;
+      promptInput.value = '';
+
+      appendMessage('You', prompt);
+      saveHistoryLocal('You', prompt);
+      const replySpan = appendMessage('Local AI', '');
+      lastAssistantText = '';
+
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt, images: attachedImages }),
+      });
+      attachedImages = [];
+      document.getElementById('visionStatus').textContent = 'No image attached';
+
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let buf = '';
+      let eventType = 'message';
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buf += decoder.decode(value, { stream: true });
+        const lines = buf.split('\n');
+        buf = lines.pop() || '';
+        for (const rawLine of lines) {
+          const line = rawLine.trim();
+          if (!line) { eventType = 'message'; continue; }
+          if (line.startsWith('event:')) { eventType = line.slice(6).trim(); continue; }
+          if (!line.startsWith('data:')) continue;
+          const payload = line.slice(5).trim();
+          if (payload === '[DONE]') continue;
+          const parsed = JSON.parse(payload);
+          if (eventType === 'cad') {
+            loadCadResult(parsed);
+          } else if (parsed.token) {
+            lastAssistantText += parsed.token;
+            replySpan.textContent = lastAssistantText;
+          }
+        }
+      }
+      saveHistoryLocal('Local AI', lastAssistantText.trim());
+    });
+  </script>
+</body>
+</html>

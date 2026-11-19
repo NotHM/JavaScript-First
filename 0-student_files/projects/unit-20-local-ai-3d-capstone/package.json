@@ -1,0 +1,12 @@
+{
+  "name": "unit-20-local-ai-3d-capstone",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "server.mjs",
+  "description": "Unit 20 Final Capstone Starter: Local Multimodal AI Chat (Core + Image/Video Bonus + 3D CAD/Print Double Bonus)",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test capstone.test.mjs"
+  }
+}

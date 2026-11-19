@@ -30,3 +30,14 @@ Justification: `____________________________________________________`
 ## Part D: Graceful Degradation Strategy (`[L5 Evaluate]` & `[L6 Create]`)
 Your e-commerce homepage runs 3 concurrent fetches: **(1) Shopping Cart**, **(2) User Reviews**, and **(3) Recommended Ads**. Design which call(s) should fail-fast vs. degrade gracefully using custom errors, severity logs (`WARN` vs `ERROR`), and `finally` connection cleanup (`18.1–18.7`):  
 > *(Your design)*
+
+---
+
+## Lesson SMART Objectives Tracker
+
+Check off each milestone after completing and testing your own work (**zero solution spoilers — verify Event Loop order and error handling in Node.js**):
+
+- [ ] **SL-L7.1-1 (`[L1–L2 Remember/Understand]` | Std `18.1, 18.4` | `SG-U07-1`):** Order the 5 log severity levels and contrast `Promise.all()` vs. `Promise.allSettled()` in Part A with >= 80% accuracy by end of Day 58.
+- [ ] **SL-L7.1-2 (`[L3 Apply]` | Std `18.5–18.7` | `SG-U07-2`):** Implement `ValidationError` and `loadGracefully` cleanly in `asyncLab.js` and verify passing Node runs by end of Day 59.
+- [ ] **SL-L7.1-3 (`[L4 Analyze]` | Std `18.1–18.5` | `SG-U07-3`):** Trace the complete Part C output sequence and justify Call Stack, Microtask, and Macrotask timing before Day 60 project work.
+- [ ] **SL-L7.1-4 (`[L5–L6 Evaluate/Create]` | Std `18.1–18.7` | `SG-U07-4`, `SG-U07-5`):** Design your Part D e-commerce fail-fast vs. graceful-degradation plan and complete [`post-lesson-eval.md`](./post-lesson-eval.md) by Day 61.

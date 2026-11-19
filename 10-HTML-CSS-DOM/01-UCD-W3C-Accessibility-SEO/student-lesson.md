@@ -29,3 +29,14 @@ Inspect and rewrite this broken snippet fixing ALL FIVE W3C / A11y / SEO violati
 ## Part D: Cross-Browser & Keyboard QA Plan (`[L5 Evaluate]`)
 Create a 4-step **Usability & Browser Compatibility Checklist (`15.10`)** testing Chrome, Firefox, mobile Safari width `375px`, and keyboard-only `Tab`/`Enter`/`Esc` flows:  
 > *(Your QA checklist)*
+
+---
+
+## Lesson SMART Objectives Tracker
+
+Check off each milestone after completing and testing your own work (**zero solution spoilers — confirm passing `a11yAuditLab.js` checks in Node.js**):
+
+- [ ] **SL-L10.1-1 (`[L1–L2 Remember/Understand]` | Std `15.1–15.2, 15.8–15.9` | `SG-U10-1`):** Sketch your labeled Part A wireframe and define all 3 accessibility/SEO attributes with >= 80% accuracy by Day 69.
+- [ ] **SL-L10.1-2 (`[L3 Apply]` | Std `15.3, 15.8` | `SG-U10-2`):** Complete `meetsWcagNormalText` and `auditHtmlSnippet` in `a11yAuditLab.js` and verify in Node.js by end of Day 70.
+- [ ] **SL-L10.1-3 (`[L4 Analyze]` | Std `15.3, 15.8–15.9` | `SG-U10-3`):** Rewrite the Part C snippet to resolve all 5 W3C, accessibility, and SEO violations before Kahoot Quiz 1 on Day 70.
+- [ ] **SL-L10.1-4 (`[L5 Evaluate]` | Std `15.10` | `SG-U10-4`):** Author your 4-step Part D cross-browser and keyboard QA checklist and complete [`post-lesson-eval.md`](./post-lesson-eval.md) by end of Day 70.

@@ -21,3 +21,14 @@ Design the top-level specification for a **School Nurse Clinic Check-In Portal**
 - Pick Language + Database (`10.3, 10.6`) with compliance requirements (**HIPAA / FERPA**, `10.5`)
 - Sketch a **4-node Flowchart** (`10.8`)
 > *(Your system spec)*
+
+---
+
+## Lesson SMART Objectives Tracker
+
+Check off each milestone after completing and testing your own work (**zero solution spoilers — confirm telemetry output in Node.js**):
+
+- [ ] **SL-L14.1-1 (`[L1–L2 Remember/Understand]` | Std `10.1, 10.4, 10.6` | `SG-U14-1`):** Arrange all 7 SDLC steps and contrast RAD vs. RUP and SQL vs. NoSQL in Part A with >= 80% accuracy by Day 36.
+- [ ] **SL-L14.1-2 (`[L3 Apply]` | Std `10.2, 10.5, 10.10` | `SG-U14-2`):** Complete `systemDesignLab.js` and verify clean compliance and telemetry output in Node.js by end of Day 37.
+- [ ] **SL-L14.1-3 (`[L4 Analyze]` | Std `10.7, 10.9–10.10` | `SG-U14-3`):** Decompose the Part C checkout workflow into 4 clean helpers and document a 4-step debugging plan before Day 38.
+- [ ] **SL-L14.1-4 (`[L5–L6 Evaluate/Create]` | Std `10.2–10.8` | `SG-U14-4`, `SG-U14-5`):** Draft your Part D School Nurse Clinic spec (User Story, Stack/Compliance, Flowchart) and complete [`post-lesson-eval.md`](./post-lesson-eval.md) by Day 39.

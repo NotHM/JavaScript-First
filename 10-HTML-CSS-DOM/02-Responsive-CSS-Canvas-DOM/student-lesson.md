@@ -24,3 +24,14 @@ Inspect BOTH bugs and explain root causes:
 ## Part D: Library Selection Critique (`[L5 Evaluate]`)
 Evaluate adopting **Bootstrap**, **Tailwind CSS**, or **Vanilla CSS Custom Properties** for (1) a 2-week internal hackathon prototype vs. (2) a long-term student capstone portfolio weighing CSS bundle size, ramp-up speed, and semantic customization (`15.11`):  
 > *(Your evaluation)*
+
+---
+
+## Lesson SMART Objectives Tracker
+
+Check off each milestone after completing and testing your own work (**zero solution spoilers — verify layouts, Canvas sliders, and `localStorage` in your browser**):
+
+- [ ] **SL-L10.2-1 (`[L1–L2 Remember/Understand]` | Std `15.4–15.5` | `SG-U10-1`):** Compute Part A `content-box` vs. `border-box` widths and degree-to-radian conversions with >= 80% accuracy on Day 71.
+- [ ] **SL-L10.2-2 (`[L3 Apply]` | Std `15.4–15.7` | `SG-U10-2`):** Complete `form-dom.html` and `canvasTransformLab.html` and verify clean browser behavior without reloads or transform drift by end of Day 73.
+- [ ] **SL-L10.2-3 (`[L4 Analyze]` | Std `15.5, 15.7` | `SG-U10-3`):** Explain both Part C defects (transform matrix accumulation and `innerHTML` XSS) before Kahoot Quiz 2 on Day 73.
+- [ ] **SL-L10.2-4 (`[L5–L6 Evaluate/Create]` | Std `15.11` | `SG-U10-4`, `SG-U10-5`):** Defend your Part D CSS library evaluation across bundle size and speed tradeoffs and complete [`post-lesson-eval.md`](./post-lesson-eval.md) by Day 74.

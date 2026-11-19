@@ -22,3 +22,14 @@ Trace `binarySearch([10, 20, 30, 40, 50, 60, 70], 20)`:
 ## Part D: Architecture Defense (`[L5 Evaluate]`)
 Your app receives `40` nearly sorted log timestamps per second AND once per night sorts `500,000` shuffled audit events. Choose which sorting algorithm handles each job and justify your decision using Big-O tradeoffs:  
 > *(Your defense)*
+
+---
+
+## Lesson SMART Objectives Tracker
+
+Check off each milestone after completing and testing your own work (**zero solution spoilers — confirm passing `node --test` results**):
+
+- [ ] **SL-L9.2-1 (`[L1–L2 Remember/Understand]` | Std `6.6–6.7` | `SG-U09-1`):** Complete the Part A Big-O and input-order table accurately with >= 80% accuracy on Day 43.
+- [ ] **SL-L9.2-2 (`[L3 Apply]` | Std `6.4, 11.14` | `SG-U09-2`):** Implement non-mutating `insertionSort`, `mergeSort`, and `binarySearch` in `sortSearchLab.test.js` passing `node --test` by end of Day 44.
+- [ ] **SL-L9.2-3 (`[L4 Analyze]` | Std `6.7` | `SG-U09-3`):** Trace every `left`, `right`, and `mid` update in Part C accurately before Kahoot Quiz 2 on Day 44.
+- [ ] **SL-L9.2-4 (`[L5–L6 Evaluate/Create]` | Std `6.6` | `SG-U09-4`, `SG-U09-5`):** Defend your Part D sorting algorithm choices using Big-O scaling tradeoffs and complete [`post-lesson-eval.md`](./post-lesson-eval.md) by Day 45.

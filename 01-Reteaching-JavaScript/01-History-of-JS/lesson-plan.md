@@ -5,6 +5,13 @@
 
 ---
 
+## Lesson SMART Objectives (Teacher & Student Targets)
+- [ ] **Teacher SMART Goal 1:** Walk 100% of students through `code/licenseComplianceDemo.js` and open-source/privacy case studies in Periods 1–2 so >= 85% distinguish `MIT`, `GPL-3.0`, and unlicensed repos on `post-lesson-eval.md`.
+- [ ] **Student SMART Goal 1 (`[L1–L2]`):** Identify 5 privacy frameworks (`COPPA`, `FERPA`, `GDPR`, `HIPAA`, `PCI DSS`) and permissive vs. copyleft rules with >= 80% accuracy on Lesson 1.1 exit checks.
+- [ ] **Student SMART Goal 2 (`[L3–L5]`):** Implement `evaluateLicense()` and `sanitizeRecord()` in `0-student_files/01-legal-ethics/licenseAudit.js` with zero PII leaks during Day 2 lab time.
+
+---
+
 ## Bloom's Taxonomy Objective Ladder
 | Tier | Student Learning Objective |
 |---|---|

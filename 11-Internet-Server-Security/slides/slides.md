@@ -20,10 +20,24 @@ slideNumber: true
 
 ---
 
-### `[L2 Understand -> L3 Apply]` Encryption vs. Hashing (`Std 1.4`)
+### `[L2 Understand -> L3 Apply]` Encryption (`AES-256-GCM`) vs. Hashing (`Std 1.4`)
 
-- **Encryption (AES / TLS):** Two-way reversible with secret keys (protecting cards/files).
+- **Authenticated Encryption (`AES-256-GCM`):** Two-way reversible with secret key + unique 96-bit IV + integrity `authTag` (rejects tampering!).
 - **Password Hashing (`scrypt` + Salt):** One-way slow mathematical digest — use **`crypto.timingSafeEqual`** on verify!
+
+---
+
+### `[L3 Apply]` HTTPS / TLS Certificates in Node.js (`Std 1.4, 8.2`)
+
+```bash
+openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365 -nodes
+```
+
+```javascript
+const server = https.createServer({ key: fs.readFileSync('key.pem'), cert: fs.readFileSync('cert.pem') }, app);
+```
+
+![Generating TLS Keys with OpenSSL](../imgs/createKey.png)
 
 ---
 
@@ -33,4 +47,4 @@ slideNumber: true
 - **SQL Injection:** NEVER write ``SELECT * FROM users WHERE name='${input}'`` — bind parameters (`$1`)!
 - **Path Traversal:** Block `../../etc/passwd` with `path.resolve(baseDir, userFile)` boundary checks!
 
-> **Labs:** Run `node 11-Internet-Server-Security/code/cryptoSanitizationDemo.js` and finish `0-student_files/12-security-server/`!
+> **Labs:** Run `node 11-Internet-Server-Security/code/cryptoSanitizationDemo.js`, `node --test 11-Internet-Server-Security/code/aesTlsDemo.test.js`, and finish `0-student_files/12-security-server/`!
