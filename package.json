@@ -1,0 +1,21 @@
+{
+  "name": "javascript-first",
+  "version": "1.0.0",
+  "description": "JavaScript First — Open-source coding book, course slides, and AZ CTE-aligned curriculum with PDF publishing tools.",
+  "private": true,
+  "scripts": {
+    "build:student": "node tools/publish.mjs --student",
+    "build:teacher": "node tools/publish.mjs --teacher",
+    "build:slides": "node tools/publish.mjs --slides",
+    "build:all": "node tools/publish.mjs --all"
+  },
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "curriculum",
+    "cte",
+    "ebook",
+    "revealjs"
+  ],
+  "license": "MIT"
+}

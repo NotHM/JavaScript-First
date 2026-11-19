@@ -31,17 +31,17 @@ const vBoolean = false;
 const vSymbol = Symbol('foo');
 const vBigInt = BigInt(9007199254740991);
 ```
-These are annyoying types, JK, but you'll see why... {.fragment .current-only data-code-focus=1-2}
+These are tricky types—you'll see why shortly... {.fragment .current-only data-code-focus=1-2}
 
-This is undefined. {.fragment .current-only data-code-focus=1-1}
+This is `undefined`. {.fragment .current-only data-code-focus=1-1}
 
-This is a null. {.fragment .current-only data-code-focus=2-2}
+This is `null`. {.fragment .current-only data-code-focus=2-2}
 
 This is a String. {.fragment .current-only data-code-focus=3-3}
 
-Strings can be "some text", 'some text'.{.fragment .current-only data-code-focus=3-3}
+Strings can be `"some text"` or `'some text'`. {.fragment .current-only data-code-focus=3-3}
 
-Strings can also be [template Strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) \` some text\`.{.fragment .current-only data-code-focus=3-3}
+Strings can also be [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) `` `some text` ``. {.fragment .current-only data-code-focus=3-3}
 
 
 This is a Number. {.fragment .current-only data-code-focus=4-4}
@@ -50,14 +50,14 @@ This is a Boolean. {.fragment .current-only data-code-focus=5-5}
 
 This is a Symbol. {.fragment .current-only data-code-focus=6-6}
 
-This is a BitInt. {.fragment .current-only data-code-focus=7-7}
+This is a BigInt. {.fragment .current-only data-code-focus=7-7}
 
 
 ---
 
 ### What is Console?
 
-A built in JavaScript method that outputs a message to the web console ot terminal.
+A built-in JavaScript object that outputs messages to the web console or terminal.
 
 * Read about it on [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Console/log).
 
@@ -126,25 +126,23 @@ async function* funAsyncGenerator(params) {}
 class ClassObj {}  
 ```
 
-This is an Function Object. {.fragment .current-only data-code-focus=1-1}
+This is a Function Object. {.fragment .current-only data-code-focus=1-1}
 
-This is an [Generator function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*), it can be paused and continued like a play button. {.fragment .current-only data-code-focus=2-2}
+This is a [Generator function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*); it can be paused and resumed like a play button. {.fragment .current-only data-code-focus=2-2}
 
-This is an [Async Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/async_function), which returns a **promise**. {.fragment .current-only data-code-focus=3-3}
+This is an [Async Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/async_function), which returns a **Promise**. {.fragment .current-only data-code-focus=3-3}
 
-This is an Async Generator Function, which returns a **promise**. {.fragment .current-only data-code-focus=4-4}
+This is an Async Generator Function, which returns a **Promise**. {.fragment .current-only data-code-focus=4-4}
 
-This is an "Class", which is syntax "sugar" for a **function**. {.fragment .current-only data-code-focus=5-5}
+This is a "Class", which is syntactic sugar over JavaScript's prototype-based functions. {.fragment .current-only data-code-focus=5-5}
 
-Ignore this and pretend like it never came into existence... JK {.fragment .current-only data-code-focus=5-5}
-
-There are more types of functions and we'll go over them more later... {.fragment .current-only data-code-focus=1-5}
+There are more types of functions, and we'll cover them in later chapters... {.fragment .current-only data-code-focus=1-5}
 
 ---
 
-### What is Function?
+### What is a Function?
 
-A function is block of reusable code to preform a task. {.fragment}
+A function is a block of reusable code to perform a task. {.fragment}
 
 First you create a function, then the function must be called in order to execute. {.fragment}
 
@@ -152,51 +150,50 @@ First you create a function, then the function must be called in order to execut
 
 ---
 
-### Anatomy of functions
+### Anatomy of Functions
 
 What a function declaration looks like:
 ```JavaScript
 function add(param1, param2){
   return param1 + param2;
 };
-add(1, 2) //return a value of 3
+add(1, 2) // returns 3
 ```
 
-Has the following Features:
+Has the following features:
 
-**Block Syntax**, with `{}` at the begining and the end of the function and usually followed by a `;` {.fragment .current-only data-code-focus=1-3}
+**Block Syntax**, with `{}` at the beginning and the end of the function body. {.fragment .current-only data-code-focus=1-3}
 
 
 :::block
-* **Function** keyword
-* Name of function, `add`
-* **Parameters** `(param1, param2)`, which act as variables inside the functions definition.
+* **`function`** keyword
+* Name of function: `add`
+* **Parameters** `(param1, param2)`, which act as local variables inside the function definition.
 {.fragment .current-only data-code-focus=1-1}
 :::
 
-**Return** keyword, ends the function
-and the result is returned {.fragment .current-only data-code-focus=2-2}
+**`return`** keyword ends the function and returns the result. {.fragment .current-only data-code-focus=2-2}
 
 
 :::block
-* Calling the Function 
+* Calling the function 
 
-* When the function is called, we pass values into the **arguements** `(1,2)` 
+* When the function is called, we pass values as **arguments** `(1, 2)` 
 {.fragment .current-only data-code-focus=4-4}
 :::
 
 ---
 
-### Anatomy of functions: 
+### Anatomy of Functions: 
 #### Knowledge Check
 
-What's the difference between **Parameters** and  **arguements** ? {.fragment .current-only data-code-focus=1-4}
+What's the difference between **parameters** and **arguments**? {.fragment .current-only data-code-focus=1-4}
 
 ```JavaScript
 function add(param1, param2){
   return param1 + param2;
 };
-add(1, 2) //return a value of 3
+add(1, 2) // returns 3
 ```
 
 ---
@@ -214,9 +211,9 @@ const vSymbol = Symbol('foo');
 const vBigInt = BigInt(9007199254740991);
 
 function LOGprimitive(VAR){
-  if (typeof VAR !=="object" && VAR !=="function" && VAR !==null && VAR !==undefined)
+  if (typeof VAR !== "object" && typeof VAR !== "function" && VAR !== null && VAR !== undefined)
   {
-    return console.log("\n PRIMITIVE: ", typeof VAR, "\n Value: ",VAR);
+    return console.log("\n PRIMITIVE: ", typeof VAR, "\n Value: ", VAR);
   }
   return console.log("\n NOT PRIMITIVE..")
 }
@@ -232,15 +229,15 @@ LOGprimitive(vBigInt)
 
 ```
 
-Step 5: Inside `primitives.js`, delete the previous code and create test variables for each primative type. {.fragment .current-only data-code-focus=1-8}
+Step 5: Inside `primitives.js`, delete the previous code and create test variables for each primitive type. {.fragment .current-only data-code-focus=1-8}
 
 <!-- Teacher Prompt: When you are done, raise your digital hand -->
 
 Step 6: Inside `primitives.js`, after our test variables, create a function called `LOGprimitive`. {.fragment .current-only data-code-focus=9-16}
 
-Step 7: Inside `primitives.js`, after our function, `LOGprimitive`, use the function to test our data. {.fragment .current-only data-code-focus=18-26}
+Step 7: Inside `primitives.js`, after our function `LOGprimitive`, use the function to test our data. {.fragment .current-only data-code-focus=18-26}
 
-Step 8: Explain the error... {.fragment .current-only data-code-focus=18-20}
+Step 8: Explain why `vUndefined` and `vNull` print "NOT PRIMITIVE.." even though they are primitive types. {.fragment .current-only data-code-focus=18-20}
 
 ---
 

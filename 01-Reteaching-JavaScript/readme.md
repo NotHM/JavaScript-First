@@ -36,16 +36,16 @@ Introduction to Node.js
 Node Package Manager
 {style=font-size:1em;text-align:center;}
 ::: 
-Why we use it?
+Why do we use it?
 <ol>
   <li class="fragment">
-   Allows users to install 3rd Party Software
+   Allows users to install 3rd-party packages
   </li>
   <li class="fragment"> 
-    Technically, seperate from node.js but bundled with it.
+    Technically separate from Node.js, but bundled with it.
   </li>
   <li class="fragment"> 
-    The company, NPM, now owned by Github.
+    The company, npm, is now owned by GitHub.
   </li>
 </ol>
 
@@ -58,8 +58,8 @@ Node Version Manager
 {style=font-size:1em;text-align:center;}
 ::: 
 <ol>
-  <li class="fragment">Allows use to install and use multiple different versions of node.</li>
-  <li class="fragment"> Aids in maintaining legacy software.</li>
+  <li class="fragment">Allows us to install and use multiple different versions of Node.js.</li>
+  <li class="fragment">Aids in maintaining legacy software.</li>
 </ol>
 
 ---

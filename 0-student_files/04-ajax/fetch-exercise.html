@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Lesson 3.1 — Fetch Exercise</title>
+  </head>
+  <body>
+    <h1>Fetch API Lab</h1>
+    <button id="load-btn">Load Posts</button>
+    <ul id="results"></ul>
+
+    <script>
+      const loadBtn = document.getElementById('load-btn');
+      const resultsList = document.getElementById('results');
+
+      loadBtn.addEventListener('click', async () => {
+        // TODO:
+        // 1. Fetch https://jsonplaceholder.typicode.com/posts?_limit=5
+        // 2. Check response.ok and parse JSON
+        // 3. Clear resultsList.innerHTML and append an <li> for each post.title
+        // 4. Catch and display any errors
+      });
+    </script>
+  </body>
+</html>

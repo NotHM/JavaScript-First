@@ -1,30 +1,27 @@
-# About
-This section teaches strong fundemental understanding of HTTP & HTML using Node.js and ES6 baked in.
+# Chapter 2: HTTP, HTML & Node.js Servers
 
-# Student Learning Objectives
-Students should be able to:
+## About
+This chapter builds a strong foundational understanding of **HTTP** and **HTML** using **Node.js** and modern JavaScript (ES6+).
+
+## Student Learning Objectives
+By the end of this chapter, you should be able to:
 1. Describe what HTTP is and why it was created.
-2. Explain what HTML is and why it was created. 
-3. Identify HTML basic syntax and how to check it.
-4. Explain how HTML is sent from a server to the browser using HTTP
-5. Demonstrate how to use node's `fs` method to read HTML and `http` method to create a server.
-6. Create a [simple functions] that uses [template literals] to compose html layouts.
-<!-- 7. Compare and contrast 
-8. Write  -->
+2. Explain what HTML is and how browsers render it.
+3. Identify basic HTML syntax and document structure.
+4. Explain how HTML is sent from a server to a browser over HTTP (requests, responses, headers, and status codes).
+5. Use Node's built-in `fs` and `http` modules to read HTML files and serve them from a local server.
+6. Create reusable functions that use template literals to compose dynamic HTML layouts.
 
+---
 
+## Chapter Contents
+- **Course Slides:** [`03-http.md`](./03-http.md) (open with `vscode-reveal`)
+- **Code Example:** [`code/simpleHTTP.js`](./code/simpleHTTP.js)
+- **Student Workspace:** [`0-student_files/`](../0-student_files/) (`index.html`, `simpleHTTP.js`)
 
-
-
-## Resources:
-
-* Medium Articles:
-   1. Build your own express.js
-      - [Part 1](https://devtools.tech/build-your-own-express-js-part-one/)
-      - [Part 2](https://devtools.tech/build-your-own-express-js-part-two/?ref=code-devtools-tec)
-
-* Bleeding Edge 
-  - [Streaming requests with fetch - HTTP 203](https://www.youtube.com/watch?v=G9PpImUEeUA)
-
-
-
+## Additional Resources
+- Build Your Own Express.js:
+  - [Part 1](https://devtools.tech/build-your-own-express-js-part-one/)
+  - [Part 2](https://devtools.tech/build-your-own-express-js-part-two/?ref=code-devtools-tec)
+- Deep Dive:
+  - [Streaming requests with fetch — HTTP 203](https://www.youtube.com/watch?v=G9PpImUEeUA)

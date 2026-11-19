@@ -1,0 +1,22 @@
+{
+  "revealjs.theme": "night",
+  "revealjs.highlightTheme": "monokai",
+  "revealjs.transition": "slide",
+  "revealjs.slideNumber": true,
+  "revealjs.controls": true,
+  "revealjs.progress": true,
+  "revealjs.history": true,
+  "revealjs.exportHTMLPath": "./dist/slides",
+  "markdown.preview.breaks": false,
+  "markdown.preview.typographer": true,
+  "markdownlint.config": {
+    "MD013": false,
+    "MD033": false,
+    "MD041": false
+  },
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/tempCodeRunnerFile.*": true
+  },
+  "code-runner.saveFileBeforeRun": true
+}

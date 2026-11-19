@@ -1,112 +1,69 @@
-#  JavaScript History
+# A Brief History of JavaScript
 
-Before "JavaScript Existed", The creators behind the Mosaic browser created a language called "LiveScript" and shipped it in 1995. Within 3 months, it was renamed to "JavaScript" to build on the hype train programmers were on with Java, a completely separate and unrelated language.
+## Student Learning Objectives
+By the end of this section, you should be able to:
+1. Explain how JavaScript evolved from LiveScript in 1995 to the ECMAScript standard.
+2. Describe how the failed ES4 proposal paved the way for ES5, CommonJS, Node.js, and ES6 (ES2015).
+3. Explain why Node.js and npm transformed JavaScript from a browser scripting language into a full-stack runtime ecosystem.
+4. Contrast the roles of JavaScript, TypeScript, and modern runtimes like Node.js and Deno.
 
-Eventually, Microsoft did what they always do, which is steal source code from someone else's product and release their own version of it, Internet Explorer that used "JScript". The browsers wars started and long story, short, Mosaic, and other browsers died off due to Internet Explorer. Yet multiple forks of JS remained as well as other scripting languages. All of which were made to address the same issues of providing the browser interactive behavior beyond hyperlinks and the page reloading.
+---
 
-## Behind the Language & Engine that powers it
+Before JavaScript existed, the creators behind the Netscape/Mosaic browser created a language called **LiveScript** and shipped it in 1995. Within three months, it was renamed to **JavaScript** to capitalize on the popularity of Java, a completely separate and unrelated language.
 
+Soon after, Microsoft released Internet Explorer with its own implementation called **JScript**. The browser wars began, and as Internet Explorer gained market share, multiple forks of JavaScript and competing scripting languages emerged. All of them aimed to solve the same problem: giving the browser interactive behavior beyond static hyperlinks and full-page reloads.
 
 ## Standardization of Browser Behavior via Scripting
-The first attempt at standardizing scripting languages was in 1997 with ECMAScript. (ES-1) as part of European Computer Manufacturers Association (ECMA). However, different implementations, competing languages, and egos prevented any real standardization from occurring until 2009. In between that time, the (failed) proposal for ES-4 (led by Mozilla and others) attempted to call for more traditional programming concepts like classes, modules, etc.
 
-The standard was abandoned largely due to the concern of "breaking the web" and the introduction of AJAX ( Asynchronous JavaScript And XML") which allowed for client-side dynamic content. As a result of multiple factors, jQuery was created in 2006, largely to provide cross-browser support for different implementations of JavaScript and AJAX. By 2009 ES-5 was released and essentially became what the De facto Standard of JavaScript that most still refer to.
+The first attempt at standardizing browser scripting languages came in 1997 with **ECMAScript (ES1)** under the European Computer Manufacturers Association (ECMA). However, competing implementations and disagreements prevented major standardization progress until 2009. In the meantime, the ambitious proposal for **ES4** (led by Mozilla and others) called for traditional programming concepts like classes and modules.
 
-It is important to note, that virtually every proposed feature in ES-4 would later be implemented in ES-6 such as classes, generators and iterators, destructuring assignment, and most importantly a module system. The only feature truly noticeably absent are the various reimplementations of types. To read more about the [The Real Story Behind ECMAScript 4](https://auth0.com/blog/the-real-story-behind-es4/).
+ES4 was ultimately abandoned due to concerns about "breaking the web," while **AJAX** (Asynchronous JavaScript and XML) arrived to enable dynamic client-side content without full page reloads. In 2006, **jQuery** was created largely to smooth over cross-browser differences in JavaScript and AJAX. By 2009, **ES5** was released and became the de facto standard of JavaScript for years.
 
+Virtually every feature proposed in ES4—such as classes, generators, iterators, destructuring assignment, and a module system—would later arrive in **ES6 (ES2015)**, with the notable exception of static type annotations. For a deeper dive, read [The Real Story Behind ECMAScript 4](https://auth0.com/blog/the-real-story-behind-es4/).
 
+## The Birth of Node.js & JavaScript Module Systems
 
-## The Birth of Node.js & JavaScript Module Systems
-Beginning in 2009, serverJS was created to give JavaScript a module system and later was renamed commonJS . The goal was "to establish conventions on module ecosystem for JavaScript outside of the web browser" and was likely related to some of the failed ES4 proposals.
+In 2009, **ServerJS** was created to give JavaScript a module system outside the browser and was later renamed **CommonJS**. Its goal was to establish conventions for a module ecosystem for server-side JavaScript.
 
+Later that same year (May 2009), **Ryan Dahl** built on top of these ideas to create **Node.js**, a JavaScript runtime environment powered by Chrome's **V8** engine and **libuv** for asynchronous I/O. This runtime environment allowed JavaScript to run virtually anywhere Node.js was installed.
 
-Later the same year, Ryan Dahl would build on top of this to create the Node.js is a runtime environment for JavaScript, which used the Chrome V8 engine among others such as libuv and released in May, 2009.
+Node.js changed JavaScript forever, helping it evolve from a simple browser scripting language into a general-purpose programming language. Two key pieces made this possible:
+1. **Asynchronous callbacks** (already part of JavaScript) for non-blocking I/O.
+2. **A module system** (`require()` and `module.exports` via CommonJS), followed by **npm**, which grew into one of the largest open-source package ecosystems in the world.
 
-This runtime environment, is what allowed JavaScript to run virtually anywhere the environment is installed.
+Node.js also shipped with built-in core modules for reading/writing files (`fs`) and handling HTTP (`http`)—the building blocks of a web server. Combined with build tools like Grunt, Gulp, and Webpack, developers could share code across both the front end and back end without switching languages (such as PHP, Python, or Perl).
 
-After Node.js was released, it changed the JS language forever and helped slowly turn it into more of a programming language and less of scripting language. This was made possible by two things, callbacks for asynchronous code (which already existed in the language) and modules system (a rejected ES4 proposal) which allowed multiple files to be imported and exported via require() and export and eventually a package manager, NPM which would later become one of the largest sources of open-source software. 
+## The Startup Scene
 
-The Node.js API also came baked with some basic methods that allowed for reading/writing files (such as FS) and a basic HTTP method, both of which are essential for creating a simple server.
-After Node.js was released, this runtime environment and its primary package manager, npm, allowed the ecosystem to grow more and more. Libraries on both browser-side and node-side became easier to publish, distribute, and concatenate together with tools such a grunt, gulp, webpack, etc.
-
-This made it easier for developers to rapidly prototype websites on both the front-end and back. Consequently, the transition into becoming a full-stack developer suddenly flung the door wide open to just about anyone as it didn't require switching to other languages such as PHP, python, pearl, etc.
-
-## The Startup Scene
-Over time, Node.js grew and exploded in popularity for a variety of reasons.
-
-Namely, the environment made things easy to learn, because you didn't have to learn how to configure a local apache server, xampp, configure your vhost file, like you did with php & LAMP, etc. Virtually everything you could think of needing, there was a library for that on the front-end or back-end was a single npm install command away.
-
-Oh yeah, and the servers are FAST and handle high amounts of concurrent traffic with minimial memory in many cases when implemented properly (async coding pattern) and for the right use cases. Oh and they are insanely quick to code.
-
-This was an absolute dream for developers, new or experienced, and especially startups which almost always drive programming hype and trends. Once it reached maturity, People saw the advantages in terms of speed, server costs, learning costs, less potential training & recruiting costs, speed of rapid prototypes, communication between front-end and back-end teams, and most of all overall payroll costs could potentially go down as one good full-stack engineer could do both front-end and backend. The latter is especially important for startups because it means less equity and less overhead.
-
+Node.js grew rapidly in popularity for practical reasons:
+- **Simpler local setup:** No need to configure Apache, XAMPP, or virtual hosts just to run server-side code.
+- **Rich ecosystem:** Almost any utility needed on the front end or back end was a single `npm install` away.
+- **High concurrency:** Event-driven, non-blocking I/O handled high concurrent traffic with relatively low memory overhead.
+- **Shared language:** One full-stack JavaScript engineer could work across both client and server, reducing context switching and team overhead for startups.
 
 ## Responsive Design & Mobile App Development
-Between the time Node.js was first created in 2009 and skyrocketing in 2013, mobile phones became smartphones, and apps became a make or break scenario for startups. It was a way to put your software in some's hands 24/7 and get an edge on your competitor or otherwise disrupt the other titans in the industry and establish an empire.
 
-Media Queries were introduced between 2008–9 and Responsive Design was coined as a term in 2010, to explain the demand created by this fundamental shift in technology and our society more generally. Where responsive design handled the needs of the web design, new technology was about to emerge to disrupt mobile application development.
+Between 2009 and 2013, smartphones reshaped software development. **Media Queries** (2008–2009) and **Responsive Design** (coined in 2010) addressed multi-screen web layouts, while tools like **Apache Cordova** (2011) and **Ionic** (2013) allowed web developers to build mobile apps using HTML, CSS, and JavaScript instead of native Java or Objective-C.
 
-By 2011, another technology started to pop up, largely influenced by responsive design philosophy. Apache Cordova, which allowed web developers to use HTML, CSS, and JS to build mobile apps. Prior to this, you'd have to specialize in languages like Java for android, or objective C for iOS apps. These languages aren't just significantly harder to learn but the development environment was (and still is) harder to debug and slower dev time because you have to wait for your code to recompile. Cordova offered a solution, one programming language (JS), html (markup), and CSS (styling) and it was way easier to learn.
-Of course, this did have huge drawbacks, namely, apps run slower than their native counterparts and consequently still haven't explored in the same way Node.js did. Ionic built on top of this in 2013 and has since taken it much further and has since largely replaced Cordova. But it also wasn't enough to save Microsoft windows phones as no one developed apps for their marketplace…
-Personal note, my uncle worked for Microsoft (MS)for 20+ years & largely with their phones. So that's why I attempt to make humous jab MS throughout this article. He's like my second dad and I was always amazed and inspired by seeing the latest smartphone MS made in 2000–2008 that had the full internet too (windows mobile). A full decade before responsive design was coined.
+On the hardware side, **Johnny-Five** arrived in 2012, bringing JavaScript and Node.js to microcontrollers, robotics, Arduino, and Raspberry Pi IoT prototypes. JavaScript had expanded from the browser to servers, mobile apps, and hardware.
 
+## Node Forks & the ES6 Transition
 
+By 2014, **io.js** forked from Node.js over governance and release-cadence disagreements before later merging back into Node.js under the Node.js Foundation.
 
-On the hardware side of things, Johnny-Five.io first came on the scene in 2012 and with it, you could use the simplicity of JS and the power behind Node.js and NPM to rapid prototype hardware for the first time.
+In 2015, **ECMAScript 6 (ES2015)** was released, delivering `let`, `const`, `Symbol`, classes, Promises, arrow functions, and **ES Modules (ESM)** (`import`/`export`). Tools like **Babel** compiled modern ES6+ syntax down to ES5 so developers could adopt new features immediately without breaking older browsers. Over time, Node.js also added native support for ES Modules alongside CommonJS.
 
-All the areas where you used to need a statically typed, OOP language to the developer had been encroached upon.
+## Birth & Rise of TypeScript
 
-This allows us as developers to use build Arduino,Tessel 2, Raspberry Pi, and basically anything that you can get Node.js and johnny-five installed on. It's not just robots either, many IOT devices today are built on this today and it's had a profound impact in the ways most, even in the JavaScript scene may not be fully aware of or appreciate.
+**TypeScript** was first introduced by Microsoft in 2012 and reached 1.0 in 2014, adding optional static typing on top of JavaScript. For many teams, TypeScript struck a practical balance between JavaScript's rapid prototyping speed and the type safety needed to catch bugs early in larger codebases.
 
-As a result, JavaScript as a language became arguably the most versatile and accessible programming language which can now be used on the client (browser), the server, phones/tablets apps, and even to an extent, on microcontrollers via Johnny-Five.
-Oh and there are even a few libraries to build VR and even Games…
-Node Forks & The ES6 problem
+## Deno & Modern Runtimes
 
-By 2014, Node.js started getting a few different forks for various reasons. The most notable was io.js which eventually merged back with node.js. But there were several other forks, I won't mention and the reason behind them varied from technical reasons (like promises), lack of contributors, and even petty and frankly, immature ego related personal differences (but I'm not linking to that can of worms, keep me far away from me, thank you…).
+In 2018, Ryan Dahl announced **Deno**, a new JavaScript and TypeScript runtime built from scratch around modern web standards—Promises, `async`/`await`, ES Modules, typed arrays, and native TypeScript support—addressing design regrets from early Node.js.
 
-By 2015 the latest JavaScript standard, ECMAScript 6 was released and with it became almost everything originally drafted in ES4, minus the breaking changes and notably the introduction of let, const and symbol as opposed to more traditional local/global variables and static, strongly typed declarations. Again, unlike the original ES4 draft that would have broken the web, this approach had the power of Babel and allows us to use future features, today by compiling from ES6+ to ES5 (the standard at the time).
+## Looking Ahead
 
-All this was made possible by Node.js.
-These new JavaScript features included ESM or ECMAScript Modules (imports/export as opposed to require() via commonJS), async/await, the fetch browser API, and many others not in the original ES4 draft. Some of these features also introduced compatibility problems with the core architectures of Node.js to various extents. Most notably, over the last 5 years, the ESM standard has continued to be a very real and persistent issue that requires either using a 3rd party package, an experimental flag or using .mjs files depending on various considerations.
-
-## Birth & Rise of TypeScript: a response to ES4 & ES6?
-Quietly lurking in the background, however, TypeScript was first made in 2012 but didn't have its 1.0 release until 2014 near the same time as ES6 was coming to the new standard.
-Now, from here on out. I'm going to begin to interject small parts of my personal opinions based on my understanding of the history, the current landscape today in 2020 and I'll try and make a few projections about the future as both a sociologist and as a JavaScript developer with almost half a decade of experience, now.
-
-I believe JavaScript is largely a broken language that should have been fixed before large parts of our entire global economy and technology that running off it intertwined with our social reality. In other words, they were probably right with ES4 proposals… But it's too late for that now.
-
-Finally, I think TypeScript is really amazing for debugging the inherit bugs of the language itself and a good balance between rapid prototyping and quality code and I can't wait to see what Deno has in store for the language.
-
-## Birth of Baby Deno
-
-Deno was first announced back in 2018, where Ryan Dahl the original creator of Node.js took the JavaScript world by storm by introducing a complete rewrite, entirely from scratch based on modern JS standards such as promises & async/await, ESM, typed arrays and TypeScript.
-
-As a result of all this history and other factors, Ryan Dahl, the original creator started working on something new. In the talk, he talks about Deno as mostly a "thought experiment" and expresses his biggest regrets in building nodeJS, love for TypeScript, and hate for dart.
-
-## Versions 1 of Deno
-Today, demo is ready and stable for you to try out and is at version 1. Truthfully, it's been stable enough since January when they have the installs compiled as executables. Anyhow, here is a more recent video from its creators. I'll let him do the talking.
-I could go and write my own Deno Tutorial and compare it to the node example above (and I did…). But, I deleted it once these videos came out because and reused other parts for the history sections above.
-
-Anyway, Brad Traversy is doing an amazing job, as always. The first video is a bit too long in my personal opinion.
-However, the second video is great because it goes over denon which is like a weird mixture of nodemon, npm scripts & package.json. It's really cool sweet.
-
-## Possible Futures?
-
-I want to start off with the same predictions I talked about when I taught high school students last year and told them to pay attention to 3 things that will change the development landscape:
-1. TypeScript & Deno
--- For learning Backend & code quality required in Industry jobs (FANG).
-2. CSS Houdini
--- For browser optimizations, custom layouts and so much more.
-3. Web Assembly & AssemblyScript 
--- For native-like optimizations to servers, Mobile Apps & VR.
-
-In other words, it's like we're back in 2009 only now it's TypeScript's turn to disrupt the landscape with it's own runtime environment.
-
-Instead of JavaScript and Node.js, it's TypeScript and Deno.
-Instead of Mobile Apps and Responsive Design, it could be VR/AR Design Interfaces, as we learn to adjust the reality of this global pandemic in a world of 5G & cloud gaming…
-
-Instead of Cordova, Ionic or NativeScript, compiling to run natively with a wrapper, it'll be something that you write & debug in TypeScript and compiles down to Web Assembly and performance wont be near as much of an issue.
-
-## Thoughts or Comments?
-
-I hope you enjoyed reading this and don't take any of my criticisms personally (unless you are my uncle, in which case it's just fun banter). I really want to hear your thought! Especially if you were part of JavaScript / ECMAScript's history as I didn't start using it until 2013 and wasn't really full-stack until 2015–2016. I tried to do the best research I could.
+Three technologies continue to shape modern web and JavaScript development:
+1. **TypeScript & Modern Runtimes (Node.js, Deno, Bun)** — Stronger tooling, type safety, and standards-aligned server-side JavaScript.
+2. **Modern CSS (Grid, Container Queries, CSS Houdini)** — Native browser layout and rendering capabilities.
+3. **WebAssembly (Wasm)** — Near-native performance for compute-intensive workloads in the browser and on the server.

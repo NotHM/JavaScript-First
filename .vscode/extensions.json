@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "evilz.vscode-reveal",
+    "yzhang.markdown-all-in-one",
+    "davidanson.vscode-markdownlint",
+    "shd101wyy.markdown-preview-enhanced",
+    "bierner.markdown-mermaid",
+    "hediet.vscode-drawio",
+    "formulahendry.code-runner",
+    "aaron-bond.better-comments",
+    "esbenp.prettier-vscode"
+  ]
+}

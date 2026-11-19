@@ -2,6 +2,9 @@
 00-Functional/
 00-Design-Patterns/
 # 00-ProductionTools/
+.DS_Store
+tempCodeRunnerFile.*
+dist/
 
 
 # Logs
